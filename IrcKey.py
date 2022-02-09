@@ -1,0 +1,12 @@
+IRHOST = ""
+IRPORT = 6667
+IRNICK = ""
+IRIDENT = ""
+IRREALNAME = ""
+IRPASS = ""
+IRCHANPASS = ""
+IRMASTER = ""
+IRCHANNEL = ""
+IRNICKSERV = ""
+IRKonTrigger = ""
+IRIdentTrigger = ""

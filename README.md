@@ -1,6 +1,8 @@
 ##RedQueen
 
-My personal search bot crawling twitter for infoSec news.
+My personal search bot crawling twitter for infoSec news made in ~2010..
+
+Have to rewrite it but still working it seems.
 
 ##Description
 
