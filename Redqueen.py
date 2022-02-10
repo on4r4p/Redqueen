@@ -9,7 +9,7 @@ from asciimatics.screen import Screen
 from random import randint, choice, shuffle 
 from twython import Twython 
 from TwitterApiKeys import app_key, app_secret, oauth_token, oauth_token_secret 
-from IrcKey import IRHOST, IRPORT, IRNICK, IRIDENT, IRREALNAME, IRPASS ,IRCHANPASS ,IRMASTER IRCHANNEL, IRNICKSERV IRKonTrigger,IRIdentTrigger
+from IrcKey import IRHOST,IRPORT,IRNICK,IRIDENT,IRREALNAME,IRPASS,IRCHANPASS,IRMASTER,IRCHANNEL,IRNICKSERV,IRKonTrigger,IRIdentTrigger
 from pyfiglet import Figlet 
 from threading import Thread 
 import re,socket,time,sys,os,string,datetime,emoji,feedparser
@@ -23,7 +23,11 @@ GOGOGO = False
 
 SHUTDOWN = False
 
+REQUESTPAUSE = False
+
 RssSent = []
+
+NoResult = []
 
 fuck = 0
 
@@ -69,6 +73,8 @@ Tmpbw= str(path) + "Rq.Bannedword"
 
 Tmprss = str(path) + "Rq.Rss"
 
+Tmprequest = str(path) + "Request.log"
+
 Session = str(path) + "Current.Session"
 
 noresult = str(path) + "No.Result"
@@ -95,7 +101,9 @@ banppl = []
 
 bandouble = []
 
-FluxlsT = []
+Fluxlst = []
+
+Requested = []
 
 apicall = 0
 
@@ -199,15 +207,26 @@ def loadvars():
     global Friends
     global banlist
     global banppl
-
+    global Requested
 
     Fig("rev",'LoadVars()',True)
     print("\n\n\n\n")
-    Fig("cybermedium",'Loading Keywords',True)
-    
-    print("\n\n\n")
-    Fig("cybermedium","Loading Friends",True)
+
+
     print("\n\n")
+    Fig("cybermedium","Loading No Result",True)
+    print("\n\n")
+    checkfile(noresult)
+    lines = cleanfile(noresult)
+
+    for saved in lines:
+      NoResult.append(saved)
+
+    print("*=*=*=*=*=*=*=*=*=*")
+    Fig("larry3d",'Keywords Loaded',True)
+    print("*=*=*=*=*=*=*=*=*=*\n")
+
+
 
     checkfile(path+"RssSave")
     lines = cleanfile(path+"RssSave")
@@ -218,6 +237,8 @@ def loadvars():
     Fig("larry3d","Rss Sent Loaded",True)
     print("*=*=*=*=*=*=*=*=*=*")
     print("\n\n")
+
+    Fig("cybermedium",'Loading Keywords',True)
 
     checkfile(Tmpkey)
     lines = cleanfile(Tmpkey)
@@ -295,6 +316,13 @@ def loadvars():
     for saved in lines:
       Fluxlst.append(saved)
 
+    print("\n\n")
+    Fig("cybermedium","Loading cmds log",True)
+    print("\n\n")
+    checkfile(Tmprequest)
+    lines = cleanfile(Tmprequest)
+    for saved in lines:
+      Requested.append(saved)
 
 def title(screen):
 
@@ -367,6 +395,8 @@ def Request(cmd):
   global banppl
   global apicall
   global Banned
+  global REQUESTPAUSE
+
 
   Fig("rev",'#Request()')
   
@@ -386,29 +416,77 @@ def Request(cmd):
 
   print("New request from allowed user:", IRMASTER)
   
-  timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+  timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
   print("At %s ."% timestamp)
-  log = "\n***\nNew request from allowed user:%s at: %s \n %s\n***"%(IRMASTER,timestamp,cmd))
+  log = "\n***\nNew request from allowed user:%s at: %s \n %s\n***"%(IRMASTER,timestamp,cmd)
 
   if cmd.count(",") >0:
-     print("You send those commandes :")
+     print("You v send those commandes :")
   else:
-     print("You send this commande :")
+     print("You v send this commande :")
   print(cmd)
 
-  items = cmd.split(',')
+  items = cmd.split(';')
   
   cmds=["adduser:","deluser:","banuser:",
        "addkeyword:","delkeyword:","bankeyword:",
        "addfriend:","delfriend","banfriend:",
        "addrss:","delrss:",
-       "!help","!users","!keywords","!friends","!rss","!requests","!noresult","!badkeys","!badppl"]
+       "!help","!users","!keywords","!friends","!rss","!requests","!noresult","!badkeys","!badppl","!pause"]
   
   for sample in items:
       reconized = False
       for option in cmds:
           if sample.lower().startswith(option):
               reconized = True
+              if option == "!help":
+                     help = ["adduser:@user1 @user2 [Add user1 and user2 to Rq.Following]",
+"deluser:@user1 @user2 [Delete user1 and user2 in Rq.Following]",
+"banuser:@user1 @user2 [Add user1 and user2 to Rq.Bannedpeople]",
+"addfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends]",
+"delfriend:@user1 @user2 [Delete user1 and user2 in Rq.Friends]",
+"banfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends]",
+"addkeyword:Key word1,Key word2 [Add 'Key word1' and 'Key word2' to Rq.Keywords]",
+"delkeyword:Key word1,Key word2 [Delete 'Key word1' and 'Key word2' in Rq.Keywords]",
+"bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Rq.Bannedword]",
+"addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rq.Rss]",
+"delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rq.Rss]",
+"Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
+"!help [Print this help]",
+"!pause [Start and Stop Pause mode]",
+"!users [Print Rq.Following content]",
+"!keywords [Print Rq.Keywords content]",
+"!rss [Print Rq.Rss content]",
+"!requests [Print Request.log content]",
+"!noresult [Print No.Result content]",
+"!badkeys [Print Rq.Bannedword content]",
+"!badppl [Print Rq.Bannedpeople content]",
+"Example : deluser:@user1 @user2 ;addkeyword:key1,key two,key3;bankeyword:badkey1,bad key two;!rss"]
+                     return(help)
+              if option == "!pause":
+                       if REQUESTPAUSE is True:
+                          REQUESTPAUSE = False
+                          return("Pause mode is off.")
+                       else:
+                          REQUESTPAUSE = True
+                          return("Pause mode is on.")
+
+              if option == "!badkeys":
+                       return(banlist)
+              if option == "!badppl":
+                       return(banppl)
+              if option == "!users":
+                       return(Following)
+              if option == "!keywords":
+                       return(Keywords)
+              if option == "!friends":
+                       return(Friends)
+              if option == "!rss":
+                       return(Fluxlst)
+              if option == "!requests":
+                       return(Requested)
+              if option == "!noresult":
+                       return(NoResult)
               if option == "banuser:":
                    if sample.count("@") == 1:
                         print("You asked to Ban this user :",sample)
@@ -518,45 +596,45 @@ def Request(cmd):
                    else:
                        print("No user found '@' is missing")
               if option == "bankeyword:":
-                   if sample.count(";") == 0:
+                   if sample.count(",") == 0:
                         print("You asked to Ban this keyword :",sample)
                         single= sample
                         if len(single) >0:
                             bk.append(single)
                         else:
                             print("Keyword var is empty.")
-                   elif sample.count(";") >0:
-                        for var in sample.split(";"):
+                   elif sample.count(",") >0:
+                        for var in sample.split(","):
                            if len(var) >0:
                               bk.append(var)
                            else:
                               print("Keyword var is empty.")
                         print("You asked to Ban those Keywords: ",",".join(bk))
               if option == "addkeyword:":
-                   if sample.count(";") == 0:
+                   if sample.count(",") == 0:
                         print("You asked to Add this keyword :",sample)
                         single= sample
                         if len(single) >0:
                             adk.append(single)
                         else:
                             print("Keyword var is empty.")
-                   elif sample.count(";") >0:
-                        for var in sample.split(";"):
+                   elif sample.count(",") >0:
+                        for var in sample.split(","):
                            if len(var) >0:
                               adk.append(var)
                            else:
                               print("Keyword var is empty.")
                         print("You asked to Add those Keywords: ",",".join(adk))
               if option == "delkeyword:":
-                   if sample.count(";") == 0:
+                   if sample.count(",") == 0:
                         print("You asked to Delete this keyword :",sample)
                         single= sample
                         if len(single) >0:
                             delk.append(single)
                         else:
                             print("Keyword var is empty.")
-                   elif sample.count(";") >0:
-                        for var in sample.split(";"):
+                   elif sample.count(",") >0:
+                        for var in sample.split(","):
                            if len(var) >0:
                              delk.append(var)
                            else:
@@ -571,7 +649,7 @@ def Request(cmd):
                         else:
                             print("Rss var is empty.")
                    elif sample.count("http") >1:
-                        for var in sample.split(";"):
+                        for var in sample.split(","):
                            if len(var) >0:
                              delrss.append(var)
                            else:
@@ -589,7 +667,7 @@ def Request(cmd):
                         else:
                             print("Keyword var is empty.")
                    elif sample.count("http") >1:
-                        for var in sample.split(";"):
+                        for var in sample.split(","):
                            if len(var) >0:
                              adrss.append(var)
                            else:
@@ -602,7 +680,6 @@ def Request(cmd):
 
          file = open(path+"Request.log","a")
          file.write(log)
-
          return("Cmd not recognised.")
 
   checkfile("Request.log")
@@ -641,7 +718,7 @@ def Request(cmd):
      Fig("cybersmall",'Deleting entry from Rq.Rss')
      with open(Tmprss, "r") as f:
          lines = f.readlines()
-     ts = datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
+     ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
      save_copy = "cp "+str(Tmprss) +" "+str(pathsave)+"Rq.Rss"+str(ts)+".save"
      os.system(save_copy)
      with open(Tmprss, "w") as f:
@@ -654,7 +731,7 @@ def Request(cmd):
      Fig("cybersmall",'Deleting entry from Rq.Friends')
      with open(Tmpfriend, "r") as f:
          lines = f.readlines()
-     ts = datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
+     ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
      save_copy = "cp "+str(Tmpfriend) +" "+str(pathsave)+"Rq.Friends"+str(ts)+".save"
      os.system(save_copy)
      with open(Tmpfriend, "w") as f:
@@ -667,7 +744,7 @@ def Request(cmd):
      Fig("cybersmall",'Deleting entry from Rq.Following')
      with open(Tmpfolo, "r") as f:
          lines = f.readlines()
-     ts = datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
+     ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
      save_copy = "cp "+str(Tmpfolo) +" "+str(pathsave)+"Rq.Following"+str(ts)+".save"
      os.system(save_copy)
      with open(Tmpfolo, "w") as f:
@@ -680,7 +757,7 @@ def Request(cmd):
      Fig("cybersmall",'Deleting entry from Rq.Keywords')
      with open(Tmpkey, "r") as f:
          lines = f.readlines()
-     ts = datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
+     ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
      save_copy = "cp "+str(Tmpkey) +" "+str(pathsave)+"Rq.Keywords"+str(ts)+".save"
      os.system(save_copy)
      with open(Tmpkey, "w") as f:
@@ -720,6 +797,7 @@ def Request(cmd):
      with open(Tmpbw,"a") as f:
         for entry in bk:
            f.write("\n"+str(entry))
+  return("Done..")
 
 def SaveDouble(text):
                 
@@ -1068,7 +1146,7 @@ def IrSweet():
 
      while IrcSocket == True:
           try:
-               Buffer = Irc.recv(1024).decode("UTF-8")
+               Buffer = Irc.recv(1024).decode("UTF-8",errors="ignore")
 
                if len(Buffer) > 1:
                     print("Buffer: ",Buffer)
@@ -1077,12 +1155,22 @@ def IrSweet():
                     cmd = Buffer.split("PRIVMSG BlueKing :")[1]
                     Answer = Request(cmd[:-2])
                     if len(Answer) > 0:
-                              print("\n--Sending :%s --\n"%Answer)
-                              Irc.send(bytes("PRIVMSG %s : < %s > \r\n" % (IRCHANNEL,Answer), "UTF-8"))
+                              if type(Answer) == list:
+                                  for l in Answer:
+                                      time.sleep(1)
+                                      print("\n--Sending :%s --\n"%l)
+                                      Irc.send(bytes("PRIVMSG %s : < %s > \r\n" % (IRMASTER,l), "UTF-8"))
+                              else:
+                                  print("\n--Sending :%s --\n"%Answer)
+                                  Irc.send(bytes("PRIVMSG %s : < %s > \r\n" % (IRMASTER,Answer), "UTF-8"))
 
                if Buffer.find("PING") != -1:
                     Fig("digital","\n--PINGED--\n")
-                    tmp = Buffer.split("PING :")[1]
+                    try:
+                         tmp = Buffer.split("PING :")[1]
+                    except Exception as e:
+                         tmp = "placeholder"
+                         print("Error Ping:",e)
                     Irc.send(bytes("PONG :"+ tmp +"\r\n" ,"UTF-8" ))
                     Fig("digital","\n--PONG :"+ str(tmp) +" --\n")
                     last_ping = time.time()
@@ -1106,7 +1194,7 @@ def IrSweet():
                     time.sleep(2)
 
                if Joined == False and Identified == True and Konnected == True:
-                    print("\n--Joining "+str(CHANNEL)+"--\n")
+                    print("\n--Joining "+str(IRCHANNEL)+"--\n")
                     Irc.send(bytes("JOIN %s %s\r\n" % (IRCHANNEL,IRCHANPASS), "UTF-8"));
                     time.sleep(2)
                     Irc.send(bytes("PRIVMSG %s :<Knock Knock Neo ...>\r\n" % IRCHANNEL, "UTF-8"))
@@ -1125,7 +1213,7 @@ def IrSweet():
                     GOGOGO = True
 
           except Exception as e:
-               print("Error :",e)
+               print("Error IrSocket:",e)
 
 
 def Feeds(ttl):
@@ -2815,8 +2903,17 @@ def searchTst(word):
                if len(searchresults["statuses"]) > 3 :
        
                     for item in searchresults["statuses"]:
-         
-                         Scoring(item,search)
+                         time.sleep(2)
+                         if REQUESTPAUSE is False:
+                             Scoring(item,search)
+                         else:
+                             while True:
+                                 time.sleep(2)
+                                 if REQUESTPAUSE is False:
+                                     break
+                             Scoring(item,search)
+
+
                else:
                     print("****************************************")
                     
@@ -2944,12 +3041,24 @@ def RedQueen():
       time.sleep(5)
     tmpcnt= 0
     for key in Keywords[:rndwords]:
-      tmpcnt = tmpcnt + 1
-      figy = "Searching : %s %i/%i" % (key,tmpcnt,rndwords)
-      Fig("puffy",figy)
       time.sleep(1)
-      searchTst(key)
-      
+      if REQUESTPAUSE is False:
+          tmpcnt = tmpcnt + 1
+          figy = "Searching : %s %i/%i" % (key,tmpcnt,rndwords)
+          Fig("puffy",figy)
+          time.sleep(1)
+          searchTst(key)
+      else:
+          while True:
+                time.sleep(2)
+                if REQUESTPAUSE is False:
+                     break
+          tmpcnt = tmpcnt + 1
+          figy = "Searching : %s %i/%i" % (key,tmpcnt,rndwords)
+          Fig("puffy",figy)
+          time.sleep(1)
+          searchTst(key)
+
 
     Fig("basic","All Done !",True)
     
