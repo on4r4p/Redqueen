@@ -9,7 +9,7 @@ from asciimatics.screen import Screen
 from random import randint, choice, shuffle 
 from twython import Twython 
 from TwitterApiKeys import app_key, app_secret, oauth_token, oauth_token_secret 
-from IrcKey import IRHOST,IRPORT,IRNICK,IRIDENT,IRREALNAME,IRPASS,IRCHANPASS,IRMASTER,IRCHANNEL,IRNICKSERV,IRKonTrigger,IRIdentTrigger
+from IrcKey import IRHOST,IRPORT,IRNICK,IRIDENT,IRREALNAME,IRPASS,IRCHANPASS,IRMASTER,IRMASTERTrigger,IRCHANNEL,IRNICKSERV,IRKonTrigger,IRIdentTrigger
 from pyfiglet import Figlet 
 from threading import Thread 
 import re,socket,time,sys,os,string,datetime,emoji,feedparser
@@ -19,73 +19,75 @@ import re,socket,time,sys,os,string,datetime,emoji,feedparser
 
 
 
-GOGOGO = False
+GOGOGO_Trigger = False
 
-SHUTDOWN = False
+Shutdown_Trigger = False
 
-REQUESTPAUSE = False
+MasterPause_Trigger = False
+
+MasterStop_Trigger = False
+
+MasterStart_Trigger = False
 
 RssSent = []
 
-NoResult = []
+NoResult_List = []
 
-fuck = 0
+ERRORCNT = 0
 
-Rthourtweet = ""
+Tweet_Age = ""
 
-exit = 0
+Skip_Wait_Trigger = False
 
-tmpbypass = 0
+Id_Done_Trigger = False
 
-doneid = 0
+Wait_Hour_Trigger = False
 
-waithour = 0
+Wait_Half_Hour_Trigger = False
 
-waithalf = 0
+AvgScore = []
 
-moyscore = []
+Emoji_List = []
 
-emolist = []
+RetweetSave = ""
 
-rtsave = ""
+CurrentDate = datetime.datetime.now()
 
-currentdate = datetime.datetime.now()
+Pth_Data = os.path.dirname(os.path.abspath(__file__)) + "/Data/"
 
-path = os.path.dirname(os.path.abspath(__file__)) + "/Data/"
+Pth_Save= Pth_Data + "Save/"
 
-pathsave= path + "Save/"
+Pth_TotalApi_Call = str(Pth_Data) + "TotalApi.Call"
 
-TmpDay = str(path) + "TotalApi.Call"
+Pth_Update_Call = str(Pth_Data) + "UpdateStatus.Call"
 
-TmpDay2 = str(path) + "UpdateStatus.Call"
+Pth_SearchTerms_Used = str(Pth_Data) + "SearchTerms.Used"
 
-TmpMeal = str(path) + "SearchTerms.Used"
+Pth_Keywords_Rq = str(Pth_Data) + "Rq.Keywords"
 
-Tmpkey = str(path) + "Rq.Keywords"
+Pth_Following_Rq = str(Pth_Data) + "Rq.Following"
 
-Tmpfolo = str(path) + "Rq.Following"
+Pth_Friends_Rq = str(Pth_Data) + "Rq.Friends"
 
-Tmpfriend = str(path) + "Rq.Friends"
+Pth_Bannedpeople_Rq= str(Pth_Data) + "Rq.Bannedpeople"
 
-Tmpbppl= str(path) + "Rq.Bannedpeople"
+Pth_Bannedword_Rq= str(Pth_Data) + "Rq.Bannedword"
 
-Tmpbw= str(path) + "Rq.Bannedword"
+Pth_Rss_Rq = str(Pth_Data) + "Rq.Rss"
 
-Tmprss = str(path) + "Rq.Rss"
+Pth_Request_Log = str(Pth_Data) + "Request.log"
 
-Tmprequest = str(path) + "Request.log"
+Pth_Current_Session = str(Pth_Data) + "Current.Pth_Current_Session"
 
-Session = str(path) + "Current.Session"
+Pth_NoResult = str(Pth_Data) + "No.Result"
 
-noresult = str(path) + "No.Result"
+Pth_Tweets_Sent = str(Pth_Data) + "Tweets.Sent"
 
-idsaved = str(path) + "Tweets.Sent"
+Pth_Text_Sent = str(Pth_Data) + "Text.Sent"
 
-doublesaved = str(path) + "Text.Sent"
+RestABit_Trigger = False
 
-restabit = 0
-
-twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
 
 Keywords = []
 
@@ -95,72 +97,66 @@ Following = []
 
 Friends = []
 
-banlist = []
+Banned_Word_list = []
 
-banppl = []
+Banned_User_list = []
 
-bandouble = []
+Ban_Double_List = []
 
-Fluxlst = []
+Rss_Url_List = []
 
-Requested = []
+Requested_Cmd_List = []
 
-apicall = 0
+Api_Call_Nbr = 0
 
-updatecall = 0
+Update_Call_Nbr = 0
 
-totalcall = 0
+Total_Call_Nbr = 0
 
-totalupdatecall = 0
+Total_Update_Call_Nbr = 0
 
-tobsnd = []
+All_Ok_Trigger = False
 
-allok = 0
+Total_Sent_Nbr = 0
 
-Totalsent = 0
-
-checkM = 0
-
-mcdone = 0
+Menu_Check_Trigger = False
   
-searchapi = 0
+Search_Api_Nbr = 0
 
-searchlimit = 0
+Search_Limit_Trigger = False
 
-searchdone = 0
+Search_Done_Trigger = False
 
-retweetlist = []
+Retweet_List = []
 
-newkeywords = []
+New_Keywords_List = []
 
-QueueList = []
+Start_Date = ''
 
-startedat = ''
+Time_To_Wait = 0
 
-time2wait = 0
+Totale_Score_Nbr = 0
 
-totalscore = 0
+Total_Already_Send_Nbr = 0
 
-totalalrdysnd = 0
+Total_Ban_By_Lang_Nbr = 0
 
-totallanguage = 0
+Total_Ban_By_Date_Nbr = 0
 
-total2old = 0
+Total_Ban_By_NoResult_Nbr = 0
 
-totalnokeyword = 0
+Total_Ban_By_Keywords_Nbr = 0
 
-totalbannedwords = 0
+Total_Ban_By_FollowFriday_Nbr = 0
 
-totalff = 0
+Total_Ban_By_TooManyHashtags_Nbr = 0
 
-totalhf = 0
+Total_Ban_By_BannedPeople_Nbr = 0
 
-totalbannedppl = 0
-
-twtbyuser = []
+Tweets_By_Same_User = []
 
 
-#startedat = datetime.datetime.now()
+#Start_Date = datetime.datetime.now()
 
 newtlist = [] 
 printable = set(string.printable)
@@ -172,7 +168,7 @@ def checkfile(filename):
                         file.close()
     except:
                         print("==")
-                        print("File does not exist (Tmpkey)")
+                        print("File does not exist (Pth_Keywords_Rq)")
                         print("Creating file")
                         print("==")
                         file = open(filename,"w")
@@ -180,11 +176,12 @@ def checkfile(filename):
                         file.close()
 
 def cleanfile(filename):
-
     clean_lines = []
     with open(filename, "r") as f:
         lines = f.readlines()
         clean_lines = [l.strip() for l in lines if l.strip()]
+
+    clean_lines = list(dict.fromkeys(clean_lines))
 
     with open(filename, "w") as f:
         f.writelines('\n'.join(clean_lines))
@@ -205,9 +202,9 @@ def loadvars():
     global Keywordsave
     global Following
     global Friends
-    global banlist
-    global banppl
-    global Requested
+    global Banned_Word_list
+    global Banned_User_list
+    global Requested_Cmd_List
 
     Fig("rev",'LoadVars()',True)
     print("\n\n\n\n")
@@ -216,20 +213,20 @@ def loadvars():
     print("\n\n")
     Fig("cybermedium","Loading No Result",True)
     print("\n\n")
-    checkfile(noresult)
-    lines = cleanfile(noresult)
+    checkfile(Pth_NoResult)
+    lines = cleanfile(Pth_NoResult)
 
     for saved in lines:
-      NoResult.append(saved)
+      NoResult_List.append(saved)
 
     print("*=*=*=*=*=*=*=*=*=*")
-    Fig("larry3d",'Keywords Loaded',True)
+    Fig("larry3d",'No Result Loaded',True)
     print("*=*=*=*=*=*=*=*=*=*\n")
 
 
 
-    checkfile(path+"RssSave")
-    lines = cleanfile(path+"RssSave")
+    checkfile(Pth_Data+"RssSave")
+    lines = cleanfile(Pth_Data+"RssSave")
     for saved in lines:
        RssSent.append(saved)
       
@@ -240,8 +237,8 @@ def loadvars():
 
     Fig("cybermedium",'Loading Keywords',True)
 
-    checkfile(Tmpkey)
-    lines = cleanfile(Tmpkey)
+    checkfile(Pth_Keywords_Rq)
+    lines = cleanfile(Pth_Keywords_Rq)
 
     for saved in lines:
            Keywords.append(saved)
@@ -255,8 +252,8 @@ def loadvars():
     print("\n\n")
     Fig("cybermedium",'Loading Following',True)
 
-    checkfile(Tmpfolo)
-    lines = cleanfile(Tmpfolo)
+    checkfile(Pth_Following_Rq)
+    lines = cleanfile(Pth_Following_Rq)
 
     for saved in lines:
        Following.append(saved)
@@ -268,8 +265,8 @@ def loadvars():
     Fig("cybermedium","Loading Friends",True)
     print("\n\n")
 
-    checkfile(Tmpfriend)
-    lines = cleanfile(Tmpfriend)
+    checkfile(Pth_Friends_Rq)
+    lines = cleanfile(Pth_Friends_Rq)
     for saved in lines:
        Friends.append(saved)
       
@@ -283,11 +280,11 @@ def loadvars():
     print("\n\n")
     Fig("cybermedium","Loading Banned Words",True)
     print("\n\n")
-    checkfile(Tmpbw)
-    lines = cleanfile(Tmpbw)
+    checkfile(Pth_Bannedword_Rq)
+    lines = cleanfile(Pth_Bannedword_Rq)
 
     for saved in lines:
-      banlist.append(saved)
+      Banned_Word_list.append(saved)
       
     print("*=*=*=*=*=*=*=*=*=*")
     Fig("larry3d","Banned Words Loaded",True)
@@ -297,10 +294,10 @@ def loadvars():
     print("\n\n")
     Fig("cybermedium","Loading Banned Users",True)
     print("\n\n")
-    checkfile(Tmpbppl)
-    lines = cleanfile(Tmpbppl)
+    checkfile(Pth_Bannedpeople_Rq)
+    lines = cleanfile(Pth_Bannedpeople_Rq)
     for saved in lines:
-      banppl.append(saved)
+      Banned_User_list.append(saved)
       
     print("*=*=*=*=*=*=*=*=*=*")
     Fig("larry3d","Banned users Loaded,True")
@@ -311,18 +308,18 @@ def loadvars():
     print("\n\n")
     Fig("cybermedium","Loading Rss Flux",True)
     print("\n\n")
-    checkfile(Tmprss)
-    lines = cleanfile(Tmprss)
+    checkfile(Pth_Rss_Rq)
+    lines = cleanfile(Pth_Rss_Rq)
     for saved in lines:
-      Fluxlst.append(saved)
+      Rss_Url_List.append(saved)
 
     print("\n\n")
     Fig("cybermedium","Loading cmds log",True)
     print("\n\n")
-    checkfile(Tmprequest)
-    lines = cleanfile(Tmprequest)
+    checkfile(Pth_Request_Log)
+    lines = cleanfile(Pth_Request_Log)
     for saved in lines:
-      Requested.append(saved)
+      Requested_Cmd_List.append(saved)
 
 def title(screen):
 
@@ -356,7 +353,7 @@ def title(screen):
 def timer(mode):
    global timeleft
    global timed
-   global startedat
+   global Start_Date
    if mode == 2:
      now = ''
      timesup = ''
@@ -364,8 +361,8 @@ def timer(mode):
      timed = ''
 
      now = datetime.datetime.now()
-     timesup = now - startedat
-     timeleft = "Time Left %i / %i"% (timesup.seconds,time2wait)
+     timesup = now - Start_Date
+     timeleft = "Time Left %i / %i"% (timesup.seconds,Time_To_Wait)
      timed = timesup.seconds
 
      return timeleft
@@ -381,7 +378,7 @@ def timer(mode):
 
 
         now = datetime.datetime.now()
-        timesup = now - startedat
+        timesup = now - Start_Date
         timed = timesup.seconds
         return timed
 
@@ -391,12 +388,14 @@ def timer(mode):
 def Request(cmd):
 
   global Keywords
-  global banlist
-  global banppl
-  global apicall
+  global Banned_Word_list
+  global Banned_User_list
+  global Api_Call_Nbr
   global Banned
-  global REQUESTPAUSE
-
+  global MasterPause_Trigger
+  global NoResult_List
+  global MasterStart_Trigger
+  global MasterStop_Trigger
 
   Fig("rev",'#Request()')
   
@@ -414,11 +413,15 @@ def Request(cmd):
   adrss = []
   delrss = []
 
+  RmNores = False
+
   print("New request from allowed user:", IRMASTER)
   
   timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
   print("At %s ."% timestamp)
+
   log = "\n***\nNew request from allowed user:%s at: %s \n %s\n***"%(IRMASTER,timestamp,cmd)
+  output= []
 
   if cmd.count(",") >0:
      print("You v send those commandes :")
@@ -432,7 +435,9 @@ def Request(cmd):
        "addkeyword:","delkeyword:","bankeyword:",
        "addfriend:","delfriend","banfriend:",
        "addrss:","delrss:",
-       "!help","!users","!keywords","!friends","!rss","!requests","!noresult","!badkeys","!badppl","!pause"]
+       "!help","!users","!keywords","!friends",
+       "!rss","!requests","!Pth_NoResult","!rmPth_NoResult",
+       "!badkeys","!badppl","!start","!stop","!pause","!quit"]
   
   for sample in items:
       reconized = False
@@ -442,39 +447,56 @@ def Request(cmd):
               if option == "!help":
                      help = ["adduser:@user1 @user2 [Add user1 and user2 to Rq.Following]",
 "deluser:@user1 @user2 [Delete user1 and user2 in Rq.Following]",
-"banuser:@user1 @user2 [Add user1 and user2 to Rq.Bannedpeople]",
+"banuser:@user1 @user2 [Add user1 and user2 to Rq.Bannedpeople and remove it from Rq.Keywords]",
 "addfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends]",
 "delfriend:@user1 @user2 [Delete user1 and user2 in Rq.Friends]",
-"banfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends]",
+"banfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends and remove it from Rq.Keywords]",
 "addkeyword:Key word1,Key word2 [Add 'Key word1' and 'Key word2' to Rq.Keywords]",
 "delkeyword:Key word1,Key word2 [Delete 'Key word1' and 'Key word2' in Rq.Keywords]",
-"bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Rq.Bannedword]",
+"bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Rq.Bannedword and remove it from Rq.Keywords]",
 "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rq.Rss]",
 "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rq.Rss]",
 "Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
 "!help [Print this help]",
+"!start [Launch Crawling.]",
+"!stop [Stop Crawling.]",
 "!pause [Start and Stop Pause mode]",
+"!quit [Exit.]",
 "!users [Print Rq.Following content]",
 "!keywords [Print Rq.Keywords content]",
 "!rss [Print Rq.Rss content]",
 "!requests [Print Request.log content]",
-"!noresult [Print No.Result content]",
+"!Pth_NoResult [Print No.Result content]",
+"!rmPth_NoResult [Remove No.Result content from Rq.Keywords]",
 "!badkeys [Print Rq.Bannedword content]",
 "!badppl [Print Rq.Bannedpeople content]",
 "Example : deluser:@user1 @user2 ;addkeyword:key1,key two,key3;bankeyword:badkey1,bad key two;!rss"]
                      return(help)
               if option == "!pause":
-                       if REQUESTPAUSE is True:
-                          REQUESTPAUSE = False
+                       if MasterPause_Trigger is True:
+                          MasterPause_Trigger = False
                           return("Pause mode is off.")
                        else:
-                          REQUESTPAUSE = True
+                          MasterPause_Trigger = True
                           return("Pause mode is on.")
-
+              if option == "!start":
+                          MasterStart_Trigger = True
+                          if MasterStop_Trigger is True:
+                                MasterStop_Trigger = False
+                                return(Redqueen())
+                          return("Redqueen has started.")
+              if option == "!stop":
+                          MasterStart_Trigger = False
+                          MasterStop_Trigger = True
+                          return("Redqueen has stopped.")
+              if option == "!quit":
+                          MasterStart_Trigger = False
+                          Irc.send(bytes("PRIVMSG %s : Redqueen has been terminated. \r\n" % (IRMASTER), "UTF-8"))
+                          os.system("pkill -f Redqueen.py")
               if option == "!badkeys":
-                       return(banlist)
+                       return(Banned_Word_list)
               if option == "!badppl":
-                       return(banppl)
+                       return(Banned_User_list)
               if option == "!users":
                        return(Following)
               if option == "!keywords":
@@ -482,23 +504,28 @@ def Request(cmd):
               if option == "!friends":
                        return(Friends)
               if option == "!rss":
-                       return(Fluxlst)
+                       return(Rss_Url_List)
               if option == "!requests":
-                       return(Requested)
-              if option == "!noresult":
-                       return(NoResult)
+                       return(Requested_Cmd_List)
+              if option == "!Pth_NoResult":
+                       return(NoResult_List)
+              if option == "!rmPth_NoResult":
+                        print("Removing No.results from Rq.Keywords..")
+                        RmNores = True
               if option == "banuser:":
                    if sample.count("@") == 1:
                         print("You asked to Ban this user :",sample)
-                        single= sample.replace("@","").replace(" ","")
+                        single= sample.replace(str(option),"").replace("@","").replace(" ","")
                         if len(single) >0:
                             bu.append(single)
+                            delk.append(single)
                         else:
                             print("User var is empty.")
                    elif sample.count("@") >1:
                         for var in sample.split("@"):
                            if len(var) >0:
-                              bu.append(var.replace(" ",""))
+                              bu.append(var.replace(str(option),"").replace(" ",""))
+                              delk.append(var.replace(str(option),"").replace(" ",""))
                            else:
                               print("User var is empty.")
                         print("You asked to Ban those users: ",",".join(bu))
@@ -509,7 +536,7 @@ def Request(cmd):
 
                    if sample.count("@") == 1:
                         print("You asked to Add this user :",sample)
-                        single= sample.replace("@","").replace(" ","")
+                        single= sample.replace(str(option),"").replace("@","").replace(" ","")
                         if len(single) >0:
                             adu.append(single)
                         else:
@@ -517,7 +544,7 @@ def Request(cmd):
                    elif sample.count("@") >1:
                         for var in sample.split("@"):
                            if len(var) >0:
-                              adu.append(var.replace(" ",""))
+                              adu.append(var.replace(str(option),"").replace(" ",""))
                            else:
                               print("User var is empty.")
                         print("You asked to Add those users: ",",".join(adu))
@@ -527,7 +554,7 @@ def Request(cmd):
               if option == "deluser:":
                    if sample.count("@") == 1:
                         print("You asked to Delete this user :",sample)
-                        single= sample.replace("@","").replace(" ","")
+                        single= sample.replace(str(option),"").replace("@","").replace(" ","")
                         if len(single) >0:
                             delu.append(single)
                         else:
@@ -535,7 +562,7 @@ def Request(cmd):
                    elif sample.count("@") >1:
                         for var in sample.split("@"):
                            if len(var) >0:
-                              delu.append(var.replace(" ",""))
+                              delu.append(var.replace(str(option),"").replace(" ",""))
                            else:
                               print("User var is empty.")
                         print("You asked to Delete those users: ",",".join(delu))
@@ -545,15 +572,17 @@ def Request(cmd):
               if option == "banfriend:":
                    if sample.count("@") == 1:
                         print("You asked to Ban this friend :",sample)
-                        single= sample.replace("@","").replace(" ","")
+                        single= sample.replace(str(option),"").replace("@","").replace(" ","")
                         if len(single) >0:
                             bf.append(single)
+                            delk.append(single)
                         else:
                             print("User var is empty.")
                    elif sample.count("@") >1:
                         for var in sample.split("@"):
                            if len(var) >0:
-                              bf.append(var.replace(" ",""))
+                              bf.append(var.replace(str(option),"").replace(" ",""))
+                              delk.append(var.replace(str(option),"").replace(" ",""))
                            else:
                               print("User var is empty.")
                         print("You asked to Ban those friends: ",",".join(bf))
@@ -563,7 +592,7 @@ def Request(cmd):
               if option == "delfriend:":
                    if sample.count("@") == 1:
                         print("You asked to Delete this friend :",sample)
-                        single= sample.replace("@","").replace(" ","")
+                        single= sample.replace(str(option),"").replace("@","").replace(" ","")
                         if len(single) >0:
                             delf.append(single)
                         else:
@@ -571,7 +600,7 @@ def Request(cmd):
                    elif sample.count("@") >1:
                         for var in sample.split("@"):
                            if len(var) >0:
-                              delf.append(var.replace(" ",""))
+                              delf.append(var.replace(str(option),"").replace(" ",""))
                            else:
                               print("User var is empty.")
                         print("You asked to Delete those friends: ",",".join(delf))
@@ -581,7 +610,7 @@ def Request(cmd):
 
                    if sample.count("@") == 1:
                         print("You asked to Add this friend :",sample)
-                        single= sample.replace("@","").replace(" ","")
+                        single= sample.replace(str(option),"").replace("@","").replace(" ","")
                         if len(single) >0:
                             adf.append(single)
                         else:
@@ -589,7 +618,7 @@ def Request(cmd):
                    elif sample.count("@") >1:
                         for var in sample.split("@"):
                            if len(var) >0:
-                              adf.append(var.replace(" ",""))
+                              adf.append(var.replace(str(option),"").replace(" ",""))
                            else:
                               print("User var is empty.")
                         print("You asked to Add those friends: ",",".join(adf))
@@ -598,22 +627,24 @@ def Request(cmd):
               if option == "bankeyword:":
                    if sample.count(",") == 0:
                         print("You asked to Ban this keyword :",sample)
-                        single= sample
+                        single= sample.replace(str(option),"")
                         if len(single) >0:
                             bk.append(single)
+                            delk.append(single)
                         else:
                             print("Keyword var is empty.")
                    elif sample.count(",") >0:
                         for var in sample.split(","):
                            if len(var) >0:
-                              bk.append(var)
+                              bk.append(var.replace(str(option),""))
+                              delk.append(var.replace(str(option),""))
                            else:
                               print("Keyword var is empty.")
                         print("You asked to Ban those Keywords: ",",".join(bk))
               if option == "addkeyword:":
                    if sample.count(",") == 0:
                         print("You asked to Add this keyword :",sample)
-                        single= sample
+                        single= sample.replace(str(option),"")
                         if len(single) >0:
                             adk.append(single)
                         else:
@@ -621,14 +652,14 @@ def Request(cmd):
                    elif sample.count(",") >0:
                         for var in sample.split(","):
                            if len(var) >0:
-                              adk.append(var)
+                              adk.append(var.replace(str(option),""))
                            else:
                               print("Keyword var is empty.")
                         print("You asked to Add those Keywords: ",",".join(adk))
               if option == "delkeyword:":
                    if sample.count(",") == 0:
                         print("You asked to Delete this keyword :",sample)
-                        single= sample
+                        single= sample.replace(str(option),"")
                         if len(single) >0:
                             delk.append(single)
                         else:
@@ -636,14 +667,14 @@ def Request(cmd):
                    elif sample.count(",") >0:
                         for var in sample.split(","):
                            if len(var) >0:
-                             delk.append(var)
+                             delk.append(var.replace(str(option),""))
                            else:
                               print("Keyword var is empty.")
                         print("You asked to Add those Keywords: ",",".join(delk))
               if option == "delrss:":
                    if sample.count("http") == 1:
                         print("You asked to Delete this rss feed :",sample)
-                        single= sample
+                        single= sample.replace(str(option),"")
                         if len(single) >0:
                             delk.append(single)
                         else:
@@ -651,7 +682,7 @@ def Request(cmd):
                    elif sample.count("http") >1:
                         for var in sample.split(","):
                            if len(var) >0:
-                             delrss.append(var)
+                             delrss.append(var.replace(str(option),""))
                            else:
                               print("Rss var is empty.")
                         print("You asked to Delete those rss feeds: ",",".join(delrss))
@@ -661,7 +692,7 @@ def Request(cmd):
               if option == "addrss:":
                    if sample.count("http") == 1:
                         print("You asked to Add this rss feed :",sample)
-                        single= sample
+                        single= sample.replace(str(option),"")
                         if len(single) >0:
                             adrss.append(single)
                         else:
@@ -669,7 +700,7 @@ def Request(cmd):
                    elif sample.count("http") >1:
                         for var in sample.split(","):
                            if len(var) >0:
-                             adrss.append(var)
+                             adrss.append(var.replace(str(option),""))
                            else:
                               print("Keyword var is empty.")
                         print("You asked to Delete those rss feeds: ",",".join(adrss))
@@ -678,126 +709,163 @@ def Request(cmd):
       if reconized == False:
          checkfile("Request.log")
 
-         file = open(path+"Request.log","a")
+         file = open(Pth_Data+"Request.log","a")
          file.write(log)
          return("Cmd not recognised.")
 
   checkfile("Request.log")
           
-  file = open(path+"Request.log","a")
+  file = open(Pth_Data+"Request.log","a")
   file.write(log)
   file.close
 
-  adk = []
-  delk = []
-  bk = []
-  adu = []
-  delu = []
-  bu = []
-  adf = []
-  delf = []
-  bf = []
-  adrss = []
-  delrss = []
+  checkfile(Pth_Friends_Rq)
+  checkfile(Pth_Following_Rq)
+  checkfile(Pth_Bannedpeople_Rq)
+  checkfile(Pth_Bannedword_Rq)
+  checkfile(Pth_Keywords_Rq)
+  checkfile(Pth_Rss_Rq)
 
-  checkfile(Tmpfriend)
-  checkfile(Tmpfolo)
-  checkfile(Tmpbppl)
-  checkfile(Tmpbw)
-  checkfile(Tmpkey)
-  checkfile(Tmprss)
+  if RmNores is True:
+     ret = Flush_NoResult()
+     output.append(ret) 
 
   if len(adrss) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Rss')
-     with open(Tmprss,"a") as f:
+     print('Adding new entry to Rq.Rss')
+     with open(Pth_Rss_Rq,"a") as f:
         for entry in adrss:
            f.write("\n"+str(entry))
+     output.append("**Added %s new entry to Rq.Rss**"%len(adrss))
+
 
 
   if len(delrss) > 0:
-     Fig("cybersmall",'Deleting entry from Rq.Rss')
-     with open(Tmprss, "r") as f:
+     print('Deleting entry from Rq.Rss')
+     with open(Pth_Rss_Rq, "r") as f:
          lines = f.readlines()
      ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
-     save_copy = "cp "+str(Tmprss) +" "+str(pathsave)+"Rq.Rss"+str(ts)+".save"
+     save_copy = "cp "+str(Pth_Rss_Rq) +" "+str(Pth_Save)+"Rq.Rss"+str(ts)+".save"
      os.system(save_copy)
-     with open(Tmprss, "w") as f:
+     with open(Pth_Rss_Rq, "w") as f:
          for line in lines:
             for entry in delrss:
                if line.strip("\n") != entry:
                     f.write(line)
+     output.append("**Deleting %s entry in Rq.Rss**"%len(delrss))
+
 
   if len(delf) > 0:
-     Fig("cybersmall",'Deleting entry from Rq.Friends')
-     with open(Tmpfriend, "r") as f:
+     print('Deleting entry from Rq.Friends')
+     with open(Pth_Friends_Rq, "r") as f:
          lines = f.readlines()
      ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
-     save_copy = "cp "+str(Tmpfriend) +" "+str(pathsave)+"Rq.Friends"+str(ts)+".save"
+     save_copy = "cp "+str(Pth_Friends_Rq) +" "+str(Pth_Save)+"Rq.Friends"+str(ts)+".save"
      os.system(save_copy)
-     with open(Tmpfriend, "w") as f:
+     with open(Pth_Friends_Rq, "w") as f:
          for line in lines:
             for entry in delf:
                if line.strip("\n") != entry:
                     f.write(line)
+     output.append("**Deleting %s entry in Rq.Friends**"%len(delf))
 
   if len(delu) > 0:
-     Fig("cybersmall",'Deleting entry from Rq.Following')
-     with open(Tmpfolo, "r") as f:
+     print('Deleting entry from Rq.Following')
+     with open(Pth_Following_Rq, "r") as f:
          lines = f.readlines()
      ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
-     save_copy = "cp "+str(Tmpfolo) +" "+str(pathsave)+"Rq.Following"+str(ts)+".save"
+     save_copy = "cp "+str(Pth_Following_Rq) +" "+str(Pth_Save)+"Rq.Following"+str(ts)+".save"
      os.system(save_copy)
-     with open(Tmpfolo, "w") as f:
+     with open(Pth_Following_Rq, "w") as f:
          for line in lines:
             for entry in delu:
                if line.strip("\n") != entry:
                     f.write(line)
+     output.append("**Deleting %s entry in Rq.Following**"%len(delu))
 
   if len(delk) > 0:
-     Fig("cybersmall",'Deleting entry from Rq.Keywords')
-     with open(Tmpkey, "r") as f:
+     print('Deleting entry from Rq.Keywords')
+     with open(Pth_Keywords_Rq, "r") as f:
          lines = f.readlines()
      ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
-     save_copy = "cp "+str(Tmpkey) +" "+str(pathsave)+"Rq.Keywords"+str(ts)+".save"
+     save_copy = "cp "+str(Pth_Keywords_Rq) +" "+str(Pth_Save)+"Rq.Keywords"+str(ts)+".save"
      os.system(save_copy)
-     with open(Tmpkey, "w") as f:
+     with open(Pth_Keywords_Rq, "w") as f:
          for line in lines:
             for entry in delk:
                if line.strip("\n") != entry:
                     f.write(line)
+     output.append("**Deleting %s entry in Rq.Keywords**"%len(delk))
 
   if len(adk) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Keywords')
-     with open(Tmpkey,"a") as f:
+     print('Adding new entry to Rq.Keywords')
+     with open(Pth_Keywords_Rq,"a") as f:
         for entry in adk:
            f.write("\n"+str(entry))
+
+     output.append("**Adding %s entry in Rq.Keywords**"%len(adk))
+
   if len(adu) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Following')
-     with open(Tmpfolo,"a") as f:
+     print('Adding new entry to Rq.Following')
+     with open(Pth_Following_Rq,"a") as f:
         for entry in adu:
            f.write("\n"+str(entry))
+     output.append("**Adding %s entry in Rq.Following**"%len(adu))
+
   if len(adf) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Friends')
-     with open(Tmpfriend,"a") as f:
+     print('Adding new entry to Rq.Friends')
+     with open(Pth_Friends_Rq,"a") as f:
         for entry in adf:
            f.write("\n"+str(entry))
+     output.append("**Adding %s entry in Rq.Friends**"%len(adf))
 
   if len(bu) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Bannedpeople')
-     with open(Tmpbppl,"a") as f:
+     print('Adding new entry to Rq.Bannedpeople')
+     with open(Pth_Bannedpeople_Rq,"a") as f:
         for entry in bu:
            f.write("\n"+str(entry))
+     output.append("**Adding %s entry in Rq.Bannedpeople**"%len(bu))
+
   if len(bf) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Bannedpeople')
-     with open(Tmpbppl,"a") as f:
+     print('Adding new entry to Rq.Bannedpeople')
+     with open(Pth_Bannedpeople_Rq,"a") as f:
         for entry in bf:
            f.write("\n"+str(entry))
+     output.append("**Adding %s entry in Rq.Bannedpeople**"%len(bf))
+
   if len(bk) > 0:
-     Fig("cybersmall",'Adding new entry to Rq.Bannedword')
-     with open(Tmpbw,"a") as f:
+     print('Adding new entry to Rq.Bannedword')
+     with open(Pth_Bannedword_Rq,"a") as f:
         for entry in bk:
            f.write("\n"+str(entry))
-  return("Done..")
+     output.append("**Adding %s entry in Rq.Bannedword**"%len(bk))
+  output.append("**Done**")
+  return(output)
+
+
+def Flush_NoResult:
+     global NoResult_List
+     Fig("rev",'SaveDouble()')
+     print('Deleting No.Results content from Rq.Keywords')
+     cnt = 0
+     with open(Pth_Keywords_Rq, "r") as f:
+         lines = f.readlines()
+     ts = datetime.datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
+     save_copy = "cp "+str(Pth_Keywords_Rq) +" "+str(Pth_Save)+"Rq.Keywords"+str(ts)+".Before_Removing_Noresults.save"
+     os.system(save_copy)
+     with open(Pth_Keywords_Rq, "w") as f:
+         for line in lines:
+            for entry in NoResult_List:
+               if line.strip("\n") != entry:
+                    f.write(line)
+               else:
+                   print("Removed:",entry)
+                   cnt += 1
+     file = open(Pth_NoResult,"w")
+     file.write("\n")
+     file.close
+     NoResult_List = []
+     print("**Removed No results from Rq.Keywords: %s/%s **"%(cnt,len(NoResult_List)))
+     return("**Removed No results from Rq.Keywords: %s/%s **"%(cnt,len(NoResult_List)))
 
 def SaveDouble(text):
                 
@@ -807,20 +875,22 @@ def SaveDouble(text):
                 
              #time.sleep(0.3)
 
-                text = text.replace("\n"," ")
-                checkfile(doublesaved)
+                text = text.replace("\n","")
+                if text not in Ban_Double_List:
+                   checkfile(Pth_Text_Sent)
 
-                file = open(doublesaved,"a")
-                file.write("\n"+str(text))
-                file.close()
+                   file = open(Pth_Text_Sent,"a")
+                   file.write("\n"+str(text))
+                   file.close()
 
                 
                 
-                print("*=*=*=*=*=*=*=*=*=*")
-                print("SAVING TWEET TO TMP :",text)
-                Fig("larry3d",'Saved')
-                print("*=*=*=*=*=*=*=*=*=*")
-                
+                   print("*=*=*=*=*=*=*=*=*=*")
+                   print("SAVING TWEET TO TMP :",text)
+                   Fig("larry3d",'Saved')
+                   print("*=*=*=*=*=*=*=*=*=*")
+                else:
+                   print("Already saved")
                 
                 #time.sleep(0.3)
 
@@ -829,18 +899,18 @@ def SaveDouble(text):
 def CheckDouble():
 
 
-    global bandouble
+    global Ban_Double_List
 
     Fig("rev",'CheckDbl()',True)
     
 
-    checkfile(doublesaved)
+    checkfile(Pth_Text_Sent)
 
-    lines = cleanfile(doublesaved)
+    lines = cleanfile(Pth_Text_Sent)
 
     for saved in lines:
-
-                bandouble.append(saved)
+           if saved not in Ban_Double_List:
+                Ban_Double_List.append(saved)
     print("*=*=*=*=*=*=*=*=*=*")
     Fig("larry3d",'BanDouble Updated',True)
     print("*=*=*=*=*=*=*=*=*=*")
@@ -851,26 +921,26 @@ def CheckDouble():
 
 def flushtmp():
 
-  global apicall
-  global updatecall
-  global twitter
+  global Api_Call_Nbr
+  global Update_Call_Nbr
+  global Twitter_Api
 
   goflush = 0
 
   Fig("rev",'flushtmp()',True)
 
   time.sleep(3)
-  if os.path.exists(Session):
+  if os.path.exists(Pth_Current_Session):
 
-    file = open(Session,"r")
+    file = open(Pth_Current_Session,"r")
     datefile = file.read()
     date_object = datetime.datetime.strptime(str(datefile), '%Y-%m-%d %H:%M:%S.%f')
-    Laps = (currentdate - date_object)
+    Laps = (CurrentDate - date_object)
 
     print(Laps)
 
     try:
-      if (currentdate - date_object).total_seconds() > 86400:
+      if (CurrentDate - date_object).total_seconds() > 86400:
            goflush = 1
     except Exception as e:
       print(e)
@@ -890,7 +960,7 @@ def flushtmp():
       
       file.close()
       try:
-                          text="New Session ! " + str(currentdate)
+                          text="New Pth_Current_Session ! " + str(CurrentDate)
                           IrSend(text)
                           print("")
                           Fig("basic",'Status sent !')
@@ -901,31 +971,31 @@ def flushtmp():
                           time.sleep(5)
       time.sleep(3)
 
-      os.remove(Session)
+      os.remove(Pth_Current_Session)
 
 
-      if os.path.exists(TmpDay):
-                os.remove(TmpDay)
+      if os.path.exists(Pth_TotalApi_Call):
+                os.remove(Pth_TotalApi_Call)
 
 
-      if os.path.exists(TmpDay2):
-                os.remove(TmpDay2)
+      if os.path.exists(Pth_Update_Call):
+                os.remove(Pth_Update_Call)
 
 
-      if os.path.exists(TmpMeal):
-                os.remove(TmpMeal)
+      if os.path.exists(Pth_SearchTerms_Used):
+                os.remove(Pth_SearchTerms_Used)
 
       
       
       print("==")
       Fig("basic",'Saving current date',True)
-      print(currentdate)
+      print(CurrentDate)
       print("==")
       
       
       time.sleep(5)
-      file = open(Session,"w")
-      file.write(str(currentdate))
+      file = open(Pth_Current_Session,"w")
+      file.write(str(CurrentDate))
       file.close()
 
 
@@ -939,10 +1009,10 @@ def flushtmp():
       
        
       print("==")
-      Fig("basic",'Starting from Last Session',True)
+      Fig("basic",'Starting from Last Pth_Current_Session',True)
       
       print("Numbers of seconds since the first api call :",Laps.seconds)
-      print("%i Seconds left until Twitter flushs apicalls :" % lfts)
+      print("%i Seconds left until Twitter flushs Api_Call_Nbrs :" % lfts)
       print("==")
       
       
@@ -953,14 +1023,14 @@ def flushtmp():
     
     
     print("==")
-    Fig("basic",'New Session Started',True)
-    print(currentdate)
+    Fig("basic",'New Pth_Current_Session Started',True)
+    print(CurrentDate)
     print("==")
     
     
     time.sleep(5)
-    file = open(Session,"w")
-    file.write(str(currentdate))
+    file = open(Pth_Current_Session,"w")
+    file.write(str(CurrentDate))
     file.close()
 
 
@@ -969,10 +1039,10 @@ def checkmenu(wordlist):
   
   time.sleep(3)
   try:
-                global newkeywords
-                global checkM
+                global New_Keywords_List
+                global Menu_Check_Trigger
                 oldlen = len(wordlist)
-                file = open(noresult,"r")
+                file = open(Pth_NoResult,"r")
                 lines2 = file.read().splitlines()
                 lenmatch2 = len(set(lines2) & set(wordlist))
 
@@ -1002,7 +1072,7 @@ def checkmenu(wordlist):
                 Fig("doom",'Removing Old Searches',True)
                 
                 time.sleep(0.5)
-                newkeywords = wordlist
+                New_Keywords_List = wordlist
                 
                 print("==")
                 Fig("cybermedium",'Removed successfully',True)
@@ -1010,7 +1080,7 @@ def checkmenu(wordlist):
                 time.sleep(1)
 
                 oldlen = len(wordlist)
-                file = open(TmpMeal,"r")
+                file = open(Pth_SearchTerms_Used,"r")
                 lines = file.read().splitlines()
                 lenmatch = len(set(lines) & set(wordlist))
 
@@ -1034,9 +1104,9 @@ def checkmenu(wordlist):
                 print("==")
                 Fig("cybermedium",'Removed successfully',True)
                 print("==")
-                checkM = 1
+                Menu_Check_Trigger = True
                 time.sleep(1)
-                newkeywords = wordlist
+                New_Keywords_List = wordlist
   except Exception as e:
     print(e)
 
@@ -1048,19 +1118,19 @@ def checkmenu(wordlist):
 
 def lastmeal(lastsearch):
 
-    global mcdone
+    global Menu_Check_Trigger
 
-    if mcdone == 0:
+    if Menu_Check_Trigger == False:
                   Fig("rev",'LastSearch()',True)
                   time.sleep(3)
-                  checkfile(TmpMeal)
+                  checkfile(Pth_SearchTerms_Used)
   
-                  file = open(TmpMeal,"a")
+                  file = open(Pth_SearchTerms_Used,"a")
                   for words in lastsearch:
                     file.write(words + "\n")
                     Fig("digital","Marking " + words + " as old . ")
                   file.close()
-                  mcdone = mcdone + 1
+                  Menu_Check_Trigger = True
                   time.sleep(0.3)
     else:
                   print("==")
@@ -1070,11 +1140,11 @@ def lastmeal(lastsearch):
 def SaveTotalCall(call,update):
     Fig("rev",'SaveTotalCall()')
     time.sleep(0.3)
-    global totalcall
-    global updatecall
-    global totalupdatecall
-    checkfile(TmpDay)
-    file = open(TmpDay,"a+")
+    global Total_Call_Nbr
+    global Update_Call_Nbr
+    global Total_Update_Call_Nbr
+    checkfile(Pth_TotalApi_Call)
+    file = open(Pth_TotalApi_Call,"a+")
     lines = file.read().splitlines()
     lenfile = len(lines)
     try:
@@ -1084,16 +1154,16 @@ def SaveTotalCall(call,update):
     print("==")
     print("Last Total saved : ",lastitem)
     newitem = int(lastitem) + int(call)
-    totalcall = newitem
+    Total_Call_Nbr = newitem
     finalitem = str(newitem) + "\n"
     Fig("digital","Saving new Total : " + str(finalitem))
     print("==")
     file.write(finalitem)
     file.close()
     time.sleep(0.3)
-    checkfile(TmpDay2)
+    checkfile(Pth_Update_Call)
 
-    file2 = open(TmpDay2,"a+")
+    file2 = open(Pth_Update_Call,"a+")
     lines2 = file2.read().splitlines()
     lenfile2 = len(lines2)
     try:
@@ -1103,7 +1173,7 @@ def SaveTotalCall(call,update):
     print("==")
     print("Last Update Total saved : ",lastitem2)
     newitem2 = int(lastitem2) + int(update)
-    totalupdatecall = newitem2
+    Total_Update_Call_Nbr = newitem2
     finalitem2 = str(newitem2) + "\n"
     print("Saving new Update Total : ",finalitem2)
     print("==")
@@ -1115,7 +1185,7 @@ def SaveTotalCall(call,update):
 
 
 def IrSweet():
-     global GOGOGO
+     global GOGOGO_Trigger
      global Irc
 
      Konnected = False
@@ -1151,7 +1221,7 @@ def IrSweet():
                if len(Buffer) > 1:
                     print("Buffer: ",Buffer)
 
-               if "%s!ouroboros"%IRMASTER in Buffer and "PRIVMSG BlueKing :" in Buffer:
+               if IRMASTERTrigger in Buffer and "PRIVMSG BlueKing :" in Buffer:
                     cmd = Buffer.split("PRIVMSG BlueKing :")[1]
                     Answer = Request(cmd[:-2])
                     if len(Answer) > 0:
@@ -1210,7 +1280,7 @@ def IrSweet():
                     return IrSweet()
 
                if Joined is True and Identified is True and Konnected is True:
-                    GOGOGO = True
+                    GOGOGO_Trigger = True
 
           except Exception as e:
                print("Error IrSocket:",e)
@@ -1221,7 +1291,7 @@ def Feeds(ttl):
 
      counter = 0
 
-     for flux in Fluxlst:
+     for flux in Rss_Url_List:
          if counter <= ttl:
             try:
                rss = feedparser.parse(flux)
@@ -1233,7 +1303,7 @@ def Feeds(ttl):
                     if format not in RssSent:
                          RssSent.append(format)
                          IrSend(format)
-                         with open(path+"RssSave","a") as f:
+                         with open(Pth_Data+"RssSave","a") as f:
                               f.write("\n")
                               f.write(str(format))
             except Exception as e:
@@ -1252,36 +1322,37 @@ def IrSend(content,dontprint = None):
           print("==")
           Fig("epic","Tweet Loaded!")
           print("==")
-        
+          Irc.send(bytes("PRIVMSG %s :==============================================================\r\n" % IRCHANNEL, "UTF-8"))
+
         time.sleep(1)
         Fig("digital","\n--Sending :"+str(content)+"--\n")
         Irc.send(bytes("PRIVMSG %s :** %s **\r\n" % (IRCHANNEL,content), "UTF-8"))
         Fig("digital","\n--Done--\n")
         return
 
-def Stat2Irc(time2wait):
+def Stat2Irc(Time_To_Wait):
 #  Flood = randint(0,3)
 #  if Flood == 3:
-       apicalltxt = "Total RT Sent: " + str(Totalsent)
-       IrSend(apicalltxt)
+       Api_Call_Nbrtxt = "Total RT Sent: " + str(Total_Sent_Nbr)
+       IrSend(Api_Call_Nbrtxt)
        time.sleep(1)
-       updatecalltxt = "Current Update Calls: " + str(updatecall)
-       IrSend(updatecalltxt)
+       Update_Call_Nbrtxt = "Current Update Calls: " + str(Update_Call_Nbr)
+       IrSend(Update_Call_Nbrtxt)
        time.sleep(1)
-       totalcalltxt = "Total Calls: " +str(totalcall)
-       IrSend(totalcalltxt)
+       Total_Call_Nbrtxt = "Total Calls: " +str(Total_Call_Nbr)
+       IrSend(Total_Call_Nbrtxt)
        time.sleep(1)
-       totalupdatecalltxt = "Total Update Calls: " + str(totalupdatecall)
-       IrSend(totalupdatecalltxt)
+       Total_Update_Call_Nbrtxt = "Total Update Calls: " + str(Total_Update_Call_Nbr)
+       IrSend(Total_Update_Call_Nbrtxt)
        time.sleep(1)
-       banppltxt = "Banned Users in list: " + str(len(banppl))
-       IrSend(banppltxt)
+       Banned_User_listtxt = "Banned Users in list: " + str(len(Banned_User_list))
+       IrSend(Banned_User_listtxt)
        time.sleep(1)
-       bandoubletxt = "Total Banned (Double): "+str(totalalrdysnd)
-       IrSend(bandoubletxt)
+       Ban_Double_Listtxt = "Total Banned (Double): "+str(Total_Already_Send_Nbr)
+       IrSend(Ban_Double_Listtxt)
        time.sleep(1)
-       banlisttxt = "Banned Words in list: "+str(len(banlist))
-       IrSend(banlisttxt)
+       Banned_Word_listtxt = "Banned Words in list: "+str(len(Banned_Word_list))
+       IrSend(Banned_Word_listtxt)
        time.sleep(1)
        Friendstxt = "Nbr of friends: "+str(len(Friends))
        IrSend(Friendstxt)
@@ -1292,58 +1363,58 @@ def Stat2Irc(time2wait):
        Keywordstxt = "Keywords in list: "+str(len(Keywords))
        IrSend(Keywordstxt)
        time.sleep(1)
-       moyscoretxt = "Current Tweets collected: " + str(len(moyscore))
-       IrSend(moyscoretxt)
+       AvgScoreTxt = "Current Tweets collected: " + str(len(AvgScore))
+       IrSend(AvgScoreTxt)
        time.sleep(1)
-       NbrRetweettxt = "Tweets sent to irc:"+str(len(retweetlist))
+       NbrRetweettxt = "Tweets sent to irc:"+str(len(Retweet_List))
        IrSend(NbrRetweettxt)
        time.sleep(1)
-       totalscoretxt = "Total Banned (Score): "+str(totalscore)
-       IrSend(totalscoretxt)
+       Totale_Score_Nbrtxt = "Total Banned (Score): "+str(Totale_Score_Nbr)
+       IrSend(Totale_Score_Nbrtxt)
        time.sleep(1)
-       totallanguagetxt = "Total Banned (Language): " +str(totallanguage)
-       IrSend(totallanguagetxt)
+       Total_Ban_By_Lang_Nbrtxt = "Total Banned (Language): " +str(Total_Ban_By_Lang_Nbr)
+       IrSend(Total_Ban_By_Lang_Nbrtxt)
        time.sleep(1)
-       total2oldtxt = "Total Banned (Too old): "+str(total2old)
-       IrSend(total2oldtxt)
+       Total_Ban_By_Date_Nbrtxt = "Total Banned (Too old): "+str(Total_Ban_By_Date_Nbr)
+       IrSend(Total_Ban_By_Date_Nbrtxt)
        time.sleep(1)
-       totalnokeywordtxt = "Total Banned (No Keywords): "+str(totalnokeyword)
-       IrSend(totalnokeywordtxt)
+       Total_Ban_By_NoResult_Nbrtxt = "Total Banned (No Keywords): "+str(Total_Ban_By_NoResult_Nbr)
+       IrSend(Total_Ban_By_NoResult_Nbrtxt)
        time.sleep(1)
-       totalbannedwordstxt = "Total Banned (Words): "+str(totalbannedwords)
-       IrSend(totalbannedwordstxt)
+       Total_Ban_By_Keywords_Nbrtxt = "Total Banned (Words): "+str(Total_Ban_By_Keywords_Nbr)
+       IrSend(Total_Ban_By_Keywords_Nbrtxt)
        time.sleep(1)
-       totalfftxt = "Total Banned (FF): "+str(totalff)
-       IrSend(totalfftxt)
+       Total_Ban_By_FollowFriday_Nbrtxt = "Total Banned (FF): "+str(Total_Ban_By_FollowFriday_Nbr)
+       IrSend(Total_Ban_By_FollowFriday_Nbrtxt)
        time.sleep(1)
-       totalhftxt = "Total Banned (###):"+str(totalhf)
-       IrSend(totalhftxt)
+       Total_Ban_By_TooManyHashtags_Nbrtxt = "Total Banned (###):"+str(Total_Ban_By_TooManyHashtags_Nbr)
+       IrSend(Total_Ban_By_TooManyHashtags_Nbrtxt)
        time.sleep(1)
-       totalbannedppltxt = "Total Banned Users: "+str(totalbannedppl)
-       IrSend(totalbannedppltxt)
+       Total_Ban_By_BannedPeople_Nbrtxt = "Total Banned Users: "+str(Total_Ban_By_BannedPeople_Nbr)
+       IrSend(Total_Ban_By_BannedPeople_Nbrtxt)
        time.sleep(1)
-       Feeds(time2wait)
+       Feeds(Time_To_Wait)
 
 def limits():
   Fig("rev",'Limits()')
 
 #  #time.sleep(0.3)
-  global apicall
-  global updatecall
-  global totalupdatecall
-  global totalcall
-  global twitter
-  global searchlimit
-  global restabit
-  global waithour
-  global waithalf
-  global time2wait
-  global startedat
-  global allok
-  global tmpbypass
-  startedat = datetime.datetime.now()
+  global Api_Call_Nbr
+  global Update_Call_Nbr
+  global Total_Update_Call_Nbr
+  global Total_Call_Nbr
+  global Twitter_Api
+  global Search_Limit_Trigger
+  global RestABit_Trigger
+  global Wait_Hour_Trigger
+  global Wait_Half_Hour_Trigger
+  global Time_To_Wait
+  global Start_Date
+  global All_Ok_Trigger
+  global Skip_Wait_Trigger
+  Start_Date = datetime.datetime.now()
 
-  if waithour == 1:
+  if Wait_Hour_Trigger == True:
 
 
                 print("****************************************")
@@ -1351,8 +1422,8 @@ def limits():
                 Fig("epic",'CURRENT LIMITS ARE REACHED !!')
                 print("")
                 Fig("cybermedium",'Saving Total Calls to file')
-                SaveTotalCall(apicall,updatecall)
-                Fig("cybermedium",'Resetting current apicalls')
+                SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
+                Fig("cybermedium",'Resetting current Api_Call_Nbrs')
 
 
                 Fig("cybermedium",'Login Out')
@@ -1360,46 +1431,46 @@ def limits():
                 print("\n\n\n\n")
 
                 Stat2Irc(3600)
-                updatecall = 0
-                apicall = 0
-                searchlimit = 0
-                restabit = 0
-                waithour = 0
+                Update_Call_Nbr = 0
+                Api_Call_Nbr = 0
+                Search_Limit_Trigger = False
+                RestABit_Trigger = False
+                Wait_Hour_Trigger = False
 
                 Fig("cybermedium",'Waking up ..')
                 #time.sleep(0.3)
                 print("")
-                twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+                Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
                 print("\n\n")
 
-  if restabit == 1:
+  if RestABit_Trigger == True:
                 print("****************************************")
                 print("****************************************")
                 Fig("epic",'Mysterious Error !!!',True)
                 print("")
                 Fig("cybermedium",'Saving Total Calls to file')
-                SaveTotalCall(apicall,updatecall)
-                Fig("cybermedium",'Resetting current apicalls')
+                SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
+                Fig("cybermedium",'Resetting current Api_Call_Nbrs')
 
                 Fig("cybermedium",'Login Out')
                 Fig("cybermedium",'Waiting 5 minutes')
                 Stat2Irc(3600)
 
-                updatecall = 0
-                apicall = 0
-                searchlimit = 0
-                restabit = 0
+                Update_Call_Nbr = 0
+                Api_Call_Nbr = 0
+                Search_Limit_Trigger = False
+                RestABit_Trigger = False
 
 
                 Fig("cybermedium",'Waking up ..')
     #time.sleep(1)
                 print("")
-                twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+                Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
                 
 
   
 
-  if searchlimit == 1:
+  if Search_Limit_Trigger == True:
 
     #Request()
                 print("****************************************")
@@ -1407,8 +1478,8 @@ def limits():
                 
                 Fig("epic",'SEARCH LIMITS ALMOST REACHED')
                 Fig("cybermedium",'Saving Total Calls to file')
-                SaveTotalCall(apicall,updatecall)
-                Fig("cybermedium",'Resetting current apicalls')
+                SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
+                Fig("cybermedium",'Resetting current Api_Call_Nbrs')
 
 
                 Fig("cybermedium",'Login Out')
@@ -1416,20 +1487,20 @@ def limits():
                 Fig("cybermedium",'Waiting 15 minutes')
                 Stat2Irc(900)
 
-                updatecall = 0
-                apicall = 0
-                searchlimit = 0
+                Update_Call_Nbr = 0
+                Api_Call_Nbr = 0
+                Search_Limit_Trigger = False
 
                 Fig("cybermedium",'Waking up ..')
                 print("")
-                twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+                Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
                 
                 print("****************************************")
                 print("****************************************\n\n\n\n")
 
 
 
-  if apicall >= 165:
+  if Api_Call_Nbr >= 165:
     
    
     #Request()
@@ -1438,14 +1509,14 @@ def limits():
     
     Fig("epic",'CURRENT LIMITS ALMOST REACHED')
     Fig("cybermedium",'Saving Total Calls to file')
-    SaveTotalCall(apicall,updatecall)
-    Fig("cybermedium",'Resetting current apicalls')
+    SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
+    Fig("cybermedium",'Resetting current Api_Call_Nbrs')
 
 
     Fig("cybermedium",'Login Out')
     
 
-    if waithalf != 1:
+    if Wait_Half_Hour_Trigger != 1:
       Fig("cybermedium",'Waiting 15 minutes')
 
       Stat2Irc(900)
@@ -1453,18 +1524,18 @@ def limits():
       Fig("cybermedium",'Waiting 30 minutes')
       Stat2Irc(1800)
       
-    updatecall = 0
-    apicall = 0
+    Update_Call_Nbr = 0
+    Api_Call_Nbr = 0
     Fig("cybermedium",'Waking up ..')
     print("")
-    twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+    Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
     
     print("****************************************")
     print("****************************************\n\n\n\n")
 
 
 
-  if totalcall > 8888:
+  if Total_Call_Nbr > 8888:
 
     #Request()
                 print("****************************************")
@@ -1475,22 +1546,22 @@ def limits():
                 
                 Fig("epic",'CURRENT LIMITS ALMOST REACHED (total)')
                 Fig("cybermedium",'Saving Total Calls to file')
-                SaveTotalCall(apicall,updatecall)
-                Fig("cybermedium",'Resetting current apicalls')
-                allok = 1
-                tmpbypass = 1
+                SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
+                Fig("cybermedium",'Resetting current Api_Call_Nbrs')
+                All_Ok_Trigger = True
+                Skip_Wait_Trigger = True
                 
 
-  if totalupdatecall > 2223:
+  if Total_Update_Call_Nbr > 2223:
     #Request()
 
                 print("****************************************")
                 print("****************************************")
                 Fig("epic",'CURRENT LIMITS ALMOST REACHED (update)')
                 Fig("cybermedium",'Saving Total Calls to file')
-                SaveTotalCall(apicall,updatecall)
-                Fig("cybermedium",'Resetting current apicalls')
-                allok = 1
+                SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
+                Fig("cybermedium",'Resetting current Api_Call_Nbrs')
+                All_Ok_Trigger = True
 
   
   print("===================")
@@ -1505,12 +1576,12 @@ def Ban(tweet,sender,id,bio):
 
 
   global Banned
-  global totalnokeyword
-  global totalbannedwords
-  global totalalrdysnd
-  global totalff
-  global totalhf
-  global totalbannedppl
+  global Total_Ban_By_NoResult_Nbr
+  global Total_Ban_By_Keywords_Nbr
+  global Total_Already_Send_Nbr
+  global Total_Ban_By_FollowFriday_Nbr
+  global Total_Ban_By_TooManyHashtags_Nbr
+  global Total_Ban_By_BannedPeople_Nbr
 
 
   ushallpass = 0
@@ -1521,7 +1592,7 @@ def Ban(tweet,sender,id,bio):
 
   if Banned == 0:
 
-                for item in emolist:
+                for item in Emoji_List:
                         emotst = tweet.count(item)
                         if emotst > 0:
                                 print("Found this emoji : ",item)
@@ -1585,11 +1656,11 @@ def Ban(tweet,sender,id,bio):
      if ushallpass != 1 and luck > 50:
                                 
                                 Fig("cybermedium",'Did not found any Keyword in tweet.')
-                                totalnokeyword = totalnokeyword + 1
+                                Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
                                 Banned = 1
      print("*=*=*=*=*=*=*=*=*=*")
 
-  for forbid in banlist:
+  for forbid in Banned_Word_list:
     if Banned == 0:
       if str(forbid.lower()).replace(":"," ").replace(","," ").replace("!"," ").replace("?"," ").replace(";"," ").replace("'"," ").replace('"',' ').replace("-"," ").replace("_"," ") in str(tweet.lower()).replace(":"," ").replace(","," ").replace("!"," ").replace("?"," ").replace(";"," ").replace("'"," ").replace('"',' ').replace("-"," ").replace("_"," "):
 
@@ -1604,9 +1675,9 @@ def Ban(tweet,sender,id,bio):
         print("*=*=*=*=*=*=*=*=*=*")
         
         Banned = 1
-        totalbannedwords = totalbannedwords + 1
+        Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
       #time.sleep(0.3)
-        for forbid in banlist:
+        for forbid in Banned_Word_list:
             if Banned == 0:
                 if str(forbid.lower()) in str(bio.lower()):
 
@@ -1621,10 +1692,10 @@ def Ban(tweet,sender,id,bio):
                         print("*=*=*=*=*=*=*=*=*=*")
                         
                         Banned = 1
-                        totalbannedwords = totalbannedwords + 1
+                        Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
                         #time.sleep(0.3)
 
-        for forbid in banppl:
+        for forbid in Banned_User_list:
            if Banned == 0:
                 if str(forbid.lower()) in str(sender.lower()):
 
@@ -1639,10 +1710,10 @@ def Ban(tweet,sender,id,bio):
                         print("*=*=*=*=*=*=*=*=*=*")
                         
                         Banned = 1
-                        totalbannedppl = totalbannedppl + 1
+                        Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
                         #time.sleep(3)
 
-        for forbid in bandouble:
+        for forbid in Ban_Double_List:
            if Banned == 0:
                 if forbid in tweet:
 
@@ -1657,11 +1728,11 @@ def Ban(tweet,sender,id,bio):
                         print("*=*=*=*=*=*=*=*=*=*")
                         
                         Banned = 1
-                        totalalrdysnd = totalalrdysnd + 1
+                        Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
                         #time.sleep(0.3)
 
 
-  for item in bandouble:
+  for item in Ban_Double_List:
 
     if Banned == 0 and len(item) > 10:
       pos = 0
@@ -1688,7 +1759,7 @@ def Ban(tweet,sender,id,bio):
                           
                           maxpos = int(lng)
                           Banned = 1
-                          totalalrdysnd = totalalrdysnd + 1
+                          Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
           else:
               pos = pos + 1
               next = int(half) + pos
@@ -1711,7 +1782,7 @@ def Ban(tweet,sender,id,bio):
                   print("*=*=*=*=*=*=*=*=*=*")
                   
                   Banned = 1
-                  totalff = totalff +1
+                  Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr +1
       #time.sleep(0.5)
 
     if tweet.count("#") >= 3:
@@ -1721,19 +1792,19 @@ def Ban(tweet,sender,id,bio):
                   print("*=*=*=*=*=*=*=*=*=*")
                   
                   Banned = 1
-                  totalhf = totalhf + 1
+                  Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
                   #time.sleep(0.5)
 
-    if twtbyuser.count(str(sender)) >= 2:
+    if Tweets_By_Same_User.count(str(sender)) >= 2:
                         Fig("basic",'Too many Tweets From this user ')
                         Fig("cybermedium",'Going To Trash')
                         print("*=*=*=*=*=*=*=*=*=*")
                         
                         Banned = 1
-                        totalbannedppl = totalbannedppl + 1
+                        Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
                         #time.sleep(0.5)
     else:
-                        figy = "Nbr of tweets for this user : ",str(twtbyuser.count(sender))
+                        figy = "Nbr of tweets for this user : ",str(Tweets_By_Same_User.count(sender))
                         Fig("cybermedium",str(figy))
                         print("*=*=*=*=*=*=*=*=*=*")
       #time.sleep(0.3)
@@ -1753,9 +1824,9 @@ def Saveid(id):
                 
 #    #time.sleep(0.3)
 
-                checkfile(idsaved)
+                checkfile(Pth_Tweets_Sent)
 
-                file = open(idsaved,"a")
+                file = open(Pth_Tweets_Sent,"a")
                 file.write("\n"+str(id))
                 file.close()
 
@@ -1773,26 +1844,26 @@ def Saveid(id):
 def Idlist(id):
     global Banned
     global alreadysend
-    global Totalsent
-    global doneid
+    global Total_Sent_Nbr
+    global Id_Done_Trigger
 
     Fig("rev",'Idlist()')
 #    #time.sleep(0.3)
 
     alreadysend = 0
-    if doneid == 0:
-        checkfile(idsaved)
+    if Id_Done_Trigger == False:
+        checkfile(Pth_Tweets_Sent)
 
 
-        empty = cleanfile(idsaved)
+        empty = cleanfile(Pth_Tweets_Sent)
 
 
-        Totalsent = sum(1 for line in open(idsaved))
-        doneid = 1
+        Total_Sent_Nbr = sum(1 for line in open(Pth_Tweets_Sent))
+        Id_Done_Trigger = True
 
 
 
-    file = open(idsaved,"r+")
+    file = open(Pth_Tweets_Sent,"r+")
     lines = file.read().splitlines()
 
     for saved in lines:
@@ -1827,27 +1898,26 @@ def Idlist(id):
 
 def Scoring(tweet,search):
 
-  global apicall
-  global totalcall
-  global updatecall
-  global totalupdatecall
+  global Api_Call_Nbr
+  global Total_Call_Nbr
+  global Update_Call_Nbr
+  global Total_Update_Call_Nbr
   global Banned
-  global bandouble
+  global Ban_Double_List
   global alreadysend
-  global moyscore
-  global Rthourtweet
-  global totalscore
-  global totalalrdysnd
-  global totallanguage
-  global total2old
-  global twtbyuser
-  global tobsnd
-  global restabit
-  global twitter
-  global fuck
-  global waithour
-  global waithalf
-  global rtsave
+  global AvgScore
+  global Tweet_Age
+  global Totale_Score_Nbr
+  global Total_Already_Send_Nbr
+  global Total_Ban_By_Lang_Nbr
+  global Total_Ban_By_Date_Nbr
+  global Tweets_By_Same_User
+  global RestABit_Trigger
+  global Twitter_Api
+  global ERRORCNT
+  global Wait_Hour_Trigger
+  global Wait_Half_Hour_Trigger
+  global RetweetSave
 
   Bouffon = 0
   Score = 0
@@ -2242,7 +2312,7 @@ def Scoring(tweet,search):
             
                   Score = Score + 9000
                   randodge = ['Cool ','Gorgeous ','Soft ','Enjoy ','Totally ','Awesome ','Fun ','Easy ','Free ','Wow ','Much ','Many ','Too ','So ','Such ','Very ','Amaze ']
-                  dodgecoin = str(choice(randodge)) + str(choice(banlist)) + " "
+                  dodgecoin = str(choice(randodge)) + str(choice(Banned_Word_list)) + " "
                   time.sleep(2)
                   print("================================================================================")
                   
@@ -2288,7 +2358,7 @@ def Scoring(tweet,search):
                   limits()
 
                   Banned = 0
-                  for forbid in bandouble:
+                  for forbid in Ban_Double_List:
                     if Banned == 0:
                       if forbid in tweet['text']:
 
@@ -2303,11 +2373,11 @@ def Scoring(tweet,search):
                               print("*=*=*=*=*=*=*=*=*=*")
                               
                               Banned = 1
-                              totalalrdysnd = totalalrdysnd + 1
+                              Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
                               time.sleep(1)
 
 
-                  for item in bandouble:
+                  for item in Ban_Double_List:
 
                     if Banned == 0 and len(item) > 10:
                          pos = 0
@@ -2334,7 +2404,7 @@ def Scoring(tweet,search):
                                         
                                         maxpos = int(lng)
                                         Banned = 1
-                                        totalalrdysnd = totalalrdysnd + 1
+                                        Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
                                    else:
                                         pos = pos + 1
                                         next = int(half) + pos
@@ -2365,11 +2435,11 @@ def Scoring(tweet,search):
                          IrSend(dodgelink)
 
                          Fig("cybermedium","DONE")
-                         apicall = apicall + 2
-                         updatecall = updatecall + 2
+                         Api_Call_Nbr = Api_Call_Nbr + 2
+                         Update_Call_Nbr = Update_Call_Nbr + 2
                          Saveid(tweet['id'])
-                         if fuck > 0:
-                                                          fuck = fuck - 1
+                         if ERRORCNT > 0:
+                                                          ERRORCNT = ERRORCNT - 1
 
 
                        except Exception as e:
@@ -2397,14 +2467,14 @@ def Scoring(tweet,search):
   luck = randint(0,10)
   try:
     if Banned != 1:
-      if currentdate.day != 0o1:
-               if TimeFinal.month != currentdate.month:
+      if CurrentDate.day != 0o1:
+               if TimeFinal.month != CurrentDate.month:
                                         
                                         Fig("basic",'WAY TOO OLD !')
                                         
                                         if luck != 1:
                                           Banned = 1
-                                          total2old = total2old + 1
+                                          Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                                         if luck == 1:
                                           Fig("basic",'But who cares !')
                                           
@@ -2419,13 +2489,13 @@ def Scoring(tweet,search):
 
   try:
        if Banned != 1:
-          if TimeFinal.year != currentdate.year:
+          if TimeFinal.year != CurrentDate.year:
                                         
                                         Fig("basic",'FUCKING TOO OLD !')
                                         
                                         if luck != 1:
                                                 Banned = 1
-                                                total2old = total2old + 1
+                                                Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                                         if luck == 1:
                                           Fig("basic",'But who cares !')
                                           
@@ -2447,7 +2517,7 @@ def Scoring(tweet,search):
                                         
                                         if luck != 1:
                                                 Banned = 1
-                                                total2old = total2old + 1
+                                                Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                                         if luck == 1:
                                           Fig("basic",'But who cares !')
                                           
@@ -2462,18 +2532,18 @@ def Scoring(tweet,search):
           RtTime = RtTime.replace(" +0000 "," ")
           RtTimed = datetime.datetime.strptime(RtTime,'%a %b %d %H:%M:%S %Y').strftime('%Y-%m-%d %H:%M:%S')
           RtTimeFinal = datetime.datetime.strptime(RtTimed,'%Y-%m-%d %H:%M:%S')
-          Rthourtweet = now - RtTimeFinal
+          Tweet_Age = now - RtTimeFinal
           print("Retweet created at :" ,RtTimeFinal)
           try:
   
-              if currentdate.day != 0o1:
-                  if RtTimeFinal.month != currentdate.month:
+              if CurrentDate.day != 0o1:
+                  if RtTimeFinal.month != CurrentDate.month:
                                           
                                           Fig("basic",'RT WAY TOO OLD !')
                                           
                                           if luck != 1:
                                                   Banned = 1
-                                                  total2old = total2old + 1
+                                                  Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                                           if luck == 1:
                                             Fig("basic",'But who cares !')
                                             
@@ -2487,12 +2557,12 @@ def Scoring(tweet,search):
           
   
           try:
-                  if RtTimeFinal.year != currentdate.year:
+                  if RtTimeFinal.year != CurrentDate.year:
                                           
                                           Fig("basic",'RT FUCKING TOO OLD !')
                                           
                                           Banned = 1
-                                          total2old = total2old + 1
+                                          Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                                           ##time.sleep(0.2)
                   else:
                           pass
@@ -2671,7 +2741,7 @@ def Scoring(tweet,search):
 
 
 
-  moyscore.append(Score)
+  AvgScore.append(Score)
 
   if tweet['lang'] == "en" or tweet['lang'] == "fr" or tweet['lang'] == "en-gb":
 
@@ -2686,23 +2756,22 @@ def Scoring(tweet,search):
 
                print("######################################")
                print('Adding to Retweet List')
-               print("Nbr of tweets in queue :",len(retweetlist))
+               print("Nbr of tweets in queue :",len(Retweet_List))
                print("Tweet Score : ",Score)
                print("Tweet ID :", tweet['id'])
-               print("Current ApiCall Count :",apicall)
-               print("Total Number Of Calls :",totalcall)
-               print("Current Update Status Count :",updatecall)
-               print("Total Number Of Update Calls :",totalupdatecall)
+               print("Current ApiCall Count :",Api_Call_Nbr)
+               print("Total Number Of Calls :",Total_Call_Nbr)
+               print("Current Update Status Count :",Update_Call_Nbr)
+               print("Total Number Of Update Calls :",Total_Update_Call_Nbr)
                print("Search Call left :",search)
                print("Tweet :", tweet['text'])
                print("######################################")
                print("")
                
                time.sleep(1)
-               twtbyuser.append(tweet['user']['screen_name'])
-               tobsnd.append(tweet['text'])
-               retweetlist.append(tweet['text'])
-               bandouble.append(tweet['text'].replace("\n"," "))
+               Tweets_By_Same_User.append(tweet['user']['screen_name'])
+               Retweet_List.append(tweet['text'])
+               Ban_Double_List.append(tweet['text'].replace("\n"," "))
                clickme = "https://twitter.com/"+str(tweet['user']['screen_name'])+"/status/"+str(tweet['id'])
                IrSend("From:%s %s -> %s Hype:%s"%(tweet['user']['screen_name'],tweet["text"].replace("\n"," "),clickme,Score))
                time.sleep(1)
@@ -2724,7 +2793,7 @@ def Scoring(tweet,search):
                                         print(":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :(")
                                         print("================================================================================")
                                         print("")
-                                        totalscore = totalscore + 1
+                                        Totale_Score_Nbr = Totale_Score_Nbr + 1
                 ##time.sleep(0.2)
       else:
                                   print("")
@@ -2756,7 +2825,7 @@ def Scoring(tweet,search):
                                         print("===================================")
                                         print("")
                                         alreadysend = 0
-                                        totalalrdysnd = totalalrdysnd + 1
+                                        Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
                                         ##time.sleep(0.2)
 
 
@@ -2776,7 +2845,7 @@ def Scoring(tweet,search):
                                 print("================================================================================")
                                 print("")
            ##time.sleep(0.2)
-                                totallanguage = totallanguage +1
+                                Total_Ban_By_Lang_Nbr = Total_Ban_By_Lang_Nbr +1
         #time.sleep(0.3)
 
 
@@ -2789,27 +2858,27 @@ def Scoring(tweet,search):
 
 
 def searchTst(word):
-  global apicall
-  global updatecall
-  global twitter
-  global restabit
-  global searchdone
-  global searchlimit
-  global searchapi
+  global Api_Call_Nbr
+  global Update_Call_Nbr
+  global Twitter_Api
+  global RestABit_Trigger
+  global Search_Done_Trigger
+  global Search_Limit_Trigger
+  global Search_Api_Nbr
 
   Fig("rev",'SearchTst()')
   #time.sleep(0.3)
   ratechk = 0
-  print("Searchdone : " ,searchdone)
-  if searchdone == 0:
+  print("Searchdone : " ,Search_Done_Trigger)
+  if Search_Done_Trigger == False:
 
     try :
-            twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-            rate = twitter.get_application_rate_limit_status()
+            Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+            rate = Twitter_Api.get_application_rate_limit_status()
             search = rate['resources']['search']['/search/tweets']['remaining']
-            searchapi = int(search)
+            Search_Api_Nbr = int(search)
 
-            apicall = apicall + 2
+            Api_Call_Nbr = Api_Call_Nbr + 2
             ratechk = 1
   
     except Exception as e:
@@ -2817,15 +2886,15 @@ def searchTst(word):
       print("mysterious error")
       
       print(e)
-      twitter = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-      apicall = apicall + 1
-      restabit = 1
+      Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+      Api_Call_Nbr = Api_Call_Nbr + 1
+      RestABit_Trigger = True
       limits()
       if ratechk != 1:
-                  searchapi = 23
+                  Search_Api_Nbr = 23
                   ratechk = 1
 
-    if searchapi > 2:
+    if Search_Api_Nbr > 2:
            
            
            
@@ -2848,16 +2917,16 @@ def searchTst(word):
        
            limits()
            try:
-               searchresults = twitter.search(q=word, count = 200)
+               searchresults = Twitter_Api.search(q=word, count = 200)
                print("##########################################")
                Fig("colossal",'Results Found !')
                print("")
-               apicall = apicall + 1
-               searchapi = searchapi - 1
+               Api_Call_Nbr = Api_Call_Nbr + 1
+               Search_Api_Nbr = Search_Api_Nbr - 1
                 #time.sleep(0.3)
          
            except :
-                         apicall = apicall + 1
+                         Api_Call_Nbr = Api_Call_Nbr + 1
                          
                          print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                          print("Error Sorry im trying next one")
@@ -2876,7 +2945,7 @@ def searchTst(word):
                print("")
        
            except:
-                         apicall = apicall + 1
+                         Api_Call_Nbr = Api_Call_Nbr + 1
                          
                          print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                          print("Error Sorry trying next one")
@@ -2904,12 +2973,12 @@ def searchTst(word):
        
                     for item in searchresults["statuses"]:
                          time.sleep(2)
-                         if REQUESTPAUSE is False:
+                         if MasterPause_Trigger is False:
                              Scoring(item,search)
                          else:
                              while True:
                                  time.sleep(2)
-                                 if REQUESTPAUSE is False:
+                                 if MasterPause_Trigger is False:
                                      break
                              Scoring(item,search)
 
@@ -2931,9 +3000,9 @@ def searchTst(word):
                     print("****************************************")
                     Fig("basic",'Saving unwanted search to no.result')
                      #time.sleep(1)
-                    checkfile(noresult)
+                    checkfile(Pth_NoResult)
 
-                    file = open(noresult,"a")
+                    file = open(Pth_NoResult,"a")
                     file.write(str(word) + "\n")
                     file.close()
            except Exception as e:
@@ -2942,8 +3011,8 @@ def searchTst(word):
 
     else:
       
-      searchlimit = 1
-      searchdone = 0
+      Search_Limit_Trigger = True
+      Search_Done_Trigger = False
       limits()
 
 
@@ -2952,15 +3021,15 @@ def searchTst(word):
 def RedQueen():
 
     global Keywords
+    global MasterPause_Trigger
+
     while 1:
-          if GOGOGO == True:
+          if GOGOGO_Trigger == True:
                break
 
     Fig("basic","GOGOGO!",True)
     time.sleep(1)
     
-#    Request()
-#    time.sleep(2)
     loadvars()
     time.sleep(2)
     CheckDouble()
@@ -2973,8 +3042,8 @@ def RedQueen():
                          for name, ucode in list(group.items()):
                                   assert name.startswith(':') and name.endswith(':') and len(name) >= 3
                                   emj = emoji.emojize(name, use_aliases=use_aliases)
-                                  emolist.append(emj)
-    print(emolist)
+                                  Emoji_List.append(emj)
+    print(Emoji_List)
     
     Fig("cybermedium",'Done')
     time.sleep(2)
@@ -3004,7 +3073,7 @@ def RedQueen():
     print("**")
     
     try:
-                            status="Redqueen started at "+ str(currentdate) + " Searching " + str(rndwords) + " items ."
+                            status="Redqueen started at "+ str(CurrentDate) + " Searching " + str(rndwords) + " items ."
                             IrSend(status)
                             print("")
                             Fig("basic",'Status sent !"')
@@ -3020,8 +3089,8 @@ def RedQueen():
 
     checkmenu(Keywords)
 
-    if checkM == 1:
-      Keywords = newkeywords
+    if Menu_Check_Trigger == True:
+      Keywords = New_Keywords_List
       
       
       print("**")
@@ -3040,9 +3109,25 @@ def RedQueen():
       
       time.sleep(5)
     tmpcnt= 0
+    if MasterStart_Trigger is False:
+       print("**Waiting for !start command.**")
+       IrSend("Idle mode..")
+    else:
+       IrSend("Redqueen is starting..")
+
+    while True:
+       time.sleep(2)
+       if MasterStart_Trigger is True:
+          figy = "Starting Redqueen"
+          Fig("puffy",figy)
+          break
+
     for key in Keywords[:rndwords]:
       time.sleep(1)
-      if REQUESTPAUSE is False:
+      if MasterPause_Trigger is False and MasterStart_Trigger is True:
+          if MasterStop_Trigger is True:
+                MasterStart_Trigger == False
+                return(IrSend("Redqueen has been stopped"))
           tmpcnt = tmpcnt + 1
           figy = "Searching : %s %i/%i" % (key,tmpcnt,rndwords)
           Fig("puffy",figy)
@@ -3051,7 +3136,10 @@ def RedQueen():
       else:
           while True:
                 time.sleep(2)
-                if REQUESTPAUSE is False:
+                if MasterStop_Trigger is True:
+                   MasterStart_Trigger == False
+                   return(IrSend("Redqueen has been stopped"))
+                if MasterPause_Trigger is False and MasterStart_Trigger is True:
                      break
           tmpcnt = tmpcnt + 1
           figy = "Searching : %s %i/%i" % (key,tmpcnt,rndwords)
@@ -3070,12 +3158,12 @@ def RedQueen():
     #time.sleep(0.3)
     lastmeal(Keywords[:rndwords])
     
-    if (len(moyscore)) != 0:
-      avgscore = sum(moyscore) / float(len(moyscore))
+    if (len(AvgScore)) != 0:
+      avgscore = sum(AvgScore) / float(len(AvgScore))
     else:
       avgscore = 0
     try:
-      dbrief= "*Redqueen Debrief* -Searchs: "+ str(rndwords) +"-Twts:" + str(len(moyscore)) + "-Avg Score:" + str(avgscore) + "-Rtwts:" + str(rtsave)+ "-Tcall:" + str(totalcall) + "-Ucall:" + str(totalupdatecall)
+      dbrief= "*Redqueen Debrief* -Searchs: "+ str(rndwords) +"-Twts:" + str(len(AvgScore)) + "-Avg Score:" + str(avgscore) + "-Rtwts:" + str(RetweetSave)+ "-Tcall:" + str(Total_Call_Nbr) + "-Ucall:" + str(Total_Update_Call_Nbr)
 
       IrSend(dbrief)
 
@@ -3091,15 +3179,14 @@ def RedQueen():
     
     
 
-    SaveTotalCall(apicall,updatecall)
+    SaveTotalCall(Api_Call_Nbr,Update_Call_Nbr)
 
     print("##############################################################################################################")
     print("##############################################################################################################")
     Fig("basic","The End")
     print("##############################################################################################################")
     print("##############################################################################################################")
-    os.system("pkill -f Redqueen.py")
-
+    MasterPause_Trigger = True
 
 if __name__ == '__main__':
 
