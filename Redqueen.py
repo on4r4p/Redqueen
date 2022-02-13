@@ -8,7 +8,7 @@ from asciimatics.scene import Scene
 from asciimatics.screen import Screen 
 from random import randint, choice, shuffle 
 from twython import Twython 
-from TwitterApiKeys import app_key, app_secret, oauth_token, oauth_token_secret 
+from TwitterApiKeys import OAUT_1,OAUT_2,oa1_app_key, oa1_app_secret, oa1_oauth_token, oa1_oauth_token_secret,oa2_app_key,oa2_access_token
 from IrcKey import IRHOST,IRPORT,IRNICK,IRIDENT,IRREALNAME,IRPASS,IRCHANPASS,IRMASTER,IRMASTERTrigger,IRCHANNEL,IRNICKSERV,IRKonTrigger,IRIdentTrigger
 from pyfiglet import Figlet 
 from threading import Thread 
@@ -87,7 +87,7 @@ Pth_Text_Sent = str(Pth_Data) + "Text.Sent"
 
 RestABit_Trigger = False
 
-Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+Twitter_Api = ""
 
 Keywords = []
 
@@ -155,12 +155,32 @@ Total_Ban_By_BannedPeople_Nbr = 0
 
 Tweets_By_Same_User = []
 
-
-#Start_Date = datetime.datetime.now()
-
-newtlist = [] 
 printable = set(string.printable)
+
 #Some Defs
+
+def WakeApiUp():
+   global Twitter_Api
+   global Api_Call_Nbr
+   global Search_Api_Nbr
+   try:
+      if OAUT_1 is True:
+         Twitter_Api = Twython(oa1_app_key, oa1_app_secret, oa1_oauth_token, oa1_oauth_token_secret)
+         Api_Call_Nbr += 1
+         rate = Twitter_Api.get_application_rate_limit_status()
+         search = rate['resources']['search']['/search/tweets']['remaining']
+         Search_Api_Nbr = int(search)
+
+      elif OAUT_2 is True:
+         Twitter_Api = Twython(oa2_app_key, access_token=oa2_access_token)
+         rate = Twitter_Api.get_application_rate_limit_status()
+         search = rate['resources']['search']['/search/tweets']['remaining']
+         Search_Api_Nbr = int(search)
+         Api_Call_Nbr += 1
+   except Exception as e:
+     print("Error Api:",str(e))
+     if GOGOGO_Trigger is False:
+        sys.exit()
 
 def checkfile(filename):
     try:
@@ -842,7 +862,7 @@ def Request(cmd):
   return(output)
 
 
-def Flush_NoResult:
+def Flush_NoResult():
      global NoResult_List
      Fig("rev",'SaveDouble()')
      print('Deleting No.Results content from Rq.Keywords')
@@ -923,7 +943,6 @@ def flushtmp():
 
   global Api_Call_Nbr
   global Update_Call_Nbr
-  global Twitter_Api
 
   goflush = 0
 
@@ -1440,7 +1459,7 @@ def limits():
                 Fig("cybermedium",'Waking up ..')
                 #time.sleep(0.3)
                 print("")
-                Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
+                Twitter_Api = WakeApiUp()
                 print("\n\n")
 
   if RestABit_Trigger == True:
@@ -1465,8 +1484,7 @@ def limits():
                 Fig("cybermedium",'Waking up ..')
     #time.sleep(1)
                 print("")
-                Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-                
+                Twitter_Api = WakeApiUp()
 
   
 
@@ -1493,8 +1511,7 @@ def limits():
 
                 Fig("cybermedium",'Waking up ..')
                 print("")
-                Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-                
+                Twitter_Api = WakeApiUp()
                 print("****************************************")
                 print("****************************************\n\n\n\n")
 
@@ -1528,8 +1545,7 @@ def limits():
     Api_Call_Nbr = 0
     Fig("cybermedium",'Waking up ..')
     print("")
-    Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-    
+    Twitter_Api = WakeApiUp() 
     print("****************************************")
     print("****************************************\n\n\n\n")
 
@@ -1913,7 +1929,6 @@ def Scoring(tweet,search):
   global Total_Ban_By_Date_Nbr
   global Tweets_By_Same_User
   global RestABit_Trigger
-  global Twitter_Api
   global ERRORCNT
   global Wait_Hour_Trigger
   global Wait_Half_Hour_Trigger
@@ -1930,11 +1945,12 @@ def Scoring(tweet,search):
   
   Fig("rev",'Scoring()')
   
-  ##time.sleep(0.2)
 
-  
-  
-  
+  if OAUT_1 is True:
+     Tweext = tweet['text']
+  elif OAUT_2 is True:
+     Tweext = tweet["full_text"]
+
   print("*************************************************************************************")
   Fig("basic",'Starting Scoring function')
   print("")
@@ -1948,7 +1964,7 @@ def Scoring(tweet,search):
 
 
 
-  if len(tweet['text']) < 70 :
+  if len(Tweext) < 70 :
                                 Banned = 1
                                 
                                 Fig("cybermedium",'NOT ENOUGH TEXT')
@@ -2324,7 +2340,7 @@ def Scoring(tweet,search):
                   Fig("basic",'MUCH TWEET !!')
                   
                   Fig("puffy","Text:")
-                  Fig("digital",tweet['text'])
+                  Fig("digital",Tweext)
                   time.sleep(2)
                   
                   Fig("basic",'MANY RETWEET !!')
@@ -2352,7 +2368,7 @@ def Scoring(tweet,search):
                   Fig("puffy",str(figy))
                   link = "https://twitter.com/"+ str(choice(randodge).replace(" ","")) + "/status/" + str(tweet['id'])
 
-                  twit = tweet['text'].replace("@th3j35t3r","th3b0uf0n").replace("th3j35t3r","th3b0uf0n")
+                  twit = Tweext.replace("@th3j35t3r","th3b0uf0n").replace("th3j35t3r","th3b0uf0n")
                   dodgelink = str(dodgecoin) + " " + str(link)
                   time.sleep(1)
                   limits()
@@ -2360,12 +2376,12 @@ def Scoring(tweet,search):
                   Banned = 0
                   for forbid in Ban_Double_List:
                     if Banned == 0:
-                      if forbid in tweet['text']:
+                      if forbid in Tweext:
 
                               
                               Fig("cybermedium",'This tweet is Identical to a Previous tweet :')
                               
-                              print(tweet['text'])
+                              print(Tweext)
                               
                               Saveid(tweet['id'])
                               
@@ -2389,10 +2405,10 @@ def Scoring(tweet,search):
 
                          while int(maxpos) < int(lng):
                               try:
-                                   if str(sample) in str(tweet['text']) and str(sample) != " ":
+                                   if str(sample) in str(Tweext) and str(sample) != " ":
                                         
                                         Fig("cybermedium",'Some parts are Identicals to a Previous Tweet :')
-                                        print("Tweet :",tweet['text'])
+                                        print("Tweet :",Tweext)
                                         
                                         print("Found Matched :",sample)
                                         Saveid(id)
@@ -2749,7 +2765,7 @@ def Scoring(tweet,search):
 
     if alreadysend == 0:
 
-      Ban(tweet['text'],tweet['user']['screen_name'],tweet['id'],tweet['user']['description'])
+      Ban(Tweext,tweet['user']['screen_name'],tweet['id'],tweet['user']['description'])
 
       if Banned != 1:
           if Score >= 16:
@@ -2764,18 +2780,18 @@ def Scoring(tweet,search):
                print("Current Update Status Count :",Update_Call_Nbr)
                print("Total Number Of Update Calls :",Total_Update_Call_Nbr)
                print("Search Call left :",search)
-               print("Tweet :", tweet['text'])
+               print("Tweet :", Tweext)
                print("######################################")
                print("")
                
                time.sleep(1)
                Tweets_By_Same_User.append(tweet['user']['screen_name'])
-               Retweet_List.append(tweet['text'])
-               Ban_Double_List.append(tweet['text'].replace("\n"," "))
+               Retweet_List.append(Tweext)
+               Ban_Double_List.append(Tweext.replace("\n"," "))
                clickme = "https://twitter.com/"+str(tweet['user']['screen_name'])+"/status/"+str(tweet['id'])
                IrSend("From:%s %s -> %s Hype:%s"%(tweet['user']['screen_name'],tweet["text"].replace("\n"," "),clickme,Score))
                time.sleep(1)
-               SaveDouble(tweet['text'])
+               SaveDouble(Tweext)
 
           else:
                                         print("")
@@ -2786,7 +2802,7 @@ def Scoring(tweet,search):
                                         print("================================================================================")
                                         print("Score = ",Score)
                                         print("================================================================================")
-                                        print(tweet['text'])
+                                        print(Tweext)
                                         print("================================================================================")
                                         print(":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :(")
                                         print("This tweet does not match the requirement to be retweeted. (Score)")
@@ -2801,7 +2817,7 @@ def Scoring(tweet,search):
                                   print("================================================================================")
                                   Fig("cybermedium","Banned")
                                   print("================================================================================")
-                                  print(tweet['text'])
+                                  print(Tweext)
 
                                   print("================================================================================")
                                   print(":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :(")
@@ -2816,7 +2832,7 @@ def Scoring(tweet,search):
                                         print("================================================================================")
                                         Fig("cybermedium","Already sent !")
                                         print("================================================================================")
-                                        print(tweet['text'])
+                                        print(Tweext)
 
                                         print("===================================")
                                         print(":( :( :( :( :( :( :( :( :( :( :( :(")
@@ -2837,7 +2853,7 @@ def Scoring(tweet,search):
                                 Fig("cybermedium","Language")
                                 print("===============================================================================")
                                 print("Language : ",tweet['lang'])
-                                print(tweet['text'])
+                                print(Tweext)
                                 print("================================================================================")
                                 print(":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :(")
                                 print("This tweet does not match the requirement needed to be retweeted.")
@@ -2873,12 +2889,7 @@ def searchTst(word):
   if Search_Done_Trigger == False:
 
     try :
-            Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-            rate = Twitter_Api.get_application_rate_limit_status()
-            search = rate['resources']['search']['/search/tweets']['remaining']
-            Search_Api_Nbr = int(search)
-
-            Api_Call_Nbr = Api_Call_Nbr + 2
+            Twitter_Api = WakeApiUp()
             ratechk = 1
   
     except Exception as e:
@@ -2886,8 +2897,7 @@ def searchTst(word):
       print("mysterious error")
       
       print(e)
-      Twitter_Api = Twython(app_key, app_secret, oauth_token, oauth_token_secret)
-      Api_Call_Nbr = Api_Call_Nbr + 1
+      Twitter_Api = WakeApiUp()
       RestABit_Trigger = True
       limits()
       if ratechk != 1:
@@ -2917,7 +2927,7 @@ def searchTst(word):
        
            limits()
            try:
-               searchresults = Twitter_Api.search(q=word, count = 200)
+               searchresults = Twitter_Api.search(q=word,tweet_mode="extended",count = 200)
                print("##########################################")
                Fig("colossal",'Results Found !')
                print("")
@@ -3195,8 +3205,27 @@ if __name__ == '__main__':
      except Exception as e:
        print("Title Error line 3257 :",e)
 
+     if True is OAUT_1 and True is OAUT_2:
+            print("You much choose between OAUT_1 and OAUT_2 in TwitterApiKeys.py")
+            sys.exit()
+     if False is OAUT_1 and False is OAUT_2:
+            print("You much choose between OAUT_1 and OAUT_2 in TwitterApiKeys.py")
+            sys.exit()
 
-     
+     if OAUT_1 is True:
+          for lenchk in [len(oa1_app_key),len(oa1_app_secret),len(oa1_oauth_token),len(oa1_oauth_token_secret)]:
+              if lenchk < 25:
+                 print("All OAUT_1 keys must be filled and correct in TwitterApiKeys.py")
+                 sys.exit()
+
+     if OAUT_2 is True:
+          for lenchk in [len(oa2_app_key),len(oa2_access_token)]:
+              if lenchk < 25:
+                 print("ALL OAUT_2 must be filled and correct in TwitterApiKeys.py")
+                 sys.exit()
+     print("Testing api:")
+     WakeApiUp()
+
      Fig("cybermedium","Launching Blueking on IRC")
      time.sleep(1)
 
