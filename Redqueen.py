@@ -121,7 +121,7 @@ Total_Sent_Nbr = 0
 
 Menu_Check_Trigger = False
   
-Search_Api_Nbr = 0
+Search_ApiCallLeft_Nbr = 0
 
 Search_Limit_Trigger = False
 
@@ -162,21 +162,20 @@ printable = set(string.printable)
 def WakeApiUp():
    global Twitter_Api
    global Api_Call_Nbr
-   global Search_Api_Nbr
+   global Search_ApiCallLeft_Nbr
    try:
       if OAUT_1 is True:
          Twitter_Api = Twython(oa1_app_key, oa1_app_secret, oa1_oauth_token, oa1_oauth_token_secret)
          Api_Call_Nbr += 1
          rate = Twitter_Api.get_application_rate_limit_status()
-         search = rate['resources']['search']['/search/tweets']['remaining']
-         Search_Api_Nbr = int(search)
-
+         Search_ApiCallLeft_Nbr = int(rate['resources']['search']['/search/tweets']['remaining'])
+         return(Twitter_Api)
       elif OAUT_2 is True:
          Twitter_Api = Twython(oa2_app_key, access_token=oa2_access_token)
          rate = Twitter_Api.get_application_rate_limit_status()
-         search = rate['resources']['search']['/search/tweets']['remaining']
-         Search_Api_Nbr = int(search)
+         Search_ApiCallLeft_Nbr = int(rate['resources']['search']['/search/tweets']['remaining'])
          Api_Call_Nbr += 1
+         return(Twitter_Api)
    except Exception as e:
      print("Error Api:",str(e))
      if GOGOGO_Trigger is False:
@@ -2880,7 +2879,7 @@ def searchTst(word):
   global RestABit_Trigger
   global Search_Done_Trigger
   global Search_Limit_Trigger
-  global Search_Api_Nbr
+  global Search_ApiCallLeft_Nbr
 
   Fig("rev",'SearchTst()')
   #time.sleep(0.3)
@@ -2901,18 +2900,10 @@ def searchTst(word):
       RestABit_Trigger = True
       limits()
       if ratechk != 1:
-                  Search_Api_Nbr = 23
+                  Search_ApiCallLeft_Nbr = 23
                   ratechk = 1
 
-    if Search_Api_Nbr > 2:
-           
-           
-           
-           
-           
-           
-           
-
+    if Search_ApiCallLeft_Nbr > 2:
            
            print("##########################################")
            print("**")
@@ -2927,17 +2918,18 @@ def searchTst(word):
        
            limits()
            try:
+               Twitter_Api = WakeApiUp()
                searchresults = Twitter_Api.search(q=word,tweet_mode="extended",count = 200)
                print("##########################################")
                Fig("colossal",'Results Found !')
                print("")
                Api_Call_Nbr = Api_Call_Nbr + 1
-               Search_Api_Nbr = Search_Api_Nbr - 1
+               Search_ApiCallLeft_Nbr = Search_ApiCallLeft_Nbr - 1
                 #time.sleep(0.3)
          
-           except :
+           except Exception as e:
                          Api_Call_Nbr = Api_Call_Nbr + 1
-                         
+                         print("Error search1:",e)
                          print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                          print("Error Sorry im trying next one")
                          print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -2954,9 +2946,9 @@ def searchTst(word):
                 #time.sleep(0.3)
                print("")
        
-           except:
+           except Exception as e:
                          Api_Call_Nbr = Api_Call_Nbr + 1
-                         
+                         print("Error search2:",e)
                          print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                          print("Error Sorry trying next one")
                          print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -2970,27 +2962,18 @@ def searchTst(word):
            Fig("doom",'Search function Terminated')
            print("**")
            print("##########################################")
-         
-           
-           
-           
-           
-           
-           
-           
            try:
-               if len(searchresults["statuses"]) > 3 :
-       
+               if len(searchresults["statuses"]) > 2 :
                     for item in searchresults["statuses"]:
                          time.sleep(2)
                          if MasterPause_Trigger is False:
-                             Scoring(item,search)
+                             Scoring(item,Search_ApiCallLeft_Nbr)
                          else:
                              while True:
                                  time.sleep(2)
                                  if MasterPause_Trigger is False:
                                      break
-                             Scoring(item,search)
+                             Scoring(item,Search_ApiCallLeft_Nbr)
 
 
                else:
