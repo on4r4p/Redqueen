@@ -77,7 +77,7 @@ Pth_Rss_Rq = str(Pth_Data) + "Rq.Rss"
 
 Pth_Request_Log = str(Pth_Data) + "Request.log"
 
-Pth_Current_Session = str(Pth_Data) + "Current.Pth_Current_Session"
+Pth_Current_Session = str(Pth_Data) + "Current.Session"
 
 Pth_NoResult = str(Pth_Data) + "No.Result"
 
@@ -727,13 +727,13 @@ def Request(cmd):
                    else:
                        print("No rss found (flux must starts with http)")
       if reconized == False:
-         checkfile("Request.log")
+         checkfile(Pth_Request_Log)
 
          file = open(Pth_Data+"Request.log","a")
          file.write(log)
          return("Cmd not recognised.")
 
-  checkfile("Request.log")
+  checkfile(Pth_Request_Log)
           
   file = open(Pth_Data+"Request.log","a")
   file.write(log)
