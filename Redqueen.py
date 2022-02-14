@@ -1328,9 +1328,7 @@ def IrSend(content,dontprint = None):
           Irc.send(bytes("PRIVMSG %s :==============================================================\r\n" % IrcKey.IRCHANNEL, "UTF-8"))
 
         content = content.replace("\n"," ")
-        print(content)
         time.sleep(Config.Time_Sleep)
-        print("befor fig and irc.send")
         Fig("digital","\n--Sending :"+str(content)+"--\n")
         Irc.send(bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL,content), "UTF-8"))
         Fig("digital","\n--Done--\n")
