@@ -19,7 +19,7 @@ Maximum_Retweet_DayOld = 130
 Maximum_Tweet_Fav = 64242
 Maximum_Tweet_Retweet = 3232
 Maximum_Tweet_Emoticon = 3
-
+Maximum_Tweet_By_User = 5
 Maximum_Api_Search_Call_By_15_Minutes = 180
 Maximum_Api_Search_Call_By_Day = 8888
 Maximum_Api_Search_Update_Call_By_Day = 2223

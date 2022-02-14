@@ -1797,7 +1797,7 @@ def Ban(tweet,sender,id,bio):
                   Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
                   time.sleep(Config.Time_Sleep)
 
-    if Tweets_By_Same_User.count(str(sender)) >= 2:
+    if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
                         Fig("basic",'Too many Tweets From this user ')
                         Fig("cybermedium",'Going To Trash')
                         print("*=*=*=*=*=*=*=*=*=*")
