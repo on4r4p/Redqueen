@@ -1697,7 +1697,7 @@ def limits():
     time.sleep(Config.Time_Sleep)
 
 
-def Ban(tweet, sender, id, bio):
+def Ban(tweet, sender, id, Bio):
 
     global Banned
     global Total_Ban_By_NoResult_Nbr
@@ -1708,7 +1708,8 @@ def Ban(tweet, sender, id, bio):
     global Total_Ban_By_BannedPeople_Nbr
 
     UShallPass = 0
-    Twist = tweet.lower().split(" ")
+    Twist = re.sub(r'[^A-Za-z0-9 ]+', '', tweet.lower())
+    Bio = re.sub(r'[^A-Za-z0-9 ]+', '', Bio.lower())
     Fig("rev", "Ban()")
 
     print("*=*=*=*=*=*=*=*=*=*")
@@ -1726,22 +1727,16 @@ def Ban(tweet, sender, id, bio):
                 )
 
     if Banned is False:
-        LuckyLuke = randint(0, Config.Luck_Factor)
-        print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
         for mustbe in Keywords_List:
-            if UShallPass < Config.Minimum_Keywords_In_Tweet:
-                for wrd in Twist:
-                    wrd = wrd.replace(":"," ").replace(","," ").replace("!"," ").replace("?"," ").replace(";"," ").replace("'"," ").replace('"',' ').replace("-"," ").replace("_"," ")
-                    if mustbe.lower() == wrd:
-                        Fig("cybermedium", "Found Keywords :")
-                        print("Sample : ", mustbe)
-                        Fig("basic", "You shall Pass")
-                        print("*=*=*=*=*=*=*=*=*=*")
-                        UShallPass += 1
-#                    else:
-#                        print(["%s] == [%s] = %s"%(mustbe.lower(),wrd,mustbe.lower() == wrd))
+            mustbe = re.sub(r'[^A-Za-z0-9 ]+', '', mustbe.lower())
+            if mustbe in Twist:
+               Fig("cybermedium", "Found Keywords :")
+               print("Sample : ", mustbe)
+               Fig("basic", "You shall Pass")
+               print("*=*=*=*=*=*=*=*=*=*")
+               UShallPass += 1
 
-        if UShallPass < Config.Minimum_Keywords_In_Tweet and LuckyLuke != 1:
+        if UShallPass < Config.Minimum_Keywords_In_Tweet:
 
             Fig("cybermedium", "Did not found any Keyword in tweet.")
             Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
@@ -1749,33 +1744,23 @@ def Ban(tweet, sender, id, bio):
         print("*=*=*=*=*=*=*=*=*=*")
 
     for forbid in Banned_Word_list:
-        if Banned is False:
-            forbid = forbid.lower()
-            for wrd in Twist:
-                wrd = wrd.replace(":"," ").replace(","," ").replace("!"," ").replace("?"," ").replace(";"," ").replace("'"," ").replace('"',' ').replace("-"," ").replace("_"," ")
-                if forbid.count(" ") > 0:
-                    if forbid in tweet.lower():
-                        Fig("cybermedium", "This tweet contains banned words :")
-                        print("** %s **" % str(forbid))
-                        Banned = True
-                        Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
-                        time.sleep(Config.Time_Sleep)
-                elif forbid == wrd:
-                    Fig("cybermedium", "This tweet contains banned words :")
-                    print("** %s **" % str(forbid))
-                    Banned = True
-                    Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
-                    time.sleep(Config.Time_Sleep)
-            if forbid in bio.lower():
+            forbid = re.sub(r'[^A-Za-z0-9 ]+', '', forbid.lower())
+            if forbid in Twist:
+                Fig("cybermedium", "This tweet contains banned words :")
+                print("** %s **" % str(forbid))
+                Banned = True
+                Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
+                time.sleep(Config.Time_Sleep)
+
+            if forbid in Bio:
                 Fig("cybermedium", "This user profile contains banned words :")
-                print(bio)
+                print(Bio)
                 print("** %s **" % str(forbid))
                 Banned = True
                 Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
                 time.sleep(Config.Time_Sleep)
 
     for forbid in Banned_User_list:
-        if Banned is False:
             if str(forbid.lower()) in str(sender.lower()):
 
                 Fig("cybermedium", "This tweet is from a banned user :")
@@ -1785,7 +1770,6 @@ def Ban(tweet, sender, id, bio):
                 time.sleep(Config.Time_Sleep)
 
     for forbid in Ban_Double_List:
-        if Banned is False:
             if forbid in tweet:
                 Fig("cybermedium", "This tweet is Identical to a Previous tweet :")
                 Saveid(id)
@@ -1794,8 +1778,7 @@ def Ban(tweet, sender, id, bio):
                 time.sleep(Config.Time_Sleep)
 
     for item in Ban_Double_List:
-
-        if Banned is False and len(item) >= Minimum_Tweet_Length:
+        if len(item) >= Minimum_Tweet_Length:
             pos = 0
             lng = len(item)
             half = lng / 2
@@ -1827,28 +1810,26 @@ def Ban(tweet, sender, id, bio):
                     sample = item[pos : int(next)]
                     maxpos = pos + int(len(sample))
 
-    if Banned is False:
-        if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
+    if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
             Fig("basic", "Follow Friday")
             Banned = True
             Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
             time.sleep(Config.Time_Sleep)
 
-        if tweet.count("#") >= Config.Maximum_Hashtag_In_Tweet:
+    if tweet.count("#") >= Config.Maximum_Hashtag_In_Tweet:
 
             Fig("basic", "HashTags Fever")
             Banned = True
             Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
             time.sleep(Config.Time_Sleep)
 
-        if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
+    if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
             Fig("basic", "Too many Tweets From this user ")
             Banned = True
             Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
             time.sleep(Config.Time_Sleep)
-        else:
+    else:
             print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(sender))
-            Fig("cybermedium", str(figy))
             print("*=*=*=*=*=*=*=*=*=*")
             time.sleep(Config.Time_Sleep)
 
@@ -1859,9 +1840,18 @@ def Ban(tweet, sender, id, bio):
         time.sleep(Config.Time_Sleep)
 
     else:
-        print("Tweet: ", tweet)
-        Fig("cybermedium", "Going To Trash")
-        print("*=*=*=*=*=*=*=*=*=*")
+
+        LuckyLuke = randint(0, Config.Luck_Factor)
+        print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
+        if LuckyLuck == 1:
+            Fig("speed", "Good To Go !!")
+            print("*=*=*=*=*=*=*=*=*=*")
+            time.sleep(Config.Time_Sleep)
+            Banned = False
+        else:
+            print("Tweet: ", tweet)
+            Fig("cybermedium", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
 
 
 def Saveid(id):

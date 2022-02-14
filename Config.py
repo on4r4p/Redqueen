@@ -5,7 +5,7 @@ Special_Users = ["th3j35t3r","jonanthandata1"]
 Allowed_Tweet_Lang = ["en","fr"]
 
 Minimum_Search_Result = 1
-Minimum_Keywords_In_Tweet = 2
+Minimum_Keywords_In_Tweet = 1
 Minimum_Tweet_Length = 70
 Minimum_Tweet_Retweet = 0
 Minimum_Tweet_Fav = 0
