@@ -87,7 +87,7 @@ RestABit_Trigger = False
 
 Twitter_Api = ""
 
-Keywords = []
+Keywords_List = []
 
 Keywordsave = []
 
@@ -228,7 +228,7 @@ def Fig(font, txt, toirc=None):
 
 def loadvars():
 
-    global Keywords
+    global Keywords_List
     global Keywordsave
     global Following
     global Friends
@@ -268,14 +268,14 @@ def loadvars():
     lines = cleanfile(Pth_Keywords_Rq)
 
     for saved in lines:
-        Keywords.append(saved)
+        Keywords_List.append(saved)
 
     print("*=*=*=*=*=*=*=*=*=*")
     Fig("larry3d", "Keywords Loaded", True)
     print("*=*=*=*=*=*=*=*=*=*\n")
     time.sleep(Config.Time_Sleep)
-    Keywordsave = Keywords
-    shuffle(Keywords)
+    Keywordsave = Keywords_List
+    shuffle(Keywords_List)
     print("\n\n")
     Fig("cybermedium", "Loading Following", True)
 
@@ -411,7 +411,7 @@ def timer(mode):
 
 def Request(cmd):
 
-    global Keywords
+    global Keywords_List
     global Banned_Word_list
     global Banned_User_list
     global Api_Call_Nbr
@@ -556,7 +556,7 @@ def Request(cmd):
                 if option == "!users":
                     return Following
                 if option == "!keywords":
-                    return Keywords
+                    return Keywords_List
                 if option == "!friends":
                     return Friends
                 if option == "!rss":
@@ -1498,7 +1498,7 @@ def Stat2Irc(Time_To_Wait):
     Followingtxt = "Users Followed: " + str(len(Following))
     IrSend(Followingtxt)
     time.sleep(Config.Time_Sleep)
-    Keywordstxt = "Keywords in list: " + str(len(Keywords))
+    Keywordstxt = "Keywords in list: " + str(len(Keywords_List))
     IrSend(Keywordstxt)
     time.sleep(Config.Time_Sleep)
     AvgScoreTxt = "Current Tweets collected: " + str(len(AvgScore))
@@ -1728,15 +1728,18 @@ def Ban(tweet, sender, id, bio):
     if Banned is False:
         LuckyLuke = randint(0, Config.Luck_Factor)
         print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
-        for mustbe in Keywordsave:
+        for mustbe in Keywords_List:
             if UShallPass < Config.Minimum_Keywords_In_Tweet:
                 for wrd in Twist:
+                    wrd = wrd.replace(":"," ").replace(","," ").replace("!"," ").replace("?"," ").replace(";"," ").replace("'"," ").replace('"',' ').replace("-"," ").replace("_"," ")
                     if mustbe.lower() == wrd:
                         Fig("cybermedium", "Found Keywords :")
-                        print("Sample : ", sample)
+                        print("Sample : ", mustbe)
                         Fig("basic", "You shall Pass")
                         print("*=*=*=*=*=*=*=*=*=*")
                         UShallPass += 1
+#                    else:
+#                        print(["%s] == [%s] = %s"%(mustbe.lower(),wrd,mustbe.lower() == wrd))
 
         if UShallPass < Config.Minimum_Keywords_In_Tweet and LuckyLuke != 1:
 
@@ -3051,7 +3054,7 @@ def Search_Keyword(word):
 # Some Code
 def RedQueen():
 
-    global Keywords
+    global Keywords_List
     global MasterPause_Trigger
 
     while 1:
@@ -3089,18 +3092,18 @@ def RedQueen():
 
     time.sleep(Config.Time_Sleep)
 
-    Minwords = len(Keywords) / 20
-    Maxwords = len(Keywords) / 10
+    Minwords = len(Keywords_List) / 20
+    Maxwords = len(Keywords_List) / 10
     Minwords = int(Minwords)
     Maxwords = int(Maxwords)
     rndwords = randint(Minwords, Maxwords)
     if rndwords < 100:
-        rndwords = len(Keywords)
+        rndwords = len(Keywords_List)
 
     print("**")
     Fig("calgphy2", "Today's Menu :")
 
-    print(Keywords[:rndwords])
+    print(Keywords_List[:rndwords])
 
     print("Total search terms : ", rndwords)
 
@@ -3127,10 +3130,10 @@ def RedQueen():
 
     Fig("cybermedium", "Check Last Menu started", True)
 
-    checkmenu(Keywords)
+    checkmenu(Keywords_List)
 
     if Menu_Check_Trigger == True:
-        Keywords = New_Keywords_List
+        Keywords_List = New_Keywords_List
 
         print("**")
 
@@ -3138,7 +3141,7 @@ def RedQueen():
         Fig("basic", "New Menu for today !", True)
         print("==")
 
-        print(Keywords[:rndwords])
+        print(Keywords_List[:rndwords])
 
         print("Total search terms : ", rndwords)
 
@@ -3159,7 +3162,7 @@ def RedQueen():
             Fig("puffy", figy)
             break
 
-    for key in Keywords[:rndwords]:
+    for key in Keywords_List[:rndwords]:
         time.sleep(Config.Time_Sleep)
         if MasterPause_Trigger is False and MasterStart_Trigger is True:
             if MasterStop_Trigger is True:
@@ -3191,7 +3194,7 @@ def RedQueen():
     Fig("basic", "Calling Save Search Terms Function", True)
 
     time.sleep(Config.Time_Sleep)
-    lastmeal(Keywords[:rndwords])
+    lastmeal(Keywords_List[:rndwords])
 
     if (len(AvgScore)) != 0:
         avgscore = sum(AvgScore) / float(len(AvgScore))
