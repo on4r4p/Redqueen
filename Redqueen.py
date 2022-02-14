@@ -1601,10 +1601,7 @@ def Ban(tweet,sender,id,bio):
                                 Banned = True
                 if Banned is True:
                         Fig("cybermedium",'This tweet contains an Emoticon and must die . ')
-                        
                         print(tweet)
-                        
-                        
                         Fig("cybermedium",'Going To Trash')
                         print("*=*=*=*=*=*=*=*=*=*")
 
@@ -1614,8 +1611,7 @@ def Ban(tweet,sender,id,bio):
      LuckyLuke = randint(0,Config.Luck_Factor)
      print("Luck Score (%s/%s) "%(LuckyLuke,Config.Luck_Factor))
      for mustbe in Keywordsave:
-      if ushallpass == 0:
-           
+      if ushallpass < Config.Minimum_Keywords_In_Tweet:
                     pos = 0
                     lng = int(len(mustbe))
                     if lng >= 12:
@@ -1635,14 +1631,11 @@ def Ban(tweet,sender,id,bio):
 
 
                              if str(sample.lower()) in str(tweet.lower()) and sample.count(" ") < 2:
-                                    
                                     Fig("cybermedium",'Found Keywords :')
-                     
                                     print("Sample : ",sample)
-                                    
                                     Fig("basic",'You shall Pass')
                                     print("*=*=*=*=*=*=*=*=*=*")
-                                    ushallpass = 1
+                                    ushallpass += 1
                                     maxpos = lng
                              else:
                 #print "Sample : ",sample
@@ -1655,8 +1648,9 @@ def Ban(tweet,sender,id,bio):
                                                 next = int(half) + pos
                                                 sample = mustbe[pos:int(next)]
                                                 maxpos = pos + int(len(sample))
-     if ushallpass != 1 and LuckyLuke == 1:
-                                
+
+     if ushallpass < Config.Minimum_Keywords_In_Tweet and LuckyLuke != 1:
+
                                 Fig("cybermedium",'Did not found any Keyword in tweet.')
                                 Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
                                 Banned = True
@@ -2609,7 +2603,7 @@ def Scoring(tweet,search):
                Ban_Double_List.append(Tweext)
                clickme = "https://twitter.com/"+str(tweet['user']['screen_name'])+"/status/"+str(tweet['id'])
                Format_To_Irc ="From:%s %s -> %s Hype:%s"%(tweet['user']['screen_name'],Tweext,clickme,Score)
-               IrSend(Format_To_Irc,True)
+               IrSend(Format_To_Irc)
                time.sleep(Config.Time_Sleep)
                SaveDouble(Tweext)
 
