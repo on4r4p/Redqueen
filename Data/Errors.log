@@ -1,0 +1,10 @@
+2022-02-15 01:41:40.073166
+!!
+File: Redqueen.py has encounter a <class 'TypeError'> error in title() at line 412
+Error Message:play() got an unexpected keyword argument 'repeat'
+!!
+2022-02-15 01:41:40.073166
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 1407
+Error Message:list index out of range
+!!
