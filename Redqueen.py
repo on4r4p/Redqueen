@@ -1,19 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from asciimatics.effects import Print
-from asciimatics.renderers import FigletText, Rainbow
-from asciimatics.particles import ShootScreen
-from asciimatics.scene import Scene
-from asciimatics.screen import Screen
 from random import randint, choice, shuffle
 from twython import Twython
 from pyfiglet import Figlet
 from threading import Thread
-import re, socket, time, sys, os, inspect, string, datetime, emoji, feedparser
+import re, socket, time, sys, os, inspect,cherrypy, string, datetime, emoji, feedparser ,http.server,socketserver
 import Config, IrcKey
 import TwitterApiKeys as TAK
-
 # Some Vars
 
 
@@ -53,6 +47,8 @@ CurrentDate = datetime.datetime.now()
 
 Pth_Data = os.path.dirname(os.path.abspath(__file__)) + "/Data/"
 
+Pth_Web = os.path.dirname(os.path.abspath(__file__)) + "/Data/www/"
+
 Pth_Save = Pth_Data + "Save/"
 
 Pth_TotalApi_Call = str(Pth_Data) + "TotalApi.Call"
@@ -82,6 +78,8 @@ Pth_Current_Session = str(Pth_Data) + "Current.Session"
 Pth_NoResult = str(Pth_Data) + "No.Result"
 
 Pth_Tweets_Sent = str(Pth_Data) + "Tweets.Sent"
+
+Pth_Text_Sent = str(Pth_Data) + "Text.Sent"
 
 Pth_Text_Sent = str(Pth_Data) + "Text.Sent"
 
@@ -157,7 +155,314 @@ Tweets_By_Same_User = []
 
 printable = set(string.printable)
 
+
+Extracted_Datas = []
+
+Template_Header = """<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/7e675542d3.js" crossorigin="anonymous"></script>
+    <link href="css/static_style.css" rel="stylesheet">
+    <title>Redqueen</title>
+    <style> %s </style>
+  </head>
+  <body style="  background-color: #15202b;">"""
+
+Template_Footer = "</body></html>"
+
+Cherryconf = {
+        '/': {
+            'tools.sessions.on': True,
+            'tools.staticdir.root': Pth_Web+"WebTemplate"
+        },
+        '/favicon.ico':{
+        'tools.staticfile.on' : True,
+        'tools.staticfile.filename' : Pth_Web+'WebTemplate/img/Rdfavicon.ico'},
+        '/css': {
+        'tools.staticdir.on': True,
+        'tools.staticdir.dir': './css'},
+        '/img': {
+        'tools.staticdir.on': True,
+        'tools.staticdir.dir': './img'},
+        'global': {
+        'environment': 'production',
+        'log.screen': True,
+        'server.socket_host': '0.0.0.0',
+        'server.socket_port': 8080,
+        'engine.autoreload_on': True,
+       
+    }}
+
 # Some Defs
+
+class Redqueen_Server:
+
+
+    def header(self):
+        css_box = GenCss()
+        return str(Template_Header)%css_box
+
+    def footer(self):
+        return Template_Footer
+
+    @cherrypy.expose
+    def index(self):
+        timeline = GenFeed()
+
+        yield self.header()
+
+        for feed in timeline:
+            yield feed
+
+        yield self.footer()
+
+    @cherrypy.expose
+    def redqueen_retweet(self,rid=None):
+        if rid.isnumeric():
+            print("About to Retweet : ",rid)
+
+            try:
+               Twitter_Api.retweet(id=rid)
+            except Exception as e:
+               Betterror(e,inspect.stack()[0][3])
+        else:
+           print("not num:",rid)
+        return(self.index())
+
+    @cherrypy.expose
+    def redqueen_favorite(self,fid=None):
+        if fid.isnumeric():
+            print("About to Fav : ",fid)
+
+            try:
+               Twitter_Api.create_favorite(id=fid)
+            except Exception as e:
+               Betterror(e,inspect.stack()[0][3])
+        else:
+           print("not num:",fid)
+        return(self.index())
+
+def Extract_Tweet_Data(tweet):
+       global Extracted_Datas
+#       print("Tweet:\n",tweet)
+#       print()
+##
+       if 'retweeted_status' in tweet:
+
+
+          Tweet_Id = str(tweet["retweeted_status"]["id"])
+          Tweet_Timestamp = tweet["retweeted_status"]['created_at']
+          Tweet_Author = tweet['retweeted_status']['user']['screen_name']
+          Tweet_Author_Link = "https://twitter.com/"+Tweet_Author
+          Tweet_Profile_Author = tweet['retweeted_status']['user']['profile_image_url']
+          Tweet_Favorite_Counter = tweet['retweeted_status']['favorite_count']
+          Tweet_Retweet_Counter = tweet['retweeted_status']['retweet_count']
+          Tweet_Origin_Link = (
+                            "https://twitter.com/"
+                            + str(Tweet_Author)
+                            + "/status/"
+                            + str(Tweet_Id)
+                        )
+          Tweet_Rt_Author = tweet['user']['screen_name']
+          Tweet_Rt_Author_Link = "https://twitter.com/"+Tweet_Rt_Author
+
+          Tweet_Url = []
+          Tweet_Media = []
+          if "media" in tweet['retweeted_status']["entities"]:
+              for media in tweet['retweeted_status']["entities"]["media"]:
+                 Tweet_Media.append(media["media_url"])
+          if "urls" in tweet['retweeted_status']["entities"]:
+              for url in tweet['retweeted_status']["entities"]["urls"]:
+                 Tweet_Url.append(url['expanded_url'])
+
+
+       else:
+
+          Tweet_Id = str(tweet["id"])
+          Tweet_Timestamp = tweet['created_at']
+          Tweet_Author = tweet['user']['screen_name']
+          Tweet_Author_Link = "https://twitter.com/"+Tweet_Author
+          Tweet_Profile_Author = tweet['user']['profile_image_url']
+          Tweet_Favorite_Counter = tweet['favorite_count']
+          Tweet_Retweet_Counter = tweet['retweet_count']
+
+          Tweet_Origin_Link = (
+                            "https://twitter.com/"
+                            + str(Tweet_Author)
+                            + "/status/"
+                            + str(Tweet_Id)
+                        )
+          Tweet_Rt_Author = ""
+          Tweet_Rt_Author_Link = ""
+
+          Tweet_Url = []
+          Tweet_Media = []
+          if "media" in tweet["entities"]:
+              for media in tweet["entities"]["media"]:
+                 Tweet_Media.append(media["media_url"])
+          if "urls" in tweet["entities"]:
+              for url in tweet["entities"]["urls"]:
+                 Tweet_Url.append(url['expanded_url'])
+##
+       if "full_text" in tweet:
+          Tweet_Text = tweet["full_text"]
+       else:
+          Tweet_Text = tweet["text"]
+
+#       print("Tweet_Origin_Link=",Tweet_Origin_Link)
+#       print("Tweet_Id = ",Tweet_Id)
+#       print("Tweet_Timestamp = ",Tweet_Timestamp)
+#       print("Tweet_Author = ",Tweet_Author)
+#       print("Tweet_Profile_Author =",Tweet_Profile_Author)
+#       print("Tweet_Author_Link=",Tweet_Author_Link)
+#       print("Tweet_Text=",Tweet_Text)
+#       print("Tweet_Rt_Author=",Tweet_Rt_Author)
+#       print("Tweet_Rt_Author_Link=",Tweet_Rt_Author_Link)
+#       print("Tweet_Favorite_Counter = ",Tweet_Favorite_Counter)
+#       print("Tweet_Retweet_Counter = ",Tweet_Retweet_Counter)
+#       print("Tweet_Media = ",Tweet_Media)
+#       print("Tweet_Url = ",Tweet_Url)
+
+       Extracted_Datas.append((Tweet_Origin_Link,Tweet_Id,Tweet_Timestamp,Tweet_Author,Tweet_Profile_Author,Tweet_Author_Link,Tweet_Text,Tweet_Rt_Author,Tweet_Rt_Author_Link,Tweet_Favorite_Counter,Tweet_Retweet_Counter,Tweet_Media,Tweet_Url))
+
+def GenFeed():
+    Tweets_Feed = []
+    for nbr,D in enumerate(Extracted_Datas):
+
+        Template_Tweet = """    <div class="center-feeds-container">
+      <div class="profile-picture"> <img src="%s" class="image">"""%(str(D[4]))+""" </div>
+      <div class="center-feeds">
+        <div class="main-tweet">
+          <div class="on-actual-tweet">
+            <div class="handle">
+              <div class="handu"> <span>"""+"""<a href="%s">%s</a>"""%(D[5],str(D[3]))+"</span>"
+        if len(D[7]) >0:
+            Template_Tweet += """ Rt by <a href="%s">%s</a> %s</div>"""%(D[8],D[7],D[2])
+        else:
+            Template_Tweet += "  %s</div>"%(D[2])
+        Template_Tweet += """
+            </div>
+          </div>
+          <div class="actual-tweet"> """ + str(D[6]) + """<a href="%s"> Tweet link</a>\n"""%(D[0])
+        if len(D[12]) >0:
+           for link in D[12]:
+               Template_Tweet += """<a href="%s">%s</a>"""%(link,link)
+        Template_Tweet += """ </div>
+        </div>"""
+        if len(D[11]) > 0:
+            for media in D[11]:
+                Template_Tweet += """
+        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" >"""%(media)
+            Template_Tweet += "</div>"
+        Template_Tweet +="""
+        <div class="under-main-tweet">
+            <div class="retweet%s"><form action="redqueen_retweet" method="POST"><input id="retweet%s" type="checkbox" name="rid" value="%s" onclick="submit()"><label class="btn" for="retweet%s"><i class="fas fa-retweet"></i> %s</label></form></div>"""%(nbr,nbr,D[1],nbr,D[10])+"""
+            <div class="like%s"><form action="redqueen_favorite" method="POST"><input id="like%s" type="checkbox" name="fid" value="%s" onclick="submit()"><label class="btn" for="like%s"><i class="far fa-heart"></i> %s</label></form></div>"""%(nbr,nbr,D[1],nbr,D[9])+"""
+        </div>
+      </div>
+    </div>"""
+        Tweets_Feed.append(Template_Tweet)
+    return(Tweets_Feed)
+
+def GenCss():
+          
+      css = ""
+      for i in range(0,len(Extracted_Datas)):
+          css += ".comment"+str(i)+""" {
+  color: #9eaab3;
+  float: left;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+
+.comment"""+str(i)+""":hover { 
+    color: skyblue;
+    float: left;
+    margin-top: 12.5px;
+    height: 25px;
+    width: 25px;
+}
+
+
+#retweet"""+ str(i)+""" {
+    display: none;
+}
+
+.retweet"""+str(i)+""" {
+  color: #9eaab3;
+  float: left;
+  margin-left: 22%;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+
+.retweet"""+str(i)+""":hover {
+  color: green;
+  float: left;
+  margin-left: 22%;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+
+
+.retweet"""+str(i)+""":active{
+  color: red;
+  float: left;
+  margin-left: 22%;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+
+#retweet"""+str(i)+""":checked + label {
+  color: green;
+
+}
+
+#like"""+str(i)+""" {
+    display: none;
+}
+
+.like"""+str(i)+""" {
+  color: #9eaab3;
+  float: left;
+  margin-left: 22%;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+
+.like"""+str(i)+""":hover {
+  color: red;
+  float: left;
+  margin-left: 22%;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+
+.like"""+str(i)+""":active{
+  color: green;
+  float: left;
+  margin-left: 22%;
+  margin-top: 12.5px;
+  height: 25px;
+  width: 25px;
+}
+#like"""+str(i)+""":checked + label {
+  color: red;
+}
+"""
+
+
+          css += "\n"
+      return(css)
 
 
 def Betterror(error_msg,def_name):
@@ -271,11 +576,11 @@ def loadvars():
     global Requested_Cmd_List
 
     try:
-        Fig("rev", "LoadVars()", True)
+        Fig("cybermedium", "LoadVars()", True)
         print("\n\n\n\n")
 
         print("\n\n")
-        Fig("cybermedium", "Loading No Result", True)
+        Fig("cybersmall","Loading No Result", True)
         print("\n\n")
         checkfile(Pth_NoResult)
         lines = cleanfile(Pth_NoResult)
@@ -284,7 +589,7 @@ def loadvars():
            NoResult_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "No Result Loaded", True)
+        Fig("cybersmall", "No Result Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
 
         checkfile(Pth_Data + "RssSave")
@@ -293,11 +598,11 @@ def loadvars():
             RssSent.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "Rss Sent Loaded", True)
+        Fig("cybersmall", "Rss Sent Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
-        Fig("cybermedium", "Loading Keywords", True)
+        Fig("cybersmall","Loading Keywords", True)
 
         checkfile(Pth_Keywords_Rq)
         lines = cleanfile(Pth_Keywords_Rq)
@@ -306,13 +611,13 @@ def loadvars():
             Keywords_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "Keywords Loaded", True)
+        Fig("cybersmall", "Keywords Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
         time.sleep(Config.Time_Sleep)
         Keywordsave = Keywords_List
         shuffle(Keywords_List)
         print("\n\n")
-        Fig("cybermedium", "Loading Following", True)
+        Fig("cybersmall","Loading Following", True)
 
         checkfile(Pth_Following_Rq)
         lines = cleanfile(Pth_Following_Rq)
@@ -321,10 +626,10 @@ def loadvars():
             Following.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "Following Loaded", True)
+        Fig("cybersmall", "Following Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n\n")
-        Fig("cybermedium", "Loading Friends", True)
+        Fig("cybersmall","Loading Friends", True)
         print("\n\n")
 
         checkfile(Pth_Friends_Rq)
@@ -333,13 +638,13 @@ def loadvars():
             Friends.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "Friends Loaded", True)
+        Fig("cybersmall", "Friends Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
 
         print("\n\n")
-        Fig("cybermedium", "Loading Banned Words", True)
+        Fig("cybersmall","Loading Banned Words", True)
         print("\n\n")
         checkfile(Pth_Bannedword_Rq)
         lines = cleanfile(Pth_Bannedword_Rq)
@@ -348,12 +653,12 @@ def loadvars():
            Banned_Word_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "Banned Words Loaded", True)
+        Fig("cybersmall", "Banned Words Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
         print("\n\n")
-        Fig("cybermedium", "Loading Banned Users", True)
+        Fig("cybersmall","Loading Banned Users", True)
         print("\n\n")
         checkfile(Pth_Bannedpeople_Rq)
         lines = cleanfile(Pth_Bannedpeople_Rq)
@@ -361,13 +666,13 @@ def loadvars():
             Banned_User_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "Banned users Loaded,True")
+        Fig("cybersmall", "Banned users Loaded,True")
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
 
         print("\n\n")
-        Fig("cybermedium", "Loading Rss Flux", True)
+        Fig("cybersmall","Loading Rss Flux", True)
         print("\n\n")
         checkfile(Pth_Rss_Rq)
         lines = cleanfile(Pth_Rss_Rq)
@@ -375,7 +680,7 @@ def loadvars():
             Rss_Url_List.append(saved)
 
         print("\n\n")
-        Fig("cybermedium", "Loading cmds log", True)
+        Fig("cybersmall","Loading cmds log", True)
         print("\n\n")
         checkfile(Pth_Request_Log)
         lines = cleanfile(Pth_Request_Log)
@@ -384,36 +689,8 @@ def loadvars():
     except Exception as e:
        Betterror(e,inspect.stack()[0][3])
 
-def title(screen):
-
-    try:
-        scenes = []
-        effects = [
-            Print(
-                screen,
-                Rainbow(screen, FigletText("* RED QUEEN *", font="alligator")),
-                y=screen.height // 4 - 5,
-            ),
-            Print(screen, FigletText("-Twitter Search Bot-"), screen.height // 2 - 3),
-            Print(
-                screen,
-                FigletText("-Crawling For InfoSec News-"),
-                screen.height * 3 // 4 - 3,
-            ),
-        ]
-        scenes.append(Scene(effects, 60))
-
-        effects = [
-            ShootScreen(screen, screen.width // 2, screen.height // 2, 100),
-        ]
-        scenes.append(Scene(effects, 40, clear=False))
-        # scenes.append("error")
-
-        screen.play(scenes, repeat=False, stop_on_resize=False)
-
-    except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
-
+def title():
+      print(Config.Trinity)
 
 def timer(mode):
     global timeleft
@@ -461,7 +738,7 @@ def Request(cmd):
     global MasterStart_Trigger
     global MasterStop_Trigger
 
-    Fig("rev", "#Request()")
+    Fig("cybermedium", "#Request()")
 
     try:
 
@@ -994,7 +1271,7 @@ def Flush_NoResult():
     global NoResult_List
     try:
 
-        Fig("rev", "SaveDouble()")
+        Fig("cybermedium", "SaveDouble()")
         print("Deleting No.Results content from Rq.Keywords")
         cnt = 0
         lines = cleanfile(Pth_Keywords_Rq)
@@ -1029,7 +1306,7 @@ def Flush_NoResult():
 def SaveDouble(text):
     try:
 
-        Fig("rev", "SaveDouble()")
+        Fig("cybermedium", "SaveDouble()")
 
         time.sleep(Config.Time_Sleep)
 
@@ -1043,7 +1320,7 @@ def SaveDouble(text):
 
             print("*=*=*=*=*=*=*=*=*=*")
             print("SAVING TWEET TO TMP :", text)
-            Fig("larry3d", "Saved")
+            Fig("cybersmall", "Saved")
             print("*=*=*=*=*=*=*=*=*=*")
         else:
             print("Already saved")
@@ -1057,7 +1334,7 @@ def CheckDouble():
 
     try:
 
-        Fig("rev", "CheckDbl()", True)
+        Fig("cybermedium", "CheckDbl()", True)
 
         checkfile(Pth_Text_Sent)
 
@@ -1067,7 +1344,7 @@ def CheckDouble():
             if saved not in Ban_Double_List:
                 Ban_Double_List.append(saved)
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("larry3d", "BanDouble Updated", True)
+        Fig("cybersmall", "BanDouble Updated", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
@@ -1083,7 +1360,7 @@ def flushtmp():
 
         goflush = 0
 
-        Fig("rev", "flushtmp()", True)
+        Fig("cybermedium", "flushtmp()", True)
 
         time.sleep(Config.Time_Sleep)
         if os.path.exists(Pth_Current_Session):
@@ -1101,14 +1378,14 @@ def flushtmp():
             except Exception as e:
                 Betterror(e,inspect.stack()[0][3])
 
-                Fig("cybermedium", "No need to flush", True)
+                Fig("cybersmall","No need to flush", True)
 
                 time.sleep(Config.Time_Sleep)
 
             if goflush == 1:
 
                 print("==")
-                Fig("basic", "Flushing Temps Files", True)
+                Fig("cybersmall", "Flushing Temps Files", True)
                 print("==")
 
                 file.close()
@@ -1116,7 +1393,7 @@ def flushtmp():
                     text = "New Pth_Current_Session ! " + str(CurrentDate)
                     IrSend(text)
                     print("")
-                    Fig("basic", "Status sent !")
+                    Fig("cybersmall", "Status sent !")
 
                 except Exception as e:
                     Betterror(e,inspect.stack()[0][3])
@@ -1136,7 +1413,7 @@ def flushtmp():
                     os.remove(Pth_SearchTerms_Used)
 
                 print("==")
-                Fig("basic", "Saving current date", True)
+                Fig("cybersmall", "Saving current date", True)
                 print(CurrentDate)
                 print("==")
 
@@ -1145,14 +1422,14 @@ def flushtmp():
                 file.write(str(CurrentDate))
                 file.close()
 
-                Fig("cybermedium", "Done Flushing", True)
+                Fig("cybersmall","Done Flushing", True)
                 time.sleep(Config.Time_Sleep)
 
             else:
                 lfts = 86400 - Laps.seconds
 
                 print("==")
-                Fig("basic", "Starting from Last Pth_Current_Session", True)
+                Fig("cybersmall", "Starting from Last Pth_Current_Session", True)
 
                 print("Numbers of seconds since the first api call :", Laps.seconds)
                 print("%i Seconds left until Twitter flushs Api_Call_Nbrs :" % lfts)
@@ -1163,7 +1440,7 @@ def flushtmp():
         else:
 
             print("==")
-            Fig("basic", "New Pth_Current_Session Started", True)
+            Fig("cybersmall", "New Pth_Current_Session Started", True)
             print(CurrentDate)
             print("==")
 
@@ -1176,7 +1453,7 @@ def flushtmp():
 
 
 def checkmenu(wordlist):
-    Fig("rev", "CheckMenu()", True)
+    Fig("cybermedium", "CheckMenu()", True)
 
     time.sleep(Config.Time_Sleep)
     try:
@@ -1188,13 +1465,13 @@ def checkmenu(wordlist):
         lenmatch2 = len(set(lines2) & set(wordlist))
 
         print("==")
-        Fig("doom", "Removing Last Searches with No Result", True)
+        Fig("cybersmall", "Removing Last Searches with No Result", True)
         time.sleep(Config.Time_Sleep)
         while lenmatch2 > 0:
-            Fig("digital", "Found %i occurences :" % lenmatch2, True)
+            Fig("cybersmall", "Found %i occurences :" % lenmatch2, True)
             set(lines2) & set(wordlist)
             time.sleep(Config.Time_Sleep)
-            Fig("digital", "Removing No result from list ...", True)
+            Fig("cybersmall", "Removing No result from list ...", True)
             wordlist = list(set(wordlist) - set(lines2))
             time.sleep(Config.Time_Sleep)
             Fig(
@@ -1211,11 +1488,11 @@ def checkmenu(wordlist):
             lenmatch2 = len(set(lines2) & set(wordlist))
         file.close()
 
-        Fig("doom", "Removing Old Searches", True)
+        Fig("cybersmall", "Removing Old Searches", True)
         time.sleep(Config.Time_Sleep)
         New_Keywords_List = wordlist
         print("==")
-        Fig("cybermedium", "Removed successfully", True)
+        Fig("cybersmall","Removed successfully", True)
         print("==")
         time.sleep(Config.Time_Sleep)
 
@@ -1225,14 +1502,14 @@ def checkmenu(wordlist):
         lenmatch = len(set(lines) & set(wordlist))
 
         while lenmatch > 0:
-            Fig("digital", "Found %i occurences :" % lenmatch, True)
+            Fig("cybersmall", "Found %i occurences :" % lenmatch, True)
             set(lines) & set(wordlist)
             time.sleep(Config.Time_Sleep)
-            Fig("digital", "Removing from search list ...", True)
+            Fig("cybersmall", "Removing from search list ...", True)
             wordlist = list(set(wordlist) - set(lines))
             time.sleep(Config.Time_Sleep)
             Fig(
-                "digital"
+                "cybersmall"
                 + "New lenght of searchlist : "
                 + str(len(wordlist))
                 + " (Was "
@@ -1245,7 +1522,7 @@ def checkmenu(wordlist):
             lenmatch = len(set(lines) & set(wordlist))
         file.close()
         print("==")
-        Fig("cybermedium", "Removed successfully", True)
+        Fig("cybersmall","Removed successfully", True)
         print("==")
         Menu_Check_Trigger = True
         time.sleep(Config.Time_Sleep)
@@ -1254,7 +1531,7 @@ def checkmenu(wordlist):
         Betterror(e,inspect.stack()[0][3])
 
         print("==")
-        Fig("basic", "No previous searchs found for today", True)
+        Fig("cybersmall", "No previous searchs found for today", True)
         print("==")
         time.sleep(Config.Time_Sleep)
 
@@ -1264,20 +1541,20 @@ def lastmeal(lastsearch):
     global Menu_Check_Trigger
     try:
         if Menu_Check_Trigger == False:
-            Fig("rev", "LastSearch()", True)
+            Fig("cybermedium", "LastSearch()", True)
             time.sleep(Config.Time_Sleep)
             checkfile(Pth_SearchTerms_Used)
 
             file = open(Pth_SearchTerms_Used, "a")
             for words in lastsearch:
                 file.write(words + "\n")
-                Fig("digital", "Marking " + words + " as old . ")
+                Fig("cybersmall", "Marking " + words + " as old . ")
             file.close()
             Menu_Check_Trigger = True
             time.sleep(Config.Time_Sleep)
         else:
             print("==")
-            Fig("cybermedium", "Saved already")
+            Fig("cybersmall","Saved already")
             print("==")
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
@@ -1285,7 +1562,7 @@ def lastmeal(lastsearch):
 
 def SaveTotalCall(call, update):
     try:
-        Fig("rev", "SaveTotalCall()")
+        Fig("cybermedium", "SaveTotalCall()")
         time.sleep(Config.Time_Sleep)
         global Total_Call_Nbr
         global Update_Call_Nbr
@@ -1304,7 +1581,7 @@ def SaveTotalCall(call, update):
         newitem = int(lastitem) + int(call)
         Total_Call_Nbr = newitem
         finalitem = str(newitem) + "\n"
-        Fig("digital", "Saving new Total : " + str(finalitem))
+        Fig("cybersmall", "Saving new Total : " + str(finalitem))
         print("==")
         file.write(finalitem)
         file.close()
@@ -1328,11 +1605,12 @@ def SaveTotalCall(call, update):
         print("==")
         file2.write(finalitem2)
         file2.close()
-        Fig("basic", "Done Saving Calls")
+        Fig("cybersmall", "Done Saving Calls")
 
         time.sleep(Config.Time_Sleep)
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
+
 
 
 def IrSweet():
@@ -1348,7 +1626,7 @@ def IrSweet():
 
     while IrcSocket == False:
         try:
-            Fig("digital", "\n--Connecting to :" + str(IrcKey.IRHOST) + "--\n")
+            Fig("cybersmall", "\n--Connecting to :" + str(IrcKey.IRHOST) + "--\n")
             time.sleep(Config.Time_Sleep)
             Irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             Irc.connect((IrcKey.IRHOST, IrcKey.IRPORT))
@@ -1402,7 +1680,7 @@ def IrSweet():
                         )
 
             if Buffer.find("PING") != -1:
-                Fig("digital", "\n--PINGED--\n")
+                Fig("cybersmall", "\n--PINGED--\n")
                 try:
                     tmp = Buffer.split("PING :")[1]
                 except Exception as e:
@@ -1410,24 +1688,24 @@ def IrSweet():
                     tmp = "placeholder"
                     
                 Irc.send(bytes("PONG :" + tmp + "\r\n", "UTF-8"))
-                Fig("digital", "\n--PONG :" + str(tmp) + " --\n")
+                Fig("cybersmall", "\n--PONG :" + str(tmp) + " --\n")
                 last_ping = time.time()
 
             if Buffer.find("ERROR :Closing Link:") != -1:
-                Fig("digital" + "\n--TimeOut--\n\n--Restablishing Connection--\n")
+                Fig("cybersmall" + "\n--TimeOut--\n\n--Restablishing Connection--\n")
                 return IrSweet()
 
             if Buffer.find(IrcKey.IRKonTrigger) != -1 and Konnected is False:
                 Konnected = True
-                Fig("digital", "\n--Connected--\n")
+                Fig("cybersmall", "\n--Connected--\n")
 
             if Buffer.find(IrcKey.IRIdentTrigger) != -1 and Identified is False:
                 Identified = True
-                Fig("digital", "\n--Authentified--\n")
+                Fig("cybersmall", "\n--Authentified--\n")
 
             if Identified == False and Konnected is True:
                 time.sleep(Config.Time_Sleep)
-                Fig("digital", "\n--Sending CREDENTIAL--\n")
+                Fig("cybersmall", "\n--Sending CREDENTIAL--\n")
                 Irc.send(
                     bytes(
                         "%sIDENTIFY %s\r\n" % (IrcKey.IRNICKSERV, IrcKey.IRPASS),
@@ -1466,10 +1744,10 @@ def IrSweet():
                     )
                 )
                 time.sleep(Config.Time_Sleep)
-                Fig("digital", "\n--Joined--\n")
+                Fig("cybersmall", "\n--Joined--\n")
                 Joined = True
             if (time.time() - last_ping) > threshold:
-                Fig("digital", "\n--TimeOut--\n\n--Restablishing Connection--\n")
+                Fig("cybersmall", "\n--TimeOut--\n\n--Restablishing Connection--\n")
                 return IrSweet()
 
             if Joined is True and Identified is True and Konnected is True:
@@ -1512,13 +1790,15 @@ def Feeds(ttl):
 
 def IrSend(content, dontprint=None):
     global Irc
+    if Config.IRC_CONNECT is False:
+        return()
     try:
 
-        Fig("rev", "IrSend()")
+        Fig("cybermedium", "IrSend()")
 
         if not dontprint:
             print("==")
-            Fig("epic", "Tweet Loaded!")
+            Fig("cybermedium", "Tweet Loaded!")
             print("==")
             Irc.send(
                 bytes(
@@ -1527,12 +1807,11 @@ def IrSend(content, dontprint=None):
                     "UTF-8",
                 )
             )
-
         content = content.replace("\n", " ")
         time.sleep(Config.Time_Sleep)
-        Fig("digital", "\n--Sending :" + str(content) + "--\n")
+        Fig("cybersmall", "\n--Sending :" + str(content) + "--\n")
         Irc.send(bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL, content), "UTF-8"))
-        Fig("digital", "\n--Done--\n")
+        Fig("cybersmall", "\n--Done--\n")
         return
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
@@ -1577,7 +1856,7 @@ def Stat2Irc(Time_To_Wait):
         AvgScoreTxt = "Current Tweets collected: " + str(len(AvgScore))
         IrSend(AvgScoreTxt)
         time.sleep(Config.Time_Sleep)
-        NbrRetweettxt = "Tweets sent to irc:" + str(len(Retweet_List))
+        NbrRetweettxt = "Tweets sent:" + str(len(Retweet_List))
         IrSend(NbrRetweettxt)
         time.sleep(Config.Time_Sleep)
         Totale_Score_Nbrtxt = "Total Banned (Score): " + str(Totale_Score_Nbr)
@@ -1622,7 +1901,7 @@ def Stat2Irc(Time_To_Wait):
 def limits():
     try:
 
-        Fig("rev", "Limits()")
+        Fig("cybermedium", "Limits()")
         time.sleep(Config.Time_Sleep)
         global Api_Call_Nbr
         global Update_Call_Nbr
@@ -1643,14 +1922,14 @@ def limits():
 
             print("****************************************")
             print("****************************************")
-            Fig("epic", "CURRENT LIMITS ARE REACHED !!")
+            Fig("cybermedium", "CURRENT LIMITS ARE REACHED !!")
             print("")
-            Fig("cybermedium", "Saving Total Calls to file")
+            Fig("cybersmall","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybermedium", "Resetting current Api_Call_Nbrs")
+            Fig("cybersmall","Resetting current Api_Call_Nbrs")
 
-            Fig("cybermedium", "Login Out")
-            Fig("cybermedium", "Waiting 60 minutes")
+            Fig("cybersmall","Login Out")
+            Fig("cybersmall","Waiting 60 minutes")
             print("\n\n\n\n")
 
             Stat2Irc(3600)
@@ -1660,7 +1939,7 @@ def limits():
             RestABit_Trigger = False
             Wait_Hour_Trigger = False
 
-            Fig("cybermedium", "Waking up ..")
+            Fig("cybersmall","Waking up ..")
             time.sleep(Config.Time_Sleep)
             print("")
             Twitter_Api = WakeApiUp()
@@ -1669,14 +1948,14 @@ def limits():
         if RestABit_Trigger == True:
             print("****************************************")
             print("****************************************")
-            Fig("epic", "Mysterious Error !!!", True)
+            Fig("cybermedium", "Mysterious Error !!!", True)
             print("")
-            Fig("cybermedium", "Saving Total Calls to file")
+            Fig("cybersmall","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybermedium", "Resetting current Api_Call_Nbrs")
+            Fig("cybersmall","Resetting current Api_Call_Nbrs")
 
-            Fig("cybermedium", "Login Out")
-            Fig("cybermedium", "Waiting 5 minutes")
+            Fig("cybersmall","Login Out")
+            Fig("cybersmall","Waiting 5 minutes")
             Stat2Irc(3600)
 
             Update_Call_Nbr = 0
@@ -1684,7 +1963,7 @@ def limits():
             Search_Limit_Trigger = False
             RestABit_Trigger = False
 
-            Fig("cybermedium", "Waking up ..")
+            Fig("cybersmall","Waking up ..")
             time.sleep(Config.Time_Sleep)
             print("")
             Twitter_Api = WakeApiUp()
@@ -1695,21 +1974,21 @@ def limits():
             print("****************************************")
             print("****************************************")
 
-            Fig("epic", "SEARCH LIMITS ALMOST REACHED")
-            Fig("cybermedium", "Saving Total Calls to file")
+            Fig("cybermedium", "SEARCH LIMITS ALMOST REACHED")
+            Fig("cybersmall","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybermedium", "Resetting current Api_Call_Nbrs")
+            Fig("cybersmall","Resetting current Api_Call_Nbrs")
 
-            Fig("cybermedium", "Login Out")
+            Fig("cybersmall","Login Out")
 
-            Fig("cybermedium", "Waiting 15 minutes")
+            Fig("cybersmall","Waiting 15 minutes")
             Stat2Irc(900)
 
             Update_Call_Nbr = 0
             Api_Call_Nbr = 0
             Search_Limit_Trigger = False
 
-            Fig("cybermedium", "Waking up ..")
+            Fig("cybersmall","Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("****************************************")
@@ -1721,24 +2000,24 @@ def limits():
             print("****************************************")
             print("****************************************")
 
-            Fig("epic", "CURRENT LIMITS ALMOST REACHED")
-            Fig("cybermedium", "Saving Total Calls to file")
+            Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED")
+            Fig("cybersmall","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybermedium", "Resetting current Api_Call_Nbrs")
+            Fig("cybersmall","Resetting current Api_Call_Nbrs")
 
-            Fig("cybermedium", "Login Out")
+            Fig("cybersmall","Login Out")
 
             if Wait_Half_Hour_Trigger != 1:
-                Fig("cybermedium", "Waiting 15 minutes")
+                Fig("cybersmall","Waiting 15 minutes")
 
                 Stat2Irc(900)
             else:
-                Fig("cybermedium", "Waiting 30 minutes")
+                Fig("cybersmall","Waiting 30 minutes")
                 Stat2Irc(1800)
 
             Update_Call_Nbr = 0
             Api_Call_Nbr = 0
-            Fig("cybermedium", "Waking up ..")
+            Fig("cybersmall","Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("****************************************")
@@ -1750,10 +2029,10 @@ def limits():
             print("****************************************")
             print("****************************************")
 
-            Fig("epic", "CURRENT LIMITS ALMOST REACHED (total)")
-            Fig("cybermedium", "Saving Total Calls to file")
+            Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (total)")
+            Fig("cybersmall","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybermedium", "Resetting current Api_Call_Nbrs")
+            Fig("cybersmall","Resetting current Api_Call_Nbrs")
             All_Ok_Trigger = True
             Skip_Wait_Trigger = True
 
@@ -1762,14 +2041,14 @@ def limits():
 
             print("****************************************")
             print("****************************************")
-            Fig("epic", "CURRENT LIMITS ALMOST REACHED (update)")
-            Fig("cybermedium", "Saving Total Calls to file")
+            Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (update)")
+            Fig("cybersmall","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybermedium", "Resetting current Api_Call_Nbrs")
+            Fig("cybersmall","Resetting current Api_Call_Nbrs")
             All_Ok_Trigger = True
 
         print("===================")
-        Fig("cybermedium", "Ok")
+        Fig("cybersmall","Ok")
         print("===================")
         time.sleep(Config.Time_Sleep)
     except Exception as e:
@@ -1790,7 +2069,7 @@ def Ban(tweet, sender, id, Bio):
         UShallPass = 0
         Twist = re.sub(r'[^A-Za-z0-9 ]+', '', tweet.lower())
         Bio = re.sub(r'[^A-Za-z0-9 ]+', '', Bio.lower())
-        Fig("rev", "Ban()")
+        Fig("cybermedium", "Ban()")
 
         print("*=*=*=*=*=*=*=*=*=*")
 
@@ -1810,15 +2089,15 @@ def Ban(tweet, sender, id, Bio):
             for mustbe in Keywords_List:
                 mustbe = re.sub(r'[^A-Za-z0-9 ]+', '', mustbe.lower())
                 if mustbe in Twist:
-                   Fig("cybermedium", "Found Keywords :")
+                   Fig("cybersmall","Found Keywords :")
                    print("Sample : ", mustbe)
-                   Fig("basic", "You shall Pass")
+                   Fig("cybersmall", "You shall Pass")
                    print("*=*=*=*=*=*=*=*=*=*")
                    UShallPass += 1
 
             if UShallPass < Config.Minimum_Keywords_In_Tweet:
 
-                Fig("cybermedium", "Did not found any Keyword in tweet.")
+                Fig("cybersmall","Did not found any Keyword in tweet.")
                 Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
                 Banned = True
             print("*=*=*=*=*=*=*=*=*=*")
@@ -1826,14 +2105,14 @@ def Ban(tweet, sender, id, Bio):
         for forbid in Banned_Word_list:
                 forbid = re.sub(r'[^A-Za-z0-9 ]+', '', forbid.lower())
                 if forbid in Twist:
-                    Fig("cybermedium", "This tweet contains banned words :")
+                    Fig("cybersmall","This tweet contains banned words :")
                     print("** %s **" % str(forbid))
                     Banned = True
                     Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
                     time.sleep(Config.Time_Sleep)
 
                 if forbid in Bio:
-                    Fig("cybermedium", "This user profile contains banned words :")
+                    Fig("cybersmall","This user profile contains banned words :")
                     print(Bio)
                     print("** %s **" % str(forbid))
                     Banned = True
@@ -1843,7 +2122,7 @@ def Ban(tweet, sender, id, Bio):
         for forbid in Banned_User_list:
                 if str(forbid.lower()) in str(sender.lower()):
 
-                    Fig("cybermedium", "This tweet is from a banned user :")
+                    Fig("cybersmall","This tweet is from a banned user :")
                     print("** %s **" % forbid)
                     Banned = True
                     Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
@@ -1851,7 +2130,7 @@ def Ban(tweet, sender, id, Bio):
 
         for forbid in Ban_Double_List:
                 if forbid in tweet:
-                    Fig("cybermedium", "This tweet is Identical to a Previous tweet :")
+                    Fig("cybersmall","This tweet is Identical to a Previous tweet :")
                     Saveid(id)
                     Banned = True
                     Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
@@ -1891,20 +2170,20 @@ def Ban(tweet, sender, id, Bio):
                         maxpos = pos + int(len(sample))
 
         if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
-                Fig("basic", "Follow Friday")
+                Fig("cybersmall", "Follow Friday")
                 Banned = True
                 Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
                 time.sleep(Config.Time_Sleep)
 
         if tweet.count("#") >= Config.Maximum_Hashtag_In_Tweet:
 
-                Fig("basic", "HashTags Fever")
+                Fig("cybersmall", "HashTags Fever")
                 Banned = True
                 Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
                 time.sleep(Config.Time_Sleep)
 
         if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
-                Fig("basic", "Too many Tweets From this user ")
+                Fig("cybersmall", "Too many Tweets From this user ")
                 Banned = True
                 Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
                 time.sleep(Config.Time_Sleep)
@@ -1915,7 +2194,7 @@ def Ban(tweet, sender, id, Bio):
 
         if Banned is False:
 
-            Fig("speed", "Good To Go !!")
+            Fig("cybersmall", "Good To Go !!")
             print("*=*=*=*=*=*=*=*=*=*")
             time.sleep(Config.Time_Sleep)
 
@@ -1924,13 +2203,13 @@ def Ban(tweet, sender, id, Bio):
             LuckyLuke = randint(0, Config.Luck_Factor)
             print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
             if LuckyLuke == 1:
-                Fig("speed", "Good To Go !!")
+                Fig("cybersmall", "Good To Go !!")
                 print("*=*=*=*=*=*=*=*=*=*")
                 time.sleep(Config.Time_Sleep)
                 Banned = False
             else:
                 print("Tweet: ", tweet)
-                Fig("cybermedium", "Going To Trash")
+                Fig("cybersmall","Going To Trash")
                 print("*=*=*=*=*=*=*=*=*=*")
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
@@ -1938,7 +2217,7 @@ def Ban(tweet, sender, id, Bio):
 
 def Saveid(id):
     try:
-        Fig("rev", "Saveid()")
+        Fig("cybermedium", "Saveid()")
         time.sleep(Config.Time_Sleep)
 
         checkfile(Pth_Tweets_Sent)
@@ -1948,7 +2227,7 @@ def Saveid(id):
         file.close()
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
-        Fig("larry3d", "Saved")
+        Fig("cybersmall", "Saved")
         print("*=*=*=*=*=*=*=*=*=*")
         time.sleep(Config.Time_Sleep)
     except Exception as e:
@@ -1960,7 +2239,7 @@ def Idlist(id):
     global Total_Sent_Nbr
     global Id_Done_Trigger
     try:
-        Fig("rev", "Idlist()")
+        Fig("cybermedium", "Idlist()")
         time.sleep(Config.Time_Sleep)
 
         if Id_Done_Trigger == False:
@@ -1988,7 +2267,7 @@ def Idlist(id):
                     return True
 
         print("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
-        Fig("basic", "Unknown Tweet ID")
+        Fig("cybersmall", "Unknown Tweet ID")
         print("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
         return False
     except Exception as e:
@@ -2022,7 +2301,7 @@ def Scoring(tweet, search):
         Banned = False
         now = datetime.datetime.now()
 
-        Fig("rev", "Scoring()")
+        Fig("cybermedium", "Scoring()")
 
         if TAK.OAUT_1 is True:
             Tweext = tweet["text"]
@@ -2032,7 +2311,7 @@ def Scoring(tweet, search):
         print(
             "*************************************************************************************"
         )
-        Fig("basic", "Starting Scoring function")
+        Fig("cybersmall", "Starting Scoring function")
         print("")
 
         if "screen_name" in tweet["user"]:
@@ -2042,8 +2321,8 @@ def Scoring(tweet, search):
 
         if len(Tweext) < Config.Minimum_Tweet_Length:
             Banned = True
-            Fig("cybermedium", "NOT ENOUGH TEXT")
-            Fig("cybermedium", "Going To Trash")
+            Fig("cybersmall","NOT ENOUGH TEXT")
+            Fig("cybersmall","Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
         if Banned is False or Bouffon == 1:
             if "retweet_count" in tweet:
@@ -2054,14 +2333,14 @@ def Scoring(tweet, search):
                 LuckyLuke = randint(0, Config.Luck_Factor)
                 if tweet["retweet_count"] < Config.Minimum_Tweet_Retweet and LuckyLuke != 1:
                     Banned = True
-                    Fig("cybermedium", "NOT ENOUGH RETWEET")
-                    Fig("cybermedium", "Going To Trash")
+                    Fig("cybersmall","NOT ENOUGH RETWEET")
+                    Fig("cybersmall","Going To Trash")
                     print("*=*=*=*=*=*=*=*=*=*")
                     time.sleep(Config.Time_Sleep)
 
                 if tweet["retweet_count"] < Config.Minimum_Tweet_Retweet and LuckyLuke == 1:
-                    Fig("cybermedium", "Not enough retweet")
-                    Fig("cybermedium", "But lets give it a chance ...")
+                    Fig("cybersmall","Not enough retweet")
+                    Fig("cybersmall","But lets give it a chance ...")
                     print("*=*=*=*=*=*=*=*=*=*")
 
                 if tweet["retweet_count"] >= 1 and tweet["retweet_count"] <= 23:
@@ -2277,7 +2556,7 @@ def Scoring(tweet, search):
                     print("##")
 
                     if tweet["user"]["followers_count"] <= Config.Minimum_User_Friend:
-                        Fig("cybermedium", "Not Enough Followers")
+                        Fig("cybersmall","Not Enough Followers")
                         print(tweet["user"]["followers_count"])
                         coop = tweet["user"]["screen_name"]
                         nogo = 1
@@ -2309,7 +2588,7 @@ def Scoring(tweet, search):
                             print("Nop...")
                             Banned = True
 
-                        Fig("cybermedium", "Going To Trash")
+                        Fig("cybersmall","Going To Trash")
                         print("*=*=*=*=*=*=*=*=*=*")
                         Banned = True
                         Score = Score - 10000
@@ -2501,42 +2780,42 @@ def Scoring(tweet, search):
                             "================================================================================"
                         )
 
-                        Fig("basic", "SUCH SCORE !!")
+                        Fig("cybersmall", "SUCH SCORE !!")
 
                         figy = "Score = %i" % Score
-                        Fig("puffy", str(figy))
+                        Fig("cybersmall", str(figy))
 
-                        Fig("basic", "MUCH TWEET !!")
+                        Fig("cybersmall", "MUCH TWEET !!")
 
-                        Fig("puffy", "Text:")
-                        Fig("digital", Tweext)
+                        Fig("cybersmall", "Text:")
+                        Fig("cybersmall", Tweext)
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("basic", "MANY RETWEET !!")
+                        Fig("cybersmall", "MANY RETWEET !!")
 
                         figy = "Retweets = %i" % tweet["retweet_count"]
-                        Fig("puffy", str(figy))
+                        Fig("cybersmall", str(figy))
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("basic", "SO FAVORITE !!")
+                        Fig("cybersmall", "SO FAVORITE !!")
 
                         figy = "Favourites = %i" % tweet["favorite_count"]
-                        Fig("puffy", str(figy))
+                        Fig("cybersmall", str(figy))
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("basic", "VERY TREND !!")
+                        Fig("cybersmall", "VERY TREND !!")
 
                         figy = "Followers = %i" % tweet["user"]["followers_count"]
-                        Fig("puffy", str(figy))
+                        Fig("cybersmall", str(figy))
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("basic", "AMAZE TWEET!!")
+                        Fig("cybersmall", "AMAZE TWEET!!")
 
                         print(
                             "================================================================================"
                         )
                         figy = "Amaze Now !"
-                        Fig("puffy", str(figy))
+                        Fig("cybersmall", str(figy))
                         link = (
                             "https://twitter.com/"
                             + str(choice(randodge).replace(" ", ""))
@@ -2564,7 +2843,7 @@ def Scoring(tweet, search):
                                     )
                                     print(Tweext)
                                     Saveid(tweet["id"])
-                                    Fig("cybermedium", "Going To Trash")
+                                    Fig("cybersmall","Going To Trash")
                                     print("*=*=*=*=*=*=*=*=*=*")
                                     Banned = True
                                     Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
@@ -2596,7 +2875,7 @@ def Scoring(tweet, search):
                                             print("Found Matched :", sample)
                                             Saveid(id)
 
-                                            Fig("cybermedium", "Going To Trash")
+                                            Fig("cybersmall","Going To Trash")
                                             print("*=*=*=*=*=*=*=*=*=*")
                                             time.sleep(Config.Time_Sleep)
 
@@ -2634,7 +2913,7 @@ def Scoring(tweet, search):
 
                                 IrSend(dodgelink)
 
-                                Fig("cybermedium", "DONE")
+                                Fig("cybersmall","DONE")
                                 Api_Call_Nbr = Api_Call_Nbr + 2
                                 Update_Call_Nbr = Update_Call_Nbr + 2
                                 Saveid(tweet["id"])
@@ -2652,7 +2931,7 @@ def Scoring(tweet, search):
                             print(
                                 "================================================================================"
                             )
-                            Fig("cybermedium", " WOW Already Sent !!")
+                            Fig("cybersmall"," WOW Already Sent !!")
                             print(
                                 "================================================================================"
                             )
@@ -2670,12 +2949,12 @@ def Scoring(tweet, search):
 
         if Banned is False:
             if Tweet_Age.days >= Config.Maximum_Tweet_DayOld:
-                Fig("basic", "WAY TOO OLD !")
+                Fig("cybersmall", "WAY TOO OLD !")
                 if LuckyLuke != 1:
                     Banned = True
                     Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                 else:
-                    Fig("basic", "But who cares !")
+                    Fig("cybersmall", "But who cares !")
             else:
                 Score = Score + 12
         if Banned is False:
@@ -2694,12 +2973,12 @@ def Scoring(tweet, search):
                     print("Retweet created at :", RtTimeFinal)
 
                     if RtTweet_Age.days >= Config.Maximum_Retweet_DayOld:
-                        Fig("basic", "WAY TOO OLD !")
+                        Fig("cybersmall", "WAY TOO OLD !")
                         if LuckyLuke != 1:
                             Banned = True
                             Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                         else:
-                            Fig("basic", "But who cares !")
+                            Fig("cybersmall", "But who cares !")
                 else:
                     Score = Score + 6
         if Banned is False:
@@ -2854,7 +3133,7 @@ def Scoring(tweet, search):
                         Tweext = Tweext.replace("\n", " ")
                         print("######################################")
                         print("Adding to Retweet List")
-                        print("Nbr of tweets in queue :", len(Retweet_List))
+                        print("Nbr of tweets sent :", len(Retweet_List))
                         print("Tweet Score : ", Score)
                         print("Tweet ID :", tweet["id"])
                         print("Current ApiCall Count :", Api_Call_Nbr)
@@ -2868,7 +3147,7 @@ def Scoring(tweet, search):
 
                         time.sleep(Config.Time_Sleep)
                         Tweets_By_Same_User.append(tweet["user"]["screen_name"])
-                        Retweet_List.append(Tweext)
+                        Retweet_List.append(tweet)
                         Ban_Double_List.append(Tweext)
                         clickme = (
                             "https://twitter.com/"
@@ -2889,12 +3168,12 @@ def Scoring(tweet, search):
 
                     else:
                         print("")
-                        Fig("epic", "But ..")
+                        Fig("cybermedium", "But ..")
                         print(
                             "================================================================================"
                         )
                         figy = "Score = %i" % Score
-                        Fig("puffy", str(figy))
+                        Fig("cybersmall", str(figy))
                         print(
                             "================================================================================"
                         )
@@ -2923,11 +3202,11 @@ def Scoring(tweet, search):
                         time.sleep(Config.Time_Sleep)
                 else:
                     print("")
-                    Fig("epic", "But ..")
+                    Fig("cybermedium", "But ..")
                     print(
                         "================================================================================"
                     )
-                    Fig("cybermedium", "Banned")
+                    Fig("cybersmall","Banned")
                     print(
                         "================================================================================"
                     )
@@ -2950,11 +3229,11 @@ def Scoring(tweet, search):
                     time.sleep(Config.Time_Sleep)
             else:
                 print("")
-                Fig("epic", "But ..")
+                Fig("cybermedium", "But ..")
                 print(
                     "================================================================================"
                 )
-                Fig("cybermedium", "Already sent !")
+                Fig("cybersmall","Already sent !")
                 print(
                     "================================================================================"
                 )
@@ -2971,11 +3250,11 @@ def Scoring(tweet, search):
 
         else:
 
-            Fig("epic", "but ..")
+            Fig("cybermedium", "but ..")
             print(
                 "================================================================================"
             )
-            Fig("cybermedium", "Language")
+            Fig("cybersmall","Language")
             print(
                 "==============================================================================="
             )
@@ -3011,7 +3290,7 @@ def Search_Keyword(word):
     global Search_ApiCallLeft_Nbr
     try:
 
-        Fig("rev", "Searching()")
+        Fig("cybermedium", "Searching()")
         time.sleep(Config.Time_Sleep)
         ratechk = 0
 
@@ -3037,12 +3316,12 @@ def Search_Keyword(word):
 
                 print("##########################################")
                 print("**")
-                Fig("doom", "Starting search function")
+                Fig("cybersmall", "Starting search function")
                 print("**")
                 print("##########################################")
 
                 print("=/\/\/\/\/\/\/\/\/\/\/\=")
-                Fig("basic", "Calling Limit function")
+                Fig("cybersmall", "Calling Limit function")
                 print("=/\/\/\/\/\/\/\/\/\/\/\=")
 
                 limits()
@@ -3082,7 +3361,6 @@ def Search_Keyword(word):
                 except Exception as e:
                     Betterror(e,inspect.stack()[0][3])
                     Api_Call_Nbr = Api_Call_Nbr + 1
-                    print("Error search2:", e)
                     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                     print("Error Sorry trying next one")
                     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -3091,7 +3369,7 @@ def Search_Keyword(word):
 
                 print("##########################################")
                 print("**")
-                Fig("doom", "Search function Terminated")
+                Fig("cybersmall", "Search function Terminated")
                 print("**")
                 print("##########################################")
                 try:
@@ -3110,7 +3388,7 @@ def Search_Keyword(word):
                     else:
                         print("****************************************")
 
-                        Fig("caligraphy", "No Result")
+                        Fig("cybersmall", "No Result")
 
                         print("????????????????????????????")
                         print("Sorry not enough results for : ", word)
@@ -3118,7 +3396,7 @@ def Search_Keyword(word):
                         print("????????????????????????????")
 
                         print("****************************************")
-                        Fig("basic", "Saving unwanted search to no.result")
+                        Fig("cybersmall", "Saving unwanted search to no.result")
                         time.sleep(Config.Time_Sleep)
                         checkfile(Pth_NoResult)
 
@@ -3149,7 +3427,7 @@ def RedQueen():
             if GOGOGO_Trigger == True:
                 break
 
-        Fig("basic", "GOGOGO!", True)
+        Fig("cybersmall", "GOGOGO!", True)
         time.sleep(Config.Time_Sleep)
 
         loadvars()
@@ -3157,7 +3435,7 @@ def RedQueen():
         CheckDouble()
         time.sleep(Config.Time_Sleep)
 
-        Fig("basic", "Loading Emoticon", True)
+        Fig("cybersmall", "Loading Emoticon", True)
 
         time.sleep(Config.Time_Sleep)
         for use_aliases, group in (
@@ -3170,13 +3448,13 @@ def RedQueen():
                 Emoji_List.append(emj)
         print(Emoji_List)
 
-        Fig("cybermedium", "Done")
+        Fig("cybersmall","Done")
         time.sleep(Config.Time_Sleep)
-        Fig("basic", "Calling Flush function", True)
+        Fig("cybersmall", "Calling Flush function", True)
 
         flushtmp()
 
-        Fig("basic", "Calling Search function", True)
+        Fig("cybersmall", "Calling Search function", True)
 
         time.sleep(Config.Time_Sleep)
 
@@ -3189,7 +3467,7 @@ def RedQueen():
             rndwords = len(Keywords_List)
 
         print("**")
-        Fig("calgphy2", "Today's Menu :")
+        Fig("cybermedium", "Today's Menu :")
 
         print(Keywords_List[:rndwords])
 
@@ -3207,13 +3485,13 @@ def RedQueen():
             )
             IrSend(status)
             print("")
-            Fig("basic", 'Status sent !"')
+            Fig("cybersmall", 'Status sent !"')
 
         except Exception as e:
             Betterror(e,inspect.stack()[0][3])
         time.sleep(Config.Time_Sleep)
 
-        Fig("cybermedium", "Check Last Menu started", True)
+        Fig("cybersmall","Check Last Menu started", True)
 
         checkmenu(Keywords_List)
 
@@ -3223,7 +3501,7 @@ def RedQueen():
             print("**")
 
             print("==")
-            Fig("basic", "New Menu for today !", True)
+            Fig("cybersmall", "New Menu for today !", True)
             print("==")
 
             print(Keywords_List[:rndwords])
@@ -3244,7 +3522,7 @@ def RedQueen():
             time.sleep(Config.Time_Sleep)
             if MasterStart_Trigger is True:
                 figy = "Starting Redqueen"
-                Fig("puffy", figy)
+                Fig("cybersmall", figy)
                 break
 
         for key in Keywords_List[:rndwords]:
@@ -3255,7 +3533,7 @@ def RedQueen():
                     return IrSend("Redqueen has been stopped")
                 tmpcnt = tmpcnt + 1
                 figy = "Searching : %s %i/%i" % (key, tmpcnt, rndwords)
-                Fig("puffy", figy)
+                Fig("cybersmall", figy)
                 time.sleep(Config.Time_Sleep)
                 Search_Keyword(key)
             else:
@@ -3268,15 +3546,15 @@ def RedQueen():
                         break
                 tmpcnt = tmpcnt + 1
                 figy = "Searching : %s %i/%i" % (key, tmpcnt, rndwords)
-                Fig("puffy", figy)
+                Fig("cybersmall", figy)
                 time.sleep(Config.Time_Sleep)
                 Search_Keyword(key)
 
-        Fig("basic", "All Done !", True)
+        Fig("cybersmall", "All Done !", True)
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("basic", "Calling Save Search Terms Function", True)
+        Fig("cybersmall", "Calling Save Search Terms Function", True)
 
         time.sleep(Config.Time_Sleep)
         lastmeal(Keywords_List[:rndwords])
@@ -3303,13 +3581,13 @@ def RedQueen():
 
             IrSend(dbrief)
 
-            Fig("basic", "Status sent !")
+            Fig("cybersmall", "Status sent !")
 
         except Exception as e:
             Betterror(e,inspect.stack()[0][3])
             time.sleep(Config.Time_Sleep)
 
-        Fig("basic", "Calling Saving call function", True)
+        Fig("cybersmall", "Calling Saving call function", True)
 
         SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
 
@@ -3319,7 +3597,7 @@ def RedQueen():
         print(
             "##############################################################################################################"
         )
-        Fig("basic", "The End")
+        Fig("cybersmall", "The End")
         print(
             "##############################################################################################################"
         )
@@ -3334,11 +3612,12 @@ def RedQueen():
 if __name__ == "__main__":
 
     try:
-        Screen.wrapper(title)
+        title()
 
         if True is TAK.OAUT_1 and True is TAK.OAUT_2:
-            print("You much choose between TAK.OAUT_1 and TAK.OAUT_2 in TwitterApiKeys.py")
-            sys.exit()
+            if Config.WEB_SERVER is False:
+                print("You much choose between TAK.OAUT_1 and TAK.OAUT_2 if you do not use the WebServer in TwitterApiKeys.py")
+                sys.exit()
         if False is TAK.OAUT_1 and False is TAK.OAUT_2:
             print("You much choose between TAK.OAUT_1 and TAK.OAUT_2 in TwitterApiKeys.py")
             sys.exit()
@@ -3364,14 +3643,25 @@ if __name__ == "__main__":
 
         WakeApiUp()
 
-        Fig("cybermedium", "Launching Blueking on IRC")
+        Fig("cybersmall","Launching Blueking on IRC")
         time.sleep(Config.Time_Sleep)
 
-        Fig("rev", "IrSweet()")
-        Fig("cybermedium", "Waiting for idle mode")
+        Fig("cybermedium", "IrSweet()")
+        Fig("cybersmall","Waiting for idle mode")
         time.sleep(Config.Time_Sleep)
-        Thread(target=IrSweet).start()
+
+        if Config.IRC_CONNECT is True:
+           Thread(target=IrSweet).start()
+
         Thread(target=RedQueen).start()
+
+        if Config.WEB_SERVER is True:
+            while 1:
+                time.sleep(1)
+                if GOGOGO_Trigger == True:
+                    break
+            cherrypy.quickstart(Redqueen_Server(),'/', Cherryconf)
+
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
 
