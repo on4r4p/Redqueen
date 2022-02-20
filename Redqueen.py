@@ -225,7 +225,13 @@ class Redqueen_Server:
             print("About to Retweet : ",rid)
 
             try:
-               Twitter_Api.retweet(id=rid)
+               Twitter_CherryApi = Twython(
+                    TAK.oa1_app_key,
+                    TAK.oa1_app_secret,
+                    TAK.oa1_oauth_token,
+                    TAK.oa1_oauth_token_secret,
+                    )
+               Twitter_CherryApi.retweet(id=rid)
             except Exception as e:
                Betterror(e,inspect.stack()[0][3])
         else:
@@ -238,7 +244,13 @@ class Redqueen_Server:
             print("About to Fav : ",fid)
 
             try:
-               Twitter_Api.create_favorite(id=fid)
+               Twitter_CherryApi = Twython(
+                    TAK.oa1_app_key,
+                    TAK.oa1_app_secret,
+                    TAK.oa1_oauth_token,
+                    TAK.oa1_oauth_token_secret,
+                    )
+               Twitter_CherryApi.create_favorite(id=fid)
             except Exception as e:
                Betterror(e,inspect.stack()[0][3])
         else:
@@ -496,7 +508,7 @@ def WakeApiUp():
     global Api_Call_Nbr
     global Search_ApiCallLeft_Nbr
     try:
-        if TAK.OAUT_1 is True:
+        if TAK.OAUT_1 is True and TAK.OAUT_2 is False:
             Twitter_Api = Twython(
                 TAK.oa1_app_key,
                 TAK.oa1_app_secret,
@@ -2303,7 +2315,7 @@ def Scoring(tweet, search):
 
         Fig("cybermedium", "Scoring()")
 
-        if TAK.OAUT_1 is True:
+        if TAK.OAUT_1 is True and TAK.OAUT_2 is False:
             Tweext = tweet["text"]
         elif TAK.OAUT_2 is True:
             Tweext = tweet["full_text"]
