@@ -593,7 +593,7 @@ def loadvars():
         print("\n\n\n\n")
 
         print("\n\n")
-        Fig("cybersmall","Loading No Result", True)
+        Fig("digital","Loading No Result", True)
         print("\n\n")
         checkfile(Pth_NoResult)
         lines = cleanfile(Pth_NoResult)
@@ -602,7 +602,7 @@ def loadvars():
            NoResult_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "No Result Loaded", True)
+        Fig("digital", "No Result Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
 
         checkfile(Pth_Data + "RssSave")
@@ -611,11 +611,11 @@ def loadvars():
             RssSent.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Rss Sent Loaded", True)
+        Fig("digital", "Rss Sent Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
-        Fig("cybersmall","Loading Keywords", True)
+        Fig("digital","Loading Keywords", True)
 
         checkfile(Pth_Keywords_Rq)
         lines = cleanfile(Pth_Keywords_Rq)
@@ -624,13 +624,13 @@ def loadvars():
             Keywords_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Keywords Loaded", True)
+        Fig("digital", "Keywords Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
         time.sleep(Config.Time_Sleep)
         Keywordsave = Keywords_List
         shuffle(Keywords_List)
         print("\n\n")
-        Fig("cybersmall","Loading Following", True)
+        Fig("digital","Loading Following", True)
 
         checkfile(Pth_Following_Rq)
         lines = cleanfile(Pth_Following_Rq)
@@ -639,10 +639,10 @@ def loadvars():
             Following.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Following Loaded", True)
+        Fig("digital", "Following Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n\n")
-        Fig("cybersmall","Loading Friends", True)
+        Fig("digital","Loading Friends", True)
         print("\n\n")
 
         checkfile(Pth_Friends_Rq)
@@ -651,13 +651,13 @@ def loadvars():
             Friends.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Friends Loaded", True)
+        Fig("digital", "Friends Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
 
         print("\n\n")
-        Fig("cybersmall","Loading Banned Words", True)
+        Fig("digital","Loading Banned Words", True)
         print("\n\n")
         checkfile(Pth_Bannedword_Rq)
         lines = cleanfile(Pth_Bannedword_Rq)
@@ -666,12 +666,12 @@ def loadvars():
            Banned_Word_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Banned Words Loaded", True)
+        Fig("digital", "Banned Words Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
         print("\n\n")
-        Fig("cybersmall","Loading Banned Users", True)
+        Fig("digital","Loading Banned Users", True)
         print("\n\n")
         checkfile(Pth_Bannedpeople_Rq)
         lines = cleanfile(Pth_Bannedpeople_Rq)
@@ -679,13 +679,13 @@ def loadvars():
             Banned_User_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Banned users Loaded,True")
+        Fig("digital", "Banned users Loaded,True")
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
 
         print("\n\n")
-        Fig("cybersmall","Loading Rss Flux", True)
+        Fig("digital","Loading Rss Flux", True)
         print("\n\n")
         checkfile(Pth_Rss_Rq)
         lines = cleanfile(Pth_Rss_Rq)
@@ -693,7 +693,7 @@ def loadvars():
             Rss_Url_List.append(saved)
 
         print("\n\n")
-        Fig("cybersmall","Loading cmds log", True)
+        Fig("digital","Loading cmds log", True)
         print("\n\n")
         checkfile(Pth_Request_Log)
         lines = cleanfile(Pth_Request_Log)
@@ -1333,7 +1333,7 @@ def SaveDouble(text):
 
             print("*=*=*=*=*=*=*=*=*=*")
             print("SAVING TWEET TO TMP :", text)
-            Fig("cybersmall", "Saved")
+            Fig("digital", "Saved")
             print("*=*=*=*=*=*=*=*=*=*")
         else:
             print("Already saved")
@@ -1357,7 +1357,7 @@ def CheckDouble():
             if saved not in Ban_Double_List:
                 Ban_Double_List.append(saved)
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "BanDouble Updated", True)
+        Fig("digital", "BanDouble Updated", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         time.sleep(Config.Time_Sleep)
@@ -1391,14 +1391,14 @@ def flushtmp():
             except Exception as e:
                 Betterror(e,inspect.stack()[0][3])
 
-                Fig("cybersmall","No need to flush", True)
+                Fig("digital","No need to flush", True)
 
                 time.sleep(Config.Time_Sleep)
 
             if goflush == 1:
 
                 print("==")
-                Fig("cybersmall", "Flushing Temps Files", True)
+                Fig("digital", "Flushing Temps Files", True)
                 print("==")
 
                 file.close()
@@ -1406,7 +1406,7 @@ def flushtmp():
                     text = "New Pth_Current_Session ! " + str(CurrentDate)
                     IrSend(text)
                     print("")
-                    Fig("cybersmall", "Status sent !")
+                    Fig("digital", "Status sent !")
 
                 except Exception as e:
                     Betterror(e,inspect.stack()[0][3])
@@ -1426,7 +1426,7 @@ def flushtmp():
                     os.remove(Pth_SearchTerms_Used)
 
                 print("==")
-                Fig("cybersmall", "Saving current date", True)
+                Fig("digital", "Saving current date", True)
                 print(CurrentDate)
                 print("==")
 
@@ -1435,14 +1435,14 @@ def flushtmp():
                 file.write(str(CurrentDate))
                 file.close()
 
-                Fig("cybersmall","Done Flushing", True)
+                Fig("digital","Done Flushing", True)
                 time.sleep(Config.Time_Sleep)
 
             else:
                 lfts = 86400 - Laps.seconds
 
                 print("==")
-                Fig("cybersmall", "Starting from Last Pth_Current_Session", True)
+                Fig("digital", "Starting from Last Pth_Current_Session", True)
 
                 print("Numbers of seconds since the first api call :", Laps.seconds)
                 print("%i Seconds left until Twitter flushs Api_Call_Nbrs :" % lfts)
@@ -1453,7 +1453,7 @@ def flushtmp():
         else:
 
             print("==")
-            Fig("cybersmall", "New Pth_Current_Session Started", True)
+            Fig("digital", "New Pth_Current_Session Started", True)
             print(CurrentDate)
             print("==")
 
@@ -1478,13 +1478,13 @@ def checkmenu(wordlist):
         lenmatch2 = len(set(lines2) & set(wordlist))
 
         print("==")
-        Fig("cybersmall", "Removing Last Searches with No Result", True)
+        Fig("digital", "Removing Last Searches with No Result", True)
         time.sleep(Config.Time_Sleep)
         while lenmatch2 > 0:
-            Fig("cybersmall", "Found %i occurences :" % lenmatch2, True)
+            Fig("digital", "Found %i occurences :" % lenmatch2, True)
             set(lines2) & set(wordlist)
             time.sleep(Config.Time_Sleep)
-            Fig("cybersmall", "Removing No result from list ...", True)
+            Fig("digital", "Removing No result from list ...", True)
             wordlist = list(set(wordlist) - set(lines2))
             time.sleep(Config.Time_Sleep)
             Fig(
@@ -1501,11 +1501,11 @@ def checkmenu(wordlist):
             lenmatch2 = len(set(lines2) & set(wordlist))
         file.close()
 
-        Fig("cybersmall", "Removing Old Searches", True)
+        Fig("digital", "Removing Old Searches", True)
         time.sleep(Config.Time_Sleep)
         New_Keywords_List = wordlist
         print("==")
-        Fig("cybersmall","Removed successfully", True)
+        Fig("digital","Removed successfully", True)
         print("==")
         time.sleep(Config.Time_Sleep)
 
@@ -1515,10 +1515,10 @@ def checkmenu(wordlist):
         lenmatch = len(set(lines) & set(wordlist))
 
         while lenmatch > 0:
-            Fig("cybersmall", "Found %i occurences :" % lenmatch, True)
+            Fig("digital", "Found %i occurences :" % lenmatch, True)
             set(lines) & set(wordlist)
             time.sleep(Config.Time_Sleep)
-            Fig("cybersmall", "Removing from search list ...", True)
+            Fig("digital", "Removing from search list ...", True)
             wordlist = list(set(wordlist) - set(lines))
             time.sleep(Config.Time_Sleep)
             Fig(
@@ -1535,7 +1535,7 @@ def checkmenu(wordlist):
             lenmatch = len(set(lines) & set(wordlist))
         file.close()
         print("==")
-        Fig("cybersmall","Removed successfully", True)
+        Fig("digital","Removed successfully", True)
         print("==")
         Menu_Check_Trigger = True
         time.sleep(Config.Time_Sleep)
@@ -1544,7 +1544,7 @@ def checkmenu(wordlist):
         Betterror(e,inspect.stack()[0][3])
 
         print("==")
-        Fig("cybersmall", "No previous searchs found for today", True)
+        Fig("digital", "No previous searchs found for today", True)
         print("==")
         time.sleep(Config.Time_Sleep)
 
@@ -1561,13 +1561,13 @@ def lastmeal(lastsearch):
             file = open(Pth_SearchTerms_Used, "a")
             for words in lastsearch:
                 file.write(words + "\n")
-                Fig("cybersmall", "Marking " + words + " as old . ")
+                Fig("digital", "Marking " + words + " as old . ")
             file.close()
             Menu_Check_Trigger = True
             time.sleep(Config.Time_Sleep)
         else:
             print("==")
-            Fig("cybersmall","Saved already")
+            Fig("digital","Saved already")
             print("==")
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
@@ -1594,7 +1594,7 @@ def SaveTotalCall(call, update):
         newitem = int(lastitem) + int(call)
         Total_Call_Nbr = newitem
         finalitem = str(newitem) + "\n"
-        Fig("cybersmall", "Saving new Total : " + str(finalitem))
+        Fig("digital", "Saving new Total : " + str(finalitem))
         print("==")
         file.write(finalitem)
         file.close()
@@ -1618,7 +1618,7 @@ def SaveTotalCall(call, update):
         print("==")
         file2.write(finalitem2)
         file2.close()
-        Fig("cybersmall", "Done Saving Calls")
+        Fig("digital", "Done Saving Calls")
 
         time.sleep(Config.Time_Sleep)
     except Exception as e:
@@ -1639,7 +1639,7 @@ def IrSweet():
 
     while IrcSocket == False:
         try:
-            Fig("cybersmall", "\n--Connecting to :" + str(IrcKey.IRHOST) + "--\n")
+            Fig("digital", "\n--Connecting to :" + str(IrcKey.IRHOST) + "--\n")
             time.sleep(Config.Time_Sleep)
             Irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             Irc.connect((IrcKey.IRHOST, IrcKey.IRPORT))
@@ -1693,7 +1693,7 @@ def IrSweet():
                         )
 
             if Buffer.find("PING") != -1:
-                Fig("cybersmall", "\n--PINGED--\n")
+                Fig("digital", "\n--PINGED--\n")
                 try:
                     tmp = Buffer.split("PING :")[1]
                 except Exception as e:
@@ -1701,24 +1701,24 @@ def IrSweet():
                     tmp = "placeholder"
                     
                 Irc.send(bytes("PONG :" + tmp + "\r\n", "UTF-8"))
-                Fig("cybersmall", "\n--PONG :" + str(tmp) + " --\n")
+                Fig("digital", "\n--PONG :" + str(tmp) + " --\n")
                 last_ping = time.time()
 
             if Buffer.find("ERROR :Closing Link:") != -1:
-                Fig("cybersmall" + "\n--TimeOut--\n\n--Restablishing Connection--\n")
+                Fig("digital" + "\n--TimeOut--\n\n--Restablishing Connection--\n")
                 return IrSweet()
 
             if Buffer.find(IrcKey.IRKonTrigger) != -1 and Konnected is False:
                 Konnected = True
-                Fig("cybersmall", "\n--Connected--\n")
+                Fig("digital", "\n--Connected--\n")
 
             if Buffer.find(IrcKey.IRIdentTrigger) != -1 and Identified is False:
                 Identified = True
-                Fig("cybersmall", "\n--Authentified--\n")
+                Fig("digital", "\n--Authentified--\n")
 
             if Identified == False and Konnected is True:
                 time.sleep(Config.Time_Sleep)
-                Fig("cybersmall", "\n--Sending CREDENTIAL--\n")
+                Fig("digital", "\n--Sending CREDENTIAL--\n")
                 Irc.send(
                     bytes(
                         "%sIDENTIFY %s\r\n" % (IrcKey.IRNICKSERV, IrcKey.IRPASS),
@@ -1757,10 +1757,10 @@ def IrSweet():
                     )
                 )
                 time.sleep(Config.Time_Sleep)
-                Fig("cybersmall", "\n--Joined--\n")
+                Fig("digital", "\n--Joined--\n")
                 Joined = True
             if (time.time() - last_ping) > threshold:
-                Fig("cybersmall", "\n--TimeOut--\n\n--Restablishing Connection--\n")
+                Fig("digital", "\n--TimeOut--\n\n--Restablishing Connection--\n")
                 return IrSweet()
 
             if Joined is True and Identified is True and Konnected is True:
@@ -1822,9 +1822,9 @@ def IrSend(content, dontprint=None):
             )
         content = content.replace("\n", " ")
         time.sleep(Config.Time_Sleep)
-        Fig("cybersmall", "\n--Sending :" + str(content) + "--\n")
+        Fig("digital", "\n--Sending :" + str(content) + "--\n")
         Irc.send(bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL, content), "UTF-8"))
-        Fig("cybersmall", "\n--Done--\n")
+        Fig("digital", "\n--Done--\n")
         return
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
@@ -1937,12 +1937,12 @@ def limits():
             print("****************************************")
             Fig("cybermedium", "CURRENT LIMITS ARE REACHED !!")
             print("")
-            Fig("cybersmall","Saving Total Calls to file")
+            Fig("digital","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybersmall","Resetting current Api_Call_Nbrs")
+            Fig("digital","Resetting current Api_Call_Nbrs")
 
-            Fig("cybersmall","Login Out")
-            Fig("cybersmall","Waiting 60 minutes")
+            Fig("digital","Login Out")
+            Fig("digital","Waiting 60 minutes")
             print("\n\n\n\n")
 
             Stat2Irc(3600)
@@ -1952,7 +1952,7 @@ def limits():
             RestABit_Trigger = False
             Wait_Hour_Trigger = False
 
-            Fig("cybersmall","Waking up ..")
+            Fig("digital","Waking up ..")
             time.sleep(Config.Time_Sleep)
             print("")
             Twitter_Api = WakeApiUp()
@@ -1963,12 +1963,12 @@ def limits():
             print("****************************************")
             Fig("cybermedium", "Mysterious Error !!!", True)
             print("")
-            Fig("cybersmall","Saving Total Calls to file")
+            Fig("digital","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybersmall","Resetting current Api_Call_Nbrs")
+            Fig("digital","Resetting current Api_Call_Nbrs")
 
-            Fig("cybersmall","Login Out")
-            Fig("cybersmall","Waiting 5 minutes")
+            Fig("digital","Login Out")
+            Fig("digital","Waiting 5 minutes")
             Stat2Irc(3600)
 
             Update_Call_Nbr = 0
@@ -1976,7 +1976,7 @@ def limits():
             Search_Limit_Trigger = False
             RestABit_Trigger = False
 
-            Fig("cybersmall","Waking up ..")
+            Fig("digital","Waking up ..")
             time.sleep(Config.Time_Sleep)
             print("")
             Twitter_Api = WakeApiUp()
@@ -1988,20 +1988,20 @@ def limits():
             print("****************************************")
 
             Fig("cybermedium", "SEARCH LIMITS ALMOST REACHED")
-            Fig("cybersmall","Saving Total Calls to file")
+            Fig("digital","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybersmall","Resetting current Api_Call_Nbrs")
+            Fig("digital","Resetting current Api_Call_Nbrs")
 
-            Fig("cybersmall","Login Out")
+            Fig("digital","Login Out")
 
-            Fig("cybersmall","Waiting 15 minutes")
+            Fig("digital","Waiting 15 minutes")
             Stat2Irc(900)
 
             Update_Call_Nbr = 0
             Api_Call_Nbr = 0
             Search_Limit_Trigger = False
 
-            Fig("cybersmall","Waking up ..")
+            Fig("digital","Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("****************************************")
@@ -2014,23 +2014,23 @@ def limits():
             print("****************************************")
 
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED")
-            Fig("cybersmall","Saving Total Calls to file")
+            Fig("digital","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybersmall","Resetting current Api_Call_Nbrs")
+            Fig("digital","Resetting current Api_Call_Nbrs")
 
-            Fig("cybersmall","Login Out")
+            Fig("digital","Login Out")
 
             if Wait_Half_Hour_Trigger != 1:
-                Fig("cybersmall","Waiting 15 minutes")
+                Fig("digital","Waiting 15 minutes")
 
                 Stat2Irc(900)
             else:
-                Fig("cybersmall","Waiting 30 minutes")
+                Fig("digital","Waiting 30 minutes")
                 Stat2Irc(1800)
 
             Update_Call_Nbr = 0
             Api_Call_Nbr = 0
-            Fig("cybersmall","Waking up ..")
+            Fig("digital","Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("****************************************")
@@ -2043,9 +2043,9 @@ def limits():
             print("****************************************")
 
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (total)")
-            Fig("cybersmall","Saving Total Calls to file")
+            Fig("digital","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybersmall","Resetting current Api_Call_Nbrs")
+            Fig("digital","Resetting current Api_Call_Nbrs")
             All_Ok_Trigger = True
             Skip_Wait_Trigger = True
 
@@ -2055,13 +2055,13 @@ def limits():
             print("****************************************")
             print("****************************************")
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (update)")
-            Fig("cybersmall","Saving Total Calls to file")
+            Fig("digital","Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("cybersmall","Resetting current Api_Call_Nbrs")
+            Fig("digital","Resetting current Api_Call_Nbrs")
             All_Ok_Trigger = True
 
         print("===================")
-        Fig("cybersmall","Ok")
+        Fig("digital","Ok")
         print("===================")
         time.sleep(Config.Time_Sleep)
     except Exception as e:
@@ -2102,15 +2102,15 @@ def Ban(tweet, sender, id, Bio):
             for mustbe in Keywords_List:
                 mustbe = re.sub(r'[^A-Za-z0-9 ]+', '', mustbe.lower())
                 if mustbe in Twist:
-                   Fig("cybersmall","Found Keywords :")
+                   Fig("digital","Found Keywords :")
                    print("Sample : ", mustbe)
-                   Fig("cybersmall", "You shall Pass")
+                   Fig("digital", "You shall Pass")
                    print("*=*=*=*=*=*=*=*=*=*")
                    UShallPass += 1
 
             if UShallPass < Config.Minimum_Keywords_In_Tweet:
 
-                Fig("cybersmall","Did not found any Keyword in tweet.")
+                Fig("digital","Did not found any Keyword in tweet.")
                 Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
                 Banned = True
             print("*=*=*=*=*=*=*=*=*=*")
@@ -2118,14 +2118,14 @@ def Ban(tweet, sender, id, Bio):
         for forbid in Banned_Word_list:
                 forbid = re.sub(r'[^A-Za-z0-9 ]+', '', forbid.lower())
                 if forbid in Twist:
-                    Fig("cybersmall","This tweet contains banned words :")
+                    Fig("digital","This tweet contains banned words :")
                     print("** %s **" % str(forbid))
                     Banned = True
                     Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
                     time.sleep(Config.Time_Sleep)
 
                 if forbid in Bio:
-                    Fig("cybersmall","This user profile contains banned words :")
+                    Fig("digital","This user profile contains banned words :")
                     print(Bio)
                     print("** %s **" % str(forbid))
                     Banned = True
@@ -2135,7 +2135,7 @@ def Ban(tweet, sender, id, Bio):
         for forbid in Banned_User_list:
                 if str(forbid.lower()) in str(sender.lower()):
 
-                    Fig("cybersmall","This tweet is from a banned user :")
+                    Fig("digital","This tweet is from a banned user :")
                     print("** %s **" % forbid)
                     Banned = True
                     Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
@@ -2143,7 +2143,7 @@ def Ban(tweet, sender, id, Bio):
 
         for forbid in Ban_Double_List:
                 if forbid in tweet:
-                    Fig("cybersmall","This tweet is Identical to a Previous tweet :")
+                    Fig("digital","This tweet is Identical to a Previous tweet :")
                     Saveid(id)
                     Banned = True
                     Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
@@ -2183,20 +2183,20 @@ def Ban(tweet, sender, id, Bio):
                         maxpos = pos + int(len(sample))
 
         if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
-                Fig("cybersmall", "Follow Friday")
+                Fig("digital", "Follow Friday")
                 Banned = True
                 Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
                 time.sleep(Config.Time_Sleep)
 
         if tweet.count("#") >= Config.Maximum_Hashtag_In_Tweet:
 
-                Fig("cybersmall", "HashTags Fever")
+                Fig("digital", "HashTags Fever")
                 Banned = True
                 Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
                 time.sleep(Config.Time_Sleep)
 
         if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
-                Fig("cybersmall", "Too many Tweets From this user ")
+                Fig("digital", "Too many Tweets From this user ")
                 Banned = True
                 Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
                 time.sleep(Config.Time_Sleep)
@@ -2207,7 +2207,7 @@ def Ban(tweet, sender, id, Bio):
 
         if Banned is False:
 
-            Fig("cybersmall", "Good To Go !!")
+            Fig("digital", "Good To Go !!")
             print("*=*=*=*=*=*=*=*=*=*")
             time.sleep(Config.Time_Sleep)
 
@@ -2216,13 +2216,13 @@ def Ban(tweet, sender, id, Bio):
             LuckyLuke = randint(0, Config.Luck_Factor)
             print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
             if LuckyLuke == 1:
-                Fig("cybersmall", "Good To Go !!")
+                Fig("digital", "Good To Go !!")
                 print("*=*=*=*=*=*=*=*=*=*")
                 time.sleep(Config.Time_Sleep)
                 Banned = False
             else:
                 print("Tweet: ", tweet)
-                Fig("cybersmall","Going To Trash")
+                Fig("digital","Going To Trash")
                 print("*=*=*=*=*=*=*=*=*=*")
     except Exception as e:
         Betterror(e,inspect.stack()[0][3])
@@ -2240,7 +2240,7 @@ def Saveid(id):
         file.close()
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
-        Fig("cybersmall", "Saved")
+        Fig("digital", "Saved")
         print("*=*=*=*=*=*=*=*=*=*")
         time.sleep(Config.Time_Sleep)
     except Exception as e:
@@ -2280,7 +2280,7 @@ def Idlist(id):
                     return True
 
         print("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
-        Fig("cybersmall", "Unknown Tweet ID")
+        Fig("digital", "Unknown Tweet ID")
         print("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
         return False
     except Exception as e:
@@ -2324,7 +2324,7 @@ def Scoring(tweet, search):
         print(
             "*************************************************************************************"
         )
-        Fig("cybersmall", "Starting Scoring function")
+        Fig("digital", "Starting Scoring function")
         print("")
 
         if "screen_name" in tweet["user"]:
@@ -2334,8 +2334,8 @@ def Scoring(tweet, search):
 
         if len(Tweext) < Config.Minimum_Tweet_Length:
             Banned = True
-            Fig("cybersmall","NOT ENOUGH TEXT")
-            Fig("cybersmall","Going To Trash")
+            Fig("digital","NOT ENOUGH TEXT")
+            Fig("digital","Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
         if Banned is False or Bouffon == 1:
             if "retweet_count" in tweet:
@@ -2346,14 +2346,14 @@ def Scoring(tweet, search):
                 LuckyLuke = randint(0, Config.Luck_Factor)
                 if tweet["retweet_count"] < Config.Minimum_Tweet_Retweet and LuckyLuke != 1:
                     Banned = True
-                    Fig("cybersmall","NOT ENOUGH RETWEET")
-                    Fig("cybersmall","Going To Trash")
+                    Fig("digital","NOT ENOUGH RETWEET")
+                    Fig("digital","Going To Trash")
                     print("*=*=*=*=*=*=*=*=*=*")
                     time.sleep(Config.Time_Sleep)
 
                 if tweet["retweet_count"] < Config.Minimum_Tweet_Retweet and LuckyLuke == 1:
-                    Fig("cybersmall","Not enough retweet")
-                    Fig("cybersmall","But lets give it a chance ...")
+                    Fig("digital","Not enough retweet")
+                    Fig("digital","But lets give it a chance ...")
                     print("*=*=*=*=*=*=*=*=*=*")
 
                 if tweet["retweet_count"] >= 1 and tweet["retweet_count"] <= 23:
@@ -2569,7 +2569,7 @@ def Scoring(tweet, search):
                     print("##")
 
                     if tweet["user"]["followers_count"] <= Config.Minimum_User_Friend:
-                        Fig("cybersmall","Not Enough Followers")
+                        Fig("digital","Not Enough Followers")
                         print(tweet["user"]["followers_count"])
                         coop = tweet["user"]["screen_name"]
                         nogo = 1
@@ -2601,7 +2601,7 @@ def Scoring(tweet, search):
                             print("Nop...")
                             Banned = True
 
-                        Fig("cybersmall","Going To Trash")
+                        Fig("digital","Going To Trash")
                         print("*=*=*=*=*=*=*=*=*=*")
                         Banned = True
                         Score = Score - 10000
@@ -2793,42 +2793,42 @@ def Scoring(tweet, search):
                             "================================================================================"
                         )
 
-                        Fig("cybersmall", "SUCH SCORE !!")
+                        Fig("digital", "SUCH SCORE !!")
 
                         figy = "Score = %i" % Score
-                        Fig("cybersmall", str(figy))
+                        Fig("digital", str(figy))
 
-                        Fig("cybersmall", "MUCH TWEET !!")
+                        Fig("digital", "MUCH TWEET !!")
 
-                        Fig("cybersmall", "Text:")
-                        Fig("cybersmall", Tweext)
+                        Fig("digital", "Text:")
+                        Fig("digital", Tweext)
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("cybersmall", "MANY RETWEET !!")
+                        Fig("digital", "MANY RETWEET !!")
 
                         figy = "Retweets = %i" % tweet["retweet_count"]
-                        Fig("cybersmall", str(figy))
+                        Fig("digital", str(figy))
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("cybersmall", "SO FAVORITE !!")
+                        Fig("digital", "SO FAVORITE !!")
 
                         figy = "Favourites = %i" % tweet["favorite_count"]
-                        Fig("cybersmall", str(figy))
+                        Fig("digital", str(figy))
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("cybersmall", "VERY TREND !!")
+                        Fig("digital", "VERY TREND !!")
 
                         figy = "Followers = %i" % tweet["user"]["followers_count"]
-                        Fig("cybersmall", str(figy))
+                        Fig("digital", str(figy))
                         time.sleep(Config.Time_Sleep)
 
-                        Fig("cybersmall", "AMAZE TWEET!!")
+                        Fig("digital", "AMAZE TWEET!!")
 
                         print(
                             "================================================================================"
                         )
                         figy = "Amaze Now !"
-                        Fig("cybersmall", str(figy))
+                        Fig("digital", str(figy))
                         link = (
                             "https://twitter.com/"
                             + str(choice(randodge).replace(" ", ""))
@@ -2856,7 +2856,7 @@ def Scoring(tweet, search):
                                     )
                                     print(Tweext)
                                     Saveid(tweet["id"])
-                                    Fig("cybersmall","Going To Trash")
+                                    Fig("digital","Going To Trash")
                                     print("*=*=*=*=*=*=*=*=*=*")
                                     Banned = True
                                     Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
@@ -2888,7 +2888,7 @@ def Scoring(tweet, search):
                                             print("Found Matched :", sample)
                                             Saveid(id)
 
-                                            Fig("cybersmall","Going To Trash")
+                                            Fig("digital","Going To Trash")
                                             print("*=*=*=*=*=*=*=*=*=*")
                                             time.sleep(Config.Time_Sleep)
 
@@ -2926,7 +2926,7 @@ def Scoring(tweet, search):
 
                                 IrSend(dodgelink)
 
-                                Fig("cybersmall","DONE")
+                                Fig("digital","DONE")
                                 Api_Call_Nbr = Api_Call_Nbr + 2
                                 Update_Call_Nbr = Update_Call_Nbr + 2
                                 Saveid(tweet["id"])
@@ -2944,7 +2944,7 @@ def Scoring(tweet, search):
                             print(
                                 "================================================================================"
                             )
-                            Fig("cybersmall"," WOW Already Sent !!")
+                            Fig("digital"," WOW Already Sent !!")
                             print(
                                 "================================================================================"
                             )
@@ -2962,12 +2962,12 @@ def Scoring(tweet, search):
 
         if Banned is False:
             if Tweet_Age.days >= Config.Maximum_Tweet_DayOld:
-                Fig("cybersmall", "WAY TOO OLD !")
+                Fig("digital", "WAY TOO OLD !")
                 if LuckyLuke != 1:
                     Banned = True
                     Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                 else:
-                    Fig("cybersmall", "But who cares !")
+                    Fig("digital", "But who cares !")
             else:
                 Score = Score + 12
         if Banned is False:
@@ -2986,12 +2986,12 @@ def Scoring(tweet, search):
                     print("Retweet created at :", RtTimeFinal)
 
                     if RtTweet_Age.days >= Config.Maximum_Retweet_DayOld:
-                        Fig("cybersmall", "WAY TOO OLD !")
+                        Fig("digital", "WAY TOO OLD !")
                         if LuckyLuke != 1:
                             Banned = True
                             Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
                         else:
-                            Fig("cybersmall", "But who cares !")
+                            Fig("digital", "But who cares !")
                 else:
                     Score = Score + 6
         if Banned is False:
@@ -3188,7 +3188,7 @@ def Scoring(tweet, search):
                             "================================================================================"
                         )
                         figy = "Score = %i" % Score
-                        Fig("cybersmall", str(figy))
+                        Fig("digital", str(figy))
                         print(
                             "================================================================================"
                         )
@@ -3221,7 +3221,7 @@ def Scoring(tweet, search):
                     print(
                         "================================================================================"
                     )
-                    Fig("cybersmall","Banned")
+                    Fig("digital","Banned")
                     print(
                         "================================================================================"
                     )
@@ -3248,7 +3248,7 @@ def Scoring(tweet, search):
                 print(
                     "================================================================================"
                 )
-                Fig("cybersmall","Already sent !")
+                Fig("digital","Already sent !")
                 print(
                     "================================================================================"
                 )
@@ -3269,7 +3269,7 @@ def Scoring(tweet, search):
             print(
                 "================================================================================"
             )
-            Fig("cybersmall","Language")
+            Fig("digital","Language")
             print(
                 "==============================================================================="
             )
@@ -3331,12 +3331,12 @@ def Search_Keyword(word):
 
                 print("##########################################")
                 print("**")
-                Fig("cybersmall", "Starting search function")
+                Fig("digital", "Starting search function")
                 print("**")
                 print("##########################################")
 
                 print("=/\/\/\/\/\/\/\/\/\/\/\=")
-                Fig("cybersmall", "Calling Limit function")
+                Fig("digital", "Calling Limit function")
                 print("=/\/\/\/\/\/\/\/\/\/\/\=")
 
                 limits()
@@ -3346,7 +3346,7 @@ def Search_Keyword(word):
                         q=word, tweet_mode="extended", count=100
                     )
                     print("##########################################")
-                    Fig("colossal", "%s Results Found !" % len(searchresults["statuses"]))
+                    Fig("cybermedium", "%s Results Found !" % len(searchresults["statuses"]))
                     # print(searchresults)
                     # time.sleep(10)
                     print("##########################################")
@@ -3384,7 +3384,7 @@ def Search_Keyword(word):
 
                 print("##########################################")
                 print("**")
-                Fig("cybersmall", "Search function Terminated")
+                Fig("digital", "Search function Terminated")
                 print("**")
                 print("##########################################")
                 try:
@@ -3403,7 +3403,7 @@ def Search_Keyword(word):
                     else:
                         print("****************************************")
 
-                        Fig("cybersmall", "No Result")
+                        Fig("digital", "No Result")
 
                         print("????????????????????????????")
                         print("Sorry not enough results for : ", word)
@@ -3411,7 +3411,7 @@ def Search_Keyword(word):
                         print("????????????????????????????")
 
                         print("****************************************")
-                        Fig("cybersmall", "Saving unwanted search to no.result")
+                        Fig("digital", "Saving unwanted search to no.result")
                         time.sleep(Config.Time_Sleep)
                         checkfile(Pth_NoResult)
 
@@ -3442,7 +3442,7 @@ def RedQueen():
             if GOGOGO_Trigger == True:
                 break
 
-        Fig("cybersmall", "GOGOGO!", True)
+        Fig("digital", "GOGOGO!", True)
         time.sleep(Config.Time_Sleep)
 
         loadvars()
@@ -3450,7 +3450,7 @@ def RedQueen():
         CheckDouble()
         time.sleep(Config.Time_Sleep)
 
-        Fig("cybersmall", "Loading Emoticon", True)
+        Fig("digital", "Loading Emoticon", True)
 
         time.sleep(Config.Time_Sleep)
         for use_aliases, group in (
@@ -3463,13 +3463,13 @@ def RedQueen():
                 Emoji_List.append(emj)
         print(Emoji_List)
 
-        Fig("cybersmall","Done")
+        Fig("digital","Done")
         time.sleep(Config.Time_Sleep)
-        Fig("cybersmall", "Calling Flush function", True)
+        Fig("digital", "Calling Flush function", True)
 
         flushtmp()
 
-        Fig("cybersmall", "Calling Search function", True)
+        Fig("digital", "Calling Search function", True)
 
         time.sleep(Config.Time_Sleep)
 
@@ -3500,13 +3500,13 @@ def RedQueen():
             )
             IrSend(status)
             print("")
-            Fig("cybersmall", 'Status sent !"')
+            Fig("digital", 'Status sent !"')
 
         except Exception as e:
             Betterror(e,inspect.stack()[0][3])
         time.sleep(Config.Time_Sleep)
 
-        Fig("cybersmall","Check Last Menu started", True)
+        Fig("digital","Check Last Menu started", True)
 
         checkmenu(Keywords_List)
 
@@ -3516,7 +3516,7 @@ def RedQueen():
             print("**")
 
             print("==")
-            Fig("cybersmall", "New Menu for today !", True)
+            Fig("digital", "New Menu for today !", True)
             print("==")
 
             print(Keywords_List[:rndwords])
@@ -3537,7 +3537,7 @@ def RedQueen():
             time.sleep(Config.Time_Sleep)
             if MasterStart_Trigger is True:
                 figy = "Starting Redqueen"
-                Fig("cybersmall", figy)
+                Fig("digital", figy)
                 break
 
         for key in Keywords_List[:rndwords]:
@@ -3548,7 +3548,7 @@ def RedQueen():
                     return IrSend("Redqueen has been stopped")
                 tmpcnt = tmpcnt + 1
                 figy = "Searching : %s %i/%i" % (key, tmpcnt, rndwords)
-                Fig("cybersmall", figy)
+                Fig("digital", figy)
                 time.sleep(Config.Time_Sleep)
                 Search_Keyword(key)
             else:
@@ -3561,15 +3561,15 @@ def RedQueen():
                         break
                 tmpcnt = tmpcnt + 1
                 figy = "Searching : %s %i/%i" % (key, tmpcnt, rndwords)
-                Fig("cybersmall", figy)
+                Fig("digital", figy)
                 time.sleep(Config.Time_Sleep)
                 Search_Keyword(key)
 
-        Fig("cybersmall", "All Done !", True)
+        Fig("digital", "All Done !", True)
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("cybersmall", "Calling Save Search Terms Function", True)
+        Fig("digital", "Calling Save Search Terms Function", True)
 
         time.sleep(Config.Time_Sleep)
         lastmeal(Keywords_List[:rndwords])
@@ -3596,13 +3596,13 @@ def RedQueen():
 
             IrSend(dbrief)
 
-            Fig("cybersmall", "Status sent !")
+            Fig("digital", "Status sent !")
 
         except Exception as e:
             Betterror(e,inspect.stack()[0][3])
             time.sleep(Config.Time_Sleep)
 
-        Fig("cybersmall", "Calling Saving call function", True)
+        Fig("digital", "Calling Saving call function", True)
 
         SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
 
@@ -3612,7 +3612,7 @@ def RedQueen():
         print(
             "##############################################################################################################"
         )
-        Fig("cybersmall", "The End")
+        Fig("digital", "The End")
         print(
             "##############################################################################################################"
         )
@@ -3658,11 +3658,11 @@ if __name__ == "__main__":
 
         WakeApiUp()
 
-        Fig("cybersmall","Launching Blueking on IRC")
+        Fig("digital","Launching Blueking on IRC")
         time.sleep(Config.Time_Sleep)
 
         Fig("cybermedium", "IrSweet()")
-        Fig("cybersmall","Waiting for idle mode")
+        Fig("digital","Waiting for idle mode")
         time.sleep(Config.Time_Sleep)
 
         if Config.IRC_CONNECT is True:
