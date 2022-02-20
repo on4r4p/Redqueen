@@ -221,7 +221,7 @@ class Redqueen_Server:
 
     @cherrypy.expose
     def redqueen_retweet(self,rid=None):
-        if rid.isnumeric():
+        if rid != None and rid.isnumeric():
             print("About to Retweet : ",rid)
 
             try:
@@ -240,7 +240,7 @@ class Redqueen_Server:
 
     @cherrypy.expose
     def redqueen_favorite(self,fid=None):
-        if fid.isnumeric():
+        if fid != None and fid.isnumeric():
             print("About to Fav : ",fid)
 
             try:
@@ -337,8 +337,10 @@ def Extract_Tweet_Data(tweet):
 #       print("Tweet_Retweet_Counter = ",Tweet_Retweet_Counter)
 #       print("Tweet_Media = ",Tweet_Media)
 #       print("Tweet_Url = ",Tweet_Url)
-
-       Extracted_Datas.append((Tweet_Origin_Link,Tweet_Id,Tweet_Timestamp,Tweet_Author,Tweet_Profile_Author,Tweet_Author_Link,Tweet_Text,Tweet_Rt_Author,Tweet_Rt_Author_Link,Tweet_Favorite_Counter,Tweet_Retweet_Counter,Tweet_Media,Tweet_Url))
+       Tweet_tuple = (Tweet_Origin_Link,Tweet_Id,Tweet_Timestamp,Tweet_Author,Tweet_Profile_Author,Tweet_Author_Link,
+Tweet_Text,Tweet_Rt_Author,Tweet_Rt_Author_Link,Tweet_Favorite_Counter,Tweet_Retweet_Counter,Tweet_Media,Tweet_Url))
+       if Tweet_tuple not in Extracted_Datas:
+           Extracted_Datas.append((Tweet_tuple)
 
 def GenFeed():
     Tweets_Feed = []
@@ -3177,6 +3179,8 @@ def Scoring(tweet, search):
                         IrSend(Format_To_Irc)
                         time.sleep(Config.Time_Sleep)
                         SaveDouble(Tweext)
+                        if Config.WEB_SERVER is True:
+                            Extract_Tweet_Data(tweet)
 
                     else:
                         print("")
