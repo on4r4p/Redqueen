@@ -337,8 +337,7 @@ def Extract_Tweet_Data(tweet):
 #       print("Tweet_Retweet_Counter = ",Tweet_Retweet_Counter)
 #       print("Tweet_Media = ",Tweet_Media)
 #       print("Tweet_Url = ",Tweet_Url)
-       Tweet_tuple = (Tweet_Origin_Link,Tweet_Id,Tweet_Timestamp,Tweet_Author,Tweet_Profile_Author,Tweet_Author_Link,
-Tweet_Text,Tweet_Rt_Author,Tweet_Rt_Author_Link,Tweet_Favorite_Counter,Tweet_Retweet_Counter,Tweet_Media,Tweet_Url))
+       Tweet_tuple = (Tweet_Origin_Link,Tweet_Id,Tweet_Timestamp,Tweet_Author,Tweet_Profile_Author,Tweet_Author_Link,Tweet_Text,Tweet_Rt_Author,Tweet_Rt_Author_Link,Tweet_Favorite_Counter,Tweet_Retweet_Counter,Tweet_Media,Tweet_Url))
        if Tweet_tuple not in Extracted_Datas:
            Extracted_Datas.append((Tweet_tuple)
 
