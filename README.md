@@ -92,16 +92,28 @@ Some cmds can be send via private message in Irc : /msg botname !help
 
 
 ## Installation
+
 pip3 install feedparser==6.0.8
+
 pip3 install CherryPy==18.6.1
+
 pip3 install pyfiglet==0.8.post1
+
 pip3 install pbwrap==1.3.1
+
 pip3 install emoji==0.5.0
+
 pip3 install twython==3.3.0
+
+
 
 Need: Twitter OA1/OA2 with read/write access
 
+
 Edit:TwitterApiKeys.py,PastebinApiKey.py,IrcKey.py and Config.py
+
 Fill:Data/Bannedpeople.Rq ,Bannedword.Rq ,Following.Rq ,Friends.Rq ,Keywords.Rq etc..
+
+
 
 Then Run the beast .
