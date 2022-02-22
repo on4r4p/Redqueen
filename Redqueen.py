@@ -593,8 +593,7 @@ def loadvars():
     global Extract_Tweet_Data
     global NoResult_List
     global Emoji_List
-
-    Checkfiles = [Pth_TotalApi_Call,Pth_Update_Call,Pth_Request_Log,Pth_Error_Log,Pth_Current_Session,Pth_Rq_Server_Save]
+    Checkfiles = [Pth_TotalApi_Call,Pth_Update_Call,Pth_Request_Log,Pth_Error_Log,Pth_Current_Session,Pth_Rq_Server_Save,Pth_Tweets_Sent]
 
     for cf in Checkfiles:
         if os.path.isfile(cf) is False:
@@ -2318,7 +2317,7 @@ def Scoring(tweet, search):
                         print("##")
                         print("##")
 
-                        if coop in Following_List:
+                        if "@"+str(coop) in Following_List:
                             print("##")
                             print(
                                 "This tweet is from a known user : ",
@@ -2327,7 +2326,7 @@ def Scoring(tweet, search):
                             print("##")
                             Score = Score + 123
                             nogo = 0
-                        if coop in Friends_List:
+                        if "@"+str(coop) in Friends_List:
                             print("##")
                             print(
                                 "This tweet is from a friend : ",
@@ -2447,7 +2446,7 @@ def Scoring(tweet, search):
                             )
                             print("##")
 
-                            if coop in Following_List:
+                            if "@"+str(coop) in Following_List:
                                 print("##")
                                 print(
                                     "This tweet is from a known user : ",
@@ -2456,7 +2455,7 @@ def Scoring(tweet, search):
                                 print("##")
                                 Score = Score + 123
                                 nogo = 0
-                            if coop in Friends_List:
+                            if "@"+str(coop) in Friends_List:
                                 print("##")
                                 print(
                                     "This tweet is from a friend : ",
@@ -2489,7 +2488,7 @@ def Scoring(tweet, search):
                         )
                         print("##")
 
-                        if coop in Following_List:
+                        if "@"+str(coop) in Following_List:
                             print("##")
                             print(
                                 "This tweet is from a known user : ",
@@ -2498,7 +2497,7 @@ def Scoring(tweet, search):
                             print("##")
 
                             nogo = 0
-                        if coop in Friends_List:
+                        if "@"+str(coop) in Friends_List:
                             print("##")
                             print(
                                 "This tweet is from a friend : ",
@@ -2655,7 +2654,7 @@ def Scoring(tweet, search):
                     print("This tweet is from ", coop)
                     print("##")
 
-                    if coop in Following_List:
+                    if "@"+str(coop) in Following_List:
                         print("##")
                         print(
                             "This tweet is from a known user : ",
@@ -2664,7 +2663,7 @@ def Scoring(tweet, search):
                         print("##")
                         Score = Score + 10
 
-                    if coop in Friends_List:
+                    if "@"+str(coop) in Friends_List:
                         print("##")
                         print(
                             "This tweet is from a friend : ", tweet["user"]["screen_name"]
@@ -3260,20 +3259,23 @@ def Search_Keyword(word):
 
                     Twitter_Api = WakeApiUp()
                     if word.startswith("@"):
+                        searchresults = Twitter_Api.get_user_timeline(screen_name=word,count=100,tweet_mode ="extended")
+                        Search_nbr = len(searchresults)
+                        Search_obj = searchresults
+                    else:
                         searchresults = Twitter_Api.search(
                         q=word, tweet_mode="extended", count=100
                         )
-                    else:
-                        searchresults = Twitter_Api.get_user_timeline(screen_name=word,count=100,tweet_mode ="extended")
-                    print(searchresults)
-
-
+                        Search_nbr = len(searchresults["statuses"])
+                        Search_obj = searchresults["statuses"]
 
                     print("##########################################")
-                    Fig("cybermedium", "%s Results Found !" % len(searchresults["statuses"]))
+
+                    Fig("cybermedium", "%s Results Found !" % Search_nbr)
                     # print(searchresults)
                     # time.sleep(10)
                     print("##########################################")
+
                     Api_Call_Nbr = Api_Call_Nbr + 1
                     Search_ApiCallLeft_Nbr = Search_ApiCallLeft_Nbr - 1
                     time.sleep(Config.Time_Sleep)
@@ -3283,20 +3285,9 @@ def Search_Keyword(word):
                     searchresults = ""
                     Betterror(e,inspect.stack()[0][3])
                     Api_Call_Nbr = Api_Call_Nbr + 1
-                    print("Error search1:", e)
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                    print("Error Sorry im trying next one")
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
-
-                print("##########################################")
-                print("**")
-                Fig("digital", "Search function Terminated")
-                print("**")
-                print("##########################################")
                 try:
-                    if len(searchresults["statuses"]) > Config.Minimum_Search_Result:
-                        for item in searchresults["statuses"]:
+                    if Search_nbr > Config.Minimum_Search_Result:
+                        for item in Search_obj:
                             time.sleep(Config.Time_Sleep)
                             if MasterPause_Trigger is False:
                                 Scoring(item, Search_ApiCallLeft_Nbr)
@@ -3311,11 +3302,6 @@ def Search_Keyword(word):
                         print("****************************************")
 
                         Fig("digital", "No Result")
-
-                        print("????????????????????????????")
-                        print("Sorry not enough results for : ", word)
-                        print("Maybe you should consider changing it ")
-                        print("????????????????????????????")
 
                         print("****************************************")
                         Fig("digital", "Saving unwanted search to no.result")
