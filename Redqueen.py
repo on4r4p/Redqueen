@@ -1505,7 +1505,7 @@ def SaveTotalCall(call, update):
         global Total_Update_Call_Nbr
 
         try:
-            lastitem = Cleanfile(Pth_TotalApi_Call)[-1]
+            lastitem = Cleanfile(Pth_TotalApi_Call)[0]
         except Exception as e:
             Betterror(e,inspect.stack()[0][3])
             lastitem = 0
@@ -1514,22 +1514,22 @@ def SaveTotalCall(call, update):
         Total_Call_Nbr = int(lastitem) + int(call)
         Fig("digital", "Saving new Total : " + str(Total_Call_Nbr))
         print("==")
-        with open(Pth_TotalApi_Call,"a") as file:
-             file.write(str(Total_Call_Nbr)+"\n")
+        with open(Pth_TotalApi_Call,"w") as file:
+             file.write(str(Total_Call_Nbr))
         time.sleep(Config.Time_Sleep)
 
         try:
-            lastitem = Cleanfile(Pth_Update_Call)[-1]
+            lastitem = Cleanfile(Pth_Update_Call)[0]
         except Exception as e:
             Betterror(e,inspect.stack()[0][3])
-            lastitem2 = 0
+            lastitem = 0
         print("==")
         print("Last Update Total saved : ", lastitem)
         Total_Call_Nbr = int(lastitem) + int(call)
         print("Saving new Update Total : ", Total_Call_Nbr)
         print("==")
-        with open(Pth_Update_Call,"a") as file:
-             file.write(Total_Call_Nbr+"\n")
+        with open(Pth_Update_Call,"w") as file:
+             file.write(str(Total_Call_Nbr))
         time.sleep(Config.Time_Sleep)
         Fig("digital", "Done Saving Calls")
 
