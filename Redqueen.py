@@ -3548,7 +3548,7 @@ def RedQueen():
         Fig("digital", "Check Last Menu started", True)
 
         tmpcnt = 0
-        if IRC_CONNECT is True:
+        if Config.IRC_CONNECT is True:
             if MasterStart_Trigger is False:
                 print("**Waiting for !start command from Irc.**")
                 IrSend("Idle mode..")
