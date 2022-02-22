@@ -5,9 +5,10 @@ from random import randint, choice, shuffle
 from twython import Twython
 from pyfiglet import Figlet
 from threading import Thread
-import re, socket, time, sys, os, inspect,cherrypy, string, datetime, emoji, feedparser , csv
-import Config, IrcKey,PastebinApiKey
+import re, socket, time, sys, os, inspect, cherrypy, string, datetime, emoji, feedparser, csv
+import Config, IrcKey, PastebinApiKey
 import TwitterApiKeys as TAK
+
 # Some Vars
 
 
@@ -174,38 +175,29 @@ Template_Header = """<!DOCTYPE html>
 Template_Footer = "</body></html>"
 
 Cherryconf = {
-        '/': {
-            'tools.sessions.on': True,
-            'tools.staticdir.root': Pth_Web+"WebTemplate"
-        },
-        '/favicon.ico':{
-        'tools.staticfile.on' : True,
-        'tools.staticfile.filename' : Pth_Web+'WebTemplate/img/Rdfavicon.ico'},
-        '/css': {
-        'tools.staticdir.on': True,
-        'tools.staticdir.dir': './css'},
-        '/img': {
-        'tools.staticdir.on': True,
-        'tools.staticdir.dir': './img'},
-        'global': {
-        'environment': 'production',
-        'log.screen': True,
-        'server.socket_host': '0.0.0.0',
-        'server.socket_port': 8080,
-        'engine.autoreload_on': True,
-       
-    }}
+    "/": {"tools.sessions.on": True, "tools.staticdir.root": Pth_Web + "WebTemplate"},
+    "/favicon.ico": {
+        "tools.staticfile.on": True,
+        "tools.staticfile.filename": Pth_Web + "WebTemplate/img/Rdfavicon.ico",
+    },
+    "/css": {"tools.staticdir.on": True, "tools.staticdir.dir": "./css"},
+    "/img": {"tools.staticdir.on": True, "tools.staticdir.dir": "./img"},
+    "global": {
+        "environment": "production",
+        "log.screen": True,
+        "server.socket_host": "0.0.0.0",
+        "server.socket_port": 8080,
+        "engine.autoreload_on": True,
+    },
+}
 
 # Some Defs
 
 
-
 class Redqueen_Server:
-
-
     def header(self):
         css_box = GenCss()
-        return str(Template_Header)%css_box
+        return str(Template_Header) % css_box
 
     def footer(self):
         return Template_Footer
@@ -222,180 +214,274 @@ class Redqueen_Server:
         yield self.footer()
 
     @cherrypy.expose
-    def redqueen_retweet(self,rid=None):
+    def redqueen_retweet(self, rid=None):
         if rid != None and rid.isnumeric():
-            print("About to Retweet : ",rid)
+            print("About to Retweet : ", rid)
 
             try:
-               Twitter_CherryApi = Twython(
+                Twitter_CherryApi = Twython(
                     TAK.oa1_app_key,
                     TAK.oa1_app_secret,
                     TAK.oa1_oauth_token,
                     TAK.oa1_oauth_token_secret,
-                    )
-               Twitter_CherryApi.retweet(id=rid)
+                )
+                Twitter_CherryApi.retweet(id=rid)
             except Exception as e:
-               Betterror(e,inspect.stack()[0][3])
+                Betterror(e, inspect.stack()[0][3])
         else:
-           print("not num:",rid)
-        return(self.index())
+            print("not num:", rid)
+        return self.index()
 
     @cherrypy.expose
-    def redqueen_favorite(self,fid=None):
+    def redqueen_favorite(self, fid=None):
         if fid != None and fid.isnumeric():
-            print("About to Fav : ",fid)
+            print("About to Fav : ", fid)
 
             try:
-               Twitter_CherryApi = Twython(
+                Twitter_CherryApi = Twython(
                     TAK.oa1_app_key,
                     TAK.oa1_app_secret,
                     TAK.oa1_oauth_token,
                     TAK.oa1_oauth_token_secret,
-                    )
-               Twitter_CherryApi.create_favorite(id=fid)
+                )
+                Twitter_CherryApi.create_favorite(id=fid)
             except Exception as e:
-               Betterror(e,inspect.stack()[0][3])
+                Betterror(e, inspect.stack()[0][3])
         else:
-           print("not num:",fid)
-        return(self.index())
-
+            print("not num:", fid)
+        return self.index()
 
 
 def Extract_Tweet_Data(tweet):
-       global Extracted_Datas
-#       print("Tweet:\n",tweet)
-#       print()
-##
-       if 'retweeted_status' in tweet:
+    global Extracted_Datas
+    #       print("Tweet:\n",tweet)
+    #       print()
+    ##
+    if "retweeted_status" in tweet:
 
+        Tweet_Id = str(tweet["retweeted_status"]["id"])
+        Tweet_Timestamp = tweet["retweeted_status"]["created_at"]
+        Tweet_Author = tweet["retweeted_status"]["user"]["screen_name"]
+        Tweet_Author_Link = "https://twitter.com/" + Tweet_Author
+        Tweet_Profile_Author = tweet["retweeted_status"]["user"]["profile_image_url"]
+        Tweet_Favorite_Counter = tweet["retweeted_status"]["favorite_count"]
+        Tweet_Retweet_Counter = tweet["retweeted_status"]["retweet_count"]
+        Tweet_Origin_Link = (
+            "https://twitter.com/" + str(Tweet_Author) + "/status/" + str(Tweet_Id)
+        )
+        Tweet_Rt_Author = tweet["user"]["screen_name"]
+        Tweet_Rt_Author_Link = "https://twitter.com/" + Tweet_Rt_Author
 
-          Tweet_Id = str(tweet["retweeted_status"]["id"])
-          Tweet_Timestamp = tweet["retweeted_status"]['created_at']
-          Tweet_Author = tweet['retweeted_status']['user']['screen_name']
-          Tweet_Author_Link = "https://twitter.com/"+Tweet_Author
-          Tweet_Profile_Author = tweet['retweeted_status']['user']['profile_image_url']
-          Tweet_Favorite_Counter = tweet['retweeted_status']['favorite_count']
-          Tweet_Retweet_Counter = tweet['retweeted_status']['retweet_count']
-          Tweet_Origin_Link = (
-                            "https://twitter.com/"
-                            + str(Tweet_Author)
-                            + "/status/"
-                            + str(Tweet_Id)
-                        )
-          Tweet_Rt_Author = tweet['user']['screen_name']
-          Tweet_Rt_Author_Link = "https://twitter.com/"+Tweet_Rt_Author
+        Tweet_Url = []
+        Tweet_Media = []
+        if "media" in tweet["retweeted_status"]["entities"]:
+            for media in tweet["retweeted_status"]["entities"]["media"]:
+                Tweet_Media.append(media["media_url"])
+        if "urls" in tweet["retweeted_status"]["entities"]:
+            for url in tweet["retweeted_status"]["entities"]["urls"]:
+                Tweet_Url.append(url["expanded_url"])
 
-          Tweet_Url = []
-          Tweet_Media = []
-          if "media" in tweet['retweeted_status']["entities"]:
-              for media in tweet['retweeted_status']["entities"]["media"]:
-                 Tweet_Media.append(media["media_url"])
-          if "urls" in tweet['retweeted_status']["entities"]:
-              for url in tweet['retweeted_status']["entities"]["urls"]:
-                 Tweet_Url.append(url['expanded_url'])
+    else:
 
+        Tweet_Id = str(tweet["id"])
+        Tweet_Timestamp = tweet["created_at"]
+        Tweet_Author = tweet["user"]["screen_name"]
+        Tweet_Author_Link = "https://twitter.com/" + Tweet_Author
+        Tweet_Profile_Author = tweet["user"]["profile_image_url"]
+        Tweet_Favorite_Counter = tweet["favorite_count"]
+        Tweet_Retweet_Counter = tweet["retweet_count"]
 
-       else:
+        Tweet_Origin_Link = (
+            "https://twitter.com/" + str(Tweet_Author) + "/status/" + str(Tweet_Id)
+        )
+        Tweet_Rt_Author = ""
+        Tweet_Rt_Author_Link = ""
 
-          Tweet_Id = str(tweet["id"])
-          Tweet_Timestamp = tweet['created_at']
-          Tweet_Author = tweet['user']['screen_name']
-          Tweet_Author_Link = "https://twitter.com/"+Tweet_Author
-          Tweet_Profile_Author = tweet['user']['profile_image_url']
-          Tweet_Favorite_Counter = tweet['favorite_count']
-          Tweet_Retweet_Counter = tweet['retweet_count']
+        Tweet_Url = []
+        Tweet_Media = []
+        if "media" in tweet["entities"]:
+            for media in tweet["entities"]["media"]:
+                Tweet_Media.append(media["media_url"])
+        if "urls" in tweet["entities"]:
+            for url in tweet["entities"]["urls"]:
+                Tweet_Url.append(url["expanded_url"])
+    ##
+    if "full_text" in tweet:
+        Tweet_Text = tweet["full_text"]
+    else:
+        Tweet_Text = tweet["text"]
 
-          Tweet_Origin_Link = (
-                            "https://twitter.com/"
-                            + str(Tweet_Author)
-                            + "/status/"
-                            + str(Tweet_Id)
-                        )
-          Tweet_Rt_Author = ""
-          Tweet_Rt_Author_Link = ""
+    #       print("Tweet_Origin_Link=",Tweet_Origin_Link)
+    #       print("Tweet_Id = ",Tweet_Id)
+    #       print("Tweet_Timestamp = ",Tweet_Timestamp)
+    #       print("Tweet_Author = ",Tweet_Author)
+    #       print("Tweet_Profile_Author =",Tweet_Profile_Author)
+    #       print("Tweet_Author_Link=",Tweet_Author_Link)
+    #       print("Tweet_Text=",Tweet_Text)
+    #       print("Tweet_Rt_Author=",Tweet_Rt_Author)
+    #       print("Tweet_Rt_Author_Link=",Tweet_Rt_Author_Link)
+    #       print("Tweet_Favorite_Counter = ",Tweet_Favorite_Counter)
+    #       print("Tweet_Retweet_Counter = ",Tweet_Retweet_Counter)
+    #       print("Tweet_Media = ",Tweet_Media)
+    #       print("Tweet_Url = ",Tweet_Url)
+    Tweet_tuple = (
+        Tweet_Origin_Link,
+        Tweet_Id,
+        Tweet_Timestamp,
+        Tweet_Author,
+        Tweet_Profile_Author,
+        Tweet_Author_Link,
+        Tweet_Text,
+        Tweet_Rt_Author,
+        Tweet_Rt_Author_Link,
+        Tweet_Favorite_Counter,
+        Tweet_Retweet_Counter,
+        Tweet_Media,
+        Tweet_Url,
+    )
 
-          Tweet_Url = []
-          Tweet_Media = []
-          if "media" in tweet["entities"]:
-              for media in tweet["entities"]["media"]:
-                 Tweet_Media.append(media["media_url"])
-          if "urls" in tweet["entities"]:
-              for url in tweet["entities"]["urls"]:
-                 Tweet_Url.append(url['expanded_url'])
-##
-       if "full_text" in tweet:
-          Tweet_Text = tweet["full_text"]
-       else:
-          Tweet_Text = tweet["text"]
-
-#       print("Tweet_Origin_Link=",Tweet_Origin_Link)
-#       print("Tweet_Id = ",Tweet_Id)
-#       print("Tweet_Timestamp = ",Tweet_Timestamp)
-#       print("Tweet_Author = ",Tweet_Author)
-#       print("Tweet_Profile_Author =",Tweet_Profile_Author)
-#       print("Tweet_Author_Link=",Tweet_Author_Link)
-#       print("Tweet_Text=",Tweet_Text)
-#       print("Tweet_Rt_Author=",Tweet_Rt_Author)
-#       print("Tweet_Rt_Author_Link=",Tweet_Rt_Author_Link)
-#       print("Tweet_Favorite_Counter = ",Tweet_Favorite_Counter)
-#       print("Tweet_Retweet_Counter = ",Tweet_Retweet_Counter)
-#       print("Tweet_Media = ",Tweet_Media)
-#       print("Tweet_Url = ",Tweet_Url)
-       Tweet_tuple = (Tweet_Origin_Link,Tweet_Id,Tweet_Timestamp,Tweet_Author,Tweet_Profile_Author,Tweet_Author_Link,Tweet_Text,Tweet_Rt_Author,Tweet_Rt_Author_Link,Tweet_Favorite_Counter,Tweet_Retweet_Counter,Tweet_Media,Tweet_Url)
-
-       if Tweet_Text not in Ban_Double_List:
-           Extracted_Datas.append(Tweet_tuple)
-           with open(Pth_Rq_Server_Save,"w") as file:
-                writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                writer.writerow(["Tweet_Origin_Link,Tweet_Id","Tweet_Timestamp","Tweet_Author","Tweet_Profile_Author","Tweet_Author_Link","Tweet_Text","Tweet_Rt_Author","Tweet_Rt_Author_Link","Tweet_Favorite_Counter","Tweet_Retweet_Counter","Tweet_Media","Tweet_Url"])
-                for ed in Extracted_Datas: 
-                      writer.writerow([ed[0],ed[1],ed[2],ed[3],ed[4],ed[5],ed[6],ed[7],ed[8],ed[9],ed[10],ed[11],ed[12]])
+    if Tweet_Text not in Ban_Double_List:
+        Extracted_Datas.append(Tweet_tuple)
+        with open(Pth_Rq_Server_Save, "w") as file:
+            writer = csv.writer(
+                file, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL
+            )
+            writer.writerow(
+                [
+                    "Tweet_Origin_Link",
+                    "Tweet_Id",
+                    "Tweet_Timestamp",
+                    "Tweet_Author",
+                    "Tweet_Profile_Author",
+                    "Tweet_Author_Link",
+                    "Tweet_Text",
+                    "Tweet_Rt_Author",
+                    "Tweet_Rt_Author_Link",
+                    "Tweet_Favorite_Counter",
+                    "Tweet_Retweet_Counter",
+                    "Tweet_Media",
+                    "Tweet_Url",
+                ]
+            )
+            for ed in Extracted_Datas:
+                writer.writerow(
+                    [
+                        ed[0],
+                        ed[1],
+                        ed[2],
+                        ed[3],
+                        ed[4],
+                        ed[5],
+                        ed[6],
+                        ed[7],
+                        ed[8],
+                        ed[9],
+                        ed[10],
+                        ed[11],
+                        ed[12],
+                    ]
+                )
 
 
 def GenFeed():
     Tweets_Feed = []
-    for nbr,D in enumerate(Extracted_Datas):
+    for nbr, D in enumerate(Extracted_Datas):
 
-        Template_Tweet = """    <div class="center-feeds-container">
-      <div class="profile-picture"> <img src="%s" class="image">"""%(str(D[4]))+""" </div>
+        Template_Tweet = (
+            """    <div class="center-feeds-container">
+      <div class="profile-picture"> <img src="%s" class="image">"""
+            % (str(D[4]))
+            + """ </div>
       <div class="center-feeds">
         <div class="main-tweet">
           <div class="on-actual-tweet">
             <div class="handle">
-              <div class="handu"> <span>"""+"""<a href="%s">%s</a>"""%(D[5],str(D[3]))+"</span>"
-        if len(D[7]) >0:
-            Template_Tweet += """ Rt by <a href="%s">%s</a> %s</div>"""%(D[8],D[7],D[2])
+              <div class="handu"> <span>"""
+            + """<a href="%s">%s</a>""" % (D[5], str(D[3]))
+            + "</span>"
+        )
+        if len(D[7]) > 0:
+            Template_Tweet += """ Rt by <a href="%s">%s</a> %s</div>""" % (
+                D[8],
+                D[7],
+                D[2],
+            )
         else:
-            Template_Tweet += "  %s</div>"%(D[2])
-        Template_Tweet += """
+            Template_Tweet += "  %s</div>" % (D[2])
+        Template_Tweet += (
+            """
             </div>
           </div>
-          <div class="actual-tweet"> """ + str(D[6]) + """<a href="%s"> Tweet link</a>\n"""%(D[0])
-        if len(D[12]) >0:
-           for link in D[12]:
-               Template_Tweet += """<a href="%s">%s</a>"""%(link,link)
-        Template_Tweet += """ </div>
+          <div class="actual-tweet"> """
+            + str(D[6])
+            + """<a href="%s"> Tweet link</a>\n""" % (D[0])
+        )
+
+        if type(D[12]) == list:
+            if len(D[12]) > 0:
+                for link in D[12]:
+                    Template_Tweet += """<a href="%s">%s</a>""" % (link, link)
+            Template_Tweet += """ </div>
         </div>"""
-        if len(D[11]) > 0:
-            for media in D[11]:
-                Template_Tweet += """
-        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" >"""%(media)
-            Template_Tweet += "</div>"
-        Template_Tweet +="""
+        elif type(D[12]) == str:
+            frmt = D[12].replace("[", "").replace("]", "")
+            frmt = frmt.split(",")
+            if len(frmt) > 0:
+                for url in frmt:
+                    if url.startswith("'") and url.endswith("'"):
+                        url = url[1:]
+                        url = url[:-1]
+                        Template_Tweet += """<a href="%s">%s</a>""" % (link, link)
+            Template_Tweet += """ </div>
+        </div>"""
+
+        if type(D[11]) == list:
+            if len(D[11]) > 0:
+                for media in D[11]:
+                    Template_Tweet += """
+        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" >""" % (
+                        media
+                    )
+                Template_Tweet += "</div>"
+        elif type(D[11]) == str:
+            frmt = D[11].replace("[", "").replace("]", "")
+            frmt = frmt.split(",")
+            if len(frmt) > 0:
+                for media in frmt:
+                    if media.startswith("'") and media.endswith("'"):
+                        media = media[1:]
+                        media = media[:-1]
+                        Template_Tweet += """
+        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" >""" % (
+                            media
+                        )
+                Template_Tweet += "</div>"
+
+        Template_Tweet += (
+            """
         <div class="under-main-tweet">
-            <div class="retweet%s"><form action="redqueen_retweet" method="POST"><input id="retweet%s" type="checkbox" name="rid" value="%s" onclick="submit()"><label class="btn" for="retweet%s"><i class="fas fa-retweet"></i> %s</label></form></div>"""%(nbr,nbr,D[1],nbr,D[10])+"""
-            <div class="like%s"><form action="redqueen_favorite" method="POST"><input id="like%s" type="checkbox" name="fid" value="%s" onclick="submit()"><label class="btn" for="like%s"><i class="far fa-heart"></i> %s</label></form></div>"""%(nbr,nbr,D[1],nbr,D[9])+"""
+            <div class="retweet%s"><form action="redqueen_retweet" method="POST"><input id="retweet%s" type="checkbox" name="rid" value="%s" onclick="submit()"><label class="btn" for="retweet%s"><i class="fas fa-retweet"></i> %s</label></form></div>"""
+            % (nbr, nbr, D[1], nbr, D[10])
+            + """
+            <div class="like%s"><form action="redqueen_favorite" method="POST"><input id="like%s" type="checkbox" name="fid" value="%s" onclick="submit()"><label class="btn" for="like%s"><i class="far fa-heart"></i> %s</label></form></div>"""
+            % (nbr, nbr, D[1], nbr, D[9])
+            + """
         </div>
       </div>
     </div>"""
+        )
         Tweets_Feed.append(Template_Tweet)
-    return(Tweets_Feed)
+    return Tweets_Feed
+
 
 def GenCss():
-          
-      css = ""
-      for i in range(0,len(Extracted_Datas)):
-          css += ".comment"+str(i)+""" {
+
+    css = ""
+    for i in range(0, len(Extracted_Datas)):
+        css += (
+            ".comment"
+            + str(i)
+            + """ {
   color: #9eaab3;
   float: left;
   margin-top: 12.5px;
@@ -403,7 +489,9 @@ def GenCss():
   width: 25px;
 }
 
-.comment"""+str(i)+""":hover { 
+.comment"""
+            + str(i)
+            + """:hover { 
     color: skyblue;
     float: left;
     margin-top: 12.5px;
@@ -412,11 +500,15 @@ def GenCss():
 }
 
 
-#retweet"""+ str(i)+""" {
+#retweet"""
+            + str(i)
+            + """ {
     display: none;
 }
 
-.retweet"""+str(i)+""" {
+.retweet"""
+            + str(i)
+            + """ {
   color: #9eaab3;
   float: left;
   margin-left: 22%;
@@ -425,7 +517,9 @@ def GenCss():
   width: 25px;
 }
 
-.retweet"""+str(i)+""":hover {
+.retweet"""
+            + str(i)
+            + """:hover {
   color: green;
   float: left;
   margin-left: 22%;
@@ -435,7 +529,9 @@ def GenCss():
 }
 
 
-.retweet"""+str(i)+""":active{
+.retweet"""
+            + str(i)
+            + """:active{
   color: red;
   float: left;
   margin-left: 22%;
@@ -444,16 +540,22 @@ def GenCss():
   width: 25px;
 }
 
-#retweet"""+str(i)+""":checked + label {
+#retweet"""
+            + str(i)
+            + """:checked + label {
   color: green;
 
 }
 
-#like"""+str(i)+""" {
+#like"""
+            + str(i)
+            + """ {
     display: none;
 }
 
-.like"""+str(i)+""" {
+.like"""
+            + str(i)
+            + """ {
   color: #9eaab3;
   float: left;
   margin-left: 22%;
@@ -462,7 +564,9 @@ def GenCss():
   width: 25px;
 }
 
-.like"""+str(i)+""":hover {
+.like"""
+            + str(i)
+            + """:hover {
   color: red;
   float: left;
   margin-left: 22%;
@@ -471,7 +575,9 @@ def GenCss():
   width: 25px;
 }
 
-.like"""+str(i)+""":active{
+.like"""
+            + str(i)
+            + """:active{
   color: green;
   float: left;
   margin-left: 22%;
@@ -479,79 +585,93 @@ def GenCss():
   height: 25px;
   width: 25px;
 }
-#like"""+str(i)+""":checked + label {
+#like"""
+            + str(i)
+            + """:checked + label {
   color: red;
 }
 """
+        )
 
+        css += "\n"
+    return css
 
-          css += "\n"
-      return(css)
 
 def Pastbin(data):
 
     pb = Pastebin(PastebinApiKey.PBA)
-    past=pb.create_paste(api_paste_code=str(data), api_paste_private = 0,api_paste_expire_date = "1H")
+    past = pb.create_paste(
+        api_paste_code=str(data), api_paste_private=0, api_paste_expire_date="1H"
+    )
     if past.startswith("http"):
-       return(past)
+        return past
     else:
-       return("Error:",past)
+        return ("Error:", past)
 
-def Betterror(error_msg,def_name):
-   try:
-      exc_type, exc_obj, exc_tb = sys.exc_info()
-      fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-      Err_to_log = "!!\nFile: %s has encounter a %s error in %s() at line %s\nError Message:%s\n!!"%(fname,exc_type,def_name,exc_tb.tb_lineno,error_msg)
-      print(Err_to_log)
-      
-   except Exception as e:
-      exc_type, exc_obj, exc_tb = sys.exc_info()
-      fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-      Err_to_log = "!!\nFile: %s has encounter a %s error in Betterror() at line %s\nError Message:%s\n!!"%(fname,exc_type,exc_tb.tb_lineno,e)
-      print(Err_to_log)
 
-   time.sleep(Config.Time_Sleep)
-   return(Error_Log(Err_to_log)) 
+def Betterror(error_msg, def_name):
+    try:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        Err_to_log = (
+            "!!\nFile: %s has encounter a %s error in %s() at line %s\nError Message:%s\n!!"
+            % (fname, exc_type, def_name, exc_tb.tb_lineno, error_msg)
+        )
+        print(Err_to_log)
+
+    except Exception as e:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        Err_to_log = (
+            "!!\nFile: %s has encounter a %s error in Betterror() at line %s\nError Message:%s\n!!"
+            % (fname, exc_type, exc_tb.tb_lineno, e)
+        )
+        print(Err_to_log)
+
+    time.sleep(Config.Time_Sleep)
+    return Error_Log(Err_to_log)
+
 
 def Error_Log(Err_to_log):
 
     try:
 
-        with open(Pth_Error_Log,"a+") as fuck:
-           fuck.write(str(CurrentDate)+"\n")
-           fuck.write(Err_to_log+"\n")
+        with open(Pth_Error_Log, "a+") as fuck:
+            fuck.write(str(CurrentDate) + "\n")
+            fuck.write(Err_to_log + "\n")
 
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def WakeApiUp():
     global Twitter_Api
     global Api_Call_Nbr
     global Search_ApiCallLeft_Nbr
     try:
-            Twitter_Api = Twython(TAK.oa2_app_key, access_token=TAK.oa2_access_token)
-            rate = Twitter_Api.get_application_rate_limit_status()
-            Search_ApiCallLeft_Nbr = int(
-                rate["resources"]["search"]["/search/tweets"]["remaining"]
-            )
-            Api_Call_Nbr += 1
-            return Twitter_Api
+        Twitter_Api = Twython(TAK.oa2_app_key, access_token=TAK.oa2_access_token)
+        rate = Twitter_Api.get_application_rate_limit_status()
+        Search_ApiCallLeft_Nbr = int(
+            rate["resources"]["search"]["/search/tweets"]["remaining"]
+        )
+        Api_Call_Nbr += 1
+        return Twitter_Api
     except Exception as e:
         if GOGOGO_Trigger is False:
             sys.exit()
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Cleanfile(filename):
 
     try:
         if os.path.isfile(filename) is False:
-           print("==")
-           print("File does not exist (%s)"%filename)
-           print("Creating file")
-           print("==")
-           open(filename,'w')
-           ret = []
+            print("==")
+            print("File does not exist (%s)" % filename)
+            print("Creating file")
+            print("==")
+            open(filename, "w")
+            ret = []
         else:
 
             clean_lines = []
@@ -565,21 +685,22 @@ def Cleanfile(filename):
                 f.writelines("\n".join(clean_lines))
             with open(filename, "r") as f:
                 ret = f.read().splitlines()
-        return(ret)
+        return ret
 
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
-        return([])
+        Betterror(e, inspect.stack()[0][3])
+        return []
 
 
 def Fig(font, txt, toirc=None):
     try:
-       setfont = Figlet(font=font)
-       print(setfont.renderText(txt))
-       if toirc:
-          IrSend(txt, toirc)
+        setfont = Figlet(font=font)
+        print(setfont.renderText(txt))
+        if toirc:
+            IrSend(txt, toirc)
     except Exception as e:
-       Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def loadvars():
 
@@ -593,23 +714,30 @@ def loadvars():
     global Extract_Tweet_Data
     global NoResult_List
     global Emoji_List
-    Checkfiles = [Pth_TotalApi_Call,Pth_Update_Call,Pth_Request_Log,Pth_Error_Log,Pth_Current_Session,Pth_Rq_Server_Save,Pth_Tweets_Sent]
+    Checkfiles = [
+        Pth_TotalApi_Call,
+        Pth_Update_Call,
+        Pth_Request_Log,
+        Pth_Error_Log,
+        Pth_Current_Session,
+        Pth_Rq_Server_Save,
+        Pth_Tweets_Sent,
+    ]
 
     for cf in Checkfiles:
         if os.path.isfile(cf) is False:
-           print("==")
-           print("File does not exist (%s)"%cf)
-           print("Creating file")
-           print("==")
-           open(cf,'w')
-
+            print("==")
+            print("File does not exist (%s)" % cf)
+            print("Creating file")
+            print("==")
+            open(cf, "w")
 
     try:
         Fig("cybermedium", "LoadVars()", True)
         print("\n\n\n\n")
 
         for saved in Cleanfile(Pth_NoResult):
-           NoResult_List.append(saved)
+            NoResult_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "No Result Loaded", True)
@@ -629,7 +757,6 @@ def loadvars():
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Keywords Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
-        time.sleep(Config.Time_Sleep)
         print("\n\n")
 
         for saved in Cleanfile(Pth_Following_Rq):
@@ -647,31 +774,25 @@ def loadvars():
         Fig("digital", "Friends Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
-        time.sleep(Config.Time_Sleep)
-
         for saved in Cleanfile(Pth_Banned_Word_Rq):
-           Banned_Word_list.append(saved)
+            Banned_Word_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Banned Words Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
-        time.sleep(Config.Time_Sleep)
-
         for saved in Cleanfile(Pth_Banned_People_Rq):
             Banned_User_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Banned users Loaded",True)
+        Fig("digital", "Banned users Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
-
-        time.sleep(Config.Time_Sleep)
 
         for saved in Cleanfile(Pth_Rss_Rq):
             Rss_Url_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Rss Feeds Loaded",True)
+        Fig("digital", "Rss Feeds Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
@@ -679,16 +800,14 @@ def loadvars():
             Requested_Cmd_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Request Cmd Log Loaded",True)
+        Fig("digital", "Request Cmd Log Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Already_Searched):
             Already_Searched_List.append(saved)
 
-
         Fig("digital", "Loading Emoticon", True)
 
-        time.sleep(Config.Time_Sleep)
         for use_aliases, group in (
             (False, emoji.unicode_codes.EMOJI_UNICODE),
             (True, emoji.unicode_codes.EMOJI_ALIAS_UNICODE),
@@ -700,25 +819,44 @@ def loadvars():
         print(Emoji_List)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Emoji Loaded",True)
+        Fig("digital", "Emoji Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
-
-        with open(Pth_Rq_Server_Save,"r") as f:
+        with open(Pth_Rq_Server_Save, "r") as f:
             Tweet_Datas = csv.DictReader(f)
-    
+
             for td in Tweet_Datas:
-                Extracted_Datas.append((td["Tweet_Origin_Link"],td["Tweet_Id"],td["Tweet_Timestamp"],td["Tweet_Author"],td["Tweet_Profile_Author"],td["Tweet_Author_Link"],td["Tweet_Text"],td["Tweet_Rt_Author"],td["Tweet_Rt_Author_Link"],td["Tweet_Favorite_Counter"],td["Tweet_Retweet_Counter"],td["Tweet_Media"],td["Tweet_Url"]))
+                Extracted_Datas.append(
+                    (
+                        td["Tweet_Origin_Link"],
+                        td["Tweet_Id"],
+                        td["Tweet_Timestamp"],
+                        td["Tweet_Author"],
+                        td["Tweet_Profile_Author"],
+                        td["Tweet_Author_Link"],
+                        td["Tweet_Text"],
+                        td["Tweet_Rt_Author"],
+                        td["Tweet_Rt_Author_Link"],
+                        td["Tweet_Favorite_Counter"],
+                        td["Tweet_Retweet_Counter"],
+                        td["Tweet_Media"],
+                        td["Tweet_Url"],
+                    )
+                )
 
+        print("*=*=*=*=*=*=*=*=*=*")
+        Fig("digital", "Saved Server Tweets Loaded", True)
+        print("*=*=*=*=*=*=*=*=*=*")
 
-
-        Fig("digital","Done")
+        Fig("digital", "Done")
 
     except Exception as e:
-       Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def title():
-      print(Config.Trinity)
+    print(Config.Trinity)
+
 
 def timer(mode):
     global timeleft
@@ -752,7 +890,8 @@ def timer(mode):
             timed = timesup.seconds
             return timed
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def Request(cmd):
 
@@ -897,21 +1036,21 @@ def Request(cmd):
                         )
                         os.system("pkill -f Redqueen.py")
                     if option == "!badkeys":
-                        return(Pastbin(Banned_Word_list))
+                        return Pastbin(Banned_Word_list)
                     if option == "!badppl":
-                        return(Pastbin(Banned_User_list))
+                        return Pastbin(Banned_User_list)
                     if option == "!users":
-                        return(Pastbin(Following_List))
+                        return Pastbin(Following_List)
                     if option == "!keywords":
-                        return(Pastbin(Keywords_List))
+                        return Pastbin(Keywords_List)
                     if option == "!friends":
-                        return(Pastbin(Friends_List))
+                        return Pastbin(Friends_List)
                     if option == "!rss":
-                        return(Pastbin(Rss_Url_List))
+                        return Pastbin(Rss_Url_List)
                     if option == "!requests":
-                        return(Pastbin(Requested_Cmd_List))
+                        return Pastbin(Requested_Cmd_List)
                     if option == "!Pth_NoResult":
-                        return(Pastbin(NoResult_List))
+                        return Pastbin(NoResult_List)
 
                     if option == "!rmPth_NoResult":
                         print("Removing No.results from Rq.Keywords..")
@@ -920,10 +1059,7 @@ def Request(cmd):
                     if option == "banuser:":
                         if sample.count("@") == 1:
                             print("You asked to Ban this user :", sample)
-                            single = (
-                                sample.replace(str(option), "")
-                                .replace(" ", "")
-                            )
+                            single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 bu.append(single)
                                 delk.append(single)
@@ -932,7 +1068,9 @@ def Request(cmd):
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
-                                    bu.append(var.replace(str(option), "").replace(" ", ""))
+                                    bu.append(
+                                        var.replace(str(option), "").replace(" ", "")
+                                    )
                                     delk.append(
                                         var.replace(str(option), "").replace(" ", "")
                                     )
@@ -946,10 +1084,7 @@ def Request(cmd):
 
                         if sample.count("@") == 1:
                             print("You asked to Add this user :", sample)
-                            single = (
-                                sample.replace(str(option), "")
-                                .replace(" ", "")
-                            )
+                            single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 adu.append(single)
                             else:
@@ -969,10 +1104,7 @@ def Request(cmd):
                     if option == "deluser:":
                         if sample.count("@") == 1:
                             print("You asked to Delete this user :", sample)
-                            single = (
-                                sample.replace(str(option), "")
-                                .replace(" ", "")
-                            )
+                            single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 delu.append(single)
                             else:
@@ -992,10 +1124,7 @@ def Request(cmd):
                     if option == "banfriend:":
                         if sample.count("@") == 1:
                             print("You asked to Ban this friend :", sample)
-                            single = (
-                                sample.replace(str(option), "")
-                                .replace(" ", "")
-                            )
+                            single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 bf.append(single)
                                 delk.append(single)
@@ -1004,7 +1133,9 @@ def Request(cmd):
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
-                                    bf.append(var.replace(str(option), "").replace(" ", ""))
+                                    bf.append(
+                                        var.replace(str(option), "").replace(" ", "")
+                                    )
                                     delk.append(
                                         var.replace(str(option), "").replace(" ", "")
                                     )
@@ -1017,10 +1148,7 @@ def Request(cmd):
                     if option == "delfriend:":
                         if sample.count("@") == 1:
                             print("You asked to Delete this friend :", sample)
-                            single = (
-                                sample.replace(str(option), "")
-                                .replace(" ", "")
-                            )
+                            single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 delf.append(single)
                             else:
@@ -1040,10 +1168,7 @@ def Request(cmd):
 
                         if sample.count("@") == 1:
                             print("You asked to Add this friend :", sample)
-                            single = (
-                                sample.replace(str(option), "")
-                                .replace(" ", "")
-                            )
+                            single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 adf.append(single)
                             else:
@@ -1120,7 +1245,10 @@ def Request(cmd):
                                     delrss.append(var.replace(str(option), ""))
                                 else:
                                     print("Rss var is empty.")
-                            print("You asked to Delete those rss feeds: ", ",".join(delrss))
+                            print(
+                                "You asked to Delete those rss feeds: ",
+                                ",".join(delrss),
+                            )
 
                         else:
                             print("No rss found (flux must starts with http)")
@@ -1138,17 +1266,18 @@ def Request(cmd):
                                     adrss.append(var.replace(str(option), ""))
                                 else:
                                     print("Keyword var is empty.")
-                            print("You asked to Delete those rss feeds: ", ",".join(adrss))
+                            print(
+                                "You asked to Delete those rss feeds: ", ",".join(adrss)
+                            )
                         else:
                             print("No rss found (flux must starts with http)")
             if reconized == False:
                 with open(Pth_Data + "Request.log.Rq", "a") as file:
-                    file.write(log+"\n")
+                    file.write(log + "\n")
                 return "Cmd not recognised."
 
-
         with open(Pth_Data + "Request.log.Rq", "a") as f:
-             f.write(log+"\n")
+            f.write(log + "\n")
 
         if RmNores is True:
             ret = Flush_NoResult()
@@ -1159,7 +1288,7 @@ def Request(cmd):
             with open(Pth_Rss_Rq, "a") as f:
                 for entry in adrss:
                     if entry not in Rss_Url_List:
-                        f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
             output.append("**Added %s new entry to Rq.Rss**" % len(adrss))
 
         if len(delrss) > 0:
@@ -1167,14 +1296,20 @@ def Request(cmd):
             lines = Cleanfile(Pth_Rss_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
-                "cp " + str(Pth_Rss_Rq) + " " + str(Pth_Save) + "Rss.Feeds.Rq" + str(ts) + ".save"
+                "cp "
+                + str(Pth_Rss_Rq)
+                + " "
+                + str(Pth_Save)
+                + "Rss.Feeds.Rq"
+                + str(ts)
+                + ".save"
             )
             os.system(save_copy)
             with open(Pth_Rss_Rq, "w") as f:
                 for line in lines:
                     for entry in delrss:
                         if line.strip("\n") != entry:
-                            f.write(line+"\n")
+                            f.write(line + "\n")
             output.append("**Deleting %s entry in Rq.Rss**" % len(delrss))
 
         if len(delf) > 0:
@@ -1195,7 +1330,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delf:
                         if line.strip("\n") != entry:
-                            f.write(line+"\n")
+                            f.write(line + "\n")
             output.append("**Deleting %s entry in Rq.Friends**" % len(delf))
 
         if len(delu) > 0:
@@ -1216,7 +1351,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delu:
                         if line.strip("\n") != entry:
-                            f.write(line+"\n")
+                            f.write(line + "\n")
             output.append("**Deleting %s entry in Rq.Following**" % len(delu))
 
         if len(delk) > 0:
@@ -1237,7 +1372,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delk:
                         if line.strip("\n") != entry:
-                            f.write(line+"\n")
+                            f.write(line + "\n")
             output.append("**Deleting %s entry in Rq.Keywords**" % len(delk))
 
         if len(adk) > 0:
@@ -1245,7 +1380,7 @@ def Request(cmd):
             with open(Pth_Keywords_Rq, "a") as f:
                 for entry in adk:
                     if entry not in Keywords_List:
-                         f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
 
             output.append("**Adding %s entry in Rq.Keywords**" % len(adk))
 
@@ -1254,7 +1389,7 @@ def Request(cmd):
             with open(Pth_Following_Rq, "a") as f:
                 for entry in adu:
                     if entry not in Following:
-                        f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Following**" % len(adu))
 
         if len(adf) > 0:
@@ -1262,7 +1397,7 @@ def Request(cmd):
             with open(Pth_Friends_Rq, "a") as f:
                 for entry in adf:
                     if entry not in Friends_List:
-                       f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Friends**" % len(adf))
 
         if len(bu) > 0:
@@ -1270,7 +1405,7 @@ def Request(cmd):
             with open(Pth_Banned_People_Rq, "a") as f:
                 for entry in bu:
                     if entry not in Banned_User_list:
-                        f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Bannedpeople**" % len(bu))
 
         if len(bf) > 0:
@@ -1278,7 +1413,7 @@ def Request(cmd):
             with open(Pth_Banned_People_Rq, "a") as f:
                 for entry in bf:
                     if entry not in Banned_User_list:
-                        f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Bannedpeople**" % len(bf))
 
         if len(bk) > 0:
@@ -1286,12 +1421,13 @@ def Request(cmd):
             with open(Pth_Banned_Word_Rq, "a") as f:
                 for entry in bk:
                     if entry not in Banned_Word_list:
-                       f.write(str(entry)+"\n")
+                        f.write(str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Bannedword**" % len(bk))
         output.append("**Done**")
         return output
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def Flush_NoResult():
     global NoResult_List
@@ -1316,7 +1452,7 @@ def Flush_NoResult():
             for line in lines:
                 for entry in NoResult_List:
                     if line.strip("\n") != entry:
-                        f.write(line+"\n")
+                        f.write(line + "\n")
                     else:
                         print("Removed:", entry)
                         cnt += 1
@@ -1324,10 +1460,17 @@ def Flush_NoResult():
         file.write("")
         file.close
         NoResult_List = []
-        print("**Removed No results from Rq.Keywords: %s/%s **" % (cnt, len(NoResult_List)))
-        return "**Removed No results from Rq.Keywords: %s/%s **" % (cnt, len(NoResult_List))
+        print(
+            "**Removed No results from Rq.Keywords: %s/%s **"
+            % (cnt, len(NoResult_List))
+        )
+        return "**Removed No results from Rq.Keywords: %s/%s **" % (
+            cnt,
+            len(NoResult_List),
+        )
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def SaveDouble(text):
     try:
@@ -1340,7 +1483,7 @@ def SaveDouble(text):
         if text not in Ban_Double_List:
 
             with open(Pth_Text_Sent, "a") as file:
-                 file.write(str(text)+"\n")
+                file.write(str(text) + "\n")
 
             print("*=*=*=*=*=*=*=*=*=*")
             print("SAVING TWEET TO TMP :", text)
@@ -1351,7 +1494,8 @@ def SaveDouble(text):
 
         time.sleep(Config.Time_Sleep)
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
+
 
 def CheckDouble():
     global Ban_Double_List
@@ -1368,9 +1512,8 @@ def CheckDouble():
         Fig("digital", "BanDouble Updated", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
-        time.sleep(Config.Time_Sleep)
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def flushtmp():
@@ -1383,12 +1526,13 @@ def flushtmp():
 
         Fig("cybermedium", "flushtmp()", True)
 
-        time.sleep(Config.Time_Sleep)
         if os.path.exists(Pth_Current_Session):
 
             file = open(Pth_Current_Session, "r")
             datefile = file.read()
-            date_object = datetime.datetime.strptime(str(datefile), "%Y-%m-%d %H:%M:%S.%f")
+            date_object = datetime.datetime.strptime(
+                str(datefile), "%Y-%m-%d %H:%M:%S.%f"
+            )
             Laps = CurrentDate - date_object
 
             print(Laps)
@@ -1397,11 +1541,9 @@ def flushtmp():
                 if (CurrentDate - date_object).total_seconds() > 86400:
                     goflush = 1
             except Exception as e:
-                Betterror(e,inspect.stack()[0][3])
+                Betterror(e, inspect.stack()[0][3])
 
-                Fig("digital","No need to flush", True)
-
-                time.sleep(Config.Time_Sleep)
+                Fig("digital", "No need to flush", True)
 
             if goflush == 1:
 
@@ -1409,7 +1551,6 @@ def flushtmp():
                 Fig("digital", "Flushing Temps Files", True)
                 print("==")
                 file.close()
-                time.sleep(Config.Time_Sleep)
                 try:
                     text = "New Pth_Current_Session ! " + str(CurrentDate)
                     IrSend(text)
@@ -1417,10 +1558,8 @@ def flushtmp():
                     Fig("digital", "Status sent !")
 
                 except Exception as e:
-                    Betterror(e,inspect.stack()[0][3])
+                    Betterror(e, inspect.stack()[0][3])
                     time.sleep(Config.Time_Sleep)
-
-                time.sleep(Config.Time_Sleep)
 
                 os.remove(Pth_Current_Session)
 
@@ -1438,13 +1577,11 @@ def flushtmp():
                 print(CurrentDate)
                 print("==")
 
-                time.sleep(Config.Time_Sleep)
                 file = open(Pth_Current_Session, "w")
                 file.write(str(CurrentDate))
                 file.close()
 
-                Fig("digital","Done Flushing", True)
-                time.sleep(Config.Time_Sleep)
+                Fig("digital", "Done Flushing", True)
 
             else:
                 lfts = 86400 - Laps.seconds
@@ -1456,8 +1593,6 @@ def flushtmp():
                 print("%i Seconds left until Twitter flushs Api_Call_Nbrs :" % lfts)
                 print("==")
 
-                time.sleep(Config.Time_Sleep)
-
         else:
 
             print("==")
@@ -1465,12 +1600,11 @@ def flushtmp():
             print(CurrentDate)
             print("==")
 
-            time.sleep(Config.Time_Sleep)
             file = open(Pth_Current_Session, "w")
             file.write(str(CurrentDate))
             file.close()
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Last_Session(lastsearch):
@@ -1479,7 +1613,6 @@ def Last_Session(lastsearch):
     try:
         if Menu_Check_Trigger == False:
             Fig("cybermedium", "Last_Session()", True)
-            time.sleep(Config.Time_Sleep)
 
             with open(Pth_Already_Searched, "a") as file:
                 for words in lastsearch:
@@ -1487,19 +1620,17 @@ def Last_Session(lastsearch):
                     Fig("digital", "Marking " + words + " as old . ")
 
             Menu_Check_Trigger = True
-            time.sleep(Config.Time_Sleep)
         else:
             print("==")
-            Fig("digital","Saved already")
+            Fig("digital", "Saved already")
             print("==")
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def SaveTotalCall(call, update):
     try:
         Fig("cybermedium", "SaveTotalCall()")
-        time.sleep(Config.Time_Sleep)
         global Total_Call_Nbr
         global Update_Call_Nbr
         global Total_Update_Call_Nbr
@@ -1507,36 +1638,32 @@ def SaveTotalCall(call, update):
         try:
             lastitem = Cleanfile(Pth_TotalApi_Call)[0]
         except Exception as e:
-            Betterror(e,inspect.stack()[0][3])
+            Betterror(e, inspect.stack()[0][3])
             lastitem = 0
         print("==")
         print("Last Total saved : ", lastitem)
         Total_Call_Nbr = int(lastitem) + int(call)
         Fig("digital", "Saving new Total : " + str(Total_Call_Nbr))
         print("==")
-        with open(Pth_TotalApi_Call,"w") as file:
-             file.write(str(Total_Call_Nbr))
-        time.sleep(Config.Time_Sleep)
+        with open(Pth_TotalApi_Call, "w") as file:
+            file.write(str(Total_Call_Nbr))
 
         try:
             lastitem = Cleanfile(Pth_Update_Call)[0]
         except Exception as e:
-            Betterror(e,inspect.stack()[0][3])
+            Betterror(e, inspect.stack()[0][3])
             lastitem = 0
         print("==")
         print("Last Update Total saved : ", lastitem)
         Total_Call_Nbr = int(lastitem) + int(call)
         print("Saving new Update Total : ", Total_Call_Nbr)
         print("==")
-        with open(Pth_Update_Call,"w") as file:
-             file.write(str(Total_Call_Nbr))
-        time.sleep(Config.Time_Sleep)
+        with open(Pth_Update_Call, "w") as file:
+            file.write(str(Total_Call_Nbr))
         Fig("digital", "Done Saving Calls")
 
-        time.sleep(Config.Time_Sleep)
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
-
+        Betterror(e, inspect.stack()[0][3])
 
 
 def IrSweet():
@@ -1568,12 +1695,11 @@ def IrSweet():
             time.sleep(Config.Time_Sleep)
             IrcSocket = True
         except Exception as e:
-            Betterror(e,inspect.stack()[0][3])
+            Betterror(e, inspect.stack()[0][3])
             continue
 
     last_ping = time.time()
     threshold = 3 * 60
-
 
     while IrcSocket == True:
         try:
@@ -1610,9 +1736,9 @@ def IrSweet():
                 try:
                     tmp = Buffer.split("PING :")[1]
                 except Exception as e:
-                    Betterror(e,inspect.stack()[0][3])
+                    Betterror(e, inspect.stack()[0][3])
                     tmp = "placeholder"
-                    
+
                 Irc.send(bytes("PONG :" + tmp + "\r\n", "UTF-8"))
                 Fig("digital", "\n--PONG :" + str(tmp) + " --\n")
                 last_ping = time.time()
@@ -1680,7 +1806,8 @@ def IrSweet():
                 GOGOGO_Trigger = True
 
         except Exception as e:
-            Betterror(e,inspect.stack()[0][3])
+            Betterror(e, inspect.stack()[0][3])
+
 
 def RssFeeds(ttl):
     global RssSent
@@ -1703,12 +1830,26 @@ def RssFeeds(ttl):
                             RssSent.append(format)
                             IrSend(format)
                             if Config.WEB_SERVER is True:
-                                 Rss_tuple = (news.link,"rss",str(datetime.datetime.now()),flux,Pth_Img_Rq,news.link,news.title,"","","9999","9999","",news.link)
-                                 Extracted_Datas.append(Rss_tuple)
+                                Rss_tuple = (
+                                    news.link,
+                                    "rss",
+                                    str(datetime.datetime.now()),
+                                    flux,
+                                    Pth_Img_Rq,
+                                    news.link,
+                                    news.title,
+                                    "",
+                                    "",
+                                    "9999",
+                                    "9999",
+                                    "",
+                                    news.link,
+                                )
+                                Extracted_Datas.append(Rss_tuple)
                             with open(Pth_Data + "RssSave", "a") as f:
-                                f.write(str(format)+"\n")
+                                f.write(str(format) + "\n")
                 except Exception as e:
-                    Betterror(e,inspect.stack()[0][3])
+                    Betterror(e, inspect.stack()[0][3])
                     time.sleep(Config.Time_Sleep)
                     counter = counter + 1
                     print("Rss Error %s : %s" % (flux, e))
@@ -1716,13 +1857,13 @@ def RssFeeds(ttl):
             else:
                 return
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def IrSend(content, dontprint=None):
     global Irc
     if Config.IRC_CONNECT is False:
-        return()
+        return ()
     try:
 
         Fig("cybermedium", "IrSend()")
@@ -1741,11 +1882,13 @@ def IrSend(content, dontprint=None):
         content = content.replace("\n", " ")
         time.sleep(Config.Time_Sleep)
         Fig("digital", "\n--Sending :" + str(content) + "--\n")
-        Irc.send(bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL, content), "UTF-8"))
+        Irc.send(
+            bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL, content), "UTF-8")
+        )
         Fig("digital", "\n--Done--\n")
         return
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Stat2Irc(Time_To_Wait):
@@ -1793,10 +1936,14 @@ def Stat2Irc(Time_To_Wait):
         Totale_Score_Nbrtxt = "Total Banned (Score): " + str(Totale_Score_Nbr)
         IrSend(Totale_Score_Nbrtxt)
         time.sleep(Config.Time_Sleep)
-        Total_Ban_By_Lang_Nbrtxt = "Total Banned (Language): " + str(Total_Ban_By_Lang_Nbr)
+        Total_Ban_By_Lang_Nbrtxt = "Total Banned (Language): " + str(
+            Total_Ban_By_Lang_Nbr
+        )
         IrSend(Total_Ban_By_Lang_Nbrtxt)
         time.sleep(Config.Time_Sleep)
-        Total_Ban_By_Date_Nbrtxt = "Total Banned (Too old): " + str(Total_Ban_By_Date_Nbr)
+        Total_Ban_By_Date_Nbrtxt = "Total Banned (Too old): " + str(
+            Total_Ban_By_Date_Nbr
+        )
         IrSend(Total_Ban_By_Date_Nbrtxt)
         time.sleep(Config.Time_Sleep)
         Total_Ban_By_NoResult_Nbrtxt = "Total Banned (No Keywords): " + str(
@@ -1826,14 +1973,13 @@ def Stat2Irc(Time_To_Wait):
         time.sleep(Config.Time_Sleep)
         RssFeeds(Time_To_Wait)
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def limits():
     try:
 
         Fig("cybermedium", "Limits()")
-        time.sleep(Config.Time_Sleep)
         global Api_Call_Nbr
         global Update_Call_Nbr
         global Total_Update_Call_Nbr
@@ -1855,12 +2001,12 @@ def limits():
             print("****************************************")
             Fig("cybermedium", "CURRENT LIMITS ARE REACHED !!")
             print("")
-            Fig("digital","Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital","Resetting current Api_Call_Nbrs")
+            Fig("digital", "Resetting current Api_Call_Nbrs")
 
-            Fig("digital","Login Out")
-            Fig("digital","Waiting 60 minutes")
+            Fig("digital", "Login Out")
+            Fig("digital", "Waiting 60 minutes")
             print("\n\n\n\n")
 
             Stat2Irc(3600)
@@ -1870,8 +2016,7 @@ def limits():
             RestABit_Trigger = False
             Wait_Hour_Trigger = False
 
-            Fig("digital","Waking up ..")
-            time.sleep(Config.Time_Sleep)
+            Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("\n\n")
@@ -1881,12 +2026,12 @@ def limits():
             print("****************************************")
             Fig("cybermedium", "Mysterious Error !!!", True)
             print("")
-            Fig("digital","Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital","Resetting current Api_Call_Nbrs")
+            Fig("digital", "Resetting current Api_Call_Nbrs")
 
-            Fig("digital","Login Out")
-            Fig("digital","Waiting 5 minutes")
+            Fig("digital", "Login Out")
+            Fig("digital", "Waiting 5 minutes")
             Stat2Irc(3600)
 
             Update_Call_Nbr = 0
@@ -1894,8 +2039,7 @@ def limits():
             Search_Limit_Trigger = False
             RestABit_Trigger = False
 
-            Fig("digital","Waking up ..")
-            time.sleep(Config.Time_Sleep)
+            Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
 
@@ -1906,20 +2050,20 @@ def limits():
             print("****************************************")
 
             Fig("cybermedium", "SEARCH LIMITS ALMOST REACHED")
-            Fig("digital","Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital","Resetting current Api_Call_Nbrs")
+            Fig("digital", "Resetting current Api_Call_Nbrs")
 
-            Fig("digital","Login Out")
+            Fig("digital", "Login Out")
 
-            Fig("digital","Waiting 15 minutes")
+            Fig("digital", "Waiting 15 minutes")
             Stat2Irc(900)
 
             Update_Call_Nbr = 0
             Api_Call_Nbr = 0
             Search_Limit_Trigger = False
 
-            Fig("digital","Waking up ..")
+            Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("****************************************")
@@ -1932,23 +2076,23 @@ def limits():
             print("****************************************")
 
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED")
-            Fig("digital","Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital","Resetting current Api_Call_Nbrs")
+            Fig("digital", "Resetting current Api_Call_Nbrs")
 
-            Fig("digital","Login Out")
+            Fig("digital", "Login Out")
 
             if Wait_Half_Hour_Trigger != 1:
-                Fig("digital","Waiting 15 minutes")
+                Fig("digital", "Waiting 15 minutes")
 
                 Stat2Irc(900)
             else:
-                Fig("digital","Waiting 30 minutes")
+                Fig("digital", "Waiting 30 minutes")
                 Stat2Irc(1800)
 
             Update_Call_Nbr = 0
             Api_Call_Nbr = 0
-            Fig("digital","Waking up ..")
+            Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
             print("****************************************")
@@ -1961,9 +2105,9 @@ def limits():
             print("****************************************")
 
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (total)")
-            Fig("digital","Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital","Resetting current Api_Call_Nbrs")
+            Fig("digital", "Resetting current Api_Call_Nbrs")
             All_Ok_Trigger = True
             Skip_Wait_Trigger = True
 
@@ -1973,17 +2117,16 @@ def limits():
             print("****************************************")
             print("****************************************")
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (update)")
-            Fig("digital","Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file")
             SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital","Resetting current Api_Call_Nbrs")
+            Fig("digital", "Resetting current Api_Call_Nbrs")
             All_Ok_Trigger = True
 
         print("===================")
-        Fig("digital","Ok")
+        Fig("digital", "Ok")
         print("===================")
-        time.sleep(Config.Time_Sleep)
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Ban(tweet, sender, id, Bio):
@@ -1998,8 +2141,8 @@ def Ban(tweet, sender, id, Bio):
     try:
 
         UShallPass = 0
-        Twist = re.sub(r'[^A-Za-z0-9 ]+', '', tweet.lower())
-        Bio = re.sub(r'[^A-Za-z0-9 ]+', '', Bio.lower())
+        Twist = re.sub(r"[^A-Za-z0-9 ]+", "", tweet.lower())
+        Bio = re.sub(r"[^A-Za-z0-9 ]+", "", Bio.lower())
         Fig("cybermedium", "Ban()")
 
         print("*=*=*=*=*=*=*=*=*=*")
@@ -2018,53 +2161,53 @@ def Ban(tweet, sender, id, Bio):
 
         if Banned is False:
             for mustbe in Keywords_List:
-                mustbe = re.sub(r'[^A-Za-z0-9 ]+', '', mustbe.lower())
+                mustbe = re.sub(r"[^A-Za-z0-9 ]+", "", mustbe.lower())
                 if mustbe in Twist:
-                   Fig("digital","Found Keywords :")
-                   print("Sample : ", mustbe)
-                   Fig("digital", "You shall Pass")
-                   print("*=*=*=*=*=*=*=*=*=*")
-                   UShallPass += 1
+                    Fig("digital", "Found Keywords :")
+                    print("Sample : ", mustbe)
+                    Fig("digital", "You shall Pass")
+                    print("*=*=*=*=*=*=*=*=*=*")
+                    UShallPass += 1
 
             if UShallPass < Config.Minimum_Keywords_In_Tweet:
 
-                Fig("digital","Did not found any Keyword in tweet.")
+                Fig("digital", "Did not found any Keyword in tweet.")
                 Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
                 Banned = True
             print("*=*=*=*=*=*=*=*=*=*")
 
         for forbid in Banned_Word_list:
-                forbid = re.sub(r'[^A-Za-z0-9 ]+', '', forbid.lower())
-                if forbid in Twist:
-                    Fig("digital","This tweet contains banned words :")
-                    print("** %s **" % str(forbid))
-                    Banned = True
-                    Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
-                    time.sleep(Config.Time_Sleep)
+            forbid = re.sub(r"[^A-Za-z0-9 ]+", "", forbid.lower())
+            if forbid in Twist:
+                Fig("digital", "This tweet contains banned words :")
+                print("** %s **" % str(forbid))
+                Banned = True
+                Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
+                time.sleep(Config.Time_Sleep)
 
-                if forbid in Bio:
-                    Fig("digital","This user profile contains banned words :")
-                    print(Bio)
-                    print("** %s **" % str(forbid))
-                    Banned = True
-                    Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
-                    time.sleep(Config.Time_Sleep)
+            if forbid in Bio:
+                Fig("digital", "This user profile contains banned words :")
+                print(Bio)
+                print("** %s **" % str(forbid))
+                Banned = True
+                Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
+                time.sleep(Config.Time_Sleep)
 
         for forbid in Banned_User_list:
-                if str(forbid.lower()) in str(sender.lower()):
+            if str(forbid.lower()) in str(sender.lower()):
 
-                    Fig("digital","This tweet is from a banned user :")
-                    print("** %s **" % forbid)
-                    Banned = True
-                    Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
-                    time.sleep(Config.Time_Sleep)
+                Fig("digital", "This tweet is from a banned user :")
+                print("** %s **" % forbid)
+                Banned = True
+                Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
+                time.sleep(Config.Time_Sleep)
 
         if tweet in Ban_Double_List:
-                    Fig("digital","This tweet is Identical to a Previous tweet :")
-                    Saveid(id)
-                    Banned = True
-                    Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
-                    time.sleep(Config.Time_Sleep)
+            Fig("digital", "This tweet is Identical to a Previous tweet :")
+            Saveid(id)
+            Banned = True
+            Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
+            time.sleep(Config.Time_Sleep)
 
         for item in Ban_Double_List:
             if len(item) >= Config.Minimum_Tweet_Length:
@@ -2100,27 +2243,27 @@ def Ban(tweet, sender, id, Bio):
                         maxpos = pos + int(len(sample))
 
         if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
-                Fig("digital", "Follow Friday")
-                Banned = True
-                Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
-                time.sleep(Config.Time_Sleep)
+            Fig("digital", "Follow Friday")
+            Banned = True
+            Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
+            time.sleep(Config.Time_Sleep)
 
         if tweet.count("#") >= Config.Maximum_Hashtag_In_Tweet:
 
-                Fig("digital", "HashTags Fever")
-                Banned = True
-                Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
-                time.sleep(Config.Time_Sleep)
+            Fig("digital", "HashTags Fever")
+            Banned = True
+            Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
+            time.sleep(Config.Time_Sleep)
 
         if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
-                Fig("digital", "Too many Tweets From this user ")
-                Banned = True
-                Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
-                time.sleep(Config.Time_Sleep)
+            Fig("digital", "Too many Tweets From this user ")
+            Banned = True
+            Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
+            time.sleep(Config.Time_Sleep)
         else:
-                print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(sender))
-                print("*=*=*=*=*=*=*=*=*=*")
-                time.sleep(Config.Time_Sleep)
+            print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(sender))
+            print("*=*=*=*=*=*=*=*=*=*")
+            time.sleep(Config.Time_Sleep)
 
         if Banned is False:
 
@@ -2133,16 +2276,16 @@ def Ban(tweet, sender, id, Bio):
             LuckyLuke = randint(0, Config.Luck_Factor)
             print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
             if LuckyLuke == 1:
-                Fig("digital", "Good To Go !!")
+                Fig("digital", "Lucky Good To Go !!")
                 print("*=*=*=*=*=*=*=*=*=*")
                 time.sleep(Config.Time_Sleep)
                 Banned = False
             else:
                 print("Tweet: ", tweet)
-                Fig("digital","Going To Trash")
+                Fig("digital", "Going To Trash")
                 print("*=*=*=*=*=*=*=*=*=*")
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Saveid(id):
@@ -2151,14 +2294,14 @@ def Saveid(id):
         time.sleep(Config.Time_Sleep)
 
         with open(Pth_Tweets_Sent, "a") as file:
-            file.write(str(id)+"\n")
+            file.write(str(id) + "\n")
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
         Fig("digital", "Saved")
         print("*=*=*=*=*=*=*=*=*=*")
         time.sleep(Config.Time_Sleep)
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Idlist(id):
@@ -2173,7 +2316,6 @@ def Idlist(id):
 
             Total_Sent_Nbr = sum(1 for line in open(Pth_Tweets_Sent))
             Id_Done_Trigger = True
-
 
         for saved in Cleanfile(Pth_Tweets_Sent):
 
@@ -2193,7 +2335,7 @@ def Idlist(id):
         print("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*")
         return False
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Scoring(tweet, search):
@@ -2243,26 +2385,34 @@ def Scoring(tweet, search):
 
         if len(Tweext) < Config.Minimum_Tweet_Length:
             Banned = True
-            Fig("digital","NOT ENOUGH TEXT")
-            Fig("digital","Going To Trash")
+            Fig("digital", "NOT ENOUGH TEXT")
+            Fig("digital", "Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
         if Banned is False or Bouffon == 1:
             if "retweet_count" in tweet:
 
                 print("##")
-                print("This tweet has been retweeted %i times " % tweet["retweet_count"])
+                print(
+                    "This tweet has been retweeted %i times " % tweet["retweet_count"]
+                )
                 print("##")
                 LuckyLuke = randint(0, Config.Luck_Factor)
-                if tweet["retweet_count"] < Config.Minimum_Tweet_Retweet and LuckyLuke != 1:
+                if (
+                    tweet["retweet_count"] < Config.Minimum_Tweet_Retweet
+                    and LuckyLuke != 1
+                ):
                     Banned = True
-                    Fig("digital","NOT ENOUGH RETWEET")
-                    Fig("digital","Going To Trash")
+                    Fig("digital", "NOT ENOUGH RETWEET")
+                    Fig("digital", "Going To Trash")
                     print("*=*=*=*=*=*=*=*=*=*")
                     time.sleep(Config.Time_Sleep)
 
-                if tweet["retweet_count"] < Config.Minimum_Tweet_Retweet and LuckyLuke == 1:
-                    Fig("digital","Not enough retweet")
-                    Fig("digital","But lets give it a chance ...")
+                if (
+                    tweet["retweet_count"] < Config.Minimum_Tweet_Retweet
+                    and LuckyLuke == 1
+                ):
+                    Fig("digital", "Not enough retweet")
+                    Fig("digital", "But lets give it a chance ...")
                     print("*=*=*=*=*=*=*=*=*=*")
 
                 if tweet["retweet_count"] >= 1 and tweet["retweet_count"] <= 23:
@@ -2317,7 +2467,7 @@ def Scoring(tweet, search):
                         print("##")
                         print("##")
 
-                        if "@"+str(coop) in Following_List:
+                        if "@" + str(coop) in Following_List:
                             print("##")
                             print(
                                 "This tweet is from a known user : ",
@@ -2326,7 +2476,7 @@ def Scoring(tweet, search):
                             print("##")
                             Score = Score + 123
                             nogo = 0
-                        if "@"+str(coop) in Friends_List:
+                        if "@" + str(coop) in Friends_List:
                             print("##")
                             print(
                                 "This tweet is from a friend : ",
@@ -2374,7 +2524,8 @@ def Scoring(tweet, search):
 
                     if (
                         "media" in tweet["entities"]
-                        and len(tweet["entities"]["media"]) > Config.Minimum_Media_In_Tweet
+                        and len(tweet["entities"]["media"])
+                        > Config.Minimum_Media_In_Tweet
                     ):
                         print("##")
                         print(
@@ -2446,7 +2597,7 @@ def Scoring(tweet, search):
                             )
                             print("##")
 
-                            if "@"+str(coop) in Following_List:
+                            if "@" + str(coop) in Following_List:
                                 print("##")
                                 print(
                                     "This tweet is from a known user : ",
@@ -2455,7 +2606,7 @@ def Scoring(tweet, search):
                                 print("##")
                                 Score = Score + 123
                                 nogo = 0
-                            if "@"+str(coop) in Friends_List:
+                            if "@" + str(coop) in Friends_List:
                                 print("##")
                                 print(
                                     "This tweet is from a friend : ",
@@ -2478,17 +2629,18 @@ def Scoring(tweet, search):
                     print("##")
 
                     if tweet["user"]["followers_count"] <= Config.Minimum_User_Friend:
-                        Fig("digital","Not Enough Followers")
+                        Fig("digital", "Not Enough Followers")
                         print(tweet["user"]["followers_count"])
                         coop = tweet["user"]["screen_name"]
                         nogo = 1
                         print("##")
                         print(
-                            "Checking if this tweet is from a known user or friend ", coop
+                            "Checking if this tweet is from a known user or friend ",
+                            coop,
                         )
                         print("##")
 
-                        if "@"+str(coop) in Following_List:
+                        if "@" + str(coop) in Following_List:
                             print("##")
                             print(
                                 "This tweet is from a known user : ",
@@ -2497,7 +2649,7 @@ def Scoring(tweet, search):
                             print("##")
 
                             nogo = 0
-                        if "@"+str(coop) in Friends_List:
+                        if "@" + str(coop) in Friends_List:
                             print("##")
                             print(
                                 "This tweet is from a friend : ",
@@ -2510,7 +2662,7 @@ def Scoring(tweet, search):
                             print("Nop...")
                             Banned = True
 
-                        Fig("digital","Going To Trash")
+                        Fig("digital", "Going To Trash")
                         print("*=*=*=*=*=*=*=*=*=*")
                         Banned = True
                         Score = Score - 10000
@@ -2654,7 +2806,7 @@ def Scoring(tweet, search):
                     print("This tweet is from ", coop)
                     print("##")
 
-                    if "@"+str(coop) in Following_List:
+                    if "@" + str(coop) in Following_List:
                         print("##")
                         print(
                             "This tweet is from a known user : ",
@@ -2663,10 +2815,11 @@ def Scoring(tweet, search):
                         print("##")
                         Score = Score + 10
 
-                    if "@"+str(coop) in Friends_List:
+                    if "@" + str(coop) in Friends_List:
                         print("##")
                         print(
-                            "This tweet is from a friend : ", tweet["user"]["screen_name"]
+                            "This tweet is from a friend : ",
+                            tweet["user"]["screen_name"],
                         )
                         print("##")
 
@@ -2765,7 +2918,7 @@ def Scoring(tweet, search):
                                     )
                                     print(Tweext)
                                     Saveid(tweet["id"])
-                                    Fig("digital","Going To Trash")
+                                    Fig("digital", "Going To Trash")
                                     print("*=*=*=*=*=*=*=*=*=*")
                                     Banned = True
                                     Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
@@ -2797,7 +2950,7 @@ def Scoring(tweet, search):
                                             print("Found Matched :", sample)
                                             Saveid(id)
 
-                                            Fig("digital","Going To Trash")
+                                            Fig("digital", "Going To Trash")
                                             print("*=*=*=*=*=*=*=*=*=*")
                                             time.sleep(Config.Time_Sleep)
 
@@ -2812,7 +2965,7 @@ def Scoring(tweet, search):
                                             sample = item[pos : int(next)]
                                             maxpos = pos + int(len(sample))
                                     except Exception as e:
-                                        Betterror(e,inspect.stack()[0][3])
+                                        Betterror(e, inspect.stack()[0][3])
                                         pos = pos + 1
                                         next = int(half) + pos
                                         sample = item[pos : int(next)]
@@ -2835,7 +2988,7 @@ def Scoring(tweet, search):
 
                                 IrSend(dodgelink)
 
-                                Fig("digital","DONE")
+                                Fig("digital", "DONE")
                                 Api_Call_Nbr = Api_Call_Nbr + 2
                                 Update_Call_Nbr = Update_Call_Nbr + 2
                                 Saveid(tweet["id"])
@@ -2843,7 +2996,7 @@ def Scoring(tweet, search):
                                     ERRORCNT = ERRORCNT - 1
 
                             except Exception as e:
-                                Betterror(e,inspect.stack()[0][3])
+                                Betterror(e, inspect.stack()[0][3])
                                 Fig("bell", "Twython Error")
 
                                 print(e)
@@ -2853,7 +3006,7 @@ def Scoring(tweet, search):
                             print(
                                 "================================================================================"
                             )
-                            Fig("digital"," WOW Already Sent !!")
+                            Fig("digital", " WOW Already Sent !!")
                             print(
                                 "================================================================================"
                             )
@@ -2890,7 +3043,9 @@ def Scoring(tweet, search):
                     RtTimed = datetime.datetime.strptime(
                         RtTime, "%a %b %d %H:%M:%S %Y"
                     ).strftime("%Y-%m-%d %H:%M:%S")
-                    RtTimeFinal = datetime.datetime.strptime(RtTimed, "%Y-%m-%d %H:%M:%S")
+                    RtTimeFinal = datetime.datetime.strptime(
+                        RtTimed, "%Y-%m-%d %H:%M:%S"
+                    )
                     RtTweet_Age = now - RtTimeFinal
                     print("Retweet created at :", RtTimeFinal)
 
@@ -3130,7 +3285,7 @@ def Scoring(tweet, search):
                     print(
                         "================================================================================"
                     )
-                    Fig("digital","Banned")
+                    Fig("digital", "Banned")
                     print(
                         "================================================================================"
                     )
@@ -3157,7 +3312,7 @@ def Scoring(tweet, search):
                 print(
                     "================================================================================"
                 )
-                Fig("digital","Already sent !")
+                Fig("digital", "Already sent !")
                 print(
                     "================================================================================"
                 )
@@ -3178,7 +3333,7 @@ def Scoring(tweet, search):
             print(
                 "================================================================================"
             )
-            Fig("digital","Language")
+            Fig("digital", "Language")
             print(
                 "==============================================================================="
             )
@@ -3201,7 +3356,7 @@ def Scoring(tweet, search):
             time.sleep(Config.Time_Sleep)
             Total_Ban_By_Lang_Nbr = Total_Ban_By_Lang_Nbr + 1
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 def Search_Keyword(word):
@@ -3225,7 +3380,7 @@ def Search_Keyword(word):
                 ratechk = 1
 
             except Exception as e:
-                Betterror(e,inspect.stack()[0][3])
+                Betterror(e, inspect.stack()[0][3])
                 print("mysterious error")
 
                 print(e)
@@ -3250,21 +3405,21 @@ def Search_Keyword(word):
 
                 limits()
 
-
                 try:
                     print("==")
                     print("Loading tweets for " + word)
                     print("")
 
-
                     Twitter_Api = WakeApiUp()
                     if word.startswith("@"):
-                        searchresults = Twitter_Api.get_user_timeline(screen_name=word,count=100,tweet_mode ="extended")
+                        searchresults = Twitter_Api.get_user_timeline(
+                            screen_name=word, count=100, tweet_mode="extended"
+                        )
                         Search_nbr = len(searchresults)
                         Search_obj = searchresults
                     else:
                         searchresults = Twitter_Api.search(
-                        q=word, tweet_mode="extended", count=100
+                            q=word, tweet_mode="extended", count=100
                         )
                         Search_nbr = len(searchresults["statuses"])
                         Search_obj = searchresults["statuses"]
@@ -3280,10 +3435,9 @@ def Search_Keyword(word):
                     Search_ApiCallLeft_Nbr = Search_ApiCallLeft_Nbr - 1
                     time.sleep(Config.Time_Sleep)
 
-
                 except Exception as e:
                     searchresults = ""
-                    Betterror(e,inspect.stack()[0][3])
+                    Betterror(e, inspect.stack()[0][3])
                     Api_Call_Nbr = Api_Call_Nbr + 1
                 try:
                     if Search_nbr > Config.Minimum_Search_Result:
@@ -3307,10 +3461,10 @@ def Search_Keyword(word):
                         Fig("digital", "Saving unwanted search to no.result")
                         time.sleep(Config.Time_Sleep)
                         with open(Pth_NoResult, "a") as file:
-                           file.write(str(word) + "\n")
+                            file.write(str(word) + "\n")
 
                 except Exception as e:
-                    Betterror(e,inspect.stack()[0][3])
+                    Betterror(e, inspect.stack()[0][3])
 
             else:
 
@@ -3318,7 +3472,7 @@ def Search_Keyword(word):
                 Search_Done_Trigger = False
                 limits()
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 # Some Code
@@ -3326,6 +3480,7 @@ def RedQueen():
 
     global Keywords_List
     global MasterPause_Trigger
+    global MasterStart_Trigger
     try:
 
         while 1:
@@ -3349,14 +3504,14 @@ def RedQueen():
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Removing Keywords from No.Result.Rq",True)
+        Fig("digital", "Removing Keywords from No.Result.Rq", True)
 
         Keywords_List = [k for k in Keywords_List if k not in NoResult_List]
 
-        Fig("digital", "Removing Keywords from Already_Searched_List",True)
+        Fig("digital", "Removing Keywords from Already_Searched_List", True)
 
         Keywords_List = [k for k in Keywords_List if k not in Already_Searched_List]
-      
+
         shuffle(Keywords_List)
 
         Minwords = int(len(Keywords_List) / 20)
@@ -3387,17 +3542,20 @@ def RedQueen():
             Fig("digital", 'Status sent !"')
 
         except Exception as e:
-            Betterror(e,inspect.stack()[0][3])
+            Betterror(e, inspect.stack()[0][3])
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital","Check Last Menu started", True)
+        Fig("digital", "Check Last Menu started", True)
 
         tmpcnt = 0
-        if MasterStart_Trigger is False:
-            print("**Waiting for !start command.**")
-            IrSend("Idle mode..")
+        if IRC_CONNECT is True:
+            if MasterStart_Trigger is False:
+                print("**Waiting for !start command from Irc.**")
+                IrSend("Idle mode..")
+            else:
+                IrSend("Redqueen is starting..")
         else:
-            IrSend("Redqueen is starting..")
+            MasterStart_Trigger = True
 
         while True:
             time.sleep(Config.Time_Sleep)
@@ -3464,7 +3622,7 @@ def RedQueen():
             Fig("digital", "Status sent !")
 
         except Exception as e:
-            Betterror(e,inspect.stack()[0][3])
+            Betterror(e, inspect.stack()[0][3])
             time.sleep(Config.Time_Sleep)
 
         Fig("digital", "Calling Saving call function", True)
@@ -3486,7 +3644,7 @@ def RedQueen():
         )
         MasterPause_Trigger = True
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 if __name__ == "__main__":
@@ -3503,26 +3661,26 @@ if __name__ == "__main__":
             ]:
                 if lenchk < 25:
                     print(
-                    "All TAK.OAUT_1 keys must be filled and correct in TwitterApiKeys.py"
+                        "All TAK.OAUT_1 keys must be filled and correct in TwitterApiKeys.py"
                     )
                     sys.exit()
 
         for lenchk in [len(TAK.oa2_app_key), len(TAK.oa2_access_token)]:
-                if lenchk < 25:
-                    print("ALL TAK.OAUT_2 must be filled and correct in TwitterApiKeys.py")
-                    sys.exit()
+            if lenchk < 25:
+                print("ALL TAK.OAUT_2 must be filled and correct in TwitterApiKeys.py")
+                sys.exit()
 
         WakeApiUp()
 
-        Fig("digital","Launching Blueking on IRC")
+        Fig("digital", "Launching Blueking on IRC")
         time.sleep(Config.Time_Sleep)
 
         Fig("cybermedium", "IrSweet()")
-        Fig("digital","Waiting for idle mode")
+        Fig("digital", "Waiting for idle mode")
         time.sleep(Config.Time_Sleep)
 
         if Config.IRC_CONNECT is True:
-           Thread(target=IrSweet).start()
+            Thread(target=IrSweet).start()
 
         Thread(target=RedQueen).start()
 
@@ -3531,10 +3689,10 @@ if __name__ == "__main__":
                 time.sleep(1)
                 if GOGOGO_Trigger == True:
                     break
-            cherrypy.quickstart(Redqueen_Server(),'/', Cherryconf)
+            cherrypy.quickstart(Redqueen_Server(), "/", Cherryconf)
 
     except Exception as e:
-        Betterror(e,inspect.stack()[0][3])
+        Betterror(e, inspect.stack()[0][3])
 
 
 #################################################TheEnd#############################################################
