@@ -1835,7 +1835,7 @@ def RssFeeds(ttl):
                                     "rss",
                                     str(datetime.datetime.now()),
                                     flux,
-                                    Pth_Img_Rq,
+                                    "img/redqueen-profile.png",
                                     news.link,
                                     news.title,
                                     "",
