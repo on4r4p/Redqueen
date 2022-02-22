@@ -47,7 +47,7 @@
 
 ###Redqueen
 
-Search crawling twitter for infoSec news made in ~2010 Still working somehow..
+Search twitter for infoSec news made in ~2010 Still working somehow..
 
 -Post results in Irc and create a twitter clone server to fav and retweet results- 
 
