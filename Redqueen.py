@@ -431,7 +431,7 @@ def GenFeed():
                     if url.startswith("'") and url.endswith("'"):
                         url = url[1:]
                         url = url[:-1]
-                        Template_Tweet += """<a href="%s">%s</a>""" % (link, link)
+                        Template_Tweet += """<a href="%s">%s</a>""" % (url, url)
             Template_Tweet += """ </div>
         </div>"""
 
