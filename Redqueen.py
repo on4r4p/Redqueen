@@ -561,8 +561,9 @@ def Cleanfile(filename):
                 clean_lines = [l.strip() for l in lines if l.strip()]
 
             clean_lines = list(dict.fromkeys(clean_lines))
-            with open(filename, "w+") as f:
+            with open(filename, "w") as f:
                 f.writelines("\n".join(clean_lines))
+            with open(filename, "r") as f:
                 ret = f.read().splitlines()
         return(ret)
 
@@ -3376,7 +3377,7 @@ def RedQueen():
         Fig("digital", "Removing Keywords from Already_Searched_List",True)
 
         Keywords_List = [k for k in Keywords_List if k not in Already_Searched_List]
-
+      
         shuffle(Keywords_List)
 
         Minwords = int(len(Keywords_List) / 20)
@@ -3425,7 +3426,6 @@ def RedQueen():
                 figy = "Starting Redqueen"
                 Fig("digital", figy)
                 break
-
         for key in Keywords_List[:rndwords]:
             time.sleep(Config.Time_Sleep)
             if MasterPause_Trigger is False and MasterStart_Trigger is True:
