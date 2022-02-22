@@ -58,20 +58,34 @@ Search twitter for infoSec news made in ~2010 Still working somehow..
 depending on their content.
 
 -Check if there is enough text,if Follow Friday or if there are too many hashstags
+
 -Check if tweet is from a verifed account or from a friend or follower 
--Prevent retweeting the same info twice , 
--Do not post the same user more than X times ,
+
+-Prevent retweeting the same info twice 
+
+-Do not post the same user more than X times
+
 -Do not post if retweet count is not at least X
+
 -Do not post if retweet count or Fav more than X 
+
 -Do not post if older than X days
+
 -Saves item already searched 
--Do not post if the user is not followed by at least 400 ppl
+
+-Do not post if the user is not followed by at least X ppl
+
 -Behave may change if the tweet is from a friend or follower or with LuckFactor
--Such quote Th3j3st3r , MAny Replace his name by Th3Bouf0n , Very Hack, Much Wow   
+
+-Such quote Th3j3st3r , MAny Replace his name by Th3Bouf0n , Very Hack, Much Wow
+
 -Removes keywords which returns no result from the search list
+
 -Provide some statistics about the current session during api resting time
+
 -It does respect the limit of twitter api by saving the total nbr of calls and then
 behave depending on how many call are left to be send (reset calls every 24 hours)etc ...
+
 
 Then send a shot debrief when done posting all the good stuff in its timeline .
 Some cmds can be send via private message in Irc : /msg botname !help
