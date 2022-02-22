@@ -3250,7 +3250,14 @@ def Search_Keyword(word):
                 print("=/\/\/\/\/\/\/\/\/\/\/\=")
 
                 limits()
+
+
                 try:
+                    print("==")
+                    print("Loading tweets for " + word)
+                    print("")
+
+
                     Twitter_Api = WakeApiUp()
                     if word.startswith("@"):
                         searchresults = Twitter_Api.search(
@@ -3258,6 +3265,9 @@ def Search_Keyword(word):
                         )
                     else:
                         searchresults = Twitter_Api.get_user_timeline(screen_name=word,count=100,tweet_mode ="extended")
+                    print(searchresults)
+
+
 
                     print("##########################################")
                     Fig("cybermedium", "%s Results Found !" % len(searchresults["statuses"]))
@@ -3270,6 +3280,7 @@ def Search_Keyword(word):
 
 
                 except Exception as e:
+                    searchresults = ""
                     Betterror(e,inspect.stack()[0][3])
                     Api_Call_Nbr = Api_Call_Nbr + 1
                     print("Error search1:", e)
@@ -3277,24 +3288,6 @@ def Search_Keyword(word):
                     print("Error Sorry im trying next one")
                     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
-                try:
-
-                    print("==")
-                    print("Loading tweets for " + word)
-                    print("")
-                    time.sleep(Config.Time_Sleep)
-                    print("==")
-                    print("")
-                    time.sleep(Config.Time_Sleep)
-                    print("")
-                except Exception as e:
-                    Betterror(e,inspect.stack()[0][3])
-                    Api_Call_Nbr = Api_Call_Nbr + 1
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                    print("Error Sorry trying next one")
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
-                    time.sleep(Config.Time_Sleep)
 
                 print("##########################################")
                 print("**")
