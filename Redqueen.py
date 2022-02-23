@@ -22,6 +22,8 @@ MasterStop_Trigger = False
 
 MasterStart_Trigger = False
 
+Broken_pipe_Trigger = False
+
 RssSent = []
 
 NoResult_List = []
@@ -439,10 +441,9 @@ def GenFeed():
             if len(D[11]) > 0:
                 for media in D[11]:
                     Template_Tweet += """
-        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" >""" % (
+        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" ></div>""" % (
                         media
                     )
-                Template_Tweet += "</div>"
         elif type(D[11]) == str:
             frmt = D[11].replace("[", "").replace("]", "")
             frmt = frmt.split(",")
@@ -452,10 +453,9 @@ def GenFeed():
                         media = media[1:]
                         media = media[:-1]
                         Template_Tweet += """
-        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" >""" % (
+        <div class="picture-insert" align="center"> <img src="%s" class="tweet-image" ></div>""" % (
                             media
                         )
-                Template_Tweet += "</div>"
 
         Template_Tweet += (
             """
@@ -1669,6 +1669,8 @@ def SaveTotalCall(call, update):
 def IrSweet():
     global GOGOGO_Trigger
     global Irc
+    global Broken_pipe_Trigger
+    global MasterPause_Trigger
 
     Konnected = False
     Identified = False
@@ -1694,8 +1696,15 @@ def IrSweet():
             )
             time.sleep(Config.Time_Sleep)
             IrcSocket = True
+            if Broken_pipe_Trigger is True:
+                Broken_pipe_Trigger = False
+                MasterPause_Trigger = False
         except Exception as e:
             Betterror(e, inspect.stack()[0][3])
+            if "Broken pipe" in str(e):
+                 Broken_pipe_Trigger = True
+                 MasterPause_Trigger = True
+                 time.sleep(60)
             continue
 
     last_ping = time.time()
@@ -1744,7 +1753,7 @@ def IrSweet():
                 last_ping = time.time()
 
             if Buffer.find("ERROR :Closing Link:") != -1:
-                Fig("digital" + "\n--TimeOut--\n\n--Restablishing Connection--\n")
+                Fig("digital", "\n--TimeOut--\n\n--Restablishing Connection--\n")
                 return IrSweet()
 
             if Buffer.find(IrcKey.IRKonTrigger) != -1 and Konnected is False:
@@ -1862,6 +1871,9 @@ def RssFeeds(ttl):
 
 def IrSend(content, dontprint=None):
     global Irc
+    global Broken_pipe_Trigger
+    global MasterPause_Trigger
+
     if Config.IRC_CONNECT is False:
         return ()
     try:
@@ -1886,10 +1898,17 @@ def IrSend(content, dontprint=None):
             bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL, content), "UTF-8")
         )
         Fig("digital", "\n--Done--\n")
+        if Broken_pipe_Trigger is True:
+                Broken_pipe_Trigger = False
+                MasterPause_Trigger = False
+
         return
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
-
+        if "Broken pipe" in str(e):
+            Broken_pipe_Trigger = True
+            MasterPause_Trigger = True
+            time.sleep(60)
 
 def Stat2Irc(Time_To_Wait):
 
@@ -3412,9 +3431,7 @@ def Search_Keyword(word):
 
                     Twitter_Api = WakeApiUp()
                     if word.startswith("@"):
-                        searchresults = Twitter_Api.get_user_timeline(
-                            screen_name=word, count=100, tweet_mode="extended"
-                        )
+                        searchresults = Twitter_Api.get_user_timeline(screen_name=str(word).replace("@",""), count=100, tweet_mode="extended")
                         Search_nbr = len(searchresults)
                         Search_obj = searchresults
                     else:
@@ -3436,7 +3453,9 @@ def Search_Keyword(word):
                     time.sleep(Config.Time_Sleep)
 
                 except Exception as e:
-                    searchresults = ""
+                    searchresults = []
+                    Search_nbr = 0
+                    Search_obj = []
                     Betterror(e, inspect.stack()[0][3])
                     Api_Call_Nbr = Api_Call_Nbr + 1
                 try:
