@@ -1388,7 +1388,7 @@ def Request(cmd):
             print("Adding new entry to Rq.Following")
             with open(Pth_Following_Rq, "a") as f:
                 for entry in adu:
-                    if entry not in Following:
+                    if entry not in Following_List:
                         f.write(str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Following**" % len(adu))
 
