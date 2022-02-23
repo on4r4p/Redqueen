@@ -3440,9 +3440,7 @@ def Search_Keyword(word):
                         Search_nbr = len(searchresults)
                         Search_obj = searchresults
                     else:
-                        searchresults = Twitter_Api.search(
-                            q=word, tweet_mode="extended", count=100
-                        )
+                        searchresults = Twitter_Api.search(q=word, tweet_mode="extended", count=100)
                         Search_nbr = len(searchresults["statuses"])
                         Search_obj = searchresults["statuses"]
 
