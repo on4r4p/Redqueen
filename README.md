@@ -51,7 +51,7 @@ Search twitter for infoSec news made in ~2010 Still working somehow..
 
 -Post results in Irc and create a twitter clone server to fav and retweet results- 
 
-![](https://i.ibb.co/bzCMZXR/Screenshot-from-2022-02-23-01-33-01.png)
+![](https://i.ibb.co/264n4TS/Screenshot-from-2022-02-23-01-40-27.png)
 
 ## Description
 
