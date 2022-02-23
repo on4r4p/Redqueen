@@ -3244,7 +3244,12 @@ def Scoring(tweet, search):
                         time.sleep(Config.Time_Sleep)
                         Tweets_By_Same_User.append(tweet["user"]["screen_name"])
                         Retweet_List.append(tweet)
-                        Ban_Double_List.append(Tweext)
+                        if Tweext.startswith("RT"):
+                               origtweet = Tweext.find(":")
+                               twxt = Tweext[Tweext.find(":")+2:] 
+                               Ban_Double_List.append(twxt)
+                        else:
+                               Ban_Double_List.append(Tweext)
                         clickme = (
                             "https://twitter.com/"
                             + str(tweet["user"]["screen_name"])
