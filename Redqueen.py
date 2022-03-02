@@ -714,6 +714,9 @@ def loadvars():
     global Extract_Tweet_Data
     global NoResult_List
     global Emoji_List
+    global Ban_Double_List
+    global Total_Already_Send_Nbr
+
     Checkfiles = [
         Pth_TotalApi_Call,
         Pth_Update_Call,
@@ -848,11 +851,58 @@ def loadvars():
         Fig("digital", "Saved Server Tweets Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
+        for saved in Cleanfile(Pth_Text_Sent):
+            if saved not in Ban_Double_List:
+                Ban_Double_List.append(saved)
+                Total_Already_Send_Nbr += 1
+
+        print("*=*=*=*=*=*=*=*=*=*")
+        Fig("digital", "BanDouble Updated", True)
+        print("*=*=*=*=*=*=*=*=*=*")
+
+
+
         Fig("digital", "Done")
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
+
+def Checkdouble(tweet):
+        tweet = re.sub(r'http\S+', '', tweet)
+        for item in Ban_Double_List:
+            if len(item) >= Config.Minimum_Tweet_Length:
+                pos = 0
+                lng = len(item)
+                half = int(lng/2)
+                next = int(half) + pos
+                sample = item[pos : int(half)]
+                maxpos = pos + int(len(sample))
+
+                while int(maxpos) < int(lng):
+                    try:
+                        if str(sample) in str(tweet) and str(sample) != " ":
+                            Fig(
+                                "cybermedium",
+                                "Some parts are Identicals to a Previous Tweet :",
+                            )
+                            print("Found Matched :", sample)
+                            Saveid(id)
+                            maxpos = int(lng)
+                            Banned = True
+                            Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
+                            return(True)
+                        else:
+                            pos = pos + 1
+                            next = int(half) + pos
+                            sample = item[pos : int(next)]
+                            maxpos = pos + int(len(sample))
+                    except Exception as e:
+                        pos = pos + 1
+                        next = int(half) + pos
+                        sample = item[pos : int(next)]
+                        maxpos = pos + int(len(sample))
+        return(False)
 
 def title():
     print(Config.Trinity)
@@ -1433,7 +1483,7 @@ def Flush_NoResult():
     global NoResult_List
     try:
 
-        Fig("cybermedium", "SaveDouble()")
+        Fig("cybermedium", "NoResult()")
         print("Deleting No.Results content from Rq.Keywords")
         cnt = 0
         lines = Cleanfile(Pth_Keywords_Rq)
@@ -1473,6 +1523,8 @@ def Flush_NoResult():
 
 
 def SaveDouble(text):
+    global Ban_Double_List
+
     try:
 
         Fig("cybermedium", "SaveDouble()")
@@ -1485,6 +1537,7 @@ def SaveDouble(text):
             with open(Pth_Text_Sent, "a") as file:
                 file.write(str(text) + "\n")
 
+            Ban_Double_List.append(str(text))
             print("*=*=*=*=*=*=*=*=*=*")
             print("SAVING TWEET TO TMP :", text)
             Fig("digital", "Saved")
@@ -1496,24 +1549,6 @@ def SaveDouble(text):
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
-
-def CheckDouble():
-    global Ban_Double_List
-
-    try:
-
-        Fig("cybermedium", "CheckDbl()", True)
-
-        for saved in Cleanfile(Pth_Text_Sent):
-            if saved not in Ban_Double_List:
-                Ban_Double_List.append(saved)
-
-        print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "BanDouble Updated", True)
-        print("*=*=*=*=*=*=*=*=*=*")
-
-    except Exception as e:
-        Betterror(e, inspect.stack()[0][3])
 
 
 def flushtmp():
@@ -2166,6 +2201,19 @@ def Ban(tweet, sender, id, Bio):
 
         print("*=*=*=*=*=*=*=*=*=*")
 
+        if tweet in Ban_Double_List:
+            Fig("digital", "This tweet is Identical to a Previous tweet :")
+            Saveid(id)
+            Banned = True
+            Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
+            time.sleep(Config.Time_Sleep)
+            Fig("digital", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
+            return()
+
+        Banned = Checkdouble(tweet)
+
+
         if Banned is False:
 
             for item in Emoji_List:
@@ -2177,6 +2225,13 @@ def Ban(tweet, sender, id, Bio):
                         "cybermedium",
                         "This tweet contains an Emoticon and must die for some reason. ",
                     )
+        else:
+
+            print("Tweet: ", tweet)
+            Fig("digital", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
+            return()
+
 
         if Banned is False:
             for mustbe in Keywords_List:
@@ -2220,46 +2275,6 @@ def Ban(tweet, sender, id, Bio):
                 Banned = True
                 Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
                 time.sleep(Config.Time_Sleep)
-
-        if tweet in Ban_Double_List:
-            Fig("digital", "This tweet is Identical to a Previous tweet :")
-            Saveid(id)
-            Banned = True
-            Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
-            time.sleep(Config.Time_Sleep)
-
-        for item in Ban_Double_List:
-            if len(item) >= Config.Minimum_Tweet_Length:
-                pos = 0
-                lng = len(item)
-                half = lng / 2
-                next = int(half) + pos
-                sample = item[pos : int(half)]
-                maxpos = pos + int(len(sample))
-
-                while int(maxpos) < int(lng):
-                    try:
-                        if str(sample) in str(tweet) and str(sample) != " ":
-                            Fig(
-                                "cybermedium",
-                                "Some parts are Identicals to a Previous Tweet :",
-                            )
-                            print("Found Matched :", sample)
-                            Saveid(id)
-
-                            maxpos = int(lng)
-                            Banned = True
-                            Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
-                        else:
-                            pos = pos + 1
-                            next = int(half) + pos
-                            sample = item[pos : int(next)]
-                            maxpos = pos + int(len(sample))
-                    except:
-                        pos = pos + 1
-                        next = int(half) + pos
-                        sample = item[pos : int(next)]
-                        maxpos = pos + int(len(sample))
 
         if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
             Fig("digital", "Follow Friday")
@@ -2364,7 +2379,6 @@ def Scoring(tweet, search):
     global Update_Call_Nbr
     global Total_Update_Call_Nbr
     global Banned
-    global Ban_Double_List
     global AvgScore
     global Tweet_Age
     global Totale_Score_Nbr
@@ -2926,69 +2940,8 @@ def Scoring(tweet, search):
                         time.sleep(Config.Time_Sleep)
                         limits()
 
-                        Banned = False
-                        for forbid in Ban_Double_List:
-                            if Banned is False:
-                                if forbid in Tweext:
+                        Banned = Checkdouble(Tweext)
 
-                                    Fig(
-                                        "cybermedium",
-                                        "This tweet is Identical to a Previous tweet :",
-                                    )
-                                    print(Tweext)
-                                    Saveid(tweet["id"])
-                                    Fig("digital", "Going To Trash")
-                                    print("*=*=*=*=*=*=*=*=*=*")
-                                    Banned = True
-                                    Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
-                                    time.sleep(Config.Time_Sleep)
-
-                        for item in Ban_Double_List:
-
-                            if Banned is False and len(item) > 10:
-                                pos = 0
-                                lng = len(item)
-                                half = lng / 2
-                                next = int(half) + pos
-                                sample = item[pos : int(half)]
-                                maxpos = pos + int(len(sample))
-
-                                while int(maxpos) < int(lng):
-                                    try:
-                                        if (
-                                            str(sample) in str(Tweext)
-                                            and str(sample) != " "
-                                        ):
-
-                                            Fig(
-                                                "cybermedium",
-                                                "Some parts are Identicals to a Previous Tweet :",
-                                            )
-                                            print("Tweet :", Tweext)
-
-                                            print("Found Matched :", sample)
-                                            Saveid(id)
-
-                                            Fig("digital", "Going To Trash")
-                                            print("*=*=*=*=*=*=*=*=*=*")
-                                            time.sleep(Config.Time_Sleep)
-
-                                            maxpos = int(lng)
-                                            Banned = True
-                                            Total_Already_Send_Nbr = (
-                                                Total_Already_Send_Nbr + 1
-                                            )
-                                        else:
-                                            pos = pos + 1
-                                            next = int(half) + pos
-                                            sample = item[pos : int(next)]
-                                            maxpos = pos + int(len(sample))
-                                    except Exception as e:
-                                        Betterror(e, inspect.stack()[0][3])
-                                        pos = pos + 1
-                                        next = int(half) + pos
-                                        sample = item[pos : int(next)]
-                                        maxpos = pos + int(len(sample))
                         Idlist(tweet["id"])
 
                         if Banned is False:
@@ -3247,9 +3200,9 @@ def Scoring(tweet, search):
                         if Tweext.startswith("RT"):
                                origtweet = Tweext.find(":")
                                twxt = Tweext[Tweext.find(":")+2:] 
-                               Ban_Double_List.append(twxt)
+                               SaveDouble(twxt)
                         else:
-                               Ban_Double_List.append(Tweext)
+                               SaveDouble(Tweext)
                         clickme = (
                             "https://twitter.com/"
                             + str(tweet["user"]["screen_name"])
@@ -3265,7 +3218,6 @@ def Scoring(tweet, search):
                         )
                         IrSend(Format_To_Irc)
                         time.sleep(Config.Time_Sleep)
-                        SaveDouble(Tweext)
                         if Config.WEB_SERVER is True:
                             Extract_Tweet_Data(tweet)
 
@@ -3513,9 +3465,6 @@ def RedQueen():
         time.sleep(Config.Time_Sleep)
 
         loadvars()
-        time.sleep(Config.Time_Sleep)
-
-        CheckDouble()
         time.sleep(Config.Time_Sleep)
 
         Fig("digital", "Calling Flush function", True)
