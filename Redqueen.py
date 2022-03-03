@@ -809,6 +809,10 @@ def loadvars():
         for saved in Cleanfile(Pth_Already_Searched):
             Already_Searched_List.append(saved)
 
+        print("*=*=*=*=*=*=*=*=*=*")
+        Fig("digital", "Already Searched Loaded", True)
+        print("*=*=*=*=*=*=*=*=*=*")
+
         Fig("digital", "Loading Emoticon", True)
 
         for use_aliases, group in (
@@ -1622,6 +1626,7 @@ def flushtmp():
                 lfts = 86400 - Laps.seconds
 
                 print("==")
+                Fig("digital", "No need to flush", True)
                 Fig("digital", "Starting from Last Pth_Current_Session", True)
 
                 print("Numbers of seconds since the first api call :", Laps.seconds)
@@ -2182,52 +2187,188 @@ def limits():
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
+def IsKnown(coop):
+   if "@" + str(coop) in Following_List:
+       print("##")
+       print("This tweet is from a known user:",coop)
+       print("##")
+       return(True)
+   if "@" + str(coop) in Friends_List:
+       print("##")
+       print("This tweet is from a known friend:",coop)
+       print("##")
+       return(True)
+   return(False)
 
-def Ban(tweet, sender, id, Bio):
+def Ban(twitem):
 
-    global Banned
     global Total_Ban_By_NoResult_Nbr
     global Total_Ban_By_Keywords_Nbr
     global Total_Already_Send_Nbr
     global Total_Ban_By_FollowFriday_Nbr
     global Total_Ban_By_TooManyHashtags_Nbr
     global Total_Ban_By_BannedPeople_Nbr
+    global Total_Ban_By_Lang_Nbr
+    global Total_Ban_By_Date_Nbr
+
     try:
 
+        if "retweeted_status" in twitem:
+
+            Tweet_Id = str(twitem["retweeted_status"]["id"])
+            Tweet_Timestamp = twitem["retweeted_status"]["created_at"]
+            Tweet_Author = twitem["retweeted_status"]["user"]["screen_name"]
+            Tweet_Author_Bio = twitem["retweeted_status"]["user"]["description"]
+            Tweet_Rt_Author = twitem["user"]["screen_name"]
+            Tweet_Follower_Count = twitem["user"]["followers_count"]
+            Tweet_Favorite_Counter = twitem["retweeted_status"]["favorite_count"]
+            Tweet_Retweet_Counter = twitem["retweeted_status"]["retweet_count"]
+        else:
+            Tweet_Id = str(twitem["id"])
+            Tweet_Timestamp = twitem["created_at"]
+            Tweet_Author = twitem["user"]["screen_name"]
+            Tweet_Author_Bio = twitem["user"]["description"]
+            Tweet_Rt_Author = ""
+            Tweet_Follower_Count = twitem["user"]["followers_count"]
+            Tweet_Favorite_Counter = twitem["favorite_count"]
+            Tweet_Retweet_Counter = twitem["retweet_count"]
+
+        if twitem["lang"] not in Config.Allowed_Tweet_Lang:
+
+                Saveid(Tweet_Id)
+                Total_Ban_By_Lang_Nbr += 1
+                time.sleep(Config.Time_Sleep)
+                Fig("digital", "This tweet is written in a language not allowed")
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+
+
+        if Idlist(Tweet_Id) is True:
+                Total_Already_Send_Nbr += 1
+                time.sleep(Config.Time_Sleep)
+                Fig("digital", "This tweet has been already sent.")
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
+
+        if Tweet_Retweet_Counter < Config.Minimum_Tweet_Retweet:
+                    Fig("digital", "NOT ENOUGH RETWEET")
+                    Fig("digital", "Going To Trash")
+                    print("*=*=*=*=*=*=*=*=*=*")
+                    time.sleep(Config.Time_Sleep)
+                    return(True)
+
+        if Tweet_Retweet_Counter > Config.Maximum_Tweet_Retweet:
+            if "retweeted_status" in twitem:
+                    if IsKnown(Tweet_Rt_Author) is False:
+                        Fig("digital", "Too many retweets and not from a friend or follower")
+                        Fig("digital", "Going To Trash")
+                        print("*=*=*=*=*=*=*=*=*=*")
+                        return(True)
+            if IsKnown(Tweet_Author) is False:
+                        Fig("digital", "Too many retweets and not from a friend or follower")
+                        Fig("digital", "Going To Trash")
+                        print("*=*=*=*=*=*=*=*=*=*")
+                        return(True)
+        if Tweet_Favorite_Counter  > Config.Maximum_Tweet_Fav:
+            if "retweeted_status" in twitem:
+                    if IsKnown(Tweet_Rt_Author) is False:
+                        Fig("digital", "Too many fav and not from a friend or follower")
+                        Fig("digital", "Going To Trash")
+                        print("*=*=*=*=*=*=*=*=*=*")
+                        return(True)
+            if IsKnown(Tweet_Author) is False:
+                        Fig("digital", "Not enough followers")
+                        Fig("digital", "Going To Trash")
+                        print("*=*=*=*=*=*=*=*=*=*")
+                        return(True)
+
+
+        if Tweet_Follower_Count < Config.Minimum_User_Following:
+             if IsKnown(Tweet_Author) is False:
+                        Fig("digital", "Too many fav and not from a friend or follower")
+                        Fig("digital", "Going To Trash")
+                        print("*=*=*=*=*=*=*=*=*=*")
+                        return(True)
+
+
+        Tweet_Timestamp = Tweet_Timestamp.replace(" +0000 ", " ")
+        Timeformat = datetime.datetime.strptime(Tweet_Timestamp, "%a %b %d %H:%M:%S %Y").strftime(
+            "%Y-%m-%d %H:%M:%S"
+        )
+        Timestrip = datetime.datetime.strptime(Timeformat, "%Y-%m-%d %H:%M:%S")
+        Tweet_Age = datetime.datetime.now() - Timestrip
+
+
+        if "retweeted_status" in twitem:
+
+            if Tweet_Age.days >= Config.Maximum_Retweet_DayOld:
+                Fig("digital", "This tweet is too Old.")
+                print("This tweet was send at : ", Tweet_Age)
+                Saveid(Tweet_Id)
+                Total_Ban_By_Date_Nbr += 1
+                time.sleep(Config.Time_Sleep)
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
+
+        else:
+            if Tweet_Age.days >= Config.Maximum_Tweet_DayOld:
+                Fig("digital", "This retweet is too Old.")
+                print("This tweet was send at : ", Tweet_Age)
+                Saveid(Tweet_Id)
+                Total_Ban_By_Date_Nbr += 1
+                time.sleep(Config.Time_Sleep)
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
+
+        if "full_text" in twitem:
+            Tweet_Txt = twitem["full_text"]
+        else:
+            Tweet_Txt = twitem["text"]
+
+
+        if len(Tweet_Txt) < Config.Minimum_Tweet_Length:
+            Fig("digital", "NOT ENOUGH TEXT")
+            Fig("digital", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
+            return(True)
+
+
         UShallPass = 0
-        Twist = re.sub(r"[^A-Za-z0-9 ]+", "", tweet.lower())
-        Bio = re.sub(r"[^A-Za-z0-9 ]+", "", Bio.lower())
+        Twist = re.sub(r"[^A-Za-z0-9 ]+", "", Tweet_Txt.lower())
+        Tweet_Author_Bio = re.sub(r"[^A-Za-z0-9 ]+", "", Tweet_Author_Bio.lower())
         Fig("cybermedium", "Ban()")
 
         print("*=*=*=*=*=*=*=*=*=*")
 
-        if tweet in Ban_Double_List:
+        if Tweet_Txt in Ban_Double_List:
             Fig("digital", "This tweet is Identical to a Previous tweet :")
-            Saveid(id)
-            Banned = True
+            Saveid(Tweet_Id)
             Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
             time.sleep(Config.Time_Sleep)
             Fig("digital", "Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
-            return()
+            return(True)
 
-        Banned = Checkdouble(tweet)
+        Banned = Checkdouble(Tweet_Txt)
 
 
         if Banned is False:
 
             for item in Emoji_List:
-                emotst = tweet.count(item)
+                emotst = Tweet_Txt.count(item)
                 if emotst > Config.Maximum_Tweet_Emoticon:
                     print("Found those emoji : ", item)
-                    Banned = True
                     Fig(
                         "cybermedium",
                         "This tweet contains an Emoticon and must die for some reason. ",
                     )
+                    return(True)
         else:
 
-            print("Tweet: ", tweet)
+            print("Tweet: ", Tweet_Txt)
             Fig("digital", "Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
             return()
@@ -2245,9 +2386,12 @@ def Ban(tweet, sender, id, Bio):
 
             if UShallPass < Config.Minimum_Keywords_In_Tweet:
 
-                Fig("digital", "Did not found any Keyword in tweet.")
+                Fig("digital", "Did not found any Keyword in Tweet_Txt.")
                 Total_Ban_By_NoResult_Nbr = Total_Ban_By_NoResult_Nbr + 1
-                Banned = True
+                print("Tweet: ", Tweet_Txt)
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
             print("*=*=*=*=*=*=*=*=*=*")
 
         for forbid in Banned_Word_list:
@@ -2255,69 +2399,100 @@ def Ban(tweet, sender, id, Bio):
             if forbid in Twist:
                 Fig("digital", "This tweet contains banned words :")
                 print("** %s **" % str(forbid))
-                Banned = True
                 Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
                 time.sleep(Config.Time_Sleep)
+                print("Tweet: ", Tweet_Txt)
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
 
-            if forbid in Bio:
+            if forbid in Tweet_Author_Bio:
                 Fig("digital", "This user profile contains banned words :")
-                print(Bio)
+                print(Tweet_Author_Bio)
                 print("** %s **" % str(forbid))
-                Banned = True
                 Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
                 time.sleep(Config.Time_Sleep)
+                print("Tweet: ", Tweet_Txt)
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
 
         for forbid in Banned_User_list:
-            if str(forbid.lower()) in str(sender.lower()):
+            if str(forbid.lower()) in str(Tweet_Author.lower()):
 
                 Fig("digital", "This tweet is from a banned user :")
                 print("** %s **" % forbid)
-                Banned = True
                 Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
                 time.sleep(Config.Time_Sleep)
-
-        if tweet.count("@") >= Config.Maximum_Mention_In_Tweet:
-            Fig("digital", "Follow Friday")
-            Banned = True
-            Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
-            time.sleep(Config.Time_Sleep)
-
-        if tweet.count("#") >= Config.Maximum_Hashtag_In_Tweet:
-
-            Fig("digital", "HashTags Fever")
-            Banned = True
-            Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
-            time.sleep(Config.Time_Sleep)
-
-        if Tweets_By_Same_User.count(str(sender)) >= Config.Maximum_Tweet_By_User:
-            Fig("digital", "Too many Tweets From this user ")
-            Banned = True
-            Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
-            time.sleep(Config.Time_Sleep)
-        else:
-            print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(sender))
-            print("*=*=*=*=*=*=*=*=*=*")
-            time.sleep(Config.Time_Sleep)
-
-        if Banned is False:
-
-            Fig("digital", "Good To Go !!")
-            print("*=*=*=*=*=*=*=*=*=*")
-            time.sleep(Config.Time_Sleep)
-
-        else:
-
-            LuckyLuke = randint(0, Config.Luck_Factor)
-            print("Luck Score (%s/%s) " % (LuckyLuke, Config.Luck_Factor))
-            if LuckyLuke == 1:
-                Fig("digital", "Lucky Good To Go !!")
-                print("*=*=*=*=*=*=*=*=*=*")
-                time.sleep(Config.Time_Sleep)
-                Banned = False
-            else:
-                print("Tweet: ", tweet)
+                print("Tweet: ", Tweet_Txt)
                 Fig("digital", "Going To Trash")
                 print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
+
+        if len(Tweet_Rt_Author) > 0:
+            for forbid in Banned_User_list:
+                if str(forbid.lower()) in str(Tweet_RT_Author.lower()):
+
+                    Fig("digital", "This retweet is from a banned user :")
+                    print("** %s **" % forbid)
+                    Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
+                    time.sleep(Config.Time_Sleep)
+                    print("Tweet: ", Tweet_Txt)
+                    Fig("digital", "Going To Trash")
+                    print("*=*=*=*=*=*=*=*=*=*")
+                    return(True)
+
+        if Tweet_Txt.count("@") >= Config.Maximum_Mention_In_Tweet:
+            Fig("digital", "Follow Friday")
+            Total_Ban_By_FollowFriday_Nbr = Total_Ban_By_FollowFriday_Nbr + 1
+            time.sleep(Config.Time_Sleep)
+            print("Tweet: ", Tweet_Txt)
+            Fig("digital", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
+            return(True)
+
+        if Tweet_Txt.count("#") >= Config.Maximum_Hashtag_In_Tweet:
+
+            Fig("digital", "HashTags Fever")
+            Total_Ban_By_TooManyHashtags_Nbr = Total_Ban_By_TooManyHashtags_Nbr + 1
+            time.sleep(Config.Time_Sleep)
+            print("Tweet: ", Tweet_Txt)
+            Fig("digital", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
+            return(True)
+
+        if Tweets_By_Same_User.count(str(Tweet_Author)) >= Config.Maximum_Tweet_By_User:
+            Fig("digital", "Too many Tweets From this user ")
+            Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
+            time.sleep(Config.Time_Sleep)
+            print("Tweet: ", Tweet_Txt)
+            Fig("digital", "Going To Trash")
+            print("*=*=*=*=*=*=*=*=*=*")
+            return(True)
+        else:
+            print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(Tweet_Author))
+            print("*=*=*=*=*=*=*=*=*=*")
+            time.sleep(Config.Time_Sleep)
+
+        if len(Tweet_Rt_Author) > 0:
+            if Tweets_By_Same_User.count(str(Tweet_Rt_Author)) >= Config.Maximum_Tweet_By_User:
+                Fig("digital", "Too many Tweets From this user ")
+                Total_Ban_By_BannedPeople_Nbr = Total_Ban_By_BannedPeople_Nbr + 1
+                time.sleep(Config.Time_Sleep)
+                print("Tweet: ", Tweet_Txt)
+                Fig("digital", "Going To Trash")
+                print("*=*=*=*=*=*=*=*=*=*")
+                return(True)
+            else:
+                print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(Tweet_Rt_Author))
+                print("*=*=*=*=*=*=*=*=*=*")
+                time.sleep(Config.Time_Sleep)
+
+
+        Fig("digital", "Good To Go !!")
+        print("*=*=*=*=*=*=*=*=*=*")
+        time.sleep(Config.Time_Sleep)
+        return(False)
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
@@ -2378,14 +2553,9 @@ def Scoring(tweet, search):
     global Total_Call_Nbr
     global Update_Call_Nbr
     global Total_Update_Call_Nbr
-    global Banned
     global AvgScore
     global Tweet_Age
     global Totale_Score_Nbr
-    global Total_Already_Send_Nbr
-    global Total_Ban_By_Lang_Nbr
-    global Total_Ban_By_Date_Nbr
-    global Tweets_By_Same_User
     global RestABit_Trigger
     global ERRORCNT
     global Wait_Hour_Trigger
@@ -2393,10 +2563,8 @@ def Scoring(tweet, search):
     global RetweetSave
     try:
 
-        Bouffon = 0
         Score = 0
-        Banned = False
-        now = datetime.datetime.now()
+        LuckyLuke = randint(0, Config.Luck_Factor)
 
         Fig("cybermedium", "Scoring()")
 
@@ -2411,42 +2579,14 @@ def Scoring(tweet, search):
         Fig("digital", "Starting Scoring function")
         print("")
 
-        if "screen_name" in tweet["user"]:
-            tstjester = tweet["user"]["screen_name"]
-            if tstjester in Config.Special_Users:
-                Bouffon = 1
 
-        if len(Tweext) < Config.Minimum_Tweet_Length:
-            Banned = True
-            Fig("digital", "NOT ENOUGH TEXT")
-            Fig("digital", "Going To Trash")
-            print("*=*=*=*=*=*=*=*=*=*")
-        if Banned is False or Bouffon == 1:
-            if "retweet_count" in tweet:
+        if "retweet_count" in tweet:
 
                 print("##")
                 print(
                     "This tweet has been retweeted %i times " % tweet["retweet_count"]
                 )
                 print("##")
-                LuckyLuke = randint(0, Config.Luck_Factor)
-                if (
-                    tweet["retweet_count"] < Config.Minimum_Tweet_Retweet
-                    and LuckyLuke != 1
-                ):
-                    Banned = True
-                    Fig("digital", "NOT ENOUGH RETWEET")
-                    Fig("digital", "Going To Trash")
-                    print("*=*=*=*=*=*=*=*=*=*")
-                    time.sleep(Config.Time_Sleep)
-
-                if (
-                    tweet["retweet_count"] < Config.Minimum_Tweet_Retweet
-                    and LuckyLuke == 1
-                ):
-                    Fig("digital", "Not enough retweet")
-                    Fig("digital", "But lets give it a chance ...")
-                    print("*=*=*=*=*=*=*=*=*=*")
 
                 if tweet["retweet_count"] >= 1 and tweet["retweet_count"] <= 23:
                     Score = Score + int(tweet["retweet_count"])
@@ -2490,48 +2630,10 @@ def Scoring(tweet, search):
                         Score = Score + 23 + 21
                     if tweet["retweet_count"] > 210 and tweet["retweet_count"] <= 223:
                         Score = Score + 23 + 23
-                    if tweet["retweet_count"] > Config.Maximum_Tweet_Retweet:
-                        Fig(
-                            "cybermedium",
-                            "Too many Retweets checking if this tweet is from a known user or friend..",
-                        )
-                        coop = tweet["user"]["screen_name"]
-                        nogo = 1
-                        print("##")
-                        print("##")
-
-                        if "@" + str(coop) in Following_List:
-                            print("##")
-                            print(
-                                "This tweet is from a known user : ",
-                                tweet["user"]["screen_name"],
-                            )
-                            print("##")
-                            Score = Score + 123
-                            nogo = 0
-                        if "@" + str(coop) in Friends_List:
-                            print("##")
-                            print(
-                                "This tweet is from a friend : ",
-                                tweet["user"]["screen_name"],
-                            )
-                            print("##")
-                            nogo = 0
-                            Score = Score + 123
-                        if nogo == 1:
-                            print("Nop ...")
-                            print("Too many retweets to be legit.")
-                            Score = Score - 232
-                            Banned = True
-
-                else:
-                    pass
 
         if "entities" in tweet:
-
-            if Banned is False or Bouffon == 1:
-                nogo = 0
-                if (
+            nogo = 0
+            if (
                     "urls" in tweet["entities"]
                     and len(tweet["entities"]["urls"]) > Config.Minimum_Link_In_Tweet
                 ):
@@ -2619,41 +2721,8 @@ def Scoring(tweet, search):
                             Score = Score + 23 + 22
                         if fav > 220 and fav <= 323:
                             Score = Score + 23 + 23
-                        if fav >= Config.Maximum_Tweet_Fav:
-                            coop = tweet["user"]["screen_name"]
-                            nogo = 1
 
-                            print("##")
-                            print(
-                                "Too many Fav checking if this tweet is from a known user or friend ",
-                                coop,
-                            )
-                            print("##")
-
-                            if "@" + str(coop) in Following_List:
-                                print("##")
-                                print(
-                                    "This tweet is from a known user : ",
-                                    tweet["user"]["screen_name"],
-                                )
-                                print("##")
-                                Score = Score + 123
-                                nogo = 0
-                            if "@" + str(coop) in Friends_List:
-                                print("##")
-                                print(
-                                    "This tweet is from a friend : ",
-                                    tweet["user"]["screen_name"],
-                                )
-                                print("##")
-                                nogo = 0
-                                Score = Score + 123
-                            if nogo == 1:
-                                print("Too many Favs to be legit.")
-                                Score = Score - 232
-                                Banned = True
-
-                if (
+            if (
                     "followers_count" in tweet["user"]
                     and tweet["user"]["followers_count"] > Config.Minimum_User_Following
                 ):
@@ -2661,44 +2730,6 @@ def Scoring(tweet, search):
                     print("Source followers count : ", tweet["user"]["followers_count"])
                     print("##")
 
-                    if tweet["user"]["followers_count"] <= Config.Minimum_User_Friend:
-                        Fig("digital", "Not Enough Followers")
-                        print(tweet["user"]["followers_count"])
-                        coop = tweet["user"]["screen_name"]
-                        nogo = 1
-                        print("##")
-                        print(
-                            "Checking if this tweet is from a known user or friend ",
-                            coop,
-                        )
-                        print("##")
-
-                        if "@" + str(coop) in Following_List:
-                            print("##")
-                            print(
-                                "This tweet is from a known user : ",
-                                tweet["user"]["screen_name"],
-                            )
-                            print("##")
-
-                            nogo = 0
-                        if "@" + str(coop) in Friends_List:
-                            print("##")
-                            print(
-                                "This tweet is from a friend : ",
-                                tweet["user"]["screen_name"],
-                            )
-                            print("##")
-                            nogo = 0
-                            Score = Score + 123
-                        if nogo == 1:
-                            print("Nop...")
-                            Banned = True
-
-                        Fig("digital", "Going To Trash")
-                        print("*=*=*=*=*=*=*=*=*=*")
-                        Banned = True
-                        Score = Score - 10000
                     if tweet["user"]["followers_count"] > Config.Minimum_User_Friend:
                         Score = Score + 2
                     if (
@@ -2799,7 +2830,7 @@ def Scoring(tweet, search):
                     if tweet["user"]["followers_count"] > 10000:
                         Score = Score + 23
 
-                if (
+            if (
                     "user_mentions" in tweet["entities"]
                     and len(tweet["entities"]["user_mentions"])
                     > Config.Minimum_Tweet_Mention
@@ -2813,14 +2844,7 @@ def Scoring(tweet, search):
 
                     Score = Score + 1
 
-                    if (
-                        tweet["entities"]["user_mentions"][-1]["screen_name"]
-                        in Config.Special_Users
-                    ):
-
-                        Bouffon = 1
-
-                if (
+            if (
                     "verified" in tweet["entities"]
                     and len(tweet["entities"]["verified"]) == "True"
                 ):
@@ -2832,205 +2856,11 @@ def Scoring(tweet, search):
                     print("##")
                     Score = Score + 5
 
-                if "screen_name" in tweet["user"]:
+            if "screen_name" in tweet["user"]:
                     coop = tweet["user"]["screen_name"]
+                    if IsKnown(coop) is True:
+                       Score = Score + 5
 
-                    print("##")
-                    print("This tweet is from ", coop)
-                    print("##")
-
-                    if "@" + str(coop) in Following_List:
-                        print("##")
-                        print(
-                            "This tweet is from a known user : ",
-                            tweet["user"]["screen_name"],
-                        )
-                        print("##")
-                        Score = Score + 10
-
-                    if "@" + str(coop) in Friends_List:
-                        print("##")
-                        print(
-                            "This tweet is from a friend : ",
-                            tweet["user"]["screen_name"],
-                        )
-                        print("##")
-
-                        Score = Score + 5
-
-                    if (coop in Config.Special_Users) or Bouffon == 1:
-
-                        Score = Score + 9000
-                        randodge = [
-                            "Cool ",
-                            "Gorgeous ",
-                            "Soft ",
-                            "Enjoy ",
-                            "Totally ",
-                            "Awesome ",
-                            "Fun ",
-                            "Easy ",
-                            "Free ",
-                            "Wow ",
-                            "Much ",
-                            "Many ",
-                            "Too ",
-                            "So ",
-                            "Such ",
-                            "Very ",
-                            "Amaze ",
-                        ]
-                        dodgecoin = (
-                            str(choice(randodge)) + str(choice(Banned_Word_list)) + " "
-                        )
-                        time.sleep(Config.Time_Sleep)
-                        print(
-                            "================================================================================"
-                        )
-
-                        Fig("digital", "SUCH SCORE !!")
-
-                        figy = "Score = %i" % Score
-                        Fig("digital", str(figy))
-
-                        Fig("digital", "MUCH TWEET !!")
-
-                        Fig("digital", "Text:")
-                        Fig("digital", Tweext)
-                        time.sleep(Config.Time_Sleep)
-
-                        Fig("digital", "MANY RETWEET !!")
-
-                        figy = "Retweets = %i" % tweet["retweet_count"]
-                        Fig("digital", str(figy))
-                        time.sleep(Config.Time_Sleep)
-
-                        Fig("digital", "SO FAVORITE !!")
-
-                        figy = "Favourites = %i" % tweet["favorite_count"]
-                        Fig("digital", str(figy))
-                        time.sleep(Config.Time_Sleep)
-
-                        Fig("digital", "VERY TREND !!")
-
-                        figy = "Followers = %i" % tweet["user"]["followers_count"]
-                        Fig("digital", str(figy))
-                        time.sleep(Config.Time_Sleep)
-
-                        Fig("digital", "AMAZE TWEET!!")
-
-                        print(
-                            "================================================================================"
-                        )
-                        figy = "Amaze Now !"
-                        Fig("digital", str(figy))
-                        link = (
-                            "https://twitter.com/"
-                            + str(choice(randodge).replace(" ", ""))
-                            + "/status/"
-                            + str(tweet["id"])
-                        )
-                        twit = (
-                            Tweext.replace("@th3j35t3r", "th3b0uf0n")
-                            .replace("th3j35t3r", "th3b0uf0n")
-                            .replace("@jonathandata1", "charlathandata1")
-                            .replace("jonathandata1", "charlathandata1")
-                        )
-                        dodgelink = str(dodgecoin) + " " + str(link)
-                        time.sleep(Config.Time_Sleep)
-                        limits()
-
-                        Banned = Checkdouble(Tweext)
-
-                        Idlist(tweet["id"])
-
-                        if Banned is False:
-                            SaveDouble(str(twit))
-                            try:
-                                print(twit)
-
-                                if len(dodgelink) > 140:
-                                    dodgelink = dodgelink[:140]
-                                if len(twit) > 140:
-                                    twit = twit[:137] + "..."
-
-                                IrSend(twit)
-
-                                time.sleep(Config.Time_Sleep)
-
-                                IrSend(dodgelink)
-
-                                Fig("digital", "DONE")
-                                Api_Call_Nbr = Api_Call_Nbr + 2
-                                Update_Call_Nbr = Update_Call_Nbr + 2
-                                Saveid(tweet["id"])
-                                if ERRORCNT > 0:
-                                    ERRORCNT = ERRORCNT - 1
-
-                            except Exception as e:
-                                Betterror(e, inspect.stack()[0][3])
-                                Fig("bell", "Twython Error")
-
-                                print(e)
-
-                            Banned = True
-                        else:
-                            print(
-                                "================================================================================"
-                            )
-                            Fig("digital", " WOW Already Sent !!")
-                            print(
-                                "================================================================================"
-                            )
-                            time.sleep(Config.Time_Sleep)
-        TwtTime = tweet["created_at"]
-        TwtTime = TwtTime.replace(" +0000 ", " ")
-        Timed = datetime.datetime.strptime(TwtTime, "%a %b %d %H:%M:%S %Y").strftime(
-            "%Y-%m-%d %H:%M:%S"
-        )
-        TimeFinal = datetime.datetime.strptime(Timed, "%Y-%m-%d %H:%M:%S")
-        Tweet_Age = now - TimeFinal
-        print("This tweet was send at : ", TwtTime)
-
-        LuckyLuke = randint(0, Config.Luck_Factor)
-
-        if Banned is False:
-            if Tweet_Age.days >= Config.Maximum_Tweet_DayOld:
-                Fig("digital", "WAY TOO OLD !")
-                if LuckyLuke != 1:
-                    Banned = True
-                    Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
-                else:
-                    Fig("digital", "But who cares !")
-            else:
-                Score = Score + 12
-        if Banned is False:
-            if "retweeted_status" in tweet:
-                if (
-                    "created_at" in tweet["retweeted_status"]
-                    and len(tweet["retweeted_status"]["created_at"]) > 0
-                ):
-                    RtTime = tweet["retweeted_status"]["created_at"]
-                    RtTime = RtTime.replace(" +0000 ", " ")
-                    RtTimed = datetime.datetime.strptime(
-                        RtTime, "%a %b %d %H:%M:%S %Y"
-                    ).strftime("%Y-%m-%d %H:%M:%S")
-                    RtTimeFinal = datetime.datetime.strptime(
-                        RtTimed, "%Y-%m-%d %H:%M:%S"
-                    )
-                    RtTweet_Age = now - RtTimeFinal
-                    print("Retweet created at :", RtTimeFinal)
-
-                    if RtTweet_Age.days >= Config.Maximum_Retweet_DayOld:
-                        Fig("digital", "WAY TOO OLD !")
-                        if LuckyLuke != 1:
-                            Banned = True
-                            Total_Ban_By_Date_Nbr = Total_Ban_By_Date_Nbr + 1
-                        else:
-                            Fig("digital", "But who cares !")
-                else:
-                    Score = Score + 6
-        if Banned is False:
             if Tweet_Age.seconds < 3600:
                 Score = Score + 23
                 print("Less than an hour ago .")
@@ -3164,21 +2994,7 @@ def Scoring(tweet, search):
 
         AvgScore.append(Score)
 
-        if tweet["lang"] in Config.Allowed_Tweet_Lang:
-
-            AlreadySend = Idlist(tweet["id"])
-
-            if AlreadySend is False:
-
-                Ban(
-                    Tweext,
-                    tweet["user"]["screen_name"],
-                    tweet["id"],
-                    tweet["user"]["description"],
-                )
-
-                if Banned is False:
-                    if Score >= Config.Minimum_Tweet_Score:
+        if Score >= Config.Minimum_Tweet_Score:
                         Tweext = Tweext.replace("\n", " ")
                         print("######################################")
                         print("Adding to Retweet List")
@@ -3221,7 +3037,7 @@ def Scoring(tweet, search):
                         if Config.WEB_SERVER is True:
                             Extract_Tweet_Data(tweet)
 
-                    else:
+        else:
                         print("")
                         Fig("cybermedium", "But ..")
                         print(
@@ -3255,82 +3071,7 @@ def Scoring(tweet, search):
                         print("")
                         Totale_Score_Nbr = Totale_Score_Nbr + 1
                         time.sleep(Config.Time_Sleep)
-                else:
-                    print("")
-                    Fig("cybermedium", "But ..")
-                    print(
-                        "================================================================================"
-                    )
-                    Fig("digital", "Banned")
-                    print(
-                        "================================================================================"
-                    )
-                    print(Tweext)
 
-                    print(
-                        "================================================================================"
-                    )
-                    print(
-                        ":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :("
-                    )
-                    print("This tweet does not match the requirement to be retweeted.")
-                    print(
-                        ":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :("
-                    )
-                    print(
-                        "================================================================================"
-                    )
-                    print("")
-                    time.sleep(Config.Time_Sleep)
-            else:
-                print("")
-                Fig("cybermedium", "But ..")
-                print(
-                    "================================================================================"
-                )
-                Fig("digital", "Already sent !")
-                print(
-                    "================================================================================"
-                )
-                print(Tweext)
-
-                print("===================================")
-                print(":( :( :( :( :( :( :( :( :( :( :( :(")
-                print("This tweet has been already sent ..")
-                print(":( :( :( :( :( :( :( :( :( :( :( :(")
-                print("===================================")
-                print("")
-                Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
-                time.sleep(Config.Time_Sleep)
-
-        else:
-
-            Fig("cybermedium", "but ..")
-            print(
-                "================================================================================"
-            )
-            Fig("digital", "Language")
-            print(
-                "==============================================================================="
-            )
-            print("Language : ", tweet["lang"])
-            print(Tweext)
-            print(
-                "================================================================================"
-            )
-            print(
-                ":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :("
-            )
-            print("This tweet does not match the requirement needed to be retweeted.")
-            print(
-                ":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :("
-            )
-            print(
-                "================================================================================"
-            )
-            print("")
-            time.sleep(Config.Time_Sleep)
-            Total_Ban_By_Lang_Nbr = Total_Ban_By_Lang_Nbr + 1
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
@@ -3418,13 +3159,15 @@ def Search_Keyword(word):
                         for item in Search_obj:
                             time.sleep(Config.Time_Sleep)
                             if MasterPause_Trigger is False:
-                                Scoring(item, Search_ApiCallLeft_Nbr)
+                                if Ban(item) is False:
+                                   Scoring(item, Search_ApiCallLeft_Nbr)
                             else:
                                 while True:
                                     time.sleep(Config.Time_Sleep)
                                     if MasterPause_Trigger is False:
                                         break
-                                Scoring(item, Search_ApiCallLeft_Nbr)
+                                if Ban(item) is False:
+                                   Scoring(item, Search_ApiCallLeft_Nbr)
 
                     else:
                         print("****************************************")
