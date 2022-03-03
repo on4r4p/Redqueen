@@ -2431,7 +2431,7 @@ def Ban(twitem):
 
         if len(Tweet_Rt_Author) > 0:
             for forbid in Banned_User_list:
-                if str(forbid.lower()) in str(Tweet_RT_Author.lower()):
+                if str(forbid.lower()) in str(Tweet_Rt_Author.lower()):
 
                     Fig("digital", "This retweet is from a banned user :")
                     print("** %s **" % forbid)
@@ -2562,6 +2562,20 @@ def Scoring(tweet, search):
     global Wait_Half_Hour_Trigger
     global RetweetSave
     try:
+
+        if "retweeted_status" in twitem:
+
+            Tweet_Timestamp = twitem["retweeted_status"]["created_at"]
+        else:
+            Tweet_Timestamp = twitem["created_at"]
+
+        TwtTime = Tweet_Timestamp
+        TwtTime = TwtTime.replace(" +0000 ", " ")
+        Timed = datetime.datetime.strptime(TwtTime, "%a %b %d %H:%M:%S %Y").strftime(
+            "%Y-%m-%d %H:%M:%S"
+        )
+        TimeFinal = datetime.datetime.strptime(Timed, "%Y-%m-%d %H:%M:%S")
+        Tweet_Age = now - TimeFinal
 
         Score = 0
         LuckyLuke = randint(0, Config.Luck_Factor)
@@ -3149,6 +3163,9 @@ def Search_Keyword(word):
                     time.sleep(Config.Time_Sleep)
 
                 except Exception as e:
+                    if "Twitter API returned a 404 (Not Found)" in str(e):
+                        with open(Pth_NoResult, "a") as file:
+                            file.write(str(word) + "\n")
                     searchresults = []
                     Search_nbr = 0
                     Search_obj = []
