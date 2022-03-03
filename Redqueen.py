@@ -872,8 +872,8 @@ def loadvars():
         Betterror(e, inspect.stack()[0][3])
 
 
-def Checkdouble(tweet):
-        exist = False
+def Checkdouble(tweet,id):
+        banned = False
         tweet = re.sub(r'http\S+', '', tweet)
         for item in Ban_Double_List:
             if len(item) >= Config.Minimum_Tweet_Length:
@@ -894,7 +894,7 @@ def Checkdouble(tweet):
                             print("Found Matched :", sample)
                             Saveid(id)
                             maxpos = int(lng)
-                            Banned = True
+                            banned = True
                             Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
                             break
                         else:
@@ -907,10 +907,10 @@ def Checkdouble(tweet):
                         next = int(half) + pos
                         sample = item[pos : int(next)]
                         maxpos = pos + int(len(sample))
-                if exist is True:
+                if banned is True:
                    break
 
-        if exist is True:
+        if banned is True:
            return(True)
         else:
            return(False)
@@ -2359,7 +2359,7 @@ def Ban(twitem):
             print("*=*=*=*=*=*=*=*=*=*")
             return(True)
 
-        Banned = Checkdouble(Tweet_Txt)
+        Banned = Checkdouble(Tweet_Txt,Tweet_Id)
 
 
         if Banned is False:
@@ -2510,7 +2510,7 @@ def Saveid(id):
         time.sleep(Config.Time_Sleep)
 
         with open(Pth_Tweets_Sent, "a") as file:
-            file.write(str(id) + "\n")
+            file.write("\n"+ str(id) + "\n")
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
         Fig("digital", "Saved")
