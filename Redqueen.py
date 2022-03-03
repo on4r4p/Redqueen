@@ -2469,10 +2469,10 @@ def Ban(twitem):
             Fig("digital", "Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
             return(True)
-        else:
-            print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(Tweet_Author))
-            print("*=*=*=*=*=*=*=*=*=*")
-            time.sleep(Config.Time_Sleep)
+#        else:
+#            print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(Tweet_Author))
+#            print("*=*=*=*=*=*=*=*=*=*")
+#            time.sleep(Config.Time_Sleep)
 
         if len(Tweet_Rt_Author) > 0:
             if Tweets_By_Same_User.count(str(Tweet_Rt_Author)) >= Config.Maximum_Tweet_By_User:
@@ -2483,10 +2483,10 @@ def Ban(twitem):
                 Fig("digital", "Going To Trash")
                 print("*=*=*=*=*=*=*=*=*=*")
                 return(True)
-            else:
-                print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(Tweet_Rt_Author))
-                print("*=*=*=*=*=*=*=*=*=*")
-                time.sleep(Config.Time_Sleep)
+#            else:
+#                print("Nbr of tweets for this user : ", Tweets_By_Same_User.count(Tweet_Rt_Author))
+#                print("*=*=*=*=*=*=*=*=*=*")
+#                time.sleep(Config.Time_Sleep)
 
 
         Fig("digital", "Good To Go !!")
@@ -2563,11 +2563,11 @@ def Scoring(tweet, search):
     global RetweetSave
     try:
 
-        if "retweeted_status" in twitem:
+        if "retweeted_status" in tweet:
 
-            Tweet_Timestamp = twitem["retweeted_status"]["created_at"]
+            Tweet_Timestamp = tweet["retweeted_status"]["created_at"]
         else:
-            Tweet_Timestamp = twitem["created_at"]
+            Tweet_Timestamp = tweet["created_at"]
 
         TwtTime = Tweet_Timestamp
         TwtTime = TwtTime.replace(" +0000 ", " ")
