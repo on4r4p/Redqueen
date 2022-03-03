@@ -2568,7 +2568,7 @@ def Scoring(tweet, search):
             Tweet_Timestamp = tweet["retweeted_status"]["created_at"]
         else:
             Tweet_Timestamp = tweet["created_at"]
-
+        now = datetime.datetime.now()
         TwtTime = Tweet_Timestamp
         TwtTime = TwtTime.replace(" +0000 ", " ")
         Timed = datetime.datetime.strptime(TwtTime, "%a %b %d %H:%M:%S %Y").strftime(
