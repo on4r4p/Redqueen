@@ -873,6 +873,7 @@ def loadvars():
 
 
 def Checkdouble(tweet):
+        exist = False
         tweet = re.sub(r'http\S+', '', tweet)
         for item in Ban_Double_List:
             if len(item) >= Config.Minimum_Tweet_Length:
@@ -895,7 +896,7 @@ def Checkdouble(tweet):
                             maxpos = int(lng)
                             Banned = True
                             Total_Already_Send_Nbr = Total_Already_Send_Nbr + 1
-                            return(True)
+                            break
                         else:
                             pos = pos + 1
                             next = int(half) + pos
@@ -906,7 +907,13 @@ def Checkdouble(tweet):
                         next = int(half) + pos
                         sample = item[pos : int(next)]
                         maxpos = pos + int(len(sample))
-        return(False)
+                if exist is True:
+                   break
+
+        if exist is True:
+           return(True)
+        else:
+           return(False)
 
 def title():
     print(Config.Trinity)
