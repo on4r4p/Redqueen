@@ -3087,7 +3087,7 @@ def Scoring(tweet, search):
                             for url in tweet["entities"]["urls"]:
                                 Tweet_Urls.append(url["expanded_url"])
                         if "media" in tweet["entities"]:
-                            for media in tweet["retweeted_status"]["entities"]["media"]:
+                            for media in tweet["entities"]["media"]:
                                 Tweet_Urls.append(media["media_url"])
                         if "retweeted_status" in tweet:
                             if "urls" in tweet["retweeted_status"]["entities"]:
