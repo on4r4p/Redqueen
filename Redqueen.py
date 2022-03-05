@@ -3086,10 +3086,16 @@ def Scoring(tweet, search):
                         if "urls" in tweet["entities"]:
                             for url in tweet["entities"]["urls"]:
                                 Tweet_Urls.append(url["expanded_url"])
+                        if "media" in tweet["entities"]:
+                            for media in tweet["retweeted_status"]["entities"]["media"]:
+                                Tweet_Urls.append(media["media_url"])
                         if "retweeted_status" in tweet:
                             if "urls" in tweet["retweeted_status"]["entities"]:
                                for url in tweet["retweeted_status"]["entities"]["urls"]:
                                    Tweet_Urls.append(url["expanded_url"])
+                            if "media" in tweet["retweeted_status"]["entities"]:
+                               for media in tweet["retweeted_status"]["entities"]["media"]:
+                                   Tweet_Urls.append(media["media_url"])
 
                         if Tweext.startswith("RT"):
                                origtweet = Tweext.find(":")
