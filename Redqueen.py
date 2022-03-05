@@ -88,6 +88,10 @@ Pth_Text_Sent = str(Pth_Data) + "Text.Sent.Rq"
 
 Pth_Rq_Server_Save = str(Pth_Data) + "Server.Save.Rq"
 
+
+Pth_Url_Sent = str(Pth_Data) + "Url.Sent.Rq"
+
+
 RestABit_Trigger = False
 
 Twitter_Api = ""
@@ -103,6 +107,8 @@ Banned_Word_list = []
 Banned_User_list = []
 
 Ban_Double_List = []
+
+Ban_Double_Url_List = []
 
 Rss_Url_List = []
 
@@ -716,6 +722,7 @@ def loadvars():
     global Emoji_List
     global Ban_Double_List
     global Total_Already_Send_Nbr
+    global Ban_Double_Url_List
 
     Checkfiles = [
         Pth_TotalApi_Call,
@@ -725,6 +732,7 @@ def loadvars():
         Pth_Current_Session,
         Pth_Rq_Server_Save,
         Pth_Tweets_Sent,
+        Pth_Url_Sent,
     ]
 
     for cf in Checkfiles:
@@ -860,6 +868,12 @@ def loadvars():
                 Ban_Double_List.append(saved)
                 Total_Already_Send_Nbr += 1
 
+        for saved in Cleanfile(Pth_Url_Sent):
+            if saved not in Ban_Double_Url_List:
+                Ban_Double_Url_List.append(saved)
+
+
+
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "BanDouble Updated", True)
         print("*=*=*=*=*=*=*=*=*=*")
@@ -871,10 +885,19 @@ def loadvars():
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
-
-def Checkdouble(tweet,id):
+def Checkdouble(tweet,id,urls):
         banned = False
         tweet = re.sub(r'http\S+', '', tweet)
+
+        for item in urls:
+            if item in Ban_Double_Url_List:
+                Fig(
+                    "cybermedium",
+                    "Link Already Sent :",
+                   )
+                print("Found Matched :", item)
+                return(True)
+
         for item in Ban_Double_List:
             if len(item) >= Config.Minimum_Tweet_Length:
                 pos = 0
@@ -1532,15 +1555,24 @@ def Flush_NoResult():
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
-
-def SaveDouble(text):
+def SaveDouble(text,urls):
     global Ban_Double_List
+    global Ban_Double_Url_List
 
     try:
 
         Fig("cybermedium", "SaveDouble()")
 
         time.sleep(Config.Time_Sleep)
+        with open(Pth_Url_Sent, "a") as file:
+            for u in urls:
+                if u not in Ban_Double_Url_List:
+                    file.write("\n"+str(u)+"\n")
+                    Ban_Double_Url_List.append(u)
+        print("*=*=*=*=*=*=*=*=*=*")
+        print("SAVING URLS :", urls)
+        Fig("digital", "Saved")
+        print("*=*=*=*=*=*=*=*=*=*")
 
         text = text.replace("\n", "")
         if text not in Ban_Double_List:
@@ -2240,6 +2272,19 @@ def Ban(twitem):
             Tweet_Favorite_Counter = twitem["favorite_count"]
             Tweet_Retweet_Counter = twitem["retweet_count"]
 
+        Tweet_Origin_Link = ("https://twitter.com/" + str(twitem["user"]["screen_name"]) + "/status/" + str(twitem["id"]))
+
+        Tweet_Urls = []
+        Tweet_Urls.append(Tweet_Origin_Link)
+
+        if "urls" in twitem["entities"]:
+           for url in twitem["entities"]["urls"]:
+               Tweet_Urls.append(url["expanded_url"])
+        if "retweeted_status" in twitem:
+           if "urls" in twitem["retweeted_status"]["entities"]:
+               for url in twitem["retweeted_status"]["entities"]["urls"]:
+                     Tweet_Urls.append(url["expanded_url"])
+
         if twitem["lang"] not in Config.Allowed_Tweet_Lang:
 
                 Saveid(Tweet_Id)
@@ -2359,8 +2404,7 @@ def Ban(twitem):
             print("*=*=*=*=*=*=*=*=*=*")
             return(True)
 
-        Banned = Checkdouble(Tweet_Txt,Tweet_Id)
-
+        Banned = Checkdouble(Tweet_Txt,Tweet_Id,Tweet_Urls)
 
         if Banned is False:
 
@@ -2378,7 +2422,8 @@ def Ban(twitem):
             print("Tweet: ", Tweet_Txt)
             Fig("digital", "Going To Trash")
             print("*=*=*=*=*=*=*=*=*=*")
-            return()
+            return(True)
+
 
 
         if Banned is False:
@@ -3034,12 +3079,24 @@ def Scoring(tweet, search):
                         time.sleep(Config.Time_Sleep)
                         Tweets_By_Same_User.append(tweet["user"]["screen_name"])
                         Retweet_List.append(tweet)
+                        Tweet_Urls = []
+                        Tweet_Origin_Link = ("https://twitter.com/" + str(tweet["user"]["screen_name"]) + "/status/" + str(tweet["id"]))
+                        Tweet_Urls.append(Tweet_Origin_Link)
+
+                        if "urls" in tweet["entities"]:
+                            for url in tweet["entities"]["urls"]:
+                                Tweet_Urls.append(url["expanded_url"])
+                        if "retweeted_status" in tweet:
+                            if "urls" in tweet["retweeted_status"]["entities"]:
+                               for url in tweet["retweeted_status"]["entities"]["urls"]:
+                                   Tweet_Urls.append(url["expanded_url"])
+
                         if Tweext.startswith("RT"):
                                origtweet = Tweext.find(":")
                                twxt = Tweext[Tweext.find(":")+2:] 
-                               SaveDouble(twxt)
+                               SaveDouble(twxt,Tweet_Urls)
                         else:
-                               SaveDouble(Tweext)
+                               SaveDouble(Tweext,Tweet_Urls)
                         clickme = (
                             "https://twitter.com/"
                             + str(tweet["user"]["screen_name"])
