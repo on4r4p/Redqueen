@@ -84,9 +84,9 @@ Pth_Current_Session = str(Pth_Data) + "Current.Session.Rq"
 
 Pth_NoResult_Rq = str(Pth_Data) + "No.Result.Rq"
 
-Pth_Tweets_Sent_Rq = str(Pth_Data) + "Tweets.Sent.Rq"
+Pth_Tweets_Id_Rq = str(Pth_Data) + "Tweets.Id.Sent.Rq"
 
-Pth_Text_Sent_Rq = str(Pth_Data) + "Text.Sent.Rq"
+Pth_Text_Sent_Rq = str(Pth_Data) + "Tweets.Txt.Sent.Rq"
 
 Pth_Rq_Server_Save = str(Pth_Data) + "Server.Save.Rq"
 
@@ -736,7 +736,7 @@ def Load_Variables():
         Pth_Current_Session,
         Pth_Rq_Server_Save,
         Pth_Banned_Word_Rq,
-        Pth_Tweets_Sent_Rq,
+        Pth_Tweets_Id_Rq,
         Pth_Banned_People_Rq,
         Pth_Keywords_Rq,
         Pth_Users_Timelines_Rq,
@@ -1711,18 +1711,25 @@ def SaveDouble(text,urls):
 
         time.sleep(Config.Time_Sleep)
         with open(Pth_Url_Sent_Rq, "a") as file:
+            UrlDouble = False
             for u in urls:
                 if u not in Ban_Double_Url_List:
                     file.write("\n"+str(u)+"\n")
                     Ban_Double_Url_List.append(u)
-        print("*=*=*=*=*=*=*=*=*=*")
-        print("SAVING URLS :", urls)
-        Fig("digital", "Saved")
-        print("*=*=*=*=*=*=*=*=*=*")
-
+                else:
+                    UrlDouble = True
+        if UrlDouble is False:
+           print("*=*=*=*=*=*=*=*=*=*")
+           print("SAVING URLS :", urls)
+           Fig("digital", "Saved")
+           print("*=*=*=*=*=*=*=*=*=*")
+        else:
+          print("*=*=*=*=*=*=*=*=*=*")
+          print("Already Saved")
+          print("*=*=*=*=*=*=*=*=*=*")
         text = text.replace("\n", "")
         if text not in Ban_Double_List:
-
+            TxtDouble = False
             with open(Pth_Text_Sent_Rq, "a") as file:
                 file.write("\n"+str(text) + "\n")
 
@@ -1732,9 +1739,17 @@ def SaveDouble(text,urls):
             Fig("digital", "Saved")
             print("*=*=*=*=*=*=*=*=*=*")
         else:
-            print("Already saved")
-
+          TxtDouble = True
+          print("*=*=*=*=*=*=*=*=*=*")
+          print("Already Saved")
+          print("*=*=*=*=*=*=*=*=*=*")
         time.sleep(Config.Time_Sleep)
+
+        if UrlDouble is True or TxtDouble is True:
+          return(True)
+        else:
+          return(False)
+
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
@@ -2399,6 +2414,8 @@ def Ban(twitem):
     global Total_Ban_By_Lang_Nbr
     global Total_Ban_By_Date_Nbr
 
+    Fig("cybermedium", "Ban()")
+
     try:
 
         if "retweeted_status" in twitem:
@@ -2540,7 +2557,6 @@ def Ban(twitem):
         UShallPass = 0
         Twist = re.sub(r"[^A-Za-z0-9 ]+", "", Tweet_Txt.lower())
         Tweet_Author_Bio = re.sub(r"[^A-Za-z0-9 ]+", "", Tweet_Author_Bio.lower())
-        Fig("cybermedium", "Ban()")
 
         print("*=*=*=*=*=*=*=*=*=*")
 
@@ -2703,7 +2719,7 @@ def Saveid(id):
         Fig("cybermedium", "Saveid()")
         time.sleep(Config.Time_Sleep)
 
-        with open(Pth_Tweets_Sent_Rq, "a") as file:
+        with open(Pth_Tweets_Id_Rq, "a") as file:
             file.write("\n"+ str(id) + "\n")
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
@@ -2724,10 +2740,10 @@ def Idlist(id):
 
         if Id_Done_Trigger == False:
 
-            Total_Sent_Nbr = sum(1 for line in open(Pth_Tweets_Sent_Rq))
+            Total_Sent_Nbr = sum(1 for line in open(Pth_Tweets_Id_Rq))
             Id_Done_Trigger = True
 
-        for saved in Cleanfile(Pth_Tweets_Sent_Rq):
+        for saved in Cleanfile(Pth_Tweets_Id_Rq):
 
             if saved != "\n" or saved != "":
                 if str(saved) in str(id):
@@ -3209,7 +3225,32 @@ def Scoring(tweet, search):
 
         AvgScore.append(Score)
 
-        if Score >= Config.Minimum_Tweet_Score:
+        Tweet_Urls = []
+        Tweet_Origin_Link = ("https://twitter.com/" + str(tweet["user"]["screen_name"]) + "/status/" + str(tweet["id"]))
+        Tweet_Urls.append(Tweet_Origin_Link)
+
+        if "urls" in tweet["entities"]:
+            for url in tweet["entities"]["urls"]:
+                Tweet_Urls.append(url["expanded_url"])
+        if "media" in tweet["entities"]:
+            for media in tweet["entities"]["media"]:
+                Tweet_Urls.append(media["media_url"])
+        if "retweeted_status" in tweet:
+            if "urls" in tweet["retweeted_status"]["entities"]:
+               for url in tweet["retweeted_status"]["entities"]["urls"]:
+                   Tweet_Urls.append(url["expanded_url"])
+            if "media" in tweet["retweeted_status"]["entities"]:
+               for media in tweet["retweeted_status"]["entities"]["media"]:
+                   Tweet_Urls.append(media["media_url"])
+
+        if Tweext.startswith("RT"):
+               origtweet = Tweext.find(":")
+               twxt = Tweext[Tweext.find(":")+2:] 
+               LastCheck = SaveDouble(twxt,Tweet_Urls)
+        else:
+               LastCheck = SaveDouble(Tweext,Tweet_Urls)
+
+        if Score >= Config.Minimum_Tweet_Score and LastCheck is False:
                         Tweext = Tweext.replace("\n", " ")
                         print("######################################")
                         print("Adding to Retweet List")
@@ -3226,32 +3267,11 @@ def Scoring(tweet, search):
                         print("")
 
                         time.sleep(Config.Time_Sleep)
-                        Tweets_By_Same_User.append(tweet["user"]["screen_name"])
                         Retweet_List.append(tweet)
-                        Tweet_Urls = []
-                        Tweet_Origin_Link = ("https://twitter.com/" + str(tweet["user"]["screen_name"]) + "/status/" + str(tweet["id"]))
-                        Tweet_Urls.append(Tweet_Origin_Link)
-
-                        if "urls" in tweet["entities"]:
-                            for url in tweet["entities"]["urls"]:
-                                Tweet_Urls.append(url["expanded_url"])
-                        if "media" in tweet["entities"]:
-                            for media in tweet["entities"]["media"]:
-                                Tweet_Urls.append(media["media_url"])
+                        Tweets_By_Same_User.append(tweet["user"]["screen_name"])
                         if "retweeted_status" in tweet:
-                            if "urls" in tweet["retweeted_status"]["entities"]:
-                               for url in tweet["retweeted_status"]["entities"]["urls"]:
-                                   Tweet_Urls.append(url["expanded_url"])
-                            if "media" in tweet["retweeted_status"]["entities"]:
-                               for media in tweet["retweeted_status"]["entities"]["media"]:
-                                   Tweet_Urls.append(media["media_url"])
+                            Tweets_By_Same_User.append(tweet["retweeted_status"]["user"]["screen_name"])
 
-                        if Tweext.startswith("RT"):
-                               origtweet = Tweext.find(":")
-                               twxt = Tweext[Tweext.find(":")+2:] 
-                               SaveDouble(twxt,Tweet_Urls)
-                        else:
-                               SaveDouble(Tweext,Tweet_Urls)
                         clickme = (
                             "https://twitter.com/"
                             + str(tweet["user"]["screen_name"])
@@ -3292,9 +3312,14 @@ def Scoring(tweet, search):
                         print(
                             ":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :("
                         )
-                        print(
+                        if LastCheck is False:
+                            print(
                             "This tweet does not match the requirement to be retweeted. (Score)"
-                        )
+                            )
+                        else:
+                            print(
+                            "This tweet does not match the requirement to be retweeted. (Already Sent)"
+                            )
                         print(
                             ":( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :( :("
                         )
@@ -3395,6 +3420,11 @@ def Search_Keyword(word):
                         for item in Search_obj:
                             time.sleep(Config.Time_Sleep)
                             if MasterPause_Trigger is False:
+                                try:
+                                   txt = "Loading tweets for " + str(word)
+                                   Fig("digital", txt)
+                                except Exception as e:
+                                   Betterror(e, inspect.stack()[0][3])
                                 if Ban(item) is False:
                                    Scoring(item, Search_ApiCallLeft_Nbr)
                             else:
