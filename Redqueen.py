@@ -646,8 +646,8 @@ def Error_Log(Err_to_log):
     try:
 
         with open(Pth_Error_Log, "a+") as fuck:
-            fuck.write(str(CurrentDate) + "\n")
-            fuck.write(Err_to_log + "\n")
+            fuck.write("\n"+str(CurrentDate) + "\n")
+            fuck.write("\n"+Err_to_log + "\n")
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
@@ -1061,14 +1061,14 @@ def Request(cmd):
             "adduser:",
             "deluser:",
             "banuser:",
-            "addtimeline",
-            "deltimeline",
-            "bantimeline",
+            "addtimeline:",
+            "deltimeline:",
+            "bantimeline:",
             "addkeyword:",
             "delkeyword:",
             "bankeyword:",
             "addfriend:",
-            "delfriend",
+            "delfriend:",
             "banfriend:",
             "addrss:",
             "delrss:",
@@ -1462,11 +1462,11 @@ def Request(cmd):
                             print("No rss found (flux must starts with http)")
             if reconized == False:
                 with open(Pth_Data + "Request.log.Rq", "a") as file:
-                    file.write(log + "\n")
+                    file.write("\n"+log + "\n")
                 return "Cmd not recognised."
 
         with open(Pth_Data + "Request.log.Rq", "a") as f:
-            f.write(log + "\n")
+            f.write("\n"+log + "\n")
 
         if RmNores is True:
             ret = Flush_NoResult()
@@ -1478,7 +1478,7 @@ def Request(cmd):
             with open(Pth_Users_Timelines_Rq, "a") as f:
                 for entry in adt:
                     if entry not in Timelines_List:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
 
             output.append("**Adding %s entry in Users.Timelines.Rq**" % len(adk))
 
@@ -1487,7 +1487,7 @@ def Request(cmd):
             with open(Pth_Banned_People_Rq, "a") as f:
                 for entry in bt:
                     if entry not in Banned_User_list:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Adding %s entry in Bannedpeople.Rq**" % len(bt))
 
         if len(delt) > 0:
@@ -1508,7 +1508,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delt:
                         if line.strip("\n") != entry:
-                            f.write(line + "\n")
+                            f.write("\n"+line + "\n")
             output.append("**Deleting %s entry in Users.Timelines.Rq**" % len(delt))
 
 
@@ -1518,7 +1518,7 @@ def Request(cmd):
             with open(Pth_Rss_Rq, "a") as f:
                 for entry in adrss:
                     if entry not in Rss_Url_List:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Added %s new entry to Rq.Rss**" % len(adrss))
 
         if len(delrss) > 0:
@@ -1539,7 +1539,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delrss:
                         if line.strip("\n") != entry:
-                            f.write(line + "\n")
+                            f.write("\n"+line + "\n")
             output.append("**Deleting %s entry in Rq.Rss**" % len(delrss))
 
         if len(delf) > 0:
@@ -1560,7 +1560,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delf:
                         if line.strip("\n") != entry:
-                            f.write(line + "\n")
+                            f.write("\n"+line + "\n")
             output.append("**Deleting %s entry in Rq.Friends**" % len(delf))
 
         if len(delu) > 0:
@@ -1581,7 +1581,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delu:
                         if line.strip("\n") != entry:
-                            f.write(line + "\n")
+                            f.write("\n"+line + "\n")
             output.append("**Deleting %s entry in Rq.Following**" % len(delu))
 
         if len(delk) > 0:
@@ -1602,7 +1602,7 @@ def Request(cmd):
                 for line in lines:
                     for entry in delk:
                         if line.strip("\n") != entry:
-                            f.write(line + "\n")
+                            f.write("\n"+line + "\n")
             output.append("**Deleting %s entry in Rq.Keywords**" % len(delk))
 
         if len(adk) > 0:
@@ -1610,7 +1610,7 @@ def Request(cmd):
             with open(Pth_Keywords_Rq, "a") as f:
                 for entry in adk:
                     if entry not in Keywords_List:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
 
             output.append("**Adding %s entry in Rq.Keywords**" % len(adk))
 
@@ -1619,7 +1619,7 @@ def Request(cmd):
             with open(Pth_Following_Rq, "a") as f:
                 for entry in adu:
                     if entry not in Following_List:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Following**" % len(adu))
 
         if len(adf) > 0:
@@ -1627,7 +1627,7 @@ def Request(cmd):
             with open(Pth_Friends_Rq, "a") as f:
                 for entry in adf:
                     if entry not in Friends_List:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Friends**" % len(adf))
 
         if len(bu) > 0:
@@ -1635,7 +1635,7 @@ def Request(cmd):
             with open(Pth_Banned_People_Rq, "a") as f:
                 for entry in bu:
                     if entry not in Banned_User_list:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Bannedpeople**" % len(bu))
 
         if len(bf) > 0:
@@ -1643,7 +1643,7 @@ def Request(cmd):
             with open(Pth_Banned_People_Rq, "a") as f:
                 for entry in bf:
                     if entry not in Banned_User_list:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Bannedpeople**" % len(bf))
 
         if len(bk) > 0:
@@ -1651,7 +1651,7 @@ def Request(cmd):
             with open(Pth_Banned_Word_Rq, "a") as f:
                 for entry in bk:
                     if entry not in Banned_Word_list:
-                        f.write(str(entry) + "\n")
+                        f.write("\n"+str(entry) + "\n")
             output.append("**Adding %s entry in Rq.Bannedword**" % len(bk))
         output.append("**Done**")
         return output
@@ -1682,7 +1682,7 @@ def Flush_NoResult():
             for line in lines:
                 for entry in NoResult_List:
                     if line.strip("\n") != entry:
-                        f.write(line + "\n")
+                        f.write("\n"+line + "\n")
                     else:
                         print("Removed:", entry)
                         cnt += 1
@@ -1724,7 +1724,7 @@ def SaveDouble(text,urls):
         if text not in Ban_Double_List:
 
             with open(Pth_Text_Sent_Rq, "a") as file:
-                file.write(str(text) + "\n")
+                file.write("\n"+str(text) + "\n")
 
             Ban_Double_List.append(str(text))
             print("*=*=*=*=*=*=*=*=*=*")
@@ -1841,7 +1841,7 @@ def Last_Session(lastsearch):
 
             with open(Pth_Already_Searched_Rq, "a") as file:
                 for words in lastsearch:
-                    file.write(words + "\n")
+                    file.write("\n"+words + "\n")
                     Fig("digital", "Marking " + words + " as old . ")
 
             Menu_Check_Trigger = True
@@ -2081,7 +2081,7 @@ def RssFeeds(ttl):
                                 )
                                 Extracted_Datas.append(Rss_tuple)
                             with open(Pth_Data + "RssSave", "a") as f:
-                                f.write(str(format) + "\n")
+                                f.write("\n"+str(format) + "\n")
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
                     time.sleep(Config.Time_Sleep)
@@ -3384,7 +3384,7 @@ def Search_Keyword(word):
                 except Exception as e:
                     if "Twitter API returned a 404 (Not Found)" in str(e):
                         with open(Pth_NoResult_Rq, "a") as file:
-                            file.write(str(word) + "\n")
+                            file.write("\n"+str(word) + "\n")
                     searchresults = []
                     Search_nbr = 0
                     Search_obj = []
@@ -3414,7 +3414,7 @@ def Search_Keyword(word):
                         Fig("digital", "Saving unwanted search to no.result")
                         time.sleep(Config.Time_Sleep)
                         with open(Pth_NoResult_Rq, "a") as file:
-                            file.write(str(word) + "\n")
+                            file.write("\n"+str(word) + "\n")
 
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
