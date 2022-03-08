@@ -179,6 +179,9 @@ Template_Header = """<!DOCTYPE html>
     <script src="https://kit.fontawesome.com/7e675542d3.js" crossorigin="anonymous"></script>
     <link href="css/static_style.css" rel="stylesheet">
     <title>Redqueen</title>
+    <meta name="description" content="">
+    <meta name="author" content="On4r4p">
+    <link rel="icon" href="img/Rdfavicon.ico">
     <style> %s </style>
   </head>
   <body style="  background-color: #15202b;">"""
