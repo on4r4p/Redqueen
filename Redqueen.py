@@ -97,6 +97,8 @@ RestABit_Trigger = False
 
 Twitter_Api = ""
 
+Keywords_List_Original = []
+
 Keywords_List = []
 
 Timelines_List = []
@@ -390,7 +392,7 @@ def GenFeed():
         Span_open = '<span style="color: #cc33cc;">' 
         Span_close ='</span>'
         Highlight_Txt = str(D[6])
-        for k in Keywords_List:
+        for k in Keywords_List_Original:
             if k.lower() in D[6].lower():
                 caseless_replace = re.compile(re.escape(str(k)), re.IGNORECASE)
                 kolored = Span_open + str(k) + Span_close
@@ -710,6 +712,7 @@ def Fig(font, txt, toirc=None):
 
 def Load_Variables():
 
+    global Keywords_List_Original
     global Keywords_List
     global Timelines_List
     global Following_List
@@ -775,6 +778,8 @@ def Load_Variables():
 
         for saved in Cleanfile(Pth_Keywords_Rq):
             Keywords_List.append(saved)
+
+        Keywords_List_Original = Keywords_List
 
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Keywords Loaded", True)
@@ -2593,7 +2598,7 @@ def Ban(twitem):
 
 
         if Banned is False:
-            for mustbe in Keywords_List:
+            for mustbe in Keywords_List_Original:
                 mustbe = re.sub(r"[^A-Za-z0-9 ]+", "", mustbe.lower())
                 if mustbe in Twist:
                     Fig("digital", "Found Keywords :")
@@ -3515,7 +3520,7 @@ def RedQueen():
         print("**")
         Fig("cybermedium", "Today's Menu :")
 
-        print(Keywords_List[:rndwords])
+        print(TODAYS_MENU)
         
         print("Total search terms : ", rndwords)
 
