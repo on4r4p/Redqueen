@@ -390,13 +390,13 @@ def GenFeed():
     Tweets_Feed = []
     for nbr, D in enumerate(Extracted_Datas):
         Span_open = '<span style="color: #cc33cc;">' 
-        Span_close ='</span>'
+        Span_close ="</span>"
         Highlight_Txt = str(D[6])
         for k in Keywords_List_Original:
             if k.lower() in D[6].lower():
                 caseless_replace = re.compile(re.escape(str(k)), re.IGNORECASE)
                 kolored = Span_open + str(k) + Span_close
-                Highlight_txt = caseless_replace.sub(kolored, str(D[6]))
+                Highlight_Txt = caseless_replace.sub(kolored, str(D[6]))
         Template_Tweet = (
             """    <div class="center-feeds-container">
       <div class="profile-picture"> <img src="%s" class="image">"""
