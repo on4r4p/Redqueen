@@ -1480,7 +1480,7 @@ def Request(cmd):
                     if entry not in Timelines_List:
                         f.write("\n"+str(entry) + "\n")
 
-            output.append("**Adding %s entry in Users.Timelines.Rq**" % len(adk))
+            output.append("**Adding %s entry in Users.Timelines.Rq**" % len(adt))
 
         if len(bt) > 0:
             print("Adding new entry to Bannedpeople.Rq")
