@@ -60,9 +60,11 @@ Pth_TotalApi_Call = str(Pth_Data) + "TotalApi.Call.Rq"
 
 Pth_Update_Call = str(Pth_Data) + "Update.Status.Call.Rq"
 
-Pth_Already_Searched = str(Pth_Data) + "Already.Searched.Rq"
+Pth_Already_Searched_Rq = str(Pth_Data) + "Already.Searched.Rq"
 
 Pth_Keywords_Rq = str(Pth_Data) + "Keywords.Rq"
+
+Pth_Users_Timelines_Rq = str(Pth_Data) + "Users.Timelines.Rq"
 
 Pth_Following_Rq = str(Pth_Data) + "Following.Rq"
 
@@ -80,16 +82,15 @@ Pth_Error_Log = str(Pth_Data) + "Errors.log.Rq"
 
 Pth_Current_Session = str(Pth_Data) + "Current.Session.Rq"
 
-Pth_NoResult = str(Pth_Data) + "No.Result.Rq"
+Pth_NoResult_Rq = str(Pth_Data) + "No.Result.Rq"
 
-Pth_Tweets_Sent = str(Pth_Data) + "Tweets.Sent.Rq"
+Pth_Tweets_Sent_Rq = str(Pth_Data) + "Tweets.Sent.Rq"
 
-Pth_Text_Sent = str(Pth_Data) + "Text.Sent.Rq"
+Pth_Text_Sent_Rq = str(Pth_Data) + "Text.Sent.Rq"
 
 Pth_Rq_Server_Save = str(Pth_Data) + "Server.Save.Rq"
 
-
-Pth_Url_Sent = str(Pth_Data) + "Url.Sent.Rq"
+Pth_Url_Sent_Rq = str(Pth_Data) + "Url.Sent.Rq"
 
 
 RestABit_Trigger = False
@@ -97,6 +98,8 @@ RestABit_Trigger = False
 Twitter_Api = ""
 
 Keywords_List = []
+
+Timelines_List = []
 
 Following_List = []
 
@@ -708,9 +711,10 @@ def Fig(font, txt, toirc=None):
         Betterror(e, inspect.stack()[0][3])
 
 
-def loadvars():
+def Load_Variables():
 
     global Keywords_List
+    global Timelines_List
     global Following_List
     global Friends_List
     global Banned_Word_list
@@ -731,8 +735,18 @@ def loadvars():
         Pth_Error_Log,
         Pth_Current_Session,
         Pth_Rq_Server_Save,
-        Pth_Tweets_Sent,
-        Pth_Url_Sent,
+        Pth_Banned_Word_Rq,
+        Pth_Tweets_Sent_Rq,
+        Pth_Banned_People_Rq,
+        Pth_Keywords_Rq,
+        Pth_Users_Timelines_Rq,
+        Pth_Following_Rq,
+        Pth_Friends_Rq,
+        Pth_Already_Searched_Rq,
+        Pth_Url_Sent_Rq,
+        Pth_Text_Sent_Rq,
+        Pth_NoResult_Rq,
+        Pth_Rss_Rq,
     ]
 
     for cf in Checkfiles:
@@ -747,7 +761,7 @@ def loadvars():
         Fig("cybermedium", "LoadVars()", True)
         print("\n\n\n\n")
 
-        for saved in Cleanfile(Pth_NoResult):
+        for saved in Cleanfile(Pth_NoResult_Rq):
             NoResult_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
@@ -769,6 +783,16 @@ def loadvars():
         Fig("digital", "Keywords Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
         print("\n\n")
+
+
+        for saved in Cleanfile(Pth_Users_Timelines_Rq):
+            Timelines_List.append(saved)
+
+        print("*=*=*=*=*=*=*=*=*=*")
+        Fig("digital", "Users Timelines Loaded", True)
+        print("*=*=*=*=*=*=*=*=*=*\n")
+        print("\n\n")
+
 
         for saved in Cleanfile(Pth_Following_Rq):
             Following_List.append(saved)
@@ -814,7 +838,7 @@ def loadvars():
         Fig("digital", "Request Cmd Log Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
-        for saved in Cleanfile(Pth_Already_Searched):
+        for saved in Cleanfile(Pth_Already_Searched_Rq):
             Already_Searched_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
@@ -863,12 +887,12 @@ def loadvars():
         Fig("digital", "Saved Server Tweets Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*")
 
-        for saved in Cleanfile(Pth_Text_Sent):
+        for saved in Cleanfile(Pth_Text_Sent_Rq):
             if saved not in Ban_Double_List:
                 Ban_Double_List.append(saved)
                 Total_Already_Send_Nbr += 1
 
-        for saved in Cleanfile(Pth_Url_Sent):
+        for saved in Cleanfile(Pth_Url_Sent_Rq):
             if saved not in Ban_Double_Url_List:
                 Ban_Double_Url_List.append(saved)
 
@@ -980,6 +1004,7 @@ def timer(mode):
 def Request(cmd):
 
     global Keywords_List
+    global Timelines_List
     global Banned_Word_list
     global Banned_User_list
     global Api_Call_Nbr
@@ -998,6 +1023,9 @@ def Request(cmd):
         adk = []
         delk = []
         bk = []
+        adt = []
+        delt = []
+        bt = []
         adu = []
         delu = []
         bu = []
@@ -1033,6 +1061,9 @@ def Request(cmd):
             "adduser:",
             "deluser:",
             "banuser:",
+            "addtimeline",
+            "deltimeline",
+            "bantimeline",
             "addkeyword:",
             "delkeyword:",
             "bankeyword:",
@@ -1044,11 +1075,12 @@ def Request(cmd):
             "!help",
             "!users",
             "!keywords",
+            "!timeline",
             "!friends",
             "!rss",
             "!requests",
-            "!Pth_NoResult",
-            "!rmPth_NoResult",
+            "!Pth_NoResult_Rq",
+            "!rmPth_NoResult_Rq",
             "!badkeys",
             "!badppl",
             "!start",
@@ -1064,15 +1096,18 @@ def Request(cmd):
                     reconized = True
                     if option == "!help":
                         help = [
-                            "adduser:@user1 @user2 [Add user1 and user2 to Rq.Following]",
-                            "deluser:@user1 @user2 [Delete user1 and user2 in Rq.Following]",
-                            "banuser:@user1 @user2 [Add user1 and user2 to Rq.Bannedpeople and remove it from Rq.Keywords]",
-                            "addfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends]",
-                            "delfriend:@user1 @user2 [Delete user1 and user2 in Rq.Friends]",
-                            "banfriend:@user1 @user2 [Add user1 and user2 to Rq.Friends and remove it from Rq.Keywords]",
-                            "addkeyword:Key word1,Key word2 [Add 'Key word1' and 'Key word2' to Rq.Keywords]",
-                            "delkeyword:Key word1,Key word2 [Delete 'Key word1' and 'Key word2' in Rq.Keywords]",
-                            "bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Rq.Bannedword and remove it from Rq.Keywords]",
+                            "adduser:@user1 @user2 [Add user1 and user2 to Following.Rq]",
+                            "deluser:@user1 @user2 [Delete user1 and user2 in Following.Rq]",
+                            "banuser:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Keywords.Rq]",
+                            "addfriend:@user1 @user2 [Add user1 and user2 to Friends.Rq]",
+                            "delfriend:@user1 @user2 [Delete user1 and user2 in Friends.Rq]",
+                            "banfriend:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Friend.Rq]",
+                            "addkeyword:Key word1,Key word2 [Add 'Key word1' and 'Key word2' to Keywords.Rq]",
+                            "delkeyword:Key word1,Key word2 [Delete 'Key word1' and 'Key word2' in Keywords.Rq]",
+                            "bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Bannedword.Rq and remove it from Keywords.Rq]",
+                            "addtimeline:@user1 @user2 [Add user1 and user2 timelines to Users.Timelines.Rq]",
+                            "deltimeline:@user1 @user2 [Delete user1 and user2 timelines in Users.Timelines.Rq]",
+                            "bantimeline:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Users.Timelines.Rq]",
                             "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rq.Rss]",
                             "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rq.Rss]",
                             "Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
@@ -1081,12 +1116,13 @@ def Request(cmd):
                             "!stop [Stop Crawling.]",
                             "!pause [Start and Stop Pause mode]",
                             "!quit [Exit.]",
-                            "!users [Print Rq.Following content]",
-                            "!keywords [Print Rq.Keywords content]",
-                            "!rss [Print Rq.Rss content]",
+                            "!users [Print Following.Rq content]",
+                            "!timeline [print User.Timeline.Rq]",
+                            "!keywords [Print Keywords.Rq content]",
+                            "!rss [Print Rss.Rq content]",
                             "!requests [Print Request.log content]",
-                            "!Pth_NoResult [Print No.Result content]",
-                            "!rmPth_NoResult [Remove No.Result content from Rq.Keywords]",
+                            "!Pth_NoResult_Rq [Print No.Result content]",
+                            "!rmPth_NoResult_Rq [Remove No.Result content from Rq.Keywords]",
                             "!badkeys [Print Rq.Bannedword content]",
                             "!badppl [Print Rq.Bannedpeople content]",
                             "Example : deluser:@user1 @user2 ;addkeyword:key1,key two,key3;bankeyword:badkey1,bad key two;!rss",
@@ -1127,19 +1163,88 @@ def Request(cmd):
                         return Pastbin(Following_List)
                     if option == "!keywords":
                         return Pastbin(Keywords_List)
+                    if option == "!timeline":
+                        return Pastbin(Timelines_List)
                     if option == "!friends":
                         return Pastbin(Friends_List)
                     if option == "!rss":
                         return Pastbin(Rss_Url_List)
                     if option == "!requests":
                         return Pastbin(Requested_Cmd_List)
-                    if option == "!Pth_NoResult":
+                    if option == "!Pth_NoResult_Rq":
                         return Pastbin(NoResult_List)
 
-                    if option == "!rmPth_NoResult":
+                    if option == "!rmPth_NoResult_Rq":
                         print("Removing No.results from Rq.Keywords..")
                         RmNores = True
+##
 
+                    if option == "bantimeline:":
+                        if sample.count("@") == 1:
+                            print("You asked to Ban this user timeline :", sample)
+                            single = sample.replace(str(option), "").replace(" ", "")
+                            if len(single) > 0:
+                                bt.append(single)
+                                delt.append(single)
+                            else:
+                                print("User timeline var is empty.")
+                        elif sample.count("@") > 1:
+                            for var in sample.split(","):
+                                if len(var) > 0:
+                                    bt.append(
+                                        var.replace(str(option), "").replace(" ", "")
+                                    )
+                                    delt.append(
+                                        var.replace(str(option), "").replace(" ", "")
+                                    )
+                                else:
+                                    print("User timeline var is empty.")
+                            print("You asked to Ban those users timelines: ", ",".join(bt))
+                        else:
+                            print("No user timeline found '@' is missing")
+
+                    if option == "addtimeline:":
+
+                        if sample.count("@") == 1:
+                            print("You asked to Add this user timeline:", sample)
+                            single = sample.replace(str(option), "").replace(" ", "")
+                            if len(single) > 0:
+                                adt.append(single)
+                            else:
+                                print("User timeline var is empty.")
+                        elif sample.count("@") > 1:
+                            for var in sample.split(","):
+                                if len(var) > 0:
+                                    adt.append(
+                                        var.replace(str(option), "").replace(" ", "")
+                                    )
+                                else:
+                                    print("User timeline var is empty.")
+                            print("You asked to Add those users: ", ",".join(adt))
+                        else:
+                            print("No user timeline found '@' is missing")
+
+                    if option == "deltimeline:":
+                        if sample.count("@") == 1:
+                            print("You asked to Delete this user timeline:", sample)
+                            single = sample.replace(str(option), "").replace(" ", "")
+                            if len(single) > 0:
+                                delt.append(single)
+                            else:
+                                print("User timeline var is empty.")
+                        elif sample.count("@") > 1:
+                            for var in sample.split(","):
+                                if len(var) > 0:
+                                    delt.append(
+                                        var.replace(str(option), "").replace(" ", "")
+                                    )
+                                else:
+                                    print("User timeline var is empty.")
+                            print("You asked to Delete those users timelines: ", ",".join(delt))
+                        else:
+                            print("No user timeline found '@' is missing")
+
+##
                     if option == "banuser:":
                         if sample.count("@") == 1:
                             print("You asked to Ban this user :", sample)
@@ -1367,6 +1472,47 @@ def Request(cmd):
             ret = Flush_NoResult()
             output.append(ret)
 
+#
+        if len(adt) > 0:
+            print("Adding new entry to Users.Timelines.Rq")
+            with open(Pth_Users_Timelines_Rq, "a") as f:
+                for entry in adt:
+                    if entry not in Timelines_List:
+                        f.write(str(entry) + "\n")
+
+            output.append("**Adding %s entry in Users.Timelines.Rq**" % len(adk))
+
+        if len(bt) > 0:
+            print("Adding new entry to Bannedpeople.Rq")
+            with open(Pth_Banned_People_Rq, "a") as f:
+                for entry in bt:
+                    if entry not in Banned_User_list:
+                        f.write(str(entry) + "\n")
+            output.append("**Adding %s entry in Bannedpeople.Rq**" % len(bt))
+
+        if len(delt) > 0:
+            print("Deleting entry from Users.Timelines.Rq")
+            lines = Cleanfile(Pth_Users_Timelines_Rq)
+            ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
+            save_copy = (
+                "cp "
+                + str(Pth_Users_Timelines_Rq)
+                + " "
+                + str(Pth_Save)
+                + "Users.Timelines.Rq"
+                + str(ts)
+                + ".save"
+            )
+            os.system(save_copy)
+            with open(Pth_Users_Timelines_Rq, "w") as f:
+                for line in lines:
+                    for entry in delt:
+                        if line.strip("\n") != entry:
+                            f.write(line + "\n")
+            output.append("**Deleting %s entry in Users.Timelines.Rq**" % len(delt))
+
+
+#
         if len(adrss) > 0:
             print("Adding new entry to Rq.Rss")
             with open(Pth_Rss_Rq, "a") as f:
@@ -1540,7 +1686,7 @@ def Flush_NoResult():
                     else:
                         print("Removed:", entry)
                         cnt += 1
-        file = open(Pth_NoResult, "w")
+        file = open(Pth_NoResult_Rq, "w")
         file.write("")
         file.close
         NoResult_List = []
@@ -1564,7 +1710,7 @@ def SaveDouble(text,urls):
         Fig("cybermedium", "SaveDouble()")
 
         time.sleep(Config.Time_Sleep)
-        with open(Pth_Url_Sent, "a") as file:
+        with open(Pth_Url_Sent_Rq, "a") as file:
             for u in urls:
                 if u not in Ban_Double_Url_List:
                     file.write("\n"+str(u)+"\n")
@@ -1577,7 +1723,7 @@ def SaveDouble(text,urls):
         text = text.replace("\n", "")
         if text not in Ban_Double_List:
 
-            with open(Pth_Text_Sent, "a") as file:
+            with open(Pth_Text_Sent_Rq, "a") as file:
                 file.write(str(text) + "\n")
 
             Ban_Double_List.append(str(text))
@@ -1647,8 +1793,8 @@ def flushtmp():
                 if os.path.exists(Pth_Update_Call):
                     os.remove(Pth_Update_Call)
 
-                if os.path.exists(Pth_Already_Searched):
-                    os.remove(Pth_Already_Searched)
+                if os.path.exists(Pth_Already_Searched_Rq):
+                    os.remove(Pth_Already_Searched_Rq)
 
                 print("==")
                 Fig("digital", "Saving current date", True)
@@ -1693,7 +1839,7 @@ def Last_Session(lastsearch):
         if Menu_Check_Trigger == False:
             Fig("cybermedium", "Last_Session()", True)
 
-            with open(Pth_Already_Searched, "a") as file:
+            with open(Pth_Already_Searched_Rq, "a") as file:
                 for words in lastsearch:
                     file.write(words + "\n")
                     Fig("digital", "Marking " + words + " as old . ")
@@ -2024,6 +2170,9 @@ def Stat2Irc(Time_To_Wait):
         time.sleep(Config.Time_Sleep)
         Keywordstxt = "Keywords in list: " + str(len(Keywords_List))
         IrSend(Keywordstxt)
+        time.sleep(Config.Time_Sleep)
+        Timelinestxt = "Timelines in list: " + str(len(Timelines_List))
+        IrSend(Timelinestxt)
         time.sleep(Config.Time_Sleep)
         AvgScoreTxt = "Current Tweets collected: " + str(len(AvgScore))
         IrSend(AvgScoreTxt)
@@ -2554,7 +2703,7 @@ def Saveid(id):
         Fig("cybermedium", "Saveid()")
         time.sleep(Config.Time_Sleep)
 
-        with open(Pth_Tweets_Sent, "a") as file:
+        with open(Pth_Tweets_Sent_Rq, "a") as file:
             file.write("\n"+ str(id) + "\n")
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
@@ -2575,10 +2724,10 @@ def Idlist(id):
 
         if Id_Done_Trigger == False:
 
-            Total_Sent_Nbr = sum(1 for line in open(Pth_Tweets_Sent))
+            Total_Sent_Nbr = sum(1 for line in open(Pth_Tweets_Sent_Rq))
             Id_Done_Trigger = True
 
-        for saved in Cleanfile(Pth_Tweets_Sent):
+        for saved in Cleanfile(Pth_Tweets_Sent_Rq):
 
             if saved != "\n" or saved != "":
                 if str(saved) in str(id):
@@ -3234,7 +3383,7 @@ def Search_Keyword(word):
 
                 except Exception as e:
                     if "Twitter API returned a 404 (Not Found)" in str(e):
-                        with open(Pth_NoResult, "a") as file:
+                        with open(Pth_NoResult_Rq, "a") as file:
                             file.write(str(word) + "\n")
                     searchresults = []
                     Search_nbr = 0
@@ -3264,7 +3413,7 @@ def Search_Keyword(word):
                         print("****************************************")
                         Fig("digital", "Saving unwanted search to no.result")
                         time.sleep(Config.Time_Sleep)
-                        with open(Pth_NoResult, "a") as file:
+                        with open(Pth_NoResult_Rq, "a") as file:
                             file.write(str(word) + "\n")
 
                 except Exception as e:
@@ -3283,6 +3432,7 @@ def Search_Keyword(word):
 def RedQueen():
 
     global Keywords_List
+    global Timelines_List
     global MasterPause_Trigger
     global MasterStart_Trigger
     try:
@@ -3294,7 +3444,7 @@ def RedQueen():
         Fig("digital", "GOGOGO!", True)
         time.sleep(Config.Time_Sleep)
 
-        loadvars()
+        Load_Variables()
         time.sleep(Config.Time_Sleep)
 
         Fig("digital", "Calling Flush function", True)
@@ -3305,27 +3455,34 @@ def RedQueen():
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Removing Keywords from No.Result.Rq", True)
+        Fig("digital", "Removing Keywords and Users Timelines from No.Result.Rq", True)
 
         Keywords_List = [k for k in Keywords_List if k not in NoResult_List]
+        Timelines_List = [t for t in Timelines_List if t not in NoResult_List]
 
-        Fig("digital", "Removing Keywords from Already_Searched_List", True)
+        Fig("digital", "Removing Keywords and Users Timelines from Already_Searched_List", True)
 
         Keywords_List = [k for k in Keywords_List if k not in Already_Searched_List]
+        Timelines_List = [t for t in Timelines_List if t not in Already_Searched_List]
 
         shuffle(Keywords_List)
+        shuffle(Timelines_List)
 
-        Minwords = int(len(Keywords_List) / 20)
-        Maxwords = int(len(Keywords_List) / 10)
+        Minwords = int( (len(Keywords_List) + len(Timelines_List)) / 20)
+        Maxwords = int( (len(Keywords_List) + len(Timelines_List)) / 10)
         rndwords = randint(Minwords, Maxwords)
         if rndwords < 100:
             rndwords = len(Keywords_List)
+
+        TODAYS_MENU = Keywords_List + Timelines_List
+        shuffle(TODAYS_MENU)
+        TODAYS_MENU = TODAYS_MENU[:rndwords]
 
         print("**")
         Fig("cybermedium", "Today's Menu :")
 
         print(Keywords_List[:rndwords])
-
+        
         print("Total search terms : ", rndwords)
 
         print("**")
@@ -3364,7 +3521,7 @@ def RedQueen():
                 figy = "Starting Redqueen"
                 Fig("digital", figy)
                 break
-        for key in Keywords_List[:rndwords]:
+        for key in TODAYS_MENU:
             time.sleep(Config.Time_Sleep)
             if MasterPause_Trigger is False and MasterStart_Trigger is True:
                 if MasterStop_Trigger is True:
@@ -3396,7 +3553,7 @@ def RedQueen():
         Fig("digital", "Calling Save Search Terms Function", True)
 
         time.sleep(Config.Time_Sleep)
-        Last_Session(Keywords_List[:rndwords])
+        Last_Session(TODAYS_MENU)
 
         if (len(AvgScore)) != 0:
             avgscore = sum(AvgScore) / float(len(AvgScore))

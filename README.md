@@ -113,7 +113,7 @@ Need: Twitter OA1/OA2 with read/write access
 
 Edit:TwitterApiKeys.py,PastebinApiKey.py,IrcKey.py and Config.py
 
-Fill:Data/Bannedpeople.Rq ,Bannedword.Rq ,Following.Rq ,Friends.Rq ,Keywords.Rq etc..
+Fill:Data/Bannedpeople.Rq ,Bannedword.Rq ,Following.Rq ,Friends.Rq ,Users.Timelines.Rq,Keywords.Rq etc..
 
 
 
