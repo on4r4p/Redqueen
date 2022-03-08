@@ -3410,6 +3410,9 @@ def Search_Keyword(word):
                     if "Twitter API returned a 404 (Not Found)" in str(e):
                         with open(Pth_NoResult_Rq, "a") as file:
                             file.write("\n"+str(word) + "\n")
+                    if "Twitter API returned a 401 (Unauthorized)" in str(e):
+                        with open(Pth_NoResult_Rq, "a") as file:
+                            file.write("\n"+str(word) + "\n")
                     searchresults = []
                     Search_nbr = 0
                     Search_obj = []
