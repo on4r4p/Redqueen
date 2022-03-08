@@ -325,19 +325,6 @@ def Extract_Tweet_Data(tweet):
     else:
         Tweet_Text = tweet["text"]
 
-    #       print("Tweet_Origin_Link=",Tweet_Origin_Link)
-    #       print("Tweet_Id = ",Tweet_Id)
-    #       print("Tweet_Timestamp = ",Tweet_Timestamp)
-    #       print("Tweet_Author = ",Tweet_Author)
-    #       print("Tweet_Profile_Author =",Tweet_Profile_Author)
-    #       print("Tweet_Author_Link=",Tweet_Author_Link)
-    #       print("Tweet_Text=",Tweet_Text)
-    #       print("Tweet_Rt_Author=",Tweet_Rt_Author)
-    #       print("Tweet_Rt_Author_Link=",Tweet_Rt_Author_Link)
-    #       print("Tweet_Favorite_Counter = ",Tweet_Favorite_Counter)
-    #       print("Tweet_Retweet_Counter = ",Tweet_Retweet_Counter)
-    #       print("Tweet_Media = ",Tweet_Media)
-    #       print("Tweet_Url = ",Tweet_Url)
     Tweet_tuple = (
         Tweet_Origin_Link,
         Tweet_Id,
@@ -400,7 +387,14 @@ def Extract_Tweet_Data(tweet):
 def GenFeed():
     Tweets_Feed = []
     for nbr, D in enumerate(Extracted_Datas):
-
+        Span_open = '<span style="color: #cc33cc;">' 
+        Span_close ='</span>'
+        Highlight_Txt = str(D[6])
+        for k in Keywords_List:
+            if k.lower() in D[6].lower():
+                caseless_replace = re.compile(re.escape(str(k)), re.IGNORECASE)
+                kolored = Span_open + str(k) + Span_close
+                Highlight_txt = caseless_replace.sub(kolored, str(D[6]))
         Template_Tweet = (
             """    <div class="center-feeds-container">
       <div class="profile-picture"> <img src="%s" class="image">"""
@@ -427,7 +421,7 @@ def GenFeed():
             </div>
           </div>
           <div class="actual-tweet"> """
-            + str(D[6])
+            + str(Highlight_Txt)
             + """<a href="%s"> Tweet link</a>\n""" % (D[0])
         )
 
@@ -1188,6 +1182,7 @@ def Request(cmd):
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 bt.append(single)
+                                bu.append(single)
                                 delt.append(single)
                             else:
                                 print("User timeline var is empty.")
@@ -1253,6 +1248,7 @@ def Request(cmd):
                             print("You asked to Ban this user :", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
+                                bt.append(single)
                                 bu.append(single)
                                 delk.append(single)
                             else:
@@ -1318,6 +1314,8 @@ def Request(cmd):
                             print("You asked to Ban this friend :", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
+                                bt.append(single)
+                                bu.append(single)
                                 bf.append(single)
                                 delk.append(single)
                             else:
