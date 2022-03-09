@@ -768,7 +768,7 @@ def Load_Variables():
         Fig("digital", "No Result Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
 
-        for saved in Cleanfile(Pth_Data + "RssSave"):
+        for saved in Cleanfile(Pth_Data + "RssSave.Rq"):
             RssSent.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
@@ -2101,7 +2101,7 @@ def RssFeeds(ttl):
                                     news.link,
                                 )
                                 Extracted_Datas.append(Rss_tuple)
-                            with open(Pth_Data + "RssSave", "a") as f:
+                            with open(Pth_Data + "RssSave.Rq", "a") as f:
                                 f.write("\n"+str(format) + "\n")
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
