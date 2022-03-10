@@ -1156,7 +1156,8 @@ def Request(cmd):
                                 "UTF-8",
                             )
                         )
-                        os.system("pkill -f Redqueen.py")
+                        os.system("pkill -9 Redqueen.py")
+
                     if option == "!badkeys":
                         return Pastbin(Banned_Word_list)
                     if option == "!badppl":
