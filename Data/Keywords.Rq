@@ -1,2118 +1,1149 @@
-
 Modlishka
-
 Muraena
-
 Necrobrowser
-
 Evilginx2
-
 logj4
-
 ret2libc
-
 3xpl0its
-
 FakeUnicode
-
 Sebdraven
-
 Heroku
-
 weaponised pdf
-
 sms class
-
 haveibeenpwned
-
 iamsmittix
-
 assbot1234
-
 FuxNet
-
 s0lst1c3
-
 Herve_Schauer
-
 femtocell
-
 mitm
-
 amammad
-
 haxatron
-
 ready-research
-
 x3rz
-
 lethanhphuc
-
 b3ef
-
 brammool
-
 zer0h-bb
-
 effectrenan
-
 b1nslashsh
-
 mr-mosi
-
 wr3nch0x1
-
 shellinjector
-
 arjunshibu
-
 asura-n
-
 0xcrypto
-
 endianness
-
 th3j3st3r
-
 yongchuank
-
 debsums
-
 maldet
-
 lynis
-
 rkhunter
-
 clamav
-
 chkrootkit
-
 QuarksPwdump
-
 PwDump
-
 MimiKatz
-
 GsecDump
-
 drive-by download
-
 DROWN PKCS
-
 PKCS
-
 poodle oracle
-
 Beast exploit
-
 logjam
-
 Lucky13
-
 kamkar
-
 rolljam
-
 rfcatwks
-
 yardstickone
-
 hackrf one
-
 CognoSec
-
 SecBee
-
 killerbee python
-
 zigbee
-
 aes-ccm
-
 aes-cbc
-
 aes-ctr
-
 osi model
-
 802.11
-
 802.15.4
-
 BYOIoT
-
 actor-centric
-
 target-centric
-
 Gootkit
-
 Dridex
-
 ooda loop
-
 boucle ooda
-
 pyramid of pain
-
 cryptolocker
-
 master boot record
-
 userland
-
 bootkit petya
-
 dnsmasq
-
 glibc
-
 getaddrinfo
-
 DNS over TCP
-
 domotique
-
 domotic
-
 cryptage nombre premier
-
 prime number crypt
-
 2vanssay
-
 Bourguignon
-
 phantomJs
-
 xss poc
-
 xss mining
-
 nethack
-
 SSDLC
-
 mongodb
-
 security enthousiast
-
 malware analyst
-
 misp
-
 bug bounty
-
 security ninja
-
 radare2
-
 crime numérique
-
 recurity labs
-
 floss
-
 osint
-
 dfir
-
 safe cracker
-
 maltego
-
 botconf
-
 spot the feds
-
 cell jamming
-
 cell phone jamming
-
 cell phone hack
-
 scareware
-
 PanguTeam
-
 McGrewSecurity
-
 packetstormsecurity
-
 input validation error
-
 GhostShell
-
 hoax
-
 hoaxbuster
-
 bugmenot
-
 carbanak gang
-
 .lua
-
 VBS
-
 unix
-
 makefile
-
 cmake
-
 alice bob
-
 un rootkit
-
 linus torvalds
-
 pirate box
-
 template injection
-
 ieee-security.org
-
 internet archive
-
 hacks archive
-
 netcat
-
 rsa securid
-
 windows worm
-
 mac worm
-
 linux worm
-
 lionsec
-
 whonix
-
 sudo
-
 ethereum
-
 bootkit
-
 backdooring
-
 selling credentials
-
 surveillance platform
-
 Dns reflection amplification
-
 CVE-2016
-
 StressLinux
-
 tomsrtbt
-
 Tiny SliTaz
-
 RIMiRadio
-
 Nuclinux
-
 NASLite
-
 Linux Router Project
-
 HVLinux
-
 HAL91
-
 Freesco
-
 floppyfw
-
 Coyote Linux
-
 xPUD
-
 VectorLinux
-
 Toutankinux
-
 Feather Linux
-
 Embedded Debian
-
 Chromium OS
-
 BunsenLabs
-
 antiX
-
 Zorin OS
-
 Zeroshell
-
 Zenwalk
-
 Zentyal
-
 YunoHost
-
 Ylmf OS
-
 crypto entropy
-
 Xubuntu
-
 Xandros
-
 Xange linux
-
 WinLinux
-
 VidaLinux
-
 Ulteo
-
 TurboLinux
-
 Trustix
-
 Trisquel
-
 Trinux
-
 TopologiLinux
-
 Tiny Core Linux
-
 SteamOS
-
 SolusOS
-
 SME Server
-
 SliTaz GNU
-
 Slax linux
-
 Sabayon Linux
-
 Rxart
-
 ROSA linux
-
 Puppy Linux
-
 PrimTux
-
 rom hack
-
 Platypux
-
 PinguyOS
-
 Pardus
-
 Parabola GNU
-
 NuTyX
-
 NUbuntu
-
 Netrunner OS
-
 Musix GNU
-
 Maemo
-
 MEPIS
-
 Lunar Linux
-
 Lubuntu
-
 Linux Mint
-
 Linux From Scratch
-
 Linux xp
-
 LinuxConsole
-
 play on linux
-
 linux wine
-
 linux ps2
-
 Linutop OS
-
 Linspire
-
 Kubuntu
-
 Kororaa
-
 Knoppix
-
 Kanotix
-
 KaOS linux
-
 Kali linux
-
 Kaella
-
 IPCop
-
 Hybryde Linux
-
 HandyLinux
-
 GoboLinux
-
 Goblinx
-
 Gnoppix
-
 gNewSense
-
 GeeXboX
-
 Funtoo
-
 Frugalware
-
 Freespire
-
 Free-EOS
-
 Foresight Linux
-
 Flonix
-
 fli4l
-
 Elive
-
 elementary OS
-
 EduLinux
-
 Edubuntu
-
 DoudouLinux
-
 Dreamlinux
-
 Dragora GNU
-
 DidJiX
-
 Demudi Linux
-
 Damn Vulnerable Linux
-
 Damn Small Linux
-
 Cubuntu
-
 CrunchBang
-
 Chakra
-
 CentOS
-
 Castle Linux
-
 Calculate Linux
-
 Caixa Mágica
-
 CAELinux
-
 BLAG 140
-
 Bodhi Linux
-
 BasicLinux
-
 Baltix
-
 BackTrack
-
 Aurox
-
 Aurox Live
-
 Augustux
-
 ASRI Edu
-
 Asianux
-
 Ark Linux
-
 ArchBang
-
 Aptosid
-
 APODIO
-
 Peanut Linux
-
 CLinuxOS
-
 PCLinuxOS
-
 Mageia
-
 Mandriva
-
 Manjaro
-
 Arch Linux
-
 SUSE
-
 Slackware
-
 fedora
-
 SSNs
-
 gentoo
-
 LSASS
-
 chiffrement
-
 xml injection
-
 method handles
-
 alphabay
-
 Java message service
-
 netsec
-
 server down
-
 net neutrality
-
 freebsd
-
 script-based
-
 bugtrack
-
 atilla.org
-
 HackQuest.com
-
 hx0r
-
 slyfx
-
 cyberarmy
-
 mod-x.co.uk
-
 alph4net.free.fr
-
 cyberjihad
-
 globalsecuritymag.fr
-
 Instant-Hack
-
 dothazard.com
-
 intrusio.fr
-
 Tobozo
-
 n-pn.fr
-
 Ensimag hacking team
-
 febel.fr
-
 zataz
-
 chan irc hack
-
 forum de hack
-
 hackateam.com
-
 0x0ff
-
 nuit du hack
-
 hackademics
-
 Honeynet
-
 hackers convention
-
 hacker contest
-
 hacking contest
-
 United Hackers Army
-
 CTFTIME
-
 EXPLOIT EXERCISES
-
 pwn0.com
-
 pwn0bots
-
 REVERSING.KR
-
 MICROCORRUPTION
-
 SMASHTHESTACK
-
 netgarage.org
-
 pwnable.kr
-
 OVERTHEWIRE
-
 CTF365
-
 hackerearth.com
-
 seclists.org
-
 the-hackfest.com
-
 ctftime.org
-
 itknowledgeexchange
-
 hackingchinese.com
-
 hacking-lab.com
-
 insomnihack.ch
-
 amanhardikar.com
-
 dragonhacks.io
-
 bases-hacking.org
-
 www.trythis0ne.com
-
 hackbbs.org
-
 pen-testing.sans.org
-
 codeforamerica.org
-
 onecoincloud.eu
-
 wechall.net
-
 holidayhackchallenge.com
-
 tunnelsup.com
-
 root-me.org
-
 canyouhack.it
-
 2600
-
 canyouhack.us
-
 SlaveHack
-
 Ethical Hacker Network
-
 HellBound Hackers
-
 devops
-
 webgoat
-
 Vicnum
-
 The Butterfly Security Project
-
 Security Shepherd
-
 Mutillidae
-
 McAfee HacMe
-
 InsecureWebApp
-
 igoat
-
 Google Gruyere
-
 exploitme
-
 DVWA
-
 Untrusted input
-
 broken crypto
-
 server side
-
 Client Side Injection
-
 Runtime Manipulation
-
 Jailbreak Detection
-
 third party libraries
-
 Extension Vulnerabilities
-
 DVIA
-
 bWAPP
-
 OWASP Bricks
-
 EnigmaGroup
-
 Moth hack
-
 BodgeIt Store
-
 keygen
-
 haxor
-
 Hackxor
-
 HackThis
-
 Try2Hack
-
 Highly Efficient Low Level Code
-
 cloud hack
-
 Hack Yourself First
-
 Micro Contest
-
 LOST Chall
-
 Newbie Contest
-
 Rankk
-
 Hacker.org
-
 Mibs Challenges
-
 Hack This Site
-
 Net Force
-
 BrainQuest
-
 InfoMirmo
-
 Yashira
-
 W3Challs
-
 Root Me
-
 Le Big Challenge
-
 alphanet
-
 Fatetek Challenges
-
 Mod x
-
 Hax.Tor
-
 Bright Shadows
-
 Dare Your Mind
-
 RingZero Team
-
 Mudge
-
 Boris Floricic
-
 Anakata
-
 Richard Stallman
-
 Dmitry Sklyarov
-
 Roman Seleznev
-
 Oxblood Ruffin
-
 Leonard Rose
-
 DilDog
-
 Kevin Poulsen
-
 homebrew
-
 Knight Lightning
-
 Dennis Moran
-
 Robert Tappan Morris
-
 Hector Monsegur
-
 Gary Mckinnon
-
 Fyodor hacker
-
 Lord Digital
-
 hagbard
-
 Joybubbles
-
 geohot
-
 Acidus
-
 Guccifer
-
 nag screen
-
 Bruce Fancher
-
 Nahshon Even-Chaim
-
 John Draper
-
 Captain Crunch
-
 RBCP
-
 Loyd Blankenship
-
 Mendax
-
 Tflow
-
 Phiber Optik
-
 internet underground
-
 linux underground
-
 mac underground
-
 Xbox Underground
-
 YIPL
-
 UGNazi
-
 The Unknowns hack
-
 Teso
-
 TeslaTeam
-
 RedHack
-
 PHIRM
-
 NCPH
-
 Masters of Deception
-
 Mazafaka
-
 Legion of Doom
-
 Lizard Squad,
-
 Level Seven
-
 L0pht
-
 Honker Union
-
 Hackweiser
-
 goatsec
-
 globalHell
-
 Equation Group
-
 Global kOS
-
 DawgPound
-
 DERP
-
 Decocidio
-
 CyberVor
-
 Dark0de
-
 Cult of the Dead Cow
-
 Croatian Revolution Hackers
-
 Cicada 3301,
-
 Chaos Computer Club
-
 FinnSec Security
-
 414s
-
 Group5
-
 netscape
-
 pwnie awards
-
 security researcher
-
 BHUSA
-
 pgp
-
 encrypted mail
-
 secure mail server
-
 vBulletin
-
 Apache Tomcat
-
 Coldfusion
-
 ASP.NET
-
 Retina Report
-
 Nessus Scan Report
-
 SnortSnarf
-
 mirc
-
 LOGREP
-
 Apache::Status
-
 SQLiteManager
-
 Tobias Oetiker
-
 sets mode
-
 wwwstat
-
 Generated by phpSystem
-
 mysql dump
-
 phpWebMail
-
 gnatsweb.pl
-
 webedit
-
 inurl:/
-
 cgi-bin
-
 Citrix
-
 CVE
-
 alice bot
-
 sea hacker
-
 chatter bot
-
 automagically
-
 Syrian Electronic Army
-
 LulzSec
-
 gray hat
-
 Distributed denial of service
-
 Denial of service
-
 compiler
-
 hook cheat
-
 TWEAK cheat
-
 trainer cheat
-
 cracking team
-
 DAEMON
-
 CRLF
-
 COMM MODE
-
 CANONICAL
-
 Ethical Hacking
-
 Skidz
-
 ascii art
-
 blue hat
-
 defaced
-
 Dictionary Attack
-
 doxing tool
-
 DOX tool
-
 FUD
-
 Fully undetectable
-
 grey hat
-
 IP Grabbing
-
 backorifice
-
 LOIC anonymous
-
 Rainbow Table
-
 rat trojan
-
 Remote Administration Tool
-
 ring3
-
 ring2
-
 ring0
-
 viri
-
 warez
-
 vps
-
 worm malware
-
 turing test
-
 sysadmin
-
 SaaS
-
 stack buffer overflow
-
 CA cert
-
 Hardware vulnerability
-
 physical backdoor
-
 Vuln:
-
 Vuln
-
 adblocker
-
 Exploit framework
-
 crypto party
-
 ssh
-
 Passphrase
-
 Linux Distro
-
 RFC
-
 Hardcoded
-
 hackintosh
-
 Os X
-
 P2P
-
 cloud-based
-
 Oracle java
-
 IT guy
-
 Encrypted Chat
-
 VmWare
-
 cyber police
-
 AdGholas
-
 malvertising
-
 hadopi
-
 cnil
-
 golang
-
 hacked by
-
 piratage
-
 Postgresql
-
 Julian Assange
-
 DNC
-
 GNU
-
 QRLJacking
-
 kevin mitnick
-
 csrf exploit
-
 session hijack
-
 darkweb
-
 .onion
-
 wlan
-
 Wireless Local Area Network
-
 wardriving
-
 Wireless Access Point
-
 wep
-
 cyber security
-
 Wpa2
-
 blackhat
-
 Shellcode
-
 vpn
-
 Virtual Machine
-
 sandboxing
-
 crypto currency
-
 Full Disclosure
-
 Tunneling
-
 Gps spoofing
-
 untrusted Certificate
-
 ransomware
-
 Trojan Horse
-
 Transport Layer Security
-
 Triple DES
-
 Assembly language
-
 Real hack
-
 real programmmer
-
 crack me
-
 hack me
-
 true hacker
-
 security traffic Analysis
-
 Tracking Cookie
-
 tampered data
-
 bluetooth crack
-
 data breach
-
 script kiddie
-
 brute force
-
 Symmetric Key
-
 Surrogate Access
-
 Raspberry pi
-
 Arduino
-
 Steganography
-
 Spyware
-
 mail bombing
-
 jailbreak
-
 YesCard
-
 Skimming
-
 Phreaking
-
 cracking
-
 malloc
-
 data Sensitivity
-
 Python exploit
-
 ruby hack
-
 security kernel
-
 C++ exploit
-
 reverse Engineering
-
 Security Engineering
-
 turbo pascal
-
 ssl
-
 hacking tool
-
 php vulnerability
-
 hackervoice
-
 worms variant
-
 DNS
-
 Scatternet
-
 cheval de troie
-
 javascript exploit
-
 Sandboxing
-
 Rootkit
-
 Bash script
-
 windbg
-
 rogue device
-
 ollydbg
-
 assembler code
-
 ip spoofing
-
 Rijndael
-
 apache vulnerability
-
 darkdao
-
 repository
-
 shodan
-
 scammers
-
 critical vulnerability
-
 code injection
-
 ICBM address
-
 RFID security
-
 paiement sans contact
-
 RFID protocol
-
 Radio Frequency Identification
-
 Gbd ida
-
 private key
-
 pseudorandom
-
 Proxy Agent
-
 tor network
-
 vpn open source
-
 memory corruption
-
 proxy list
-
 proxychain
-
 la quadrature du net
-
 heap exploitation
-
 stack cookies
-
 Fuzzing
-
 integer overflow
-
 hackathon
-
 api key
-
 1337
-
 Social-Engeneering Toolkit
-
 port scanner
-
 bluetooth protocol
-
 bluetooth security
-
 port scanning
-
 Payload
-
 Framework
-
 port knocking
-
 wireless attack
-
 log files
-
 router vulnerability
-
 packet sniffer
-
 phpmyadmin hack
-
 open source
-
 phbb hack
-
 password attack
-
 penetration technique
-
 browser exploit
-
 warberrypi
-
 wordpress exploit
-
 binary memory
-
 byod
-
 router exploit
-
 Cookie stuffing
-
 Windows stack overflow
-
 shell exploit
-
 message digest
-
 Cryptosystem
-
 reverse shell
-
 MitM
-
 hardware keylogger
-
 malicious code
-
 hack team
-
 mygot
-
 myg0t
-
 data intercept
-
 gps hack
-
 meterpreter
-
 segfault
-
 pastejacking
-
 network takeover
-
 Sphear phishing
-
 key logger
-
 key escrow
-
 Kerberos
-
 flood attack
-
 go language
-
 depassement de tampon
-
 irc hack
-
 ipsec
-
 exec
-
 system intrusion
-
 ipv6
-
 ipv4
-
 Fake update
-
 packet injection
-
 bruteforcer
-
 android vulnerability
-
 linux vulnerability
-
 ios vulnerability
-
 artificial intelligence
-
 windows vulnerability
-
 main loop
-
 hello world
-
 audit tool
-
 armitage
-
 grep
-
 disk encryption
-
 frequency hopping
-
 forward cipher
-
 shitware
-
 Firefox vulnerability
-
 bypass firewall
-
 file encryption
-
 ssl tls
-
 extranet
-
 domaine name permutation
-
 ftp security
-
 fingerprint tool
-
 rssi
-
 visual analysis tool
-
 end to end encryption
-
 robots.txt
-
 encrypted network
-
 tinfoleak
-
 infosec
-
 encoding
-
 voip security
-
 EOF
-
 electronic signature
-
 egress filtering
-
 DEADBEEF
-
 konami code
-
 dmz
-
 wireless scanner
-
 decrypt
-
 wireless hack
-
 data security
-
 data integrity
-
 network mapper
-
 data encryption standard
-
 data dump
-
 incident response tool
-
 cyber attack
-
 web spider
-
 cryptology
-
 hash function
-
 cryptographic
-
 cryptanalysis
-
 command injection
-
 tool assisted speedrun
-
 credential
-
 cover coding
-
 xref
-
 key generation
-
 network exploitation
-
 network attack
-
 local pentest
-
 COMSEC
-
 common vulnerabilities
-
 internet of things
-
 misconfiguration
-
 collision hash
-
 internet of shit
-
 cloud computing
-
 clear text
-
 checksum
-
 bytes
-
 joomla vulnerability
-
 sqli
-
 data leak
-
 users passwords
-
 blackbox hack
-
 IRC network
-
 Critical patch
-
 playstation jailbreak
-
 banner grabbing
-
 xbox jailbreak
-
 backdoor infosec
-
 hexadecimal
-
 privacy windows
-
 authentication token
-
 authentication protocol
-
 audit framework
-
 open source security tool
-
 file signature
-
 BSides
-
 antispyware
-
 chelsea manning
-
 QR code infosec
-
 anonymous
-
 advanced persistent threats
-
 pirate bay
-
 advanced encryption standard
-
 admin account
-
 add-on security
-
 ad hoc network
-
 hacked site
-
 bypass login
-
 cryptography
-
 phishing infosec
-
 honeypot
-
 hacking
-
 ddos
-
 malware
-
 rfid
-
 patch flaw
-
 SocialEngineering
-
 0day
-
 cross site scripting
-
 install backdoor
-
 forensic
-
 blind sql injection
-
 local file inclusion
-
 privilege escalation
-
 hacker attack
-
 request forgery
-
 password
-
 sql injection
-
 privilege elevation
-
 drupal vulnerability
-
 chinese hacker
-
 penetration testing
-
 header injection
-
 pentest
-
 man in the middle
-
 man in the browser
-
 remote access
-
 java security
-
 buffer overflow
-
 keylog
-
 nuke script
-
 darknet
-
 russian hacker
-
 remote exploit
-
 israel hack
-
 trojan
-
 botnet
-
 snowden
-
 nsa
-
 whitehat
-
 hacktivist
-
 printer exploit
-
 F3ead
-
 shellcode emulat
-
 pdf structure
-
 parsing pdf
-
 namespace api
-
 deobfuscate code
-
 import table exe
-
 pylibemu
-
 miasm shellcode
-
 final payload
-
 code malveillant
-
 vecteur d'attaque
-
 confminet
-
 détournement de trafic
-
 entropy by section
-
 shekyan
-
 girakith
-
 artem hartutyunyan
-
 #RPCyber
-
 openbts
-
 countzero
-
 osmocon
-
 kraken gsm
-
 kalibrate
-
 arfcncalc
-
 symspy
-
 toast gsm
-
 airprobe
-
 gammu
-
 gnuradio
-
 base transciever station
-
 transcoder trau
-
 base station subsystem
-
 network switching subsystem
-
 operation support subsystem
-
 xmas scan
-
 hacker stole
-
 osint tool linux
-
 fichier monstre
-
 vie privée
-
 P4R4D0X1
-
 thomas aubin
-
 paul hernault
-
 AubinThomas61
-
 threat intel infosec
-
 mamtego transform
-
 rogue gsm
-
 a5/1 algorithm
-
 sebastien dudec
-
 FlUxIuS
-
 Master key
-
 VE-2016-
-
 wpa3
-
 ps3xploit
-
 ps3hen
-
 bgtoolset
-
 multiman
-
 psnpatch
-
 .PUP
-
 .pkg
-
 .rap
-
 mynameisv_
-
 HermeticWiper
-
 Arbitrium
-
 daxin china
-
 justanotherhacker
-
 Hermetic Ransom
-
 TCP Middlebox Reflection
-
 codingo_
-
 FFUF
-
 Fuzz Faster you Fool
-
 conti leak
-
 meta
-
 metaverse
-
 malcat
-
 SharkBot
-
 corelan
-
 LAPSUS$
-
 Spectre-v2
-
 Dirty COW
-
 dirty pipe
-
 Max Kellerman
-
 CVE-
-
 vulnérabilité
-
 vulnerability
-
 Phith0n
-
 /etc/passwd
-
 /etc/shadow
-
 Brad Spengler
-
 PwnKit
-
 CVE-2022
-
 overwriting data
-
 inject code
-
 injecting code
-
 read-only
-
 arbitrary code
-
 privileged proc
-
 access log
-
 CRC error
-
 round-robin
-
 log datagrams
-
 build dependencie
-
 beng-proxy
-
 Memory bandwidth
-
 corrupt file
-
 corrupted file
-
 dgse
-
 tehtris
-
 éléna poincet
-
 Laurent Oudot
-
 pipe buffer
-
 code buffer
-
 buffer code
-
 egg hunter
-
 memory management
-
 fastcgi
-
 ajp do
-
 Apache module
-
 system call
-
 page cache
-
 userspace
-
 struct pipe
-
 zero-copy
-
 anonymous pipe
-
 anon pipe
-
 embedded binarie
-
 bad allocation
-
 Hermetica Digital
-
 Code Signing
-
 Disable Wow64
-
 EV Code
-
 AutoWarp
-
 Terramaster
-
 PJSIP
-
 Octa Patch
-
 Geoblocking
-
 TOS Vulnerability
-
 Captcha Bypass
-
 Enrico Barberis
-
 Pietro Frigo
-
 Marius Muench
-
 Herbert Bos
-
 and Cristiano
-
 Cristiano Giuffrida
-
 built-in mitigation
+untrusted input
+sending craft
+Thomas Chauchefoin
+Server Side Request Forgery
+ILIT300
+Battalion 300
+Meris botnet
+REvil
+ransom DDoS
+Azure account
+CrowdStrike
+SentinelOne
+Ragnar Locker
+ragnar gang
+.RGNR_
+RAGNAR_LOCKER
+Transport Layer Security key
+TLStorm
+shellcode
+applocker
+attack surface
+subsystem
+kernel tracing
+pointer leak
+bits bound
+read/writes
+pointer offset
+runtime
+ebpf
+io_uring
+syscall
+context switches
+Code snippets
+sandboxed
+file descriptor
+io buffer
+io_buffer
+kmalloc
+Use After Free
+SLUB allocator
+ftrace
+heap spray
+userfault
+DEV-0665
+pcap
+DSA-
+Smart-UPS
+TA416
+Mustang Panda
+Discord webhook
+PlugX
+dll hijack
+pdf decoy
+network stack
+authorization scope
+data link layer
+vulnerable target
+target-specific
+information disclosure
+compromised
+Adafruit
+stack-based
+ioc
+iocs
+apt41
+USAHerds
+Mitel MiCollab
+MiVoice Business Express
+MiCollab
+MiVoice
+attack traffic
+Miscreants
+DERP Trolling
+spoofed request
+NTP attack
+Plex Media
+memcached
+PMSSDP
+rdp amplification
+AWS Shield
+bps attack
+apt31
+Pluton technology
+Pluton security
+Pluton microsoft
+Formbook
+Winnti
+Barium
+Wicked Panda
+Wicked Spider

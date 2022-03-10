@@ -905,237 +905,120 @@ Europol & Interpol Phishing Ahead? : https://blog.rootshell.be/2022/02/23/europo
 [SANS ISC] Custom Python RAT Builder : https://blog.rootshell.be/2022/01/07/sans-isc-custom-python-rat-builder/
 [SANS ISC] Malicious Python Script Targeting Chinese People : https://blog.rootshell.be/2022/01/06/sans-isc-malicious-python-script-targeting-chinese-people/
 DSA-5093 spip : https://www.debian.org/security/2022/dsa-5093
-
 USN-5319-1: Linux kernel vulnerabilities : https://ubuntu.com/security/notices/USN-5319-1
-
 USN-5318-1: Linux kernel vulnerabilities : https://ubuntu.com/security/notices/USN-5318-1
-
 USN-5317-1: Linux kernel vulnerabilities : https://ubuntu.com/security/notices/USN-5317-1
-
 CVE-2021-41180 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41180
-
 CVE-2021-41181 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41181
-
 CVE-2021-41239 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41239
-
 CVE-2021-41241 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41241
-
 CVE-2022-24713 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24713
-
 CVE-2022-24714 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24714
-
 CVE-2022-24715 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24715
-
 CVE-2022-24716 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24716
-
 CVE-2022-24739 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24739
-
 CVE-2022-26319 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26319
-
 CVE-2022-26337 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26337
-
 Internet Backbone Giant Lumen Shuns .RU : https://krebsonsecurity.com/2022/03/internet-backbone-giant-lumen-shuns-ru/
-
 “Dirty Pipe” Linux kernel bug lets anyone write to any file : https://nakedsecurity.sophos.com/2022/03/08/dirty-pipe-linux-kernel-bug-lets-anyone-to-write-to-any-file/
-
 FBI says Ragnar ransomware hit 52 critical American orgs : https://go.theregister.com/feed/www.theregister.com/2022/03/09/fbi_says_ragnar_locker_ransomware/
-
 Microsoft patches critical remote-code-exec hole in Exchange Server and others : https://go.theregister.com/feed/www.theregister.com/2022/03/09/microsoft_patch_tuesday/
-
 Cow-counting app abused by China 'to spy on US states' : https://go.theregister.com/feed/www.theregister.com/2022/03/09/china_apt41_mandiant_usaherds/
-
 What should we do about 'systemic' cyber risks? But wait, what even are those : https://go.theregister.com/feed/www.theregister.com/2022/03/08/system-cyber-risk-rising/
-
 Leaked stolen Nvidia key can sign Windows malware : https://go.theregister.com/feed/www.theregister.com/2022/03/05/nvidia_stolen_certificate/
-
 Microsoft Addresses 3 Zero-Days & 3 Critical Bugs for March Patch Tuesday : https://threatpost.com/microsoft-zero-days-critical-bugsmarch-patch-tuesday/178817/
-
 VERT Threat Alert: March 2022 Patch Tuesday Analysis : https://www.tripwire.com/state-of-security/featured/vert-threat-alert-march-2022-patch-tuesday-analysis/
-
 CVE-2022-25943 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25943
-
 Internet backbone provider Lumen quits Russia : https://go.theregister.com/feed/www.theregister.com/2022/03/09/lumen_quits_russia/
-
 Ragnar ransomware gang hit 52 critical US orgs, says FBI : https://go.theregister.com/feed/www.theregister.com/2022/03/09/fbi_says_ragnar_locker_ransomware/
-
 What should we do about 'systemic' cyber risks? Wait, what even are those : https://go.theregister.com/feed/www.theregister.com/2022/03/08/system-cyber-risk-rising/
-
 ProtonVPN : https://www.pcmag.com/review/360665/protonvpn
-
 Facebook Remains an Election Meddler's Paradise in 2020 : https://www.pcmag.com/commentary/372976/facebook-remains-an-election-meddlers-paradise-in-2020
-
 Can a New Alliance Help VPN Companies Prove Themselves Trustworthy? : https://www.pcmag.com/commentary/372495/can-a-new-alliance-help-vpn-companies-prove-themselves-trust
-
 Facial Recognition Is Tech's Biggest Mistake : https://www.pcmag.com/commentary/372089/facial-recognition-is-techs-biggest-mistake
-
 After a Breach, Should You Still Trust Your VPN? : https://www.pcmag.com/commentary/371833/after-a-breach-should-you-still-trust-your-vpn
-
 Apple Caving on Hong Kong Shows the Limits of Security as a Sales Tool : https://www.pcmag.com/commentary/371395/apple-caving-on-hong-kong-shows-the-limits-of-security-as-a
-
 NordVPN and TorGuard VPN Breaches: What You Need to Know : https://www.pcmag.com/commentary/371471/nordvpn-and-torguard-vpn-data-breaches-what-you-need-to-kno
-
 US Attorney General William Barr Has Encryption All Wrong : https://www.pcmag.com/commentary/371208/us-attorney-general-william-barr-has-encryption-all-wrong
-
 Think You Don't Need a VPN? Use One Anyway : https://www.pcmag.com/commentary/370801/think-you-dont-need-a-vpn-use-one-anyway
-
 Scammers Go Phishing With Deepfakes : https://www.pcmag.com/commentary/370606/scammers-go-phishing-with-deepfakes
-
 Should I Use a VPN on My Router? : https://www.pcmag.com/commentary/369908/should-i-use-a-vpn-on-my-router
-
 The VPN Industry Is on the Cusp of a Major Breakthrough : https://www.pcmag.com/commentary/369921/the-vpn-industry-is-on-the-cusp-of-a-major-breakthrough
-
 Should I Use a VPN to Stream Sports? : https://www.pcmag.com/commentary/369670/should-i-use-a-vpn-to-stream-sports
-
 Will Deleting FaceApp Make You Safe Again? : https://www.pcmag.com/commentary/369760/does-deleting-faceapp-make-you-safe-again
-
 Why Google Can't Solve the Privacy Paradox : https://www.pcmag.com/commentary/369583/why-google-cant-solve-the-privacy-paradox
-
 How Dangerous Is Your Foreign VPN? : https://www.pcmag.com/commentary/369309/how-dangerous-is-your-foreign-vpn
-
 Never Give Ransomware Scammers Your Money : https://www.pcmag.com/commentary/369143/never-give-ransomware-scammers-your-money
-
 The Real Reason I Don't Have a Security Camera : https://www.pcmag.com/commentary/369031/the-real-reason-i-dont-have-a-security-camera
-
 To Save the Internet, We Have to Break It : https://www.pcmag.com/commentary/368870/to-save-the-internet-we-have-to-break-it
-
 Does Two-Factor Authentication Really Make You Safer? : https://www.pcmag.com/commentary/368703/does-two-factor-authentication-really-make-you-safer
-
 APC UPS zero-day bugs can remotely burn out devices, disable power : https://www.bleepingcomputer.com/news/security/apc-ups-zero-day-bugs-can-remotely-burn-out-devices-disable-power/
-
 Android's March 2022 security updates fix three critical bugs : https://www.bleepingcomputer.com/news/security/androids-march-2022-security-updates-fix-three-critical-bugs/
-
 Twitter launches Tor website to tackle Russian censorship : https://www.bleepingcomputer.com/news/technology/twitter-launches-tor-website-to-tackle-russian-censorship/
-
 Windows 10 KB5011487 and KB5011485 updates released : https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5011487-and-kb5011485-updates-released/
-
 Windows 11 KB5011493 update released with bug fixes and improvements : https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5011493-update-released-with-bug-fixes-and-improvements/
-
 Microsoft March 2022 Patch Tuesday fixes 71 flaws, 3 zero-days : https://www.bleepingcomputer.com/news/microsoft/microsoft-march-2022-patch-tuesday-fixes-71-flaws-3-zero-days/
-
 HP patches 16 UEFI firmware bugs allowing stealthy malware infections : https://www.bleepingcomputer.com/news/security/hp-patches-16-uefi-firmware-bugs-allowing-stealthy-malware-infections/
-
 Google: Chinese hackers target Gmail users affiliated with US govt : https://www.bleepingcomputer.com/news/security/google-chinese-hackers-target-gmail-users-affiliated-with-us-govt/
-
 ProtonMail urges Russian users to renew as payment options dry up : https://www.bleepingcomputer.com/news/security/protonmail-urges-russian-users-to-renew-as-payment-options-dry-up/
-
 Cloudflare to auto-brick servers that go offline in Ukraine, Russia : https://www.bleepingcomputer.com/news/security/cloudflare-to-auto-brick-servers-that-go-offline-in-ukraine-russia/
-
 Emotet growing slowly but steadily since November resurgence : https://www.bleepingcomputer.com/news/security/emotet-growing-slowly-but-steadily-since-november-resurgence/
-
 DDoS attacks now use new record-breaking amplification vector : https://www.bleepingcomputer.com/news/security/ddos-attacks-now-use-new-record-breaking-amplification-vector/
-
 E-commerce giant Mercado Libre confirms source code data breach : https://www.bleepingcomputer.com/news/security/e-commerce-giant-mercado-libre-confirms-source-code-data-breach/
-
 [local] Wondershare Dr.Fone 12.0.18 - 'Wondershare InstallAssist' Unquoted Service Path : https://www.exploit-db.com/exploits/50813
-
 [local] Printix Client 1.3.1106.0 - Privilege Escalation : https://www.exploit-db.com/exploits/50812
-
 [local] Audio Conversion Wizard v2.01 - Buffer Overflow : https://www.exploit-db.com/exploits/50811
-
 [local] Cobian Backup 0.9 - Unquoted Service Path : https://www.exploit-db.com/exploits/50810
-
 [webapps] Webmin 1.984 - Remote Code Execution (Authenticated) : https://www.exploit-db.com/exploits/50809
-
 DSA-5094 thunderbird : https://www.debian.org/security/2022/dsa-5094
-
 CVE-2022-0482 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0482
-
 CVE-2022-0881 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0881
-
 CVE-2022-0896 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0896
-
 Millions of APC Smart-UPS devices vulnerable to TLStorm : https://go.theregister.com/feed/www.theregister.com/2022/03/09/tlstorm_apc_ups_critical_zero_days/
-
 Where are the (serious) Russian cyberattacks? : https://go.theregister.com/feed/www.theregister.com/2022/03/09/where_are_the_russian_cyberattacks/
-
 US critical infrastructure hit by ransomware : https://www.itsecurityguru.org/2022/03/09/us-critical-infrastructure-hit-by-ransomware/?utm_source=rss&utm_medium=rss&utm_campaign=us-critical-infrastructure-hit-by-ransomware
-
 Chinese phishing accounts are targeting EU diplomats : https://www.itsecurityguru.org/2022/03/09/chinese-phishing-accounts-are-targeting-eu-diplomats/?utm_source=rss&utm_medium=rss&utm_campaign=chinese-phishing-accounts-are-targeting-eu-diplomats
-
 Sextortion scams are on the rise : https://www.pandasecurity.com/en/mediacenter/security/sextortion-scams/
-
 RagnarLocker ransomware gang breached 52 critical infrastructure organizations : https://blog.malwarebytes.com/ransomware/2022/03/ragnarlocker-ransomware-gang-breached-52-critical-infrastructure-organizations/
-
 Azure AutoWarp brings automation headaches : https://blog.malwarebytes.com/cybercrime/exploits/2022/03/azure-autowarp-brings-automation-headaches/
-
 [SANS ISC] Infostealer in a Batch File : https://blog.rootshell.be/2022/03/09/sans-isc-infostealer-in-a-batch-file/
-
 Chinese phishing actors consistently targeting EU diplomats : https://www.bleepingcomputer.com/news/security/chinese-phishing-actors-consistently-targeting-eu-diplomats/
-
 New Method That Amplifies DDoSes By 4 Billion-Fold. What Could Go Wrong? : https://packetstormsecurity.com/news/view/33191/New-Method-That-Amplifies-DDoSes-By-4-Billion-Fold.-What-Could-Go-Wrong.html
-
 Chinese APT Zero Days Compromised US State Governments : https://packetstormsecurity.com/news/view/33192/Chinese-APT-Zero-Days-Compromised-US-State-Governments.html
-
 Millions Of APC Smart-UPS Devices Vulnerable To TLStorm : https://packetstormsecurity.com/news/view/33190/Millions-Of-APC-Smart-UPS-Devices-Vulnerable-To-TLStorm.html
-
 Seventy-One Vulnerabilities Addressed By Microsoft On Patch Tuesday : https://packetstormsecurity.com/news/view/33189/Seventy-One-Vulnerabilities-Addressed-By-Microsoft-On-Patch-Tuesday.html
-
 Ubuntu Security Notice USN-5319-1 : https://packetstormsecurity.com/files/166248/USN-5319-1.txt
-
 DEOS AG OPEN 710/810 Cross Site Scripting : https://packetstormsecurity.com/files/166247/deos-xss.txt
-
 Red Hat Security Advisory 2022-0790-01 : https://packetstormsecurity.com/files/166246/RHSA-2022-0790-01.txt
-
 Audio Conversion Wizard 2.01 Buffer Overflow : https://packetstormsecurity.com/files/166245/audioconvwiz201-overflow.txt
-
 Red Hat Security Advisory 2022-0771-01 : https://packetstormsecurity.com/files/166244/RHSA-2022-0771-01.txt
-
 Ubuntu Security Notice USN-5318-1 : https://packetstormsecurity.com/files/166243/USN-5318-1.txt
-
 Printix Client 1.3.1106.0 Privilege Escalation : https://packetstormsecurity.com/files/166242/printixclient1311060-escalate.txt
-
 Ubuntu Security Notice USN-5317-1 : https://packetstormsecurity.com/files/166241/USN-5317-1.txt
-
 Webmin 1.984 Remote Code Execution : https://packetstormsecurity.com/files/166240/webmin1984-exec.txt
-
 Red Hat Security Advisory 2022-0772-01 : https://packetstormsecurity.com/files/166239/RHSA-2022-0772-01.txt
-
 UFONet 1.8 : https://packetstormsecurity.com/files/166238/ufonet-v1.8.tar.gz
-
 Red Hat Security Advisory 2022-0780-01 : https://packetstormsecurity.com/files/166237/RHSA-2022-0780-01.txt
-
 Red Hat Security Advisory 2022-0777-01 : https://packetstormsecurity.com/files/166236/RHSA-2022-0777-01.txt
-
 Cobian Backup 0.9 Unquoted Service Path : https://packetstormsecurity.com/files/166235/cobianbackup09-unquotedpath.txt
-
 Wondershare Dr.Fone 12.0.18 Unquoted Service Path : https://packetstormsecurity.com/files/166234/wondersharedrfone12018-unquotedpath.txt
-
 Loki RAT (Relapse) / SQL Injection : https://seclists.org/fulldisclosure/2022/Mar/14
-
 Loki RAT (Relapse) / Directory Traversal - Arbitrary File	Delete : https://seclists.org/fulldisclosure/2022/Mar/13
-
 Backdoor.Win32.DirectConnection.103 (1.0 RAT-Tool) / Weak	Hardcoded Password : https://seclists.org/fulldisclosure/2022/Mar/12
-
 Backdoor.Win32.RemoteNC.beta4 / Unauthenticated Remote Command	Execution : https://seclists.org/fulldisclosure/2022/Mar/11
-
 Backdoor.Win32.BluanWeb / Unauthenticated Remote Command	Execution : https://seclists.org/fulldisclosure/2022/Mar/10
-
 Backdoor.Win32.BluanWeb / Information Disclosure : https://seclists.org/fulldisclosure/2022/Mar/9
-
 Backdoor.Win32.BluanWeb / Unauthenticated Remote Code Execution : https://seclists.org/fulldisclosure/2022/Mar/8
-
 Backdoor.Win32.FTP.Nuclear.10 / Hardcoded Credentials : https://seclists.org/fulldisclosure/2022/Mar/7
-
 Backdoor.Win32.BNLite / Remote Stack Buffer Overflow : https://seclists.org/fulldisclosure/2022/Mar/6
-
 Backdoor.Win32.Augudor.a / Unauthenticated Remote File Write -	RCE : https://seclists.org/fulldisclosure/2022/Mar/5
-
 New Release: UFONet v1.8 - "DarK-PhAnT0m!"... : https://seclists.org/fulldisclosure/2022/Mar/4
-
 Mr. Post - Outlook Add-in - Data Theft Risk : https://seclists.org/fulldisclosure/2022/Mar/3
-
 Microsoft Patch Tuesday, March 2022 Edition : https://krebsonsecurity.com/2022/03/microsoft-patch-tuesday-march-2022-edition/
-
 Most ServiceNow Instances Misconfigured, Exposed : https://threatpost.com/most-servicenow-instances-misconfigured-exposed/178827/
-
 Russian APTs Furiously Phish Ukraine – Google : https://threatpost.com/russian-apts-phishing-ukraine-google/178819/
-
 Is Anyone Doing Anything About the Explosion in Crypto Crime? : https://securityintelligence.com/articles/crypto-crime-solutions/
-
 Apple Peek Performance Event: new Mac, new iPhone, and more : https://www.securemac.com/news/apple-peek-performance-event-new-mac-new-iphone-and-more
-
 US Treasury: Russia may bypass sanctions using ransomware payments : https://www.bleepingcomputer.com/news/security/us-treasury-russia-may-bypass-sanctions-using-ransomware-payments/
-
 Clearview AI fined €20M for collecting Italians’ biometric data : https://www.bleepingcomputer.com/news/legal/clearview-ai-fined-20m-for-collecting-italians-biometric-data/
-
 Russian government sites hacked in supply chain attack : https://www.bleepingcomputer.com/news/security/russian-government-sites-hacked-in-supply-chain-attack/
