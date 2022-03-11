@@ -179,6 +179,7 @@ Template_Header = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/7e675542d3.js" crossorigin="anonymous"></script>
+    %s
     <link href="css/static_style.css" rel="stylesheet">
     <title>Redqueen</title>
     <meta name="description" content="">
@@ -186,6 +187,7 @@ Template_Header = """<!DOCTYPE html>
     <link rel="icon" href="img/Rdfavicon.ico">
     <style> %s </style>
   </head>
+  <body onload="moveWindow()">
   <body style="  background-color: #15202b;">"""
 
 Template_Footer = "</body></html>"
@@ -211,9 +213,10 @@ Cherryconf = {
 
 
 class Redqueen_Server:
+    Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
     def header(self):
         css_box = GenCss()
-        return str(Template_Header) % css_box
+        return str(Template_Header)%(Redqueen_Server.Anchor,css_box)
 
     def footer(self):
         return Template_Footer
@@ -231,7 +234,19 @@ class Redqueen_Server:
 
     @cherrypy.expose
     def redqueen_retweet(self, rid=None):
+        AnchorId = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
         if rid != None and rid.isnumeric():
+            for nbr, D in enumerate(Extracted_Datas):
+                    if str(D[1]) == str(fid):
+                         AnchorId = "Anchor-%s"%nbr
+                         break
+
+            Redqueen_Server.Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){
+    var top = document.getElementById('%s').offsetTop;
+    window.scrollTo(0, top);
+}
+</script>"""%str(AnchorId)
+
             print("About to Retweet : ", rid)
 
             try:
@@ -245,13 +260,32 @@ class Redqueen_Server:
             except Exception as e:
                 Betterror(e, inspect.stack()[0][3])
         else:
-            print("not num:", rid)
+            if rid.startswith("rss"):
+               if rid.split("rss")[1].isnumeric():
+                  AnchorId = "Anchor-%s"%rid.split("rss")[1]
+                  Redqueen_Server.Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){
+    var top = document.getElementById('%s').offsetTop;
+    window.scrollTo(0, top);
+}
+</script>"""%str(AnchorId)
+            else:
+                print("Unknown value:", rid)
         return self.index()
 
     @cherrypy.expose
     def redqueen_favorite(self, fid=None):
+        AnchorId = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
         if fid != None and fid.isnumeric():
-            print("About to Fav : ", fid)
+            for nbr, D in enumerate(Extracted_Datas):
+                    if str(D[1]) == str(fid):
+                         AnchorId = "Anchor-%s"%nbr
+                         break
+
+            Redqueen_Server.Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){
+    var top = document.getElementById('%s').offsetTop;
+    window.scrollTo(0, top);
+}
+</script>"""%str(AnchorId)
 
             try:
                 Twitter_CherryApi = Twython(
@@ -264,15 +298,21 @@ class Redqueen_Server:
             except Exception as e:
                 Betterror(e, inspect.stack()[0][3])
         else:
-            print("not num:", fid)
+            if fid.startswith("rss"):
+               if fid.split("rss")[1].isnumeric():
+                  AnchorId = "Anchor-%s"%fid.split("rss")[1]
+                  Redqueen_Server.Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){
+    var top = document.getElementById('%s').offsetTop;
+    window.scrollTo(0, top);
+}
+</script>"""%str(AnchorId)
+            else:
+                print("Unknown value:", fid)
         return self.index()
 
 
 def Extract_Tweet_Data(tweet):
     global Extracted_Datas
-    #       print("Tweet:\n",tweet)
-    #       print()
-    ##
     if "retweeted_status" in tweet:
 
         Tweet_Id = str(tweet["retweeted_status"]["id"])
@@ -397,10 +437,12 @@ def GenFeed():
                 caseless_replace = re.compile(re.escape(str(k)), re.IGNORECASE)
                 kolored = Span_open + str(k) + Span_close
                 Highlight_Txt = caseless_replace.sub(kolored, str(D[6]))
+
         Template_Tweet = (
-            """    <div class="center-feeds-container">
+            """<div id='%s'><span style="opacity:0">-</span></div>
+    <div class="center-feeds-container">
       <div class="profile-picture"> <img src="%s" class="image">"""
-            % (str(D[4]))
+            % ("Anchor-"+str(nbr),str(D[4]))
             + """ </div>
       <div class="center-feeds">
         <div class="main-tweet">
@@ -465,11 +507,28 @@ def GenFeed():
                             media
                         )
 
-        Template_Tweet += (
+
+        if D[1] == "rss":
+
+            Template_Tweet += (
             """
         <div class="under-main-tweet">
             <div class="retweet%s"><form action="redqueen_retweet" method="POST"><input id="retweet%s" type="checkbox" name="rid" value="%s" onclick="submit()"><label class="btn" for="retweet%s"><i class="fas fa-retweet"></i> %s</label></form></div>"""
-            % (nbr, nbr, D[1], nbr, D[10])
+            % (nbr, nbr, "rss"+str(nbr), nbr, D[10])
+            + """
+            <div class="like%s"><form action="redqueen_favorite" method="POST"><input id="like%s" type="checkbox" name="fid" value="%s" onclick="submit()"><label class="btn" for="like%s"><i class="far fa-heart"></i> %s</label></form></div>"""
+            % (nbr, nbr, "rss"+str(nbr), nbr, D[9])
+            + """
+        </div>
+      </div>
+    </div>"""
+        )
+
+        else:
+            Template_Tweet += (
+            """
+        <div class="under-main-tweet">
+            <div class="retweet%s"><form action="redqueen_retweet" method="POST"><input id="retweet%s" type="checkbox" name="rid" value="%s" onclick="submit()"><label class="btn" for="retweet%s"><i class="fas fa-retweet"></i> %s</label></form></div>"""            % (nbr, nbr, D[1], nbr, D[10])
             + """
             <div class="like%s"><form action="redqueen_favorite" method="POST"><input id="like%s" type="checkbox" name="fid" value="%s" onclick="submit()"><label class="btn" for="like%s"><i class="far fa-heart"></i> %s</label></form></div>"""
             % (nbr, nbr, D[1], nbr, D[9])
