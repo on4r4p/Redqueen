@@ -258,7 +258,20 @@ class Redqueen_Server:
                 )
                 Twitter_CherryApi.retweet(id=rid)
             except Exception as e:
-                Betterror(e, inspect.stack()[0][3])
+                if "Twitter API returned a 403 (Forbidden), You have already" in str(e):
+                   try:
+                       Twitter_CherryApi = Twython(
+                       TAK.oa1_app_key,
+                       TAK.oa1_app_secret,
+                       TAK.oa1_oauth_token,
+                       TAK.oa1_oauth_token_secret,
+                       )
+                       Twitter_CherryApi.destroy_retweet(id=rid)
+                   except Exception as e:
+                      Betterror(e, inspect.stack()[0][3])
+                else:
+                      Betterror(e, inspect.stack()[0][3])
+
         else:
             if rid.startswith("rss"):
                if rid.split("rss")[1].isnumeric():
@@ -296,7 +309,19 @@ class Redqueen_Server:
                 )
                 Twitter_CherryApi.create_favorite(id=fid)
             except Exception as e:
-                Betterror(e, inspect.stack()[0][3])
+                if "Twitter API returned a 403 (Forbidden), You have already" in str(e):
+                   try:
+                       Twitter_CherryApi = Twython(
+                       TAK.oa1_app_key,
+                       TAK.oa1_app_secret,
+                       TAK.oa1_oauth_token,
+                       TAK.oa1_oauth_token_secret,
+                       )
+                       Twitter_CherryApi.destroy_favorite(id=fid)
+                   except Exception as e:
+                      Betterror(e, inspect.stack()[0][3])
+                else:
+                      Betterror(e, inspect.stack()[0][3])
         else:
             if fid.startswith("rss"):
                if fid.split("rss")[1].isnumeric():
