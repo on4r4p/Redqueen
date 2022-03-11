@@ -237,7 +237,7 @@ class Redqueen_Server:
         AnchorId = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
         if rid != None and rid.isnumeric():
             for nbr, D in enumerate(Extracted_Datas):
-                    if str(D[1]) == str(fid):
+                    if str(D[1]) == str(rid):
                          AnchorId = "Anchor-%s"%nbr
                          break
 
@@ -273,7 +273,7 @@ class Redqueen_Server:
                       Betterror(e, inspect.stack()[0][3])
 
         else:
-            if rid.startswith("rss"):
+            if rid != None and rid.startswith("rss"):
                if rid.split("rss")[1].isnumeric():
                   AnchorId = "Anchor-%s"%rid.split("rss")[1]
                   Redqueen_Server.Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){
@@ -323,7 +323,7 @@ class Redqueen_Server:
                 else:
                       Betterror(e, inspect.stack()[0][3])
         else:
-            if fid.startswith("rss"):
+            if fid != None and fid.startswith("rss"):
                if fid.split("rss")[1].isnumeric():
                   AnchorId = "Anchor-%s"%fid.split("rss")[1]
                   Redqueen_Server.Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){
