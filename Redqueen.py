@@ -109,7 +109,7 @@ Friends_List = []
 
 Banned_Word_list = []
 
-Banned_User_list = []
+Banned_User_List = []
 
 Ban_Double_List = []
 
@@ -702,6 +702,7 @@ def Pastbin(data):
 
 
 def Betterror(error_msg, def_name):
+    Err_to_log = "Empty"
     try:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -802,7 +803,7 @@ def Load_Variables():
     global Following_List
     global Friends_List
     global Banned_Word_list
-    global Banned_User_list
+    global Banned_User_List
     global Requested_Cmd_List
     global Already_Searched_List
     global Extract_Tweet_Data
@@ -903,7 +904,7 @@ def Load_Variables():
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Banned_People_Rq):
-            Banned_User_list.append(saved)
+            Banned_User_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Banned users Loaded", True)
@@ -1092,7 +1093,7 @@ def Request(cmd):
     global Keywords_List
     global Timelines_List
     global Banned_Word_list
-    global Banned_User_list
+    global Banned_User_List
     global Api_Call_Nbr
     global Banned
     global MasterPause_Trigger
@@ -1245,7 +1246,7 @@ def Request(cmd):
                     if option == "!badkeys":
                         return Pastbin(Banned_Word_list)
                     if option == "!badppl":
-                        return Pastbin(Banned_User_list)
+                        return Pastbin(Banned_User_List)
                     if option == "!users":
                         return Pastbin(Following_List)
                     if option == "!keywords":
@@ -1565,24 +1566,33 @@ def Request(cmd):
 
 #
         if len(adt) > 0:
-            print("Adding new entry to Users.Timelines.Rq")
+            print("Adding %s new users to Users.Timelines.Rq"%len(adt))
             with open(Pth_Users_Timelines_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in adt:
                     if entry not in Timelines_List:
+                        bingo_cnter += 1
                         f.write("\n"+str(entry) + "\n")
-
-            output.append("**Adding %s entry in Users.Timelines.Rq**" % len(adt))
+                    else:
+                        print("**%s is already in Timelines.Rq"%entry)
+                        output.append("**%s is already in Timelines.Rq"%entry)
+            output.append("**Adding %s users in Users.Timelines.Rq**" % bingo_cnter)
 
         if len(bt) > 0:
-            print("Adding new entry to Bannedpeople.Rq")
+            print("Adding %s new users to Bannedpeople.Rq"%len(bt))
             with open(Pth_Banned_People_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in bt:
-                    if entry not in Banned_User_list:
+                    if entry not in Banned_User_List:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Adding %s entry in Bannedpeople.Rq**" % len(bt))
+                        bingo_cnter += 1
+                    else:
+                        print("**%s is already in Banned.People.Rq"%entry)
+                        output.append("**%s is already in Banned.People.Rq"%entry)
+            output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(delt) > 0:
-            print("Deleting entry from Users.Timelines.Rq")
+            print("Deleting %s users from Users.Timelines.Rq"%len(delt))
             lines = Cleanfile(Pth_Users_Timelines_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1596,24 +1606,35 @@ def Request(cmd):
             )
             os.system(save_copy)
             with open(Pth_Users_Timelines_Rq, "w") as f:
+                bingo_cnter = 0
                 for line in lines:
                     for entry in delt:
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
-            output.append("**Deleting %s entry in Users.Timelines.Rq**" % len(delt))
+                        else:
+                            bingo_cnter += 1
+                            print("**Found %s in Users.Timelines.Rq**"%entry)
+                            output("**Found %s in Users.Timelines.Rq**"%entry) 
+            output.append("**Deleting %s entry in Users.Timelines.Rq**" % bingo_cnter)
 
 
 #
         if len(adrss) > 0:
-            print("Adding new entry to Rq.Rss")
+            print("Adding %s new urls to Rq.Rss"%len(adrss))
             with open(Pth_Rss_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in adrss:
                     if entry not in Rss_Url_List:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Added %s new entry to Rq.Rss**" % len(adrss))
+                        bingo_cnter +=1
+                    else:
+                        print("**%s Already saved in Rss.Rq"%entry)
+                        output.append("**%s Already saved in Rss.Rq"%entry)
+                    
+            output.append("**Added %s new entry to Rq.Rss**" % bingo_cnter)
 
         if len(delrss) > 0:
-            print("Deleting entry from Rq.Rss")
+            print("Deleting %s entry from Rss.Rq"%len(delrss))
             lines = Cleanfile(Pth_Rss_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1627,14 +1648,19 @@ def Request(cmd):
             )
             os.system(save_copy)
             with open(Pth_Rss_Rq, "w") as f:
+                bingo_cnter = 0
                 for line in lines:
                     for entry in delrss:
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
-            output.append("**Deleting %s entry in Rq.Rss**" % len(delrss))
+                        else:
+                            print("**Found %s in Rss.Rq."%entry)
+                            bingo_cnter += 1
+                            output.append("**Found %s in Rss.Rq."%entry)
+            output.append("**Deleting %s entry in Rq.Rss**" % bingo_cnter)
 
         if len(delf) > 0:
-            print("Deleting entry from Rq.Friends")
+            print("Deleting %s user from Friends.Rq"%len(delf))
             lines = Cleanfile(Pth_Friends_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1648,14 +1674,19 @@ def Request(cmd):
             )
             os.system(save_copy)
             with open(Pth_Friends_Rq, "w") as f:
+                bingo_cnter = 0
                 for line in lines:
                     for entry in delf:
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
-            output.append("**Deleting %s entry in Rq.Friends**" % len(delf))
+                        else:
+                            bingo_cnter += 1
+                            print("Found %s in Friends.Rq"%entry)
+                            output("Found %s in Friends.Rq"%entry)
+            output.append("**Deleting %s users in Friends.Rq**" % bingo_cnter)
 
         if len(delu) > 0:
-            print("Deleting entry from Rq.Following")
+            print("Deleting entry from Following.Rq")
             lines = Cleanfile(Pth_Following_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1669,14 +1700,19 @@ def Request(cmd):
             )
             os.system(save_copy)
             with open(Pth_Following_Rq, "w") as f:
+                bingo_cnter = 0
                 for line in lines:
                     for entry in delu:
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
-            output.append("**Deleting %s entry in Rq.Following**" % len(delu))
+                        else:
+                             print("**Found %s in Following.Rq"%entry)
+                             bingo_cnter +=1
+                             output("**Found %s in Following.Rq"%entry)
+            output.append("**Deleting %s users in Following.Rq**" % bingo_cnter)
 
         if len(delk) > 0:
-            print("Deleting entry from Rq.Keywords")
+            print("Deleting %s keywords from Keywords.Rq"%len(delk))
             lines = Cleanfile(Pth_Keywords_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1690,60 +1726,94 @@ def Request(cmd):
             )
             os.system(save_copy)
             with open(Pth_Keywords_Rq, "w") as f:
+                bingo_cnter = 0
                 for line in lines:
                     for entry in delk:
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
-            output.append("**Deleting %s entry in Rq.Keywords**" % len(delk))
+                        else:
+                           print("**Found %s in Keywords.Rq"%entry)
+                           output("**Found %s in Keywords.Rq"%entry)
+                           bingo_cnter += 1
+            output.append("**Deleting %s entry in Keywords.Rq**" %bingo_cnter)
 
         if len(adk) > 0:
-            print("Adding new entry to Rq.Keywords")
+            print("Adding %s new keywords to Keywords.Rq"%len(adk))
             with open(Pth_Keywords_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in adk:
                     if entry not in Keywords_List:
                         f.write("\n"+str(entry) + "\n")
-
-            output.append("**Adding %s entry in Rq.Keywords**" % len(adk))
+                        bingo_cnter += 1
+                    else:
+                        print("**%s is already in Keywords.Rq"%entry)
+                        output.append("**%s is already in Keywords.Rq"%entry)
+            output.append("**Adding %s entry in Keywords.Rq**" %bingo_cnter )
 
         if len(adu) > 0:
-            print("Adding new entry to Rq.Following")
+            print("Adding %s new entry to Following.Rq"%len(adu))
             with open(Pth_Following_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in adu:
                     if entry not in Following_List:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Adding %s entry in Rq.Following**" % len(adu))
+                        bingo_cnter += 1
+                    else:
+                        print("%s is already in Following.Rq"%entry)
+                        output("%s is already in Following.Rq"%entry)
+            output.append("**Adding %s entry in Following.Rq**" % bingo_cnter)
 
         if len(adf) > 0:
-            print("Adding new entry to Rq.Friends")
+            print("Adding %s new entry to Friends.Rq"%len(adf))
             with open(Pth_Friends_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in adf:
                     if entry not in Friends_List:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Adding %s entry in Rq.Friends**" % len(adf))
+                        bingo_cnter +=1
+                    else:
+                        print("**%s is already in Friends.Rq"%entry)
+                        output("**%s is already in Friends.Rq"%entry)
+            output.append("**Adding %s entry in Friends.Rq**" % bingo_cnter)
 
         if len(bu) > 0:
-            print("Adding new entry to Rq.Bannedpeople")
+            print("Adding %s new entry to Banned.People.Rq"%len(bu))
             with open(Pth_Banned_People_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in bu:
-                    if entry not in Banned_User_list:
+                    if entry not in Banned_User_List:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Adding %s entry in Rq.Bannedpeople**" % len(bu))
+                        bingo_cnter += 1
+                    else:
+                        print("**%s is already in Banned.People.Rq"%entry)
+                        output("**%s is already in Banned.People.Rq"%entry)
+            output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(bf) > 0:
-            print("Adding new entry to Rq.Bannedpeople")
+            print("Adding %s new entry to Banned.Friends.Rq"%len(bf))
             with open(Pth_Banned_People_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in bf:
-                    if entry not in Banned_User_list:
+                    if entry not in Banned_User_List:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Adding %s entry in Rq.Bannedpeople**" % len(bf))
+                        bingo_cnter += 1
+                    else:
+                        print("**%s already in Banned.People.Rq"%entry)
+                        output.append("**%s already in Banned.People.Rq"%entry)
+            output.append("**Adding %s users in RBanned.People.Rq**" % bingo_cnter)
 
         if len(bk) > 0:
-            print("Adding new entry to Rq.Bannedword")
+            print("Adding new entry to Banned.Keyword.Rq")
             with open(Pth_Banned_Word_Rq, "a") as f:
+                bingo_cnter = 0
                 for entry in bk:
                     if entry not in Banned_Word_list:
                         f.write("\n"+str(entry) + "\n")
-            output.append("**Adding %s entry in Rq.Bannedword**" % len(bk))
+                        bingo_cnter += 1
+                    else:
+                        print("**%s is already in Banned.Keywords.Rq"%entry)
+                        output.append("**%s is already in Banned.Keywords.Rq"%entry)
+            output.append("**Adding %s entry in Rq.Banned.KeyWord**" % bingo_cnter)
         output.append("**Done**")
         return output
     except Exception as e:
@@ -2259,8 +2329,8 @@ def Stat2Irc(Time_To_Wait):
         Total_Update_Call_Nbrtxt = "Total Update Calls: " + str(Total_Update_Call_Nbr)
         IrSend(Total_Update_Call_Nbrtxt)
         time.sleep(Config.Time_Sleep)
-        Banned_User_listtxt = "Banned Users in list: " + str(len(Banned_User_list))
-        IrSend(Banned_User_listtxt)
+        Banned_User_Listtxt = "Banned Users in list: " + str(len(Banned_User_List))
+        IrSend(Banned_User_Listtxt)
         time.sleep(Config.Time_Sleep)
         Ban_Double_Listtxt = "Total Banned (Double): " + str(Total_Already_Send_Nbr)
         IrSend(Ban_Double_Listtxt)
@@ -2725,7 +2795,7 @@ def Ban(twitem):
                 print("*=*=*=*=*=*=*=*=*=*")
                 return(True)
 
-        for forbid in Banned_User_list:
+        for forbid in Banned_User_List:
             if str(forbid.lower()) in str(Tweet_Author.lower()):
 
                 Fig("digital", "This tweet is from a banned user :")
@@ -2738,7 +2808,7 @@ def Ban(twitem):
                 return(True)
 
         if len(Tweet_Rt_Author) > 0:
-            for forbid in Banned_User_list:
+            for forbid in Banned_User_List:
                 if str(forbid.lower()) in str(Tweet_Rt_Author.lower()):
 
                     Fig("digital", "This retweet is from a banned user :")
