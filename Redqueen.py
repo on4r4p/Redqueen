@@ -92,14 +92,13 @@ Pth_Rq_Server_Save = str(Pth_Data) + "Server.Save.Rq"
 
 Pth_Url_Sent_Rq = str(Pth_Data) + "Url.Sent.Rq"
 
-
 RestABit_Trigger = False
 
 Twitter_Api = ""
 
-Keywords_List_Original = []
-
 Keywords_List = []
+
+Search_List = []
 
 Timelines_List = []
 
@@ -454,11 +453,13 @@ def Extract_Tweet_Data(tweet):
 def GenFeed():
     Tweets_Feed = []
     for nbr, D in enumerate(Extracted_Datas):
+        HLDone = []
         Span_open = '<span style="color: #cc33cc;">' 
         Span_close ="</span>"
         Highlight_Txt = str(D[6])
-        for k in Keywords_List_Original:
-            if k.lower() in D[6].lower():
+        for k in Keywords_List:
+            if k.lower() in Highlight_Txt.lower() and k not in HLDone:
+                HLDone.append(k)
                 caseless_replace = re.compile(re.escape(str(k)), re.IGNORECASE)
                 kolored = Span_open + str(k) + Span_close
                 Highlight_Txt = caseless_replace.sub(kolored, str(D[6]))
@@ -710,6 +711,7 @@ def Betterror(error_msg, def_name):
             "!!\nFile: %s has encounter a %s error in %s() at line %s\nError Message:%s\n!!"
             % (fname, exc_type, def_name, exc_tb.tb_lineno, error_msg)
         )
+        print("\n!!Error At:"+str(CurrentDate) + "!!\n")
         print(Err_to_log)
 
     except Exception as e:
@@ -719,6 +721,7 @@ def Betterror(error_msg, def_name):
             "!!\nFile: %s has encounter a %s error in Betterror() at line %s\nError Message:%s\n!!"
             % (fname, exc_type, exc_tb.tb_lineno, e)
         )
+        print("\n!!Error At:"+str(CurrentDate) + "!!\n")
         print(Err_to_log)
 
     time.sleep(Config.Time_Sleep)
@@ -797,8 +800,8 @@ def Fig(font, txt, toirc=None):
 
 def Load_Variables():
 
-    global Keywords_List_Original
     global Keywords_List
+    global Search_List
     global Timelines_List
     global Following_List
     global Friends_List
@@ -818,6 +821,7 @@ def Load_Variables():
         Pth_Update_Call,
         Pth_Request_Log,
         Pth_Current_Session,
+        Pth_Error_Log,
         Pth_Rq_Server_Save,
         Pth_Banned_Word_Rq,
         Pth_Tweets_Id_Rq,
@@ -840,6 +844,8 @@ def Load_Variables():
             print("Creating file")
             print("==")
             open(cf, "w")
+            Err_to_log = "==\nFile does not exist (%s) creating a new one.==\n" %cf
+            Error_Log(Err_to_log)
 
     try:
         Fig("cybermedium", "LoadVars()", True)
@@ -863,7 +869,7 @@ def Load_Variables():
         for saved in Cleanfile(Pth_Keywords_Rq):
             Keywords_List.append(saved)
 
-        Keywords_List_Original = Keywords_List
+        Search_List = Keywords_List
 
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Keywords Loaded", True)
@@ -1089,7 +1095,7 @@ def timer(mode):
 
 def Request(cmd):
 
-    global Keywords_List
+    global Search_List
     global Timelines_List
     global Banned_Word_list
     global Banned_User_List
@@ -1249,7 +1255,7 @@ def Request(cmd):
                     if option == "!users":
                         return Pastbin(Following_List)
                     if option == "!keywords":
-                        return Pastbin(Keywords_List)
+                        return Pastbin(Search_List)
                     if option == "!timeline":
                         return Pastbin(Timelines_List)
                     if option == "!friends":
@@ -2343,7 +2349,7 @@ def Stat2Irc(Time_To_Wait):
         Followingtxt = "Users Followed: " + str(len(Following_List))
         IrSend(Followingtxt)
         time.sleep(Config.Time_Sleep)
-        Keywordstxt = "Keywords in list: " + str(len(Keywords_List))
+        Keywordstxt = "Keywords in list: " + str(len(Search_List))
         IrSend(Keywordstxt)
         time.sleep(Config.Time_Sleep)
         Timelinestxt = "Timelines in list: " + str(len(Timelines_List))
@@ -2752,7 +2758,7 @@ def Ban(twitem):
 
 
         if Banned is False:
-            for mustbe in Keywords_List_Original:
+            for mustbe in Keywords_List:
                 mustbe = re.sub(r"[^A-Za-z0-9 ]+", "", mustbe.lower())
                 if mustbe in Twist:
                     Fig("digital", "Found Keywords :")
@@ -3624,7 +3630,7 @@ def Search_Keyword(word):
 # Some Code
 def RedQueen():
 
-    global Keywords_List
+    global Search_List
     global Timelines_List
     global MasterPause_Trigger
     global MasterStart_Trigger
@@ -3650,24 +3656,24 @@ def RedQueen():
 
         Fig("digital", "Removing Keywords and Users Timelines from No.Result.Rq", True)
 
-        Keywords_List = [k for k in Keywords_List if k not in NoResult_List]
+        Search_List = [k for k in Search_List if k not in NoResult_List]
         Timelines_List = [t for t in Timelines_List if t not in NoResult_List]
 
         Fig("digital", "Removing Keywords and Users Timelines from Already_Searched_List", True)
 
-        Keywords_List = [k for k in Keywords_List if k not in Already_Searched_List]
+        Search_List = [k for k in Search_List if k not in Already_Searched_List]
         Timelines_List = [t for t in Timelines_List if t not in Already_Searched_List]
 
-        shuffle(Keywords_List)
+        shuffle(Search_List)
         shuffle(Timelines_List)
 
-        Minwords = int( (len(Keywords_List) + len(Timelines_List)) / 20)
-        Maxwords = int( (len(Keywords_List) + len(Timelines_List)) / 10)
+        Minwords = int( (len(Search_List) + len(Timelines_List)) / 20)
+        Maxwords = int( (len(Search_List) + len(Timelines_List)) / 10)
         rndwords = randint(Minwords, Maxwords)
         if rndwords < 100:
-            rndwords = len(Keywords_List)
+            rndwords = len(Search_List)
 
-        TODAYS_MENU = Keywords_List + Timelines_List
+        TODAYS_MENU = Search_List + Timelines_List
         shuffle(TODAYS_MENU)
         TODAYS_MENU = TODAYS_MENU[:rndwords]
 
