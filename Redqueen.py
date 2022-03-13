@@ -729,7 +729,7 @@ def Error_Log(Err_to_log):
 
     try:
 
-        with open(Pth_Error_Log, "a+") as fuck:
+        with open(Pth_Error_Log, "a") as fuck:
             fuck.write("\n"+str(CurrentDate) + "\n")
             fuck.write("\n"+Err_to_log + "\n")
 
@@ -817,7 +817,6 @@ def Load_Variables():
         Pth_TotalApi_Call,
         Pth_Update_Call,
         Pth_Request_Log,
-        Pth_Error_Log,
         Pth_Current_Session,
         Pth_Rq_Server_Save,
         Pth_Banned_Word_Rq,
@@ -1614,7 +1613,7 @@ def Request(cmd):
                         else:
                             bingo_cnter += 1
                             print("**Found %s in Users.Timelines.Rq**"%entry)
-                            output("**Found %s in Users.Timelines.Rq**"%entry) 
+                            output.append("**Found %s in Users.Timelines.Rq**"%entry) 
             output.append("**Deleting %s entry in Users.Timelines.Rq**" % bingo_cnter)
 
 
@@ -1682,7 +1681,7 @@ def Request(cmd):
                         else:
                             bingo_cnter += 1
                             print("Found %s in Friends.Rq"%entry)
-                            output("Found %s in Friends.Rq"%entry)
+                            output.append("Found %s in Friends.Rq"%entry)
             output.append("**Deleting %s users in Friends.Rq**" % bingo_cnter)
 
         if len(delu) > 0:
@@ -1708,7 +1707,7 @@ def Request(cmd):
                         else:
                              print("**Found %s in Following.Rq"%entry)
                              bingo_cnter +=1
-                             output("**Found %s in Following.Rq"%entry)
+                             output.append("**Found %s in Following.Rq"%entry)
             output.append("**Deleting %s users in Following.Rq**" % bingo_cnter)
 
         if len(delk) > 0:
@@ -1733,7 +1732,7 @@ def Request(cmd):
                             f.write("\n"+line + "\n")
                         else:
                            print("**Found %s in Keywords.Rq"%entry)
-                           output("**Found %s in Keywords.Rq"%entry)
+                           output.append("**Found %s in Keywords.Rq"%entry)
                            bingo_cnter += 1
             output.append("**Deleting %s entry in Keywords.Rq**" %bingo_cnter)
 
@@ -1760,7 +1759,7 @@ def Request(cmd):
                         bingo_cnter += 1
                     else:
                         print("%s is already in Following.Rq"%entry)
-                        output("%s is already in Following.Rq"%entry)
+                        output.append("%s is already in Following.Rq"%entry)
             output.append("**Adding %s entry in Following.Rq**" % bingo_cnter)
 
         if len(adf) > 0:
@@ -1773,7 +1772,7 @@ def Request(cmd):
                         bingo_cnter +=1
                     else:
                         print("**%s is already in Friends.Rq"%entry)
-                        output("**%s is already in Friends.Rq"%entry)
+                        output.append("**%s is already in Friends.Rq"%entry)
             output.append("**Adding %s entry in Friends.Rq**" % bingo_cnter)
 
         if len(bu) > 0:
@@ -1786,7 +1785,7 @@ def Request(cmd):
                         bingo_cnter += 1
                     else:
                         print("**%s is already in Banned.People.Rq"%entry)
-                        output("**%s is already in Banned.People.Rq"%entry)
+                        output.append("**%s is already in Banned.People.Rq"%entry)
             output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(bf) > 0:
