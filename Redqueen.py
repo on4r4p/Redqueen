@@ -462,7 +462,7 @@ def GenFeed():
                 HLDone.append(k)
                 caseless_replace = re.compile(re.escape(str(k)), re.IGNORECASE)
                 kolored = Span_open + str(k) + Span_close
-                Highlight_Txt = caseless_replace.sub(kolored, str(D[6]))
+                Highlight_Txt = caseless_replace.sub(kolored, str(Highlight_Txt))
 
         Template_Tweet = (
             """<div id='%s'><span style="opacity:0">-</span></div>
