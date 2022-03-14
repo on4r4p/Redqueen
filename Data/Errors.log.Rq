@@ -1761,3 +1761,112 @@ Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not 
 File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
 Error Message:list index out of range
 !!
+
+2022-03-14 06:06:14.294778
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 06:06:14.294778
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 06:06:14.294778
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 06:06:14.294778
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3557
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-14 06:06:14.294778
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3557
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-14 06:06:14.294778
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 08:20:43.711243
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 08:20:43.711243
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/TotalApi.Call.Rq) creating a new one.==
+
+
+2022-03-14 08:20:43.711243
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/Update.Status.Call.Rq) creating a new one.==
+
+
+2022-03-14 08:20:43.711243
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/Already.Searched.Rq) creating a new one.==
+
+
+2022-03-14 09:29:12.455199
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 09:29:12.455199
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3557
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-14 09:29:12.455199
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 09:29:12.455199
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 09:29:12.455199
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2153
+Error Message:list index out of range
+!!
+
+2022-03-14 09:29:12.455199
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3557
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
