@@ -1129,6 +1129,7 @@ def Request(cmd):
         delrss = []
 
         RmNores = False
+        RmServ = False
 
         print("New request from allowed user:", IrcKey.IRMASTER)
 
@@ -1172,8 +1173,9 @@ def Request(cmd):
             "!friends",
             "!rss",
             "!requests",
-            "!Pth_NoResult_Rq",
-            "!rmPth_NoResult_Rq",
+            "!badresult",
+            "!flushserver",
+            "!flushbadresult",
             "!badkeys",
             "!badppl",
             "!start",
@@ -1201,8 +1203,8 @@ def Request(cmd):
                             "addtimeline:@user1 @user2 [Add user1 and user2 timelines to Users.Timelines.Rq]",
                             "deltimeline:@user1 @user2 [Delete user1 and user2 timelines in Users.Timelines.Rq]",
                             "bantimeline:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Users.Timelines.Rq]",
-                            "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rq.Rss]",
-                            "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rq.Rss]",
+                            "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rss.Rq]",
+                            "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rss.Rq]",
                             "Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
                             "!help [Print this help]",
                             "!start [Launch Crawling.]",
@@ -1214,10 +1216,11 @@ def Request(cmd):
                             "!keywords [Print Keywords.Rq content]",
                             "!rss [Print Rss.Rq content]",
                             "!requests [Print Request.log content]",
-                            "!Pth_NoResult_Rq [Print No.Result content]",
-                            "!rmPth_NoResult_Rq [Remove No.Result content from Rq.Keywords]",
-                            "!badkeys [Print Rq.Bannedword content]",
-                            "!badppl [Print Rq.Bannedpeople content]",
+                            "!badresult [Print No.Result content]",
+                            "!flushserver [Clear Results from Cherrypy server]",
+                            "!flushbadresult [Remove No.Result content from Keywords.Rq]",
+                            "!badkeys [Print Bannedword.Rq content]",
+                            "!badppl [Print Bannedpeople.Rq content]",
                             "Example : deluser:@user1 @user2 ;addkeyword:key1,key two,key3;bankeyword:badkey1,bad key two;!rss",
                         ]
                         return help
@@ -1265,12 +1268,15 @@ def Request(cmd):
                         return Pastbin(Rss_Url_List)
                     if option == "!requests":
                         return Pastbin(Requested_Cmd_List)
-                    if option == "!Pth_NoResult_Rq":
+                    if option == "!badresult":
                         return Pastbin(NoResult_List)
 
-                    if option == "!rmPth_NoResult_Rq":
-                        print("Removing No.results from Rq.Keywords..")
+                    if option == "!flushbadresult":
+                        print("Removing No.results from Keywords.Rq")
                         RmNores = True
+                    if option == "!flushserver":
+                        print("Clearing results from Cherrypy server")
+                        RmServ = True
 ##
 
                     if option == "bantimeline:":
@@ -1282,7 +1288,7 @@ def Request(cmd):
                                 bu.append(single)
                                 delt.append(single)
                             else:
-                                print("User timeline var is empty.")
+                                print("**User timeline var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1293,10 +1299,10 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("User timeline var is empty.")
+                                    print("**User timeline var is empty.**")
                             print("You asked to Ban those users timelines: ", ",".join(bt))
                         else:
-                            print("No user timeline found '@' is missing")
+                            print("**No user timeline found '@' is missing**")
 
                     if option == "addtimeline:":
 
@@ -1306,7 +1312,7 @@ def Request(cmd):
                             if len(single) > 0:
                                 adt.append(single)
                             else:
-                                print("User timeline var is empty.")
+                                print("**User timeline var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1314,10 +1320,10 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("User timeline var is empty.")
+                                    print("**User timeline var is empty.**")
                             print("You asked to Add those users: ", ",".join(adt))
                         else:
-                            print("No user timeline found '@' is missing")
+                            print("**No user timeline found '@' is missing**")
 
                     if option == "deltimeline:":
                         if sample.count("@") == 1:
@@ -1326,7 +1332,7 @@ def Request(cmd):
                             if len(single) > 0:
                                 delt.append(single)
                             else:
-                                print("User timeline var is empty.")
+                                print("**User timeline var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1337,7 +1343,7 @@ def Request(cmd):
                                     print("User timeline var is empty.")
                             print("You asked to Delete those users timelines: ", ",".join(delt))
                         else:
-                            print("No user timeline found '@' is missing")
+                            print("**No user timeline found '@' is missing**")
 
 ##
                     if option == "banuser:":
@@ -1349,7 +1355,7 @@ def Request(cmd):
                                 bu.append(single)
                                 delk.append(single)
                             else:
-                                print("User var is empty.")
+                                print("**User var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1360,10 +1366,10 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("User var is empty.")
+                                    print("**User var is empty.**")
                             print("You asked to Ban those users: ", ",".join(bu))
                         else:
-                            print("No user found '@' is missing")
+                            print("**No user found '@' is missing**")
 
                     if option == "adduser:":
 
@@ -1373,7 +1379,7 @@ def Request(cmd):
                             if len(single) > 0:
                                 adu.append(single)
                             else:
-                                print("User var is empty.")
+                                print("**User var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1384,7 +1390,7 @@ def Request(cmd):
                                     print("User var is empty.")
                             print("You asked to Add those users: ", ",".join(adu))
                         else:
-                            print("No user found '@' is missing")
+                            print("**No user found '@' is missing**")
 
                     if option == "deluser:":
                         if sample.count("@") == 1:
@@ -1393,7 +1399,7 @@ def Request(cmd):
                             if len(single) > 0:
                                 delu.append(single)
                             else:
-                                print("User var is empty.")
+                                print("**User var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1404,7 +1410,7 @@ def Request(cmd):
                                     print("User var is empty.")
                             print("You asked to Delete those users: ", ",".join(delu))
                         else:
-                            print("No user found '@' is missing")
+                            print("**No user found '@' is missing**")
 
                     if option == "banfriend:":
                         if sample.count("@") == 1:
@@ -1416,7 +1422,7 @@ def Request(cmd):
                                 bf.append(single)
                                 delk.append(single)
                             else:
-                                print("User var is empty.")
+                                print("**User var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1427,10 +1433,10 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("User var is empty.")
+                                    print("**User var is empty.**")
                             print("You asked to Ban those friends: ", ",".join(bf))
                         else:
-                            print("No user found '@' is missing")
+                            print("**No user found '@' is missing**")
 
                     if option == "delfriend:":
                         if sample.count("@") == 1:
@@ -1439,7 +1445,7 @@ def Request(cmd):
                             if len(single) > 0:
                                 delf.append(single)
                             else:
-                                print("User var is empty.")
+                                print("**User var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1450,7 +1456,7 @@ def Request(cmd):
                                     print("User var is empty.")
                             print("You asked to Delete those friends: ", ",".join(delf))
                         else:
-                            print("No user found '@' is missing")
+                            print("**No user found '@' is missing**")
                     if option == "addfriend:":
 
                         if sample.count("@") == 1:
@@ -1459,7 +1465,7 @@ def Request(cmd):
                             if len(single) > 0:
                                 adf.append(single)
                             else:
-                                print("User var is empty.")
+                                print("**User var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1467,10 +1473,10 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("User var is empty.")
+                                    print("**User var is empty.**")
                             print("You asked to Add those friends: ", ",".join(adf))
                         else:
-                            print("No user found '@' is missing")
+                            print("**No user found '@' is missing**")
                     if option == "bankeyword:":
                         if sample.count(",") == 0:
                             print("You asked to Ban this keyword :", sample)
@@ -1479,14 +1485,14 @@ def Request(cmd):
                                 bk.append(single)
                                 delk.append(single)
                             else:
-                                print("Keyword var is empty.")
+                                print("*Keyword var is empty.*")
                         elif sample.count(",") > 0:
                             for var in sample.split(","):
                                 if len(var) > 0:
                                     bk.append(var.replace(str(option), ""))
                                     delk.append(var.replace(str(option), ""))
                                 else:
-                                    print("Keyword var is empty.")
+                                    print("**Keyword var is empty.**")
                             print("You asked to Ban those Keywords: ", ",".join(bk))
                     if option == "addkeyword:":
                         if sample.count(",") == 0:
@@ -1495,13 +1501,13 @@ def Request(cmd):
                             if len(single) > 0:
                                 adk.append(single)
                             else:
-                                print("Keyword var is empty.")
+                                print("**Keyword var is empty.**")
                         elif sample.count(",") > 0:
                             for var in sample.split(","):
                                 if len(var) > 0:
                                     adk.append(var.replace(str(option), ""))
                                 else:
-                                    print("Keyword var is empty.")
+                                    print("**Keyword var is empty.**")
                             print("You asked to Add those Keywords: ", ",".join(adk))
                     if option == "delkeyword:":
                         if sample.count(",") == 0:
@@ -1510,13 +1516,13 @@ def Request(cmd):
                             if len(single) > 0:
                                 delk.append(single)
                             else:
-                                print("Keyword var is empty.")
+                                print("**Keyword var is empty.**")
                         elif sample.count(",") > 0:
                             for var in sample.split(","):
                                 if len(var) > 0:
                                     delk.append(var.replace(str(option), ""))
                                 else:
-                                    print("Keyword var is empty.")
+                                    print("**Keyword var is empty.**")
                             print("You asked to Add those Keywords: ", ",".join(delk))
                     if option == "delrss:":
                         if sample.count("http") == 1:
@@ -1525,20 +1531,20 @@ def Request(cmd):
                             if len(single) > 0:
                                 delk.append(single)
                             else:
-                                print("Rss var is empty.")
+                                print("**Rss var is empty.**")
                         elif sample.count("http") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
                                     delrss.append(var.replace(str(option), ""))
                                 else:
-                                    print("Rss var is empty.")
+                                    print("**Rss var is empty.**")
                             print(
                                 "You asked to Delete those rss feeds: ",
                                 ",".join(delrss),
                             )
 
                         else:
-                            print("No rss found (flux must starts with http)")
+                            print("**No rss found (flux must starts with http)**")
                     if option == "addrss:":
                         if sample.count("http") == 1:
                             print("You asked to Add this rss feed :", sample)
@@ -1546,22 +1552,22 @@ def Request(cmd):
                             if len(single) > 0:
                                 adrss.append(single)
                             else:
-                                print("Keyword var is empty.")
+                                print("**Keyword var is empty.**")
                         elif sample.count("http") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
                                     adrss.append(var.replace(str(option), ""))
                                 else:
-                                    print("Keyword var is empty.")
+                                    print("**Keyword var is empty.**")
                             print(
                                 "You asked to Delete those rss feeds: ", ",".join(adrss)
                             )
                         else:
-                            print("No rss found (flux must starts with http)")
+                            print("**No rss found (flux must starts with http)**")
             if reconized == False:
                 with open(Pth_Data + "Request.log.Rq", "a") as file:
                     file.write("\n"+log + "\n")
-                return "Cmd not recognised."
+                return "**Cmd not recognised**"
 
         with open(Pth_Data + "Request.log.Rq", "a") as f:
             f.write("\n"+log + "\n")
@@ -1569,6 +1575,12 @@ def Request(cmd):
         if RmNores is True:
             ret = Flush_NoResult()
             output.append(ret)
+        if RmServ is True:
+            try:
+               open(Pth_Rq_Server_Save, "w")
+               output.append("**Server has been cleared**")
+            except Exception as e:
+               Betterror(e, inspect.stack()[0][3])
 
 #
         if len(adt) > 0:
@@ -1581,11 +1593,11 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                     else:
                         print("**%s is already in Timelines.Rq"%entry)
-                        output.append("**%s is already in Timelines.Rq"%entry)
+                        output.append("**%s is already in Timelines.Rq**"%entry)
             output.append("**Adding %s users in Users.Timelines.Rq**" % bingo_cnter)
 
         if len(bt) > 0:
-            print("Adding %s new users to Bannedpeople.Rq"%len(bt))
+            print("**Adding %s new users to Bannedpeople.Rq**"%len(bt))
             with open(Pth_Banned_People_Rq, "a") as f:
                 bingo_cnter = 0
                 for entry in bt:
@@ -1593,12 +1605,12 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                         bingo_cnter += 1
                     else:
-                        print("**%s is already in Banned.People.Rq"%entry)
-                        output.append("**%s is already in Banned.People.Rq"%entry)
+                        print("**%s is already in Banned.People.Rq**"%entry)
+                        output.append("**%s is already in Banned.People.Rq**"%entry)
             output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(delt) > 0:
-            print("Deleting %s users from Users.Timelines.Rq"%len(delt))
+            print("**Deleting %s users from Users.Timelines.Rq**"%len(delt))
             lines = Cleanfile(Pth_Users_Timelines_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1626,7 +1638,7 @@ def Request(cmd):
 
 #
         if len(adrss) > 0:
-            print("Adding %s new urls to Rq.Rss"%len(adrss))
+            print("Adding %s new urls to Rss.Rq"%len(adrss))
             with open(Pth_Rss_Rq, "a") as f:
                 bingo_cnter = 0
                 for entry in adrss:
@@ -1634,10 +1646,10 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                         bingo_cnter +=1
                     else:
-                        print("**%s Already saved in Rss.Rq"%entry)
-                        output.append("**%s Already saved in Rss.Rq"%entry)
+                        print("**%s Already saved in Rss.Rq**"%entry)
+                        output.append("**%s Already saved in Rss.Rq**"%entry)
                     
-            output.append("**Added %s new entry to Rq.Rss**" % bingo_cnter)
+            output.append("**Added %s new entry to Rss.Rq**" % bingo_cnter)
 
         if len(delrss) > 0:
             print("Deleting %s entry from Rss.Rq"%len(delrss))
@@ -1660,10 +1672,10 @@ def Request(cmd):
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
                         else:
-                            print("**Found %s in Rss.Rq."%entry)
+                            print("**Found %s in Rss.Rq**"%entry)
                             bingo_cnter += 1
-                            output.append("**Found %s in Rss.Rq."%entry)
-            output.append("**Deleting %s entry in Rq.Rss**" % bingo_cnter)
+                            output.append("**Found %s in Rss.Rq**"%entry)
+            output.append("**Deleting %s entry in Rss.Rq**" % bingo_cnter)
 
         if len(delf) > 0:
             print("Deleting %s user from Friends.Rq"%len(delf))
@@ -1687,12 +1699,12 @@ def Request(cmd):
                             f.write("\n"+line + "\n")
                         else:
                             bingo_cnter += 1
-                            print("Found %s in Friends.Rq"%entry)
-                            output.append("Found %s in Friends.Rq"%entry)
+                            print("**Found %s in Friends.Rq**"%entry)
+                            output.append("**Found %s in Friends.Rq**"%entry)
             output.append("**Deleting %s users in Friends.Rq**" % bingo_cnter)
 
         if len(delu) > 0:
-            print("Deleting entry from Following.Rq")
+            print("Deleting %s users from Following.Rq"%len(delu))
             lines = Cleanfile(Pth_Following_Rq)
             ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
             save_copy = (
@@ -1712,9 +1724,9 @@ def Request(cmd):
                         if line.strip("\n") != entry:
                             f.write("\n"+line + "\n")
                         else:
-                             print("**Found %s in Following.Rq"%entry)
+                             print("**Found %s in Following.Rq**"%entry)
                              bingo_cnter +=1
-                             output.append("**Found %s in Following.Rq"%entry)
+                             output.append("**Found %s in Following.Rq**"%entry)
             output.append("**Deleting %s users in Following.Rq**" % bingo_cnter)
 
         if len(delk) > 0:
@@ -1738,8 +1750,8 @@ def Request(cmd):
                         if line.strip("\n") != entry.lower():
                             f.write("\n"+line.lower() + "\n")
                         else:
-                           print("**Found %s in Keywords.Rq"%entry)
-                           output.append("**Found %s in Keywords.Rq"%entry)
+                           print("**Found %s in Keywords.Rq**"%entry)
+                           output.append("**Found %s in Keywords.Rq**"%entry)
                            bingo_cnter += 1
             output.append("**Deleting %s entry in Keywords.Rq**" %bingo_cnter)
 
@@ -1752,8 +1764,8 @@ def Request(cmd):
                         f.write("\n"+str(entry.lower()) + "\n")
                         bingo_cnter += 1
                     else:
-                        print("**%s is already in Keywords.Rq"%entry)
-                        output.append("**%s is already in Keywords.Rq"%entry)
+                        print("**%s is already in Keywords.Rq**"%entry)
+                        output.append("**%s is already in Keywords.Rq**"%entry)
             output.append("**Adding %s entry in Keywords.Rq**" %bingo_cnter )
 
         if len(adu) > 0:
@@ -1765,8 +1777,8 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                         bingo_cnter += 1
                     else:
-                        print("%s is already in Following.Rq"%entry)
-                        output.append("%s is already in Following.Rq"%entry)
+                        print("**%s is already in Following.Rq**"%entry)
+                        output.append("**%s is already in Following.Rq**"%entry)
             output.append("**Adding %s entry in Following.Rq**" % bingo_cnter)
 
         if len(adf) > 0:
@@ -1778,8 +1790,8 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                         bingo_cnter +=1
                     else:
-                        print("**%s is already in Friends.Rq"%entry)
-                        output.append("**%s is already in Friends.Rq"%entry)
+                        print("**%s is already in Friends.Rq**"%entry)
+                        output.append("**%s is already in Friends.Rq**"%entry)
             output.append("**Adding %s entry in Friends.Rq**" % bingo_cnter)
 
         if len(bu) > 0:
@@ -1791,12 +1803,12 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                         bingo_cnter += 1
                     else:
-                        print("**%s is already in Banned.People.Rq"%entry)
-                        output.append("**%s is already in Banned.People.Rq"%entry)
+                        print("**%s is already in Banned.People.Rq**"%entry)
+                        output.append("**%s is already in Banned.People.Rq**"%entry)
             output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(bf) > 0:
-            print("Adding %s new entry to Banned.Friends.Rq"%len(bf))
+            print("Adding %s new entry to Banned.Friends.Rq**"%len(bf))
             with open(Pth_Banned_People_Rq, "a") as f:
                 bingo_cnter = 0
                 for entry in bf:
@@ -1804,9 +1816,9 @@ def Request(cmd):
                         f.write("\n"+str(entry) + "\n")
                         bingo_cnter += 1
                     else:
-                        print("**%s already in Banned.People.Rq"%entry)
-                        output.append("**%s already in Banned.People.Rq"%entry)
-            output.append("**Adding %s users in RBanned.People.Rq**" % bingo_cnter)
+                        print("**%s already in Banned.People.Rq**"%entry)
+                        output.append("**%s already in Banned.People.Rq**"%entry)
+            output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(bk) > 0:
             print("Adding new entry to Banned.Keyword.Rq")
@@ -1817,9 +1829,9 @@ def Request(cmd):
                         f.write("\n"+str(entry.lower()) + "\n")
                         bingo_cnter += 1
                     else:
-                        print("**%s is already in Banned.Keywords.Rq"%entry)
-                        output.append("**%s is already in Banned.Keywords.Rq"%entry)
-            output.append("**Adding %s entry in Rq.Banned.KeyWord**" % bingo_cnter)
+                        print("**%s is already in Banned.Keywords.Rq**"%entry)
+                        output.append("**%s is already in Banned.Keywords.Rq**"%entry)
+            output.append("**Adding %s entry in Banned.KeyWord.Rq**" % bingo_cnter)
         output.append("**Done**")
         return output
     except Exception as e:
@@ -1831,7 +1843,7 @@ def Flush_NoResult():
     try:
 
         Fig("cybermedium", "NoResult()")
-        print("Deleting No.Results content from Rq.Keywords")
+        print("Deleting No.Results content from Keywords.Rq")
         cnt = 0
         lines = Cleanfile(Pth_Keywords_Rq)
         ts = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
@@ -1858,10 +1870,10 @@ def Flush_NoResult():
         file.close
         NoResult_List = []
         print(
-            "**Removed No results from Rq.Keywords: %s/%s **"
+            "**Removed No results from Keywords.Rq: %s/%s **"
             % (cnt, len(NoResult_List))
         )
-        return "**Removed No results from Rq.Keywords: %s/%s **" % (
+        return "**Removed No results from Keywords.Rq: %s/%s **" % (
             cnt,
             len(NoResult_List),
         )
