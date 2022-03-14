@@ -1130,6 +1130,7 @@ def Request(cmd):
 
         RmNores = False
         RmServ = False
+        RmReq = False
 
         print("New request from allowed user:", IrcKey.IRMASTER)
 
@@ -1174,6 +1175,7 @@ def Request(cmd):
             "!rss",
             "!requests",
             "!badresult",
+            "!flushrequest",
             "!flushserver",
             "!flushbadresult",
             "!badkeys",
@@ -1217,6 +1219,7 @@ def Request(cmd):
                             "!rss [Print Rss.Rq content]",
                             "!requests [Print Request.log content]",
                             "!badresult [Print No.Result content]",
+                            "!flushrequest [Clear Request.log content]",
                             "!flushserver [Clear Results from Cherrypy server]",
                             "!flushbadresult [Remove No.Result content from Keywords.Rq]",
                             "!badkeys [Print Bannedword.Rq content]",
@@ -1277,6 +1280,9 @@ def Request(cmd):
                     if option == "!flushserver":
                         print("Clearing results from Cherrypy server")
                         RmServ = True
+                    if option == "!flushrequest":
+                        print("Clearing Request.Log")
+                        RmReq = True
 ##
 
                     if option == "bantimeline:":
@@ -1581,7 +1587,12 @@ def Request(cmd):
                output.append("**Server has been cleared**")
             except Exception as e:
                Betterror(e, inspect.stack()[0][3])
-
+        if RmReq is True:
+            try:
+               open(Pth_Request_Log, "w")
+               output.append("**Request_Log has been cleared**")
+            except Exception as e:
+               Betterror(e, inspect.stack()[0][3])
 #
         if len(adt) > 0:
             print("Adding %s new users to Users.Timelines.Rq"%len(adt))
