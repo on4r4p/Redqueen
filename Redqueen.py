@@ -456,7 +456,7 @@ def GenFeed():
         HLDone = []
         Span_open = '<span style="color: #cc33cc;">' 
         Span_close ="</span>"
-        Highlight_Txt = str(D[6])
+        Highlight_Txt = str(D[6]).replace("#"," ")
         for k in Keywords_List:
             if k.lower() in Highlight_Txt.lower() and k not in HLDone:
                 HLDone.append(k)
@@ -759,7 +759,7 @@ def WakeApiUp():
 
 
 def Cleanfile(filename):
-
+    f_to_lower = [Pth_Banned_Word_Rq,Pth_Keywords_Rq]
     try:
         if os.path.isfile(filename) is False:
             print("==")
@@ -773,9 +773,10 @@ def Cleanfile(filename):
             clean_lines = []
             with open(filename, "r") as f:
                 lines = f.readlines()
-
-                clean_lines = [l.strip() for l in lines if l.strip()]
-
+                if filename in f_to_lower:
+                    clean_lines = [l.strip().lower() for l in lines if l.strip()]
+                else:
+                    clean_lines = [l.strip() for l in lines if l.strip()]
             clean_lines = list(dict.fromkeys(clean_lines))
             with open(filename, "w") as f:
                 f.writelines("\n".join(clean_lines))
@@ -1734,8 +1735,8 @@ def Request(cmd):
                 bingo_cnter = 0
                 for line in lines:
                     for entry in delk:
-                        if line.strip("\n") != entry:
-                            f.write("\n"+line + "\n")
+                        if line.strip("\n") != entry.lower():
+                            f.write("\n"+line.lower() + "\n")
                         else:
                            print("**Found %s in Keywords.Rq"%entry)
                            output.append("**Found %s in Keywords.Rq"%entry)
@@ -1747,8 +1748,8 @@ def Request(cmd):
             with open(Pth_Keywords_Rq, "a") as f:
                 bingo_cnter = 0
                 for entry in adk:
-                    if entry not in Keywords_List:
-                        f.write("\n"+str(entry) + "\n")
+                    if entry.lower() not in list(map(str.lower,Keywords_List)):
+                        f.write("\n"+str(entry.lower()) + "\n")
                         bingo_cnter += 1
                     else:
                         print("**%s is already in Keywords.Rq"%entry)
@@ -1812,8 +1813,8 @@ def Request(cmd):
             with open(Pth_Banned_Word_Rq, "a") as f:
                 bingo_cnter = 0
                 for entry in bk:
-                    if entry not in Banned_Word_list:
-                        f.write("\n"+str(entry) + "\n")
+                    if entry.lower() not in list(map(str.lower,Banned_Word_list)):
+                        f.write("\n"+str(entry.lower()) + "\n")
                         bingo_cnter += 1
                     else:
                         print("**%s is already in Banned.Keywords.Rq"%entry)
