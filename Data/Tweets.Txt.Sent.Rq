@@ -3261,3 +3261,1346 @@ CVE-2022-25108 Foxit PDF Reader and Editor before 11.2.1 and PhantomPDF before 1
 Big news, CrackMapExec now supports RDP protocol 🎉 This is no crappy freeRDP python wrapper behind this but the integration…
 [HackTip ⚒] It’s no secret that wmiexec[.]py from #impacket is flagged by many AV/EDR software when it requests command out…
 "write.exe" is just ShellExecute() to wordpad.exe. And ShellExecute() reads HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\App…
+Cookies : noyb adresse 270 projets de plaintes à des responsables de traitement https://t.co/1dMnSewCCb via @nextinpact
+[GHB] Pas dans mes habitudes de parler vie privée mais dimanche, c'était a priori fête à la maison puisque, fait rare, je voya…
+I wrote a @gigaom Sonar a few months ago about DPUs. @fungible_inc was in there and got a very positive evaluation at that time. now listeting to the latest news from them. #SFD23https://t.co/c13oHR62dQ
+Linux Privilege Escalation: DirtyPipe (CVE 2022-0847) https://t.co/TTuy9nviPq
+#CVE-2022-22947 Spring cloud gateway memshellhttps://t.co/qhrWFnsBd6 https://t.co/7d03jhtyHg
+CVE-2022-0824 Webmin revshell -  Post-Auth Reverse.PoChttps://t.co/m6kPMHi5kI https://t.co/WL7eNQoEyi
+⚠️ CVE-2022-0847 (#DirtyPipe) details a flaw in the Linux kernel that can be exploited, allowing any process to modify files r…
+CVE-2022-0847 Linux Kernel vulnerability is pretty bad! https://t.co/4b1o8V02RzJust tested it. Patch now! #CyberSecurity…
+Yesterday was Patch-Tuesday. All Microsoft Defender for Endpoint agents received a patch for a spoofing vulnerability…
+Micropatches are available for "SpoolFool" Print Spooler Elevation of Privilege (CVE-2022-21999) for unsupported Windows 10 ver…
+CVE-2022-0890 NULL Pointer Dereference in GitHub repository mruby/mruby prior to 3.2. https://t.co/kyzS3gtFVQ
+Reminder: BIND 9.11 will be EOL at the end of March, 2022. That means, no more patches, no more CVE assessments, no more sup…
+A Linux vulnerability referred to as "Dirty Pipe" (CVE-2022-0847), has recently been publicly disclosed which can grant…
+On March 7th, a new vulnerability (CVE-2022-0847 Dirty Pipe) was disclosed that allows a non-privileged user the ability…
+The latest update for #Snyk includes "'Dirty Pipe' #Linux vulnerability and your containerized applications (CVE-2022-08…
+CVE-2022-22947-RCESpring Cloud Gateway provides a library for building an API Gateway on top of Spring WebFlux.Application…
+CVE-2022-23293 Windows Fast FAT File System Driver Elevation of Privilege Vulnerability. (CVSS:0.0) (Last Update:2022-03-0…
+Fantastic POC that will spawn a root shell. Beautiful code. Well done @bl4sty!Reminder this is CVE is only relevant with pr…
+I sat down with Christa Miller to talk about #DFIRforgood, stalkerware, and providing support to survivors of tech-enabled abuse: https://t.co/T47xnNpyge
+One more example of a situation in which e2e encrypted chats are fine, but auto-deletion of messages is crucial to keeping a vulnerable population safe. https://t.co/9MoqAmwose
+If you need to be absolutely sure RU doesn't get your comms or the metadata around your comms (like who you're talking to and when you're talking to them), Signal, WhatsApp, and even Viber would be an improvement.
+There’s a growing understanding about Vuln Disclosure but it’s a pedestrian understanding at best.Things like “have a VDP” &amp; “have people assigned to fix bugs” sound right but then there’s a whole discussion about secure development &amp; how to get developers to *want to fix bugs*.
+In this meeting it’s so interesting to hear the game of telephone that seems to be CyberSecurity in the federal government.They get the words right, but details are sending a different message entirely &amp; parts are garbled beyond recognition.An example: Vuln Disclosure🧵
+I’m talking to you @LEAPandInnovate With all that marketing budget to create this ad for your conference where I have never nor will ever speak, surely you could have asked press@Lutasecurity for permission.I’m not here to femwash Saudi Arabia or be part of your ad propaganda. https://t.co/yQ8tdya5jG
+Her: I trust my boyfriend 😌Me: ohh do u know his passwordHer; NoMe:🤣🤣 https://t.co/Pr1RY8R6Ko
+Two days ahead of schedule mind you. Dua laptop password must be DuaLipa1
+@VenmoSupport Hi! I tried to login using both my computer and phone (via app) and keep getting an error message about an incorrect password--even after I changed my password the first time I got the message. Known error on your end? Is there a fix?
+Posting as seen . “Many of us today are fond of putting password/patterns on our phone which makes it difficult for someone…
+My Fortnite account was hacked earlier today. I lost access and they changed the password and email. I have $10,000+ to be pai…
+@nsaidian If you need my username and password I have no problem giving it to you so you can see the video, at most you wi…
+Dear Hospital System,I don’t have another combination of letters, numbers, and symbols in me for a password. Let me r…
+I'm starting to think that Moses Znaimer really just paid $15 million for the password to the blogTO Twitter account.
+How to Change My Eyes Only Password on Snapchat: Learn how to easily change my eyes only passcode on Snapchat. https://t…
+When Spotify logs you out and you never wrote down your password https://t.co/rzNLORtxUM
+Dans quelques minutes, Chelsea Manning interviendra au JT de 19h30 de la RTS.
+🔥 Join tomorrow to learn about different server side frameworks available for iOS developers. This includes CloudKit, Fireba…
+Server-Side Request Forgery (SSRF) in https://t.co/FLbe6Cfegx reported by rudloff - Patch: https://t.co/H53lWefqsAhtt…
+📌 IdempotentIdempotent methods have no side effects on the server.We can call them in a row, and they guarantee that the…
+Russia says some of its federal agencies' websites were compromised in a supply chain attack after unknown attackers h…
+Mandiant to be acquired by Google LLC in an all-cash transaction valued at approximately $5.4 billion. https://t.co/ajDWXfXdeg
+The FBI says the Ragnar Locker ransomware gang has breached the networks of at least 52 organizations across 10 critic…
+The @Ubuntu kernel team is busy cranking out and testing updated kernels to patch 'Dirty Pipe' - expect updates to be avai…
+#HowTo be happier more often through behavior changes by @taraparkerpope #Happiness isn’t something that just happens. Ev…
+Most Workers Still Have a Password Problem. How to Get Them to Embrace Safer Solutions https://t.co/dMZC7d6r6i #CyberSecur…
+"Entrepreneurs are notorious for failing to hit their own delivery dates, and those in our sample were no exception." https…
+E.g., this will highlight matches in red:&lt;foo.log grep 'success|$' -EPiping that to less(1), though, makes the color go away and defeats the purpose. This will highlight and put it in a pager, still with color:&lt;foo.log grep 'success|$' -E --color=always | less -R
+Lots of tools (including grep and jq) can colorize their output but disable color if their stdout is a pipe. Usually they'll have a flag to force color output ("grep --color=always" and "jq -C") specifically for this use case.
+I've mentioned "less -R" in passing in a couple of #bashTricks threads, but I think it deserves more attention. The -R flag tells less(1) to output raw bytes instead of printing escapes for things like color changes. This lets your terminal show colors in a pager!
+BNP Paribas bars Russia-based staff from computer systems as cyber attack fears growhttps://t.co/COcZCdhBia
+The evolution of cyber #ThreatIntelligence is supported by the following primary trends in the cybersecurity space. Read more a…
+Defending against Ransomware: 28 Protection Solutions Put to the Test under Windows 10. https://t.co/2c6BDOo6dm#Advanced #T…
+Widely used UPS devices can be hijacked and destroyed remotely - https://t.co/REIkkcq7Jh - @ArmisSecurity #TLStorm #cy…
+#Nanocore - .ace &gt; .exe - version 1.2.2.0https://onedrive.]live.]com/download?cid=0380A3DB0880A66C&amp;resid=380A3DB0880A66C%2…
+Android system is also affected by Linux kernel Dirty Pipe flaw, Google is fixing it https://t.co/TT0rTge2s5
+CyberScoop | FinCEN warns ransomware proceeds could be part of Russia sanctions evasion https://t.co/ZzDVeYeb6h
+Sophos Blog | Microsoft patches 71 vulnerabilities including RDP Client, Exchange Server, Intune https://t.co/Rg5YiykL…
+Check out this nifty blog on one of the big, nasty ransomware groups written by two of my favorite partners in anti-eCrime he…
+As of January 2022, #RagnarLocker ransomware has impacted 52 entities across 10 critical infrastructure sectors. Could your busine…
+Google’s Threat Analysis Group share updates about the current threat landscape they are seeing in Ukraine. FancyBear/APT28,…
+Here's the press release:Google to Acquire Mandiant https://t.co/CKn5n66rmK via @Yahoo
+Ransomware gang Conti has already bounced back from damage caused by chat leaks, experts say https://t.co/OUvWAruvFn
+Google is buying Mandiant!!!?https://t.co/3ktlFVnEVB
+[Recommendations for your visitors: change password and remove stealer malware] 1.7M+ credentials of 49K+ government s…
+6 sqlmap cheat sheets to help you find SQL injectionshttps://t.co/cBrvsK6qZZ
+Ukrainian CERT Warns Citizens of #Phishing Attacks Using Compromised Accounts https://t.co/KXcJNIhMQp
+Main Cryptonyms for Ukraine Cyber Operations:Whispergate (DEV-0586)HermeticWiper (FoxBlade, DriveSlayer, DEV-0665, UNC…
+[Actuellement sur LMI]  Oracle fournit une version CBE de Solaris 11.4 pour l'open source https://t.co/wAzdK23Wnd
+Ukraine Set to Join NATO Cyber Hub https://t.co/oifkz19qUz
+WhatsApp Bug Bounty: Bypassing biometric lock https://t.co/NnipN93ana
+#Ukraine ça s’affole sur le piratage de médias, à confirmer !
+The DFIR Report takes a look back at details from its public reports over 2021 and looks at some of the top tactics, techniqu…
+Rompetrol, the second-largest gas station network in Romania, was hit by ransomware overnight-Ransomware encrypted server…
+The Hacker News | SharkBot Banking Malware Spreading via Fake Android Antivirus App on Google Play Store https://t.co/…
+📄  FYI: @CISAgov releases a #VulnerabilityBulletin with a list of #CVEs and their assigned high, medium, and low severity s…
+Nvidia et Samsung aux prises avec le groupe Lapsus$ https://t.co/aIEokmaQfr via @zdnetfr
+Les victimes de ransomwares paient, mais les escrocs en redemandent https://t.co/W4cjC1weP5 via @zdnetfr
+🚨 VMSA-2022-0005 / CVE-2022-22945 🚨CVE on VMware's NSX Edge OS Jailed Shell to Root ShellVia @SECFORCE_LTD 👉Found by our…
+Meta Minter includesCandy Machine 2 Website URL Auto Minter, Candy Machine 2 ID Auto Minter, Civic Captcha Bypass, &amp; Mag…
+Watch live! the launch of  MSME Innovative Scheme (Incubation, Design and IPR) and MSME IDEA HACKATHON, 2022 by Hon'ble Minist…
+The countdown is 🔛 ! We’re only 5 days away from our #NFT Hackathon deadline. Apply now to build an NFT project on the #X…
+Azure Trial Hackathon - EmotionalSound - perfect spotify song for your emotions by marco-bertelli#azuretrialhack #hackat…
+Combine your tech knowledge with creativity &amp; apply your skills to unravel the anonymity of #DarkNet markets. Regist…
+1. Hello @Zebec_HQ Hackathon The SHIP 2.0 is almost here.  The Hackathon prize is a whooping $1 Million in funding.  P…
+Telos Spark Hackathon in Progress, Ethereum Solidity Developers Can Win 100k TLOS https://t.co/nbJjteaFmA
+🚩 24 HOURS LEFT TO VOTE FOR KINGDOM QUEST AND GET REWARDS🔥 Did you vote for Kingdom Quest on #AVAX Hackathon? ‼️ L…
+Want to join a Hackathon for Planet Positive measures?Create a team or join one here, on 22nd April, 2022, as hosted by @…
+#Day059📌 Got a "Special Mention" in the build@ARSD hackathon - my first-ever hackathon! 👇https://t.co/bIuVPLznaZ📌 Com…
+1/ If you’re gonna ride the wave, you gotta ride it in style 🌊Win a special #Riptide hackathon surfboard NFT — which can be r…
+There is still time left to vote for the #TronNinja arcade in the GameFi category of the @trondao Grand hackathon!  G9 -  T…
+If you haven't had a chance to watch the #PolarisLaunchpad hackathon kick-off call yet, what are you waiting for?Hear…
+I’m super excited for tomorrow bc we’re launching a hackathon and I can speak freeeely about it instead of just casually dropp…
+Arcana is super stoked to Sponsor LOC 4.0, a hackathon hosted by the DJSCE ACM student chapter on 12th and 13th of March…
+Friendly Reminder: The #PIN Hackathon is currently LIVE 🎉🏃‍♀️ If you haven't already, you can participate in the the #c…
+The #Gitcoin GR13 Hackathon starts today! 🏁We can’t wait to see what you build! 🛠 Join Now! 👉  https://t.co/fxH3OqEc…
+Dear Fractalians time's up ⏲️ This was our Prototype / Wip ⚠️ that we made for @fractalwagmi F100 Hackathon.We gained…
+Catch the FormulaAI #Hackathon 2022 Award Ceremony on Friday, 18th March 📅at 21:00 AEDT | 15:30 IST | 05:00 EST 🕑Join u…
+🔥 This event will go down in history 🔥 For the first time @solana hackathon is focused on Poland and brings together…
+The Entrepreneurship Cell of NIT Raipur organised the first edition of its annual hackathon "HackNITRR'22". Dr. A. M. Rawani, Di…
+Smart India Hackathon 2022 , a nationwide initiative to provide students a platform to provide innovative solutions fo…
+How could you guess that I’m voting for @JustMoneyIO in the Tron Grand Hackathon?😁 Check them out and vote for them too,…
+Thank you @siddharth_hacks and @hackthisfall for the amazing swags ✨. Loved the book 🤩. It was my first hackathon as a mentor and got an awesome experience. https://t.co/jeydPGnvm7
+Bhavyesh Virani and Steve LaValle will be on the judging panel for the RPATools Hackathon 2021 where bright minds from all…
+Master_Librarian - A Simple Tool To Audit Unix/*BSD/Linux System Libraries To Find Public Security Vulnerabilities https://t.co…
+Check out the best call center audit tool in the industry: https://t.co/oZAN3JOSjv https://t.co/RDqRuEnXld
+The first person to correctly build a no-code smart contract audit tool is going to make obscene wealth
+Direct syscalls Halo's Gate techniques is now available in https://t.co/Ueg2dkvCQY @C__Sto
+Remote Code ExecutionDeserialization RCE in old Jenkins (CVE-2015-8103, Jenkins 1.638 and older)https://t.co/HLcYZjUvlR#…
+A vulnerability and exploit code has been released that affects Linux Kernel versions 5.8 and later to include Android d…
+Graphing the @BadgerDAO attack w/ ⛓ Cross-Chain Investigations.Some background: In late 2021, an attacker used a compromised API key to inject malicious code into @BadgerDAO’s #DeFi app. https://t.co/m0hvT4ZqrE
+Linux sistem yöneticileri için acil yama vakti!#CVE-2022-0847a vulnerability in the Linux kernel since 5.8 which allows…
+Our Research Team discovered a zero-day vulnerability in Exponent CMS. An authenticated non-admin user can inject persist…
+Malicious code injection occurs when an attacker exploits an input validation flaw in software to inject malicious code…
+Mind blowing progress in @mesonbuild recently. Built a tree of CMake project and a small Rust program with about 5 min…
+@OfficeOf_MM #ReviseNeetPgCutOff2021 Honb'le Health Minister Sir, your one signature in file pending on your table for cu…
+Within the last few months, good friends in the Atlantic Canadian #infosec community have made upward moves in their ca…
+Customer Advisory Board Member and @AdobeSecurity Eric Anderson discusses the keys to success for an identity-centric appr…
+Je lis beaucoup de moqueries injustifiées à propos du Charles de Gaulle. Je rappelle que ce bâtiment est 1/ le seul porte-…
+⚠️ @CISAgov's Conti #Ransomware advisory has recently been updated with new #IOCs! Review the latest information from our p…
+What would one of the possessed look like in the metaverse? Maybe this 🧪👏
+We are thrilled to announce our new partnership with @themetakey! 🔥We join forces to launch an exclusive Wearables 3.0 Col…
+On March 8th, our Cybersecurity Collaboration Center will release a new #NSACyberSpeakerSeries video featuring the open sourc…
+heroku $7postgres $10ssl certs $0entire tld so each user gets a domain $185,000someone help me budget this, my saas is d…
+go-gcore: Unofficial Go library for accessing the G-Core CDN API ⭐️ 6#golanghttps://t.co/EimZLkduTr
+Liz Rice (@lizrice), Chief Open Source Officer at Isovalent, joins Corey to chat about CNCF and eBPF!Have a listen: ht…
+skipper: An HTTP router and reverse proxy for service composition, including use cases like Kubernetes Ingress⭐️ 2643#go…
+UFO World News: Ask #NASA Hacker Gary McKinnon Anything, He Revealed New #UFO/UAP Information. He even shared his personal U…
+All feeds (paid &amp; free) will have the new Breakdown in the coming minutes! myself &amp; @TheZignal recording together for the first time in a month!We discussed;Dans tripNew UFO documentariesLue Elizondo media runFOIA updates &amp; dropsGary McKinnon AMAJames Webb updateand more
+Meet our new improved VirusTotal Graph including support for VT Collections and (much needed) filters to help you filter noise out  from your visual investigations by @dsanpro: https://t.co/J9jwMVcorM https://t.co/j5gk263tLE
+A sober reminder that #ClimateChange does not affect all people equally! One’s vulnerability is a critical contributor of t…
+NPC Ukrenergo achieves sophisticated vulnerability &amp; risk assessment, thereby protecting critical infrastructure from #cybe…
+Critical Cross-Account Vulnerability Found in Microsoft Azure Automation Service https://t.co/OjYlgTFGaK
+https://t.co/gPW8eTFE4e Organizations taking nearly two months to remediate criticalrisk vulnerabilities #cybersecurity
+It takes organizations an average of 193 days to fix a critical security vulnerability. For most companies, losing access to…
+Details have been disclosed about a now-addressed critical vulnerability in Microsoft's Azure Automation service that…
+#Evmos  vulnerability has been classified as critical with a score of 9.0 (highest). It has the potential to affect and d…
+what i'm trying to say is that it boggles my mind that elected dems think that "critical race theory" is a vulnerability for…
+Potentially Critical CVE Detected!CVE-2021-44625A Buffer Overflow vulnerability exists in TP-LINK WR-886N 20190826 2.3.8…
+3 — #Google has also released patches for 39 new vulnerabilities affecting hundreds of millions of #Android devices, th…
+Exposed cryptographic keys are a known vulnerability in app code. Verimatrix Key Shield effectively dissolves keys into…
+Fiat has a critical Denial of Service vulnerability. Recommend patching your money but upgrading to the latest version, #Bi…
+Using a novel attack method, researchers said that they were able to get a core part of the Linux OS to leak critical system data, such as the root password. https://t.co/wFRLcNwJXq
+@WorktechReview Forescout/CyberMDX discovered PTC 7 #supplychain vulnerabilities, including 3 rated critical by CISA, impa…
+Le challenge du véto en est un de longue haleine et vous rappellera un jeu d'enfance : la chaise musicale !BIG BROTHER CÉLÉB…
+SNK games get this so bad. Bunch of 60 year olds that have never played in a tournament leaving comments from their Gateway computer on Netscape Navigator talking about how much better people/games were back in the day. https://t.co/xV9mKtFy1W
+Passthrough support via io_uring can provide a way to squeeze more performance out of a device, or be able to efficiently perfor…
+Put an io_uring on it: Exploiting the Linux kernel https://t.co/udAUAfI9j0 (https://t.co/IUBCa25a9M) via @blopeur
+🚗Practical #CarHacking training will give you an opportunity to perform practical attacks on the demo #ECU🔌@Phil_BARR3TT…
+@Sessho_trades This is the deal with $ZIM dividends https://t.co/V4bOKENIBT.
+🇺🇦 Ukrainian open source developers will come together to talk about their experiences of Russian invasion.Come join us…
+Mozilla just fixed a UAF RCE vulnerability I found in Firefox (ESR also affected):CVE-2022-26381: Use-after-free in text ref…
+🚨🚨 #FormBook continues to target Oil and Gas Companies.Email subject:Request for Tender for SAUDI ARAMCO - SAUDI ARAB…
+well thats one way to get it donehttps://t.co/Cqp3BuqSGU
+[Red Team] Re-casting EDRs : Stealth way to execute shellcode via re-using EDR hooking libraries.Tested on McAfee MV…
+New breach: NVIDIA was breached last month with properietary code and employee data subsequently leaked. Over 70k emplo…
+🌐 Conti #Ransomware team inside chat log while they're negotiating with a government transportation agency 🚎"The price to…
+New:Ukrainian CERT said the response team detected MicroBackdoor #malware targeting Ukrainian information sources. They a…
+MORE: The Russia Today (RT) France channel was also hacked on the Russian Express satellite. #OpRussia #Anonymous https://t…
+Recent #Emotet downloaders use: XLSX ➡ VBA ➡ batch ➡ PowerShellBased on some great work by @DissectMalware, binary refin…
+Russia didn't fail to observe the ceasefire.Russia set up the "ceasefire" as a honeypot.The honeypot lured civilians out…
+JUST IN: #Anonymous-linked group ATW has successfully breached and leaked the database of Gazprom, a Russian majority state…
+How long it takes a hacker to brute force your password based on its length and complexity. #security #dataviz Source:…
+@vxunderground He also leaked the source code of the Conti Locker. But the zip file is password protected (and unknown for now…
+@SyedShahram Salam, the unroll you asked for: https://t.co/C55gmij314 Talk to you soon. 🤖
+One of the Anonymous accounts now has thousands of people leaving five star Russian-language reviews for random restaur…
+Update from #RomaniaThe details of the cyber attack I mentioned at the border is now public. Russia took out #Ukranie b…
+I am sharing this once more. Operations Security (#OPSEC) if often highly underestimated by online investigative journa…
+Looks like the LockBit ransomware group had some fun with Google Translate this morning and decided not to make the same mista…
+vx-underground is currently under a DDoS attack. Visiting the website now requires solving a CAPTCHA.
+The Kremlin website is down (not blocked due to geofence). Additionally, an unknown group of individuals have compromise…
+I love using shodan and it has been really useful in past. The recent amazing tool which allows to query any ip without…
+Swagger UI for API Key Authentication Flow with .NET Core 6 by @gowthamkk7 https://t.co/95QzdJHtTp #aspnetcore https:/…
+#ETUnwired | #ETDigitalBanking | "Digitization has not only become the must have differentiator but a must have hygiene for the survival of any business today. Cloud Computing, Analytics &amp; Automation, and Open API are the three key tech trends that are the foundation of https://t.co/CTdj7JOR9f
+Update on the V2 Proxies. They now have a rate limit. Any normal use of these endpoints should not be hitting the rate limit. If you believe you are hitting it, reach out to me on discord and we can talk about an API key (Maxbrand99#5913). Most people will be unaffected by this. https://t.co/066OjwGost
+hey @opensea, are you backlogged on API key requests? i haven't heard back and the processing window mentioned on the reque…
+22-year-old #Ukrainian hacker allegedly linked to Sodinokibi/REvil #ransomware gang has been extradited to the United S…
+The Hacker News | Ukrainian Hacker Linked to REvil Ransomware Attacks Extradited to United States https://t.co/2AWxbED…
+Sodinokibi/REvil Ransomware Defendant Extradited to United States and Arraigned in Texashttps://t.co/5BvbW9AmJy
+A 22-year-old #REvil #ransomware affiliate is suspected to be behind the attack with an initial ransom demand of $70 million…
+Comment augmenter rapidement la #CyberResilience d'une organisation ? Il est impossible de prévenir les cyberattaques à 100%, mais nous ne sommes certainement pas impuissants https://t.co/cZn7i8SMDa
+Command injection and my experience - the practical. (part 2)https://t.co/uY5wAKMrYn
+SSD's CVE of the Month is where we highlight the month's top CVEs affecting our communityIn our February edition, we…
+New Writeup: A bypass of php5-memcached &lt;= v2.2.0 space \x20 filtering, using a null byte injection alongside with CRLF before…
+We’ve released new API security badges! Prove your expertise in everything from cracking weak hashes to injection attacks…
+Remember, RAID is not a backup. Also /backups/ directory on the same bare metal server is not backup. Your verified backup mu…
+CVE-2021–35587 Oracle Access Manager Pre-Auth RCE Analysis.https://t.co/JbUtkuf1Tr https://t.co/tlEBOilIrD
+This #APT is using multiple techniques to initiate its attacks. This time the actor weaponized its maldoc with CVE-2021-40444:…
+Dirty Pipe CVE-2022-0847 vulnerability also impacts your container images https://t.co/PEwVSf8GfO
+(CVE-2022-0482): Exposure of Private Personal Information to an Unauthorized Actor in alextselegidis/easyappointments.…
+CVE-2021-38296 Apache Spark supports end-to-end encryption of RPC connections via "spark.authenticate" and "https://t.co/llhKEM…
+CVE 2022-0492 – Privilege Escalation in the Linux kernel allow container escape and take control over the entire node,  obtain…
+Est-ce que maintenant que l’ambassadeur français a réussi à se mettre à l’abri, le Quai d’Orsay pourrait rapatrier les enseig…
+I've spent the last couple months doing extensive dev/testing to achieve shellcode injection in a remote process against a…
+Spectre-v2 is back! Disclosing Branch History Injection (#BHI/#Spectre-BHB), bypassing Spectre-v2 hw defenses to leak arbitrary…
+The level of heart break these people are encountering on a daily... it makes me cry. I have no ties with Ukraine, no f…
+black swan deserves every single existing award, from the lyrics to the instrumentals to the choreography literally no one is…
+The #Leafs have $73,439,783 committed to 16 players for next season. Leaving $8,060,217 for the remaining seven roster sp…
+Coach Moore 1st annual OL Camp 4th-8th grade Dates: 3/15 and 3/17 Sign up will end 3/13/22 7pFocus:Stance andStarts, Flexibility,  Endurance, Pass-pro, Power/Counter working Kick + Rap, 2 on 2 Duece blocking to 2nd level and more  contact @SEVEN_COACHMO
+wts lfb seventeen dk pc ph 3100 + lsf payo or 3 days reservationsold as set only ! you can tingi but will transact…
+READ THIS.If this is not the very definition of corruption and manipulation, then I'm not sure what is.The LME is a fraud a…
+➡️ Requirements are cristal clear: use of Russian DNS servers, transfer to a .ru domain name, hosting of resources in Ru…
+Malware samples, shared by @vxunderground, which are using stolen NVIDIA and long expired certificates. You can easily d…
+Surtout qu'on a toujours été à la ramasse sur ces plans là. Si on prends Kasperky, ça a été la seule société a toujours publ…
+My latest @TrellixLabs blog is a deep dive into the HermicWiper malware, where I dive deep into the sample: https://t.co/…
+🎬 Exclusive video: when a #CISO is given responsability for IT-Risk and/or Operational Resilience 🦆 Always very motivate…
+@pry0cc # Generate an alphanumerical password of length $1 with some special charsmy_passwd_gen() {    tr -dc '[:alnum…
+Mr #Lukashenko you have not heeded our warnings ! You were warned - The Anonymous collective is officially in cyber wa…
+The #Anonymous website is still down. They are undergoing since yesterday, following the diffusion of the alleged leak, a viole…
+[THREAD] Bon, les amis... Si l'envie vous prenait de gonfler les rangs d'#Anonymous suite à un fumeux "appel à la #cyberguer…
+It is no secret many Ransomware TAs, and EvilCorp adjacent individuals reside in Ukraine. They typically worked hand-in-…
+1. Convicted former prime minister Najib Razak (pic) has hired New York-based Karv Communications for US$140,000 to provide…
+White House Exec Order and U.S. Government Strategy for Digital Assets -- a thread with thoughts; TLDR = this is a watershe…
+File this under two lucky humans who are living their best lives hosting and exec producing the shows they love… oh wait I lo…
+👋 Twitter peeps it’s been crazy!Figured we should meetI’m Cat, quit my video game exec producer job 6 years ago &amp; now…
+Still waiting for one "investigative" journalist to interview an oil exec about oil prices 🧐 Instead of the @WhiteHouse…
+Recap of our cleat giveaway for Legacy HS, in partnership with Full Circle Consulting Systems Inc. @storeTAOS Primary Exec a…
+For #IWD, Lotte Bergann, EA to the Exec, takes a look at what the day means &amp; how important it is for those in Tech to t…
+⏩ All roads lead to ASTRA @AstraProtocol: A Decentralized Compliance Layer for the Web3 economy.https://t.co/iY5SKBJwU…
+I listened to @quintabrunson on NPR’s fresh air say that as exec producer, she was proud of the decision to use their adverti…
+All your mimikatz are belong to NVIDIA. Deeper in the thread there is more discussion around Windows failure to block expired signing certs. Backwards compatibility to blame as usual. https://t.co/BcMqz8FODG
+Third ICS protocol scan! Our new daily IPv4 Tridium Niagara Fox (port 1911/tcp) uncovers over 23 800 IPs responding. Most…
+NEW BLOG POST: Disk encryption on the MQ Appliance https://t.co/QfuBsXLtSU via @IBMCommunity #IBMMQ #MQAppliance https://t.co…
+Now it's time for X25519 in Scratch - because asymmetric cryptography is important too.https://t.co/ifNc1OSdP1 https://…
+TIL Wirth's law, which is from *1995*, and the associated May's law: "Software efficiency halves every 18 months, compensating Moore's law."https://t.co/dumpV08kt8 https://t.co/6R00JWVicu
+holy crap, blizzard finally dropped a new SC2 balance patch after 18 months.
+Apparently @JLCPCB and @LCSC have told the parametric search site that it has to shut down.Absolutely *terrible* move that'll guarantee that I produce less designs through JLC, considering their own parts search feature is comparatively useless.https://t.co/Xf8zCv41Bf
+We will never know what exactly could have happened should a black-hat hacker try to exploit it, and it is better this w…
+#Linux Mint 21 packs spicy Cinnamon goodness, Anbox demos a cloud based smartphone, native #Matrix VoIP with Element Call, a…
+@Passthadutch042 What do you need to do with it? You could try a Linux distro if the other suggestions don’t help. Mint…
+Linux Mint Debian Edition 5 beta is out #UX #cloudcomputing via https://t.co/XivlNnmSZA https://t.co/9RCr4ZAXEV
+HP Linux Imaging and Printing Drivers Now Support Linux Mint 20.3 and elementary OS 6.1 - 9to5Linux https://t.co/jsS5Ajmsqd
+Someone know how to open a MDP file from Medibang Paint (Firealpaca) on Krita?I'm in Linux Mint.
+New post: Optimizing #FreeBSD Power Consumption on Modern @Intel Laptops: https://t.co/VhIMAVQ3rH
+Introducing imagine_sh, the #FreeBSD "image engine" which configures a @FreeBSD_RE VM image for lab or production use us…
+Over the past year, @Mandiant has tracked a relentless campaign carried out by #APT41 🇨🇳 targeting State-level governments…
+When we shared the Conti leaks vx-underground was consuming 15TB+ of we traffic a day with a peak of 24TB of downloads i…
+I've been accused of being in a hate group, as well as a cult, all because of my advocacy.#AutieBiographical #ActuallyAutis…
+awk -v boot=/var/run/dmesg.boot 'BEGIN{while((c="kldstat -v")|getline&gt;0){if(NF&gt;2){m=$5;d=0}if(m=="kernel"&amp;&amp;++d&gt;3){for(n=sp…
+A great collection of OSINT tools by @Technisette. It has over 370 followers, so evidently the community thinks it's valuable!…
+The most visited and followed #OSINT page on our platform last week has been the Ultimate OSINT collection by the @hatless1der…
+Gee thank you DuckDuckGo. Pray tell how do you know you are getting it right?
+Hadrut’s Henrikh Mirzoyan: Azerbaijani Soldiers Executed 83-Year-Old “Symbol of Kindness”https://t.co/fDPcDAkAyA https://t…
+There are many compromised and corrupt institutions in the world right now, but our media might be the worst.
+Friendly reminder Azerbaijan was allowed to continue hosting Euro 2020 games months after the 44 day Artsakh war. If y…
+If Russia was telling the truth about Ukraine's biolabs (and we don't know that... yet), we have to reevaluate a lot of t…
+I'll give an in-person training on code deobfuscation at @reconmtl. We'll dive deep into symbolic execution, SMT solving et…
+2022-03-03 (Thursday) - Still seeing #CobaltStrike from #Emotet infections - IOCs from our latest example available at: h…
+@Unit42_Intel #pcap, email, and malware samples available at: https://t.co/CYGuD7jltI https://t.co/T09ouqNIRr
+@Unit42_Intel #pcap of the infection traffic, sanitized copy of the original malspam, and the associated malware/artifacts are available at: https://t.co/0hCuiBsmDu https://t.co/ZNypQGEa7P
+i gotta be a corrupted file the way i got attachment issues
+Our #BruCON0x0E Spring Training event (20-22 April) will be a great opportunity to explore our new location in 🚨Mechelen! 🚨We have 4 in-person and 2 virtual courses with enough options for red, blue or purple #HackingForBeer 🍻https://t.co/ejpyVvoVj8
+During a two day virtual class @RandomDhiraj  and @p1ngfl0yd will perform a deep dive into fuzzing which will leave you with a comprehensive understanding of "crash, detect and triage" of fuzzed binaries or software! https://t.co/488eL3UYMC
+Always wanted to learn more about stack exploitation? Join @corelanc0d3r  and learn all about the ins and outs about writing reliable stack based exploits for the Windows platform! https://t.co/24edk6Mcc2
+The Daemon in My Bed by Dark Cherry Collective...Do you get out of bed on Monday morning or do you listen to your daemon? Do you give in to his wicked promises?From our YouPorn Featured collection.https://t.co/4VMVoaC3cD
+Blog post today rounds up my Warcry Nurgle Daemons Befouled Band I've painted so far and some paint recipes for my Nurgle Da…
+Film session w/ Coach 30 - #Duke vs. #UNC @theAIRapp https://t.co/ojRX9ojBmA
+Version 3.36.1 of syslog-ng is now available in @freebsd ports:https://t.co/sO0xX6jTttNew features include:- rename() fo…
+@crackcobain__ nigga tried sliding mighty med in there😭 https://t.co/0xKk0VpN6h
+Version 3.36 syslog-ng packages for @openSUSE / SLES and @fedora / RHEL are now available. New features include:- rename() for name-value pairs- #TLS keylog support- restricting TLS 1.3 ciphers- symlink-as() for macro-based filenameshttps://t.co/KZMtf5nCu7
+Version 3.36 syslog-ng packages for @ubuntu and @debian x86_64 are available from the syslog-ng team. New features include:- rename() for name-value pairs- #TLS keylog support- restricting TLS 1.3 ciphers- symlink-as() for macro-based filenameshttps://t.co/aPnSKS7B94
+PicoRGH! Raspberry Pi Pico as an RGH 1.2 glitch chip on an Xbox 360 Slim Trinity board! https://t.co/UXSSooSaPn https://t.co…
+Wiki for reverse engineering / hacking a Mazda #Rx8 now available on @github! - Very early WIP, expect loads of additions over…
+It's also a neat pcapng-pdf polyglot so don't forget to open it with your favorite pcap parserKudos @angealbertini https://…
+Happy International Women's Day. The first assembly language was written by Kathleen Booth who also designed the first assemble…
+WebGPU… Better than WebGL?: As the browser becomes more like an operating system, we are seeing more deep features being built into them. For example, you can now do a form of assembly language …read more(continue at https://t.co/wAKLIJX5qJ) https://t.co/LNoxnp93PP
+Learn x86 assembly language and become a professional at low level programming https://t.co/lAAKOsmefq#assembly  #progra…
+Un nouveau staff à la tête des #LionsIndomptables. https://t.co/0v5nCvSSLI
+Started collecting tips for using @MISPProject at https://t.co/BKyWrtn8l9 ; feel free to contribute your ideas.
+Integration of @MISPProject's "warninglists" is also in this release:https://t.co/3xf8biuGC6
+Concerning information sharing, we provide access to organisations to specific MISP sharing communities.You can contact us…
+MISP is an amazing platform for sharing intel between trusted groups! ✅Open Source and Free✅Automated exports to your IDS…
+I summarised a number of IOCs for #HermeticWiper at https://t.co/zPAdhMpGHj . Contact me if you're interested in a @MISPProject…
+MISP – open-source threat intelligence and sharing platformLink: https://t.co/GU2moliqRGComments: https://t.co/mCEqx…
+misp-wireshark - une extension Wireshark (en beta)  pour intégrer dans @MISPProject vos analyses réseaux/pcap. #DFIR #ThreatInt…
+Oh, the irony! Conti ransomware, which leaked ransomware victims’ data, has its own data leakedhttps://t.co/kU87myGw97 https://t.co/gM5PEDiQI0
+Goff, Wentz and Elliott drafted in the first 4 picks of the 2016 #NFLDraft. In the 2nd round you could’ve got King Hen…
+@An0nAKn0wledge Fuck scammers. Send me domains, their website will go down...
+Seems Twitter has allowed TOR Network usage, finally... https://t.co/ybvGi8Fu91
+The Youtube channel LT. Anonymous is a fraud. They have advertisements on their videos, Anonymous does not do anything for a profit.
+“Bitcoin is a remarkable cryptographic achievement and the ability to create something that is not duplicable in the digi…
+Cryptography presents itself as a reliable mechanism to secure information and communication channels. By combining complex…
+For the record, Green Hills does not sell self driving software. We make compilers, debuggers, software libraries, networ…
+Here is an exclusive first look at Hello World, issue 18 🤩This issue focuses on all things #Cybersecurity: the good,…
+https://t.co/gFIPSCOLiu #Concordium $CCD"#Concordium brings together world-class cryptographic researchers, outstandi…
+i get that FTX is on a massive charm offensive with regulators, but theres no rewriting what crypto is about and mocking the critics of "Permissioned Defi" doesnt change thatif you want some transparent verifiable cryptographic ledger to write trades go ahead, but it's not DeFi https://t.co/VhVPFMeYkN
+Check out Jellyfish: a toolkit of various cryptographic primitives—ranging from hash functions to accumulators to zero-kno…
+In the near future I expect the majority of assets to be cryptographic. In the long run, the institutional side of cryp…
+💎Qenetex Wallet has several helpful built-in features:✔️Advanced and flexible transaction search tools✔️Transaction info✔️B…
+“With e-currency based on cryptographic proof, without the need to trust a third party middleman, money can be secure an…
+#Encryption vulnerability renders Samsung Galaxy phones from 2017 to 2021 completely insecure, at least until they are upd…
+Our first daily ICS/OT scan! New Modbus service scan on port 502/TCP uncovers over 6300 unique IPv4 devices daily. Most a…
+We're all still using the same passwords, even after they've been breached https://t.co/sSun1VNh4J by @LiamT
+New breach: MacGeneration had over 100k accounts breached in Jan. Data included usernames, email addresses and salted S…
+Report: Ransomware attacks fall but new threats appear  https://t.co/JZM7lBVrxj
+Escaping privileged containers for fun. https://t.co/ceAL5cPJ9y
+Server Side Template Injection ResourcesBlogs:https://t.co/QdKeqSvsDShttps://t.co/Pm3Efu50qvhttps://t.co/RLYgtbp…
+How to Analyze RTF Template Injection Attacks. https://t.co/bW3DD2gVge #Hack #416 (2022)
+If you seriously think that cutting VPN access or Internet access will stop state-level cyberops then you seriously ne…
+I was interviewed by @helpnetsecurity for their Healthcare Cybersecurity Report:
+ZDNet | Watch out for this phishing attack that hijacks your email chats to spread malware https://t.co/MyAgkTFLSE
+Tripwire | Ragnar Locker ransomware – what you need to know https://t.co/BRCK2jSv53
+Rapid7 Blog | New US Law to Require Cyber Incident Reports https://t.co/LxB82mDWsw
+Manipulating User Passwords Without Mimikatz https://t.co/subJK3hG1b
+This is so cool! A big advisory about IP spoofing on a lib I maintain can now be replaced with "Just use Caddy"! https://t.co/ha…
+What is IP spoofing and how can you prevent it?IP spoofing is a method cybercriminals use to impersonate legitimate networks…
+@kunstderfuge1 @CullenHoback If it were in DoD space, all this means is something really fucky is going on, Ron is probably spoofing his IP when pretending to be Q. IP spoofing is easy, and because IPs were in the plain on my version of 8chan I'd spoof mine all the time to make posts, especially on /furry/
+Understand the QRLJacking vulnerability that could let an attacker hijack any WhatsApp account. Video tutorial here:…
+A key that can open many locks is called a master key, but a lock that can be opened by many keys is a shitty lock.This…
+Political power is the master key. Social power is the way to political power. You cannot achieve or retain political power w…
+Our recent paper entitled "Subsequent embedding in targeted image steganalysis: Theoretical framework and practical applica…
+@TheSSAOIG Q2A: Question anyone offering quick money with little risk. Scammers pretend to be your friend on social media by ha…
+My new fav tweet:Final Recon - OSINT Tool for All-In-One Web Reconnaissance https://t.co/ewmylEpuH4 #infosec #cybersecur…
+Restore/Erase Passcode Disable Jailbreak A11 keep same Without Problem BEST Pacher https://t.co/aMJf2Yzh8VNEW TOOL R…
+An amazing tool oxDork - uses Google dorking techniques and Google dorks to find security holes and misconfigurations in web se…
+AT THIS EXACT MOMENT THE SPECTRUM CABLE LEVEL ONE MANAGER RIVERO AND REPRESENTATIVE KRIS IS BLOCKING MY  TABLET FROM BEING USE WITH A KING JAMES BIBLE THIS IS WHY I DON'T HAVE BIBLES ON MY PHONE BECAUSE THEY'VE BEEN USED AS A HACKING TOOL FOR THE SPECTRUM CABLE MANAGER RIVERO
+How I created a Trojan Malware — Ethical Hacking https://t.co/IIli88ef6f
+What is IDOR Vulnerability, and how does it affect you? https://t.co/nReSIxZAe2
+Some critical vulnerabilities found with passive analysis on bug bounty programs explained https://t.co/nhdrIJuRzi
+🇺🇦 Dear website owners: if you put this little script into your site, it will show a war awareness popup to Russian visitors.…
+Polina, 3, is trapped in KharkivShe spends most of her time playing &amp; sleeping in the bath, where her mum hopes it mi…
+Sorry to see @MLP_officiel had to destroy 1.2 million campaign folders because this 👇🏻 picture…of which she was so pr…
+@Snowden went strategically silent for a couple of days now. Oh the courage!How do know someone is a shill? He only criti…
+300+ vulnerabilities in TensorFlow. Could they be used to take over a system using ML for, say, loan default prediction?…
+CISA updates Conti ransomware alert with nearly 100 domain names https://t.co/27Jftyn0Ou
+HP patches 16 UEFI firmware bugs allowing stealthy malware infections https://t.co/taU1gjonbJ
+Our second and final deep-dive analysis on the #Daxin Chinese spying tool looks at the communications and networking features of the malware https://t.co/IeutAEeb8M https://t.co/OpXFHrYZuA
+MASTER BOOT RECORD - 80486DX (OFFICIAL VIDEO) - @thebeast: BUY HERE: https://t.co/C8cymToFG2 █▓▒░ SUBSCRIBE TO… https:…
+just so you get a grasp of russian malware. here are the capabilities of a wiper malware disguised as ransomware. russian hacker…
+" hm. malware disguised as ransomware - but it actually ( obliterates ) the master boot record . "   smirking .…
+Cool new tool by a @sansforensics #FOR500 alum to parse and extract the Google Drive for Desktop (Google File Stream) loca…
+If you have internet facing Windows machines, this is a good option to bring down attack surface a bit.There is also the @…
+CVE-2022-24713 regex is an implementation of regular expressions for the Rust language. The regex crate features built-in mitig…
+Can confirm - #HermeticWizard spreads itself and not just the destructive payload. https://t.co/rY8d088Jlz
+Pandora is an analysis framework to discover if a file (mainly office files) is suspicious and conveniently show the results.…
+This Conti ransomware infection chain shows how threat actors infiltrate their system and eventually drop the maliciou…
+New ransomware samples have appeared for:- Blackcat (ALPHV) ransomware- Lockbit ransomware- Hive ransomwareWe have…
+Avast a publié un outil de déchiffrement pour la souche de ransomware HermeticRansom utilisée dans des attaques ciblées contr…
+Les vulnérabilités de Log4Shell sont encore exploitées aujourd'hui par les attaquants pour déployer diverses charges  malveil…
+CERT Orange Cyberdefense share IOCs related to Russia-Ukraine 2022 conflict, extracted from our Datalake Treat Intelligen…
+FilePhish - a simple OSINT Google query builderhttps://t.co/qYNxvFoSVx https://t.co/YyNaxcIqQx
+Another reason not to pay - @emsisoft have provided a free decryption tool for Deadbolt #ransomware available here: https:/…
+#Conti Leaks - Digging into the BTC traffic it seems there is a relationship with Ryuk #ransomware and Conti. Reminder, Ryuk is believed to be created by RU-speaking actors, and the source code was sold in the underground.👇
+Within the space of 2.5 hours (23-02-2022) we were able to determine that HermeticWiper 3f4a16b29f2f0532b7ce3e7656799125 w…
+Want to have a drink with @scrtsa team, CTF players, speakers and fellow members of the local infosec community? Join us for Insomni'hack 2022's NOTworking Dinner ! Registration here: https://t.co/9wkxNe8vRG #INS22 @INSO22
+🚨 RAPPEL WEBINAIRE 🚨🎙 "Un monde ouvert"👉 Rdv mercredi 9 mars à 11h pour une présentation du projet #opensource "Jumeau…
+Digital identity wallets allow us to:⚕️prove our identities to access online services📄share digital documents📱verify our…
+Whonix homepage is now mediawiki based, design and content has been slightly improved.https://t.co/n80aNyhFCw
+Old and new Whonix technical concept illustration. Thoughts? https://t.co/VodhtCqnal
+This is amazing! It's a great inspiration for a short or medium length Whonix explainer video. But for a first impression on th…
+@Whonix Looks nice, but... how about this? Its just concept for twitter in low qualitty (original size was 25MB). https://t.c…
+What do you think about this new Whonix illustrative image?Does this image properly communicate what Whonix is about and that…
+TOR tunnel -WHONIX: https://t.co/90e29oqXrRVPN/TOR Scripts -Torghost: https://t.co/4UTr8y6lSbAnonym8: https://t.co…
+I made it! 💪😎You can add "real" SHA256 file hashes to the AppLocker rules if you specify "SHA256Flat" as a hash type in the X…
+We are doing mass archival of malware samples from VirusShare, Malshare, and Bazaar. Malware samples are labeled using t…
+NSA Releases Network Infrastructure Security Guidance | CISA https://t.co/q8F4EptuEz
+#Malware analysis tip of the week:Malware can hide from a debugger by calling NtSetInformationThread and setting the Thre…
+New files are being signed with the stolen #NVIDIA certificate. #Lapsus You can search for the files signed with the stolen…
+ℹ️ #HermeticWiper: A detailed analysis of the destructive malware that targeted Ukraine 🇺🇦.✍️ Technical analysis by @h…
+As mentioned in the updated MSFT analysis &amp; resources page:*DEV-0586:WhisperGate*DEV-0665:FoxBlade (aka HermeticWizard…
+GHunt is an OSINT tool to extract information from any Google Account using an email. https://t.co/ibaHI5GINx #infosec #cyber…
+AhnLab has published its ASEC weekly malware statistics for 21st to 27th February 2022.  https://t.co/KCmOb9Fef6 https://t.co…
+I've hosted several malware analysis workshops over the past few years, I've collected those on YouTube and added to the foll…
+Looks like this is another new sample. #HermeticWiper 4aa186b5fdcc8248a9672bf21241f77dd395872ec4876c90af5d27ae565e4cb7…
+Malware Analysis Spotlight: https://t.co/y6dwzCqICvBeware of Smoke Loader! A highly capable/malicious downloader that distribut…
+If you found a bug or a misconfiguration in software that anyone can buy or install, don't stop there. Try to find more in…
+To be more secure in the cyber space:• Network segmentation• Create a process with policies to avoid misconfiguration• Regular awareness trainings• MFAAnything else? #CyberSecurityAwareness #cybersecurity https://t.co/cQKbg18Jtd
+QSB-078: Linux kernel PV driver issues and LVM misconfigurationhttps://t.co/5XHRUIDVyZ
+Public cloud adoption is focused on engineering speed and agility. Basic controls such as restrictive public access, ac…
+[Case Study] OAuth Misconfiguration leads to Account Takeover by Gaurang Bhatnagar https://t.co/nLKNzCJKm5
+When you get stored XSS in an S3 bucket, can upload endless files of any type, and generate AWS signatures yourself due to a misconfiguration - and the ASE triages it "N/A". I love waking up to things like this. Not only do we have to find the issues, we have to battle the "ASE"
+- Manage all platform functionalities using APIs - Detects and protects from cloud threats such as cloud misconfiguration…
+One of the ways to cope with new reality is prioritizing the bugs that directly affect power efficiency. The overwhelming majority of these bugs are just plain performance bugs: redundant work, wasteful misconfiguration, inefficient data structures, etc.
+⏰Join @raesene and myself tomorrow to talk about Trivy -- Our beloved Vulnerability and Misconfiguration Scanner ✨When…
+Ran into an issue with the #AzureDevOps API. It seems to be a permission error with the build service account. It feels mor…
+Most AWS vulnerabilities arise from misconfiguration. Learn about how to secure S3 objects, buckets and more in our Cloud…
+My 3 online trainings at CanSecWest 2022 (in May):- Black Belt Pentesting / Bug Hunting Millionaire: https://t.co/ym50cM…
+Meet Kali Unkaputtbar, Kali Linux's Automatic File System Snapshots Feature for Btrfs-Based Bare-Metal Installations https:/…
+kalitorify v1.27.1 releases: Transparent proxy through Tor for Kali Linux OS https://t.co/4wRgvckZVW #opensource #info…
+Joel was doing a #compsci Masters in Kyiv and then had to run.🧠 sysadmin, linux, C, PHP, js, some hardware, plays with Kali…
+Physical hacking tools that you must know!☄️ Follow @_zSecurity_ for more content on hacking &amp; Cyber Security!#hack #h…
+Best Operating Systems for Penetration Testing and Ethical Hacking🐞👨‍💻→ Kali Linux→ Parrot Security→ BackBox → Bl…
+Fast WordPress site ⚡️1. Good Host2. Server-side Caching [Redis Full-Page or NGINX FastCGI Cache]3. Client-side Ca…
+La bêta de la mise à jour Au Mal Bosquet est désormais en ligne ! Prenez de quoi casser la graine et vous désaltérer, car il se peut que vous passiez plus de temps que prévu dans cette forêt labyrinthique aujourd’hui gardée par Hell Mina... 🌳 😈 ➡️ https://t.co/jSZsPyCUli https://t.co/7jDFsttOlo
+🛠️ La maintenance hebdomadaire #DOFUS est désormais terminée.Merci d'avoir patienté, les serveurs seront accessibles d'une minute à l'autre, bon jeu ! https://t.co/s7J6GnURSd
+La nouvelle mise à jour Au Mal Bosquet vous invite dans les sous-bois de la Forêt Maléfique. 🌳😈Logan, Djinn vous donnent rendez-vous le mardi 8 mars à 14 h 30 sur notre chaîne Twitch pour le live qui lui est consacré ! 🤩📰 https://t.co/4CuWMJq80E📺 https://t.co/g5f2vAGFFS https://t.co/Qf3LzUoEco
+Hackers have leaked to the journalism non-profit DDoSecrets 800+ GB of data from Roskomnadzor, the Russian agency tasked…
+Microsoft confirms Intune enrollment issue on Android devices https://t.co/HsHb0J4Way #infosec
+See also, Twitter refreshing your view just as you see a tweet that you want to read.
+@hacks4pancakes According to this infographic published by someone in Russia (source currently undetermined), Huawei—alongs…
+Fun fact! I turn down 90% of the requests to human hack a company/individual. Most orgs and folks don’t need a pentest the…
+The LAPSUS$ Ransomware group is having some internal drama. They posted this message and quickly deleted it. https://t.c…
+Anyone have any good resources for a Golang beginner trying to write web services?
+A #bitcoin thread:1/4 A "double spending" problem means that digital money that has already been spent could be used a second time. Imagine a PDF file that you can copy, modify and send endlessly at zero cost, claiming that each copy is the original.
+Cybersecurity researchers at Mandiant have revealed that China-backed #APT41 hacker group compromised at least 6 state…
+⚡Hackers abusing Mitel devices to launch high-impact #DDoS attacks with a record-breaking amplification ratio of 4,294,…
+A series of newly discovered security vulnerabilities — dubbed "Access:7" — in PTC's Axeda #software affects hundreds o…
+⭐Experts have discovered 3 new critical flaws in APC Smart UPS that could let attackers remotely hack devices or manipulate ⚡ power of millions of enterprise devices to physically 💥 damage them or other 🖨️💻 assets connected to them.Details: https://t.co/6D6u4Xo29R#infosec
+Russian vigilante hacker: 'I want to help beat Ukraine from my computer' Russia's "cyber army" has been sending DDOS…
+The Ukrainian Anonymous hacker group hacked last night into Roskomnadzor, the Russian federal agency responsible for mo…
+The Ukrainian Anonymous hacker group has hacked into #Roskomnadzor, the Russian federal agency responsible for monitoring…
+Hacker Group Anonymous 'Cyber War' On Putin's Russia04MAR2022MSNBChttps://t.co/kavkyjG8bmOnline hacker group 'Anonymous…
+1/2 This is valuable information, useful for the tribunal over the Ukrainian Nazis: the Russian hacker group KILLNET hacked…
+This is another huge reason not to visit darknet links 2022. Of course, if you just decided to see what comes on the darknet…
+Private information of 30,000 Israeli Air crew allegedly leaked on darknet by hackersIsraeli cybersecurity company Varo…
+Quand j'ai débuté dans l'open source à l'époque où j'étais étudiante (master informatique), les gens bons en code étaient désignés par le terme « les barbus ». En tant que femme, ça ne m'aidait pas franchement à me projeter dans ce groupe... https://t.co/CRk3Mypzfv
+Petit rappel que vous n’avez pas besoin d’être forte, courageuse, inspirante, diplômée, sportive de haut niveaux, inte…
+Many congratulations to @StevenPatchett7, @quotes_52, Hilary Ayshford and Clare Elwell who won the Online Flash Fest Micro Contest! You can read their fab stories here: https://t.co/qtbrD0kQDF https://t.co/hfXcQ470wI
+The March 2022 Issue of the PCLinuxOS Magazinehttps://t.co/Yp4vphHWrO
+C’est vraiment une super nouvelle (et quelque chose d’impensable aux USA, par exemple). https://t.co/KND1Iv8FYE
+Les Nigerians et autres étrangers fuyant l'Ukraine sont refusés par les autorités polonaises https://t.co/SCVeGF0qol
+En Bourgogne ils ont défilé avec des drapeaux nazis et le sigle SS dans les manifs antipass en prétendant « chasser du gauch…
+How many user accounts should be in Global Administrator in Azure AD?The answer is NONE.Create new admin accounts in your…
+Cybersecurity pros: Which floats your boat, bug bounty or penetration testing?Take this brief survey to chime in!https://t.co/GgLMmVnkhn https://t.co/ehatFYSvOK
+1️⃣ It's all about the process.  2️⃣ Create a toolset! 3️⃣ _________. Check out the clip below and tell us your favorite tip from @codingo_ 😎 #BugBountyTipshttps://t.co/9ddcoLnko6
+If you ever find a SSRF on a Windows box, try running https://t.co/I9j1BFaWeI on your own VPS, then send the SSRF to file://&lt;yourvps&gt;. With a bit of luck, the server will send you some Windows NetNTLMv2 hashes to crack! 🤠  #BugBountyTips https://t.co/LfuRs0VLd0
+@Snowden What would Julian say? https://t.co/MmeQhxDUCL
+Add Julian Assange, Edward Snowden and Matt Tiabbi to that list also.
+My heart and thoughts are with Edward Snowden - one of the true heroes of our times.
+Hope you're doing well, @Snowden. https://t.co/5HeUxnBA5Q
+What would happen if Russia wheels out SNOWDEN  tomorrow? https://t.co/zNMKKMhOw2
+Edward Snowden must find himself in a bit of a pickle at the moment #RandomThoughts #ShowerThoughts
+As Edward Snowden said, “Arguing that you don’t care about the right to privacy is no different than arguing that you don’t c…
+What's happening with Edward Snowden? Is he still in Russia?
+@Snowden It allows politicians to get away with never following up on their campaign promises. https://t.co/KXtIZqsAKX
+I have come around to @nntaleb view of Snowden. While I still think he did some good, he has tarnished himself on many fro…
+Earlier today Conti ransomware group sided with Russia. Little did they know some of their "friends" sided with Ukraine.…
+Conti ransomware has made at least $2.7 billion since they started in 2017 according to analysis of leaked bitcoin add…
+Malware is now hijacking email threads to download malicious DLLs that inject password-stealing code into webpages, am…
+🚨 NEW: CVE-2022-23051 🚨 PeteReport Version 0.5 allows an authenticated admin user to inject persistent JavaScript code…
+Qakbot Botnet Sprouts Fangs, Injects Malware into Email Threads: The ever-shifting, ever-more-powerful malware is now hija…
+Commit: fuse: fix pipe buffer lifetime for direct_ioDescription: bad splice'ing into a pipe from fuseReported-by: @tehjh…
+Several CPU vulnerabilities being reported today (including one from our @wipawel): https://t.co/2SYRFIK6ug
+Microsoft provides official setup instructions for using @code w/ MSYS2 MinGW: https://t.co/mvYM8mZvGyBut it seems a bit hokey that you have to edit your Windows PATH, and I don't trust that it'll work with MSYS CMake and such.I wonder if launching vscode from MSYS is better?
+We'd love to hear from you! Remember, the event isn't until June, so you don't need to have a talk ready to go in order…
+St Marys University (our fantastic venue!) is holding two separate events this week. For HS students, learn all about their…
+We’re happy to announce our CFP is open!! It’ll be open for two months - so if you don’t have an idea now, work on one so y…
+Unix protips!Ever have a command that you like and you wanted to keep it? Make life easier with a little prep.alia…
+Aider l'Ukraine ? Anonymous suggère d'informer• télécharger Google Maps,• aller à Moscou ou ailleurs• sélectionner restau…
+You are consistently rewarded in ETHEREUM for being a Degen Hero"ETH rewards are accumulated and can be claimed at an…
+Sometimes vulnerability "research" is just installing horrific software for hours on end.
+(CVE-2022-0895):  Static Code Injection in microweber/microweber.https://t.co/3YSGyWQGaDDisclosed by https://t.co/…
+Code Injection in https://t.co/ETeSul8tMC (CVE-2022-0921) reported by quandqn - Patch: https://t.co/wRgxFVkpprhttps:/…
+@sophiadahl1 FDA approved Covid19 mRNA injection 8-23-21,removing experimental designation.The arguement against Numrenberg code is it applies only for human experiments.FDA had all data trials of an unsafe drug hence it’s   medical negligence.Although FDA has sovereign immunity
+CVE-2022-0895Static Code Injection in GitHub repository microweber/microweber p...https://t.co/vg8kW33vyPCustomizabl…
+Command Injection - I have just completed this room! Check it out:  https://t.co/kHrVJmNl1r #tryhackme #command injection…
+If I have the injection pointwindow.location.href = 'javascript:INJECTION?x=token'Can I access the token? To make the code execute, I feel like I need to comment out the ?x=token part like'alert()//?x=token'Any JS tricks available?@garethheyes @brutelogic #XSS
+First Facebook now Twitter. Great job Alex! Hopefully you can help welcome more big platforms in onionland.
+The tragedy of geography and power is that Ukraine will lose if theRussians come in heavy. The question is whether Ukrain…
+We have another update to our research on #cyberattacks targeting #Ukraine, this time with a fake DDoS tool that install…
+my personal peak comedy moment is that my wlan is called obi-LAN kenobi
+At @HorizonOttawa's #WinTheCity event and we are talking tactics. We need to have fun, to talk about some of the lighter…
+It does amuse me to find that the TsPkgContext field in the MS-RDPEAR isolated credential request is just a heap address of a TS_CONTEXT structure in the LSASS process' memory space. I have a feeling that's not great design. https://t.co/Sdgi7ZL65Z
+It may be a matter of days until someone sets up a DAO to fund the targeted assassination of you-know-whom. As in: "upload verifiable evidence of job completion, funds released, no questions asked"Sadly, this conflict seems to have no moral boundaries anyways...
+Penetration Testing For Beginners - XSS (Stored) - Damn Vulnerable Web Application (DVWA) https://t.co/W0Ua605j3g #eth…
+Now it’s time to start getting our game up. Remember I said that we’d be getting back to the “what” of hacking? Well, t…
+Penetration Testing For Beginners - ep6 DVWA Password Recovery (phpMyAdmin) https://t.co/VDTS7U2PAu #100DaysOfCode #10…
+My neighbour @iterorg is recruiting:- English-speaking InfoSec job ✅- International workplace ✅- Beautiful area ✅- 300+…
+I'm hiring a pentesterhttps://t.co/DVwYxdkkpVIt's a pretty appsec focused roleOther open positions on the security t…
+[Tooling ⚔️] Pushed an update to smbpasswd[.]py PR which ports mimikatz’s lsadump::setntlm to #impacket. If you’ve got doma…
+[blog post on macOS execution contexts] https://t.co/yIKPL2u60Y
+Certipy just received a major upgrade. The new version includes BloodHound integration, 5 new domain privilege escalation techni…
+1\ How to prove malicious macro was enabled &amp; clicked? 👀 #DFIR HKEY_LOCAL_MACHINE\USERDAT\Software\Microsoft\Office\&lt;VERS…
+Introducing Ithaca, the first deep neural network for textual restoration, as well as geographical and chronological attribut…
+To understand why I like diagrams as code, see "Dot Language (graph based diagrams)"https://t.co/P0XyOp00ZT
+The #Access7 and #TLStorm zero-day vulnerabilities discovered this week affect dozens of different healthcare IoT devices and…
+Millions of APC Smart-UPS devices vulnerable to TLStorm https://t.co/8UYtXd69fk #TheRegister
+Armis has published a report on TLStorm, a set of vulnerabilities that can be used to manipulate power outputs or disable A…
+Retrouvez notre article 👇  Les exploits TLStorm exposent plus de 20 millions d'onduleurs UPS d'APC🔗 https://t.co/LLfkLWV4k…
+Millions Of APC Smart-UPS Devices Vulnerable To TLStorm https://t.co/5KXyGH4c9J #news
+TLStorm flaws allow to remotely manipulate the power of millions of enterprise UPS devices https://t.co/NmqfRUxrCc https://t.c…
+The Whitepaper on TLStorm is a good read: https://t.co/DUNYVKqTY5  The attacked STM32F2 was in RDP=1. The firmware was decrypt…
+https://t.co/vpTiIY27mn TLStorm flaws allow to remotely manipulate the power ofmillions of enterprise UPS devices #cybersecur…
+Join Nadir Izrael, #Armis Co-founder &amp; CTO, and Barak Hadad, Armis Head of Research for a discussion on #TLStorm. Thursd…
+Conceal load times with a single animated file ⌛️❌No downloads❌No plugins✅One online tool to create &amp; animate easier tha…
+Dell opts out of Microsoft's Pluton security for Windowshttps://t.co/VvvAwyUEcFDiscussions: https://t.co/loSS0iskj…
+@coinbase reaches out to Darknetlive after banning 25k Russian wallets on WHY you SHOULDNT USE coinbase if you value pri…
+🎉🐘 Incredibly excited about today’s PostgresNIO release: We landed async/await support, including reading from an `AsyncSequence`. Thanks to `ExpressibleByStringInterpolation` we can allow, what would be clear SQL injection in most other languages.https://t.co/WfD7gGZyFJ https://t.co/0bQIiiA1z1
+SQL injection and my lack of experience - (part 1).https://t.co/l9MYHE2zjw
+on my form I am sanitising inputs to mysql from SQL injection attacks #security
+SQL Injection Vulnerability Discovered in Moodle https://t.co/JNrXU6lVLg #bugbounty #bugbounties
+Useful resources for those who want to master SQL Injection. A threadAnyone could contribute to this thread.#bugbounty #i…
+Was explaining vulnerabilities and exploits to my son (16) the other day - and he knew about DDoS and SQL injection… brought…
+So I used following payload for SQL Injection and retrieved data from the target.gtid_subset(/**/concat/**/((SELECT+column+…
+Nice blogpost on Linux crontab backdoors with a very clever use of dig and DNS TXT record to run commands. @SandflySecur…
+Automatic Linux privesc via exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w docker.sock https://t.co/t2…
+Agent Sudo | TryHackMe Walkthrough https://t.co/hQRQjcIOgU
+Top useful tools in infosec 2/2 from @SecurityGuill  :1) Openvas, Nessus : vulnerability scanners2) SQLmap : Exploit sq…
+Many customers log process starts and executed programs in a SIEM, or have an EDR in use. Nevertheless, the question often ari…
+🧵 Backdooring #SSH daemons (sshd) via simple patches probably exists since the dawn of time. Typically, a patched and recompiled version of #OpenSSH allows a threat actor to:1⃣ login with master password2⃣ logging all credentials to file3⃣ hiding logons from "last"1/4
+Need to justify a training request to your manager?We put together justification letter templates to share the key details of training and certification opportunities with your boss.  Check them out 👉 https://t.co/nM1bFcPyQj#DFIR https://t.co/BJDs9z2Hux
+. @hexacorn Blog: Good file…  (What is it good for) Part 1 https://t.co/4wolHa45v7 #DFIR https://t.co/Xww9pq897V
+NOW ACCEPTING APPLICATIONS  | Deadline 7/15Ken Johnson Scholarship at the #DFIRSummit will provide:- Two SANS #DFIR classes  - Mentoring from @_bromiley &amp; @DAVNADS - Consideration for an internship- One DFIR Summit seatLearn more &amp; apply here👉https://t.co/Bg9CPe7oyh https://t.co/z9xpTS6pkc
+How to install the AIL framework in a lxc container or use the publicly available AIL container. It's easier if you want t…
+Now that I've uploaded this week's lectures, all fifteen videos of my security engineering course are now online. This i…
+"Network Infrastructure Security Guidance" by @NSAGov provides a good resource for best practices for network security. htt…
+@ValeryMarchive Feelings and software vulnerabilities must be separated to ensure a peaceful life ;-) https://t.co/zXxNpxRb0I
+🎧 In this first episode of the #CISOBytes podcast, host David Bishop, Trustwave #CISO, sits down with Kory Daniels, Global D…
+This is a link with examples of internet-wide exploitation of the vulns @CISAgov called out by name.https://t.co/5Qg…
+SGI OCTANE takes its turn as the #KennettClassic guest registration station.  Sporting Netscape Communicator 4.76 for IRIX. ht…
+Today in: the internet cannot keep up with itselfThe part of Parcelforce's site we use for setting up shipments says its…
+PENELOPE LIVELY LOVE TRUMP HAVE MEASLES? MUNG BEANS STRATEGY TAMPONS MADMEN GRAND THE SECRET BONUS? TUNA SALAD THEY GAIN VITAMIN TEETH NETSCAPE JOHN FOWLES POOCOIN REALLY ARE POKER PORTLAND ASTON MEETING RHODE ISLAND PRESIDENT EARN PER MONTH BIG DATA SCIENCE ZONGHONG
+Microsoft Confidential 5 “TVLLNSCLINOD Risks to Strategy Netscape wildcard. Drive web client share to critical mas…
+CNN HENRY SWEET PET SPAM. PREDICTOR SNOBBY. LOSER. PEE. APICULATE CHANCE OF CUSTARD JOHN CHEEVER TURD LALA KARMELA AND PLAYED MEBOX SCOPOLAMINE DOG POO CONFERENCE BARACK OBAMA BILL Y TED BOUGIE XBOX ONE RICE CLARITY ANGRY GHOST DIARRHEA NETSCAPE HE'S GOING SANDPIT
+Is #BTC this generations #netscape ? It certainly seems so. Once upon a time we all could not see any different. Everyone h…
+@xanderatallah Opensea is the Internet version of netscape. Any search algorithm opensea come up with will be the altavista…
+Attention students!Do you think you would benefit from a hands-on #SuricataIDS training course? What about attending #SuriCon2022 alongside open source community members from across the globe? What if you could so for free?🙀Check out details here: https://t.co/rVGQMr1k4p https://t.co/RfvJ1ZjeHA
+Do you have a research subject or passion project that utilizes #SuricataIDS? Consider applying for our #SuriCon2022 poster session! Share with others in the open source community &amp; connect with others who have a drive as strong as your own.👉https://t.co/YDTAQwbDA6
+Our Google Summer of Code project ideas are now available thanks to @projecthoneynet. You can help us improve DRAKVUF S…
+don't worry gang this project hasn't gone away! @pwnDefend RDPGuard is alive! the HoneyNet is collecting all the things…
+if you're not using a service mesh already, why wouldn't you skip it and jump to eBPF, which looks to have more runway? h…
+TRAPMINE is proud to release its eBPF based Linux sensor code as open source under the GPLv2 licensehttps://t.co/nymKMcWT9z…
+All SoloCon2022 sessions are now available on-demand. Istio and Envoy best practices, API-GW best practices, Customer use-cases, introduction to GraphQL, introduction to eBPF and much more. https://t.co/nivSmc0BHb https://t.co/UrNtLhEBLy
+"It stands for extended Berkeley Packet Filter, and...what eBPF allows you to do is to run custom programs inside the ke…
+Slow migrations and legacy subsystems are main reasons we made it a priority to embrace software heterogeneity!Our vie…
+Come join me on my birthday as we explore cilium local redirect policy and some use cases like node local dns in kubernetes.…
+I enjoyed chatting with @QuinnyPig about #eBPF, #CNCF, and trying to explain things in a straightforward way
+BumbleBee simplifies building eBPF tools and allows you to package, distribute, and run them anywhere. Just focus on the eBPF…
+Awesome presentation on building Linux rootkits using eBPFhttps://t.co/MiESVLsKiLhttps://t.co/1FXZu0JYpohttps://t.c…
+Join @djannot for our NEW "Fundamentals for eBPF Workshop" at #SoloCon2022!🐝  Learn about #eBPF🐝  Build eBPF programs🐝…
+Today is my last day messing up with eBPF at Elastic.Don't ask me what's my next gig because... I'll be doing my own with a…
+Meet Merbridge!The team at @DaoCloudIO has released an open source project for accelerating the datapath in an Istio clust…
+As part of the most recent round of @Ubuntu kernel security updates, unprivileged eBPF has now been disabled by default in…
+Want to join the @isovalent product marketing team?  I’m building out the team for #ebpf and #cilium developer marketing init…
+Struggling to patch DirtyPipe? Cloud providers are as well.Azure: "We're on it" https://t.co/LT9oDD309FAWS: I verified the latest Amazon Linux 2 AMI is vulnerable, no bulletin https://t.co/QRGcRBis9OGCP: No bulletin yet https://t.co/I23NKHTxKZ
+What a privilege to host @simonmundie yesterday. He gave two cracking talks to our Yr 11 and Sixth Form students and w…
+NEW: The @CFPB is cracking down on junk fees and the companies that charge them.Banks extract ~$15B in overdraft &amp; non…
+I wanna be so wealthy that when I tell my kids about what I'm facing now, they would think I'm cracking jokes. 🤣
+cracking up at carli memory-holing the 2019 world cup because she only played 75 combined minutes after the first two gro…
+I started re-givaway for this NFT  to my followers and supporters cause last openseas was cracking now it's fixed drop you…
+It's gig day!!!!Tonight down at the Yorkshireman in Sheffield it's Fury and @deaddemons2020, two cracking bands for jus…
+Hop aboard the CamGlen Express from 8pm!Stephen has a cracking show lined up featuring The Velvet Underground, Hipsw…
+It's Friday. We're chilling at @jalopnik. I'm cracking open a can of wine. Come hang out!https://t.co/tgb50VpZ4U
+a lot of you are "cracking wise", "riffing", implying this will "put me in a coffin." fat chance. i'm going to meet the mach…
+MSVC compilers on @CompileExplore now support code execution and static analysis! https://t.co/FjXfC2XVSK
+Active Directory : configuration d’Azure AD Password Protection on-premise https://t.co/CvT9i3glbq
+Installer un module PowerShell à partir d’un fichier NuPkg https://t.co/a6Hbnojrmi
+[NEW] - Dirty Pipe : une faille critique qui touche le noyau #Linux - https://t.co/JGpyJeWJOF #Sécurité
+Crime Petrol team I have new script for you. https://t.co/tqru9BADVR
+Iris kinda not hiatus? house goes renovate? Iris still wan play gammu.Time to pokemon unite!! 😆😆🌟🌟https://t.co/Xi1RoU2…
+As if harrassing men by false accusations wasn't enough, these #falserape crying women now want to harrass me by filin…
+“When the ‘special operation’ started, none of [my Russian colleagues] could believe what was happening. Some cried. A…
+@x0rz @Sebdraven En toute sincérité, je ne vois honnêtement pas la différence que ça fait que les mises à jour soient stagées par les repos d'une distribution sur le chemin.Je ne crois pas que Debian &amp; cie aient les ressources de faire une review complète à chaque fois.
+Laravel Forge now lets you clean up log files directly from the UIhttps://t.co/jSFWteREBh
+10 ways to get RCE From LFI...1⃣ File Upload2⃣ PHP Wrapper3⃣ Log File4⃣ /proc/self/environ5⃣ /proc/*/fd6⃣ PHP s…
+Day 13 of #100DaysOfCode #CodeNewbies Yesterday I learned about Reading Files in Python, File Processing, Opening a fi…
+We spent a week reading log files. Here are the 20 most interesting lines.
+NTSockets - Downloading a file via HTTP using the NtCreateFile and NtDeviceIoControlFile syscallsThis sample demonstrates…
+The digital signature on some of the samples, signed by Anhua Xinda Technology Co., was in use by the XPath rootkit, tool l…
+We issued an advisory with @FBI to help combat the WhisperGate and HermeticWiper malware which are being used to target organi…
+#HermeticWiper is a data-erasing type of #malware. Most recently, it was used in a cyberattack amidst the tensions betwee…
+#digitalprepper Russia Using Malware In Ukraine                This week, Cybersecurity firms discovered a new data wiper…
+We’ve updated our guidance to orgs. While we’re unaware of specific threats, past cyber attacks against #Ukraine have had interna…
+A must read for new and veteran pros alike: Destructive “HermeticWiper” malware strikes Ukraine by @techrepublic https://t…
+In-depth analysis of #HermeticWiper malware.The Russian forces used this malware to destroy the infrastructure of Ukraine, and…
+Splunk Threat Research Team (STRT) Blog Detecting HermeticWiper &amp; Ransomware Decoy https://t.co/wHxeoxoxGO… #splunk #splunkblo…
+HermeticWizard, the worm-component of HermeticWiper, was leaked(?) 4 hours ago. We have the sample.NOTE: HermeticWizar…
+Researchers have disclosed three security #vulnerabilities affecting #Pascom Cloud Phone System (CPS) that could be combined t…
+Read more on how @contextlabsbv #CEO’s, Dan Harple, Pentalytic™ framework guided the #OpenMusic Initiative (OMI) effort to…
+Breaking: Personal terms have been discussed and the framework of Haaland's transfer is ready to be signed off by #ManCity o…
+Crypto Weekly Recap:Biden signs crypto executive orderDubai reveals crypto legal frameworkS. Korea elects a pro-crypto…
+Building an SRE Career Progression Framework https://t.co/Umnj6oBRSn
+Registration now open (and free)The endemic-epidemic framework is a great way to model infectious diseases, combining statisti…
+The crystallographic arrangements of NASICON and anti-NASICON are related. Indeed, they are built on a three-dimensiona…
+➡️ Deal now in place🇳🇴 Personal terms have been discussed🔵 Player expected to choose #ManCity💰 Total outlay expected to reach £100M✍️ Transfer framework ready to be signed off by @ManCity officialsThis is what has been said:
+The Sauk-Suiattle Indian Tribe is using #RightsofNature framework to sue on the salmon’s behalf, alleging #dams preventing…
+On the off chance the eBPF/academia crowd who follows me (love y’all!) knows what I am referring to:routing daemon (b…
+Diagramme de Gantt qui se remplit grâce au formatage conditionnel sous LibreOffice Calc. https://t.co/cXZMc2bcCv
+Mauvaise nouvelle pour les déterministes genre “demain, tous télétravailleurs”: à partir du 4 avril, même Google exiger…
+Indispensable pour notre activité de conseil et de support, un site qui recense les cycles de vie et dates de fin de support des versions de différents outils (Apache, php, .Net, pilote NVidia, Python,Windows, log4j, Django...)  https://t.co/6JAAaJmzs6 #opensource
+Face à une telle fenêtre, vous avez l'habitude de cliquer rapidement en haut à droite ? Lisez bien. https://t.co/Uib8hyHdsR
+Demo of unreleased live-patch for Dirty Pipe, by @Adam_pi3 https://t.co/DxBkIy8gES
+Should Linux Kernel Runtime Guard @lkrg_org updates be occasionally live-patching the most critical Linux kernel vulnerabilities like CVE-2022-0847 Dirty Pipe (which generic mitigations don't catch)? Even once a proper fix is out, it takes time to update kernels and reboot.
+Le marché de l’#OSINT ne cesse de progresser. Il était donc logique d'intégrer une Journée OSINT au #FIC2022, avec la participa…
+#Prison Le nombre de personnes détenues continue à augmenter. On frôle la barre des 70 000. Plus du quart d'entre elles…
+Ils sont sérieux , sur les formations cybercriminalité ? 🤔Y a rien qui correspond.C'est quoi ce rapport ? 😔Faut demander a…
+★ #OSINT tip ★ Want to know how to extract images from social media platforms? Option 1: "Save as"Option 2: "Inspect E…
+Next Open Source release of Open Semantic Search Server with automatic setup of Celery Flower (web user interface) for m…
+Just found a new #osint tool that I wanted share. With CarNet you can find the name of the brand, model and generation of a ve…
+smap - Shodan meets Nmap😎🤙Right now this setup:- scans 5 hosts/second- gives vulnerability + service data (cpe+protocol+nam…
+Crypto businesses embrace executive order as invitation to talk https://t.co/HpMmJvcGBZ
+ICYMI – Biden’s executive order set to fast-track crypto policy https://t.co/RC4Rhl6SpR
+The Real-Time Payments Tracker®, our collaboration w/ @TCHTweets, explores how ACH transactions help businesses increase revenue by enabling them to offer a more seamless payment experience: https://t.co/3Hlo3JJRXM https://t.co/Bf1Ccrkvgd
+Le suivi cartographique de la guerre de Moscou en Ukraine est une matière qui évolue : pour mieux saisir la situation, nous…
+MFW you’re getting hacked by people that can’t exit vim https://t.co/31liNUPBbN https://t.co/n8C8LuWF0c
+Just a reminder: Information that might be “legend” or stretching the truth but helps Ukraine win the information war is st…
+Russian soldiers lowering one of the cameras used by the #OSINT communities (and others I’m sure) to monitor their movemen…
+Emmerich's possible replacement Mary Parent, former president of Universal Pictures, current exec with Legendary Rece…
+Ex-Goldman exec Tim Leissner had $41K-per-month side gig he never disclosed https://t.co/t2l0DseIdu https://t.co/QPNJbdbXSo
+@kerjakosongsa Chemiedis is HIRING✨QA chemistQC execLab AssistantOperator(Full Time)Chemiedis HQ📍 Office-based i…
+@StinkenderKase @WaltHickey exec team: "nah that was the new hope and this is the OLD hope"
+This is the same SF who brought down the Exec over a hobby language.Unionism is finished with the ‘process’. Enough…
+Former CNN exec Gollust gleefully texted Andrew Cuomo he'd dealt Trump an 'L' during CNN interview: Reporthttps://t.co/Itld3R…
+What a shock that @markpoloncarz's leftist County Exec pal in Houston got raided today for an issue related to a county…
+Suggestion: BLACKHAT 2015Lesson: DDOS attacks, RAT attacks, Incident threat management, Meterpreter and Backdoors#cybe…
+hugo v0.94 releases: A Fast and Flexible Static Site Generator built with love in GoLang https://t.co/fYDsPNmY43 #info…
+(CVE-2022-0528): Exposure of Sensitive Information to an Unauthorized Actor in transloadit/uppy.https://t.co/PzAoNOI…
+NEW: 🇹🇭 Thailand's multi-billion dollar SCB becomes the world's second major bank to enter the Metaverse
+Last 24h:- US 🇺🇸 wants to lead crypto innovation- Dubai 🇦🇪 creates crypto legal framework- S. Korea 🇰🇷 elects a pro-cr…
+February 2022 data breach roundup | https://t.co/dZYByz8gAP | #mpi | free vendor risk report https://t.co/d8Tiu8YcQc #kyv ht…
+BREAKING: Biden Executive Order rumored to require the Environmental Protection Agency and Office of Science &amp; Technolo…
+By design, alcohol companies target people who purchase alcohol the most, even if they are at their most vulnerable or c…
+"The implications of (recent) state-level actions require medical &amp; public health professionals &amp; the public... to be vigilant about policies that threaten health and safety, deepen inequities, or target vulnerable groups." Nice points raised by @shwoolf.https://t.co/m9i7ZBVYze
+Free lab exercise on Metasploit pivoting: Vulnerable Server VIII. Learn how to perform pivoting in this lab, where you wi…
+He was found to have “systematically” abused his position to target vulnerable women, attending 999 calls and then essenti…
+For years, scholars and practitioners have advocated for “smart” sanctions calibrated to target wrongdoers and protect vulnerable populations from their collateral effects.This is the exact opposite. https://t.co/TzEVym4Mn3
+Using the integration of #Defender for #Cloud with Microsoft TVM can quickly help you to identify which Linux machines are vulnerable to Branch History Injection and Intra-mode Branch Target Injection / CVE-2022-0001, CVE-2022-0002. Quick demo below to show how 👇 https://t.co/VmPxTA9N0P
+@mr_mayank But you didn't work hard enough, never saw your single tweet on a trend that was being run during elections. It's easy to target a people who are vulnerable. And targetting people when they are weak is a trait of weak. That's more disgusting.
+If you preach to people when they're their most vulnerable you're preying. Giving food alongside preaching is preying, these p…
+Sanctions devastate the target countries most vulnerable people: the workers, the poor, the sick, the elderly, the disabl…
+Scammers can be convincing &amp; often target those who are most vulnerable, including senior citizens &amp; low-income communities. Le…
+⚠️ Multiple CVE-2018-13379 events detected ⚠️Source IP:185.7.214.223 (🇷🇺)Target:Fortinet VPN servers vulnerable to u…
+Never forget the target sanction boards photographed by a whistleblower either. Disabled and vulnerable people are expen…
+1/2Europe is worried: Which country will be #Russia's next target after #Ukraine?In addition to Ukraine's neighbor Mo…
+Tip: While exploring for XSS issues in target.the most common vulnerable parameter was sanitising the input, found more…
+I work with executives &amp; business owners to protect privacy, profit &amp; peace of mind. Need a consult? Pay What You Can in March https://t.co/MnEexIVrPoBeing stalked/harassed: https://t.co/L5tyGDRC0QJoin the email list: https://t.co/ZQPtgAqjLi
+@RachelTobac I only take on a few large clients a year, because my role is not pentesting, but human threat &amp; crisis management, part-time emotional support and a dose of tough love. You're spot on with what large orgs needoverall, we're in the systems and the C-Suite. Thank you for your work
+FYI please don't pay your side pieces, extra partners, or professional SWs with Venmo or PayPal, they are cracking down on the apps, and the transactions aren't private by default (Venmo). Yes, it is a safety &amp; privacy issue. #Safety
+Yay, I was awarded a $2,000 bounty on @Hacker0x01! https://t.co/JRIv8FiWeK #TogetherWeHitHarderApache Log4j2 JNDI Remote Cod…
+Just a reminder to update all your Linux kernels to fix the "dirty pipe" vulnerability. Updated versions are available for Debian…
+Cool paper about VPN ads! It's "obvious", but imo it's important to have proper data!"We find a number of potentially m…
+- Almost every smart phone is Unix based- (GNU)/Linux powers 39.2% of websites if operating system is known. (W3Techs)Most desktops can “do Linux”- macOS (*nix) 15.76%- WSL/WSL2: &lt;75.86%- GNU/Linux has a desktop market share of 2.86%∴ the world runs on free software lol https://t.co/tKdmM1HI6V
+An obscure, POSIX-compliant way to get the current Unix time, via https://t.co/RmVQEZgWHs    awk 'BEGIN {srand(); print srand()…
+Did I boast yet about @RealNateDimoff and his great interview with pro-Ukrainian hacktivists? Read it now on https://t.co/…
+To be clear, we and many others have been executing all sorts of creative ways of resisting Russian Imperialism from the…
+Several messages on Twitter and other platforms were sent by #hacktivists, mainly under the  #Anonymous banner, in order t…
+I was able to have an interview with a Ukrainian hacktivist group. They are fighting this war on all fronts. Things could get interesting. https://t.co/uRHzHnsIG8 https://t.co/gajDpewbo8
+#Anonymous I am often asked how can I helpPractitioners of nonviolent resistance have an entire arsenal of "nonviolent…
+A lot of infosec people are straight up bootlickers. No one cares what you think is and isn't okay during wartime ops. Yo…
+#Anonymous hacked into Russian state tv channels. They feature Ukrainian music 😁👏🇺🇦💙💛 Thank you guys  ,Huge respect from Ge…
+Pay attention to what your favorite infosec influencers find to be important right now
+Assistance over fame &amp; glory. Remember that this weekend. Be well.
+#Anonymous has always been against war, and against colonialism. We've seen how unfettered power decimates the weak, only…
+Since the USA technically cut off a diplomatic relationship with Russia, from a legal standpoint - can hacktivists do what…
+dr strange and the scarlet witch #MultiverseOfMadness https://t.co/tESTugBG6K
+I just want to add that additional photography is completely normal, even when we’re close to a release date. Please j…
+RUMOR: According to The Wrap, Thor: Love and Thunder will reportedly be “going back for additional photography in the…
+There's no conspiracy. Even though #TheFlash &amp; #Aquaman (both VFX heavy films), wrapped in October &amp; January, respective…
+I love it when Batman is red https://t.co/8liJ2cpIXk
+Lol #SpiderManNoWayHome full opening scene worth 3 minutes in 4k HD. The full movie may come before its digital release…
+Must have skills for surviving the 2020s.- private key management- DeFi- cold storage- encrypted messaging- exit plan…
+The US falls further behind the innovation curve as Switzerland becomes the new Switzerland https://t.co/dzAlP7y8dZ
+Concours d’infractions ; Non bis in idem ; Irresponsabilité pénale ; Trouble mental et discernement ; TIG ; Travail pénitentiaire ; Peines ; Avocat ; PLEX ; Transport routier ; Stupéfiants ; Abandon de famille… ne manquez pas le dernier numéro de @Dr_penal ! https://t.co/poPfGDQwtb
+#ResponsabilitéPénale - La responsabilité pénale en cas de trouble mental résultant d’une intoxication volontaire (L. n° 2022-52…
+I can't count how many hours were spent on this blog but you will walk away with insight into the #Conti #Ransomware gro…
+" @barco Clickshare" themed #Emotet via "Payment with a new https://t.co/1XStA3qH3g" https://t.co/KdNS7Mtsrv https://t.co/HA3Cl93dHw https://t.co/us6vHvv7IF
+💻@Lithuanian_MoD coordinated 🇱🇹🇳🇱🇵🇱🇪🇪🇷🇴🇭🇷 Cyber Rapid Response Team activated following a request from #Ukraine  Fir…
+DOOM II Co-Creator John Romero Releases New Level For Ukraine https://t.co/Gb0xwISll3
+DDoS attacks can happen to anyone, regardless of the size of their business or their location.If a DDoS attack hasn't imp…
+The colors of this Costa Rican Violaceous Trogon express my sentiments today. https://t.co/RvPNhnl34X
+They are also working on government-issued SSL certificates. This already happened in Kazakhstan in 2015: https://t.co/3jLtko…
+Wow 🤩 $matic @0xPolygon X leading software company Adobe https://t.co/75vR27YIPl
+NFT Market Cools as Trading on Ethereum and Solana Dips https://t.co/LEkmfGsIrc
+ICYMI this week: The @BoredApeYC  #NFT collection announced Tuesday that it donated $1 million to the country of Ukraine’…
+A $4 Billion Hedge Fund Is Shorting Tether's Stablecoin - Decrypt https://t.co/nQcOHkKxe9
+Thank you Decrypt! 🌺🐬💫@FlowerGirlsNFT #DolphinXFlowerGirls 🔥🔥🔥
+Dolphin Entertainment to Produce TV Shows, Games, Music With Flower Girls Ethereum NFTs ► https://t.co/K6nFJ5WXJS https:…
+The company behind Justin Bieber's "Believe" is planning to produce shows, games and music that incorporate Flower Girls…
+Digital fashion house @SpaceRunnersNFT will use the funds to develop its own metaverse, where it will trade NFT wearables…
+🇺🇦 Convert any token to ETH and donate to Ukraine in a single transaction on https://t.co/PW1CkLCtOnProud of the team a…
+The failure to properly deal with ransomware actors has poisoned a lot of lawmakers and regulators against cryptocurrencies…
+Questioner : I am an IT guy how can i #SaveSoil ? Sadhguru : Let him take a vow that he will eat only computer data not…
+[remote] Seowon SLR-120 Router - Remote Code Execution (Unauthenticated) https://t.co/xkteau76P7
+[local] McAfee(R) Safe Connect VPN - Unquoted Service Path Elevation Of Privilege https://t.co/1sBKQHjJw9
+[local] Audio Conversion Wizard v2.01 - Buffer Overflow https://t.co/CWai9hlhJj
+Escrow BitLocker recovery key to Configuration Manager DB during Task Sequence! Want it now.....#MEMCM #ConfigMgr TechPreview…
+sthen@ changed www/squid: remove squid-ntlm subpackage. it contains ext_wbinfo_group_acl, which is useless without samba…
+#365daysofkql day 156 - looking to disable NTLM but not sure where to start? Use Defender for Identity logs to help you out…
+lnkbomb: Malicious shortcut generator for collecting NTLM hashes https://t.co/hS1g0KLI5n https://t.co/rE2rmeg8fF
+Join us on 2022-04-28. @HannesLagler and @cj_berlin talk about Virtual WAN and NTLM cleanup: https://t.co/J2E4Hub5eQ https://t.co/wWTBfovEso
+Unscientific poll number 135.NTLM: have you done anything to disable it in your environments?No judgement, seriously.
+@SteveSyfuhs After realizing it takes too much time or maybe almost impossible in the short run, I tried to detect NTLM abus…
+Ligolo : Reverse Tunneling made easy for pentesters, by pentesters : https://t.co/jS0wde8q1o credits @sysdream https://t.c…
+InlineExecute-Assembly is a proof of concept Beacon Object File (BOF) that allows security professionals to perform in pr…
+#Vulhub Redis Lua Sandbox Escape &amp;&amp; RCE (CVE-2022-0543)Awesome vulnerability, without any binary technique, just one Redis…
+Decryption of #Dexguard strings in ghidra, I created 4 scripts for decrypting strings in this #android protection, these were…
+We are live, enjoy feeding dem crackalacked passwords to the hound! Did I mention that it got the ASCII seal of approva…
+#mimikatz forever! combination of (obfuscated) NetLoader + BetterSafetyKatz from @Flangvik (+some ssh tunneling for http inspe…
+Execute NT Authority/System process interactively on Active Windows Session just using pure PowerShell Code (No external t…
+Came across this great resource again, still a reference on payload encoding and obfuscation from @danielhbohannon ![PDF]…
+Russia now requires people to install government root CA certificate https://t.co/HG0ULGg0lW https://t.co/ZgBe1X2fAu
+Sometimes the decompiler introduces extra variables where there were none in the original code. Why does it happen and can y…
+12 ROP chains later - from CVE-2019-0567 crash POC to code execution.ASLR, DEP, &amp; CFG bypass + ACG bypass using (since-patche…
+Web session length changes https://t.co/Ub8I7ryq2G
+Top 12 Website to get Free Hosting:1⃣ GitHubPages. 2⃣ Firebase. 3⃣ Netlify. 4⃣ Vercel. 5⃣ Heroku. 6⃣ Microsoft A…
+You’ve heard of #VPN, but do you know what a DPN is? A #DPN is a Decentralized Private Network. Users are both a client…
+@Phil_RX Oui je me rappelle de toi quand tu me disais que "les Alts n'avaient aucun intérêt ! Seul le BTC ! Et encore !!!"…
+What a week! Thanks @EthereumDenver! Grateful to have met so many people, from potential collaborators to inspired #web3 deve…
+CERT-Ukraine has published a report on attacks carried out by the Buhtrap group against Ukrainian government entities.Att…
+With 5 million readers including Joe Biden, the dumbest newsletter in America is going to get vulnerable people killed ht…
+“Linger,” “Jailbreak,” “Teenage Kicks,” “Only Shallow,” etc https://t.co/7NnKQ2iU1M
+Bands: “We’ve rescheduled our shows til later so cases will go down as the omicron wave subsides”States: “Cool we’re lift…
+Hey there! I know a lot of you are eager to hear about Irena Genesis Metal Fury, so while waiting for a new update, he…
+What's the max you would pay for a homebrew-focused physical magazine delivered to your door?Poll down below 👇👇👇 https:/…
+@GilesPenfold Thanks for the space!I have a #Patreon where I release 5e homebrew for free every week!My patrons get th…
+Don't forget, if you like my stuff I'm also on Instagram, Ko-Fi, TicTok and YouTube!Links are found here: https://t.co/gXO3zHkpR4At the moment I'm trying to replace my chair. If you saw Homebrew Havoc you'll know it almost gave out on me mid-session! Any tips on Ko-Fi help😬
+I will continue retweet this once a year until we live in a world where such words are no longer necessary. All women are…
+If you're a hacker the wrong DEFCON is currently trending
+@YvesHanoulle The Agile Manifesto was published on a website. The DevOps Manifesto was published in a Docker image on Docker Hu…
+Quick Update:(1) We are having an in-person event this year. August 9th &amp; 10th.(2) We're working to get guidelines ironed…
+https://t.co/KeXIPEiLUX This weeks wrap-up boasts five modules, the return of the GSoC, and toasts to a new era of the SMB…
+cc @vendorexcuses, the D.E.N.N.I.S. system of vulnerability report handling:Deny VulnerabilityEngage PsychologyNon-Disc…
+Microsoft listed CVE-2022-24459 as already publicly disclosed. They didn't credit anyone though and I couldn't find anything similar anywhere. Anyone got a clue?
+This week's wrap up brought us by @SpaceySpacek includes a whooping 7 new modules with LPEs for both pkexec and win32k alon…
+GitLab fixed a user enumeration issue I found via their GraphQL API (CVE-2021-4191). I have a Metasploit pull request up and have a little disclosure blog here: https://t.co/SqW06E52Qw
+Threw together a @metasploit  module for Shielder's pfSense auth RCE vulnerability over the weekend (CVE-2021-41282). PCAP attached for you defender types.https://t.co/VvNXq4jOpq
+Global hacking group @YourAnonNews, which launched a "cyberwar" against #Russia, has announced the FSB (Federal Security…
+OPEN ACCESS ArticleTHE RAP STUDY, REPORT 5: REDISCOVERING MACULAR NEOVASCULARIZATION TYPE 3Multimodal Imaging of Fello…
+It's really fucking annoying when bad people suddenly decide to start supporting good tools.@BriarApp is a safe, audited de…
+Digital humanities and public history skills can help Ukraine.  Please attend my talk @ncph this Thursday to discuss how.…
+Today at 3PM EST the National Council on Public History is hosting "The Russian Invasion of Ukraine: How Can Public Historians Respond?" where Dr. Susan Smith-Peter will discuss Putin’s misuse of history as an attempt to justify his attack on Ukraine.https://t.co/nUcRNsMWfB
+"Our Climate Emergency" w/ @ncph continues today with David Glassberg's essay, "Practicing heritage justice: Helping your…
+@paige_roberts @ncph Someone PLEASE look at the pipeline between people enslaved in the 1770s and the same people appearing in town pauper auctions between 1790-1830!
+Postdoc opportunity in sunny Brisbane in the area of program synthesis as applied to runtime application self-protection…
+35 tons of medical supplies from Switzerland🇨🇭for emergency humanitarian aid just arrived in #Kyiv. The aid is urgentl…
+82 years ago, Soviet NKVD chief Lavrentiy Beria proposed to execute 22,000 Polish officers, policemen and intelligents…
+I'm hiring! If you're passionate about application security and vulnerability research and are looking to architect and d…
+Maintaining a robust security posture is critical in keeping up with modern threats and attacks. Jamie Riden, IOActive Security Consultant and CREST/CHECK Lead, explores vulnerabilities back to where the security need started: the perimeter.https://t.co/x8KPpydadQ https://t.co/M3hRHEvoEI
+U.S. State Governments Targeted by Chinese Hackers via Zero-Day in Agriculture Toolhttps://t.co/ZiYVrrooUP
+John Sheehy, IOActive, will be presenting with Ben Gardiner, NMFTA, Ransomware Tabletop Exercise, at ATA’s Technology &amp; Maintenance Council’s 2022 Annual Meeting - if you're planning on attending, contact us to set up a meeting! https://t.co/nSZTaoBRqH  https://t.co/S1FT0m0s7B https://t.co/UHU7Ul1QOy
+Nice talk, and the slides include many links to new, recent and no so-recent compiler plug-ins for security 💪 https://t.co/QK1PVLslMe
+@ariadneconill i still hate the fact that a small irc network i used to run a server on thought it wont be a good idea to link…
+@BenSjoberg @eevee It’s not really fair to say “this” used to be the biggest IRC network. Libera is still pretty big. Some people just stole the domain name from an IRC network and are hosting garbage on it now
+The release of Twisted package 22.2.0 is now available. 🥳An asynchronous networking framework written in Pythonhttps://t…
+Féminisme | Florence Montreynaud : "Il faut faire de la résistance face aux transactivistes, aux pro-prostitution et aux pro-voile." https://t.co/TjyTeJNZoW
+#proces13novembre Jour 88 : Ce quatre-vingt-huitième jour a été consacré à des témoins que l’on retrouve dans le volet des armes. Trois témoins pour deux auditions lunaires https://t.co/fGK5uY9nIn
+EXCLU | Demain dans Charlie, "Écoles hors contrat, les territoires perdus de la République". Notre enquête à partir de 200 rapports d'inspection obtenus par @LaiciteCnal
+(2/5)Common JWT vulnerabilities:1: Failing to verify the signatureFor example, let’ say we have the following valid token t…
+Most common causes of a data breach: lack of visibility, weak and stolen passwords, application vulnerabilities, poor permiss…
+(2/5)Common JWT vulnerabilities:1: Failing to verify the signatureFor example, let’ say we have the following valid token that is never actually verified:{  "alg": "HS256",  "typ": "JWT"}.{  "name": "John",  "user_name": "john.doe",  "is_admin": false}#bugbountytips https://t.co/XHtZfiEHIm
+To protect yourself from #ransomware,  you need to understand your vulnerabilities. Common attack vectors include:📧Phishing…
+Most AWS deployments are breached by a common set of vulnerabilities. Accessible with an annual subscription, our on-demand bootcamp teaches you to secure widely-used AWS components so you can be a job-ready Cloud Security practitioner: https://t.co/FTwhbGm0au #aws #cloud https://t.co/vdx04QUqW4
+@konrad_it Not very common of course, also privately held, &amp; extremely valuable class of 0day. Not for commoners for sure. Yo…
+Vulnérabilités les plus exploitées en 2020 dans le cadre des incidents traités par l’ANSSI et la CISA : https://t.co/5dF…
+If businesses plan to manage #bigdata in the #cloud, they need to be aware of the common vulnerabilities of cloud technol…
+⏳ In 3 hours...Join @liran_tal for a #JavaScript Stranger Danger live-hacking session, where he'll show you common threats,…
+Most cyber attacks are automated and aim to exploit common vulnerabilities rather than specific persons, websites or organis…
+Join us for #MicroFocusUniverse and discover how data center automation helps you prioritize and mitigate common vulnerabil…
+Sebastian Salla presenting to #csides on Abusing Public Infrastructure to BYO VirusTotal for Email https://t.co/ZtnHoIV4fX
+Don’t forget #CSides tonight at the Canberra Rex at 6pm https://t.co/0YnT4K8aM3
+ASD proudly supporting #womenintech. Learn more about @infosectcbr's initiative to support #womenincyber.
+We're looking for folks passionate about quality code auditing, hacking, and R&amp;D to join our team. Lots of perks &amp; interesting…
+InfoSect’s Linux Heap Exploitation training taught by @silviocesare is scheduled for next month https://t.co/uHdzl3rNqN
+In celebration of #IWD2022, InfoSect is pleased to announce subsidised technical training for women. Huge thank you to @AS…
+At @Cloudflare, we understand the Russian cyber attack capabilities and stand prepared to defend our clients against any cy…
+C'est la CNIL qui va avoir du travail vu son programme de contrôle...Nearly 70% of tested ServiceNow instances leaking…
+Voilà exactement pourquoi le respect de la vie privée n’avance pas, faute d’action forte de la @CNIL…Notre boulot est vu comm…
+Tiens.. le Groupe #Ransomware #Lapsus$ (Nvidia, Samsung..) recrute désormais des insiders pour obtenir des accès directs…
+After a brief Christmas break, ransomware groups appear to be back to their old ways—the number of victims posted to e…
+Hackers fork open-source reverse tunneling tool for persistence https://t.co/fMcZDRLi5k
+Check Point | Leaks of Conti Ransomware Group Paint Picture of a Surprisingly Normal Tech Start-Up… Sort Of https://t.…
+Short write-up, covering AppLocker bypass by hash caching misuse: https://t.co/0uxWRmRIAS
+CISA is warning of the Linux Dirty Pipe privilege elevation vulnerability."CISA encourages users and administrators…
+Is this malware or legitimate software that has the same features and functions as malware? https://t.co/jIltsBrunb https:/…
+Credentials Leaks on VirusTotal, (Thu, Mar 10th) https://t.co/c5mwU8L1Z2
+Write-up on the Colibri Loader, a malware dropper sold on the underground for $150/week or $400/monthhttps://t.co/zzBba1m…
+There are not so many resources that explain HOW and WHEN you should use a given payload.This is specially true for XSS w…
+XSS is not about popups.XSS is not even about "cross-site" scripting.XSS is just about controlling user actions.There…
+@walidhossain010 Only by exploiting another vulnerability like debug pages that expose those cookies.
+EnumVolcano is a creation of our follower! It's an open source Bash script that is used to perform automated enumeration for pr…
+Learn how to run commands in parallel in a bash shell script running under Linux, macOS, *BSD or Unix-like operating system.…
+Bash Script: Flags Usage with Arguments Exampleshttps://t.co/xqnj8MKf7U
+made a small bash script to interact with the internetdb api @shodanhq has... testing now for any rate limiting but thi…
+Google: Anthos Service Mesh is the world's most powerful &amp; secure way to monitor &amp; manage all  your k8s clusters, able to control every aspect of how your apps communicate to each other.Also Google: Install ASM by downloading this 5726 line bash script &amp; run it as root.
+Bash script: Pause Script Before pProceedinghttps://t.co/FojeGrpV7H
+#BioIT #BioInformatics Bash Script - taking too long to execute homology analyze - Test https://t.co/qOsDtCfzrN
+#100DaysOfHacking Day 6.this guy came in abit late. wrote a BASH script to read a secret input and iterate that string valu…
+We've had multiple reports from MacOS users about issues with the LinkedDataHub setup script, specifically bash and openss…
+Is LinkedIn a professional goldmine or a business security threat? #SocialEngineering attacks may make it both. @Securewor…
+@momtalksstock @Burim8203 It’s funny how options were demonized after the most glorious gamma squeeze 😂 people need to wake up to #socialengineering
+Learn how to perform impactful recon on targets, create &amp; track phishing campaigns, &amp; develop media payloads that effect…
+Bounty Thursday’s live tomorrow feat @Jhaddix where you can call in and ask your bug bounty related questions! hope to see…
+TOKEN BITCOIN BUY TANTRI KOTAK LIMITED TIME OFFER PERCENT OFF FOR THE BOTTLE GHEE SKULLCAP SIGH...OH NETSCAPE KRUD SHIRYO…
+@DANKBOTSNFT on Netscape 3.04! https://t.co/C9GTpyvWKr
+In Part II of this series on the leaked chats from the Conti ransomware gang, we explore what it's like to work for Conti,…
+Guerre en Ukraine : impact des cyberattaques et conseils aux RSSI https://t.co/FChw1vM4Ff
+Quelqu’un veut faire du covoiturage pour le concert de Laylow à Paris demain ? (Je fais l’aller-retour direct)
+Webinaire : Quelles mesures cyber pour protéger vos actifs numériques ?🗓️ RDV Mardi 15/03 à 15h avec Anthony Hubbard RSSI #Afn…
+First impression of Garuda Linux (Arch Based): It’s really fun, easy install, and stunning visuals. This is the Garuda KDE Dr460nized edition. Lots of options - GNOME, XFCE, &amp; more.  As a big fan of Arch based distros, like Manjaro, I’m looking forward to testing it more! https://t.co/if1R13n4xb
+The Tor network is currently the only way for the Russian people to get to the truth. Putin is closing down this netwo…
+New: in what might become one of the most significant Tor onion services ever launched, Twitter now has a version on Tor. P…
+#Twitter is now accessible over the #Tor network, allowing users in countries that banned it to continue accessing the…
+At TAIKAI, our goal is to connect companies with talent.Through hackathons, hiring challenges and bounties, we’re able…
+Miners update- gminer-v2.86 (Tor Network support, to enable pass --tor, also you can specify exit node via --tor_exit…
+Twitter is now on Tor network https://t.co/KdpwRQFdrx but you still need mobile phone verification or they will lock you down…
+"The BBC has made its international news website available via the Tor network, in a bid to thwart censorship attempts. The Tor…
+@getumbrel helping the tor network https://t.co/dtFSUKk2Tn
+BBC is available on the Tor network. https://t.co/rAa6rN3a5A
+someone: makes a hackintosh or a virtual machine with macOS installedapple: https://t.co/2nN3Ld49I7
+How to Install macOS Big Sur &amp; Monterey on #Hackintosh PC with Opencore – Easy Way! – Digimanx https://t.co/BviGjdg5QB
+I wouldn't be surprised if someone will soon sideload Linux or MacOS and make the new #StudioDisplay  into a full fledged Desktop or Hackintosh.Infact waiting for that day.#AppleEvent https://t.co/U1pSqnmNsy
+Some Cyber Security Certifications for beginners:1. CompTIA network+2. CompTIA security+3. CompTIA CySA4. Cisco CC…
+La vulnérabilité "Dirty Pipe" (CVE-2022-0847) permet à un utilisateur sans privilèges d'obtenir des privilèges root sur la…
+Rapport du GIEC : changer, ou disparaître➡ https://t.co/KqkJgTaj75C’est l’un des rapports scientifiques les plus impo…
+C'est Vendredi et c'est l'heure d'un nouveau tutoriel #OSINT de la part de @PredictaLabOff!Cette semaine on vous détaille c…
+Dans "Guerre de l'info : au coeur de la machine russe" il est dit que @MLP_officiel aurait secrètement rencontré Vladi…
+detecting credentials dumping from the registry remotely is as important as detecting other credaccess vectors like lsass…
+speaking of lsass credacces (more than 6 available detections using sysmon and windows logs) https://t.co/KryLkzNEaOht…
+What have we learnt from 2021 cyber attacks ? What was the most frequently used malware , and tools. I can bet upon #coba…
+Heads up everyone, the @RumbleDiscovery research team just posted a rapid response blog about the Zabbix  CVEs found b…
+Arch Linux is a really good wiki that also happens to have a Linux distribution.
+BTW, Arch Linux project completes 20 years today 👏🐧 🥳 I wonder if someone has been running it for all the 20 years? https:/…
+Arch Linux turned 20 years old today. It was released on 11/March/2002https://t.co/d4oTRlJcN5Happy birthday to the Arch L…
+What Linux distro do you use? I'm using arch, btw :D
+@HackingLZ This is getting really specific, but I've escalated to local admin on a workstation, then created an issue that r…
+@MalwareTechBlog You read about that guy who was left in an elevator for days right
+Does anyone else have like an airlock mantrap style home security setup where you enter the foyer with a code and then there's a second door with a different code
+📱 Getting Started w/ iOS Penetration Testing* iOS architecture overview* Sample vulnerable appsTesting methodology*…
+Updated: Hestia 1.6.2 [Tweaks]Global Jailbreak Detection BypassRepository: Havoc #jailbreakhttps://t.co/EhproSVGEs…
+How to Bypass Jailbreak Detection On iOS Applications and Games (iOS 11 – iOS 14)#MobileSecurity #iOSSecurity by @iDe…
+Erasing all content and settings is BLOCKED because of how I tampered with the file system on iOS 14 meaning I can’t get rid of my Jailbreak detection on 15.1 😂 https://t.co/jZo0xmPn6B
+Huh! Who knew there was a referencing format for .nfo files 😅Enjoying reading @martin_eve's look at the Warez Scene.https://t…
+I did not have "Russia goes full 1980s Romanian Warez scene" on my 2022 bingo card.https://t.co/FZFsFeJ7T9
+Born out of the BBS movement these 80’s attempts to stop the download of warez did result in a few Sysops losing their gear…
+Classic warez for you to wearhttps://t.co/SsFkgjNYCb https://t.co/5ydJ8c8yfk
+Massive thank you to @IBRice101  for their talk on the warez scene, Incredibly informative and really interesting. Plus…
+Hi folks! If you aren't able to make it to my @AbertayHackers talk tonight but you're still interested in the Warez scene I'…
+there needs to be another scifi movie that ruins an entire generation of white dudes. i wanna see an overbudget flashy hamfisted Online Allegory called like "Warez Waldo" &amp; have to deal with a crew of 35 y/o sysadmin Debian users roleplaying god delusions behind me the whole time
+@silascutler FWIW the closest thing we have now to an official explanation is that there was a misconfiguration somewhere in t…
+Our CTO @ReuvenHarrison said cloud security is like a multiverse—where one misconfiguration can branch off into an infinite…
+Major Security Misconfiguration Impacting ServiceNow Instances Discovered https://t.co/sja00bNucj @AppOmniSecurity #AI #AINe…
+login flow misconfiguration 🤔Create an account with a Google email.Then login through Google to that same account and y…
+login flow misconfiguration 🤔Create an account with a Google email.Then login through Google to that same account and you get logged in to that same account. There seems to be a misconfigurstion here 🤔#BugBounty
+Hacking AWS Cognito Misconfiguration to Zero Click Account Takeover | by Preetham Bomma | Feb, 2022 | InfoSec Write-ups h…
+@ContaboCom Why are some of your services down? We can access only 50% of our VPS cannot be reached. No emails, no notificati…
+@JurgenPfeffer Hi! Thanks for pointing this out. Your account is safe: this was a result of a misconfiguration on our end tha…
+When I asked for fud I didn’t knew was going to be this hard 🤣🤣🤣 ok stop it, we all gonna have a chance to mint
+To be honest I aped something with this story before, the rest is history.I think $100M MC is absolutely FUD for $SHU…
+$LUNA top 5$RUNE top 10And this might even be FUD#RUNAtics
+Tech world's Ukraine response mixes evacuation efforts, ad bans, free phones, infosec FUD https://t.co/2E83WWCzmJ https:…
+Scotland's disgustingly crass govt are drawing parallels with Ukraine to demand independence. This fud helped fund Putin's t…
+Shout out to all the people who #Support #Saitama. All the loyal hodl who never FUD and remain true to the project. We w…
+@marshallinu_ fundamentals have not changed. $MRI is strong and will overcome the fud. Here is where you accumulate. I…
+Damn crypto so boring rn nobody has any good fud anymore We really so bored we running back tether fud https://t.co/…
+They’ve tried everything to hold XRP back. FUD, crypto media lies, lawsuits , SEC enforcement, traditional media lies…
+#Bitcoin Energy FUD isn't about environmentalism, it's a money-making scheme where academia is leveraged to stoke outrage and…
+#HermeticWizard is signed using the same code-signing certificate as #HermeticWiper, issued to Hermetica Digital Ltd. It The worm scans local IP ranges and propagates via WMI and SMB. A short list of credentials is hardcoded in the binary. 2/4 https://t.co/2MG0CCAwVz
+Hacking CAN Traffic Part 2: CAN Packet Fuzzing https://t.co/MzrCgVNZ2c
+@Osinttechnical Here's a video showing how the Baltic region had no GPS interference issues for several weeks, then it went wild starting March 4. https://t.co/TUt1G57sdG
+@Osinttechnical I don't know why now or why there, but for the past 3 days there appears to be significant GPS interference around Kaliningrad, affecting aircraft over Poland, Lithuania, Latvia, and the Baltic Sea. https://t.co/Xy0gW2txGO
+Continuing to experiment with wildfire progression animated maps. Now adding labels for the 3 distinct fires that all conve…
+.@ContiLeaks has released the source code to Conti ransomware (omitting the locker functionality). We have archived it.…
+Blog on Karakult, an extortion group who steal data via VPN devices (but don’t deploy ransomware) for extortion. MFA you…
+Old Christian ladies like:You know why BTS is Satanic? Because B is the 2nd letter of the Alphanet, 2 x 3 (the divine…
+🚨We have announcements!🚨📝New white paper updates (v1.03)🔥The Webblen Network Alphanet is LIVERead the whole updat…
+Don't forget to swap your $ZNN to #Alphanet.Swap Decay kicks in 12 days. #NoM $ZNN $QSR
+For more Alpha-1 related health and wellness information visit https://t.co/JI3BnLI7fq or the Subscriber Portal to access our…
+Happy International Women's Day, Alphas! Thank you to all of the wonderful women who are a part of the AlphaNet family and al…
+Head to the Subscriber Portal to read our Story of the Week - "Getting Under Your Skin: Alpha-1-related Panniculitis" Leave a…
+#AlphanetTodayMore than 400k txs settled on Alphanet so far.0 tx fees.#NoM $ZNN $QSR $ZTS https://t.co/9jcS70wbiF
+The mentality 🤓 should change 😤from "wen whitepaper"📝"wen alphanet"🌀"wen code"👨🏻‍💻"wen bridge"🌉"wen *everything*"💀 to "How c…
+Over 250k $wZNN are still missing on #Alphanet rewards.Visit https://t.co/0LLSLL5cdR and swap your $wZNN to $ZNN today…
+Rare Disease Day offers us an opportunity to spread awareness and share resources with all those who are affected by rare dis…
+The regex crate is vulnerable to denial of service attacks when parsing untrusted regexes (CVE-2022-24713). We released versi…
+@BigDaddyLiberty Good distinction, let's not be fooled by the factions trying to make this about the president. The ANC…
+Merci aux marraines du hackathon #RevEllEast pour leur soutien enthousiaste 😊- pour la journée, Christine de @VIVEST-…
+🎬Top départ du 1er hackathon #RevEllEast dédié à l'entreprenariat féminin en @regiongrandest , en direct depuis Reims,…
+🔴 Le cyclone #Emnati se rapproche de #LaRéunion. L’alerte rouge cyclonique est en cours! Suivez les consignes du @Prefet974 ⤵️
+The Russian UAV was reportedly carrying one kilogram of explosive, tied to metal balls for making a shrapnel bombKyiv#U…
+Est-ce que Zelensky nous explique sans le savoir ce qu'est qu'être inspirant, être un leader, en délégant le metier de la…
+At least 750 civilians were killed or executed in Ethiopia’s Amhara and Afar regions in the second half of 2021, the country…
+#UkraineWar 🇺🇦  Marioupol, mourir lentement à l’intérieur de la ville ou rapidement « en traversant le front » – par @LoGesl…
+@the__dude98 I'm unclear how much I'd continue posting public content through a VPN through profiles strongly identified with me, if explicitly banned by local government during a war. Especially if it's just cats.
+More good security engineering designs to study and learn from:
+I would pay $500+ one-time for a global setting which followed me everywhere of "never ask me for survey follow ups after any transaction; if I want to give feedback I'll search for a form".
+Ok, I'm actually going to build this Turing Test now. It's a game we'll call "Russian Media or Western Idiot"Leave your f…
+Trans people always talking about passing. Bitch why don't you go PASS a TURING TEST for once in your life
+"Can you pass the Turing test?""From a legal standpoint, no.""Do you want to be human?""Would you?"
+New: Belarus hacktivist group  @cpartisans staged a new cyberattack on the country's train network today in effort to dis…
+NULL Pointer Dereference in https://t.co/8r53U4hkiC (CVE-2022-0712) reported by cnitlrt - Patch: https://t.co/Vl08TjrV…
+@WalletConnect phishing kit that steals the wallet protection passphrase, sends it by email and redirect to walletTconne…
+By the way, @hurricanelabs has a great collection of CTF #infosec blog posts: - https://t.co/DDwydbD1ol- https://t.co…
+Join our panelists tomorrow for a live discussion about one of the cool and creative ways we're helping aspiring pentesters gain real-world experience AND about the data and resources available for #Splunk and #infosec industry pros–like you–too! :)https://t.co/WMsXRIXnsP https://t.co/KYYkAjvRNT
+The countdown is on! Register now! https://t.co/g4NcpEryFi EVENT: Pentesting, CPTC, &amp; Splunk: Learning with the Infosec CommunityLearn how the data we collect from the Collegiate Penetration Testing Competition drives real-world industry success–and how you can use it too! https://t.co/dL6NAVvBTT
+Starting a threat intelligence program? Here’s what you need to know: https://t.co/9CTNdsWBlx #cybersecurity #infosec…
+6 HOT Tips for Wireless Security [blog post] – https://t.co/EQbKx8aiOb #cybersecurity #infosecStrategy areas to keep in mind: 1.) Guest vs. Corporate Access2.) Identify Users3.) Offensive Testing4.) Alerting &amp; Monitoring5.) IoT Networks6.) Policies &amp; Training https://t.co/zZ5C1IqvUV
+When teaching practice-oriented software reverse engineering and protection to @hes_so  MSE students, I ask them to solve many different crackmes. Sometimes, I receive an email that makes my day. https://t.co/cpmM5EFKcI
+Ok, I’ll call bs on this. None of the @bridgefy app’s vulnerabilities were “unavoidable”. They all resulted from being clueles…
+It's the season for defining new elliptic curves! This one is chosen for a specific compute model where operations modulo…
+Correction: The data appears to have been leaked by a Ukrainian security researcher who had access to the backend of C…
+"Reverse Engineering undocumented structures for windows 10" - https://t.co/KlrRlnbNmtreally interesting one!
+what are the fields of cs — Networking , Web development , Security , Artificial Intelligence , Software engineering and mu…
+Don't fall for social engineering ploys like this to give criminals clues to your passwords and answers to your securit…
+Join us virtually or in-person for the San Diego Cyber Security Summit, March 31 to hear about Securing the Cloud from Step…
+Remote Principal Data Engineer, Trust &amp; Security with competitive compensationCheck out this role working with Data eng…
+Are you interested in learning these career paths and acquiring certification?•Cloud Computing (AWS)•Project Management…
+💡 Engineering/SSH Pro-Tip:If you create an SSH key, use the Ed25519 algorithm rather than the RSA one.This is the rec…
+MPS #Cyberchoices Cyber explorer’s aims teach 11 - 14yr old's essential digital skills for future roles in cyber security a…
+From #infosec perspective — every hour now brings x10 experience to my team.We do things we've previously only read about…
+Code Verify: An open source browser extension for verifying code authenticity on the web https://t.co/cH4O2M1qNx
+When pentesting always keep a dirty c0w exploit handy, can be a life saver 😊 #Pentesting #exploits
+Ghidra is 3 years old today. Very cool, thanks @NSAGov. https://t.co/rWFTkzxyve
+Need to understand windows or other OS binaries security? Our File Threat Intelligence Platform to the rescue: vulnerabilities, certificates, security hardening, file decomposition, code quality &amp; more. Ask demo info@vulnex.com  #CyberSecurity  #ThreatIntelligence @BinSecSweeper https://t.co/Vvr72yN06G
+Need to understand windows or other OS binaries security? Our File Threat Intelligence Platform to the rescue: vulnerabi…
+We published a write-up on the recent "Dirty Pipe" Linux Kernel Privilege Escalation vulnerability (CVE-2022-0847). Blog i…
+With CVE-2022-0847 representing a flaw in how Linux treats pipe buffer flags, Vulcan Cyber’s @KeizmanOrtal reveals in new…
+Are you looking for a lab to cover the #DirtyPipe Vulnerability? Don't worry. You can find it and the #Log4j Vulnerability (Log4Sh…
+A recently fixed #Linux vulnerability called ‘Dirty Pipe’ gives non-privileged users root access. The bug has been rep…
+New Linux Kernel Vulnerability: Escaping Containers by Abusing Cgroups https://t.co/BzdYbyGRyS @AquaSecTeam
+Linux “Dirty Pipe” vulnerability gives unprivileged users root access https://t.co/tqBzOi01or #Exploitsandvulnerabilities #And…
+A vulnerability in the Linux kernel—“Dirty Pipe”—allows an unprivileged user to overwrite data in read-only files owned b…
+Another day, another vulnerability. Learn how to exploit and detect #DirtyPipe in your #Linux systems here 👉 https://t.co/l…
+High severity Dirty Pipe privilege escalation vulnerability CVE-2022-0847 found in Linux kernel https://t.co/0yNf0E3Z09…
+Linux vulnerability allowed root-level access https://t.co/GGZTWtBsKE #cybersecurity #infosec https://t.co/hWW9xfGlZn
+Today I learned CrowdStrike's ML AV component looks at total entropy in an executable and will block it if the entropy…
+Massive Meris Botnet Embeds Ransomware Notes From REvil https://t.co/acOzMdYfA7 #news
+"Hey webop_geeks, you_are_already_dead, a note claiming to be left by the REvil #ransomware gang declared, embedded into…
+Notes threatening to tank targeted companies’ stock price were embedded into the DDoS ransomware attacks as a string_of_text directed to CEOs and webops_geeks in the URL. https://t.co/n3v4g2LDKX
+#DDoS attack creates terabytes of traffic from a single packet. The #cyberattack exploits the CVE-2022-26143 flaw in a…
+Brisbane's Global Secure Layer uncovers zero day exploit affecting Mitel MiCollab SIP appliances: “TP240PhoneHome” may give att…
+A zero-day #vulnerability has been disclosed in Mitel MiCollab which, if exploited, can lead to UDP amplification attacks.…
+CVE-2022-26143 The TP-240 (aka tp240dvr) component in Mitel MiCollab before 9.4 SP1 FP1 and MiVoice Business Express through 8.…
+Alarm raised over bug that opens the door to colossal DDoS attacks - https://t.co/toB90ddusDCybersecurity researchers have…
+A zero-day vulnerability in the Mitel MiCollab business phone system has recently been discovered (CVE-2022-26143), called…
+#CyberAlerte | Mitel - produits MiCollab et MiVoice Business ExpressPlusieurs sources ont observé des activités d’exp…
+#CyberAlert | Mitel - MiCollab and MiVoice Business Express products Multiple sources have observed exploitation acti…
+Ex-girlfriend doused ex-boyfriend &amp; in petrol &amp; set him alight.Sarah Mudge (mother of four) broke into the house, doused…
+#trusttvnews An Australian lady, Sarah Mudge, has set her Nigerian ex-lover, Stanley Obi, and his girlfriend ablaze while…
+Logan DV fire: Stanley Obi dies after horror attack by ex-girlfriend Sarah Mudge https://t.co/PJnzhBIz4C via @couriermail
+New Beith fire: Sarah Mudge made murder threats online before setting Stanley Obi on firehttps://t.co/5m9fveGypN
+Sarah Mudge boasted about homeschooling in a parenting blog before setting ex on fire in New Bleith - Daily Mail || #ParentingNews Courtesy of Rick Kirkham The Only In Home Tutor On Oahu Specializing in ADHD With ADHD Subscribe by Following on Twitter… https://t.co/ub9jsWcqyl
+Here is our lineup for game two1) Mudge2) Leonard 3) Harding 4) Edenfield 5) Flaherty6) Sherrill7) Kerr8) LoPres…
+Mudge leads off game 2️⃣ with a single! #OneTribe https://t.co/1Ai2q2yyeS
+More evidence suggesting Sarah Mudge set fire to her ex-partner, Stanley Obi,   and his girlfriend,  throwing petrol ar…
+An Australian lady, Sarah Mudge, has set her Nigerian ex lover, Stanley Obi and his girlfriend ablaze while the two were a…
+Hexadecimal conversions for year 9. @CreativeStannes #bestfromeveryone https://t.co/BjdRXyl1b2
+The Alphabet people have gone to hexadecimal 🤦‍♂️ https://t.co/GkhXl4egai
+Had to convert mine to hexadecimal so that it would fit in notepad.
+Russian units entering Ukraine from Crimea https://t.co/NJWG2NCW7Y
+Twitter seems to be systematically locking accounts reporting on Ukraine. @TheOsintBunker podcast cohost Kyle Glen’s ac…
+The invasion of Ukraine is a paradigm shift on a level not seen since 9/11. The West has woken up and must ensure the global…
+#BREAKING: Major clashes have erupted inside Pakistan Parliament lodges after security forces enter to remove Ansar ul I…
+Alain Chouet (ex-DGSE) : «Il existe sur le territoire français 1514 quartiers de non-droit interdits d’accès aux forces de…
+Selon l’ex-patron du renseignement à la DGSE - Direction Générale de la Sécurité Extérieure, les sanctions infligées à…
+Intéressante analyse de l'ancien directeur de la DGSE.https://t.co/kyclXSBtf8
+On met un philosophe de plateaux télé aux AE.On met un diplomate asservi au mondialiste à la tête de la DGSE.On met un pro-Otan discipliné à la tête des armées.On manipule les médias et on censure tout ce qui dit autre chose que la doxa atlantiste https://t.co/v1PWzFOPFa
+🔴 Pour Alain #Juillet, l’ex-directeur du renseignement au service d’espionnage français #DGSE, les sanctions infligées…
+ENTRETIEN. Selon l’ex-patron du renseignement à la DGSE, les sanctions infligées à la Russie sont « extrêmement dures » et pou…
+L’Europe s’est « laissé chloroformer », le président russe rêve d’empire… L’ex-patron de la DGSE Bernard Bajolet analys…
+Antoine Izambard a enquêté sur les agents de la DGSE qui ont collaboré avec des services étrangers et nous a raconté que…
+A decentralized, digital currency that can’t be seized, censored, or debased by anyone may be valuable to a portion of the…
+The vulnerability of traditional financial systems (including gold) to Denial-of-Service attacks is really starting to sh…
+Connecticut supports Detransitioners.  We are holding the medical to account for the harm exacted on this group. DNC, HRC a…
+-Who was the DNC pipe-bomber? -Who removed the panic buttons from the Capitol on J6? -Why did Eric Trump and Lara Trump…
+One of the talking points of the far left is to call anyone who condemns the slaughter of Ukrainian people a neocon. @DNC…
+I had the honor of speaking at the DNC Poverty Caucus yesterday on behalf of the millions of low-wage and barely middle cla…
+Honored to meet @SecondGentleman at the DNC Winter meeting. https://t.co/UY5X6lSR0q
+Honored to be re-elected to DNC Interfaith Council yesterday. 29% of Americans are religiously unaffiliated—effective inte…
+Biden and Harris Tag Team With Unbelievable Remarks at DNC Meeting  https://t.co/7xNv2CcSx8
+Even after a late return home from her successful trip to Poland and Romania VP Harris delivered a strong speech to DNC m…
+Vulnerability (CVE-2022-26503) in Veeam Agent for Microsoft Windows allows local system privilege escalation. Install the newes…
+Multiple vulnerabilities (CVE-2022-26500, CVE-2022-26501) in Veeam Backup &amp; Replication allow executing malicious code remotely…
+(CVE-2022-0880): Cross-site Scripting (XSS) - Stored in star7th/showdoc.https://t.co/NH6JiL9PKmDisclosed by https:…
+Cross-site Scripting (XSS) - Stored in https://t.co/eOl0RJ5crC (CVE-2022-0937) reported by @tomorrowisnew_ - Patch: ht…
+Dirty Pipe - CVE-2022-0847 - Linux Privilege Escalation Via Read-Only File Overwrites &amp; SUID Hijackinghttps://t.co/6MqS6…
+New Variant of Spectre Attack Bypasses Intel and Arm Hardware Mitigations -https://t.co/A5K5YjdDWb (CVE-2022-0001 &amp; CVE-2…
+My blog post with details about the CVE I discovered just got published here: https://t.co/aol36FrvCa
+CVE-2022-23960 Certain Arm Cortex and Neoverse processors through 2022-03-08 do not properly restrict cache speculation, aka Spectre-BHB. An attacker can leverage the shared branch history in the Branch History Buffer (BHB) to influence mispredict... https://t.co/1hQ66g8cG7
+CVE-2022-26967GPAC 2.0 allows a heap-based buffer overflow in gf_base64_encode. It can be triggered via MP4Box.https:/…
+#Java  #Automated | Spring Cloud Gateway CVE reports published https://t.co/V3Dr6A97U9
+Late to the party, however it turns out that fiddling with CVE-2022-0847 aka DirtyPipe can be pretty fun 😁 https://t.co/…
+CVE-2022-0930 shall henceforth be named Retracted Havanesehttps://t.co/v6R0Kw8FnF
+👈🏻👇🏻 list of crimes mass murder (including child murder by proxy) theft conspiracy pollution kidnapping terrorism jailbreaki…
+Ukraine's Ukrtelecom goes down nationwide for 40m, ISP Triolan outage caused by cyber attack - DCD https://t.co/MxbRgdhq0a
+The hacking collective #Anonymous hacked into the Russian streaming services Wink and Ivi (like Netflix) and live TV chan…
+BREAKING ALERT: NVIDIA SYSTEMS COMPLETELY COMPROMISED DUE TO RUSSIAN CYBERATTACK #UkraineInvasion
+[𝐁𝐲𝐩𝐚𝐬𝐬 𝟔] - 𝐂𝐒𝐑𝐅/𝐂𝐥𝐢𝐜𝐤𝐣𝐚𝐜𝐤𝐢𝐧𝐠Check if there is a CSRF on enabling and Disabling 2FA or a Clickjacking vulnerability to dis…
+-Highest earning bug class: IDOR (22%)-Highest single bounty: 50,150 USD (SQLi)-Lowest single bounty: 7 USD (XSS)-Bug cl…
+-Highest earning bug class: IDOR (22%)-Highest single bounty: 50,150 USD (SQLi)-Lowest single bounty: 7 USD (XSS)-Bug class with most reports: IDOR (130 bugs)-Bug class with least reports: Clickjacking (2 bugs)-Bug class with most criticals: Code Injections (19 bugs)(3/4)
+The FUD against $FTM has only built more conviction for Fantom holders, with support in numbers presented in a coherent man…
+Data and AI are keys to digital transformation – how can you ensure their integrity? | VentureBeat https://t.co/Fc5MitxVfQ
+Conti Leaks is bananas.The ransomware gang needed to pay $10k to their lawyer to represent Alla Witte, who was arrest…
+Angelie just closed 3 Business Ultimate with P360, 2 BYOD Tablets and 2 BTS Watches! #RightfullyRoseville #MidwestMichiganM…
+If your BYOD (Bring Your Own Device) users have admin access to company resources, revoke it before you click this link ⤵https:/…
+https://t.co/uNfz8BCCjT Does BYOD Fit Into a Zero Trust Security Strategy? #cybersecurity
+You want some fresh and live #Formbook C&amp;Cs? Here you go: www.3cnew[.com/ubqk/.thesmokecircle[.com/o0i7/.ycjtwy[.net/ld23/.68132[.online/vfm2/.4127raymondav[.info/dsaq/.debriefenmif[.club/an52/.ecosystem[.team/h60c/.switchyardcharlotte[.com/yig8/
+Some Amazon and banking related #phishing domains hosted at 167.160.188[.199 (Tarzana Quadranet Enterprises Llc)aplus-card[.comufg-bank[.comsmbc-vpass[.jpsmbc-bank[.comufj-bank[.comqmazone[.comamqzonn[.comamaznshop[.comamazonshoq[.comamazon-safity[.com
+This is some nice research and write up. Container Escape to Shadow Admin: GKE Autopilot Vulnerabilities, https://t.co/nFHGEN9WQa
+I share a Yara rule of #HermeticWiper that hit Ukraine yesterdayhttps://t.co/Ul0OcDowjs
+🛡ICYMI: Biden administration goes #ShieldsUp to protect U.S. from Russian cyber attack https://t.co/fqnfYJU4ly
+Check out the all new TPF Safe Cracker token that will debut at #TPF2022! These were going to debut in 2020, but well... you…
+Dear Infosec community, which solution do you use for your CSIRT or SOC ticket handling?OTRS isn't really an option anymore. https://t.co/XW2FdUYosU
+Je cherche un responsable IT pour rejoindre une scaleops sur Lyon. C'est une création de poste, on n'avait personne sur ces suj…
+I am convinced that its only a matter of time before the digital landscape starts to dramatically shift towards an isolated inter(ra*)net for Russia. Stories like this are reinforcing my suspicion. I will keep reevaluating the public signals. (routes, bgp, dns, tls, etc) 👀 https://t.co/u8AwZRvbL4
+Look I am sorry okay. I might have tweeted a nude infosec bikini picture last year and showed folks a reverse port scan API on my blog that says "transgender adult hacker".Can you blame me? Can ANYONE resist the feminine urge to create an "InfoSec Bikini Trap" for adults only? https://t.co/DkzBxluIz2
+If you send thoughts and prayers I’m sending you a root kit for a botnet so you know what real action looks like.
+Curious how good your intrusion detection software is? ioc-bench v1.0 is now available at https://t.co/7tqWzlosij. This n…
+I am not saying that I just found a LOG4J vulnerability in a Russian bank.I am however saying that if anyone knows any Ukrainian cybersecurity experts who want an IP address, a port number, and a PoC my DMs are open.
+Yes. I can confirm this leak was shared on #DDoSecrets earlier today. Source: https://t.co/pCvfqKXA5y https://t.co/xhNsbpzX15
+Graphic is rubbish.  Please check the link https://t.co/X2bXw7uRW7
+ICYMI, we have a new website.The ETH and Sheet has been taken already. We had a fun experience using the hidden terminal window accessed by the Konami code.You can, however, still play a mad game of solitaire. https://t.co/4WYOZSSV2g
+#NintendoSwitch If you have Castlevania Anniversary Collection, on Kid Dracula if you do the Konami code this happens XD…
+The real reason women like gamers is because they’ll hit that konami code on the coochie.
+Your mission, should you choose to accept it, is to stroll into the luxury yacht of Nicholas the Cantankerous. There, you must fascinate the Mounties, sip a cocktail with Nicholas, and finally learn the Konami Code.
+@frogs_n_maps This shirt is unlockable by entering the Konami code in “Disco Elysium”
+Soju likes to come into Sebbie's room when he sleeps and put the Konami code into his sack so he swells a ton, forcing Se…
+🚀 Our cybersecurity analysts have just released an analysis of a Mirai botnet attack.https://t.co/5Guw5G8t9o
+Now starting: @real_bitmap's talk "A “symbolic” talk - Hacking hosting providers for fun and profit"#1337uplive📺 Tune in: h…
+Now starting: @JoakimTauren's talk "4 years and over 600.000€ spent, is Bug Bounty worth it?" #1337uplive📺 Tune in: https:/…
+Lua Devirtualization Part 3 : Devirtualizing Luraph : https://t.co/oMK2zELwan Part 2 : Decompiling Lua : https://t.co/Nm…
+🤓➡🦸‍ Pwn Zero To Hero is back!📑 What will we be learning?- Setting up Ghidra ✅- Using the Ghidra decompiler ✅- Reversing a crackme ✅Check out NOW! 👇https://t.co/ha42if8ExH
+Intigriti presents the 🟣 1337UP LIVE CTF 🟣  ❓ Jeopardy style Capture The Flag event 📆 11th March 16:00 – 12th March 16:0…
+If Kaspersky Security Center is configured to use local KlScSvc account, the attacker can grab its password stored in LSA a…
+Quelle différence entre le chiffrement et la cryptographie ? https://t.co/w0r8MUdTDz
+@TCryptomonnaies Je me rappelle que la France banissait le chiffrement avec une clé supérieure à 128 bits.La France avai…
+🔴N. Fricero/@Dalloz "Comment rédiger une déclaration d’appel après la réforme de l’article 901 du code de procédure civile ?". Mme la professeure Fricero sait rassurer mais aussi casser le chiffrement des textes (même la CIA n'y arrive pas) https://t.co/OZWPFtRG76 https://t.co/BRy6npkKaw
+« Le projet de loi EARN IT pour scanner chaque message en ligne menace le chiffrement et donc la liberté des internautes »,…
+J+3 ! UEFI ✅Chiffrement ✅Ansible ✅Terraform ❌Je prend des petites vacances et je termine la semaine prochaine ! Je me suis dépêché car la VM que j'utilise comme desktop au boulot va vraiment mal (crash aléatoires), ça me permettra de la remplacer ! https://t.co/MT76vFWTE9
+Un cabinet d’avocat, victime d’un ramcongiciels, 5 mois en retard sur son patch sécurité Citrix, se prend une amende de 1…
+Le fondateur de Telegram vante ses valeurs morales, mais rate le sujet du chiffrement de bout en bout 👇https://t.co/gLUixIfXHu
+En France, rappelons que la non conformité a l’article 32 du RGPD est un délit pénal : art 226-17 du CPenal 300.000€ d’am…
+Sécurité : le chiffrement de bout en bout et la signature d’enveloppe https://t.co/gxBuIaZSOp
+Chelsea Manning: «Nous avons aujourd’hui de bons outils pour se protéger, des VPN au chiffrement. Mais petit à petit, ces défen…
+Data security company Getvisibility raises €10m in funding 🙌  https://t.co/aAqG3BZSFa via @IrishTimes
+Watch out for insider threats. Treat your employees well. Do a #PenTest https://t.co/pR3xH2516r
+Amazing to have the NCIS in a Dublin for @zerodaycon #ZDC22 https://t.co/68JrAP5jtX
+President Biden's executive order on crypto: Here's what it covers https://t.co/OB1yPjTvBo via @LiamT
+The latest IT &amp; Infomation Security News! https://t.co/zPloSmmRIh Thanks to @cybereason #cybersecurity #infosec
+Cybereason CSO @samjcurry spoke at @SecureWorld, covering chains of behavior - from #ransomware to supply chains #SWBOS22 https://t.co/3lKgmQG65U
+#ICYMI 🛡️ Biden’s #cryptocurrency executive order will help unify counter-ransomware strategy https://t.co/YT1FgBRFR9 via @…
+Cybereason and Cybersecurity Collaborative Bring Senior Security Executives Together on Top CISO Priorities for 2022 - Yaho…
+Learn how the following execs who took @CRN’s 2022 CEO Outlook survey plan to tackle the opportunities and challenges this year br…
+A person who is not identified in the indictment suggested on an encrypted chat that most of the "protest" would take…
+📍 Announcing ethsig-rs ™️, a way to use Ethereum's EIP4361 as the authentication method for any API-based service or SaaS.T…
+in a world where data is the most valuable commodity, we have to come to terms w/ the fact that data is easily replicated a…
+Supporting Revision and the ‘Seven-step Model’  "Pupils benefit from support and explicit teaching of revision strat…
+I got revenge for the estradiol-ass incident by sending her a sweet love-letter, causing an emotional kernel panic.This i…
+The SANReN Cyber Security Challenge 2022 officially kicked off today with the support of BlueVision ITMhttps://t.co/X6WaDrF…
+Rappelons la politique diplomatique de #Macron en 5 ans de mandat...#GuerreEnUkraine Et ça veut donner des leçons? http…
+🛰️ This is about to end! You are only 2 days away from winning a free OBC + TTC subsystem. If you want to participate, you c…
+with using WSL2 ( the Windows Subsystem for Linux ) you can use the best of the both worlds.
+Our contributor @julcar_gye spent tons of hours for tracking a bug in Win32 subsystem causing glitches in the toolbars. See af…
+Two more before-after screenshots demonstrating Win32 subsystem fix by @julcar_gye on #ReactOS!Want to send a patch? Our Git…
+@AalasHiG1Hai Quite a bit of it is PR, drone itself is useless. It is 2 laser guided missiles combined with impressive optical system that makes it formidable.You know, unglamorous subsystem matter.
+@cragbot1 @lavie154 doesn't make me feel better about the "roughness" of every other subsystem 😵‍💫
+@TreciaKS Says a lot that Windows released a Linux subsystem to allow developers have a similar experience than full Linux and Mac.
+@TreciaKS I have been working on a Windows laptop for 3 years and it is okay. Before that I had installed Linux Mint in my lapt…
+"Ukraine bcm a repository of design expertise for  subsystem subsystem components that advanced weapon systems required; Ra…
+🧵(ab)using the @Raspberry_Pi RP2040 PIO subsystem for fun and profit.
+WSL 0.56.1 has dropped. It is rolling out to users who have installed WSL Preview using the Microsoft Store with bug fixe…
+Microsoft Improves the Windows Subsystem for Android for Insiders https://t.co/jVh6aebpjT
+Analysing 3177 organisations to track the 10 most popular email spam and malware filters https://t.co/IEy8MDkG6r
+Adversary Tactics: Vulnerability Researchhttps://t.co/dPWuPNTSIC
+I'd like to get some funding to security &amp; privacy test at least one VPN providers tech/services per month, then open so…
+#Exidio brings a lot of the same benefits of centralized VPN, but in an open-source, peer-to-peer network where people ar…
+@binance Exidio dvpn is an open-source decentralized VPN network application you can trust. Proven to not log your data,…
+@elonmusk Egyptian government does not allow Starlink equipment to enter the country, is there any chance to open source the…
+@mehulmpt Activision and LinkedIn, Windows 11 a sign that they care about humanity. They control all our government systems, lord knows what those weaponized open source tools could have done. The most criticized apps are actually doing good, VPN companies are also being replaced soon
+Rappel : pour consulter gratuitement des sites ou des vidéos bloquées dans votre pays vous pouvez utiliser :1) Tor : https://…
+You can rely on an open-source decentralized VPN network app. It has been proven that your data will not be logged and t…
+For those in Russia looking for a VPN to help get around censorship, we recommend @ProtonVPN. ProtonVPN is highly secure, ope…
+@vkokoszka @XavierGorce Et qu'on ne me dise pas que le peuple russe est mal informé.À l'heure d'internet, des VPN, de l'Open Source et plus simplement de la mondialisation avec une importante diaspora russe vivant dans le monde entier, ils savent que exactement ce qu'il se passe en Ukraine.
+@runasand A way arround the app store block would be to download @fdroidorg, an independt and open source alternativ with reproducible builds – no tampering of your VPN apps can be done from any government. It also supports sharing apps to other android phones locally via wifi!
+The US journalist in the photos is Brend Renaud, a professor of Center of Ethics in Journalism at University of Arkansas, and a prolific author https://t.co/kALGhHRFjz
+Seems that a group of US journalists/film-makers were shot at a check point near Irpin. They were documenting the outflow of refugees, says Juan Arredondo@arrejuan. https://t.co/zS8aHhDjkc
+This is not trivial ( if confirmed). It's not "one asshole will replace another"). There has already been a slow purge in the FSB since our @navalny investigation, with loyalists nudging out "technocrats", causing serious rifts. The alleged arrests can't make things more stable.
+Ukraine warned of intel that Russia plans to bomb Belarusian towns &amp; villges, in a false flag op, for a casus belli with Belarus.   https://t.co/cqgMhKzGVY Unconfirmed reports that it already is happening - anyone seen any OSINT on that?
+Open source evidence proves the use of cluster munitions in Ukraine: https://t.co/1kQe6Wv1K7
+When your OneDrive is not starting up: Reverse a registry key which had disabled OneDrive.Computer\HKEY_LOCAL_MACHIN…
+When your OneDrive is not starting up: Reverse a registry key which had disabled OneDrive.Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\OneDrive.DisableFileSyncNGSC set value to 0Reboot!#Onedrive #microsoft365
+🚨 NEW: CVE-2022-25089 🚨 Printix Secure Cloud Print Management through 1.3.1106.0 incorrectly uses Privileged APIs to mo…
+How to simplify exploiting CVE-2021-26708 using sshdhttps://t.co/dAUBECXnI4@hardenedvault published a nice write-up that…
+VPN Provider blocks torrents after getting sued by over two dozen film studios.The same group of studios had previously sued LiquidVPN asking $10 million in "damages" and hosting company QuadraNet that leases servers and IPs.https://t.co/wKk5zn78fL #copyright  #lawsuit
+Ubisoft confirms 'cyber security incident', resets staff passwords - @Ax_Sharmahttps://t.co/YDulsBpkID
+Russian defense firm Rostec shuts down website after DDoS attack - @sergheihttps://t.co/WeI0SptlOJ
+Lapsus$, the data extortion group behind Samsung &amp; NVIDIA, data leaks and Mercado Libre hack is recruiting "insiders" 👀 https://t.co/4Cb685dDPn
+E-commerce giant Mercado Libre confirmed threat actors accessed part of its source code and data of 300,000 users.Data extortion group Lapsus$ claims to have breached Mercado's 24,000 repos.Was Mercado storing user data in their source code repo? 🤔https://t.co/xjD97PS3HI https://t.co/seld5B7ehn
+'Dirty Pipe' vulnerability (CVE-2022-0847) gives root access on all major Linux distros and has 2 POCs out:https://t.co/KR7UeJnOxoBug allows non-privileged users to inject and overwrite data in read-only files, including SUID processes that run as root. via @LawrenceAbrams
+Piracy OK: Russia to ease software licensing rules after sanctions 🇷🇺 https://t.co/mzpEikZt5dvia @billtoulas
+The Russian military website (https://t.co/h3n4oxn0ac) is returning HTTP error code 418 indicating the Russian Military…
+Thread: A few comments on the aid fund of $200,000 that the IOC has set up for Ukrainian athletes and their families. T…
+Apart from that, again: The IOC's total assets amounted to $5.6 billion as of 31 December 2021, which means that the aid…
+2/4 Nearly every other international organization, from the EU to the IOC, has been capable of swift and effective action to…
+Multistakeholder Imposition of Internet Sanctions (.pdf, 10 March 2022) https://t.co/Ol1Tz8nahwInteresting. But curious how weasel words get resolved: - sanctions should be "focused &amp; precise" (?),- applied to eg "propaganda agencies" (?),- evaluated for "effectiveness" (?) https://t.co/T54zO5UpYL
+#FF Special thank you to @dutch_osintguy who helped myself &amp; 25 other people get out safely from Kyiv #Ukraine to the bo…
+New: NSA Director Nakasone says just now NSA has seen 3-4 Russian cyberattacks in Ukraine so far, &amp; as to some folks' surprise…
+[1\n] The #Conti leak revealed that they were at some point in posession to access to the mailbox of a Bellingcat employee…
+I am thrilled to announce our new project: The European Repository On Cyber Incidents (EuRepoC). Together with @UniHeidelb…
+These bills have escalated from merely cruel to overtly homicidal.This bill is simply insane. Calling it "pro life" is a cynical travesty of the highest order. https://t.co/1MVAzA5R9B
+CVE-2022-0815 Improper access control vulnerability in McAfee WebAdvisor Chrome and Edge browser extensions up to 8.1.0.1895 al…
+Update now! Microsoft patches three zero-day vulnerabilities on Patch Tuesday https://t.co/BrNYRHqgr2"CVE-2022-23277: A Mic…
+Mozilla Firefox update fixes two critical zero-day vulnerabilities actively exploited in attacks.These bugs can allow a re…
+Security vulnerability that could potentially allow a remote, unauthenticated attacker to recover user-related information…
+The recently discovered #Log4j vulnerability allowing a remote attacker to execute arbitrary code on an affected server is…
+Researchers have disclosed details of a new security vulnerability in GitLab, an open-source DevOps software, that could…
+CVE-2022-21132 : Directory traversal vulnerability in pfSense-pkg-WireGuard pfSense-pkg-WireGuard 0.1.5 versions prior to 0.…
+Without a critical update, Amazon Alexa devices could wake themselves up and start executing audio commands issued by…
+🌲TamaKo x Metavillage Giveaway 🌲Metavillage just launched their creator program and daily rewards!1️⃣ Follow @TamaKoNFT…
+Making of EoF #NFTs: Oculus Gas Mask🎭Meticulous design &amp; in-game functionality!⚡️Equip Alchemist ⚗️to spot 👀 &amp; crush…
+For anyone thinking of hacking Russian systems in support of Ukraine, Cisco's @TalosSecurity found hacking tools being marke…
+Might be fun watching cyber cowboys like Anonymous shutting down Russian gas stations or whatever, but it’s very dangerous g…
+Login for existing V2 users having V2 login IDs and Passwords:1. No need to re-register on V3 portal2. To login: The exis…
+Login related Informational Messages For the existing V2 users having V2 login IDs and Passwords (Pic 1) To Associate DSC…
+#HyperSign disrupts traditional identity management system Our vision 👉No more Passwords👉Privacy First👉One-click…
+According to a new report from SpyCloud, 70% of users breached in 2021 were still reusing passwords found in previous years' b…
+Understanding the main difference between how users interact withWeb2 vs Web3In Web2, we primarily use email and passwords; these are tied in some way to our identity.In Web3, we can login using a wallet like MetaMask.
+If you are building a password reset form in your app: allow users to paste passwords.We are in a time when many peop…
+Would you like to drop passwords completely from your users’ sign-in experience? With the right settings, the #WebAuthn API can…
+Ring Recommends Users Update Their Home #Security System Passwords After String of Hacking Incidents. (Time) #CyberSec…
+Why must account recovery take users’ money?? Why can’t we just do a simple change in our passwords?
+Junior Pentester: Here is some tools to do OSINT, go learn.Mid-Level Pentester: Set up this phishing exercise and go get DA with this other tester.Senior Pentester: Here is a client, good luck!Principal Pentester: Train these 8 junior testers to do OSINT https://t.co/6P8YXkA2SR
+You heard it here first from our CMO, Maggie Lower:  “As the number of social media users continues to grow rapidly, it’s clear that social will continue to be where organizations build communities.”  Dig into our #Digital2022 report: https://t.co/gylZ0oYA1E https://t.co/chxIAnt5OQ
+Current focus for high ROI in crypto:SOV: $BTC $ETH 🪙DeFi: $MCC 🏦MemeFi: $FLOKI $KIBA 🐶Oracles: $LINK 🔗Layer 1s: $DOT $ATOM 🔴Privacy: $ROSE $SCRT 🔐CBDCs: $QNT 💲Data: $OCEAN 💿Metaverse: $SAND $MANA 👾Gaming: $UOS $TLM 🕹NFTs: $ERN $TVK 🃏Bridges: $OGN $CELR 🌉
+🖧 Networking TriviaQ: Which of the following terms is used specifically to identify the entity created when encapsulat…
+@rjacksix Yeah, basic networking stuff. Data link layer vs network. I know a Lil &lt;.&lt;I... definitely didn't learn about mac…
+PILLS avatars feature both direct player customization and pseudorandom generation that's weighted based on your choice…
+5/ He is best known for some of his fundamental early work on public-key cryptosystems, pseudorandom functions, digital sig…
+Are you a large institution with sharp flow? Defeat the HFT parasites with one easy trick.1. Create 10,000 robinhood accounts 2. Pseudorandom distributed twap 3. Shrugged off as nontoxic inventory, market makers btfo
+Ugh. I need to get out of hybernation and draw something. I guess some practice should remind me how to use that tablet so here is a bunch of pseudorandom waifus https://t.co/qHv7spto4N
+you look like ther type of mother fucker who uses "Whataboutism" in arguments. buddy. the SImpsons spoofed your ass 30 years ago…
+If you want to make internet better and prevent some DDOS attacks, you can include @RoutingMANRS requirements in your ten…
+If you get a call from Hospital Office, it's a scammer. Hang up. My Dad thought it was a local hospital, but he is wrong. Spoofed number. And when you call the number, it doesn't sound like hospital. I hung up after they said some weird stuff. Reported it.
+Spoofed utility number and robocalls in MN:Beware of calls from what appears to be the correct 800 number threatening to cu…
+Someone just spoofed the iconic Antonov 225 ‘Mriya’ flying above Kyiv. It  was destroyed during the Russian invasion. It’…
+PSA: This ETF could be spoofed down 50% in an hour https://t.co/Rl6IBVDla0
+Blake Dowling: Scams, spoofed calls and no, the FBI doesn’t call first https://t.co/I8VZv8I6mK #FlaPol https://t.co/1qMMauF5g3
+From 2021: @FAA Investigates If It's Safer to Leave Cellphones On4G and 5G signals might help warn pilots when their GPS is being spoofed. The phones were running an app developed by the Mitre Corporation's Center for Advanced Aviation Systems Development https://t.co/OCZ7fWPoZ9 https://t.co/uX4YxAFuvt
+Justin replied "no." Any reply at all immediately results in a phone call - again spoofed. Caller ID shows it as the bank'…
+The con starts with a text that resembles a real bank fraud alert. Sometimes these are spoofed and come from the bank's AC…
+@redcanary 's AtomicTestHarnesses started by @mattifestation Github: https://t.co/xKOejWgdXGI love this project as it serves to abstract different techniques to provide defenders insight into the various variations a technique may hold.
+One of my favorite research tools (NtObjectManager) is by @tiraniddo. Github: https://t.co/gzE4flpIhBI love this tool for when I am trying to play with various objects (tokens, processes, threads, etc). You can even set up RPC connections with it.
+Speaking of Sysmon, @olafhartong holds a repo for configurations you can use when getting started. Github: https://t.co/Ni2Fv2zHqiWhile talking about Olaf, I think it is worth mentioning some of his other projects: * https://t.co/BarMcxpEQ9* https://t.co/k7xDLLB9VF
+Retweet and follow for the chance to win this cracking piece of outerwear.Winner announced tomorrow. https://t.co/a6EYc…
+In one scene in spider-man no way home the lens in Andrews mask crackThis is obviously a reference to Andrew cracking…
+We are committed to cracking down on County Lines drug activity, but we need your help. If you see anything suspicious or…
+Not trying to win it as am going anyway but will be a cracking night for people so get entering.
+vernon cracking his wrist 😟 https://t.co/KMaO62UYb6
+#WorldRecord/33The Karate Kid III ('89)⭐⭐⭐½There'll be no slandering of #KarateKid III, it's a cracking film and do…
+The World Champion Captain  IMRAN KHAN is playing his cracking shots alround the wicket to the delight of the applaudi…
+Enjoy Five Hilarious Minutes of Ronald Reagan Cracking Jokes About Russians https://t.co/HId1sGXHdJ https://t.co/Nnd7xtP58L
+@betamalehawk I’m sittin w Gary rogers. He gon be cracking jokes on Burberry Erry n me n Alexis just gon be sittin there weak…
+Live streaming! Lets hack into the kernel at runtime for TLS cert material.Come talk about tcpdump, libpcap, the kernel, ne…
+Oh right, I'm running Debian on my phone (Mobian).  I can run Guix as a userspace package manager too.&gt; sudo apt-get instal…
+RT @tnt: Any kernel dev looking for a bit of contract work ? Looking for s/o to work on  kernel driver and associate userspace…
+Investigate behavior and quality test the #Linux kernel in userspace with a few simple tools. https://t.co/UI97huNP3U
+ImpulsiveDLLHijack: C# based tool which automates the process of discovering and exploiting DLL Hijacks in target binarie…
+BadBlood by Secframe fills a Microsoft Active Directory Domain with a structure and thousands of objects#infosec #pente…
+openSquat is an opensource Intelligence (OSINT) security tool to identify cyber squatting threats to specific companies or doma…
+Wi-Fi Hacking: Rogue Access Points - Download a FREE preview and see what we prepared!  https://t.co/EwjzUNv9gU#infosec #cybe…
+Hacker's Toolset for 2022 - Download a FREE preview and check the content inside!  https://t.co/hs4bdjYY2z#infosec #cybersec…
+Bluetooth Hacking and Exploitation is a second module in the course "Exploiting IoT Devices"! Right now it's on a FINAL SALE! h…
+Best of Vulnerable Web Application Lab Setuphttps://t.co/M2TMhqPrumhttps://t.co/jsMFPtN0Ewhttps://t.co/PG4tyyPd3D…
+In this video tutorial you will learn about the role of file system forensics in investigating a Windows machine https://t.co/1…
+Anyone interested in the network traffic analysis? There is an amazing edition from @eForensics_Mag just about it! Check it out…
+Fsociety is a penetration testing system comprises of all penetration testing devices that a programmer needs https://t.co/Etbr…
+Brute Forcing and Supply Chain Attacks - Download a FREE preview and check what's inside! https://t.co/khyErJMivu  #infosec #…
+I'm sharing my script that connects multiple tools from @pdiscoveryioIt's called HaxUnit and it's on GitHub now:https://t.co…
+U.S. journalist Brent Renaud was shot and killed at a checkpoint in Irpin, Ukraine, and photographer Juan Arredondo was i…
+Julian Assange’s fiancee has spoken of her joy at being allowed to marry the #WikiLeaks founder despite restrictions being placed on their wedding Dame Vivienne Westwood is designing a kilt for #Assange, whose parents are of Scottish extractionLink: https://t.co/x0PGCI7cQt https://t.co/pu5Ei8Rw4j
+Julian Assange’s fiancee has spoken of her joy at being allowed to marry the WikiLeaks founder despite restrictions being placed on…
+Join @Owasp_DevSlop for a chat with privacy expert Samantha Floreani! Sam will be talking about privacy law, privacy disasters, and how to build privacy into your work from the start to avoid messes down the line.Meetup🔗: https://t.co/IrxJNN9xv5Episode sponsor: @datadoghq https://t.co/ONpLLwdeRw
+In 1 hour!  LIVE 🔴 with @OrWeis for "Building Modern Access Control for Cloud Applications"!Join us! YouTube🔗: https://t.co/OWtPvANxseTwitch🔗:https://t.co/5jKpIG2kj3Episode sponsor: @datadoghq https://t.co/Vq3agkWpM6
+This Sunday! Save the date. 📅Or Weis will review the 5 best practices we can follow, and open-source tools we can adopt to get permissions and access control right! RSVP🔗:https://t.co/dEArq0vF95Episode sponsor: @datadoghq https://t.co/ENEIhO6I24
+François Fillon démissionne des Conseils d’administration des groupes russes dont il était membre. https://t.co/YHZXPG11GH
+Why did we implement @pipe_IoT in java? Protection against buffer over-runs. Java isn’t perfect , but it is a useful co…
+There is not really anything any exploit defense or mitigation could have done to avoid this particular vulnerability, as i…
+7_days_of_go: Learn everything about Go in 7 days (from a Nodejs developer).⭐️ 5Author: @harrytran103#golanghttps://t.…
+Another one 🔁 - the hunt for vulnerabilities continues. 👀 As one bug is fixed, another two might appear. 🐛🐛Read our lates…
+malware-and-exploitdev-resources : It serves as a list of resources, and other things that aid in malware analysis / dev a…
+openhaystack: Build your own 'AirTags' today! Framework for tracking personal Bluetooth devices via Apple's massive Find M…
+unredacter  : Never ever ever use pixelation as a redaction technique : https://t.co/0ItyI340JD credits @2600AltF4 https:/…
+Several Ukrainian government websites were offline as a result of a mass distributed denial of service attackSo why…
+#Anonymous cyber attacks on Russia will continue to include but are not limited to: Installing malware that would wipe…
+The total number of Distributed Denial of Service (DDoS) attacks in 4Q 2021 increased by 52% over 3Q. This percentage is four…
+The “People’s” Convoy are apparently upset that the people are flipping them the bird for blocking traffic and are now escalating to a distributed denial of service attack on the local 911 line. https://t.co/KV7yoyqKqB
+New DDoS Does 4 Billion Times The Damage | Avast: A new distributed denial-of-service (DDoS) amplification attack can increa…
+Distributed Denial of Service (DDoS) is a common attack vector easily and cheaply used by bad actors. If online downtime e…
+Hackers Abuse Mitel Devices to Amplify DDoS Attacks by 4 Billion TimesThreat actors distributed denial-of-service (D…
+Miscreants have launched massive, amplified distributed denial-of-service attacks by exploiting a vulnerability in Mitel…
+Are you looking for a #WordPress firewall plugin? WordPress firewall plugins protect your website against hacking, brute for…
+@nicktolhurst Apropos of nothing, there are many excellent and easy to use DDoS (distributed denial of service) software to…
+Mitel Devices Abused for DDoS Vector With Record-Breaking Amplification Ratio: Mitel enterprise collaboration products hav…
+Cryptojacking - installs illicit cryptocurrency mining software.DDoS (distributed denial-of-service) attacks- flood server…
+"Distributed Denial of Service (#DDoS) attacks target servers or networks with many requests and high volumes of data, a…
+Starting in early February, Proofpoint researchers detected a 500% jump in mobile malware delivery attempts in Europe. In a blog post they look at the most common mobile threats and simple steps you can take to protect yourself.  https://t.co/ny6cvlMtwu https://t.co/Z8xFuzU99d
+Avast has released a decryptor for the Prometheus ransomware. Prometheus is a ransomware strain written in C# that inherited a lot of code from an older strain called Thanos. https://t.co/gcBlNcjAlD https://t.co/1qXXyi0QM3
+Sophos's @threatresearch &amp; Steeve Gaudreault analyse Qakbot (aka Qbot). Qakbot has a tendency to spread itself around by inserting malicious replies into the middle of existing email conversations, using the compromised accounts of other infection victims. https://t.co/VBXBp8B3wR https://t.co/qaCZzl24qB
+Bravo @navlys_ Clair, net, concis et précis. Apprenez mieux l'#OSINT et profitez en pour revoir votre #opsec https://t.co/YHPVWYJoNE
+4 ans en arrière, j'étais en #Ukraine. C'est bizarre de voir tt ce qu'y s'y passe aujourd'hui.L'occasion de revenir sur qlq uns de mes engagements dans lesquels j'investis tte mon énergie. J'aurais pu être un gros planqué et gagner des mille et des centshttps://t.co/cQxpUpNZml
+According to @proofpoint, a threat actor has been targeting organizations tasked with helping refugees of the war in Ukraine:…
+Girls who Create Facebook Account &amp; Forget the Password are the Same girls who get pregnant but can't Remember who is Respon…
+1Password Coupon Codes | 50% off Families on the 1st Year. Available across all platforms and devices, 1Password is a passwo…
+password to your phone, you can miss me with that shit
+when i type “fullhouse123” as the password and unblock y’all &gt;&gt;
+My Wi-Fi password is iluvsid2022. 😌 #HIMYF https://t.co/DYpQutxQLP
+Ugh! So someone just tried to log in and change the password to my account from India. Be careful everyone
+Links from YouTube video captions are being used to hide password-stealing malware https://t.co/LXsyPUreWQ https://t.co/…
+I officially started to code  December 2021! See what I built today!!! #100DaysOfCode #Day29Built this one from scrat…
+How long are we supposed to wait before changing Netflix password after breakups?
+Check for the PASSWORD(Psalm 100:4 MSG) https://t.co/7mPRH7X9ci
+I Google how to reset my password and one of the first hits was a tweet from some @foone punk:https://t.co/FgBeg2f8vg
+@TheLTONetwork LTOnetwork is Europe’s leading hybrid blockchain platform: the new standard for data security and collabora…
+Security Bulletin: Vulnerabilities in IBM Java Runtime and IBM WebSphere Application Server Liberty affect IBM Operations Cen…
+Software Engineer- C++ C# Java, Python, JavaScriptWeb Dev: HTML, CSS, JavaScript, Node.jsGame Dev: Unity, Unreal, Java…
+//   TW :  pedophilia,  rape and  bestiality     writer name  :  ODOM...ODOM  the writer  known for pedophilia  and  r…
+//   TW :  pedophilia,  rape and  bestiality     writer name  :  ODOM...ODOM  the writer  known for pedophilia  and  raping  minors  has  an  active account  where  he promotes bestiality and rape ..a request to MVRP to report and share this post ACC  UN : @CarnalVengeance https://t.co/NX8eexw9gf
+Tried meta tag with refresh time "0" and URL with metadata IP address as:&lt;meta http-equiv="refresh" content="0;url=http://1…
+🧵 Gaming NFTs are the Trojan Horse for the Web3 Revolution 🧵
+@dunvirkin Seasonal flu totally disappeared when covid arrived indicating they are one and the same, I believe it was the method used to bring in the  WEF’s Trojan horse mRNA jab, that no one would have had if given a choice, the malfeasance of our govts is astounding
+Scenes from the five-minute animated cartoon, "The Trojan Horse" (1960) by Mel-O-Toons. https://t.co/0JYw8bjPGd
+Biden is the Trojan horse to end🇺🇸.  Instead of Greeks, Putin &amp; Xi will come from it with no mercy.🇺🇸is in deep jeopardy wit…
+The Real Trojan Horse: Beware Russians Bearing Gifts – Byline Times  https://t.co/1Nfjb1pIWw
+Seven key takeaways from The Trojan Horse Affair.https://t.co/w1x2HAeRW1
+@JohnSLPaul Either way it's the trojan horse that gets T'challa back in the MCU without a riot from either side.You spend a…
+Im getting Trojan Horse Vibes...A Uk friend sent me this https://t.co/09ht9xY34d
+The Republican party and Leadership condoned all of his behavior. He would have done nothing without their support and covering. No one should forget that he was no more than a trojan horse. https://t.co/JXrFTRfWct
+@MackinleyZamora Beware of the Trojan horse. Wag kakagat sa eklat Ng Numero unong SINUNGALING. He's pertaining most probabl…
+RCCG is the Trojan horse. They will use them &amp; many of you will fall for it. They figured APC was terribly bad, &amp; #EndSA…
+Hey @AmariCooper9 you should tweet for the first time in 6 years. Something like “#DawgPound 🔥”
+Don't Miss Out on #MTVDawgs!👀4 or more Dawgs qualifies you for an "AlphaDawg" Membership on our Discord DawgPound! Also,…
+Benjy serving up 2 voice all smothered and covered with a fresh AARP signature for his customer this evening. #DawgPound…
+baker and cooper already getting reps in🔥👀 #DawgPound  https://t.co/YZ2OaKaF6g
+Want to help geolocate images and videos from Ukraine? This is a great resource from @bellingcat on open source research. https://t.co/LwGOmb5BjJ
+As Russia moves to censor more media and more of the internet over the Invasion of Ukraine, note that yesterday #DDoSecrets…
+26-year-old feminist activist Alexandra Kaluzhskikh managed to smuggle an actively recording phone into the interrogation ro…
+The benefits of having @UmbNetwork as a partner or Layer 2 #Oracle solution abounds.Umbrella aggregates its #data, which…
+Answer✅D and F. Of the remaining answers, Ethernet defines both physical and data-link protocols, PPP is a data-link protocol, IP is a network layer protocol, and SMTP and HTTP are application layer protocols.
+@mcohmi https://t.co/NzTHyNFeMz to quickly triage files on a forensic acquisition.
+We are sharing this visual for tracking threat actors/groups related to the current #ukraine conflict. The content was collect…
+Well, despite Russia's setbacks in Ukraine, at least they can be sure they have the full support of of the "pro-Russian" populace in the break-away puppet state they're trying to set up in Luhansk... https://t.co/vpmLov1VbV
+My new fav tweet:Crack WPA/WPA2 Wi-Fi Routers with Aircrack-ng and Hashcat https://t.co/LgqOCeabNs #infosec #cybersecuri…
+🎙️ This week on #LockandCode, we discuss Crisis Text Line's data-sharing agreement with its for-profit partner, which has upset many people. 👂 Listen here: https://t.co/EQvksZ32NGAlso on:🎧 Spotify - https://t.co/fNDMaUUnul🍎 Apple Podcasts - https://t.co/0mwK2fRsaj https://t.co/916pPLklLM
+The scammers spoof legitimate numbers and names and use fake credentials of well-known members of government and law enforcement agencies. https://t.co/cgoRoGvp4F
+We're pleased to announce the expansion of our #Nebula cloud-native #endpointprotection platform to include two NEW modules: Vulnerability Assessment and a preview of Patch Management modules, both powered by @OPSWAT.Learn more: https://t.co/K1OLV0b9Ld https://t.co/AYNzeaDxoR
+À Mykolaiv, la guerre s’entendait à peine aujourd’hui, mais elle se voyait et se sentait.https://t.co/pD2IdK0PPo Photos de William Keo/@MagnumPhotos https://t.co/ryeuUKhtvS
+Hier on a suivi des bus d’évacuation de Mikolaiv à Odessa. A l’origine de l’initiative, il y a une femme extraordinairement déterminée, Jeenya Kim: «Je voulais sauver autant d’enfants que possible pour reconstruire le pays»https://t.co/An5UBQ6lTf Avec W. Keo/@MagnumPhotos @libe https://t.co/IWBfDJQ0kt
+À Odessa, il n’y a pas que des ténors fabriquant des sacs de sable. On a aussi vu une artiste peintre confectionner des cocktails Molotov à la chaîne pour des milices. Beaucoup d’armes, peu d’uniformes.Reportage dans @libe avec W. Keo/@MagnumPhotoshttps://t.co/81P7anQxCu
+Wts/ Lfb❗ LOOKING FOR KAHATI❗-will only get the marked pc-seller can ship to different addresses.-please view the comsec for details.🏷️ Yoshi rawr, yedam sadboi jeongwoo ktown pob, yoshi lipbite, junghwan tampo, mashiho lingon https://t.co/g8SlncwQzO
+I wrote a blog post where I reverse engineer the cryptographically secured backdoor protocols used on every Phicomm ro…
+Hey guys! 🥳Qredo’s @MMInstitutional integration offers a groundbreaking new functionality:Access to all Ethereum Vi…
+👉Contract-to-contract calls, more powerful &amp; versatile #dapps 👉#AVM (@Algorand Virtual Machine) has an ABI &amp; full supp…
+Apply for your share of Algorand’s SupaGrant to bring Ethereum Virtual Machine compatibility to the @Algorand blockchai…
+📊#SundayStats📊Our @MMInstitutional integration offers access to *ALL* Ethereum Virtual Machine (EVM) blockchains from a…
+First a vending machine, what’s next? And that’s just in the physical world. As #metaverse land gets bought and developed…
+CVE-2022-26504Vulnerability (CVE-2022-26504) in Veeam Backup &amp; Replication component used for Microsoft System Center Vi…
+Vulnerability (CVE-2022-26504) in Veeam B&amp;R component used for Microsoft System Center Virtual Machine Manager (SCVMM) integrat…
+Pierpont's Advanced Welding program uses a state-of-the-art virtual welding machine to teach students the fundamentals of…
+@Crodo_io has implemented EVM (Ethereum Virtual Machine) support, which allows the use of smart contracts, as well as a…
+📝Today's technical article is from the Virtualization framework 📝Creating and Running a Linux Virtual Machine:Design and run custom Linux guests on Apple silicon or Intel-based Mac Computers.👉https://t.co/zvFmnDgjau https://t.co/nSbK0Iwj69
+Algorand is looking for research teams to explore the possibility of bringing Ethereum Virtual Machine compatibility to…
+05B🔵📦🖥️virt-manager💢Virt-Manager Is The Better Way To Manage VMs🎞️https://t.co/sashtentPr💢Create Virtual Machine in QEMU…
+@KyleKneisl They retired, and my generation replaced perl in cgi-bin with python in AWS Lambda.
+@AricToler Gotta say it probably helps being a Pharmacist if you must also be a Marxist-Leninist. https://t.co/KzKjIF1Vbd
+There are like 15 people in America not in this photo who believe this stuff, but it's still so insanely funny that these pe…
+#Osint cannot be verified.That's the defense? #MH17 https://t.co/Zmuw3GFN1s
+🛡️While a traditional #VPN shields your online activities from prying eyes, the VPN provider does have access to your browse…
+If there is a directory called logs on your Linux server, how to delete the log files under it whose last access time was…
+@snapchatsupport I have contacted u guys for so long u do nothing I can’t access snap chat it keeps saying oops we can’t find matching credentials for every account I make even my main account and when I log out and try log back it says it too please help
+(CVE-2022-0870): Server-Side Request Forgery (SSRF) in gogs/gogs.https://t.co/ZIozpv5quoDisclosed by https://t.co/…
+Server-Side Request Forgery (SSRF) in https://t.co/wWDom86ivH (CVE-2022-0870) reported by michaellrowley - Patch: http…
+Server Side Request Forgery (SSRF) in FormCraft 3 &lt;= 3.8.27 #WordPress #vulnerability https://t.co/cc9l3VyZCu
+Server-Side Request Forgery (SSRF) in https://t.co/YzWKXOxXnS (CVE-2022-0766) reported by r0hansh - Patch: https://t.c…
+What is SSRF?server site request forgery (also known as SSRF)is a web security vulnerability that allows an attacker to i…
+What is SSRF?server site request forgery (also known as SSRF)is a web security vulnerability that allows an attacker to induce the server-side application to make HTTP requests to an arbitrary domain of the attacker's choosingFirst high vulnerability on 2022with @abdlah_md https://t.co/QcQV2Fko3q
+I feel like there's a need to clarify what is going on here, it's an interesting anti-sandbox trick.The SeShutdownPrivile…
+We at @TreeboEngg are hiring for the Senior Frontend Engineer roleNo DSA only Frontend-related technologies😉Hit me up if…
+Metasploit got a Dirty Pipe exploitLet the fun begin, I guesshttps://t.co/r4RkI4gIXv
+The Log4Shell vulnerability took the Java community by surprise at the end of 2021It is a highly prevalent, critical, and…
+Ethical hacking virtual machine on Windows Server through Metasploit-Framework (remo exploit). IT is my VM and it had been…
+Do you know Exploit Pack? 39000+ exploits, 0-days, implants, autopwn, adversary simulation, post-exploitation, free support…
+An Azure AD Recon and Exploitation Framework --Follow @gainsec 🤓-https://t.co/Lg8gpHnQAZ----- #hacking #cybersecuri…
+Exploit Pack Framework vs other similar toolshttps://t.co/nXWZcUWbitWhat is Exploit Pack? It's an advanced exploitation…
+La Cnil qui sanctionne et le marché pub qui s'en tamponne : tout sauf une surprise via @mntd_ https://t.co/lcV6LACr7z
+"Facebook s'est conformé (discrètement) aux exigences de la Cnil" 🤔Belle naïveté... Alors oui, il y a maintenant 2 b…
+#Télétravail #DonnéesPersonnellesLa CNIL a annoncé, le 15 février 2022, les trois thématiques prioritaires de contrôl…
+Que se passe-t-il si vous acceptez "les cookies essentiels et optionnels" ? Strictement la même chose 🤪 Vous retrouverez toujours le même super cookie 'datr', 'multifonction' (essentiel + surveillance), et bien pratique pour flouer la CNIL et les utilisateurs 🤥 8/ https://t.co/IoUQEdyr1D
+Que retenir du plan stratégique de la Cnil pour 2022 - 2024 ? https://t.co/DSbV6Yw7e1 https://t.co/F2z3zr98E0
+Le nombre de cas positifs recensés en 24h est supérieur de 33 % par rapport à celui de dimanche dernier (60 422 versus 4…
+Rhaaaaaaa,  immense pianiste qui hélas, ne se produit quasiment plus https://t.co/rWIuz4ZJ4s
+Intérieur de la gare d'Orsay. 1905  #Paris #Photographie DR Archives https://t.co/fEoaXAOYXd
+@1biLLiondoLLarz Oh youuu mazafaka now your really in our gang!!! $KIBA sirs I smell how we pull #saitama ath eith my preside…
+you know what needs to go away?all the garbage websites that just scrape stackoverflow and reprint the content with bad fonts
+If your coworkers troll you embrace it https://t.co/m2dyl7zVKC
+This is a really really long way of saying “I don’t want to go to therapy.”
+Laser twitter, I seek thy help.Even after replacing the HVPSU and with a new 60w co2 tube, I'm STILL getting horizont…
+I might or might not have an assload of @0xCrypto_Chicks!!  🤷‍♂️🅿️🥃 https://t.co/m7SdDgeRwl
+CVE-2022-25636 Poc, net/netfilter/nf_dup_netdev.c in the Linux kernel 5.4 through 5.6.10 allows local users to gain privileges…
+Spent a few awesome days in the @Truesec studio. Proud of what i do, what we have done, and where we are going. Sharing is caring. https://t.co/D0npVDmzda
+FUN TIMES! 🎉I’m so excited for our brand new educational YouTube Series TECHTALK! A tech show by geeks for geeks.In this first episode I dive into a common AD security misconfiguration together with @LofgrenPeter @Truesec https://t.co/h0x7Ucnh5P https://t.co/pU3kLCepEF
+MalwareBot has posted hash and torrent set number 410 with 33.16 GB of zipped #malware samples. Users login for links.
+My Weekend Project: Ghidra version of efiXplorer vulnerability scanner. I reimplemented the SMM callout checker as an extensio…
+The firmware supply chain needs a fix. Unfortunately, most of the issues in our reported vulnerabilities are repeatable failu…
+New REsearch: "Repeatable Firmware Security Failures: 16 High Impact Vulnerabilities Discovered In HP Devices".An underst…
+I promised to drop bombs of #DailyOSINT tips, tools and tricks when I return so here is the first one (more to come).Rea…
+LAPSUS$ extortion group, the group responsible for the recent NVIDIA breach and SAMSUNG breach, are actively advertising…
+March 8th, 2022 @TrendMicro released a paper on a new ransomware variant which exclusively targets Russian entities - th…
+As #API traffic increases, it becomes a greater threat to an organization’s sensitive data.@imlebin explains why visibility into the underlying data layer is necessary to protect against data leakage and API abuses (@SecWeekly). https://t.co/P8iaLz0svN
+Imperva mitigated a 2.5 Million RPS ransom #DDoS attack. @TheHackersNews has the details on our analysis and how DDoS attacks continue to evolve. https://t.co/GxDSlNKbSN https://t.co/oWdtNNccim
+Imperva API Security enables rapid, secure development by providing continuous visibility and protection for all APIs -- without slowing down #DevOps or requiring code changes. https://t.co/YDuLrtIzGS https://t.co/PEURME4Vt4
+GitHub - JonathanSalwan/VMProtect-devirtualization: Playing with the VMProtect software protection. Automatic deobfusca…
+Good file...  (What is it good for) Part 2https://t.co/hJelaK2b4Pkinda #DFIR
+1\ How to detect what command line spawned a process with no EDR/AV? 👀 #DFIRIf you have a memory sample, this is how you…
+I was hesitant to share a link to my JPEG sandbox editor because the UI is very barebones, but the code is well structured eno…
+Formidable numéro du Dessous des cartes sur l'Ukraine, l'évolution de son territoire au fil des siècles, son rapport à la…
+Tweets of a captured Russian Pilot who supposedly served in #Syria are ripe on Twitter today, dozens of accounts are re…
+🚨URGENTEst-ce quelqu'un connait des moyens de quitter Kyiv rapidement vers l'ouest ? Une femme et sa fille ne trouvent pas…
+Si tu aimes l'aligot et la truffade et les incidents de sécurité ce poste est pour toi !
+The Russia-Ukraine Monitor Map is a crowdsourced effort by @Cen4infoRes and the wider open source community to map, documen…
+Keeping Forensics Tools Sharp: A case study of updating #bulk_extractor. This is my presentation from yesterday's @The_AAFS #D…
+Little #DFIR tip to deal with chunked files in Network Forensics. If you wanna fastly extract those files try to use extre…
+Le rover @MarsCuriosity a photographié aujourd'hui l'une des roches les plus étranges que j'ai pu voir sur #Mars. Cette…
+Sébastien LARINIER, enseignant du #GroupeESIEA  décortique actuellement le malware qui a été utilisé lors de la #cyberatta…
+Create a REST API using basic PHP with Token Authentication Courses -&gt; https://t.co/EGP8wliMMH#100DaysOfCode #webdev…
+Day 52 &amp; 53 #100DaysOfCode Learned how to do REST APIs on Django Rest Framework. I also did a small rest api for practice, a…
+Day 24: #100DaysOfCode - API authentication with JWT (protecting my routes, getting token and using the token to access pro…
+7zip running as administrator can access raw disks - including those formatted as Linux filesystems.
+Our baseband analysis platform FirmWire is FINALLY open sourced! Happy bug hunting🪲https://t.co/OS9oap6UWS https://t.co/z…
+ETH devs: write math libraries in assembly to save gasMeanwhile, CosmWasm devs: I need the fractional part of a decimal nu…
+Lapsus$ #leaked samsung's data, claims it contains "confidential source code" total leak size 204 GB  #databreach @ido_cohen2…
+I got a new job at a new org recently.I have learned my old org is splitting my role into three positions.Sr. InfoSec ana…
+What are the best tools for creating visual diagrams of data structures? dot files do not count.// @moyix
+It is easy to focus on what is easily observable in cyber, the recon, malware, exfiltration, complexity of campaigns etc. B…
+Oh and this one just for the #Amiga Workbench ambiance ... Unix on the Amiga https://t.co/LeGobGQPBS
+Installed @openSUSE 15.4 beta in a VM: all my previously experienced problems are now resolved, everything works rock solid. Doing a syslog-ng compile using osc also worked perfectly.Read more about the #openSUSE Leap #beta release at: https://t.co/lENfE2j3hc
+Version 3.35.1 of syslog-ng is now in #EPEL 9 repository. You do not need to use epel-testing any more.Some destinations are still missing, I'll add them as soon as the necessary dependencies arrive in EPEL 9.https://t.co/Jwtpy0TsIM
+That feeling when zabbix is informing that we lost access to a CentOS infra server hosted in Ukraine , and so reality strikes b…
+Happy International Women's Day!Here's to those who paved they wayTo those who keep us growing every day.Here's to…
+Version 3.36.1 of syslog-ng is now available with many new features and bug fixes:- #MacOS support in system()- rename() for name-value pairs- #TLS keylog support- restricting TLS 1.3 ciphers- symlink-as() for macro-based filenames- and morehttps://t.co/SpMAFiAIwy
+Modern software engineers: happily copy &amp; paste unverified code snippets from the web to install random unverified software on…
+ICYMI… Signal Desktop… FreeBSD… Call For Testing… GO! https://t.co/opxRAhgaIs
+#Sudo version 1.9.10 is now available.  In addition to bug fixes,sudo 1.9.10 introduces support for using regular express…
+16 High Impact Vulnerabilities Discovered in HP Deviceshttps://t.co/K55BKQmZyN https://t.co/tudb7NDPNr
+As concern around supply chain security grows and more policy folks begin thinking about investing in open source software, I…
+U.S. government warns that firmware presents “a large and ever-expanding attack surface” - https://t.co/w48pXLvWRi
+Official NVIDIA advisory:"We are aware that the threat actor took employee passwords and some NVIDIA proprietary information from our systems and has begun leaking it online."https://t.co/9Dq7H3A7MZ
+New release of @CHIPSEC: v1.8.2 Check it out: https://t.co/oRY4cOsDRr
+I’m gonna start offering “artisanal IT services” that are just me pointing and clicking my way through systems administrati…
+glad Joe didn’t do this; would hate to see USSR escalation beyond bombing kids hospitals, kidnapping mayors, causing millions to flee &amp; trying to take a sovereign nation would have looked like.  man, so glad we have Joe and Ka-Ma-la. Would hate hate mail” for mispronouncing that. https://t.co/g6kl4dbPZP
+Iran just took credit for bombing the US Consulate in Erbil, Iraq.Our enemies are sensing the weakness of the Brandon Administration and it’s only going to get worse.That’s what happens when you get a president by mail. https://t.co/JBFLcqNLmq
+Et aujourd'hui, dans le cas de #Ubisoft, on a #Lapsus qui tease sévère. A tort ou à raison... 🧐 https://t.co/gk4U3X1s1T
+On ferme boutique parce qu'on n'a plein de trucs pas patchés et qu'on n'a pas idée de comment déployer #2FA...#TraduisonsLes https://t.co/VrtniO8vbD
+🌐 First time for everything, parts of Conti (Ryuk) #Ransomware team infrastructure is currently down 🤔From the beginning…
+Based on @ContiLeaks, we made an interactive graph of Conti members' relations and share some insights:🥳Impressive leve…
+A SCAM has come to our attention involving a spoofed SoJo City phone number. Be aware that trusted organizations will n…
+This whole NVIDIA/Lapsus$ saga has been fascinating. Sigining malware with legitimate NVIDIA certificates--though expired, th…
+FinCEN warns financial institutions to beware of unusual cryptocurrency payments or illegal transactions Russia may use to evade restrictions imposed due to its invasion of Ukraine. #cybersecurity #infosec https://t.co/CXjWCd2jT5
+The Qakbot botnet is getting more dangerous, sinking its fangs into email threads and injecting malicious modules #cybersecurity #infosec https://t.co/1q1a0Uz0ub
+I wonder what proportion of Windows malware infections you could prevent by literally doing nothing to harden a new PC beside…
+#CobaltStrike 🚨C2: updatedaemon[.]com - @Namecheap IP: 51.83.57[.]149URL: hxxps://updatedaemon[.]com/libeay32[.]dllC2 I…
+#CobaltStrike 🚨C2: updatedaemon[.]com - @Namecheap IP: 51.83.57[.]149URL: hxxps://updatedaemon[.]com/libeay32[.]dllC2 IP: 5.255.100[.]242URL: hxxp://5.255.100[.]242/libeay32[.]dllExec command: rundll32 C:\windows\debug\libeay32.dll,ASN1_OBJECT_create https://t.co/v9rDCHuSK2
+1⃣ Persistence via Run-key: rundll32 calls a DLL in the AppData Local directory from the user - suspicious 🤔. Even more suspic…
+Interesting #CobaltStrike server:➡️124.222.224.83:8081➡️Referer: https://www[.]bjt[.]beijing[.]gov[.]cn➡️Uri:/admin/…
+#Hybrid networks enable organizations to implement critical applications and services, but they also increase the attack surface. 💻 Join us Thursday, March 17 to learn how to properly facilitate your digital acceleration with #FortiGate NGFWs: https://t.co/XHNTWNJEzx https://t.co/IUsihvUfVE
+Taking a more unified approach to #cybersecurity can provide IT teams with the flexibility, visibility, and control needed to defend against rising threats like #ransomware.  Learn more: https://t.co/3NuqlYYpN4 via @ForbesTechCncl
+It's #EmployeeAppreciationDay and we're thankful for our #Fortinet team! Together, we will continue to secure people, devices, and data everywhere 🌐 https://t.co/INfbVQ1WwY https://t.co/CC99V6hZEp

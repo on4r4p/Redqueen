@@ -1022,3 +1022,673 @@ Apple Peek Performance Event: new Mac, new iPhone, and more : https://www.secure
 US Treasury: Russia may bypass sanctions using ransomware payments : https://www.bleepingcomputer.com/news/security/us-treasury-russia-may-bypass-sanctions-using-ransomware-payments/
 Clearview AI fined €20M for collecting Italians’ biometric data : https://www.bleepingcomputer.com/news/legal/clearview-ai-fined-20m-for-collecting-italians-biometric-data/
 Russian government sites hacked in supply chain attack : https://www.bleepingcomputer.com/news/security/russian-government-sites-hacked-in-supply-chain-attack/
+[remote] Siemens S7-1200 - Unauthenticated Start/Stop Command : https://www.exploit-db.com/exploits/50820
+[local] Sandboxie-Plus 5.50.2 - 'Service SbieSvc' Unquoted Service Path : https://www.exploit-db.com/exploits/50819
+[local] WOW21 5.0.1.9 - 'Service WOW21_Service' Unquoted Service Path : https://www.exploit-db.com/exploits/50818
+[local] Sony playmemories home - 'PMBDeviceInfoProvider' Unquoted Service Path : https://www.exploit-db.com/exploits/50817
+[webapps] Zabbix 5.0.17 - Remote Code Execution (RCE) (Authenticated) : https://www.exploit-db.com/exploits/50816
+[local] BattlEye 0.9 - 'BEService' Unquoted Service Path : https://www.exploit-db.com/exploits/50815
+[local] McAfee(R) Safe Connect VPN - Unquoted Service Path Elevation Of Privilege : https://www.exploit-db.com/exploits/50814
+DSA-5096 linux : https://www.debian.org/security/2022/dsa-5096
+DSA-5095 linux : https://www.debian.org/security/2022/dsa-5095
+CVE-2021-22783 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-22783
+CVE-2021-36777 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-36777
+CVE-2022-0022 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0022
+CVE-2022-0715 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0715
+CVE-2022-0890 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0890
+CVE-2022-21967 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21967
+CVE-2022-21973 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21973
+CVE-2022-21975 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21975
+CVE-2022-21977 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21977
+CVE-2022-21990 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21990
+CVE-2022-22006 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22006
+CVE-2022-22007 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22007
+CVE-2022-22010 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22010
+CVE-2022-22511 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22511
+CVE-2022-22805 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22805
+CVE-2022-22806 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22806
+CVE-2022-23253 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23253
+CVE-2022-23265 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23265
+CVE-2022-23266 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23266
+CVE-2022-23277 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23277
+CVE-2022-23278 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23278
+CVE-2022-23281 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23281
+CVE-2022-23282 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23282
+CVE-2022-23283 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23283
+CVE-2022-23284 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23284
+CVE-2022-23285 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23285
+CVE-2022-23286 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23286
+CVE-2022-23287 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23287
+CVE-2022-23288 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23288
+CVE-2022-23290 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23290
+CVE-2022-23291 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23291
+CVE-2022-23293 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23293
+CVE-2022-23294 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23294
+CVE-2022-23295 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23295
+CVE-2022-23296 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23296
+CVE-2022-23297 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23297
+CVE-2022-23298 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23298
+CVE-2022-23299 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23299
+CVE-2022-23300 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23300
+CVE-2022-23301 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23301
+CVE-2022-24322 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24322
+CVE-2022-24323 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24323
+CVE-2022-24349 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24349
+CVE-2022-24451 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24451
+CVE-2022-24452 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24452
+CVE-2022-24453 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24453
+CVE-2022-24454 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24454
+CVE-2022-24455 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24455
+CVE-2022-24456 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24456
+CVE-2022-24457 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24457
+CVE-2022-24459 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24459
+CVE-2022-24460 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24460
+CVE-2022-24461 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24461
+CVE-2022-24462 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24462
+CVE-2022-24463 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24463
+CVE-2022-24464 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24464
+CVE-2022-24465 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24465
+CVE-2022-24467 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24467
+CVE-2022-24468 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24468
+CVE-2022-24469 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24469
+CVE-2022-24470 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24470
+CVE-2022-24471 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24471
+CVE-2022-24501 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24501
+CVE-2022-24502 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24502
+CVE-2022-24503 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24503
+CVE-2022-24505 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24505
+CVE-2022-24506 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24506
+CVE-2022-24507 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24507
+CVE-2022-24508 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24508
+CVE-2022-24509 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24509
+CVE-2022-24510 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24510
+CVE-2022-24511 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24511
+CVE-2022-24512 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24512
+CVE-2022-24515 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24515
+CVE-2022-24517 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24517
+CVE-2022-24518 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24518
+CVE-2022-24519 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24519
+CVE-2022-24520 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24520
+CVE-2022-24522 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24522
+CVE-2022-24525 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24525
+CVE-2022-24526 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24526
+CVE-2022-24732 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24732
+CVE-2022-24734 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24734
+CVE-2022-24741 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24741
+CVE-2022-24744 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24744
+CVE-2022-24745 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24745
+CVE-2022-24746 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24746
+CVE-2022-24747 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24747
+CVE-2022-24748 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24748
+CVE-2022-24753 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24753
+CVE-2022-24917 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24917
+CVE-2022-24918 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24918
+CVE-2022-24919 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24919
+Huawei UK board members resign over silence on Ukraine invasion : https://go.theregister.com/feed/www.theregister.com/2022/03/10/huawei_uk_board_members_resign/
+Ukraine invasion: This may be the quiet before the cyber-storm, IT staff warned : https://go.theregister.com/feed/www.theregister.com/2022/03/09/ukraine_russia_cyberattacks/
+SEC proposes four-day rule for public companies to report cyberattacks : https://go.theregister.com/feed/www.theregister.com/2022/03/09/sec_cyberattack_disclosure/
+App, security teams need closer bond to fend off cyberattacks : https://go.theregister.com/feed/www.theregister.com/2022/03/09/app_cybersecurity_alliance_immersive_labs/
+Dell opts out of Microsoft's Pluton security for Windows : https://go.theregister.com/feed/www.theregister.com/2022/03/09/dell_pluton_microsoft/
+APT41 Spies Broke Into 6 US State Networks via a Livestock App : https://threatpost.com/apt41-spies-broke-into-6-us-state-networks-via-livestock-app/178838/
+Building Cyber Resilience in a heightened alert environment : https://www.tripwire.com/state-of-security/security-data-protection/cyber-security/building-cyber-resilience-in-a-heightened-alert-environment/
+Twitter makes the leap to Tor : https://blog.malwarebytes.com/privacy-2/2022/03/twitter-makes-the-leap-to-tor/
+Update now! Microsoft patches three zero-day vulnerabilities on Patch Tuesday : https://blog.malwarebytes.com/exploits-and-vulnerabilities/2022/03/update-now-microsoft-patches-three-zero-day-vulnerabilities-on-patch-tuesday/
+FormBook spam campaign targets citizens of  Ukraine️ : https://blog.malwarebytes.com/threat-intelligence/2022/03/formbook-spam-campaign-targets-citizens-of-ukraine%ef%b8%8f/
+DSA-5097 firefox-esr : https://www.debian.org/security/2022/dsa-5097
+Building Password Purgatory with Cloudflare Pages and Workers : https://www.troyhunt.com/building-password-purgatory-with-cloudflare-pages-and-workers/
+CVE-2021-38296 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-38296
+CVE-2022-0895 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0895
+Mitel VoIP systems used in staggering DDoS attacks : https://go.theregister.com/feed/www.theregister.com/2022/03/10/mitel_amplification_ddos_attack/
+Reg reader rages over Virgin Media's email password policy : https://go.theregister.com/feed/www.theregister.com/2022/03/10/virgin_media_email_password_security/
+Qakbot Botnet Sprouts Fangs, Injects Malware into Email Threads : https://threatpost.com/qakbot-botnet-sprouts-fangs-injects-malware-into-email-threads/178845/
+Starting at Home: Cybersecurity in the Hybrid Workplace : https://securityintelligence.com/articles/starting-home-cybersecurity-hybrid-workplace/
+DSbD claims UK is on the path to “cyber disaster” : https://www.itsecurityguru.org/2022/03/10/dsbd-claims-uk-is-on-the-path-to-cyber-disaster/?utm_source=rss&utm_medium=rss&utm_campaign=dsbd-claims-uk-is-on-the-path-to-cyber-disaster
+Up to 30% of WordPress plugin bugs don’t get patched : https://www.itsecurityguru.org/2022/03/10/up-to-30-of-wordpress-plugin-bugs-dont-get-patched/?utm_source=rss&utm_medium=rss&utm_campaign=up-to-30-of-wordpress-plugin-bugs-dont-get-patched
+Extortion scheme impersonates government officials, law enforcement : https://blog.malwarebytes.com/scams/2022/03/extortion-fbi/
+Brave browser goes the extra mile to block third party cookies : https://blog.malwarebytes.com/privacy-2/2022/03/brave-browser-goes-the-extra-mile-to-block-third-party-cookies/
+[SANS ISC] Credentials Leaks on VirusTotal : https://blog.rootshell.be/2022/03/10/sans-isc-credentials-leaks-on-virustotal/
+Russia May Use Ransomware Payouts To Avoid Sanctions : https://packetstormsecurity.com/news/view/33193/Russia-May-Use-Ransomware-Payouts-To-Avoid-Sanctions.html
+Bugcrowd's Top Bug Bounty Reward Increases To $1 Million : https://packetstormsecurity.com/news/view/33194/Bugcrowds-Top-Bug-Bounty-Reward-Increases-To-1-Million.html
+Mitel VoIP Systems Used In Staggering DDoS Attacks : https://packetstormsecurity.com/news/view/33196/Mitel-VoIP-Systems-Used-In-Staggering-DDoS-Attacks.html
+Qakbot Botnet Sprouts Fangs, Injects Malware Into Email Threads : https://packetstormsecurity.com/news/view/33195/Qakbot-Botnet-Sprouts-Fangs-Injects-Malware-Into-Email-Threads.html
+Republican County Clerk Indicted In Voting Machine Breach, Arrest Warrant Issued : https://packetstormsecurity.com/news/view/33198/Republican-County-Clerk-Indicted-In-Voting-Machine-Breach-Arrest-Warrant-Issued.html
+Alleged REvil Suspect Extradited And Arraigned On Ransomware Spree Charges : https://packetstormsecurity.com/news/view/33197/Alleged-REvil-Suspect-Extradited-And-Arraigned-On-Ransomware-Spree-Charges.html
+Dirty Pipe Local Privilege Escalation : https://packetstormsecurity.com/files/166258/cve_2022_0847_dirtypipe.rb.txt
+Falco 0.31.1 : https://packetstormsecurity.com/files/166257/falco-0.31.1.tar.gz
+Zabbix 5.0.17 Remote Code Execution : https://packetstormsecurity.com/files/166256/zabbix5017-exec.txt
+Siemens S7-1200 4.5 Unauthenticated Access : https://packetstormsecurity.com/files/166255/siemenss71200-bypass.txt
+Ubuntu Security Notice USN-5320-1 : https://packetstormsecurity.com/files/166254/USN-5320-1.txt
+WOW21 5.0.1.9 Unquoted Service Path : https://packetstormsecurity.com/files/166253/wow215019-unquotedpath.txt
+Sandboxie-Plus 5.50.2 Unquoted Service Path : https://packetstormsecurity.com/files/166252/sandboxieplus5502-unquotedpath.txt
+McAfee Safe Connect VPN Unquoted Service Path : https://packetstormsecurity.com/files/166251/mcafeesafeconnect-unquotedpath.txt
+BattlEye 0.9 Unquoted Service Path : https://packetstormsecurity.com/files/166250/battleye09-unquotedpath.txt
+Sony Playmemories Home Unquoted Service Path : https://packetstormsecurity.com/files/166249/sonyplaymemorieshome-unquotedpath.txt
+USN-5320-1: Expat vulnerabilities and regression : https://ubuntu.com/security/notices/USN-5320-1
+CVE-2022-0905 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0905
+CVE-2022-0906 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0906
+Ragnar Locker ransomware – what you need to know : https://www.tripwire.com/state-of-security/security-data-protection/ragnar-locker-ransomware-what-you-need-to-know/
+No, women in Ukraine aren’t up for a sexy webcam chat right now : https://grahamcluley.com/no-women-in-ukraine-arent-up-for-a-sexy-webcam-chat-right-now/
+Smashing Security podcast #265: The Nigerian supercop and Alexa vs. Alexa : https://grahamcluley.com/smashing-security-podcast-265/
+S3 Ep73: Ransomware with a difference, dirty Linux pipes, and much more [Podcast] : https://nakedsecurity.sophos.com/2022/03/10/s3-ep73-ransomware-with-a-difference-dirty-linux-pipes-and-much-more-podcast/
+Alleged REvil suspect extradited and arraigned on ransomware spree charges : https://go.theregister.com/feed/www.theregister.com/2022/03/10/revil_suspect_ukrainian_arraigned_us_court/
+Most Orgs Would Take Security Bugs Over Ethical Hacking Help : https://threatpost.com/orgs-security-bugs-ethical-hacking-help/178862/
+Russia May Use Ransomware Payouts to Avoid Sanctions : https://threatpost.com/russia-ransomware-payouts-avoid-sanctions/178854/
+Multi-Ransomwared Victims Have It Coming–Podcast : https://threatpost.com/blaming-ransomware-victims-podcast/178799/
+CVE-2020-14111 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-14111
+CVE-2020-14112 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-14112
+CVE-2020-14115 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-14115
+CVE-2020-36123 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-36123
+CVE-2020-36517 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-36517
+CVE-2021-20269 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-20269
+CVE-2021-28488 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-28488
+CVE-2021-32005 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32005
+CVE-2021-32006 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32006
+CVE-2021-32025 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32025
+CVE-2021-32434 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32434
+CVE-2021-32435 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32435
+CVE-2021-32436 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32436
+CVE-2021-32501 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32501
+CVE-2021-32502 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32502
+CVE-2021-32505 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32505
+CVE-2021-33293 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33293
+CVE-2021-33851 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33851
+CVE-2021-33852 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33852
+CVE-2021-34122 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34122
+CVE-2021-34338 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34338
+CVE-2021-34339 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34339
+CVE-2021-34340 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34340
+CVE-2021-34341 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34341
+CVE-2021-34342 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34342
+CVE-2021-35251 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-35251
+CVE-2021-3558 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3558
+CVE-2021-3660 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3660
+CVE-2021-3698 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3698
+CVE-2021-3732 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3732
+CVE-2021-3733 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3733
+CVE-2021-3739 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3739
+CVE-2021-38910 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-38910
+CVE-2021-39022 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-39022
+CVE-2021-39025 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-39025
+CVE-2021-3981 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-3981
+CVE-2021-40047 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40047
+CVE-2021-40048 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40048
+CVE-2021-40049 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40049
+CVE-2021-40050 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40050
+CVE-2021-40051 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40051
+CVE-2021-40052 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40052
+CVE-2021-40053 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40053
+CVE-2021-40054 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40054
+CVE-2021-40055 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40055
+CVE-2021-40056 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40056
+CVE-2021-40057 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40057
+CVE-2021-40058 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40058
+CVE-2021-40059 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40059
+CVE-2021-40060 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40060
+CVE-2021-40061 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40061
+CVE-2021-40062 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40062
+CVE-2021-40063 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40063
+CVE-2021-40064 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40064
+CVE-2021-4023 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-4023
+CVE-2021-40376 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40376
+CVE-2021-4045 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-4045
+CVE-2021-4095 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-4095
+CVE-2021-41657 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41657
+CVE-2021-42186 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42186
+CVE-2021-42786 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42786
+CVE-2021-42787 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42787
+CVE-2021-42853 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42853
+CVE-2021-42854 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42854
+CVE-2021-42855 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42855
+CVE-2021-42856 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42856
+CVE-2021-42857 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42857
+CVE-2021-43969 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-43969
+CVE-2021-43970 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-43970
+CVE-2021-44032 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44032
+CVE-2021-44215 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44215
+CVE-2021-44216 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44216
+CVE-2021-44269 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44269
+CVE-2021-44421 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44421
+CVE-2021-44622 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44622
+CVE-2021-44623 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44623
+CVE-2021-44625 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44625
+CVE-2021-44626 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44626
+CVE-2021-44627 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44627
+CVE-2021-44628 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44628
+CVE-2021-44629 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44629
+CVE-2021-44630 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44630
+CVE-2021-44631 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44631
+CVE-2021-44632 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44632
+CVE-2021-44673 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44673
+CVE-2021-44750 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44750
+CVE-2021-46408 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-46408
+CVE-2022-0204 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0204
+CVE-2022-0433 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0433
+CVE-2022-0507 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0507
+CVE-2022-0516 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0516
+CVE-2022-0618 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0618
+CVE-2022-0725 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0725
+CVE-2022-0813 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0813
+CVE-2022-0847 (codeready_linux_builder, enterprise_linux, enterprise_linux_eus, enterprise_linux_for_ibm_z_systems, enterprise_linux_for_ibm_z_systems_eus, enterprise_linux_for_power_little_endian, enterprise_linux_for_power_little_endian_eus, enterprise_linux_for_real_time, enterprise_linux_for_real_time_for_nfv, enterprise_linux_for_real_time_for_nfv_tus, enterprise_linux_for_real_time_tus, enterprise_linux_server_aus, enterprise_linux_server_for_power_little_endian_update_services_for_sap_solutions, enterprise_linux_server_tus, enterprise_linux_server_update_services_for_sap_solutions, fedora, linux_kernel, ovirt-engine, virtualization_host) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0847
+CVE-2022-0856 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0856
+CVE-2022-0865 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0865
+CVE-2022-0891 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0891
+CVE-2022-0903 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0903
+CVE-2022-0904 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0904
+CVE-2022-20047 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20047
+CVE-2022-20048 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20048
+CVE-2022-20049 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20049
+CVE-2022-20050 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20050
+CVE-2022-20051 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20051
+CVE-2022-20053 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20053
+CVE-2022-20054 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20054
+CVE-2022-20055 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20055
+CVE-2022-20056 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20056
+CVE-2022-20057 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20057
+CVE-2022-20058 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20058
+CVE-2022-20059 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20059
+CVE-2022-20060 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20060
+CVE-2022-21124 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21124
+CVE-2022-21132 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21132
+CVE-2022-21146 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21146
+CVE-2022-21158 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21158
+CVE-2022-21170 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21170
+CVE-2022-21219 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21219
+CVE-2022-22547 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22547
+CVE-2022-22795 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22795
+CVE-2022-22814 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22814
+CVE-2022-22834 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22834
+CVE-2022-22835 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22835
+CVE-2022-22985 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22985
+CVE-2022-23036 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23036
+CVE-2022-23037 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23037
+CVE-2022-23038 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23038
+CVE-2022-23039 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23039
+CVE-2022-23040 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23040
+CVE-2022-23041 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23041
+CVE-2022-23042 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23042
+CVE-2022-23383 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23383
+CVE-2022-23940 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23940
+CVE-2022-24177 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24177
+CVE-2022-24193 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24193
+CVE-2022-24285 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24285
+CVE-2022-24286 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24286
+CVE-2022-24395 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24395
+CVE-2022-24396 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24396
+CVE-2022-24397 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24397
+CVE-2022-24398 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24398
+CVE-2022-24399 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24399
+CVE-2022-24432 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24432
+CVE-2022-24600 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24600
+CVE-2022-24601 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24601
+CVE-2022-24602 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24602
+CVE-2022-24603 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24603
+CVE-2022-24604 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24604
+CVE-2022-24605 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24605
+CVE-2022-24606 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24606
+CVE-2022-24607 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24607
+CVE-2022-24608 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24608
+CVE-2022-24609 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24609
+CVE-2022-24618 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24618
+CVE-2022-24644 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24644
+CVE-2022-24651 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24651
+CVE-2022-24652 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24652
+CVE-2022-24915 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24915
+CVE-2022-24928 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24928
+CVE-2022-24929 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24929
+CVE-2022-24930 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24930
+CVE-2022-24931 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24931
+CVE-2022-24932 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24932
+CVE-2022-24960 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24960
+CVE-2022-24995 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24995
+CVE-2022-25090 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25090
+CVE-2022-25108 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25108
+CVE-2022-25213 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25213
+CVE-2022-25214 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25214
+CVE-2022-25215 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25215
+CVE-2022-25217 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25217
+CVE-2022-25218 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25218
+CVE-2022-25219 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25219
+CVE-2022-25225 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25225
+CVE-2022-25230 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25230
+CVE-2022-25234 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25234
+CVE-2022-25243 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25243
+CVE-2022-25244 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25244
+CVE-2022-25294 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25294
+CVE-2022-25325 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25325
+CVE-2022-25368 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25368
+CVE-2022-25546 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25546
+CVE-2022-25547 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25547
+CVE-2022-25548 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25548
+CVE-2022-25549 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25549
+CVE-2022-25550 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25550
+CVE-2022-25551 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25551
+CVE-2022-25552 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25552
+CVE-2022-25553 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25553
+CVE-2022-25554 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25554
+CVE-2022-25555 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25555
+CVE-2022-25556 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25556
+CVE-2022-25557 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25557
+CVE-2022-25558 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25558
+CVE-2022-25560 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25560
+CVE-2022-25561 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25561
+CVE-2022-25566 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25566
+CVE-2022-25814 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25814
+CVE-2022-25815 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25815
+CVE-2022-25816 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25816
+CVE-2022-25817 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25817
+CVE-2022-25818 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25818
+CVE-2022-25819 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25819
+CVE-2022-25820 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25820
+CVE-2022-25821 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25821
+CVE-2022-25822 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25822
+CVE-2022-25823 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25823
+CVE-2022-25824 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25824
+CVE-2022-25825 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25825
+CVE-2022-25826 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25826
+CVE-2022-25827 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25827
+CVE-2022-25828 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25828
+CVE-2022-25829 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25829
+CVE-2022-25830 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25830
+CVE-2022-25922 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25922
+CVE-2022-26100 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26100
+CVE-2022-26101 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26101
+CVE-2022-26102 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26102
+CVE-2022-26103 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26103
+CVE-2022-26104 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26104
+CVE-2022-26131 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26131
+CVE-2022-26143 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26143
+CVE-2022-26311 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26311
+CVE-2022-26333 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26333
+CVE-2022-26355 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26355
+CVE-2022-26488 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26488
+CVE-2022-26520 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26520
+CVE-2022-26521 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26521
+CVE-2022-26652 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26652
+CVE-2022-26661 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26661
+CVE-2022-26662 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26662
+CVE-2022-26778 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26778
+CVE-2022-26846 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26846
+CVE-2022-26847 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26847
+[remote] Tdarr 2.00.15 - Command Injection : https://www.exploit-db.com/exploits/50822
+[remote] Seowon SLR-120 Router - Remote Code Execution (Unauthenticated) : https://www.exploit-db.com/exploits/50821
+USN-5322-1: Subversion vulnerability : https://ubuntu.com/security/notices/USN-5322-1
+USN-5321-1: Firefox vulnerabilities : https://ubuntu.com/security/notices/USN-5321-1
+CVE-2021-41233 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41233
+CVE-2021-44585 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44585
+CVE-2021-44597 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44597
+CVE-2022-0280 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0280
+CVE-2022-0815 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0815
+CVE-2022-0820 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0820
+CVE-2022-0821 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0821
+CVE-2022-0822 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0822
+CVE-2022-24726 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24726
+CVE-2022-24750 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24750
+CVE-2022-25506 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25506
+CVE-2022-25507 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25507
+CVE-2022-25508 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25508
+CVE-2022-25510 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25510
+CVE-2022-25511 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25511
+CVE-2022-25512 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25512
+DSA-5099 tryton-proteus : https://www.debian.org/security/2022/dsa-5099
+DSA-5098 tryton-server : https://www.debian.org/security/2022/dsa-5098
+CVE-2018-25031 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2018-25031
+CVE-2020-36518 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-36518
+CVE-2021-46708 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-46708
+CVE-2022-0870 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0870
+CVE-2022-0871 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0871
+CVE-2022-0912 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0912
+CVE-2022-0913 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0913
+CVE-2022-0928 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0928
+CVE-2022-21177 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21177
+CVE-2022-21194 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21194
+CVE-2022-21808 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21808
+CVE-2022-22141 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22141
+CVE-2022-22145 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22145
+CVE-2022-22148 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22148
+CVE-2022-22151 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22151
+CVE-2022-22729 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22729
+CVE-2022-23401 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23401
+CVE-2022-23402 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23402
+CVE-2022-26874 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26874
+CVE-2022-26878 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26878
+'We Are Not Ready': A Cyber Expert On US Vulnerability To A Russian Attack : https://packetstormsecurity.com/news/view/33202/We-Are-Not-Ready-A-Cyber-Expert-On-US-Vulnerability-To-A-Russian-Attack.html
+Moscow To Issue HTTPS Certs To Russian Websites : https://packetstormsecurity.com/news/view/33199/Moscow-To-Issue-HTTPS-Certs-To-Russian-Websites.html
+DDoS Releases Alleged Leak Of Russian Censorship Agency : https://packetstormsecurity.com/news/view/33201/DDoS-Releases-Alleged-Leak-Of-Russian-Censorship-Agency.html
+Raccoon Stealer Crawls Into Telegram : https://packetstormsecurity.com/news/view/33200/Raccoon-Stealer-Crawls-Into-Telegram.html
+NetWalker Ransomware Affiliate Extradited To The US For Further Charges : https://packetstormsecurity.com/news/view/33203/NetWalker-Ransomware-Affiliate-Extradited-To-The-US-For-Further-Charges.html
+Ubuntu Security Notice USN-5321-1 : https://packetstormsecurity.com/files/166284/USN-5321-1.txt
+Ubuntu Security Notice USN-5322-1 : https://packetstormsecurity.com/files/166283/USN-5322-1.txt
+Red Hat Security Advisory 2022-0821-01 : https://packetstormsecurity.com/files/166282/RHSA-2022-0821-01.txt
+Red Hat Security Advisory 2022-0823-01 : https://packetstormsecurity.com/files/166281/RHSA-2022-0823-01.txt
+Red Hat Security Advisory 2022-0822-01 : https://packetstormsecurity.com/files/166280/RHSA-2022-0822-01.txt
+Red Hat Security Advisory 2022-0056-01 : https://packetstormsecurity.com/files/166279/RHSA-2022-0056-01.txt
+Red Hat Security Advisory 2022-0820-01 : https://packetstormsecurity.com/files/166278/RHSA-2022-0820-01.txt
+Red Hat Security Advisory 2022-0818-01 : https://packetstormsecurity.com/files/166277/RHSA-2022-0818-01.txt
+Red Hat Security Advisory 2022-0815-01 : https://packetstormsecurity.com/files/166276/RHSA-2022-0815-01.txt
+Red Hat Security Advisory 2022-0816-01 : https://packetstormsecurity.com/files/166275/RHSA-2022-0816-01.txt
+Red Hat Security Advisory 2022-0817-01 : https://packetstormsecurity.com/files/166274/RHSA-2022-0817-01.txt
+Seowon SLR-120 Router Remote Code Execution : https://packetstormsecurity.com/files/166273/seowonslr120-exec.txt
+Red Hat Security Advisory 2022-0825-01 : https://packetstormsecurity.com/files/166272/RHSA-2022-0825-01.txt
+Red Hat Security Advisory 2022-0826-01 : https://packetstormsecurity.com/files/166271/RHSA-2022-0826-01.txt
+Red Hat Security Advisory 2022-0827-01 : https://packetstormsecurity.com/files/166270/RHSA-2022-0827-01.txt
+Red Hat Security Advisory 2022-0828-01 : https://packetstormsecurity.com/files/166269/RHSA-2022-0828-01.txt
+Employee Performance Evaluation System 1.0 SQL Injection : https://packetstormsecurity.com/files/166268/epes10-sql.txt
+Red Hat Security Advisory 2022-0829-01 : https://packetstormsecurity.com/files/166267/RHSA-2022-0829-01.txt
+Red Hat Security Advisory 2022-0830-01 : https://packetstormsecurity.com/files/166266/RHSA-2022-0830-01.txt
+Red Hat Security Advisory 2022-0831-01 : https://packetstormsecurity.com/files/166265/RHSA-2022-0831-01.txt
+Red Hat Security Advisory 2022-0819-01 : https://packetstormsecurity.com/files/166264/RHSA-2022-0819-01.txt
+Tdarr 2.00.15 Command Injection : https://packetstormsecurity.com/files/166263/tdarr20015-exec.txt
+FLEX 1080/1085 Web 1.6.0 Information Disclosure : https://packetstormsecurity.com/files/166262/flex1085-disclose.txt
+Red Hat Security Advisory 2022-0824-01 : https://packetstormsecurity.com/files/166261/RHSA-2022-0824-01.txt
+Red Hat Security Advisory 2022-0832-01 : https://packetstormsecurity.com/files/166260/RHSA-2022-0832-01.txt
+CVE-2021-23246 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-23246
+CVE-2021-24216 (one-stop_wp_migration) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24216
+CVE-2021-24777 (contact_form) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24777
+CVE-2021-24778 (tradetracker-store) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24778
+CVE-2021-24810 (wp_event_manager) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24810
+CVE-2021-24821 (cost_calculator) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24821
+CVE-2021-24824 (custom_content_shortcode) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24824
+CVE-2021-24825 (custom_content_shortcode) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24825
+CVE-2021-24826 (custom_content_shortcode) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24826
+CVE-2021-24952 (conversios.io) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24952
+CVE-2021-24953 (advanced_iframe) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24953
+CVE-2021-24960 (wordpress_file_upload, wordpress_file_upload_pro) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24960
+CVE-2021-24961 (wordpress_file_upload, wordpress_file_upload_pro) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24961
+CVE-2021-25009 (correosexpress) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25009
+CVE-2021-25038 (multisite_user_sync/unsync) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25038
+CVE-2021-25039 (multisite_content_copier/updater) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25039
+CVE-2021-25087 (wordpress_download_manager) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25087
+CVE-2021-25098 (easy_pricing_tables) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25098
+CVE-2021-26341 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-26341
+CVE-2021-26401 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-26401
+CVE-2021-27414 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-27414
+CVE-2021-27416 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-27416
+CVE-2021-32009 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32009
+CVE-2021-32472 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32472
+CVE-2021-32473 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32473
+CVE-2021-32474 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32474
+CVE-2021-32475 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32475
+CVE-2021-32476 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32476
+CVE-2021-32477 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32477
+CVE-2021-32478 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32478
+CVE-2021-33150 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33150
+CVE-2021-33658 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33658
+CVE-2021-36809 (ssl_vpn_client) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-36809
+CVE-2021-37208 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-37208
+CVE-2021-37209 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-37209
+CVE-2021-41181 (talk) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41181
+CVE-2021-41541 (climatix_pol909_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41541
+CVE-2021-41542 (climatix_pol909_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41542
+CVE-2021-41543 (climatix_pol909_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41543
+CVE-2021-4198 (antivirus_plus, endpoint_security_tools, internet_security, total_security, vpn_standalone) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-4198
+CVE-2021-4199 (antivirus_plus, endpoint_security_tools, internet_security, total_security) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-4199
+CVE-2021-42016 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42016
+CVE-2021-42017 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42017
+CVE-2021-42018 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42018
+CVE-2021-42019 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42019
+CVE-2021-42020 (ruggedcom_ros) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42020
+CVE-2021-44478 (polarion_subversion_webclient) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44478
+CVE-2021-44618 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44618
+CVE-2021-44620 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44620
+CVE-2021-44667 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44667
+CVE-2021-44748 (safe) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44748
+CVE-2021-44749 (safe) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44749
+CVE-2021-46704 (genieacs) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-46704
+CVE-2022-0001 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0001
+CVE-2022-0002 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0002
+CVE-2022-0163 (smart_forms) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0163
+CVE-2022-0205 (yop-poll) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0205
+CVE-2022-0267 (adrotate) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0267
+CVE-2022-0347 (loginpress) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0347
+CVE-2022-0349 (notificationx) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0349
+CVE-2022-0384 (video_conferencing_with_zoom) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0384
+CVE-2022-0389 (wp_time_slots_booking_form) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0389
+CVE-2022-0410 (wp_visitor_statistics) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0410
+CVE-2022-0420 (registrationmagic) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0420
+CVE-2022-0422 (white_label_cms) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0422
+CVE-2022-0426 (product_feed_pro_for_woocommerce) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0426
+CVE-2022-0429 (wp_cerber_security,_anti-spam_&_malware_scan) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0429
+CVE-2022-0434 (page_view_count) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0434
+CVE-2022-0439 (email_subscribers_&_newsletters) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0439
+CVE-2022-0440 (catch_themes_demo_import) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0440
+CVE-2022-0441 (masterstudy_lms) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0441
+CVE-2022-0442 (userswp) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0442
+CVE-2022-0445 (wordpress_real_cookie_banner) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0445
+CVE-2022-0448 (cp_blocks) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0448
+CVE-2022-0533 (ditty) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0533
+CVE-2022-0535 (e2pdf) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0535
+CVE-2022-0697 (archivy) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0697
+CVE-2022-0754 (suitecrm) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0754
+CVE-2022-0755 (suitecrm) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0755
+CVE-2022-0756 (suitecrm) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0756
+CVE-2022-0766 (calibre-web) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0766
+CVE-2022-0853 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0853
+CVE-2022-0860 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0860
+CVE-2022-0868 (uri.js) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0868
+CVE-2022-0869 (spirit) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0869
+CVE-2022-0877 (bookstack) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0877
+CVE-2022-0881 (peertube) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0881
+CVE-2022-0896 (microweber) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0896
+CVE-2022-0907 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0907
+CVE-2022-0908 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0908
+CVE-2022-0909 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0909
+CVE-2022-0921 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0921
+CVE-2022-0924 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0924
+CVE-2022-0932 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0932
+CVE-2022-21819 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21819
+CVE-2022-23187 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23187
+CVE-2022-23625 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23625
+CVE-2022-23730 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23730
+CVE-2022-23731 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23731
+CVE-2022-23924 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23924
+CVE-2022-23925 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23925
+CVE-2022-23926 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23926
+CVE-2022-23927 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23927
+CVE-2022-23928 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23928
+CVE-2022-23929 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23929
+CVE-2022-23930 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23930
+CVE-2022-23931 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23931
+CVE-2022-23932 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23932
+CVE-2022-23933 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23933
+CVE-2022-23934 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23934
+CVE-2022-24090 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24090
+CVE-2022-24094 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24094
+CVE-2022-24095 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24095
+CVE-2022-24096 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24096
+CVE-2022-24097 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24097
+CVE-2022-24281 (sinec_network_management_syste) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24281
+CVE-2022-24282 (sinec_network_management_system) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24282
+CVE-2022-24309 (mendix) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24309
+CVE-2022-24408 (sinumerik_mc_firmware, sinumerik_one_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24408
+CVE-2022-24415 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24415
+CVE-2022-24416 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24416
+CVE-2022-24419 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24419
+CVE-2022-24420 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24420
+CVE-2022-24421 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24421
+CVE-2022-24433 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24433
+CVE-2022-24661 (simcenter_star-ccm+_viewer) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24661
+CVE-2022-24754 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24754
+CVE-2022-25216 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25216
+CVE-2022-25311 (sinec_network_management_system) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25311
+CVE-2022-25600 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25600
+CVE-2022-25601 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25601
+CVE-2022-25621 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25621
+CVE-2022-25839 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25839
+CVE-2022-26313 (forgot_password) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26313
+CVE-2022-26314 (forgot_password) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26314
+CVE-2022-26317 (mendix) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26317
+CVE-2022-26495 (debian_linux, network_block_device) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26495
+CVE-2022-26496 (network_block_device) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26496
+CVE-2022-26505 (readymedia) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26505
+CVE-2020-14111 (ax3600_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-14111
+CVE-2020-14112 (ax6000_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-14112
+CVE-2020-14115 (ax3600_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-14115
+CVE-2020-36123 (libsixel) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-36123
+CVE-2021-22783 (ritto_wiser_door) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-22783
+CVE-2021-28488 (network_manager) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-28488
+CVE-2021-32005 (sitemanager_1129_firmware, sitemanager_1139_firmware, sitemanager_1149_firmware, sitemanager_3329_firmware, sitemanager_3339_firmware, sitemanager_3349_firmware, sitemanager_3529_firmware, sitemanager_3539_firmware, sitemanager_3549_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32005
+CVE-2021-32434 (abcm2ps) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32434
+CVE-2021-32435 (abcm2ps) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32435
+CVE-2021-32436 (abcm2ps) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-32436
+CVE-2021-33851 (customize_login_image) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33851
+CVE-2021-33852 (post_duplicator) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-33852
+CVE-2021-34338 (fedora, ming) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34338
+CVE-2021-34339 (fedora, ming) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34339
+CVE-2021-34340 (fedora, ming) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34340
+CVE-2021-34341 (fedora, ming) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34341
+CVE-2021-34342 (fedora, ming) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-34342
+CVE-2021-38296 (spark) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-38296
+CVE-2021-41848 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41848
+CVE-2021-41849 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41849
+CVE-2021-41850 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41850
+CVE-2021-42262 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42262
+CVE-2021-42577 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42577
+CVE-2021-44622 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44622
+CVE-2021-44623 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44623
+CVE-2021-44625 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44625
+CVE-2021-44626 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44626
+CVE-2021-44627 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44627
+CVE-2021-44628 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44628
+CVE-2021-44629 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44629
+CVE-2021-44630 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44630
+CVE-2021-44631 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44631
+CVE-2021-44632 (tl-wr886n_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44632
+CVE-2022-0022 (pan-os) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0022
+CVE-2022-0813 (phpmyadmin) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0813
+CVE-2022-0880 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0880
+CVE-2022-24322 (ecostruxure_control_expert) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24322
+CVE-2022-24323 (ecostruxure_control_expert, ecostruxure_process_expert) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24323
+CVE-2022-24734 (mybb) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24734
+CVE-2022-24753 (stripe_cli) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24753
+CVE-2022-24760 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24760
+CVE-2022-25546 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25546
+CVE-2022-25547 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25547
+CVE-2022-25548 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25548
+CVE-2022-25549 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25549
+CVE-2022-25550 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25550
+CVE-2022-25551 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25551
+CVE-2022-25552 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25552
+CVE-2022-25553 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25553
+CVE-2022-25554 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25554
+CVE-2022-25555 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25555
+CVE-2022-25557 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25557
+CVE-2022-25558 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25558
+CVE-2022-25566 (ax1806_firmware) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25566
+CVE-2022-26276 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26276
+CVE-2022-26533 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26533
+CVE-2022-0926 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0926
+CVE-2022-0929 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0929
+CVE-2022-0930 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0930
+CVE-2021-36368 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-36368
+CVE-2021-45886 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-45886
+CVE-2021-45887 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-45887
+CVE-2021-45888 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-45888
+CVE-2021-45889 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-45889
+CVE-2021-46709 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-46709
+CVE-2022-23960 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23960
+CVE-2022-24128 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24128
+CVE-2022-24696 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24696
+CVE-2022-26966 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26966
+CVE-2022-26967 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26967
+CVE-2022-26981 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26981
+Report: Recent 10x Increase in Cyberattacks on Ukraine : https://krebsonsecurity.com/2022/03/report-recent-10x-increase-in-cyberattacks-on-ukraine/

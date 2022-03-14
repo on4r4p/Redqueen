@@ -1,21 +1,21 @@
-Modlishka
-Muraena
-Necrobrowser
-Evilginx2
+modlishka
+muraena
+necrobrowser
+evilginx2
 logj4
 ret2libc
 3xpl0its
-FakeUnicode
-Sebdraven
-Heroku
+fakeunicode
+sebdraven
+heroku
 weaponised pdf
 sms class
 haveibeenpwned
 iamsmittix
 assbot1234
-FuxNet
+fuxnet
 s0lst1c3
-Herve_Schauer
+herve_schauer
 femtocell
 mitm
 amammad
@@ -43,24 +43,24 @@ lynis
 rkhunter
 clamav
 chkrootkit
-QuarksPwdump
-PwDump
-MimiKatz
-GsecDump
+quarkspwdump
+pwdump
+mimikatz
+gsecdump
 drive-by download
-DROWN PKCS
-PKCS
+drown pkcs
+pkcs
 poodle oracle
-Beast exploit
+beast exploit
 logjam
-Lucky13
+lucky13
 kamkar
 rolljam
 rfcatwks
 yardstickone
 hackrf one
-CognoSec
-SecBee
+cognosec
+secbee
 killerbee python
 zigbee
 aes-ccm
@@ -69,11 +69,11 @@ aes-ctr
 osi model
 802.11
 802.15.4
-BYOIoT
+byoiot
 actor-centric
 target-centric
-Gootkit
-Dridex
+gootkit
+dridex
 ooda loop
 boucle ooda
 pyramid of pain
@@ -84,18 +84,18 @@ bootkit petya
 dnsmasq
 glibc
 getaddrinfo
-DNS over TCP
+dns over tcp
 domotique
 domotic
 cryptage nombre premier
 prime number crypt
 2vanssay
-Bourguignon
-phantomJs
+bourguignon
+phantomjs
 xss poc
 xss mining
 nethack
-SSDLC
+ssdlc
 mongodb
 security enthousiast
 malware analyst
@@ -116,17 +116,17 @@ cell jamming
 cell phone jamming
 cell phone hack
 scareware
-PanguTeam
-McGrewSecurity
+panguteam
+mcgrewsecurity
 packetstormsecurity
 input validation error
-GhostShell
+ghostshell
 hoax
 hoaxbuster
 bugmenot
 carbanak gang
 .lua
-VBS
+vbs
 unix
 makefile
 cmake
@@ -151,152 +151,151 @@ bootkit
 backdooring
 selling credentials
 surveillance platform
-Dns reflection amplification
-CVE-2016
-StressLinux
+dns reflection amplification
+cve-2016
+stresslinux
 tomsrtbt
-Tiny SliTaz
-RIMiRadio
-Nuclinux
-NASLite
-Linux Router Project
-HVLinux
-HAL91
-Freesco
+tiny slitaz
+rimiradio
+nuclinux
+naslite
+linux router project
+hvlinux
+hal91
+freesco
 floppyfw
-Coyote Linux
-xPUD
-VectorLinux
-Toutankinux
-Feather Linux
-Embedded Debian
-Chromium OS
-BunsenLabs
-antiX
-Zorin OS
-Zeroshell
-Zenwalk
-Zentyal
-YunoHost
-Ylmf OS
+coyote linux
+xpud
+vectorlinux
+toutankinux
+feather linux
+embedded debian
+chromium os
+bunsenlabs
+antix
+zorin os
+zeroshell
+zenwalk
+zentyal
+yunohost
+ylmf os
 crypto entropy
-Xubuntu
-Xandros
-Xange linux
-WinLinux
-VidaLinux
-Ulteo
-TurboLinux
-Trustix
-Trisquel
-Trinux
-TopologiLinux
-Tiny Core Linux
-SteamOS
-SolusOS
-SME Server
-SliTaz GNU
-Slax linux
-Sabayon Linux
-Rxart
-ROSA linux
-Puppy Linux
-PrimTux
+xubuntu
+xandros
+xange linux
+winlinux
+vidalinux
+ulteo
+turbolinux
+trustix
+trisquel
+trinux
+topologilinux
+tiny core linux
+steamos
+solusos
+sme server
+slitaz gnu
+slax linux
+sabayon linux
+rxart
+rosa linux
+puppy linux
+primtux
 rom hack
-Platypux
-PinguyOS
-Pardus
-Parabola GNU
-NuTyX
-NUbuntu
-Netrunner OS
-Musix GNU
-Maemo
-MEPIS
-Lunar Linux
-Lubuntu
-Linux Mint
-Linux From Scratch
-Linux xp
-LinuxConsole
+platypux
+pinguyos
+pardus
+parabola gnu
+nutyx
+nubuntu
+netrunner os
+musix gnu
+maemo
+mepis
+lunar linux
+lubuntu
+linux mint
+linux from scratch
+linux xp
+linuxconsole
 play on linux
 linux wine
 linux ps2
-Linutop OS
-Linspire
-Kubuntu
-Kororaa
-Knoppix
-Kanotix
-KaOS linux
-Kali linux
-Kaella
-IPCop
-Hybryde Linux
-HandyLinux
-GoboLinux
-Goblinx
-Gnoppix
-gNewSense
-GeeXboX
-Funtoo
-Frugalware
-Freespire
-Free-EOS
-Foresight Linux
-Flonix
+linutop os
+linspire
+kubuntu
+kororaa
+knoppix
+kanotix
+kaos linux
+kali linux
+kaella
+ipcop
+hybryde linux
+handylinux
+gobolinux
+goblinx
+gnoppix
+gnewsense
+geexbox
+funtoo
+frugalware
+freespire
+free-eos
+foresight linux
+flonix
 fli4l
-Elive
-elementary OS
-EduLinux
-Edubuntu
-DoudouLinux
-Dreamlinux
-Dragora GNU
-DidJiX
-Demudi Linux
-Damn Vulnerable Linux
-Damn Small Linux
-Cubuntu
-CrunchBang
-Chakra
-CentOS
-Castle Linux
-Calculate Linux
-Caixa Mágica
-CAELinux
-BLAG 140
-Bodhi Linux
-BasicLinux
-Baltix
-BackTrack
-Aurox
-Aurox Live
-Augustux
-ASRI Edu
-Asianux
-Ark Linux
-ArchBang
-Aptosid
-APODIO
-Peanut Linux
-CLinuxOS
-PCLinuxOS
-Mageia
-Mandriva
-Manjaro
-Arch Linux
-SUSE
-Slackware
+elementary os
+edulinux
+edubuntu
+doudoulinux
+dreamlinux
+dragora gnu
+didjix
+demudi linux
+damn vulnerable linux
+damn small linux
+cubuntu
+crunchbang
+chakra
+centos
+castle linux
+calculate linux
+caixa mágica
+caelinux
+blag 140
+bodhi linux
+basiclinux
+baltix
+backtrack
+aurox
+aurox live
+augustux
+asri edu
+asianux
+ark linux
+archbang
+aptosid
+apodio
+peanut linux
+clinuxos
+pclinuxos
+mageia
+mandriva
+manjaro
+arch linux
+suse
+slackware
 fedora
-SSNs
+ssns
 gentoo
-LSASS
+lsass
 chiffrement
 xml injection
 method handles
 alphabay
-Java message service
+java message service
 netsec
 server down
 net neutrality
@@ -304,7 +303,7 @@ freebsd
 script-based
 bugtrack
 atilla.org
-HackQuest.com
+hackquest.com
 hx0r
 slyfx
 cyberarmy
@@ -312,12 +311,12 @@ mod-x.co.uk
 alph4net.free.fr
 cyberjihad
 globalsecuritymag.fr
-Instant-Hack
+instant-hack
 dothazard.com
 intrusio.fr
-Tobozo
+tobozo
 n-pn.fr
-Ensimag hacking team
+ensimag hacking team
 febel.fr
 zataz
 chan irc hack
@@ -326,22 +325,22 @@ hackateam.com
 0x0ff
 nuit du hack
 hackademics
-Honeynet
+honeynet
 hackers convention
 hacker contest
 hacking contest
-United Hackers Army
-CTFTIME
-EXPLOIT EXERCISES
+united hackers army
+ctftime
+exploit exercises
 pwn0.com
 pwn0bots
-REVERSING.KR
-MICROCORRUPTION
-SMASHTHESTACK
+reversing.kr
+microcorruption
+smashthestack
 netgarage.org
 pwnable.kr
-OVERTHEWIRE
-CTF365
+overthewire
+ctf365
 hackerearth.com
 seclists.org
 the-hackfest.com
@@ -365,198 +364,197 @@ root-me.org
 canyouhack.it
 2600
 canyouhack.us
-SlaveHack
-Ethical Hacker Network
-HellBound Hackers
+slavehack
+ethical hacker network
+hellbound hackers
 devops
 webgoat
-Vicnum
-The Butterfly Security Project
-Security Shepherd
-Mutillidae
-McAfee HacMe
-InsecureWebApp
+vicnum
+the butterfly security project
+security shepherd
+mutillidae
+mcafee hacme
+insecurewebapp
 igoat
-Google Gruyere
+google gruyere
 exploitme
-DVWA
-Untrusted input
+dvwa
+untrusted input
 broken crypto
 server side
-Client Side Injection
-Runtime Manipulation
-Jailbreak Detection
+client side injection
+runtime manipulation
+jailbreak detection
 third party libraries
-Extension Vulnerabilities
-DVIA
-bWAPP
-OWASP Bricks
-EnigmaGroup
-Moth hack
-BodgeIt Store
+extension vulnerabilities
+dvia
+bwapp
+owasp bricks
+enigmagroup
+moth hack
+bodgeit store
 keygen
 haxor
-Hackxor
-HackThis
-Try2Hack
-Highly Efficient Low Level Code
+hackxor
+hackthis
+try2hack
+highly efficient low level code
 cloud hack
-Hack Yourself First
-Micro Contest
-LOST Chall
-Newbie Contest
-Rankk
-Hacker.org
-Mibs Challenges
-Hack This Site
-Net Force
-BrainQuest
-InfoMirmo
-Yashira
-W3Challs
-Root Me
-Le Big Challenge
+hack yourself first
+micro contest
+lost chall
+newbie contest
+rankk
+hacker.org
+mibs challenges
+hack this site
+net force
+brainquest
+infomirmo
+yashira
+w3challs
+root me
+le big challenge
 alphanet
-Fatetek Challenges
-Mod x
-Hax.Tor
-Bright Shadows
-Dare Your Mind
-RingZero Team
-Mudge
-Boris Floricic
-Anakata
-Richard Stallman
-Dmitry Sklyarov
-Roman Seleznev
-Oxblood Ruffin
-Leonard Rose
-DilDog
-Kevin Poulsen
+fatetek challenges
+mod x
+hax.tor
+bright shadows
+dare your mind
+ringzero team
+mudge
+boris floricic
+anakata
+richard stallman
+dmitry sklyarov
+roman seleznev
+oxblood ruffin
+leonard rose
+dildog
+kevin poulsen
 homebrew
-Knight Lightning
-Dennis Moran
-Robert Tappan Morris
-Hector Monsegur
-Gary Mckinnon
-Fyodor hacker
-Lord Digital
+knight lightning
+dennis moran
+robert tappan morris
+hector monsegur
+gary mckinnon
+fyodor hacker
+lord digital
 hagbard
-Joybubbles
+joybubbles
 geohot
-Acidus
-Guccifer
+acidus
+guccifer
 nag screen
-Bruce Fancher
-Nahshon Even-Chaim
-John Draper
-Captain Crunch
-RBCP
-Loyd Blankenship
-Mendax
-Tflow
-Phiber Optik
+bruce fancher
+nahshon even-chaim
+john draper
+captain crunch
+rbcp
+loyd blankenship
+mendax
+tflow
+phiber optik
 internet underground
 linux underground
 mac underground
-Xbox Underground
-YIPL
-UGNazi
-The Unknowns hack
-Teso
-TeslaTeam
-RedHack
-PHIRM
-NCPH
-Masters of Deception
-Mazafaka
-Legion of Doom
-Lizard Squad,
-Level Seven
-L0pht
-Honker Union
-Hackweiser
+xbox underground
+yipl
+ugnazi
+the unknowns hack
+teso
+teslateam
+redhack
+phirm
+ncph
+masters of deception
+mazafaka
+legion of doom
+lizard squad,
+level seven
+l0pht
+honker union
+hackweiser
 goatsec
-globalHell
-Equation Group
-Global kOS
-DawgPound
-DERP
-Decocidio
-CyberVor
-Dark0de
-Cult of the Dead Cow
-Croatian Revolution Hackers
-Cicada 3301,
-Chaos Computer Club
-FinnSec Security
+globalhell
+equation group
+global kos
+dawgpound
+derp
+decocidio
+cybervor
+dark0de
+cult of the dead cow
+croatian revolution hackers
+cicada 3301,
+chaos computer club
+finnsec security
 414s
-Group5
+group5
 netscape
 pwnie awards
 security researcher
-BHUSA
+bhusa
 pgp
 encrypted mail
 secure mail server
-vBulletin
-Apache Tomcat
-Coldfusion
-ASP.NET
-Retina Report
-Nessus Scan Report
-SnortSnarf
+vbulletin
+apache tomcat
+coldfusion
+asp.net
+retina report
+nessus scan report
+snortsnarf
 mirc
-LOGREP
-Apache::Status
-SQLiteManager
-Tobias Oetiker
+logrep
+apache::status
+sqlitemanager
+tobias oetiker
 sets mode
 wwwstat
-Generated by phpSystem
+generated by phpsystem
 mysql dump
-phpWebMail
+phpwebmail
 gnatsweb.pl
 webedit
 inurl:/
 cgi-bin
-Citrix
-CVE
+citrix
+cve
 alice bot
 sea hacker
 chatter bot
 automagically
-Syrian Electronic Army
-LulzSec
+syrian electronic army
+lulzsec
 gray hat
-Distributed denial of service
-Denial of service
+distributed denial of service
+denial of service
 compiler
 hook cheat
-TWEAK cheat
+tweak cheat
 trainer cheat
 cracking team
-DAEMON
-CRLF
-COMM MODE
-CANONICAL
-Ethical Hacking
-Skidz
+daemon
+crlf
+comm mode
+canonical
+ethical hacking
+skidz
 ascii art
 blue hat
 defaced
-Dictionary Attack
+dictionary attack
 doxing tool
-DOX tool
-FUD
-Fully undetectable
+dox tool
+fully undetectable
 grey hat
-IP Grabbing
+ip grabbing
 backorifice
-LOIC anonymous
-Rainbow Table
+loic anonymous
+rainbow table
 rat trojan
-Remote Administration Tool
+remote administration tool
 ring3
 ring2
 ring0
@@ -566,120 +564,118 @@ vps
 worm malware
 turing test
 sysadmin
-SaaS
+saas
 stack buffer overflow
-CA cert
-Hardware vulnerability
+ca cert
+hardware vulnerability
 physical backdoor
-Vuln:
-Vuln
+vuln:
+vuln
 adblocker
-Exploit framework
+exploit framework
 crypto party
 ssh
-Passphrase
-Linux Distro
-RFC
-Hardcoded
+passphrase
+linux distro
+rfc
+hardcoded
 hackintosh
-Os X
-P2P
+os x
+p2p
 cloud-based
-Oracle java
-IT guy
-Encrypted Chat
-VmWare
+oracle java
+it guy
+encrypted chat
+vmware
 cyber police
-AdGholas
+adgholas
 malvertising
 hadopi
 cnil
 golang
 hacked by
 piratage
-Postgresql
-Julian Assange
-DNC
-GNU
-QRLJacking
+postgresql
+julian assange
+gnu
+qrljacking
 kevin mitnick
 csrf exploit
 session hijack
 darkweb
 .onion
 wlan
-Wireless Local Area Network
+wireless local area network
 wardriving
-Wireless Access Point
+wireless access point
 wep
 cyber security
-Wpa2
+wpa2
 blackhat
-Shellcode
+shellcode
 vpn
-Virtual Machine
+virtual machine
 sandboxing
 crypto currency
-Full Disclosure
-Tunneling
-Gps spoofing
-untrusted Certificate
+full disclosure
+tunneling
+gps spoofing
+untrusted certificate
 ransomware
-Trojan Horse
-Transport Layer Security
-Triple DES
-Assembly language
-Real hack
+trojan horse
+transport layer security
+triple des
+assembly language
+real hack
 real programmmer
 crack me
 hack me
 true hacker
-security traffic Analysis
-Tracking Cookie
+security traffic analysis
+tracking cookie
 tampered data
 bluetooth crack
 data breach
 script kiddie
 brute force
-Symmetric Key
-Surrogate Access
-Raspberry pi
-Arduino
-Steganography
-Spyware
+symmetric key
+surrogate access
+raspberry pi
+arduino
+steganography
+spyware
 mail bombing
 jailbreak
-YesCard
-Skimming
-Phreaking
+yescard
+skimming
+phreaking
 cracking
 malloc
-data Sensitivity
-Python exploit
+data sensitivity
+python exploit
 ruby hack
 security kernel
-C++ exploit
-reverse Engineering
-Security Engineering
+c++ exploit
+reverse engineering
+security engineering
 turbo pascal
 ssl
 hacking tool
 php vulnerability
 hackervoice
 worms variant
-DNS
-Scatternet
+dns
+scatternet
 cheval de troie
 javascript exploit
-Sandboxing
-Rootkit
-Bash script
+rootkit
+bash script
 windbg
 rogue device
 ollydbg
 assembler code
 ip spoofing
-Rijndael
+rijndael
 apache vulnerability
 darkdao
 repository
@@ -687,15 +683,15 @@ shodan
 scammers
 critical vulnerability
 code injection
-ICBM address
-RFID security
+icbm address
+rfid security
 paiement sans contact
-RFID protocol
-Radio Frequency Identification
-Gbd ida
+rfid protocol
+radio frequency identification
+gbd ida
 private key
 pseudorandom
-Proxy Agent
+proxy agent
 tor network
 vpn open source
 memory corruption
@@ -704,18 +700,18 @@ proxychain
 la quadrature du net
 heap exploitation
 stack cookies
-Fuzzing
+fuzzing
 integer overflow
 hackathon
 api key
 1337
-Social-Engeneering Toolkit
+social-engeneering toolkit
 port scanner
 bluetooth protocol
 bluetooth security
 port scanning
-Payload
-Framework
+payload
+framework
 port knocking
 wireless attack
 log files
@@ -732,13 +728,12 @@ wordpress exploit
 binary memory
 byod
 router exploit
-Cookie stuffing
-Windows stack overflow
+cookie stuffing
+windows stack overflow
 shell exploit
 message digest
-Cryptosystem
+cryptosystem
 reverse shell
-MitM
 hardware keylogger
 malicious code
 hack team
@@ -750,20 +745,19 @@ meterpreter
 segfault
 pastejacking
 network takeover
-Sphear phishing
+sphear phishing
 key logger
 key escrow
-Kerberos
+kerberos
 flood attack
 go language
 depassement de tampon
 irc hack
 ipsec
-exec
 system intrusion
 ipv6
 ipv4
-Fake update
+fake update
 packet injection
 bruteforcer
 android vulnerability
@@ -780,7 +774,7 @@ disk encryption
 frequency hopping
 forward cipher
 shitware
-Firefox vulnerability
+firefox vulnerability
 bypass firewall
 file encryption
 ssl tls
@@ -797,10 +791,10 @@ tinfoleak
 infosec
 encoding
 voip security
-EOF
+eof
 electronic signature
 egress filtering
-DEADBEEF
+deadbeef
 konami code
 dmz
 wireless scanner
@@ -827,7 +821,7 @@ key generation
 network exploitation
 network attack
 local pentest
-COMSEC
+comsec
 common vulnerabilities
 internet of things
 misconfiguration
@@ -842,8 +836,8 @@ sqli
 data leak
 users passwords
 blackbox hack
-IRC network
-Critical patch
+irc network
+critical patch
 playstation jailbreak
 banner grabbing
 xbox jailbreak
@@ -855,10 +849,10 @@ authentication protocol
 audit framework
 open source security tool
 file signature
-BSides
+bsides
 antispyware
 chelsea manning
-QR code infosec
+qr code infosec
 anonymous
 advanced persistent threats
 pirate bay
@@ -876,7 +870,7 @@ ddos
 malware
 rfid
 patch flaw
-SocialEngineering
+socialengineering
 0day
 cross site scripting
 install backdoor
@@ -908,11 +902,10 @@ israel hack
 trojan
 botnet
 snowden
-nsa
 whitehat
 hacktivist
 printer exploit
-F3ead
+f3ead
 shellcode emulat
 pdf structure
 parsing pdf
@@ -930,7 +923,7 @@ entropy by section
 shekyan
 girakith
 artem hartutyunyan
-#RPCyber
+#rpcyber
 openbts
 countzero
 osmocon
@@ -952,57 +945,57 @@ hacker stole
 osint tool linux
 fichier monstre
 vie privée
-P4R4D0X1
+p4r4d0x1
 thomas aubin
 paul hernault
-AubinThomas61
+aubinthomas61
 threat intel infosec
 mamtego transform
 rogue gsm
 a5/1 algorithm
 sebastien dudec
-FlUxIuS
-Master key
-VE-2016-
+fluxius
+master key
+ve-2016-
 wpa3
 ps3xploit
 ps3hen
 bgtoolset
 multiman
 psnpatch
-.PUP
+.pup
 .pkg
 .rap
 mynameisv_
-HermeticWiper
-Arbitrium
+hermeticwiper
+arbitrium
 daxin china
 justanotherhacker
-Hermetic Ransom
-TCP Middlebox Reflection
+hermetic ransom
+tcp middlebox reflection
 codingo_
-FFUF
-Fuzz Faster you Fool
+ffuf
+fuzz faster you fool
 conti leak
 meta
 metaverse
 malcat
-SharkBot
+sharkbot
 corelan
-LAPSUS$
-Spectre-v2
-Dirty COW
+lapsus$
+spectre-v2
+dirty cow
 dirty pipe
-Max Kellerman
-CVE-
+max kellerman
+cve-
 vulnérabilité
 vulnerability
-Phith0n
+phith0n
 /etc/passwd
 /etc/shadow
-Brad Spengler
-PwnKit
-CVE-2022
+brad spengler
+pwnkit
+cve-2022
 overwriting data
 inject code
 injecting code
@@ -1010,18 +1003,18 @@ read-only
 arbitrary code
 privileged proc
 access log
-CRC error
+crc error
 round-robin
 log datagrams
 build dependencie
 beng-proxy
-Memory bandwidth
+memory bandwidth
 corrupt file
 corrupted file
 dgse
 tehtris
 éléna poincet
-Laurent Oudot
+laurent oudot
 pipe buffer
 code buffer
 buffer code
@@ -1029,7 +1022,7 @@ egg hunter
 memory management
 fastcgi
 ajp do
-Apache module
+apache module
 system call
 page cache
 userspace
@@ -1039,43 +1032,41 @@ anonymous pipe
 anon pipe
 embedded binarie
 bad allocation
-Hermetica Digital
-Code Signing
-Disable Wow64
-EV Code
-AutoWarp
-Terramaster
-PJSIP
-Octa Patch
-Geoblocking
-TOS Vulnerability
-Captcha Bypass
-Enrico Barberis
-Pietro Frigo
-Marius Muench
-Herbert Bos
-and Cristiano
-Cristiano Giuffrida
+hermetica digital
+code signing
+disable wow64
+ev code
+autowarp
+terramaster
+pjsip
+octa patch
+geoblocking
+tos vulnerability
+captcha bypass
+enrico barberis
+pietro frigo
+marius muench
+herbert bos
+and cristiano
+cristiano giuffrida
 built-in mitigation
-untrusted input
 sending craft
-Thomas Chauchefoin
-Server Side Request Forgery
-ILIT300
-Battalion 300
-Meris botnet
-REvil
-ransom DDoS
-Azure account
-CrowdStrike
-SentinelOne
-Ragnar Locker
+thomas chauchefoin
+server side request forgery
+ilit300
+battalion 300
+meris botnet
+revil
+ransom ddos
+azure account
+crowdstrike
+sentinelone
+ragnar locker
 ragnar gang
-.RGNR_
-RAGNAR_LOCKER
-Transport Layer Security key
-TLStorm
-shellcode
+.rgnr_
+ragnar_locker
+transport layer security key
+tlstorm
 applocker
 attack surface
 subsystem
@@ -1089,25 +1080,25 @@ ebpf
 io_uring
 syscall
 context switches
-Code snippets
+code snippets
 sandboxed
 file descriptor
 io buffer
 io_buffer
 kmalloc
-Use After Free
-SLUB allocator
+use after free
+slub allocator
 ftrace
 heap spray
 userfault
-DEV-0665
+dev-0665
 pcap
-DSA-
-Smart-UPS
-TA416
-Mustang Panda
-Discord webhook
-PlugX
+dsa-
+smart-ups
+ta416
+mustang panda
+discord webhook
+plugx
 dll hijack
 pdf decoy
 network stack
@@ -1117,33 +1108,322 @@ vulnerable target
 target-specific
 information disclosure
 compromised
-Adafruit
+adafruit
 stack-based
 ioc
 iocs
 apt41
-USAHerds
-Mitel MiCollab
-MiVoice Business Express
-MiCollab
-MiVoice
+usaherds
+mitel micollab
+mivoice business express
+micollab
+mivoice
 attack traffic
-Miscreants
-DERP Trolling
+miscreants
+derp trolling
 spoofed request
-NTP attack
-Plex Media
+ntp attack
+plex media
 memcached
-PMSSDP
+pmssdp
 rdp amplification
-AWS Shield
+aws shield
 bps attack
 apt31
-Pluton technology
-Pluton security
-Pluton microsoft
-Formbook
-Winnti
-Barium
-Wicked Panda
-Wicked Spider
+pluton technology
+pluton security
+pluton microsoft
+formbook
+winnti
+barium
+wicked panda
+wicked spider
+pointer dereference
+improper authentication
+bounce tracking
+responding on port
+array overflow
+neutralization of input
+out-of-bounds
+5hadowblad3
+buffer access
+rendered ui
+log4shell
+deadbolt
+roskomnadzor
+aryan chehreghani
+bypass detection
+jeremy mousset
+xml parsing
+remote attacker
+java stack
+path traversal
+acl configuration
+smbpasswd
+lsadump
+ntlm
+bloodhound
+hkey_local
+cross site request forgery
+csrf
+improper initialization
+kernel panic
+window spoof
+sandbox bypass
+sandbox
+stack buffer overrun
+stack buffer
+buffer overrun
+double free
+memory leak
+data leakage
+clickjacking
+null-byte
+off-by-one
+off by one
+free after use
+free-after-use
+weak hashing
+hashing scheme
+field escap
+secure flag
+reflected css
+reflected cross site
+reflected xss
+third party software
+third party website
+unauthenticated access
+fragattack
+denial-of-service
+resource consumption
+improper privilege
+man-in-the-middle
+heap overflow
+integer-wrap
+hard-fault
+cookie hijack
+null pointer
+heap-based
+wraparound
+memory bound
+steveukx
+scara31
+unexpected input
+code review
+bug caused by
+bugs caused by
+error code
+unicode escape
+end to end
+ntcreatefile
+digital signature
+antivirus
+executable
+threat actor
+aes key
+arm binary
+shell script
+spoofed
+keylogging
+imei
+pre-installed
+client crash
+yu3h0
+leonw7
+cpegg
+devilshakerz
+server backend
+le0nsec
+execute
+assembly
+proof of concept
+beacon object file
+rop chain
+nop chain
+dexguard
+dpn
+decentralized private network
+buhtrap group
+buhtrap
+pfsense
+zero-day
+javascript
+colibri loader
+dropper
+residential loader
+github
+gitlab
+bokbot
+danabot
+virustotal
+2fa
+apt20
+opasswd
+dev/null
+pam.d
+id_rsa
+init.d
+cronjob
+crontab
+/var/spool
+systemctl
+getcap
+/etc/sudoers
+/etc/exports
+/dev/mem
+rundll32
+regsrv32
+disassembly
+opcodes
+loadlibrary
+encrypted
+serial number
+uuid
+rc4
+post request
+c2 com
+c2 panel
+amadey
+smoke loader
+zero click
+zero-click
+0click
+account takeover
+session takeover
+notsosecure
+data
+ecb
+broadcast messages
+network-wide
+impersonation attacks
+ed25519
+bit length
+openssh
+one-liner
+one liner
+tweak
+ecdsa
+elliptic curve
+nist
+threat intelligence
+threat intel
+log4j
+non-privileged
+root-access
+root access
+entropy
+character array
+randomized
+macro detection
+phone system
+extra byte
+broken pars
+addresssanitizer
+shadow byte
+container overflow
+poisoned by user
+freed heap
+shadow gap
+threatintel
+cyberattack
+cyber-attack
+c&cs
+csirt
+soc
+otrs
+cyberwar
+monitoring
+reversing
+crackme
+ctf
+rgpd
+win32
+reactos
+logan latvala
+phish
+networking
+ntobjectmanager
+sysmon
+tls cert
+cloud applications
+cloud access
+cloud takeover
+injection techni
+av
+unpacking
+dot net
+.net
+njrat
+shellcoding
+cyber incidents
+tcpdump
+amplification attack
+amplification techni
+rockyou
+ioc of
+pandora ranso
+sectorj09
+threatrecon
+threat recon
+threat-recon
+spear-phishing
+spear phishing
+moniker water goblin
+stormous gang
+botnets
+bazarloader
+cobal strike
+stage infection
+command beacon
+ave maria malware
+cert-ua
+response team
+saintbot
+whispergate
+gamargedon
+bootpatch
+whisperkill
+foxblade
+outsteel
+lcid
+fodhelper
+wp-adm
+vbscript
+callback
+unc1151
+digital cobra
+sandworm
+the red bandits
+coomingproject
+indicators of compromise
+smyxbld
+avemaria.ayad
+gofilecoder
+templinjector
+killdisk.smyecbw
+negasteal
+ta471
+uac-0056
+saintbear
+lorec53
+black energy
+blackenergy
+electrum
+iron viking
+quedagh
+telebots
+temp.noble
+voodoo bear
+cozy bear
+apt29
+group 74
+pawn storm
+snakemackerel
+strontium
+sednit
+sofacy
+swallowtail
+tg-4127
+threat group-4127
+tsar team
+malware controllers
