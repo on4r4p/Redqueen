@@ -2264,6 +2264,25 @@ def RssFeeds(ttl):
                     for news in rss.entries:
                         time.sleep(Config.Time_Sleep)
                         counter = counter + 1
+
+                        if "updated" in news:
+                            pubdate= news.update.replace(" +0000", "")
+                        elif "published" in news:
+                            pubdate = news.published.replace(" +0000", "")
+                        else:
+                            continue
+
+                        try:
+
+                           pubstrp = datetime.datetime.strptime(pubdate, "%a, %d %b %Y %H:%M:%S")
+                           rssage = datetime.datetime.now() - pubstrp
+
+                           if rssage.days >= Config.Maximum_Retweet_DayOld:
+                              continue
+
+                        except Exception as e:
+                           Betterror(e, inspect.stack()[0][3])
+
                         format = str(news.title) + " : " + str(news.link)
                         if format not in RssSent:
                             RssSent.append(format)
@@ -2272,7 +2291,7 @@ def RssFeeds(ttl):
                                 Rss_tuple = (
                                     news.link,
                                     "rss",
-                                    str(datetime.datetime.now()),
+                                    pubdate,
                                     flux,
                                     "img/redqueen-profile.png",
                                     news.link,
