@@ -106,6 +106,11 @@ pip3 install emoji==0.5.0
 
 pip3 install twython==3.3.0
 
+pip3 install dateparser==1.1.0
+
+pip3 uninstall regex
+
+pip3 install regex==2022.1.18
 
 
 Need: Twitter OA1/OA2 with read/write access
