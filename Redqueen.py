@@ -5,7 +5,7 @@ from random import randint, choice, shuffle
 from twython import Twython
 from pyfiglet import Figlet
 from threading import Thread
-import re, socket, time, sys, os, inspect, cherrypy, string, datetime, emoji, feedparser, csv
+import re, socket, time, sys, os, inspect, cherrypy, string, datetime, emoji, feedparser, csv, dateparser
 import Config, IrcKey, PastebinApiKey
 import TwitterApiKeys as TAK
 
@@ -2247,6 +2247,139 @@ def IrSweet():
         except Exception as e:
             Betterror(e, inspect.stack()[0][3])
 
+def GetHomeTimeline():
+
+    global Api_Call_Nbr
+    global Total_Ban_By_BannedPeople_Nbr
+    global Total_Ban_By_Keywords_Nbr
+    global Total_Already_Send_Nbr
+    global RetweetSave
+
+    try:
+        Own_Timeline = Twitter_Api.get_home_timeline()
+        Api_Call_Nbr += 1
+
+        for tweet in Own_Timeline:
+
+            if "retweeted_status" in tweet:
+
+                Tweet_Id = str(tweet["retweeted_status"]["id"])
+                Tweet_Author = tweet["retweeted_status"]["user"]["screen_name"]
+                Tweet_Rt_Author = tweet["user"]["screen_name"]
+                Tweet_Timestamp = tweet["retweeted_status"]["created_at"]
+
+            else:
+                Tweet_Id = str(tweet["id"])
+                Tweet_Author = tweet["user"]["screen_name"]
+                Tweet_Timestamp = tweet["created_at"]
+                Tweet_Rt_Author = ""
+
+            Tweet_Origin_Link = ("https://twitter.com/" + str(tweet["user"]["screen_name"]) + "/status/" + str(tweet["id"]))
+
+            Tweet_Urls = []
+            Tweet_Urls.append(Tweet_Origin_Link)
+
+            if "full_text" in tweet:
+                    Tweext = tweet["full_text"]
+            else:
+                    Tweext = tweet["text"]
+
+            if "urls" in tweet["entities"]:
+               for url in tweet["entities"]["urls"]:
+                   Tweet_Urls.append(url["expanded_url"])
+            if "retweeted_status" in tweet:
+               if "urls" in tweet["retweeted_status"]["entities"]:
+                   for url in tweet["retweeted_status"]["entities"]["urls"]:
+                         Tweet_Urls.append(url["expanded_url"])
+
+            if Idlist(Tweet_Id) is True:
+                    Total_Already_Send_Nbr += 1
+                    time.sleep(Config.Time_Sleep)
+                    Fig("digital", "This tweet has been already sent.")
+                    Fig("digital", "Going To Trash")
+                    print("*=*=*=*=*=*=*=*=*=*")
+                    continue
+
+            for forbid in Banned_User_List:
+                if str(forbid.lower()) in str(Tweet_Author.lower()):
+
+                    Fig("digital", "This tweet is from a banned user :")
+                    print("** %s **" % forbid)
+                    Total_Ban_By_BannedPeople_Nbr += 1
+                    time.sleep(Config.Time_Sleep)
+                    print("Tweet: ", Tweext)
+                    Fig("digital", "Going To Trash")
+                    print("*=*=*=*=*=*=*=*=*=*")
+                    continue
+
+            if len(Tweet_Rt_Author) > 0:
+                for forbid in Banned_User_List:
+                    if str(forbid.lower()) in str(Tweet_Rt_Author.lower()):
+
+                        Fig("digital", "This tweet is from a banned user :")
+                        print("** %s **" % forbid)
+                        Total_Ban_By_BannedPeople_Nbr += 1
+                        time.sleep(Config.Time_Sleep)
+                        print("Tweet: ", Tweext)
+                        Fig("digital", "Going To Trash")
+                        print("*=*=*=*=*=*=*=*=*=*")
+                        continue
+
+            for forbid in Banned_Word_list:
+                forbid = re.sub(r"[^A-Za-z0-9 ]+", "", forbid.lower())
+                if forbid in Twist:
+                    Fig("digital", "This tweet contains banned words :")
+                    print("** %s **" % str(forbid))
+                    Total_Ban_By_Keywords_Nbr = Total_Ban_By_Keywords_Nbr + 1
+                    time.sleep(Config.Time_Sleep)
+                    print("Tweet: ", Tweext)
+                    Fig("digital", "Going To Trash")
+                    print("*=*=*=*=*=*=*=*=*=*")
+                    continue
+
+            if Tweext.startswith("RT"):
+                   twxt = Tweext[Tweext.find(":")+2:] 
+                   LastCheck = SaveDouble(twxt,Tweet_Urls)
+            else:
+                   LastCheck = SaveDouble(Tweext,Tweet_Urls)
+
+            if LastCheck is False:
+                        Tweext = Tweext.replace("\n", " ")
+                        print("######################################")
+                        print("Adding to Retweet List")
+                        print("Nbr of tweets sent :", len(Retweet_List))
+                        print("Tweet Score : 1337")
+                        print("Tweet ID :", tweet["id"])
+                        print("Current ApiCall Count :", Api_Call_Nbr)
+                        print("Total Number Of Calls :", Total_Call_Nbr)
+                        print("Current Update Status Count :", Update_Call_Nbr)
+                        print("Total Number Of Update Calls :", Total_Update_Call_Nbr)
+                        print("Tweet :", Tweext)
+                        print("######################################")
+                        print("")
+
+                        time.sleep(Config.Time_Sleep)
+                        Retweet_List.append(tweet)
+
+                        clickme = (
+                            "https://twitter.com/"
+                            + str(tweet["user"]["screen_name"])
+                            + "/status/"
+                            + str(tweet["id"])
+                        )
+                        Format_To_Irc = "From:%s %s -> %s Hype:%s Date:%s" % (
+                            tweet["user"]["screen_name"],
+                            Tweext,
+                            clickme,
+                            "1337",
+                            Tweet_Timestamp,
+                        )
+                        IrSend(Format_To_Irc)
+                        time.sleep(Config.Time_Sleep)
+                        if Config.WEB_SERVER is True:
+                            Extract_Tweet_Data(tweet)
+    except Exception as e:
+            Betterror(e, inspect.stack()[0][3])
 
 def RssFeeds(ttl):
     global RssSent
@@ -2266,27 +2399,14 @@ def RssFeeds(ttl):
                         counter = counter + 1
 
                         if "updated" in news:
-                            pubdate= news.update.replace(" +0000", "")
+                            pubdate= str(news.update)
                         elif "published" in news:
-                            pubdate = news.published.replace(" +0000", "")
+                            pubdate = str(news.published)
                         else:
                             continue
 
                         try:
-
-                           pubstrp = datetime.datetime.strptime(pubdate, "%a, %d %b %Y %H:%M:%S")
-
-                        except Exception as e:
-                              if "unconverted data remains: " in str(e):
-                                  strp = str(e).split("unconverted data remains: ")[1]
-                                  pubdate = pubdate.replace(strp,"")
-                              else:
-                                  Betterror(e, inspect.stack()[0][3])
-                                  continue
-
-                        try:
-                           pubstrp = datetime.datetime.strptime(pubdate, "%a, %d %b %Y %H:%M:%S")
-                           rssage = datetime.datetime.now() - pubstrp
+                           rssage = datetime.datetime.now() - dateparser.parse(pubdate)
                            if rssage.days >= Config.Maximum_Retweet_DayOld:
                               continue
                         except Exception as e:
@@ -2500,6 +2620,7 @@ def limits():
             Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
+            GetHomeTimeline()
             print("\n\n")
 
         if RestABit_Trigger == True:
@@ -2523,6 +2644,7 @@ def limits():
             Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
+            GetHomeTimeline()
 
         if Search_Limit_Trigger == True:
 
@@ -2547,6 +2669,7 @@ def limits():
             Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
+            GetHomeTimeline()
             print("****************************************")
             print("****************************************\n\n\n\n")
 
@@ -2576,6 +2699,7 @@ def limits():
             Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
+            GetHomeTimeline()
             print("****************************************")
             print("****************************************\n\n\n\n")
 
@@ -2669,6 +2793,7 @@ def Ban(twitem):
            if "urls" in twitem["retweeted_status"]["entities"]:
                for url in twitem["retweeted_status"]["entities"]["urls"]:
                      Tweet_Urls.append(url["expanded_url"])
+
 
         if twitem["lang"] not in Config.Allowed_Tweet_Lang:
 
@@ -3463,7 +3588,6 @@ def Scoring(tweet, search):
                    Tweet_Urls.append(media["media_url"])
 
         if Tweext.startswith("RT"):
-               origtweet = Tweext.find(":")
                twxt = Tweext[Tweext.find(":")+2:] 
                LastCheck = SaveDouble(twxt,Tweet_Urls)
         else:
@@ -3633,9 +3757,6 @@ def Search_Keyword(word):
                         with open(Pth_NoResult_Rq, "a") as file:
                             file.write("\n"+str(word) + "\n")
 
-                    with open(Pth_Already_Searched_Rq) as file:
-                            file.write("\n"+str(word) + "\n")
-
                     searchresults = []
                     Search_nbr = 0
                     Search_obj = []
@@ -3673,8 +3794,6 @@ def Search_Keyword(word):
                             file.write("\n"+str(word) + "\n")
 
                 except Exception as e:
-                    with open(Pth_Already_Searched_Rq) as file:
-                            file.write("\n"+str(word) + "\n")
                     Betterror(e, inspect.stack()[0][3])
 
             else:
@@ -3683,12 +3802,7 @@ def Search_Keyword(word):
                 Search_Done_Trigger = False
                 limits()
 
-            with open(Pth_Already_Searched_Rq) as file:
-                            file.write("\n"+str(word) + "\n")
-
     except Exception as e:
-        with open(Pth_Already_Searched_Rq) as file:
-             file.write("\n"+str(word) + "\n")
         Betterror(e, inspect.stack()[0][3])
 
 
@@ -3809,6 +3923,12 @@ def RedQueen():
                 Fig("digital", figy)
                 time.sleep(Config.Time_Sleep)
                 Search_Keyword(key)
+
+                try:
+                    with open(Pth_Already_Searched_Rq) as file:
+                            file.write("\n"+str(word) + "\n")
+                except Exception as e:
+                    Betterror(e, inspect.stack()[0][3])
 
         Fig("digital", "All Done !", True)
 
