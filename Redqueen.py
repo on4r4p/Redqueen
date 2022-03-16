@@ -2275,13 +2275,23 @@ def RssFeeds(ttl):
                         try:
 
                            pubstrp = datetime.datetime.strptime(pubdate, "%a, %d %b %Y %H:%M:%S")
-                           rssage = datetime.datetime.now() - pubstrp
-
-                           if rssage.days >= Config.Maximum_Retweet_DayOld:
-                              continue
 
                         except Exception as e:
+                              if "unconverted data remains: " in str(e):
+                                  strp = str(e).split("unconverted data remains: ")[1]
+                                  pubdate = pubdate.replace(strp,"")
+                              else:
+                                  Betterror(e, inspect.stack()[0][3])
+                                  continue
+
+                        try:
+                           pubstrp = datetime.datetime.strptime(pubdate, "%a, %d %b %Y %H:%M:%S")
+                           rssage = datetime.datetime.now() - pubstrp
+                           if rssage.days >= Config.Maximum_Retweet_DayOld:
+                              continue
+                        except Exception as e:
                            Betterror(e, inspect.stack()[0][3])
+                           continue
 
                         format = str(news.title) + " : " + str(news.link)
                         if format not in RssSent:
@@ -3547,6 +3557,7 @@ def Search_Keyword(word):
     global Api_Call_Nbr
     global Update_Call_Nbr
     global Twitter_Api
+    global Already_Searched_List
     global RestABit_Trigger
     global Search_Done_Trigger
     global Search_Limit_Trigger
@@ -3558,7 +3569,6 @@ def Search_Keyword(word):
         ratechk = 0
 
         if Search_Done_Trigger == False:
-
             try:
                 Twitter_Api = WakeApiUp()
                 ratechk = 1
@@ -3622,6 +3632,10 @@ def Search_Keyword(word):
                     if "Twitter API returned a 401 (Unauthorized)" in str(e):
                         with open(Pth_NoResult_Rq, "a") as file:
                             file.write("\n"+str(word) + "\n")
+
+                    with open(Pth_Already_Searched_Rq):
+                            file.write("\n"+str(word) + "\n")
+
                     searchresults = []
                     Search_nbr = 0
                     Search_obj = []
@@ -3659,6 +3673,8 @@ def Search_Keyword(word):
                             file.write("\n"+str(word) + "\n")
 
                 except Exception as e:
+                    with open(Pth_Already_Searched_Rq):
+                            file.write("\n"+str(word) + "\n")
                     Betterror(e, inspect.stack()[0][3])
 
             else:
@@ -3666,7 +3682,13 @@ def Search_Keyword(word):
                 Search_Limit_Trigger = True
                 Search_Done_Trigger = False
                 limits()
+
+            with open(Pth_Already_Searched_Rq):
+                            file.write("\n"+str(word) + "\n")
+
     except Exception as e:
+        with open(Pth_Already_Searched_Rq):
+             file.write("\n"+str(word) + "\n")
         Betterror(e, inspect.stack()[0][3])
 
 
