@@ -1870,3 +1870,7032 @@ Error Message:list index out of range
 File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3557
 Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
 !!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in SaveTotalCall() at line 2069
+Error Message:list index out of range
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in SaveTotalCall() at line 2082
+Error Message:list index out of range
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-14 13:59:12.236769
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in IrSend() at line 2317
+Error Message:'str' object has no attribute 'send'
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-14 19:20:12.085919
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 05:01:34.729991
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-15 05:01:34.729991
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 05:01:34.729991
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 05:01:34.729991
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 05:01:34.729991
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 05:01:34.729991
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3580
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 08:43:58.860645
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-15 09:40:11.511939
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/TotalApi.Call.Rq) creating a new one.==
+
+
+2022-03-15 09:40:11.511939
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/Update.Status.Call.Rq) creating a new one.==
+
+
+2022-03-15 09:40:11.511939
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/Already.Searched.Rq) creating a new one.==
+
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in SaveTotalCall() at line 2069
+Error Message:list index out of range
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in SaveTotalCall() at line 2082
+Error Message:list index out of range
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-04-06' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-04-06' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:48.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:47.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-03 18:35:40.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-01 17:35:44.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-25 19:22:29.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 18:54:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 15:56:25.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-18 14:38:20.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 18:13:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 00:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-16 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-14 13:54:42.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 20:22:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 15:15:34.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 21:31:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01 05:16:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-31 17:21:31.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-20 22:52:28.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-13 21:37:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:54:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:41:46.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-22 17:29:02.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-15 15:47:26.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:15.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:14.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:13.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 21:04:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 18:15:57.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-04 17:32:39.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0500
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0500
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0500
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0500
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in IrSend() at line 2346
+Error Message:'str' object has no attribute 'send'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-04-06' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-04-06' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:48.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:47.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-03 18:35:40.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-01 17:35:44.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-25 19:22:29.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 18:54:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 15:56:25.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-18 14:38:20.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 18:13:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 00:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-16 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-14 13:54:42.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 23:15:34.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 20:22:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 21:31:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01 05:16:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-31 17:21:31.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-20 22:52:28.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-13 21:37:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:54:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:41:46.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-22 17:29:02.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-15 15:47:26.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:15.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:14.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:13.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 21:04:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 18:15:57.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-04 17:32:39.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:48.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:47.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-03 18:35:40.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-01 17:35:44.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-25 19:22:29.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 18:54:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 15:56:25.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-18 14:38:20.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 18:13:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 00:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-16 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-14 13:54:42.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 23:15:34.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 20:22:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 21:31:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01 05:16:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-31 17:21:31.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-20 22:52:28.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-13 21:37:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:54:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:41:46.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-22 17:29:02.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-15 15:47:26.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:15.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:14.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:13.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 21:04:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 18:15:57.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-04 17:32:39.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  Z
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:48.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:47.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-03 18:35:40.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-01 17:35:44.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-25 19:22:29.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 18:54:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 15:56:25.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-18 14:38:20.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 18:13:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 00:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-16 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-14 13:54:42.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 23:15:34.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 20:22:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 21:31:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01 05:16:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-31 17:21:31.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-20 22:52:28.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-13 21:37:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:54:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:41:46.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-22 17:29:02.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-15 15:47:26.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:15.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:14.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:13.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 21:04:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 18:15:57.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-04 17:32:39.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  -0400
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  GMT
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:unconverted data remains:  +0100
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-15 09:40:11.511939
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3599
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-16 03:00:18.011990
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 03:00:18.011990
+
+!!
+File: Redqueen.py has encounter a <class 'UnboundLocalError'> error in RedQueen() at line 3798
+Error Message:local variable 'file' referenced before assignment
+!!
+
+2022-03-16 03:14:16.982836
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 03:14:16.982836
+
+!!
+File: Redqueen.py has encounter a <class 'io.UnsupportedOperation'> error in RedQueen() at line 3798
+Error Message:not writable
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3609
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3609
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3609
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3609
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-15' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-11' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-08-24' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-05-26' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:48.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-08 16:52:47.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-03 18:35:40.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-03-01 17:35:44.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-25 19:22:29.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 18:54:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-23 15:56:25.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-18 14:38:20.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 18:13:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-17 00:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-16 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-14 13:54:42.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 23:15:34.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-04 20:22:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 21:31:49.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-02 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-02-01 05:16:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-31 17:21:31.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-20 22:52:28.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-19 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-13 21:37:56.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-12 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:54:37.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2022-01-06 17:41:46.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-22 17:29:02.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-12-15 15:47:26.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:15.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:14.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-18 22:48:13.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 21:04:10.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-12 18:15:57.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-04 17:32:39.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'ValueError'> error in RssFeeds() at line 2277
+Error Message:time data '2021-11-03 16:00:00.0' does not match format '%a, %d %b %Y %H:%M:%S'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in RssFeeds() at line 2269
+Error Message:'builtin_function_or_method' object has no attribute 'replace'
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'TimeoutError'> error in IrSweet() at line 2145
+Error Message:[Errno 110] Connection timed out
+!!
+
+2022-03-16 04:44:02.637437
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 10:34:51.942976
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 10:34:51.942976
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 10:34:51.942976
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 10:34:51.942976
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 10:34:51.942976
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 12:05:43.615214
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 12:05:43.615214
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/TotalApi.Call.Rq) creating a new one.==
+
+
+2022-03-16 12:05:43.615214
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/Update.Status.Call.Rq) creating a new one.==
+
+
+2022-03-16 12:05:43.615214
+
+==
+File does not exist (/home/alduin/Documents/Redqueen/Data/Already.Searched.Rq) creating a new one.==
+
+
+2022-03-16 12:05:43.615214
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 12:05:43.615214
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 12:05:43.615214
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 12:05:43.615214
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 13:48:37.278531
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 18:22:38.259924
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 18:22:38.259924
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 18:22:38.259924
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-16 20:47:47.369186
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!
+
+2022-03-16 20:47:47.369186
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 20:47:47.369186
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-16 20:47:47.369186
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3733
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-16 20:47:47.369186
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in IrSend() at line 2476
+Error Message:'str' object has no attribute 'send'
+!!
+
+2022-03-16 20:47:47.369186
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2176
+Error Message:list index out of range
+!!

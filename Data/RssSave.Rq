@@ -1692,3 +1692,359 @@ CVE-2022-26966 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26966
 CVE-2022-26967 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26967
 CVE-2022-26981 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26981
 Report: Recent 10x Increase in Cyberattacks on Ukraine : https://krebsonsecurity.com/2022/03/report-recent-10x-increase-in-cyberattacks-on-ukraine/
+[local] VIVE Runtime Service - 'ViveAgentService' Unquoted Service Path : https://www.exploit-db.com/exploits/50824
+[webapps] Baixar GLPI Project 9.4.6 - SQLi : https://www.exploit-db.com/exploits/50823
+DSA-5102 haproxy : https://www.debian.org/security/2022/dsa-5102
+DSA-5101 libphp-adodb : https://www.debian.org/security/2022/dsa-5101
+DSA-5100 nbd : https://www.debian.org/security/2022/dsa-5100
+USN-5324-1: libxml2 vulnerability : https://ubuntu.com/security/notices/USN-5324-1
+USN-5323-1: NBD vulnerabilities : https://ubuntu.com/security/notices/USN-5323-1
+CVE-2021-24692 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24692
+CVE-2021-24895 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24895
+CVE-2021-24897 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24897
+CVE-2021-24940 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24940
+CVE-2021-24950 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24950
+CVE-2021-24958 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24958
+CVE-2021-24959 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24959
+CVE-2021-24966 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24966
+CVE-2021-24982 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24982
+CVE-2021-24995 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24995
+CVE-2021-24996 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-24996
+CVE-2021-25003 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25003
+CVE-2021-25006 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25006
+CVE-2021-25007 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25007
+CVE-2021-25026 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-25026
+CVE-2021-40047 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40047
+CVE-2021-40048 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40048
+CVE-2021-40049 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40049
+CVE-2021-40050 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40050
+CVE-2021-40051 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40051
+CVE-2021-40052 (harmonyos) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40052
+CVE-2021-40053 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40053
+CVE-2021-40054 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40054
+CVE-2021-40055 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40055
+CVE-2021-40056 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40056
+CVE-2021-41952 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-41952
+CVE-2021-42171 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-42171
+CVE-2021-43954 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-43954
+CVE-2021-44964 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-44964
+CVE-2022-0147 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0147
+CVE-2022-0161 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0161
+CVE-2022-0165 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0165
+CVE-2022-0169 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0169
+CVE-2022-0230 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0230
+CVE-2022-0248 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0248
+CVE-2022-0254 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0254
+CVE-2022-0321 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0321
+CVE-2022-0327 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0327
+CVE-2022-0341 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0341
+CVE-2022-0399 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0399
+CVE-2022-0449 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0449
+CVE-2022-0478 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0478
+CVE-2022-0503 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0503
+CVE-2022-0593 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0593
+CVE-2022-0601 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0601
+CVE-2022-0648 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0648
+CVE-2022-0658 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0658
+CVE-2022-0659 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0659
+CVE-2022-0674 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0674
+CVE-2022-0684 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0684
+CVE-2022-0700 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0700
+CVE-2022-0701 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0701
+CVE-2022-0702 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0702
+CVE-2022-0703 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0703
+CVE-2022-0937 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0937
+CVE-2022-0938 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0938
+CVE-2022-0940 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0940
+CVE-2022-0941 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0941
+CVE-2022-0946 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0946
+CVE-2022-0960 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0960
+CVE-2022-21967 (windows_10, windows_11) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21967
+CVE-2022-21973 (windows_7, windows_8.1, windows_rt_8.1, windows_server_2012) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21973
+CVE-2022-21975 (windows_10, windows_8.1, windows_server, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21975
+CVE-2022-21977 (windows_10, windows_11, windows_8.1, windows_rt_8.1, windows_server, windows_server_2012, windows_server_2016, windows_server_2019, windows_server_2022) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21977
+CVE-2022-21990 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21990
+CVE-2022-22006 (hevc_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22006
+CVE-2022-22719 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22719
+CVE-2022-22720 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22720
+CVE-2022-22721 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22721
+CVE-2022-22734 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22734
+CVE-2022-22735 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22735
+CVE-2022-23943 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23943
+CVE-2022-24384 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24384
+CVE-2022-24385 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24385
+CVE-2022-24386 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24386
+CVE-2022-24387 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24387
+CVE-2022-24574 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24574
+CVE-2022-24575 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24575
+CVE-2022-24576 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24576
+CVE-2022-24577 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24577
+Ubisoft Reveals Security Incident Forcing Company-Wide Password Refresh : https://packetstormsecurity.com/news/view/33204/Ubisoft-Reveals-Security-Incident-Forcing-Company-Wide-Password-Refresh.html
+Bitcoin Cash Machines Ordered To Shut Down In UK : https://packetstormsecurity.com/news/view/33206/Bitcoin-Cash-Machines-Ordered-To-Shut-Down-In-UK.html
+Cybercrooks' Political In-Fighting Threatens The West : https://packetstormsecurity.com/news/view/33205/Cybercrooks-Political-In-Fighting-Threatens-The-West.html
+Viasat, Rosneft Hit By Cyberattacks As Ukraine War Spills Online : https://packetstormsecurity.com/news/view/33207/Viasat-Rosneft-Hit-By-Cyberattacks-As-Ukraine-War-Spills-Online.html
+Russia's Disinformation Machinery Breaks Down In Wake Of Ukraine Invasion : https://packetstormsecurity.com/news/view/33209/Russias-Disinformation-Machinery-Breaks-Down-In-Wake-Of-Ukraine-Invasion.html
+Ukraine Reportedly Adopts Clearview AI To Track Russian Invaders : https://packetstormsecurity.com/news/view/33208/Ukraine-Reportedly-Adopts-Clearview-AI-To-Track-Russian-Invaders.html
+Ubuntu Security Notice USN-5325-1 : https://packetstormsecurity.com/files/166306/USN-5325-1.txt
+Red Hat Security Advisory 2022-0841-01 : https://packetstormsecurity.com/files/166305/RHSA-2022-0841-01.txt
+Ubuntu Security Notice USN-5324-1 : https://packetstormsecurity.com/files/166304/USN-5324-1.txt
+Hades RAT Web Panel Cross Site Scripting : https://packetstormsecurity.com/files/166303/MVID-2022-0514.txt
+Ubuntu Security Notice USN-5323-1 : https://packetstormsecurity.com/files/166302/USN-5323-1.txt
+Hades RAT Web Panel Information Disclosure : https://packetstormsecurity.com/files/166301/MVID-2022-0513.txt
+Red Hat Security Advisory 2022-0843-01 : https://packetstormsecurity.com/files/166300/RHSA-2022-0843-01.txt
+WordPress Core 5.9.0 / 5.9.1 Cross Site Scripting : https://packetstormsecurity.com/files/166299/wp590591-xss.txt
+Red Hat Security Advisory 2022-0845-01 : https://packetstormsecurity.com/files/166298/RHSA-2022-0845-01.txt
+Hades RAT Web Panel Insecure Credential Storage : https://packetstormsecurity.com/files/166297/MVID-2022-0512.txt
+Red Hat Security Advisory 2022-0847-01 : https://packetstormsecurity.com/files/166296/RHSA-2022-0847-01.txt
+Red Hat Security Advisory 2022-0849-01 : https://packetstormsecurity.com/files/166295/RHSA-2022-0849-01.txt
+RedLine.MainPanel Insecure Permissions : https://packetstormsecurity.com/files/166294/MVID-2022-0511.txt
+Red Hat Security Advisory 2022-0850-01 : https://packetstormsecurity.com/files/166293/RHSA-2022-0850-01.txt
+Red Hat Security Advisory 2022-0851-01 : https://packetstormsecurity.com/files/166292/RHSA-2022-0851-01.txt
+Red Hat Security Advisory 2022-0853-01 : https://packetstormsecurity.com/files/166291/RHSA-2022-0853-01.txt
+Automatic Question Paper Generator System 1.0 Cross Site Scripting : https://packetstormsecurity.com/files/166290/aqpgs10-xss.txt
+VIVE Runtime Service 1.0.0.4 Unquoted Service Path : https://packetstormsecurity.com/files/166289/vivers1004-unquotedpath.txt
+Automatic Question Paper Generator System 1.0 Insecure Direct Object Reference : https://packetstormsecurity.com/files/166288/aqpgs10-insecure.txt
+Student Grading System 1.0 SQL Injection : https://packetstormsecurity.com/files/166287/sgs10-sql.txt
+Insurance Management System 1.0 SQL Injection : https://packetstormsecurity.com/files/166286/insurancemgmtsys10-sql.txt
+Baixar GLPI Project 9.4.6 SQL Injection : https://packetstormsecurity.com/files/166285/baixarglpi946-sql.txt
+USN-5325-1: Zsh vulnerabilities : https://ubuntu.com/security/notices/USN-5325-1
+CVE-2020-36517 (home-assistant) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-36517
+CVE-2021-38971 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-38971
+CVE-2021-39051 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-39051
+CVE-2021-39055 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-39055
+CVE-2021-40057 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40057
+CVE-2021-40058 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40058
+CVE-2021-40059 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40059
+CVE-2021-40060 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40060
+CVE-2021-40061 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40061
+CVE-2021-40062 (emui, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40062
+CVE-2021-40063 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40063
+CVE-2021-40064 (emui, harmonyos, magic_ui) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-40064
+CVE-2022-0482 (easyappointments) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0482
+CVE-2022-0943 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0943
+CVE-2022-0962 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-0962
+CVE-2022-20001 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-20001
+CVE-2022-21187 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21187
+CVE-2022-21219 (cx-programmer) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-21219
+CVE-2022-22007 (hevc_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22007
+CVE-2022-22010 (windows_10, windows_11, windows_8.1, windows_rt_8.1, windows_server, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22010
+CVE-2022-22344 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22344
+CVE-2022-22346 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22346
+CVE-2022-22348 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22348
+CVE-2022-22353 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22353
+CVE-2022-22354 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-22354
+CVE-2022-23253 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23253
+CVE-2022-23265 (defender_for_iot) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23265
+CVE-2022-23266 (defender_for_iot) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23266
+CVE-2022-23277 (exchange_server) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23277
+CVE-2022-23278 (defender_for_endpoint, defender_for_endpoint_edr_sensor) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23278
+CVE-2022-23281 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23281
+CVE-2022-23282 (paint_3d) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23282
+CVE-2022-23283 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23283
+CVE-2022-23284 (windows_10, windows_11, windows_8.1, windows_rt_8.1, windows_server, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23284
+CVE-2022-23285 (windows_10, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23285
+CVE-2022-23286 (windows_10, windows_11, windows_server, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23286
+CVE-2022-23287 (windows_10, windows_11, windows_server, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23287
+CVE-2022-23288 (windows_10, windows_server, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23288
+CVE-2022-23290 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23290
+CVE-2022-23291 (windows_10, windows_11, windows_server, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23291
+CVE-2022-23293 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23293
+CVE-2022-23294 (windows_10, windows_11, windows_8.1, windows_rt_8.1, windows_server, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23294
+CVE-2022-23295 (raw_image_extension) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23295
+CVE-2022-23296 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23296
+CVE-2022-23297 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23297
+CVE-2022-23298 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23298
+CVE-2022-23299 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23299
+CVE-2022-23300 (raw_image_extension) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23300
+CVE-2022-23301 (hevc_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-23301
+CVE-2022-24193 (casaos) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24193
+CVE-2022-24451 (vp9_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24451
+CVE-2022-24452 (hevc_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24452
+CVE-2022-24453 (hevc_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24453
+CVE-2022-24454 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24454
+CVE-2022-24455 (windows_10, windows_8.1, windows_rt_8.1, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24455
+CVE-2022-24456 (hevc_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24456
+CVE-2022-24457 (heif_image_extension) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24457
+CVE-2022-24459 (windows_10, windows_11, windows_7, windows_8.1, windows_rt_8.1, windows_server, windows_server_2008, windows_server_2012, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24459
+CVE-2022-24460 (windows_10, windows_11, windows_server, windows_server_2016, windows_server_2019) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24460
+CVE-2022-24461 (365_apps, office) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24461
+CVE-2022-24462 (365_apps, office) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24462
+CVE-2022-24463 (exchange_server) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24463
+CVE-2022-24464 (.net, .net_core, visual_studio_2019, visual_studio_2022) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24464
+CVE-2022-24465 (intune_company_portal) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24465
+CVE-2022-24467 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24467
+CVE-2022-24468 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24468
+CVE-2022-24469 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24469
+CVE-2022-24470 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24470
+CVE-2022-24471 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24471
+CVE-2022-24501 (vp9_video_extensions) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24501
+CVE-2022-24515 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24515
+CVE-2022-24517 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24517
+CVE-2022-24518 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24518
+CVE-2022-24519 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24519
+CVE-2022-24520 (azure_site_recovery) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24520
+CVE-2022-24578 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24578
+CVE-2022-24733 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24733
+CVE-2022-24742 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24742
+CVE-2022-24743 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-24743
+CVE-2022-25943 (wps_office) : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-25943
+CVE-2022-26320 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26320
+CVE-2022-26351 : https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-26351
+Last Week in Security (LWiS) - 2022-03-14 : https://blog.badsectorlabs.com/last-week-in-security-lwis-2022-03-14.html
+APPLE-SA-2022-03-14-4 macOS Monterey 12.3 : https://seclists.org/fulldisclosure/2022/Mar/29
+APPLE-SA-2022-03-14-2 watchOS 8.5 : https://seclists.org/fulldisclosure/2022/Mar/28
+APPLE-SA-2022-03-14-1 iOS 15.4 and iPadOS 15.4 : https://seclists.org/fulldisclosure/2022/Mar/27
+APPLE-SA-2022-03-14-3 tvOS 15.4 : https://seclists.org/fulldisclosure/2022/Mar/26
+APPLE-SA-2022-03-14-5 macOS Big Sur 11.6.5 : https://seclists.org/fulldisclosure/2022/Mar/25
+APPLE-SA-2022-03-14-10 iTunes 12.12.3 for Windows : https://seclists.org/fulldisclosure/2022/Mar/24
+APPLE-SA-2022-03-14-7 Xcode 13.3 : https://seclists.org/fulldisclosure/2022/Mar/23
+APPLE-SA-2022-03-14-6 Security Update 2022-003 Catalina : https://seclists.org/fulldisclosure/2022/Mar/22
+APPLE-SA-2022-03-14-9 GarageBand 10.4.6 : https://seclists.org/fulldisclosure/2022/Mar/21
+APPLE-SA-2022-03-14-8 Logic Pro X 10.7.3 : https://seclists.org/fulldisclosure/2022/Mar/20
+Hades RAT - Web Panel / Remote Persistent XSS : https://seclists.org/fulldisclosure/2022/Mar/19
+Hades RAT - Web Panel / Information Disclosure : https://seclists.org/fulldisclosure/2022/Mar/18
+Hades RAT - Web Panel / Insecure Credential Storage : https://seclists.org/fulldisclosure/2022/Mar/17
+RedLine.MainPanel - cracked.exe / Insecure Permissions : https://seclists.org/fulldisclosure/2022/Mar/16
+CVE-2021-45040 - Laravel Media Library Pro <=2.1.6 - Arbitrary File Upload (Unauthenticated) : https://seclists.org/fulldisclosure/2022/Mar/15
+Valorant aimbot hack lures the unwary into malware infection : https://grahamcluley.com/valorant-aimbot-hack-lures-the-unwary-into-malware-infection/
+Ubisoft changes employee passwords after “cyber security incident” : https://grahamcluley.com/ubisoft-changes-employee-passwords-after-cyber-security-incident/
+Setting the Bar for Government Access to Have I Been Pwned : https://www.troyhunt.com/setting-the-bar-for-government-access-to-have-i-been-pwned/
+Weekly Update 286 : https://www.troyhunt.com/weekly-update-286/
+Happy #PiDay – even if you aren’t in North America! : https://nakedsecurity.sophos.com/2022/03/14/happy-piday-even-if-you-arent-in-north-america/
+Cryptocoin ATMs ruled illegal – “Shut down at once”, says regulator : https://nakedsecurity.sophos.com/2022/03/14/cryptocurrency-atms-ruled-illegal-shut-down-at-once-says-regulator/
+Alleged Kaseya ransomware attacker arrives in Texas for trial : https://nakedsecurity.sophos.com/2022/03/11/alleged-kaseya-ransomware-attacker-arrives-in-texas-for-trial/
+S3 Ep73: Ransomware with a difference, dirty Linux pipes, and much more [Podcast + Transcript] : https://nakedsecurity.sophos.com/2022/03/10/s3-ep73-ransomware-with-a-difference-dirty-linux-pipes-and-much-more-podcast/
+Russia Wants to Label Meta an ‘Extremist Organization’ : https://www.wired.com/story/russia-meta-extremist-satellite-security-roundup
+NFTs Don’t Work the Way You Might Think They Do : https://www.wired.com/story/nfts-dont-work-the-way-you-think-they-do
+Beware the Never-Ending Disinformation Emergency : https://www.wired.com/story/youtube-rigged-election-donald-trump-moderation-misinformation
+Pandora Ransomware Hits Giant Automotive Supplier Denso : https://threatpost.com/pandora-ransomware-hits-giant-automotive-supplier-denso/178911/
+Staff Think Conti Group Is a Legit Employer – Podcast : https://threatpost.com/staff-think-conti-group-legit-employer-podcast/178903/
+Cybercrooks’ Political In-Fighting Threatens the West : https://threatpost.com/cybercrooks-political-in-fighting-threatens-the-west/178899/
+Russia Issues Its Own TLS Certs : https://threatpost.com/russia-issues-its-own-tls-certs/178891/
+Raccoon Stealer Crawls Into Telegram : https://threatpost.com/raccoon-stealer-telegram/178881/
+Malware Posing as Russia DDoS Tool Bites Pro-Ukraine Hackers : https://threatpost.com/malware-posing-russia-ddos-tool-bites-pro-ukraine-hackers/178864/
+Russia May Use Ransomware Payouts to Avoid Sanctions’ Financial Harm : https://threatpost.com/russia-ransomware-payouts-avoid-sanctions/178854/
+It’s Not Fair, But Cyber Crime Is Cheap : https://securityintelligence.com/articles/cyber-crime-cheap/
+93% of Organizations Have Network Vulnerabilities: Here’s How to Beat the Odds : https://securityintelligence.com/articles/93-of-organizations-have-network-vulnerabilities-heres-how-to-beat-the-odds/
+Como Afrontar las Vulnerabilidades de Log4j2: Cómo Puede Ayudar Tripwire : https://www.tripwire.com/state-of-security/spanish/como-afrontar-las-vulnerabilidades-de-log4j2-como-puede-ayudar-tripwire/
+Human Factors: Why Technology Alone Will Never Equal Cyber Secure : https://www.tripwire.com/state-of-security/podcast/human-factors-why-technology-alone-will-never-equal-cyber-secure/
+Healthcare Providers Need to Increase Budgets for Cybersecurity : https://www.tripwire.com/state-of-security/healthcare/healthcare-providers-need-to-increase-budgets-for-cybersecurity/
+Texas SB 820 Advances K-12 Cybersecurity Despite Limitations : https://www.tripwire.com/state-of-security/government/texas-sb-820-advances-k-12-cybersecurity-despite-limitations/
+March 2022 Apple Updates : https://www.securemac.com/news/march-2022-apple-updates
+Checklist 270: Avoiding Tax Scams : https://www.securemac.com/checklist/checklist-270-avoiding-tax-scams
+A lack of diversity in cybersecurity puts organisations at risk : https://www.itsecurityguru.org/2022/03/15/a-lack-of-diversity-in-cybersecurity-puts-organisations-at-risk/?utm_source=rss&utm_medium=rss&utm_campaign=a-lack-of-diversity-in-cybersecurity-puts-organisations-at-risk
+Ukrainian machines hit with another Malware variant : https://www.itsecurityguru.org/2022/03/15/ukrainian-machines-hit-with-another-malware-variant/?utm_source=rss&utm_medium=rss&utm_campaign=ukrainian-machines-hit-with-another-malware-variant
+Cybersecurity tops agenda in Asean boardrooms : https://www.itsecurityguru.org/2022/03/15/cybersecurity-tops-agenda-in-asean-boardrooms/?utm_source=rss&utm_medium=rss&utm_campaign=cybersecurity-tops-agenda-in-asean-boardrooms
+Ransomware groups target “enemies of Russia” : https://www.itsecurityguru.org/2022/03/15/ransomware-groups-target-enemies-of-russia/?utm_source=rss&utm_medium=rss&utm_campaign=ransomware-groups-target-enemies-of-russia
+RiskOps platform Feedzai grows +40% year-over-year : https://www.itsecurityguru.org/2022/03/14/riskops-platform-feedzai-grows-40-year-over-year/?utm_source=rss&utm_medium=rss&utm_campaign=riskops-platform-feedzai-grows-40-year-over-year
+Malware hidden in fake Valorant aim-bot : https://www.itsecurityguru.org/2022/03/14/malware-hidden-in-fake-valorant-aim-bot/?utm_source=rss&utm_medium=rss&utm_campaign=malware-hidden-in-fake-valorant-aim-bot
+UK announces digital identity security legislation : https://www.itsecurityguru.org/2022/03/14/uk-announces-digital-identity-security-legislation/?utm_source=rss&utm_medium=rss&utm_campaign=uk-announces-digital-identity-security-legislation
+Ukraine’s “IT Army” hit with info-stealing malware : https://www.itsecurityguru.org/2022/03/14/ukraines-it-army-hit-with-info-stealing-malware/?utm_source=rss&utm_medium=rss&utm_campaign=ukraines-it-army-hit-with-info-stealing-malware
+High rates of known, exploitable vulnerabilities still found in the wild, report reveals : https://www.itsecurityguru.org/2022/03/11/high-rates-of-known-exploitable-vulnerabilities-still-found-in-the-wild-report-reveals/?utm_source=rss&utm_medium=rss&utm_campaign=high-rates-of-known-exploitable-vulnerabilities-still-found-in-the-wild-report-reveals
+Microsoft calls for more women in cyber : https://www.itsecurityguru.org/2022/03/11/microsoft-calls-for-more-women-in-cyber/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-calls-for-more-women-in-cyber
+De-Googling Carey Parker’s (and your) life: Lock and Code S03E06 : https://blog.malwarebytes.com/podcast/2022/03/de-googling-carey-parkers-and-your-life-lock-and-code-s03e06/
+CISA list of 95 new known exploited vulnerabilities raises questions : https://blog.malwarebytes.com/exploits-and-vulnerabilities/2022/03/cisa-list-of-95-new-known-exploited-vulnerabilities-raises-questions/
+A week in security (March 7 – March 13) : https://blog.malwarebytes.com/a-week-in-security/2022/03/a-week-in-security-march-7-march-13/
+Blunting RDP brute-force attacks with rate limiting : https://blog.malwarebytes.com/explained/2022/03/blunting-rdp-brute-force-attacks-with-rate-limiting/
+HBO sued for sharing subscriber data with Facebook : https://blog.malwarebytes.com/privacy-2/2022/03/hbo-sued-for-sharing-subscriber-data-with-facebook/
+Linux “Dirty Pipe” vulnerability gives unprivileged users root access : https://blog.malwarebytes.com/exploits-and-vulnerabilities/2022/03/linux-dirty-pipe-vulnerability-gives-unprivileged-users-root-access/
+Ransomware: February 2022 review : https://blog.malwarebytes.com/threat-intelligence/2022/03/ransomware-february-2022-review/
+[SANS ISC] Clean Binaries with Suspicious Behaviour : https://blog.rootshell.be/2022/03/15/sans-isc-clean-binaries-with-suspicious-behaviour/
+In-Person Infosec Conferences Are Back : https://blog.rootshell.be/2022/03/11/in-person-infosec-conferences-are-back/
+[SANS ISC] Keep an Eye on WebSockets : https://blog.rootshell.be/2022/03/11/sans-isc-keep-an-eye-on-websockets/
+Mozilla Firefox removes Russian search providers over misinformation concerns : https://www.bleepingcomputer.com/news/software/mozilla-firefox-removes-russian-search-providers-over-misinformation-concerns/
+Fake antivirus updates used to deploy Cobalt Strike in Ukraine : https://www.bleepingcomputer.com/news/security/fake-antivirus-updates-used-to-deploy-cobalt-strike-in-ukraine/
+2021 mobile security: Android more vulnerabilities, iOS more zero-days : https://www.bleepingcomputer.com/news/security/2021-mobile-security-android-more-vulnerabilities-ios-more-zero-days/
+New CaddyWiper data wiping malware hits Ukrainian networks : https://www.bleepingcomputer.com/news/security/new-caddywiper-data-wiping-malware-hits-ukrainian-networks/
+Microsoft is testing ads in the Windows 11 File Explorer : https://www.bleepingcomputer.com/news/microsoft/microsoft-is-testing-ads-in-the-windows-11-file-explorer/
+QNAP warns severe Linux bug affects most of its NAS devices : https://www.bleepingcomputer.com/news/security/qnap-warns-severe-linux-bug-affects-most-of-its-nas-devices/
+Microsoft removes Windows 11 update block for VirtualBox users : https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-windows-11-update-block-for-virtualbox-users/
+Automotive giant DENSO hit by new Pandora ransomware gang : https://www.bleepingcomputer.com/news/security/automotive-giant-denso-hit-by-new-pandora-ransomware-gang/
+Fake Valorant cheats on YouTube infect you with RedLine stealer : https://www.bleepingcomputer.com/news/security/fake-valorant-cheats-on-youtube-infect-you-with-redline-stealer/
+VPN provider bans BitTorrent after getting sued by film studios : https://www.bleepingcomputer.com/news/security/vpn-provider-bans-bittorrent-after-getting-sued-by-film-studios/
+Android malware Escobar steals your Google Authenticator MFA codes : https://www.bleepingcomputer.com/news/security/android-malware-escobar-steals-your-google-authenticator-mfa-codes/
+Ubisoft confirms 'cyber security incident', resets staff passwords : https://www.bleepingcomputer.com/news/security/ubisoft-confirms-cyber-security-incident-resets-staff-passwords/
+Windows 11 gets a new tabbed interface for File Explorer : https://www.bleepingcomputer.com/news/microsoft/windows-11-gets-a-new-tabbed-interface-for-file-explorer/
+CVE-2021-44142 Informational: Impact of the Samba Vulnerability CVE-2021-44142 on PAN-OS (Severity: NONE) : https://security.paloaltonetworks.com/CVE-2021-44142
+CVE-2022-0022 PAN-OS: Use of a Weak Cryptographic Algorithm for Stored Password Hashes (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0022
+CVE-2022-0016 GlobalProtect App: Privilege Escalation Vulnerability When Using Connect Before Logon With SAML Authentication (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2022-0016
+CVE-2022-0011 PAN-OS: URL Category Exceptions Match More URLs Than Intended in URL Filtering (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0011
+CVE-2020-2035 PAN-OS: URL filtering policy is not enforced on TLS handshakes for decrypted HTTPS sessions (Severity: LOW) : https://security.paloaltonetworks.com/CVE-2020-2035
+CVE-2022-0020 Cortex XSOAR: Stored Cross-Site Scripting (XSS) Vulnerability in Web Interface (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0020
+CVE-2022-0017 GlobalProtect App: Improper Link Resolution Vulnerability Leads to Local Privilege Escalation (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2022-0017
+CVE-2022-0018 GlobalProtect App: Information Exposure Vulnerability When Connecting to GlobalProtect Portal With Single Sign-On Enabled (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0018
+CVE-2022-0021 GlobalProtect App: Information Exposure Vulnerability When Using Connect Before Logon (Severity: LOW) : https://security.paloaltonetworks.com/CVE-2022-0021
+CVE-2022-0019 GlobalProtect App: Insufficiently Protected Credentials Vulnerability on Linux (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0019
+CVE-2021-44228 Impact of Log4j Vulnerabilities CVE-2021-44228, CVE-2021-45046, CVE-2021-45105, and CVE-2021-44832 (Severity: CRITICAL) : https://security.paloaltonetworks.com/CVE-2021-44228
+CVE-2021-3055 PAN-OS: XML External Entity (XXE) Reference Vulnerability in the PAN-OS Web Interface (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2021-3055
+CVE-2022-0014 Cortex XDR Agent: Unintended Program Execution When Using Live Terminal Session (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0014
+CVE-2022-0013 Cortex XDR Agent: File Information Exposure Vulnerability When Generating Support File (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0013
+CVE-2022-0012 Cortex XDR Agent: Local Arbitrary File Deletion Vulnerability (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2022-0012
+CVE-2021-3041 Cortex XDR Agent: Improper control of user-controlled file leads to local privilege escalation (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2021-3041
+CVE-2022-0015 Cortex XDR Agent: An Uncontrolled Search Path Element Leads to Local Privilege Escalation (PE) Vulnerability (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2022-0015
+CVE-2021-3063 PAN-OS: Denial-of-Service (DoS) Vulnerability in GlobalProtect Portal and Gateway Interfaces (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2021-3063
+CVE-2021-3156 Informational: Impact of Sudo Vulnerability CVE-2021-3156 (Severity: NONE) : https://security.paloaltonetworks.com/CVE-2021-3156
+CVE-2021-41617 Informational: Impact of the OpenSSH Vulnerability CVE-2021-41617 on PAN-OS (Severity: NONE) : https://security.paloaltonetworks.com/CVE-2021-41617
+CVE-2021-3057 GlobalProtect App: Buffer Overflow Vulnerability When Connecting to Portal or Gateway (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2021-3057
+CVE-2021-3061 PAN-OS: OS Command Injection Vulnerability in the Command Line Interface (CLI) (Severity: MEDIUM) : https://security.paloaltonetworks.com/CVE-2021-3061
+CVE-2021-3062 PAN-OS: Improper Access Control Vulnerability Exposing AWS Instance Metadata Endpoint to GlobalProtect Users (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2021-3062
+CVE-2021-3059 PAN-OS: OS Command Injection Vulnerability When Performing Dynamic Updates (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2021-3059
+CVE-2021-3056 PAN-OS: Memory Corruption Vulnerability in GlobalProtect Clientless VPN During SAML Authentication (Severity: HIGH) : https://security.paloaltonetworks.com/CVE-2021-3056
+A technique to semi-automatically discover new vulnerabilities in WordPress plugins : http://kazet.cc/2022/02/03/fuzzing-wordpress-plugins.html
+Campo Loader - Simple but effective : https://fr3d.hk/blog/campo-loader-simple-but-effective
+IXWare - Kids will be skids : https://fr3d.hk/blog/ixware-kids-will-be-skids
+DiamondFox - Bank Robbers will be replaced : https://fr3d.hk/blog/diamondfox-bank-robbers-will-be-replaced
+MassLogger - Frankenstein's Creation : https://fr3d.hk/blog/masslogger-frankenstein-s-creation
+CaddyWiper: More Destructive Wiper Malware Strikes Ukraine : https://packetstormsecurity.com/news/view/33210/CaddyWiper-More-Destructive-Wiper-Malware-Strikes-Ukraine.html
+Another Data Leaking Spectre Bug Found, Smashes Intel, Arm Defenses : https://packetstormsecurity.com/news/view/33211/Another-Data-Leaking-Spectre-Bug-Found-Smashes-Intel-Arm-Defenses.html
+Banks On Alert For Russian Reprisal Cyberattacks On Swift : https://packetstormsecurity.com/news/view/33212/Banks-On-Alert-For-Russian-Reprisal-Cyberattacks-On-Swift.html
+Researcher Uses 379-Year-Old Algorithm To Crack Crypto Keys : https://packetstormsecurity.com/news/view/33213/Researcher-Uses-379-Year-Old-Algorithm-To-Crack-Crypto-Keys.html
+Laravel Media Library Pro 2.1.6 Shell Upload : https://packetstormsecurity.com/files/166326/lmlp216-shell.txt
+Red Hat Security Advisory 2022-0892-01 : https://packetstormsecurity.com/files/166325/RHSA-2022-0892-01.txt
+Red Hat Security Advisory 2022-0925-01 : https://packetstormsecurity.com/files/166324/RHSA-2022-0925-01.txt
+Red Hat Security Advisory 2022-0894-01 : https://packetstormsecurity.com/files/166323/RHSA-2022-0894-01.txt
+Red Hat Security Advisory 2022-0886-01 : https://packetstormsecurity.com/files/166322/RHSA-2022-0886-01.txt
+Red Hat Security Advisory 2022-0891-01 : https://packetstormsecurity.com/files/166321/RHSA-2022-0891-01.txt
+Red Hat Security Advisory 2022-0855-01 : https://packetstormsecurity.com/files/166320/RHSA-2022-0855-01.txt
+Apple Security Advisory 2022-03-14-4 : https://packetstormsecurity.com/files/166319/APPLE-SA-2022-03-14-4.txt
+Apple Security Advisory 2022-03-14-2 : https://packetstormsecurity.com/files/166318/APPLE-SA-2022-03-14-2.txt
+Apple Security Advisory 2022-03-14-1 : https://packetstormsecurity.com/files/166317/APPLE-SA-2022-03-14-1.txt
+Apple Security Advisory 2022-03-14-3 : https://packetstormsecurity.com/files/166316/APPLE-SA-2022-03-14-3.txt
+Apple Security Advisory 2022-03-14-5 : https://packetstormsecurity.com/files/166315/APPLE-SA-2022-03-14-5.txt
+Apple Security Advisory 2022-03-14-10 : https://packetstormsecurity.com/files/166314/APPLE-SA-2022-03-14-10.txt
+Apple Security Advisory 2022-03-14-7 : https://packetstormsecurity.com/files/166313/APPLE-SA-2022-03-14-7.txt
+Apple Security Advisory 2022-03-14-6 : https://packetstormsecurity.com/files/166312/APPLE-SA-2022-03-14-6.txt
+Apple Security Advisory 2022-03-14-9 : https://packetstormsecurity.com/files/166311/APPLE-SA-2022-03-14-9.txt
+Apple Security Advisory 2022-03-14-8 : https://packetstormsecurity.com/files/166310/APPLE-SA-2022-03-14-8.txt
+Red Hat Security Advisory 2022-0856-01 : https://packetstormsecurity.com/files/166309/RHSA-2022-0856-01.txt
+Red Hat Security Advisory 2022-0842-01 : https://packetstormsecurity.com/files/166308/RHSA-2022-0842-01.txt
+College Website Management System 1.0 SQL Injection : https://packetstormsecurity.com/files/166307/cwms10-sql.txt
+Lawmakers Probe Early Release of Top RU Cybercrook : https://krebsonsecurity.com/2022/03/lawmakers-probe-early-release-of-top-ru-cybercrook/
+NVIDIA staff shouldn’t have chosen passwords like these… : https://grahamcluley.com/nvidia-staff-passwords/
+Apple patches 87 security holes – from iPhones and Macs to Windows : https://nakedsecurity.sophos.com/2022/03/15/apple-patches-87-security-holes-from-iphones-and-macs-to-windows/
+The Lapsus$ Hacking Group Is Off to a Chaotic Start : https://www.wired.com/story/lapsus-hacking-group-extortion-nvidia-samsung
+Most QNAP NAS Devices Affected by ‘Dirty Pipe’ Linux Flaw : https://threatpost.com/most-qnap-nas-devices-affected-by-dirty-pipe-linux-flaw/178920/
+Russia faces IT crisis with just two months of data storage left : https://www.bleepingcomputer.com/news/technology/russia-faces-it-crisis-with-just-two-months-of-data-storage-left/
+Massive phishing campaign uses 500+ domains to steal credentials : https://www.bleepingcomputer.com/news/security/massive-phishing-campaign-uses-500-plus-domains-to-steal-credentials/
+German government advises against using Kaspersky antivirus : https://www.bleepingcomputer.com/news/security/german-government-advises-against-using-kaspersky-antivirus/
+AA22-074A: Russian State-Sponsored Cyber Actors Gain Network Access by Exploiting Default Multifactor Authentication Protocols and “PrintNightmare” Vulnerability : https://us-cert.cisa.gov/ncas/alerts/aa22-074a
+FreeBSD-EN-22:11.zfs : https://www.freebsd.org/security/advisories/FreeBSD-EN-22:11.zfs.asc
+FreeBSD-EN-22:10.zfs : https://www.freebsd.org/security/advisories/FreeBSD-EN-22:10.zfs.asc
+FreeBSD-EN-22:09.freebsd-update : https://www.freebsd.org/security/advisories/FreeBSD-EN-22:09.freebsd-update.asc
+FreeBSD-EN-22:12.zfs : https://www.freebsd.org/security/advisories/FreeBSD-EN-22:12.zfs.asc
+FreeBSD-SA-22:03.openssl : https://www.freebsd.org//security/advisories/FreeBSD-SA-22:03.openssl.asc
+FreeBSD-SA-22:02.wifi : https://www.freebsd.org//security/advisories/FreeBSD-SA-22:02.wifi.asc
+Cyberattacks Against Israeli Government Sites: ‘Largest in the Country’s History’ : https://threatpost.com/cyberattacks-israeli-government-sites-largest/178927/
+CaddyWiper: Third Wiper Malware Targeting Ukrainian Organizations : https://securityintelligence.com/posts/caddywiper-malware-targeting-ukrainian-organizations/
+Stolen Nvidia certificates used to sign malware—here’s what to do : https://blog.malwarebytes.com/awareness/2022/03/stolen-nvidia-certificates-used-to-sign-malware-heres-what-to-do/
+New Linux botnet exploits Log4J, uses DNS tunneling for comms : https://www.bleepingcomputer.com/news/security/new-linux-botnet-exploits-log4j-uses-dns-tunneling-for-comms/
+Android trojan persists on the Google Play Store since January : https://www.bleepingcomputer.com/news/security/android-trojan-persists-on-the-google-play-store-since-january/
+FTC to fine CafePress for cover up of massive data breach : https://www.bleepingcomputer.com/news/security/ftc-to-fine-cafepress-for-cover-up-of-massive-data-breach/
+Escobar is the new Android banking Trojan we’ve met before : https://blog.malwarebytes.com/android/2022/03/escobar-is-the-new-android-banking-trojan-weve-met-before/
+DDoS barrage against Israel described as the “largest ever” cyberattack its faced : https://blog.malwarebytes.com/security-world/2022/03/ddos-barage-against-israel-described-as-the-largest-ever-cyberattack-its-faced/
+Update now! Apple fixes several serious vulnerabilities in iOS and macOS : https://blog.malwarebytes.com/exploits-and-vulnerabilities/2022/03/update-now-apple-fixes-several-serious-vulnerabilities-in-ios-macos-and-ipados/
+HackerOne apologizes to Ukrainian hackers for mistakenly blocking payouts : https://www.bleepingcomputer.com/news/security/hackerone-apologizes-to-ukrainian-hackers-for-mistakenly-blocking-payouts/
+Dozens of ransomware variants used in 722 attacks over 3 months : https://www.bleepingcomputer.com/news/security/dozens-of-ransomware-variants-used-in-722-attacks-over-3-months/
+FBI warns of MFA flaw used by state hackers for lateral movement : https://www.bleepingcomputer.com/news/security/fbi-warns-of-mfa-flaw-used-by-state-hackers-for-lateral-movement/
+“Russian actors bypass 2FA” warning – what happened and how to avoid it : https://nakedsecurity.sophos.com/2022/03/16/russian-actors-bypass-2fa-story-what-happened-and-how-to-avoid-it/
+How Tripwire Log Center and Tripwire Industrial Visibility Can Work Together : https://www.tripwire.com/state-of-security/ics-security/how-tripwire-log-center-and-tripwire-industrial-visibility-can-work-together/
