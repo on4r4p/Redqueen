@@ -3633,7 +3633,7 @@ def Search_Keyword(word):
                         with open(Pth_NoResult_Rq, "a") as file:
                             file.write("\n"+str(word) + "\n")
 
-                    with open(Pth_Already_Searched_Rq):
+                    with open(Pth_Already_Searched_Rq) as file:
                             file.write("\n"+str(word) + "\n")
 
                     searchresults = []
@@ -3673,7 +3673,7 @@ def Search_Keyword(word):
                             file.write("\n"+str(word) + "\n")
 
                 except Exception as e:
-                    with open(Pth_Already_Searched_Rq):
+                    with open(Pth_Already_Searched_Rq) as file:
                             file.write("\n"+str(word) + "\n")
                     Betterror(e, inspect.stack()[0][3])
 
@@ -3683,11 +3683,11 @@ def Search_Keyword(word):
                 Search_Done_Trigger = False
                 limits()
 
-            with open(Pth_Already_Searched_Rq):
+            with open(Pth_Already_Searched_Rq) as file:
                             file.write("\n"+str(word) + "\n")
 
     except Exception as e:
-        with open(Pth_Already_Searched_Rq):
+        with open(Pth_Already_Searched_Rq) as file:
              file.write("\n"+str(word) + "\n")
         Betterror(e, inspect.stack()[0][3])
 
