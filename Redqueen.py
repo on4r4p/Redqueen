@@ -214,9 +214,9 @@ Cherryconf = {
 
 
 class Redqueen_Server:
-    global Current_Update_Status_Nbr
 
     Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
+
     def header(self):
         css_box = GenCss()
         return str(Template_Header)%(Redqueen_Server.Anchor,css_box)
@@ -237,9 +237,10 @@ class Redqueen_Server:
 
     @cherrypy.expose
     def redqueen_retweet(self, rid=None):
+        global Current_Update_Status_Nbr
         AnchorId = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
         if rid != None and rid.isnumeric():
-            for nbr, D in enumerate(Extracted_Datas):
+    Current_Update_Status_Nbr        for nbr, D in enumerate(Extracted_Datas):
                     if str(D[1]) == str(rid):
                          AnchorId = "Anchor-%s"%nbr
                          break
@@ -294,6 +295,7 @@ class Redqueen_Server:
 
     @cherrypy.expose
     def redqueen_favorite(self, fid=None):
+        global Current_Update_Status_Nbr
         AnchorId = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
         if fid != None and fid.isnumeric():
             for nbr, D in enumerate(Extracted_Datas):
