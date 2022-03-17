@@ -24,6 +24,8 @@ MasterStart_Trigger = False
 
 Broken_pipe_Trigger = False
 
+Irc = ""
+
 RssSent = []
 
 NoResult_List = []
@@ -46,6 +48,18 @@ Emoji_List = []
 
 RetweetSave = ""
 
+Session_Started_At = ""
+
+Current_Api_Call_Nbr=0
+
+Daily_Api_Call_Nbr=0
+
+Current_Update_Status_Nbr=0
+
+Daily_Update_Status_Nbr=0
+
+Total_Api_Calls_Nbr =0
+
 CurrentDate = datetime.datetime.now()
 
 Pth_Data = os.path.dirname(os.path.abspath(__file__)) + "/Data/"
@@ -56,9 +70,7 @@ Pth_Img_Rq = Pth_Web + "img/redqueen-profile.png"
 
 Pth_Save = Pth_Data + "Save/"
 
-Pth_TotalApi_Call = str(Pth_Data) + "TotalApi.Call.Rq"
-
-Pth_Update_Call = str(Pth_Data) + "Update.Status.Call.Rq"
+Pth_Current_Session = str(Pth_Data) + "Current.Session.Rq"
 
 Pth_Already_Searched_Rq = str(Pth_Data) + "Already.Searched.Rq"
 
@@ -79,8 +91,6 @@ Pth_Rss_Rq = str(Pth_Data) + "Rss.Feeds.Rq"
 Pth_Request_Log = str(Pth_Data) + "Request.log.Rq"
 
 Pth_Error_Log = str(Pth_Data) + "Errors.log.Rq"
-
-Pth_Current_Session = str(Pth_Data) + "Current.Session.Rq"
 
 Pth_NoResult_Rq = str(Pth_Data) + "No.Result.Rq"
 
@@ -119,14 +129,6 @@ Rss_Url_List = []
 Requested_Cmd_List = []
 
 Already_Searched_List = []
-
-Api_Call_Nbr = 0
-
-Update_Call_Nbr = 0
-
-Total_Call_Nbr = 0
-
-Total_Update_Call_Nbr = 0
 
 All_Ok_Trigger = False
 
@@ -212,6 +214,8 @@ Cherryconf = {
 
 
 class Redqueen_Server:
+    global Current_Update_Status_Nbr
+
     Anchor = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
     def header(self):
         css_box = GenCss()
@@ -256,6 +260,7 @@ class Redqueen_Server:
                     TAK.oa1_oauth_token_secret,
                 )
                 Twitter_CherryApi.retweet(id=rid)
+                Current_Update_Status_Nbr += 1
             except Exception as e:
                 if "Twitter API returned a 403 (Forbidden), You have already" in str(e):
                    try:
@@ -266,9 +271,12 @@ class Redqueen_Server:
                        TAK.oa1_oauth_token_secret,
                        )
                        Twitter_CherryApi.destroy_retweet(id=rid)
+                       Current_Update_Status_Nbr += 2
                    except Exception as e:
+                      Current_Update_Status_Nbr += 2
                       Betterror(e, inspect.stack()[0][3])
                 else:
+                      Current_Update_Status_Nbr += 1
                       Betterror(e, inspect.stack()[0][3])
 
         else:
@@ -307,6 +315,7 @@ class Redqueen_Server:
                     TAK.oa1_oauth_token_secret,
                 )
                 Twitter_CherryApi.create_favorite(id=fid)
+                Current_Update_Status_Nbr += 1
             except Exception as e:
                 if "Twitter API returned a 403 (Forbidden), You have already" in str(e):
                    try:
@@ -317,9 +326,12 @@ class Redqueen_Server:
                        TAK.oa1_oauth_token_secret,
                        )
                        Twitter_CherryApi.destroy_favorite(id=fid)
+                       Current_Update_Status_Nbr += 2
                    except Exception as e:
+                      Current_Update_Status_Nbr += 2
                       Betterror(e, inspect.stack()[0][3])
                 else:
+                      Current_Update_Status_Nbr += 1
                       Betterror(e, inspect.stack()[0][3])
         else:
             if fid != None and fid.startswith("rss"):
@@ -729,7 +741,6 @@ def Betterror(error_msg, def_name):
 
 
 def Error_Log(Err_to_log):
-
     try:
 
         with open(Pth_Error_Log, "a") as fuck:
@@ -742,21 +753,19 @@ def Error_Log(Err_to_log):
 
 def WakeApiUp():
     global Twitter_Api
-    global Api_Call_Nbr
+    global Current_Api_Call_Nbr
     global Search_ApiCallLeft_Nbr
+    Fig("cybermedium", "WakeApiUp()", True)
     try:
         Twitter_Api = Twython(TAK.oa2_app_key, access_token=TAK.oa2_access_token)
         rate = Twitter_Api.get_application_rate_limit_status()
         Search_ApiCallLeft_Nbr = int(
             rate["resources"]["search"]["/search/tweets"]["remaining"]
         )
-        Api_Call_Nbr += 1
+        Current_Api_Call_Nbr += 1
         return Twitter_Api
     except Exception as e:
-        if GOGOGO_Trigger is False:
-            sys.exit()
         Betterror(e, inspect.stack()[0][3])
-
 
 def Cleanfile(filename):
     f_to_lower = [Pth_Banned_Word_Rq,Pth_Keywords_Rq]
@@ -814,12 +823,16 @@ def Load_Variables():
     global NoResult_List
     global Emoji_List
     global Ban_Double_List
+    global Session_Started_At
+    global Current_Api_Call_Nbr
+    global Daily_Api_Call_Nbr
+    global Current_Update_Status_Nbr
+    global Daily_Update_Status_Nbr
+    global Total_Api_Calls_Nbr
     global Total_Already_Send_Nbr
     global Ban_Double_Url_List
 
     Checkfiles = [
-        Pth_TotalApi_Call,
-        Pth_Update_Call,
         Pth_Request_Log,
         Pth_Current_Session,
         Pth_Error_Log,
@@ -852,11 +865,25 @@ def Load_Variables():
         Fig("cybermedium", "LoadVars()", True)
         print("\n\n\n\n")
 
-        for saved in Cleanfile(Pth_NoResult_Rq):
-            NoResult_List.append(saved)
+
+        Current_Session = Cleanfile(Pth_Current_Session)
+
+        for line in Current_Session:
+            if "Session_Started_At" in line:
+                Session_Started_At = line.split("Session_Started_At=")[1]
+            if "Current_Api_Call_Nbr" in line:
+                Current_Api_Call_Nbr = int(line.split("Current_Api_Call_Nbr=")[1])
+            if "Daily_Api_Call_Nbr" in line:
+                Daily_Api_Call_Nbr = int(line.split("Daily_Api_Call_Nbr=")[1])
+            if "Current_Update_Status_Nbr" in line:
+                Current_Update_Status_Nbr = int(line.split("Current_Update_Status_Nbr=")[1])
+            if "Daily_Update_Status_Nbr" in line:
+                Daily_Update_Status_Nbr = int(line.split("Daily_Update_Status_Nbr=")[1])
+            if "Total_Api_Calls_Nbr" in line:
+                Total_Api_Calls_Nbr = int(line.split("Total_Api_Calls_Nbr=")[1])
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "No Result Loaded", True)
+        Fig("digital", "Twitter Api Calls Stats Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
 
         for saved in Cleanfile(Pth_Data + "RssSave.Rq"):
@@ -1100,7 +1127,7 @@ def Request(cmd):
     global Timelines_List
     global Banned_Word_list
     global Banned_User_List
-    global Api_Call_Nbr
+    global Current_Api_Call_Nbr
     global Banned
     global MasterPause_Trigger
     global NoResult_List
@@ -1945,41 +1972,35 @@ def SaveDouble(text,urls):
 
 
 
-def flushtmp():
+def Flush_Current_Session():
 
-    global Api_Call_Nbr
-    global Update_Call_Nbr
+    global Session_Started_At
+    global Current_Api_Call_Nbr
+    global Daily_Api_Call_Nbr
+    global Current_Update_Status_Nbr
+    global Daily_Update_Status_Nbr
+    global Total_Api_Calls_Nbr
+
+
     try:
+        Fig("cybermedium", "Flush_Current_Session()", True)
+        date_object = datetime.datetime.strptime(str(Session_Started_At), "%Y-%m-%d %H:%M:%S.%f")
+        Laps = CurrentDate - date_object
+        print(Laps)
 
-        goflush = 0
-
-        Fig("cybermedium", "flushtmp()", True)
-
-        if os.path.exists(Pth_Current_Session):
-
-            file = open(Pth_Current_Session, "r")
-            datefile = file.read()
-            date_object = datetime.datetime.strptime(
-                str(datefile), "%Y-%m-%d %H:%M:%S.%f"
-            )
-            Laps = CurrentDate - date_object
-
-            print(Laps)
-
-            try:
-                if (CurrentDate - date_object).total_seconds() > 86400:
-                    goflush = 1
-            except Exception as e:
-                Betterror(e, inspect.stack()[0][3])
-
-                Fig("digital", "No need to flush", True)
-
-            if goflush == 1:
+        if Laps.total_seconds() > 86400:
 
                 print("==")
                 Fig("digital", "Flushing Temps Files", True)
                 print("==")
-                file.close()
+
+                Session_Started_At = CurrentDate
+                Current_Api_Call_Nbr = 0
+                Daily_Api_Call_Nbr = 0
+                Current_Update_Status_Nbr = 0
+                Daily_Update_Status_Nbr = 0
+                Total_Api_Calls_Nbr = 0
+
                 try:
                     text = "New Pth_Current_Session ! " + str(CurrentDate)
                     IrSend(text)
@@ -1992,27 +2013,23 @@ def flushtmp():
 
                 os.remove(Pth_Current_Session)
 
-                if os.path.exists(Pth_TotalApi_Call):
-                    os.remove(Pth_TotalApi_Call)
-
-                if os.path.exists(Pth_Update_Call):
-                    os.remove(Pth_Update_Call)
-
-                if os.path.exists(Pth_Already_Searched_Rq):
-                    os.remove(Pth_Already_Searched_Rq)
-
                 print("==")
                 Fig("digital", "Saving current date", True)
                 print(CurrentDate)
                 print("==")
 
-                file = open(Pth_Current_Session, "w")
-                file.write(str(CurrentDate))
-                file.close()
+                with open(Pth_Current_Session, "w") as f:
+                    f.write(
+"""Session_Started_At=%s
+Current_Api_Call_Nbr=0
+Daily_Api_Call_Nbr=0
+Current_Update_Status_Nbr=0
+Daily_Update_Status_Nbr=0
+Total_Api_Calls_Nbr=0"""%str(Session_Started_At))
 
                 Fig("digital", "Done Flushing", True)
 
-            else:
+        else:
                 lfts = 86400 - Laps.seconds
 
                 print("==")
@@ -2020,19 +2037,8 @@ def flushtmp():
                 Fig("digital", "Starting from Last Pth_Current_Session", True)
 
                 print("Numbers of seconds since the first api call :", Laps.seconds)
-                print("%i Seconds left until Twitter flushs Api_Call_Nbrs :" % lfts)
+                print("%i Seconds left until Twitter flushs Current_Api_Call_Nbrs :" % lfts)
                 print("==")
-
-        else:
-
-            print("==")
-            Fig("digital", "New Pth_Current_Session Started", True)
-            print(CurrentDate)
-            print("==")
-
-            file = open(Pth_Current_Session, "w")
-            file.write(str(CurrentDate))
-            file.close()
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
@@ -2058,39 +2064,29 @@ def Last_Session(lastsearch):
         Betterror(e, inspect.stack()[0][3])
 
 
-def SaveTotalCall(call, update):
+def Save_Current_Session():
+    global Current_Api_Call_Nbr
+    global Daily_Api_Call_Nbr
+    global Current_Update_Status_Nbr
+    global Daily_Update_Status_Nbr
+    global Total_Api_Calls_Nbr
+
+    Daily_Api_Call_Nbr += Current_Api_Call_Nbr
+    Daily_Update_Status_Nbr += Current_Update_Status_Nbr
+    Total_Api_Calls_Nbr += (Current_Api_Call_Nbr+Current_Update_Status_Nbr)
+
     try:
-        Fig("cybermedium", "SaveTotalCall()")
-        global Total_Call_Nbr
-        global Update_Call_Nbr
-        global Total_Update_Call_Nbr
+        Fig("cybermedium", "Save_Current_Session()")
+        with open(Pth_Current_Session, "w") as f:
+             f.write(
+"""Session_Started_At=%s
+Current_Api_Call_Nbr=%s
+Daily_Api_Call_Nbr=%s
+Current_Update_Status_Nbr=%s
+Daily_Update_Status_Nbr=%s
+Total_Api_Calls_Nbr=%s"""%str(Session_Started_At,Current_Api_Call_Nbr,Daily_Api_Call_Nbr,Current_Update_Status_Nbr,Daily_Update_Status_Nbr,Total_Api_Calls_Nbr))
 
-        try:
-            lastitem = Cleanfile(Pth_TotalApi_Call)[0]
-        except Exception as e:
-            Betterror(e, inspect.stack()[0][3])
-            lastitem = 0
-        print("==")
-        print("Last Total saved : ", lastitem)
-        Total_Call_Nbr = int(lastitem) + int(call)
-        Fig("digital", "Saving new Total : " + str(Total_Call_Nbr))
-        print("==")
-        with open(Pth_TotalApi_Call, "w") as file:
-            file.write(str(Total_Call_Nbr))
-
-        try:
-            lastitem = Cleanfile(Pth_Update_Call)[0]
-        except Exception as e:
-            Betterror(e, inspect.stack()[0][3])
-            lastitem = 0
-        print("==")
-        print("Last Update Total saved : ", lastitem)
-        Total_Call_Nbr = int(lastitem) + int(call)
-        print("Saving new Update Total : ", Total_Call_Nbr)
-        print("==")
-        with open(Pth_Update_Call, "w") as file:
-            file.write(str(Total_Call_Nbr))
-        Fig("digital", "Done Saving Calls")
+        Fig("digital", "Done")
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
@@ -2249,7 +2245,7 @@ def IrSweet():
 
 def GetHomeTimeline():
 
-    global Api_Call_Nbr
+    global Current_Api_Call_Nbr
     global Total_Ban_By_BannedPeople_Nbr
     global Total_Ban_By_Keywords_Nbr
     global Total_Already_Send_Nbr
@@ -2257,7 +2253,7 @@ def GetHomeTimeline():
 
     try:
         Own_Timeline = Twitter_Api.get_home_timeline()
-        Api_Call_Nbr += 1
+        Current_Api_Call_Nbr += 1
 
         for tweet in Own_Timeline:
 
@@ -2350,10 +2346,10 @@ def GetHomeTimeline():
                         print("Nbr of tweets sent :", len(Retweet_List))
                         print("Tweet Score : 1337")
                         print("Tweet ID :", tweet["id"])
-                        print("Current ApiCall Count :", Api_Call_Nbr)
-                        print("Total Number Of Calls :", Total_Call_Nbr)
-                        print("Current Update Status Count :", Update_Call_Nbr)
-                        print("Total Number Of Update Calls :", Total_Update_Call_Nbr)
+                        print("Current ApiCall Count :", Current_Api_Call_Nbr)
+                        print("Total Number Of Calls :", Total_Api_Calls_Nbr)
+                        print("Current Update Status Count :", Current_Update_Status_Nbr)
+                        print("Total Number Of Update Calls :", Daily_Update_Status_Nbr)
                         print("Tweet :", Tweext)
                         print("######################################")
                         print("")
@@ -2397,7 +2393,7 @@ def RssFeeds(ttl):
                     for news in rss.entries:
                         time.sleep(Config.Time_Sleep)
                         counter = counter + 1
-
+                        format = str(news.title) + " : " + str(news.link)
                         if "updated" in news:
                             pubdate= str(news.update)
                         elif "published" in news:
@@ -2411,9 +2407,15 @@ def RssFeeds(ttl):
                               continue
                         except Exception as e:
                            Betterror(e, inspect.stack()[0][3])
+                           print("format:",format)
+                           if "updated" in news:
+                               pubdate= str(news.update)
+                               print("pubdate update:",pubdate)
+                           elif "published" in news:
+                               pubdate = str(news.published)
+                               print("pubdate published:",pubdate)
                            continue
 
-                        format = str(news.title) + " : " + str(news.link)
                         if format not in RssSent:
                             RssSent.append(format)
                             IrSend(format)
@@ -2471,12 +2473,12 @@ def IrSend(content, dontprint=None):
                 )
             )
         content = content.replace("\n", " ")
-        time.sleep(Config.Time_Sleep)
         Fig("digital", "\n--Sending :" + str(content) + "--\n")
         Irc.send(
             bytes("PRIVMSG %s :** %s **\r\n" % (IrcKey.IRCHANNEL, content), "UTF-8")
         )
         Fig("digital", "\n--Done--\n")
+        time.sleep(1)
         if Broken_pipe_Trigger is True:
                 Broken_pipe_Trigger = False
                 MasterPause_Trigger = False
@@ -2495,17 +2497,17 @@ def Stat2Irc(Time_To_Wait):
 
         #  Flood = randint(0,3)
         #  if Flood == 3:
-        Api_Call_Nbrtxt = "Total RT Sent: " + str(Total_Sent_Nbr)
-        IrSend(Api_Call_Nbrtxt)
+        Current_Api_Call_Nbrtxt = "Total RT Sent: " + str(Total_Sent_Nbr)
+        IrSend(Current_Api_Call_Nbrtxt)
         time.sleep(Config.Time_Sleep)
-        Update_Call_Nbrtxt = "Current Update Calls: " + str(Update_Call_Nbr)
-        IrSend(Update_Call_Nbrtxt)
+        Current_Update_Status_Nbrtxt = "Current Update Calls: " + str(Current_Update_Status_Nbr)
+        IrSend(Current_Update_Status_Nbrtxt)
         time.sleep(Config.Time_Sleep)
-        Total_Call_Nbrtxt = "Total Calls: " + str(Total_Call_Nbr)
-        IrSend(Total_Call_Nbrtxt)
+        Total_Api_Calls_Nbrtxt = "Total Calls: " + str(Total_Api_Calls_Nbr)
+        IrSend(Total_Api_Calls_Nbrtxt)
         time.sleep(Config.Time_Sleep)
-        Total_Update_Call_Nbrtxt = "Total Update Calls: " + str(Total_Update_Call_Nbr)
-        IrSend(Total_Update_Call_Nbrtxt)
+        Daily_Update_Status_Nbrtxt = "Total Update Calls: " + str(Daily_Update_Status_Nbr)
+        IrSend(Daily_Update_Status_Nbrtxt)
         time.sleep(Config.Time_Sleep)
         Banned_User_Listtxt = "Banned Users in list: " + str(len(Banned_User_List))
         IrSend(Banned_User_Listtxt)
@@ -2577,14 +2579,12 @@ def Stat2Irc(Time_To_Wait):
         Betterror(e, inspect.stack()[0][3])
 
 
-def limits():
+def Limits_Rates_Check():
     try:
 
         Fig("cybermedium", "Limits()")
-        global Api_Call_Nbr
-        global Update_Call_Nbr
-        global Total_Update_Call_Nbr
-        global Total_Call_Nbr
+        global Current_Api_Call_Nbr
+        global Current_Update_Status_Nbr
         global Twitter_Api
         global Search_Limit_Trigger
         global RestABit_Trigger
@@ -2603,16 +2603,16 @@ def limits():
             Fig("cybermedium", "CURRENT LIMITS ARE REACHED !!")
             print("")
             Fig("digital", "Saving Total Calls to file")
-            SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital", "Resetting current Api_Call_Nbrs")
+            Save_Current_Session()
+            Fig("digital", "Resetting current Current_Api_Call_Nbrs")
 
             Fig("digital", "Login Out")
             Fig("digital", "Waiting 60 minutes")
             print("\n\n\n\n")
 
             Stat2Irc(3600)
-            Update_Call_Nbr = 0
-            Api_Call_Nbr = 0
+            Current_Update_Status_Nbr = 0
+            Current_Api_Call_Nbr = 0
             Search_Limit_Trigger = False
             RestABit_Trigger = False
             Wait_Hour_Trigger = False
@@ -2629,15 +2629,15 @@ def limits():
             Fig("cybermedium", "Mysterious Error !!!", True)
             print("")
             Fig("digital", "Saving Total Calls to file")
-            SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital", "Resetting current Api_Call_Nbrs")
+            Save_Current_Session()
+            Fig("digital", "Resetting current Current_Api_Call_Nbrs")
 
             Fig("digital", "Login Out")
             Fig("digital", "Waiting 5 minutes")
             Stat2Irc(3600)
 
-            Update_Call_Nbr = 0
-            Api_Call_Nbr = 0
+            Current_Update_Status_Nbr = 0
+            Current_Api_Call_Nbr = 0
             Search_Limit_Trigger = False
             RestABit_Trigger = False
 
@@ -2654,16 +2654,16 @@ def limits():
 
             Fig("cybermedium", "SEARCH LIMITS ALMOST REACHED")
             Fig("digital", "Saving Total Calls to file")
-            SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital", "Resetting current Api_Call_Nbrs")
+            Save_Current_Session()
+            Fig("digital", "Resetting current Current_Api_Call_Nbrs")
 
             Fig("digital", "Login Out")
 
             Fig("digital", "Waiting 15 minutes")
             Stat2Irc(900)
 
-            Update_Call_Nbr = 0
-            Api_Call_Nbr = 0
+            Current_Update_Status_Nbr = 0
+            Current_Api_Call_Nbr = 0
             Search_Limit_Trigger = False
 
             Fig("digital", "Waking up ..")
@@ -2673,7 +2673,7 @@ def limits():
             print("****************************************")
             print("****************************************\n\n\n\n")
 
-        if Api_Call_Nbr >= Config.Maximum_Api_Search_Call_By_15_Minutes:
+        if Current_Api_Call_Nbr >= Config.Maximum_Api_Call_Per_15_Minutes:
 
             # Request()
             print("****************************************")
@@ -2681,8 +2681,8 @@ def limits():
 
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED")
             Fig("digital", "Saving Total Calls to file")
-            SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital", "Resetting current Api_Call_Nbrs")
+            Save_Current_Session()
+            Fig("digital", "Resetting current Current_Api_Call_Nbrs")
 
             Fig("digital", "Login Out")
 
@@ -2694,8 +2694,8 @@ def limits():
                 Fig("digital", "Waiting 30 minutes")
                 Stat2Irc(1800)
 
-            Update_Call_Nbr = 0
-            Api_Call_Nbr = 0
+            Current_Update_Status_Nbr = 0
+            Current_Api_Call_Nbr = 0
             Fig("digital", "Waking up ..")
             print("")
             Twitter_Api = WakeApiUp()
@@ -2703,7 +2703,7 @@ def limits():
             print("****************************************")
             print("****************************************\n\n\n\n")
 
-        if Total_Call_Nbr > Config.Maximum_Api_Search_Call_By_Day:
+        if Total_Api_Calls_Nbr > Config.Maximum_Api_Call_Per_Day:
 
             # Request()
             print("****************************************")
@@ -2711,20 +2711,20 @@ def limits():
 
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (total)")
             Fig("digital", "Saving Total Calls to file")
-            SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital", "Resetting current Api_Call_Nbrs")
+            Save_Current_Session()
+            Fig("digital", "Resetting current Current_Api_Call_Nbrs")
             All_Ok_Trigger = True
             Skip_Wait_Trigger = True
 
-        if Total_Update_Call_Nbr > Config.Maximum_Api_Search_Update_Call_By_Day:
+        if Daily_Update_Status_Nbr > Config.Maximum_Api_Update_Call_Per_Day:
             # Request()
 
             print("****************************************")
             print("****************************************")
             Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (update)")
             Fig("digital", "Saving Total Calls to file")
-            SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
-            Fig("digital", "Resetting current Api_Call_Nbrs")
+            Save_Current_Session()
+            Fig("digital", "Resetting current Current_Api_Call_Nbrs")
             All_Ok_Trigger = True
 
         print("===================")
@@ -3110,10 +3110,10 @@ def Idlist(id):
 
 def Scoring(tweet, search):
 
-    global Api_Call_Nbr
-    global Total_Call_Nbr
-    global Update_Call_Nbr
-    global Total_Update_Call_Nbr
+    global Current_Api_Call_Nbr
+    global Total_Api_Calls_Nbr
+    global Current_Update_Status_Nbr
+    global Daily_Update_Status_Nbr
     global AvgScore
     global Tweet_Age
     global Totale_Score_Nbr
@@ -3600,10 +3600,10 @@ def Scoring(tweet, search):
                         print("Nbr of tweets sent :", len(Retweet_List))
                         print("Tweet Score : ", Score)
                         print("Tweet ID :", tweet["id"])
-                        print("Current ApiCall Count :", Api_Call_Nbr)
-                        print("Total Number Of Calls :", Total_Call_Nbr)
-                        print("Current Update Status Count :", Update_Call_Nbr)
-                        print("Total Number Of Update Calls :", Total_Update_Call_Nbr)
+                        print("Current ApiCall Count :", Current_Api_Call_Nbr)
+                        print("Total Number Of Calls :", Total_Api_Calls_Nbr)
+                        print("Current Update Status Count :", Current_Update_Status_Nbr)
+                        print("Total Number Of Update Calls :", Daily_Update_Status_Nbr)
                         print("Search Call left :", search)
                         print("Tweet :", Tweext)
                         print("######################################")
@@ -3678,8 +3678,8 @@ def Scoring(tweet, search):
 
 
 def Search_Keyword(word):
-    global Api_Call_Nbr
-    global Update_Call_Nbr
+    global Current_Api_Call_Nbr
+    global Current_Update_Status_Nbr
     global Twitter_Api
     global Already_Searched_List
     global RestABit_Trigger
@@ -3704,7 +3704,7 @@ def Search_Keyword(word):
                 print(e)
                 Twitter_Api = WakeApiUp()
                 RestABit_Trigger = True
-                limits()
+                Limits_Rates_Check()
                 if ratechk != 1:
                     Search_ApiCallLeft_Nbr = 23
                     ratechk = 1
@@ -3721,7 +3721,7 @@ def Search_Keyword(word):
                 Fig("digital", "Calling Limit function")
                 print("=/\/\/\/\/\/\/\/\/\/\/\=")
 
-                limits()
+                Limits_Rates_Check()
 
                 try:
                     print("==")
@@ -3745,7 +3745,7 @@ def Search_Keyword(word):
                     # time.sleep(10)
                     print("##########################################")
 
-                    Api_Call_Nbr = Api_Call_Nbr + 1
+                    Current_Api_Call_Nbr = Current_Api_Call_Nbr + 1
                     Search_ApiCallLeft_Nbr = Search_ApiCallLeft_Nbr - 1
                     time.sleep(Config.Time_Sleep)
 
@@ -3761,7 +3761,7 @@ def Search_Keyword(word):
                     Search_nbr = 0
                     Search_obj = []
                     Betterror(e, inspect.stack()[0][3])
-                    Api_Call_Nbr = Api_Call_Nbr + 1
+                    Current_Api_Call_Nbr = Current_Api_Call_Nbr + 1
                 try:
                     if Search_nbr > Config.Minimum_Search_Result:
                         for item in Search_obj:
@@ -3800,7 +3800,7 @@ def Search_Keyword(word):
 
                 Search_Limit_Trigger = True
                 Search_Done_Trigger = False
-                limits()
+                Limits_Rates_Check()
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
@@ -3818,6 +3818,10 @@ def RedQueen():
         while 1:
             if GOGOGO_Trigger == True:
                 break
+            else:
+                time.sleep(1)
+
+        WakeApiUp()
 
         Fig("digital", "GOGOGO!", True)
         time.sleep(Config.Time_Sleep)
@@ -3827,7 +3831,7 @@ def RedQueen():
 
         Fig("digital", "Calling Flush function", True)
 
-        flushtmp()
+        Flush_Current_Session()
 
         Fig("digital", "Calling Search function", True)
 
@@ -3954,9 +3958,9 @@ def RedQueen():
                 + "-Rtwts:"
                 + str(RetweetSave)
                 + "-Tcall:"
-                + str(Total_Call_Nbr)
+                + str(Total_Api_Calls_Nbr)
                 + "-Ucall:"
-                + str(Total_Update_Call_Nbr)
+                + str(Daily_Update_Status_Nbr)
             )
 
             IrSend(dbrief)
@@ -3969,7 +3973,7 @@ def RedQueen():
 
         Fig("digital", "Calling Saving call function", True)
 
-        SaveTotalCall(Api_Call_Nbr, Update_Call_Nbr)
+        Save_Current_Session()
 
         print(
             "##############################################################################################################"
@@ -3993,7 +3997,6 @@ if __name__ == "__main__":
 
     try:
         title()
-
         if Config.WEB_SERVER is True:
             for lenchk in [
                 len(TAK.oa1_app_key),
@@ -4011,8 +4014,6 @@ if __name__ == "__main__":
             if lenchk < 25:
                 print("ALL TAK.OAUT_2 must be filled and correct in TwitterApiKeys.py")
                 sys.exit()
-
-        WakeApiUp()
 
         Fig("digital", "Launching Blueking on IRC")
         time.sleep(Config.Time_Sleep)
