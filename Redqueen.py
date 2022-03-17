@@ -240,7 +240,7 @@ class Redqueen_Server:
         global Current_Update_Status_Nbr
         AnchorId = """<script type="text/javascript" language="javascript">function moveWindow(){}</script>"""
         if rid != None and rid.isnumeric():
-    Current_Update_Status_Nbr        for nbr, D in enumerate(Extracted_Datas):
+            for nbr, D in enumerate(Extracted_Datas):
                     if str(D[1]) == str(rid):
                          AnchorId = "Anchor-%s"%nbr
                          break
