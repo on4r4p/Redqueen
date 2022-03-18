@@ -2537,6 +2537,7 @@ def GetHomeTimeline():
     global Current_Ban_By_Keywords
     global Current_Already_Send
     global RetweetSave
+    Fig("cybermedium", "GetHomeTimeline()")
     Tapi = Twython(TAK.oa1_app_key,TAK.oa1_app_secret,TAK.oa1_oauth_token,TAK.oa1_oauth_token_secret)
     try:
         Own_Timeline = Tapi.get_home_timeline()
@@ -2909,7 +2910,6 @@ def Limits_Rates_Check():
 
             Fig("digital", "Waking up ..")
             print("")
-            Twitter_Api = WakeApiUp()
             GetHomeTimeline()
             print("\n\n")
 
@@ -2932,7 +2932,6 @@ def Limits_Rates_Check():
 
             Fig("digital", "Waking up ..")
             print("")
-            Twitter_Api = WakeApiUp()
             GetHomeTimeline()
 
         if Search_Limit_Trigger == True:
@@ -2957,7 +2956,6 @@ def Limits_Rates_Check():
 
             Fig("digital", "Waking up ..")
             print("")
-            Twitter_Api = WakeApiUp()
             GetHomeTimeline()
             print("****************************************")
             print("****************************************\n\n\n\n")
@@ -2988,7 +2986,6 @@ def Limits_Rates_Check():
 
             Fig("digital", "Waking up ..")
             print("")
-            Twitter_Api = WakeApiUp()
             GetHomeTimeline()
             print("****************************************")
             print("****************************************\n\n\n\n")
@@ -3978,6 +3975,7 @@ def FingerCount(whichone,howmany):
                 globals()["Overall"+whichone[whichone.find("_"):]] += int(howmany)
             else:
                 globals()[whichone] = 0
+            Save_Current_Session()
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
