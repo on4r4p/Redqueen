@@ -893,16 +893,11 @@ def Reload_List(action,lst_to_reload,lst_of_values):
                 globals()[lst_to_reload]= [x for x in globals()[lst_to_reload] if x != value]
            if action == "add":
                 if value not in globals()[lst_to_reload]:
-                   globals()[lst_to_reload].append(value)]
+                   globals()[lst_to_reload].append(value)
        return("**List %s reloaded**"%lst_to_reload)
     except Exception as e:
        return("**Error while reloading %s:%s**"%(lst_to_reload,str(e)))
        Betterror(e, inspect.stack()[0][3])
-
-
-
-
-
 
 def Load_Variables():
 
