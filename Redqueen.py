@@ -2680,45 +2680,46 @@ def GetHomeTimeline():
 def RssFeeds(ttl):
     global RssSent
     global Extracted_Datas
-
+    Fig("cybermedium", "RssFeeds()")
     try:
 
         counter = 0
 
         for flux in Rss_Url_List:
-            
             if counter <= ttl:
+                time.sleep(1)
+                counter += 1
                 try:
                     rss = feedparser.parse(flux)
-                    
                     for news in rss.entries:
- #                       print("\n\n\n")
-#                        print(news)
-  #                      print("\n\n\n")
                         time.sleep(1)
-                        counter = counter + 1
+                        counter += 1
                         format = str(news.title) + " : " + str(news.link)
                         if "updated" in news:
                             pubdate= news.updated
                         elif "published" in news:
                             pubdate = news.published
                         else:
+                            counter += 1
+                            time.sleep(1)
                             continue
 
                         try:
                            rssage = datetime.datetime.now().replace(tzinfo=None) - dateparser.parse(pubdate).replace(tzinfo=None)
                            if rssage.days >= Config.Maximum_Retweet_DayOld:
+                              counter += 1
+                              time.sleep(1)
                               continue
                         except Exception as e:
                            Betterror(e, inspect.stack()[0][3])
-#                           print("format:",format)
                            if "updated" in news:
                                pubdate= str(news.updated)
-#                               print("pubdate update:",pubdate)
                            elif "published" in news:
                                pubdate = str(news.published)
- #                              print("pubdate published:",pubdate)
-                           continue
+                           else:
+                               counter += 1
+                               time.sleep(1)
+                               continue
 
                         if format not in RssSent:
                             RssSent.append(format)
@@ -2744,14 +2745,31 @@ def RssFeeds(ttl):
                                 f.write("\n"+str(format) + "\n")
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
-                    time.sleep(Config.Time_Sleep)
-                    counter = counter + 1
+                    time.sleep(1)
+                    counter += 1
                     print("Rss Error %s : %s" % (flux, e))
                     IrSend("Rss Error " + str(flux) + " : " + str(e))
+                    IrSend("Waiting " + str(ttl - counter) +" secondes..")
+                    print("Waiting %s secondes .."%(ttl - counter))
+                    while True:
+                       time.sleep(1)
+                       counter += 1
+                       if counter >= ttl:
+                           break
             else:
                 return
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
+        print("Rss Error %s : %s" % (flux, e))
+        IrSend("Rss Error " + str(flux) + " : " + str(e))
+        IrSend("Waiting " + str(ttl - counter) +" secondes..")
+        print("Waiting %s secondes .."%(ttl - counter))
+        while True:
+           time.sleep(1)
+           counter += 1
+           if counter >= ttl:
+              break
+
 
 
 def IrSend(content, dontprint=None):
@@ -2796,89 +2814,21 @@ def IrSend(content, dontprint=None):
             time.sleep(60)
 
 def Stat2Irc(Time_To_Wait):
-
+    Fig("cybermedium", "Stat2Irc()")
     try:
-
-        #  Flood = randint(0,3)
-        #  if Flood == 3:
-        Current_Api_Calltxt = "Total RT Sent: " + str(Total_Sent)
-        IrSend(Current_Api_Calltxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Update_Statustxt = "Current Update Calls: " + str(Current_Update_Status)
-        IrSend(Current_Update_Statustxt)
-        time.sleep(Config.Time_Sleep)
-        Daily_Api_Calltxt = "Total Calls: " + str(Daily_Api_Call)
-        IrSend(Daily_Api_Calltxt)
-        time.sleep(Config.Time_Sleep)
-        Daily_Update_Statustxt = "Total Update Calls: " + str(Daily_Update_Status)
-        IrSend(Daily_Update_Statustxt)
-        time.sleep(Config.Time_Sleep)
-        Banned_User_Listtxt = "Banned Users in list: " + str(len(Banned_User_List))
-        IrSend(Banned_User_Listtxt)
-        time.sleep(Config.Time_Sleep)
-        Ban_Double_Listtxt = "Total Banned (Double): " + str(Current_Already_Send)
-        IrSend(Ban_Double_Listtxt)
-        time.sleep(Config.Time_Sleep)
-        Banned_Word_listtxt = "Banned Words in list: " + str(len(Banned_Word_list))
-        IrSend(Banned_Word_listtxt)
-        time.sleep(Config.Time_Sleep)
-        Friendstxt = "Nbr of friends: " + str(len(Friends_List))
-        IrSend(Friendstxt)
-        time.sleep(Config.Time_Sleep)
-        Followingtxt = "Users Followed: " + str(len(Following_List))
-        IrSend(Followingtxt)
-        time.sleep(Config.Time_Sleep)
-        Keywordstxt = "Keywords in list: " + str(len(Search_List))
-        IrSend(Keywordstxt)
-        time.sleep(Config.Time_Sleep)
-        Timelinestxt = "Timelines in list: " + str(len(Timelines_List))
-        IrSend(Timelinestxt)
-        time.sleep(Config.Time_Sleep)
-        AvgScoreTxt = "Current Tweets collected: " + str(len(AvgScore))
-        IrSend(AvgScoreTxt)
-        time.sleep(Config.Time_Sleep)
-        NbrRetweettxt = "Tweets sent:" + str(len(Retweet_List))
-        IrSend(NbrRetweettxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_Scoretxt = "Total Banned (Score): " + str(Current_Ban_By_Score)
-        IrSend(Current_Ban_By_Scoretxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_Langtxt = "Total Banned (Language): " + str(
-            Current_Ban_By_Lang
-        )
-        IrSend(Current_Ban_By_Langtxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_Datetxt = "Total Banned (Too old): " + str(
-            Current_Ban_By_Date
-        )
-        IrSend(Current_Ban_By_Datetxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_NoResulttxt = "Total Banned (No Keywords): " + str(
-            Current_Ban_By_NoResult
-        )
-        IrSend(Current_Ban_By_NoResulttxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_Keywordstxt = "Total Banned (Words): " + str(
-            Current_Ban_By_Keywords
-        )
-        IrSend(Current_Ban_By_Keywordstxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_FollowFridaytxt = "Total Banned (FF): " + str(
-            Current_Ban_By_FollowFriday
-        )
-        IrSend(Current_Ban_By_FollowFridaytxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_Hashtagstxt = "Total Banned (###):" + str(
-            Current_Ban_By_Hashtags
-        )
-        IrSend(Current_Ban_By_Hashtagstxt)
-        time.sleep(Config.Time_Sleep)
-        Current_Ban_By_BannedPeopletxt = "Total Banned Users: " + str(
-            Current_Ban_By_BannedPeople
-        )
-        IrSend(Current_Ban_By_BannedPeopletxt)
-        time.sleep(Config.Time_Sleep)
-        RssFeeds(Time_To_Wait)
+        Global_List = ["Session_Started_At",
+"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_User","Current_Ban_By_Lang",
+"Current_Ban_By_Date","Current_Ban_By_NoResult","Current_Ban_By_Keywords","Current_Ban_By_FollowFriday",
+"Current_Ban_By_Hashtags","Current_Ban_By_People","Current_Already_Send","Current_Total_Searched",
+"Daily_Api_Call","Daily_Update_Status","Daily_Ban_By_Score","Daily_Ban_By_User","Daily_Ban_By_Lang",
+"Daily_Ban_By_Date","Daily_Ban_By_NoResult","Daily_Ban_By_Keywords","Daily_Ban_By_FollowFriday",
+"Daily_Ban_By_Hashtags","Daily_Ban_By_People","Daily_Already_Send","Daily_Total_Searched",
+"Overall_Api_Call","Overall_Update_Status","Overall_Ban_By_Score","Overall_Ban_By_User","Overall_Ban_By_Lang",
+"Overall_Ban_By_Date","Overall_Ban_By_NoResult","Overall_Ban_By_Keywords","Overall_Ban_By_FollowFriday",
+"Overall_Ban_By_Hashtags","Overall_Ban_By_People","Overall_Already_Send","Overall_Total_Searched"]
+        for stat in Global_List:
+           txt = str(stat)+": " + str(globals()[stat])
+           IrSend(txt)
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
