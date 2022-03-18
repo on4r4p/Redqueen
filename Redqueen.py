@@ -2525,6 +2525,7 @@ def GetHomeTimeline():
                     Tweext = tweet["full_text"]
             else:
                     Tweext = tweet["text"]
+            
 
             if "urls" in tweet["entities"]:
                for url in tweet["entities"]["urls"]:
@@ -2569,6 +2570,7 @@ def GetHomeTimeline():
 
             for forbid in Banned_Word_list:
                 forbid = re.sub(r"[^A-Za-z0-9 ]+", "", forbid.lower())
+                Twist = re.sub(r"[^A-Za-z0-9 ]+", "", Tweext.lower())
                 if forbid in Twist:
                     Fig("digital", "This tweet contains banned words :")
                     print("** %s **" % str(forbid))
