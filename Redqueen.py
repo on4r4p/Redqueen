@@ -875,6 +875,27 @@ def Fig(font, txt, toirc=None):
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
+def Reload_List(action,lst_to_reload,lst_of_values):
+    Global_List = ["Keywords_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List"]
+    if lst_to_reload not in Global_List:
+       return("**List %s not recognized**"%lst_to_reload)
+    try:
+       
+       for values in lst_of_values:
+           if action == "del":
+                globals()[lst_to_reload]= [x for x in globals()[lst_to_reload] if x != value]
+           if action == "add":
+                if value not in globals()[lst_to_reload]:
+                   globals()[lst_to_reload.append(value)]
+       return("**List %s reloaded**"%lst_to_reload)
+    except Exception as e:
+       return("**Error while reloading %s:%s**"%(lst_to_reload,str(e)))
+       Betterror(e, inspect.stack()[0][3])
+
+
+
+
+
 
 def Load_Variables():
 
@@ -929,7 +950,6 @@ def Load_Variables():
     global Overall_Ban_By_Hashtags
     global Overall_Ban_By_People
     global Overall_Total_Searched
-
     global Ban_Double_Url_List
 
     Checkfiles = [
@@ -1385,6 +1405,7 @@ def Request(cmd):
             "!help",
             "!users",
             "!keywords",
+            "!searchs",
             "!timeline",
             "!friends",
             "!rss",
@@ -1430,6 +1451,7 @@ def Request(cmd):
                             "!quit [Exit.]",
                             "!users [Print Following.Rq content]",
                             "!timeline [print User.Timeline.Rq]",
+                            "!searchs [print Current Search List]",
                             "!keywords [Print Keywords.Rq content]",
                             "!rss [Print Rss.Rq content]",
                             "!requests [Print Request.log content]",
@@ -1478,6 +1500,8 @@ def Request(cmd):
                     if option == "!users":
                         return Pastbin(Following_List)
                     if option == "!keywords":
+                        return Pastbin(Keywords_List)
+                    if option == "!searchs":
                         return Pastbin(Search_List)
                     if option == "!timeline":
                         return Pastbin(Timelines_List)
@@ -1821,6 +1845,7 @@ def Request(cmd):
                     else:
                         print("**%s is already in Timelines.Rq"%entry)
                         output.append("**%s is already in Timelines.Rq**"%entry)
+            output.append(Reload_List("add","Timelines_List",adt))
             output.append("**Adding %s users in Users.Timelines.Rq**" % bingo_cnter)
 
         if len(bt) > 0:
@@ -1834,6 +1859,7 @@ def Request(cmd):
                     else:
                         print("**%s is already in Banned.People.Rq**"%entry)
                         output.append("**%s is already in Banned.People.Rq**"%entry)
+            output.append(Reload_List("add","Banned_User_List",bt))
             output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(delt) > 0:
@@ -1860,7 +1886,9 @@ def Request(cmd):
                             bingo_cnter += 1
                             print("**Found %s in Users.Timelines.Rq**"%entry)
                             output.append("**Found %s in Users.Timelines.Rq**"%entry) 
+            output.append(Reload_List("del","Timelines_List",delt))
             output.append("**Deleting %s entry in Users.Timelines.Rq**" % bingo_cnter)
+
 
 
 #
@@ -1875,7 +1903,7 @@ def Request(cmd):
                     else:
                         print("**%s Already saved in Rss.Rq**"%entry)
                         output.append("**%s Already saved in Rss.Rq**"%entry)
-                    
+            output.append(Reload_List("add","Rss_Url_List",adrss))
             output.append("**Added %s new entry to Rss.Rq**" % bingo_cnter)
 
         if len(delrss) > 0:
@@ -1902,6 +1930,7 @@ def Request(cmd):
                             print("**Found %s in Rss.Rq**"%entry)
                             bingo_cnter += 1
                             output.append("**Found %s in Rss.Rq**"%entry)
+            output.append(Reload_List("del","Rss_Url_List",delrss))
             output.append("**Deleting %s entry in Rss.Rq**" % bingo_cnter)
 
         if len(delf) > 0:
@@ -1928,8 +1957,8 @@ def Request(cmd):
                             bingo_cnter += 1
                             print("**Found %s in Friends.Rq**"%entry)
                             output.append("**Found %s in Friends.Rq**"%entry)
+            output.append(Reload_List("del","Friends_List",delf))
             output.append("**Deleting %s users in Friends.Rq**" % bingo_cnter)
-
         if len(delu) > 0:
             print("Deleting %s users from Following.Rq"%len(delu))
             lines = Cleanfile(Pth_Following_Rq)
@@ -1954,6 +1983,7 @@ def Request(cmd):
                              print("**Found %s in Following.Rq**"%entry)
                              bingo_cnter +=1
                              output.append("**Found %s in Following.Rq**"%entry)
+            output.append(Reload_List("del","Following_List",delu))
             output.append("**Deleting %s users in Following.Rq**" % bingo_cnter)
 
         if len(delk) > 0:
@@ -1980,6 +2010,8 @@ def Request(cmd):
                            print("**Found %s in Keywords.Rq**"%entry)
                            output.append("**Found %s in Keywords.Rq**"%entry)
                            bingo_cnter += 1
+            output.append(Reload_List("del","Keywords_List",delk))
+            output.append(Reload_List("del","Search_List",delk))
             output.append("**Deleting %s entry in Keywords.Rq**" %bingo_cnter)
 
         if len(adk) > 0:
@@ -1993,7 +2025,9 @@ def Request(cmd):
                     else:
                         print("**%s is already in Keywords.Rq**"%entry)
                         output.append("**%s is already in Keywords.Rq**"%entry)
-            output.append("**Adding %s entry in Keywords.Rq**" %bingo_cnter )
+            output.append(Reload_List("add","Keywords_List",adk))
+            output.append(Reload_List("add","Search_List",adk))
+            output.append("**Adding %s entry in Keywords.Rq**" %bingo_cnter)
 
         if len(adu) > 0:
             print("Adding %s new entry to Following.Rq"%len(adu))
@@ -2006,6 +2040,7 @@ def Request(cmd):
                     else:
                         print("**%s is already in Following.Rq**"%entry)
                         output.append("**%s is already in Following.Rq**"%entry)
+            output.append(Reload_List("add","Following_List",adu))
             output.append("**Adding %s entry in Following.Rq**" % bingo_cnter)
 
         if len(adf) > 0:
@@ -2019,6 +2054,7 @@ def Request(cmd):
                     else:
                         print("**%s is already in Friends.Rq**"%entry)
                         output.append("**%s is already in Friends.Rq**"%entry)
+            output.append(Reload_List("add","Friends_List",adf))
             output.append("**Adding %s entry in Friends.Rq**" % bingo_cnter)
 
         if len(bu) > 0:
@@ -2032,6 +2068,7 @@ def Request(cmd):
                     else:
                         print("**%s is already in Banned.People.Rq**"%entry)
                         output.append("**%s is already in Banned.People.Rq**"%entry)
+            output.append(Reload_List("add","Banned_User_List",bu))
             output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(bf) > 0:
@@ -2045,6 +2082,7 @@ def Request(cmd):
                     else:
                         print("**%s already in Banned.People.Rq**"%entry)
                         output.append("**%s already in Banned.People.Rq**"%entry)
+            output.append(Reload_List("add","Banned_User_List",bf))
             output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
 
         if len(bk) > 0:
@@ -2059,6 +2097,8 @@ def Request(cmd):
                         print("**%s is already in Banned.Keywords.Rq**"%entry)
                         output.append("**%s is already in Banned.Keywords.Rq**"%entry)
             output.append("**Adding %s entry in Banned.KeyWord.Rq**" % bingo_cnter)
+            output.append(Reload_List("add","Banned_Word_list",bk))
+            output.append(Reload_List("del","Search_List",bk))
         output.append("**Done**")
         return output
     except Exception as e:
@@ -2638,12 +2678,12 @@ def RssFeeds(ttl):
             if counter <= ttl:
                 try:
                     rss = feedparser.parse(flux)
-
+                    
                     for news in rss.entries:
  #                       print("\n\n\n")
 #                        print(news)
   #                      print("\n\n\n")
-                        time.sleep(Config.Time_Sleep)
+                        time.sleep(1)
                         counter = counter + 1
                         format = str(news.title) + " : " + str(news.link)
                         if "updated" in news:
