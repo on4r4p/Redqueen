@@ -3970,9 +3970,6 @@ def Search_Keyword(word):
 
             except Exception as e:
                 Betterror(e, inspect.stack()[0][3])
-                print("mysterious error")
-
-                print(e)
                 Twitter_Api = WakeApiUp()
                 RestABit_Trigger = True
                 Limits_Rates_Check()
@@ -3999,7 +3996,6 @@ def Search_Keyword(word):
                     print("Loading tweets for " + word)
                     print("")
 
-                    Twitter_Api = WakeApiUp()
                     if word.startswith("@"):
                         searchresults = Twitter_Api.get_user_timeline(screen_name=str(word).replace("@",""), count=100, tweet_mode="extended")
                         Search_nbr = len(searchresults)
