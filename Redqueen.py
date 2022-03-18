@@ -5,7 +5,7 @@ from random import randint, choice, shuffle
 from twython import Twython
 from pyfiglet import Figlet
 from threading import Thread
-import re, socket, time, sys, os, inspect, cherrypy, string, datetime, emoji, feedparser, csv, dateparser
+import re, socket, time, sys, os, inspect, cherrypy, string, datetime, emoji, feedparser, csv, dateparser,signal
 import Config, IrcKey, PastebinApiKey
 import TwitterApiKeys as TAK
 
@@ -281,6 +281,13 @@ Cherryconf = {
 
 # Some Defs
 
+def handler(signum, frame):
+    Save_Current_Session()
+    Irc.send(bytes("PRIVMSG %s : Redqueen is exiting. \r\n"% (IrcKey.IRMASTER),"UTF-8"))
+    print("Exiting...")
+    os.system("pkill -9 Redqueen.py")
+ 
+signal.signal(signal.SIGINT, handler)
 
 class Redqueen_Server:
 
@@ -876,12 +883,12 @@ def Fig(font, txt, toirc=None):
         Betterror(e, inspect.stack()[0][3])
 
 def Reload_List(action,lst_to_reload,lst_of_values):
-    Global_List = ["Keywords_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List"]
+    Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List"]
     if lst_to_reload not in Global_List:
        return("**List %s not recognized**"%lst_to_reload)
     try:
        
-       for values in lst_of_values:
+       for value in lst_of_values:
            if action == "del":
                 globals()[lst_to_reload]= [x for x in globals()[lst_to_reload] if x != value]
            if action == "add":
@@ -2205,10 +2212,14 @@ def Flush_Current_Session():
 
     global Session_Started_At
 
-
     try:
         Fig("cybermedium", "Flush_Current_Session()", True)
-        date_object = datetime.datetime.strptime(str(Session_Started_At), "%Y-%m-%d %H:%M:%S.%f")
+        try:
+           date_object = datetime.datetime.strptime(str(Session_Started_At), "%Y-%m-%d %H:%M:%S.%f")
+        except Exception as e:
+           Betterror(e, inspect.stack()[0][3])
+           Session_Started_At = "2021-03-18 10:49:38.480677"
+           date_object = datetime.datetime.strptime(str(Session_Started_At), "%Y-%m-%d %H:%M:%S.%f")
         Laps = CurrentDate - date_object
         print(Laps)
 
@@ -2904,6 +2915,7 @@ def Limits_Rates_Check():
             Stat2Irc(3600)
             FingerCount("Current_Update_Status",0)
             FingerCount("Current_Api_Call",0)
+            Save_Current_Session()
             Search_Limit_Trigger = False
             RestABit_Trigger = False
             Wait_Hour_Trigger = False
@@ -2927,6 +2939,7 @@ def Limits_Rates_Check():
             Stat2Irc(3600)
             FingerCount("Current_Update_Status",0)
             FingerCount("Current_Api_Call",0)
+            Save_Current_Session()
             Search_Limit_Trigger = False
             RestABit_Trigger = False
 
@@ -2952,6 +2965,7 @@ def Limits_Rates_Check():
 
             FingerCount("Current_Update_Status",0)
             FingerCount("Current_Api_Call",0)
+            Save_Current_Session()
             Search_Limit_Trigger = False
 
             Fig("digital", "Waking up ..")
@@ -2983,7 +2997,7 @@ def Limits_Rates_Check():
 
             FingerCount("Current_Update_Status",0)
             FingerCount("Current_Api_Call",0)
-
+            Save_Current_Session()
             Fig("digital", "Waking up ..")
             print("")
             GetHomeTimeline()
@@ -3975,7 +3989,6 @@ def FingerCount(whichone,howmany):
                 globals()["Overall"+whichone[whichone.find("_"):]] += int(howmany)
             else:
                 globals()[whichone] = 0
-            Save_Current_Session()
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
