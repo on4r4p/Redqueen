@@ -830,7 +830,7 @@ def Error_Log(Err_to_log):
 def WakeApiUp():
     global Twitter_Api
     global Search_Api_Call_Left
-    Fig("cybermedium", "WakeApiUp()", True)
+    Fig("cybermedium", "WakeApiUp()")
     try:
         Twitter_Api = Twython(TAK.oa2_app_key, access_token=TAK.oa2_access_token)
         rate = Twitter_Api.get_application_rate_limit_status()
