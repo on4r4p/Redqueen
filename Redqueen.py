@@ -4090,7 +4090,6 @@ def RedQueen():
             else:
                 time.sleep(1)
 
-        WakeApiUp()
 
         Fig("digital", "GOGOGO!", True)
         time.sleep(Config.Time_Sleep)
