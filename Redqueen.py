@@ -877,7 +877,7 @@ def Fig(font, txt, toirc=None):
         Betterror(e, inspect.stack()[0][3])
 
 def Reload_List(action,lst_to_reload,lst_of_values):
-    Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List"]
+    Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
     if lst_to_reload not in Global_List:
        return("**List %s not recognized**"%lst_to_reload)
     try:
