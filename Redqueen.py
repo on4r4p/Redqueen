@@ -1088,11 +1088,11 @@ def Load_Variables():
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
+        delk = []
         for saved in Cleanfile(Pth_Keywords_Rq):
-            Keywords_List.append(saved)
-
+            if len(saved) > 2:
+               Keywords_List.append(saved)
         Search_List = Keywords_List
-
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Keywords Loaded", True)
         print("*=*=*=*=*=*=*=*=*=*\n")
@@ -3944,12 +3944,6 @@ def Search_Keyword(word):
         Fig("cybermedium", "Searching()")
         time.sleep(Config.Time_Sleep)
         ratechk = 0
-        if len(word) < 3:
-           with open(Pth_NoResult_Rq, "a") as file:
-                file.write("\n"+str(word) + "\n")
-           Fig("digital", "This keyword is too short.")
-           Fig("digital", "Going To Trash")
-           return()
 
         if Search_Done_Trigger == False:
             try:
