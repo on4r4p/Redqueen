@@ -1,55 +1,980 @@
 
-2022-03-18 09:20:57.719282
-
-!!
-File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2459
-Error Message:list index out of range
-!!
-
-2022-03-18 09:33:28.798056
-
-!!
-File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2459
-Error Message:list index out of range
-!!
-
-2022-03-18 09:43:10.411633
-
-!!
-File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2466
-Error Message:list index out of range
-!!
-
-2022-03-18 09:43:10.411633
-
-!!
-File: Redqueen.py has encounter a <class 'ValueError'> error in Flush_Current_Session() at line 2218
-Error Message:time data '' does not match format '%Y-%m-%d %H:%M:%S.%f'
-!!
-
-2022-03-18 09:43:10.411633
-
-!!
-File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4050
-Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
-!!
-
-2022-03-18 09:58:51.972790
+2022-03-18 10:37:12.986220
 
 !!
 File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
 Error Message:list index out of range
 !!
 
-2022-03-18 09:58:51.972790
-
-==
-File does not exist (/home/alduin/Documents/Redqueen/Data/Current.Session.Rq) creating a new one.==
-
-
-2022-03-18 09:58:51.972790
+2022-03-18 10:40:43.227127
 
 !!
-File: Redqueen.py has encounter a <class 'ValueError'> error in Flush_Current_Session() at line 2218
-Error Message:time data '' does not match format '%Y-%m-%d %H:%M:%S.%f'
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 10:40:43.227127
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 11:09:11.290246
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 11:18:47.224654
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 11:20:31.691076
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 11:29:53.288337
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 11:29:53.288337
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2470
+Error Message:list index out of range
+!!
+
+2022-03-18 11:29:53.288337
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4000
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'AttributeError'> error in redqueen_retweet() at line 349
+Error Message:'Twython' object has no attribute 'destroy_retweet'
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 3995
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 11:41:06.274306
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'BrokenPipeError'> error in IrSend() at line 2795
+Error Message:[Errno 32] Broken pipe
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 16:39:06.155977
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-18 20:06:19.360438
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:06:35.214096
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 01:15:57.278053
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2465
+Error Message:list index out of range
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
+!!
+
+2022-03-19 21:42:52.994922
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonError'> error in Search_Keyword() at line 4005
+Error Message:Twitter API returned a 404 (Not Found), Sorry, that page does not exist.
+!!
+
+2022-03-20 03:16:21.281192
+
+!!
+File: Redqueen.py has encounter a <class 'IndexError'> error in IrSweet() at line 2442
+Error Message:list index out of range
+!!
+
+2022-03-20 03:16:21.281192
+
+!!
+File: Redqueen.py has encounter a <class 'twython.exceptions.TwythonAuthError'> error in Search_Keyword() at line 3982
+Error Message:Twitter API returned a 401 (Unauthorized), An error occurred processing your request.
 !!
