@@ -307,7 +307,7 @@ surveillance platform
 
 dns reflection amplification
 
-cve-2016
+cve-
 
 stresslinux
 
@@ -1038,8 +1038,6 @@ inurl:/
 cgi-bin
 
 citrix
-
-cve
 
 alice bot
 
@@ -3749,8 +3747,6 @@ gtfobins
 
 2k8sp2
 
-7z
-
 7zip
 
 802-11
@@ -3985,12 +3981,6 @@ burp-repeater
 
 bvshell
 
-c
-
-c2
-
-ca
-
 cached-creds
 
 cacti
@@ -4181,153 +4171,8 @@ custom-folder
 
 cutenews
 
-cve-1017-12636
-
-cve-2004-2687
-
-cve-2008-0166
-
-cve-2010-0832
-
-cve-2014-6271
-
-cve-2014-6287
-
-cve-2015-6668
-
-cve-2015-6967
-
-cve-2016-0099
-
-cve-2016-10709
-
-cve-2016-4971
-
-cve-2017-0199
-
-cve-2017-11511
-
-cve-2017-12635
-
-cve-2017-16995
-
-cve-2017-5638
-
-cve-2017-5899
-
-cve-2017-7269
-
-cve-2017-7650
-
-cve-2017-9101
-
-cve-2017-9362
-
-cve-2017-9805
-
-cve-2018-1133
-
-cve-2018-12613
-
-cve-2018-14665
-
-cve-2018-15133
-
-cve-2018-15473
-
-cve-2018-17246
-
-cve-2018-18955
-
-cve-2018-19571
-
-cve-2018-19585
-
-cve-2018-8007
-
-cve-2019-10008
-
-cve-2019-1003000
-
-cve-2019-10149
-
-cve-2019-11043
-
-cve-2019-12384
-
-cve-2019-12735
-
-cve-2019-12744
-
-cve-2019-12840
-
-cve-2019-13024
-
-cve-2019-14287
-
-cve-2019-17558
-
-cve-2019-18818
-
-cve-2019-19363
-
-cve-2019-19520
-
-cve-2019-19521
-
-cve-2019-19522
-
-cve-2019-19609
-
-cve-2019-20933
-
-cve-2019-5736
-
-cve-2019-6447
-
-cve-2019-7304
-
-cve-2020-10977
-
-cve-2020-11651
-
-cve-2020-14295
-
-cve-2020-14321
-
-cve-2020-1472
-
-cve-2020-25627
-
-cve-2020-7247
-
-cve-2020-7384
-
-cve-2020-8164
-
-cve-2020-8831
-
-cve-2020-9484
-
-cve-2020-9496
-
-cve-2021-1675
-
-cve-2021-1732
-
-cve-2021-28079
-
-cve-2021-32090
-
-cve-2021-34527
-
-cve-2021-38647
-
-cve-2021-4034
 
 cyberchef
-
-d8
 
 dacl
 
@@ -4384,8 +4229,6 @@ deparse
 des
 
 devzat
-
-df
 
 diaghub
 
@@ -4500,8 +4343,6 @@ ecc
 ecryptfs
 
 ecryptfs2john
-
-ed
 
 edgeside-include-injection
 
@@ -4797,8 +4638,6 @@ gmsa
 
 gmsadumper
 
-go
-
 gobuster
 
 gogs
@@ -4846,8 +4685,6 @@ guestmount
 gunicorn
 
 gym-management-system
-
-h2
 
 hackerone
 
@@ -5483,8 +5320,6 @@ ippsec
 
 iptables
 
-ir
-
 irb
 
 irc
@@ -5556,10 +5391,6 @@ john
 joomla
 
 journalctrl
-
-jq
-
-js
 
 jsessionid
 
@@ -5909,8 +5740,6 @@ nano
 
 nanocore
 
-nc
-
 nc-port-scan
 
 ncat
@@ -5948,8 +5777,6 @@ ngrok
 nimlang
 
 nishang
-
-nm
 
 nmap-over-proxy
 
@@ -6006,8 +5833,6 @@ ntpdate
 nuxeo
 
 nvms-1000
-
-nx
 
 oathtool
 
@@ -6150,8 +5975,6 @@ pdfdetach
 pdfid
 
 pdftex
-
-pe
 
 peda
 
@@ -6535,8 +6358,6 @@ runc
 
 runcode
 
-s3
-
 sacl
 
 salsa20
@@ -6793,8 +6614,6 @@ struts
 
 stuxnet
 
-su
-
 subdomain
 
 subdomains
@@ -6949,11 +6768,7 @@ usosvc
 
 uwsgi
 
-v8
-
 vault-project
-
-vb
 
 vba
 
@@ -6980,8 +6795,6 @@ virtualenv
 visual-studio
 
 visualstudio
-
-vm
 
 vnc
 
@@ -7121,8 +6934,6 @@ xml-rpc
 
 xmlhttprequest
 
-xp
-
 xp_cmdshell
 
 xp_dirtree
@@ -7160,8 +6971,6 @@ ysoserial-modified
 ysoserial.net
 
 yubikey
-
-z3
 
 zabbix
 

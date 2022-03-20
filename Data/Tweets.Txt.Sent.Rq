@@ -7944,435 +7944,274 @@ In the popular imagination, nation-state-backed attackers can exfiltrate sensiti
 Overview of random number generator enhancements for Linux 5.17 and 5.18:"The most significant outward-facing change is that…
 Our awesome Baseband analysis tool is finally public 🥳🥳🥳
 We are back on @GBNEWS tomorrow morning speaking about how businesses can protect themselves against cyber attacks. T…
-
 Join @bettersafetynet &amp; @flakpaket for a #UkraineCyberCrisis livestream as they share what you can do to mount effective…
-
 Serious Vulnerability in Linux Kernel (CERT-EU Security Advisory 2022-018) - https://t.co/GYSCXXp2rX
-
 Critical Vulnerability in Microsoft Exchange Server (CERT-EU Security Advisory 2022-015) - https://t.co/YE91U1uu7l
-
 @CERTEU have produced cyber security mitigation measures against critical threats. By applying these systematically, organ…
-
 Looking at the specs, the Intel Thermal Velocity Boost Temp. is 70°C, and the maximum die temperature allowed in 100°C. Linux l…
-
 "Amplification greatly increases the potency of #DDoS attacks; the greater the amplification, the easier it is to overwhelm…
-
 As #Ukraine's IT army fights back against #Russia with #cyberattacks, experts point to huge #cybersecurity risks from t…
-
 The federal govt acts most of the time as a regulator, &amp; is always going to be reactive. What's needed is better collaborati…
-
 Many business leaders unfortunately view #security as a cost center, ironically even for security companies. Netenrich's @ba…
-
 LEIDEN: 2321HS Lammenschansweg: deze actie wordt beeindigd. De politie is nog bezig met het onderzoek! Heeft u nog aanvul…
-
 In 2018 I joined ZeroNight #hacking conference in #StPetersburg, this talk describes methodology "how device security can be…
-
 Mandiant #CTI peeps getting access to god-mode VirusTotal post-acquisition: https://t.co/GIIDG5ouEz
-
 #LOPMI: pour payer la rançon, il faudra déposer plainte #ransomware ⏭Une position en ligne avec les recommandations de la place, assez ouverte finalement. A noter aussi le "17 cyber" et les 1500 cyberpatrouilleurs. Ça bouge, à voir comment ça atterit! https://t.co/Ff3Wq5mk1H
-
 SEC filings show hidden #ransomware costs and losses ⏭ voilà une analyse des petites cyber dans les rapports annuels qui plairait à @ValeryMarchive ! Via @uuallan https://t.co/qfLAjocYMV
-
 🥷 #Cybersécurité : les entreprises sont-elles armées ? 🗨️ "Avec une maturité de 46% par rapport aux référentiels internatio…
-
 #Cybersécurité #startup 📢 @hackuity réunit 12 M€⏭ 👏 👏👏 aux équipes pour cette belle levée qui vient confirmer la qualité du produit et l’intérêt des clients pour la gestion des vulnérabilités! Un sujet complexe mais crucial où il faut de l’outillage https://t.co/AK3HqNJkin
-
 ❇️ The development update for the week of March 14th is here. For those that don't follow the maturation of the codeba…
-
 @GergelyOrosz I’m new to the #EmberJS community and I read the old RFC’s. Reading those old RFC’s has done wonders for me…
-
 C# performance and memory optimization 💡 For a very long time, I used to compare strings in my codebase by doing stringA.ToL…
-
 Refactoring a Python Codebase with LibCST via @instawork https://t.co/4ibNvPHCXr #Python https://t.co/5z7pTynEP5
-
 💥 FOR #InfinityNode Users who do not use the setUP service. BETELGEUSE changes the codebase.You must increase the depo…
-
 A few days late but almost one year of shipping to the @mintsongs code base. I wouldn't have wanted to spend the last year shipping ~500k lines of code to any other codebase 🚀🚀🚀 https://t.co/vkygwMCZbR
-
 Hey #100Devs! 👋Let's review CSS floats today! 💡These sketches might save you your job if your company has floats in their codebase! 😇The remaining sketches in thread 🧵#100DaysOfCode https://t.co/YI3OospE5w
-
 Cyber Insurers raising the stakes - they've had a hard year in pay outs. If you don't have MFA or a solid Vulnerability Management program, you can forget getting insured. https://t.co/xnf4a4tUxV
-
 If you're looking to get rid of adverts/ tracking and other nasties on your home network and you have a spare raspberry pi…
-
 CODE is accepting resumes for the following positions:REACT &amp; JavaScript Developers - https://t.co/GES59el4raSenior C#…
-
 How to send ASP .NET Core Identity emails with Twilio SendGrid by @RealSwimburger https://t.co/x7UNtLOWoA #aspnetcore…
-
 Have just published the next #UnhandledException podcast episode, where I was joined by @Mikesdotnetting to chat about ASP .NET…
-
 The program for @SSTIC 2022 is out, and we are super proud to give no less than 4 talks! We hope to see you all in Rennes in…
-
 New blog post: 100% static quick-and-dirty unpacking of a Dridex downloader using #malcat:https://t.co/7HK2m2lR3v
-
 Recovering AES keys using EM analysis from an iPhone 7. The paper is a nice read as it talks about how several practical issues a…
-
 🚨 NEW: CVE-2022-24385 🚨 A Direct Object Access vulnerability in SmarterTools SmarterTrack leads to information disclosu…
-
 @AlbertansFirst @planetjanetyyc @boehmerB Afaik, this poll was contracted by the UCP (in other words, the UCP paid for it)…
-
 #TaxPros: Don’t fall victim to email scams claiming your #IRS account is on hold. Protect you and your client’s data by visiting https://t.co/tRTy9uyTIs for the latest information. https://t.co/hRfB4e73YM
-
 @CarolineLucas Further:May was warned by UKs secret service that they believed "Boris Johnson" was compromised and shou…
-
 In addition to down-ranking sites associated with disinformation, we also often place news modules and information boxes at the top of DuckDuckGo search results (where they are seen and clicked the most) to highlight quality information for rapidly unfolding topics.
-
 Our ninjas @loadlow, @Taryax and @b1two_ played with the FortiManager and discovered several authenticated Web vulnerabilities leading to command execution, arbitrary file read and privilege escalation. 4 CVE advisories were released by Fortinet.https://t.co/X8sn9a6Q7z
-
 A full walkthrough of Brute Ratel with examples of memory evasion, lateral movement, ldap enumeration and ETW Evasion is…
-
 I spent like 5 days writing this: Cobalt Strike Beacon Object Files (BOFs) in Rust with core + alloc support. 32- and 64- bi…
-
 So I am trying to MITM on an Android emulator image that has Google Play Services, however to install the CA cert you need roo…
-
 Russian military ICT systems in Ukraine are crippled by FreedomCry ransomware. They must rely on unsecure analogue tech…
-
 Russian cyber security seems to be really arrogant and without skill. They started brute forcing the encryption keys wh…
-
 🌐 Stormous #Ransomware team new onion website added to our ransomware groups page 🚨Stormous has opened a new site in addi…
-
 RT @LanceSchukies Major government attack highlights how log4j is still unresolved - #cybersecurity #infosec #hacker #c…
-
 The FBI has warned US organizations that AvosLocker #ransomware is found targeting US critical infrastructure sectors r…
-
 https://t.co/TasoVMKJkU 11 takeaways from the #conti #ransomware leaks
-
 This issue has been highlighted by a recent fine issued by the UK Information Commissioners Office (ICO) to Tuckers Solicitors following a successful ransomware attack against the firm. https://t.co/27U1sH7bmT #Cybersecurity
-
 Leaked internal ransomware gang documents prove coordination with Russian military hackers in support of Vladimir Putin.ht…
-
 MediaMarkt werd eind vorig jaar slachtoffer van een ransomware-aanval. Er werd $50 miljoen geëist.Ik wist toegang te k…
-
 "Suspected Conti Ransomware Activity in the Auto Manufacturing Sector"🆕 from @DragosInc • Dragos investigated the IPs…
-
 Montanari (edilizia li sottovaluta!) sotto ransomware LockBit 2.0 Sicurezza informatica è una cosa seria per business di…
-
 #Ransomware... "Darüber hinaus gibt es viele Gefahren für die Systeme von #KRITIS, die mit Angriffen aus dem Digitalen erst e…
-
 Remember the Colonial Pipeline ransomware attack? It was Russian military affiliates.Remember the JBS ransomware attack?…
-
 L'illustrateur Aurélien Police va partager ses plus belles œuvres lors de l'exposition Fictions(s).https://t.co/Rnd8nWzZco#scifi #art #expo https://t.co/4gwCbuWmvB
-
 Un académicien d'Oxford a retrouvé les scripts de la première adaptation du Seigneur des Anneaux pour la radio BBC dans les années 1950 !https://t.co/0LiTJLaeya#scifi #tolkien #lotr https://t.co/wBPE102A6n
-
 La mini-série DMZ, adaptée des célèbres comics de Brian Wood et Riccardo Burchielli, se dévoile dans une première bande-annonce.https://t.co/DfPY8PXaxY#scifi #series #comics https://t.co/aNVzojZvZG
-
 Les toutes jeunes éditions Musidora se lancent dans un premier projet en #crowdfunding pour L’Anachronopète, le grand classique de la science-fiction espagnole !https://t.co/AvGf2SccsZ#scifi https://t.co/AkNO11TQ9D
-
 Apache APISIX 2.12.1 Remote Code Execution https://t.co/stpdlIvRLg via kitploit https://t.co/TZ1Ls1GNQN
-
 Critical #vulnerabilities were discovered in uninterruptible power supply (UPS) devices. Threat actors that exploit th…
-
 Apache APISIX 2.12.1 Remote Code Execution https://t.co/IrQ0nWXV2n #exploit
-
 [webapps] Tiny File Manager 2.4.6 - Remote Code Execution (RCE) https://t.co/vDjgWiIkod
-
 [webapps] Pluck CMS 4.7.16 - Remote Code Execution (RCE) (Authenticated) https://t.co/uzmZ5GNX4Z
-
 Exploiting remote services is one of the common attack vectors for ransomware. Attackers exploit a weakness in an Internet-fa…
-
 [remote] Apache APISIX 2.12.1 - Remote Code Execution (RCE) https://t.co/9LEbMkwtAH
-
 #0day #PluckCMS 4.7.16 - Remote Code Execution (Authenticated) #Exploit #RCE https://t.co/GjTrVdH5ck
-
 CVE-2022-0742: Remote Denial of Service on Linux Kernel &gt;=5.13 icmp6: Posted by sirdarckcat . on Mar 15Flooding icmp6 messages of type 130 or 131 is enough to exploit a memory leak in the kernel and cause the host to go out-of-memory. The volume of… https://t.co/RuIVMvhk4F
-
 Smart-UPS devices from APC exploit potentially burning out the entire unit https://t.co/WZom2URyLY @riskigy #infosec #cybersec…
-
 RefleXXion: bypassing user-mode hooks utilised by AV/EPP/EDR https://t.co/UYqyZvmLWe  #Pentesting #CyberSecurity #Infos…
-
 む、Decoちゃんはどうなんだろう。時間あるときにPacket Sniffer仕掛けるか。 https://t.co/Joyhaddybe
-
 Feel good :  5 comptes qui vous feront aimer les réseaux sociauxEntre 2 mauvaises nouvelles sur la guerre ou le climat, ces 5 comptes vous rappelleront que les réseaux réservent aussi parfois de bonnes surpriseshttps://t.co/G0N7wkcXyj v/ @LADN_EU
-
 Fracture numérique : ces millions de Français oubliés dans les démarches administratives de plus en plus connectées 13 millions de citoyens français sont victimes de la fracture numérique, selon un rapport de la Défenseure des droitshttps://t.co/dfP6PAB5Yy via @franceinfo
-
 Infographie : Les Tendances du Content Marketing en 2022 https://t.co/JlvTTZlJf5 https://t.co/6AGCpm8PCW
-
 10 conseils pour vos apps qui vous font gagner à l’ère de la vie privée https://t.co/b23HBUdtAV via @servicesmobiles
-
 MISP 2.4.155 released (3rd March) was a quick bug fix release. https://t.co/IjDej2hMrp https://t.co/023z08ZYd3
-
 @TheHive_Project The one thing I would like is more adoption of @MISPProject standards in terms of storing observables and indi…
-
 There's a new Unfurl release! v2022.02 adds:🔹parsing @Google Search's aqs parameter🔹@MISPProject "warning lists" 🔹3x sh…
-
 A Third of #Malicious Logins Originate in Nigeria https://t.co/u6E8kuE42H #InfoSecMag
-
 Si quieres saber más sobre el Tribunal Permanente de los Pueblos #EmDefesaDoCerrado, la audiencia sobre soberanía alimentar…
-
 La deforestación en El Cerrado 🇧🇷 para producir soja ha provocado escasez hídrica y contribuye al aumento de eventos climát…
-
 El Cerrado y sus áreas de transición cubren un 1/3 de Brasil y está considerada la sabana más biodiversa del mundo. Los bie…
-
 Mañana, el Día Internacional de los Bosques, desde @ecologistas presentamos un informe sobre la industria de la soja, culpa…
-
 Buenos días @BosqueHabitado. Gracias por abordar el ecocidio. En Brasil, concretamente en El Cerrado, la agroindustria de l…
-
 New article: Reverse Engineering Sony Memory Stick: https://t.co/kyEHHlZFwH
-
 بقيت أفكر كيف لاغنية غير مفهومة الكلمات تعجب الشخص فبدأت أغني بكلمات مترابطة وغير مفهومة المعنى وبلحن عشوائي فشعرت… https://t.co/jb8j9OSF3c
-
 When Putin sends kids to war: This guy has the same age as my son.He was from the military unit of the Kabardino-… https://t.co/PJ7pahsClQ
-
 @mikegalsworthy Not only me working this one - Prince William taken £5m quid from the boss of DP World to fund his Ear…
-
 @mikegalsworthy Russia Direct Investment Fund is ALREADY SANCTIONED. The cash should be invested in P&amp;O is being poure…
-
 If you haven’t seen it yet:The MP for Dover, Natalie Elphicke, tried to join the protest over the P&amp;O sackings yester…
-
 what a pussy. https://t.co/7BgnUi6lHR
-
 more free tools to help CISOs, Cyber Leaders, management and well anyone really! #PwnDefend #Cyber #Tools
-
 I've seen lots of great EDA tips for working in a jupyter notebook but FYI if you want to stay in the terminal and get an o…
-
 Welcome to my personal hell https://t.co/0RzmnXq6h4
-
 Smoking some before programming. I may sleep some today just warning everyone.
-
 @PlebeusPantomi1 @PortlandEsther @MazMHussain @chrislhayes I know polygamy is more barbaric than killing 20 million africa…
-
 كلامه صحيح يقصد عدم الاطالة في شرح ذلك الا انه يجب التنويه هنا ان معرفة الفروق معينة جدا على ضبط العلم وفهمه وبها ت… https://t.co/sfokjG9ovy
-
 Remember Afghanistan?
-
 @UltimateCrypto7 @e__Cash @hedera The eCash features :1. No 51% attack forever2. Less than 3 seconds transaction finality3. Guaranteed super low fees4. Peer 2 Peer transactions without capital controls5. A Store of Wealth (SoW) 6. Decentralized Finance (DeFi) network with EVM (soon) 7. eToken minting https://t.co/IJggyENixJ
-
 📢Our #DemocracyUnderPressure campaign starts!While it has been under pressure across Europe for years, now in 🇺🇦 democracy…
-
 @JasonPLowery @TheGuySwann of their $10bil+ of ASICs and power infra. secondly the network will reactively defend, eg by mutua…
-
 Working on some new #OSINT memes for internal training...😂 https://t.co/ztCbqqWCT7
-
 Howdy InfoSec Twitter!I’ve filled one of my open positions, but have another few open @CrowdStrike!- Sr/Jr Threat Hunter…
-
 Interested in OSINT, analyzing information, enriching data, building content, and working with a great team? RiskIQ (a MS…
-
 Morning beautiful people!! 💕If you missed my @sansforensics presentation on Chinese APTs you can watch the whole thing he…
-
 @jakecreps @cfragoso @OSINTDojo This got me 90% through the process: https://t.co/xoeUEtuY6W
-
 Girlfriend ticked box for extra guacamole on her @SubwayUK, they sent an entire packet 🤣🤣🤣 🥑 https://t.co/7Sr8q2Dp1E
-
 Et on apprend que cet été (une période *très* critique pour les #DataCenters) des demandes d'effacement vont avoir lie…
-
 Idée: embaucher un dev pour faire une skin AWS avec des drapeaux français, embaucher 10 lobbyistes de l'éthique souveraine et a…
-
 N'importe quel ingénieur devrait regarder le reportage "Downfall" sur @NetflixFR
-
 API attack traffic continues to grow❗Is your organization protected? Get the latest findings in the complimentary State o…
-
 API attack traffic grew nearly 700% in the past 12 months  ⚠️ ⚠️ Learn more and get practices to protect your organizatio…
-
 A #DDoS amplification vector of 4B to 1 is something the industry needs to rally around, and we welcome the opportunit…
-
 A cyber attack on fiber optic cables or satellites would take down a ton of critical sectors, like internet traffic, ban…
-
 Nearly 1/3 of orgs are experiencing 100+ API attacks each month!! 😲 Find out why API attack traffic is rising &amp; what to d…
-
 Gorgeous kinetic art with immediate reward of beauty and an intellectual momentum as you ponder biomechanics, energy and transformational simplicity. https://t.co/l89R5XrA87
-
 Are there any UK ISPs whose T&amp;Cs explicitly or implicitly allow their customers to run Tor middle relays? Exit relays? Does anyone run exit relays that route the final traffic through a VPN?
-
 Hello, friend. @ESAGaia photographs @NASAWebb across the chasm of space.https://t.co/NU5YbZIyQj https://t.co/vPLr3lM7Z4
-
 That's a bold step beyond the usual ministerial demands for the mere creation of perfectly secure  back-doored encryption. Whole new spheres of computer science await. https://t.co/aze17Pqctu
-
 Sim sim o Brasil vai deixar de ser um país fudido pq vc apertou uns botaozinho na caixa mágica kkkkkkkkkkkkkkkk https://t…
-
 Just followed a Cookie Reloaded redirect URL (prometheus tds) leading to a characteristic #TA570 URL and dropping a #TA570 XLSB delivering #Qbot "tzr02". 🤔🤯 wild.
-
 😍 New #Qbot BotID "tzr01". Hijacked Email URL -&gt; Cookie Reloaded URLs (prometheus TDS) -&gt; Zipped/pw protected XLL -&gt; Qbot
-
 New BotID "AA" for #ta577 #qbot today! h/t to @executemalware for noting it. Hijacked email URL-&gt; pw-protected zipped xlsb -&gt; payload (Qbot). Example xlsb: https://t.co/XksDq8cJXu Example Qbot payload: https://t.co/8rvwR3YJXx
-
 🎁 Concours 🎁Le POCO F3 et une manette PS5 Dark Side Leds sont à gagner !Pour participer :👉 RT ce tweet👉 Follow @POCOFr…
-
 Evil has Evolved. The new live action Resident Evil series premieres July 14. https://t.co/f7mEH2LsjN
-
 software engineering is a doomed exercise. the sheer hubris to think that things can be represented
-
 HTC VIVE Deluxe Audio Strap ratchet adjustment going soft? Adjustment knob has a cap held w/double-stick tape. Pry off cap, tighten T5 screw, press cap back on, play! #VR #repair https://t.co/L7qrOF0juC
-
 Krampus Horns #3DThursday #3DPrinting https://t.co/fiaCyxjROl
-
 Doom running on a Raspberry Pi Pico #RaspberryPi @Raspberry_Pi @kilograham5 https://t.co/DjSBUjjWxn
-
 Panasonic Toot-a-Loop Transistor Radio R-72 (1972) https://t.co/yhn57axI8g
-
 子供に優しいゴジラ相撲、大人には容赦しない https://t.co/lKPMq7Xgmw
-
 Some assembly required.Folding this into a cube shape, I mean. That kinda assembly. Code’s all C. https://t.co/ZmygNeVUzo
-
 Retro Wedge Computer Case #3DThursday #3DPrinting https://t.co/hke7ECGiIh
-
 Every week we’ll 3D print designs from the community and showcase slicer settings, use cases and of course, Time-lapses! This…
-
 Talk Title: Hacking 9 To 5; A Day In The Life Of...Speaker: Mark Rose Recording: https://t.co/TLShLbIVJw
-
 في المقابلات الوظيفية في #الامن_السيبراني الي يسهل عليك الحصول على الوظيفة وكمان يخليك تتفاوض على الراتب، مهاراتك وقدراتك الي تساعد جهة العمل في حفظ امنها السيبراني ومن أهم التطيبقات الي تبرزك ومهم انك تدرب عليها:Metasploit &amp; Brup Suite &amp; Kali Linux &amp; Splunk &amp; Wiresharkاش كمان؟
-
 anybody know how 2 write a custom protocol decoder for wireshark &amp; can ELI5? bc the docs I’m finding online don’t make mu…
-
 My Wireshark lolbin reverse shell demo TikTok has the weirdest comments rn https://t.co/2Bp3OJaOXA
-
 手のひらでWiresharkが動く激アツ端末と化したOnePlus 6T https://t.co/sChaRHlpPY
-
 うさちゃんと一緒(4) #Rabbit 4000 対 #Python #scapy #wireshark | デバイスビジネス開拓団 https://t.co/BPi9e2t1gT via @HalfmoonJoseph
-
 more late nite work on Build a #Wireshark Learning Lab for #sf22us, a #linux server with lots of appl to investigate, a…
-
 #IPv6 addr trivia: on the hosts in the pic, which Link-Local v6 addr were derived via M-EUI-64? which Link-Local via ra…
-
 Wireshark とPacketTracer をスマホでぐりぐりしたら楽しそう https://t.co/ek6Cfpf4Bl
-
 pySigma backends now support different output formats. E.g. the Splunk backend can generate plain queries as well as a sa…
-
 Dirty Pipe (CVE-2022-0847) is a privilege escalation vulnerability affecting Linux kernel version 5.8 and later. Update to…
-
 RE tip of the day: A quick way to manually unpack the ELF malware sample packed with UPX and having its header corrupted i…
-
 Nabídl jsem pedagogům stažení zdarma audio textů Respektu o Ukrajině načtených I. Trojanem. Už jsme to odeslali stovkám učitel…
-
 #Turkey’s foreign minister Mevlut Cavusoglu says that Russia and Ukraine are nearing agreement on ‘critical’ issues and is ho…
-
 Turkey's foreign minister said in an interview published on Sunday that Russia and Ukraine were nearing agreement on "critical…
-
 ICC basically Wendy solo. The whole song is backtrack by her vocal including the whole rap verse 💀. She didn't even flinched
-
 Philadelphia bombed his family.Anthropologist used his sisters’ bones in class.The city announced the remains were destroyed, only to backtrack.Now Philadelphia won’t pay for his travel to pick up the remains. @MxAbdulAliy says enough. https://t.co/yzt0FwbU9Z
-
 taehyung wrote stigma, a song that is filled with so much pain and emotions, when he was only 19 years old. when performing this song live, taehyung refused to use any backtrack as he had practiced so so hard to perform it perfectly.https://t.co/rsR2klv0mB
-
 The thing about all the other Atlantic provinces keeping some protections is that now NB will never backtrack because of pride…
-
 I make sure people stand on what they say to me. Don’t try to backtrack now.
-
 Currently cackling bc that Mars person who made that Hero Hei post ended up backtracking for some stupid reason and bloc…
-
 Oh wowGermans Federal Office For Information Security (@BSI_Bund) just sent out a warning about Kaspersky antivirus.Referenci…
-
 ❗️Ministry of Digital Security said it has no plans to disconnect #Russia from the global Internet"There are continuous cyb…
-
 The #Chainlink Network delivers secure price data to leading #blockchains &amp; layer-2 solutions via 800+ oracle networks.Int…
-
 The attacker ensures that all traffic to and from the target host is routed through the attacker's host.Some Layer 2(Data link) attacksARP poisoning: here, an attacker can send messages, corrupt theARP table, and cause packets to be misrouted.
-
 Come hear how @DataGovs is becoming the data layer for @mineCityCoins and @TheopetraLabs is using PoX-lite to solve the…
-
 Chainlink oracle networks are able to function at the native speed and cost of any #blockchain or layer-2 solution.In this…
-
 🌌 @Conste11ation #Hypergraph network operates on #Layer0, an underlying data transfer layer with an infinitely scalable nod…
-
 Data fabric makes complete business sense for its ability to transform data into business intelligence. Gartner defines…
-
 160 bps is a fantastic data rate for something 45 years old, so far away the distance is best measured in percentage of a light…
-
 Ein Honeypot für jeden #PutinTroll. https://t.co/tugm20Hvly
-
 @YourAnonNews is our beloved honeypot still chasing tails ?SATAN = JEHOVAH = YHWH = THE BEAST(information provided by…
-
 This morning I got an abuse report from @digitalocean letting me know that one of my hosts (in my honeypot network monito…
-
 @ParaRjs Counterinsurgency is an industry indeed in Kashmir, a honeypot exploited by the rank and file, and the genera…
-
 Dieser Tweet hat viele aus der Leerdenker-Bubble getriggert, so dass ich die Antwortoption nun einschränken muss. Auch wenn es ein schöner Honeypot ist, möchte ich am Wochenende noch anderes tun als emphatielose Idioten und Putin Bots zu blocken! ➡️
-
 Let's get in on @trace_network #Metaverse bandwagon.Liquidity to $TRACE - $USDC pool on #QuickSwapTime to earn high rewards with high APYs.Let's start minting and bagging $TRACE
-
 #MetaStakingFest on Trace's App &amp; a Liquidity Mining Program on @QuickswapDEX.You don't wanna miss this one guys.
-
 @instablog9ja This is a clear case of HONEYPOT.They mentioned that the site is an underground site but it's running on the…
-
 The 1983 source code for Microsoft GW-BASIC is now available as open source on GitHub. https://t.co/KnaKgyrn2z
-
 A sign we may be seeing an evolution into a stalled phase, Russian trenches. https://t.co/uGxnMU7OyO
-
 DevEdge Online - Netscape ONEJun 1997https://t.co/IePqf6iyTThttps://t.co/m11J2tZ7iB https://t.co/uNIO0bdFRl
-
 ATGMs that were primarily designed for a theoretical war in Europe back in the 80s, giving NATO infantry the ability to…
-
 This is one of the major issues Russia is running into. They are using heavily mechanized formations to try and break t…
-
 These flood monitoring cameras demonstrate the extent of the rainfall and just how quickly waters rose, causing major…
-
 #MDM question. While evaluating various solutions, they all seem to have an issue with remote wipe where if a device is wiped…
-
 I'm a bus driver. If I'm having a bad day at work, I'll look in the mirror while driving, and mutter to myself "you're all cu…
-
 It’s only a secret for lazy journalists who are still waiting for an answer from an ‘OSINT expert’ (i.e. someone who use…
-
 Adversary3 v1.0 - Malware vulnerability intel tool for third-party attackers.https://t.co/itYj4GmVcU
-
 In 10 years of the Soviet war in Afghanistan USSR lost 118 fighter jets. In 22 days of war against #Ukraine Russia lose…
-
 #Ukraine: Ukrainian sources reported of the capture of a very potent Russian Rtut-BM proximity fuze jammer vehicle today. Ho…
-
 The Russian-Ukraine conflict could strengthen neo-fascist groups in both countries https://t.co/E1RjPh4jFA #russia #ukrai…
-
 For those of us monitoring the virtual spaces inhabited by far-right and white supremacist extremists, it is evident that…
-
 What is Task Force Rusich? Inside Russia's most vicious neo-Nazi mercenary unit https://t.co/yT32siXP2J #osint #russia #u…
-
 Mapping Militants: Russian Imperial Movement https://t.co/eDsaQ6jkzv #extremism #rim #russia #terrorism https://t.co/TI5j…
-
 look i don’t write code, i just read it. i check out its vibes and move on with my life
-
 We know you have many questions about sanctions, and we appreciate your patience as we ensure we fulfill our commitments to…
-
 People have a right to be upset when they lose their lively hood regardless if you think their job is “respectable” or…
-
 Etsy also has a Database SRE (DBRE) role open! Want to break into MySQL/Memcached work on a fleet of servers? This is a gr…
-
 Who’s written a key logger before? what language did you use and how long did it take you?
-
 one of the first to claim my $ape coins! weird process though, had to share my screen, download what looked like a key logger…
-
 iKeyMonitor keylogger - iPad/iPhone Key logger #cydia tweak is now updated to version 7.0.0-51 https://t.co/rEjYbOFcFM
-
 6/7: I assume they use a key logger to get your password, and then they have access to your account.
-
 Chaque jour qui passe, l’indignitude de bas niveau ne cesse d’ajouter de la médiocritude pour pousser son ambitionitude toujours plus loin dans la ridiculitude sans vergognitude. C’est la royalitude attitude. Sans altitude, bien sûr https://t.co/lvJgtqxCm7
-
 Multi-Cloud is NOT the solution to the next AWS outage.https://t.co/kzaeejMrGq
-
 Vault Cluster in AWS using Terraform and Packerhttps://t.co/0UzTyr7HzC
-
 Shipped, FAUN's #Serverless newsletter, new issue is live:👉🏻 Read the online issue: https://t.co/hRVwGUinFI👉🏻 Receive o…
-
 Kaptain, FAUN's #kubernetes newsletter, new issue is live:👉🏻 Read the online issue: https://t.co/H3zcuBYW63👉🏻 Receive o…
-
 CoreWeave Unlocks the Power of EleutherAI's GPT-NeoX-20Bhttps://t.co/UPfQi7Vqrx
-
 Kyverno- Policy Engine for Kubernetes (Part 1)https://t.co/73pn23e6VA
-
 The Chief I/O, FAUN's #CloudNative newsletter, new issue is live:👉🏻 Read the online issue: https://t.co/bhCXZoX9HN👉🏻 Re…
-
 NLP-as-a-Service – The Next Evolution in AIhttps://t.co/i1FLqt3Wgk
-
 Integrating Argo CD for Your Kubernetes Projecthttps://t.co/BT0LeY2qmd
-
 To transfer to a new ward, you complete the VR3 form &amp; get a new Serial Number.However, for this sample, despite the chang…
-
 【#週末ミライシアター】人気劇団や小劇場の舞台をお届け!! 4/2(土)深夜0:30(24:30)から放送スタートです。＜4月の放送予定&gt;4/2、4/16 ままごと「わたしの星」4/9、4/23 ゴジゲン「くれなずめ」5月以降…
-
 STOLEN today from inside @GuysCancer Centre whilst I was having treatment. 2021 @Specialized_UK Diverge, 56cm black/p…
-
 Russian helicopter downed over Ukraine had a sign Na Berlin written on its tale. The serial number is the same. The si…
-
 🔪 Signal 100 🔪Le manga Signal 100 arrive enfin en version numérique !Découvrez ce seinen au suspense haletant par M…
-
 🔪 Signal 100 🔪Le manga Signal 100 arrive enfin en version numérique !Découvrez ce seinen au suspense haletant par Miyatsuki Arata, le scénariste de Perfect Crime.Allez-vous lire ou relire ce manga en numérique ? 📱 https://t.co/4EohvMMfjy
-
 REvil ransomware operator behind the Kaseya attack extradited to the US
-
 Ukraine accused Russian forces of launching rockets on a residential neighborhood in Kharkiv, Ukraine’s second largest city, k…
-
 Pathetic. More proof how corrupt FIFA is. https://t.co/eVjQk8OBXZ
-
 ❗️❗️❗️#Kharkov right now https://t.co/9tgepSIKu9
-
 @RogerBoybeagles Yes...and Indonesia is already ahead of the game...they intend to build drones as a key method of defenc…
-
 Referee Max Recon confirms he counted the 3 for both teams in tonight’s main event.. and he will be taking the titles to…
+Open-source developers are burning out, quitting, and even sabotaging their own projects — and it's putting the entire intern…
+
+I have uploaded the Gap October 1992 in-store tape in its entirety to the Internet Archive. You can listen to the playlis…
+
+@YodaFeet this needs to be put on internet archive for the world to experience lmaolike that dragonball bootleg thats live…
+
+@YodaFeet you need to rip this and put it on internet archive or some shit like that i need to see this
+
+Para quien no pueda dormir que aunque se borren cuentas de twitter en directo siempre quedará internethttps://t.co/ClD…
+
+The image of Arundhati Roy shaking hands with terrorist Yasin Malik has been making rounds of the Internet. Read how she c…
+
+@Macheero23 @OnlyGerier En internet nada se pierde https://t.co/unGPwLTLV0
+
+Clinical research has found that online trolls suffer from psychopathy, Machiavellianism, sadism, and narcissism, in that o…
+
+@richienrg I know. The good ones find stuff deleted by government agencies off the off the internet archive, and use cu…
+
+@mmmtommt 一旦Webキャッシュに保存してみてください。米国からのアクセスなら、サクっと表示されるようです。Googleキャッシュhttps://t.co/6uFS7pFAIjThe Internet Archivehttps:/…
+
+FN/ The dissertation got wiped off his website, but the internet doesn't forget. https://t.co/AIPIsdr3w0Intro https://t.…
+
+El "tío del futbol", un camarero y su conexión a Internet. Con ustedes la Newsletter de esta semana: “¡Necesitamos más…
+
+J'utilise très souvent des publis anciennes (19e voire 18e s.) Et heureusement pour moi que 90% sont en ligne, merci Int…
+
+@d0tslash @DJIGlobal @DJIEnterprise @pixhawk2 @AutelRobotics @TealDrones Seeing soldiers use the mavics with their phones sc…
+
+#SUSE SLES11 #Security #Update : squid3 (SUSE-SU-2022:14914-1) https://t.co/yfxZa9xLet #Nessus
+
+https://t.co/MAuIXRvYiq detected 280 new websites hosting #phishing | new today: 683 | #infosec #cybersecurity… https://t.co/6iZLFIynjj
+
+Oakland Marathon. Good luck to all runners/ https://t.co/eHxD5tofhc
+
+@AlvieriD @campuscodi @vxunderground @Microsoft Damn, not surprised tbh...Possible entrypoint pictured belowYou can lite…
+
+Ceci est une édition de Fahrenheit 451. Pour rappel, c’est la température à laquelle un livre commence à brûler. Dans l’…
+
+@d0tslash @DJIGlobal @DJIEnterprise Ahhhh, makes sense now!Not MilSpec, can’t be used as an asset , got it!
+
+As expected GNURadio compile fuckery ensued when gr-ieee802-11 entered the picture on my M1 Mac. https://t.co/Kay0lwiSr5
+
+Regression Analysis for Beginners â€” Part 2 https://t.co/8VwUwrj5yx
+
+I just supported Secjuice on @buymeacoffee! 🎉 You can support by buying a coffee ☕️ here — https://t.co/miGMm1siwX
+
+Did what's his name get at you the other day? (as photographed in Ohio) https://t.co/eEnHljsjxt https://t.co/pZvnIuwmVa
+
+@DebugPrivilege Not the powershell is the problem, the old windows servers with old powershell versions are the pro… https://t.co/Qcp2g6A564
+
+DJI products should never be used for combat. @djiglobal @djienterprise has stated multiple times that their toys "… https://t.co/wFmCQB3Yhk
+
+What if twitter and github merged
+
+Aircraft Disrupted by Satellite Jamming Following Russian Invasion https://t.co/RO8da8UgUq #InfoSecMag
