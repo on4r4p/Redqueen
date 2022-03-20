@@ -54,8 +54,6 @@ Current_Api_Call=0
 
 Current_Update_Status=0
 
-Current_Ban_By_User=0
-
 Current_Ban_By_Score=0
 
 Current_Ban_By_Lang=0
@@ -70,7 +68,7 @@ Current_Ban_By_FollowFriday=0
 
 Current_Ban_By_Hashtags=0
 
-Current_Ban_By_People=0
+Current_Ban_By_User=0
 
 Current_Total_Searched=0
 
@@ -79,8 +77,6 @@ Current_Already_Send = 0
 Daily_Api_Call=0
 
 Daily_Update_Status=0
-
-Daily_Ban_By_User=0
 
 Daily_Ban_By_Score=0
 
@@ -96,7 +92,7 @@ Daily_Ban_By_FollowFriday=0
 
 Daily_Ban_By_Hashtags=0
 
-Daily_Ban_By_People=0
+Daily_Ban_By_User=0
 
 Daily_Total_Searched=0
 
@@ -105,8 +101,6 @@ Daily_Already_Send = 0
 Overall_Api_Call=0
 
 Overall_Update_Status=0
-
-Overall_Ban_By_User= 0
 
 Overall_Ban_By_Score=0
 
@@ -122,7 +116,7 @@ Overall_Ban_By_FollowFriday=0
 
 Overall_Ban_By_Hashtags=0
 
-Overall_Ban_By_People=0
+Overall_Ban_By_User=0
 
 Overall_Already_Send=0
 
@@ -918,7 +912,6 @@ def Load_Variables():
     global Current_Already_Send
     global Current_Api_Call
     global Current_Update_Status
-    global Current_Ban_By_User
     global Current_Ban_By_Score
     global Current_Ban_By_Lang
     global Current_Ban_By_Date
@@ -926,11 +919,10 @@ def Load_Variables():
     global Current_Ban_By_Keywords
     global Current_Ban_By_FollowFriday
     global Current_Ban_By_Hashtags
-    global Current_Ban_By_People
+    global Current_Ban_By_User
     global Current_Total_Searched
     global Daily_Api_Call
     global Daily_Update_Status
-    global Daily_Ban_By_User
     global Daily_Ban_By_Score
     global Daily_Ban_By_Lang
     global Daily_Ban_By_Date
@@ -938,11 +930,10 @@ def Load_Variables():
     global Daily_Ban_By_Keywords
     global Daily_Ban_By_FollowFriday
     global Daily_Ban_By_Hashtags
-    global Daily_Ban_By_People
+    global Daily_Ban_By_User
     global Daily_Total_Searched
     global Overall_Api_Call
     global Overall_Update_Status
-    global Overall_Ban_By_User
     global Overall_Ban_By_Score
     global Overall_Ban_By_Lang
     global Overall_Ban_By_Date
@@ -950,7 +941,7 @@ def Load_Variables():
     global Overall_Ban_By_Keywords
     global Overall_Ban_By_FollowFriday
     global Overall_Ban_By_Hashtags
-    global Overall_Ban_By_People
+    global Overall_Ban_By_User
     global Overall_Total_Searched
     global Ban_Double_Url_List
 
@@ -997,8 +988,6 @@ def Load_Variables():
                 Current_Api_Call = Cut_Stat(line)
             if "Current_Update_Status" in line:
                 Current_Update_Status = Cut_Stat(line)
-            if "Current_Ban_By_User" in line:
-                Current_Ban_By_User = Cut_Stat(line)
             if "Current_Ban_By_Score" in line:
                 Current_Ban_By_Score = Cut_Stat(line)
             if "Current_Ban_By_Lang" in line:
@@ -1013,8 +1002,8 @@ def Load_Variables():
                 Current_Ban_By_FollowFriday = Cut_Stat(line)
             if "Current_Ban_By_Hashtags" in line:
                 Current_Ban_By_Hashtags = Cut_Stat(line)
-            if "Current_Ban_By_People" in line:
-                Current_Ban_By_People = Cut_Stat(line)
+            if "Current_Ban_By_User" in line:
+                Current_Ban_By_User = Cut_Stat(line)
             if "Current_Total_Searched" in line:
                 Current_Total_Searched = Cut_Stat(line)
 
@@ -1022,8 +1011,6 @@ def Load_Variables():
                 Daily_Api_Call = Cut_Stat(line)
             if "Daily_Update_Status" in line:
                 Daily_Update_Status = Cut_Stat(line)
-            if "Daily_Ban_By_User" in line:
-                Daily_Ban_By_User = Cut_Stat(line)
             if "Daily_Ban_By_Score" in line:
                 Daily_Ban_By_Score = Cut_Stat(line)
             if "Daily_Ban_By_Lang" in line:
@@ -1038,8 +1025,8 @@ def Load_Variables():
                 Daily_Ban_By_FollowFriday = Cut_Stat(line)
             if "Daily_Ban_By_Hashtags" in line:
                 Daily_Ban_By_Hashtags = Cut_Stat(line)
-            if "Daily_Ban_By_People" in line:
-                Daily_Ban_By_People = Cut_Stat(line)
+            if "Daily_Ban_By_User" in line:
+                Daily_Ban_By_User = Cut_Stat(line)
             if "Daily_Total_Searched" in line:
                 Daily_Total_Searched = Cut_Stat(line)
 
@@ -1047,8 +1034,6 @@ def Load_Variables():
                 Daily_Api_Call = Cut_Stat(line)
             if "Daily_Update_Status" in line:
                 Daily_Update_Status = Cut_Stat(line)
-            if "Daily_Ban_By_User" in line:
-                Daily_Ban_By_User = Cut_Stat(line)
             if "Daily_Ban_By_Score" in line:
                 Daily_Ban_By_Score = Cut_Stat(line)
             if "Daily_Ban_By_Lang" in line:
@@ -1063,8 +1048,8 @@ def Load_Variables():
                 Daily_Ban_By_FollowFriday = Cut_Stat(line)
             if "Daily_Ban_By_Hashtags" in line:
                 Daily_Ban_By_Hashtags = Cut_Stat(line)
-            if "Daily_Ban_By_People" in line:
-                Daily_Ban_By_People = Cut_Stat(line)
+            if "Daily_Ban_By_User" in line:
+                Daily_Ban_By_User = Cut_Stat(line)
             if "Daily_Total_Searched" in line:
                 Daily_Total_Searched = Cut_Stat(line)
 
@@ -1072,8 +1057,6 @@ def Load_Variables():
                 Overall_Api_Call = Cut_Stat(line)
             if "Overall_Update_Status" in line:
                 Overall_Update_Status = Cut_Stat(line)
-            if "Overall_Ban_By_User" in line:
-                Overall_Ban_By_User = Cut_Stat(line)
             if "Overall_Ban_By_Score" in line:
                 Overall_Ban_By_Score = Cut_Stat(line)
             if "Overall_Ban_By_Lang" in line:
@@ -1088,8 +1071,8 @@ def Load_Variables():
                 Overall_Ban_By_FollowFriday = Cut_Stat(line)
             if "Overall_Ban_By_Hashtags" in line:
                 Overall_Ban_By_Hashtags = Cut_Stat(line)
-            if "Overall_Ban_By_People" in line:
-                Overall_Ban_By_People = Cut_Stat(line)
+            if "Overall_Ban_By_User" in line:
+                Overall_Ban_By_User = Cut_Stat(line)
             if "Overall_Total_Searched" in line:
                 Overall_Total_Searched = Cut_Stat(line)
 
@@ -2243,12 +2226,12 @@ def Flush_Current_Session():
 
 
                 Global_List = [
-"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_User","Current_Ban_By_Lang",
+"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_Lang",
 "Current_Ban_By_Date","Current_Ban_By_NoResult","Current_Ban_By_Keywords","Current_Ban_By_FollowFriday",
-"Current_Ban_By_Hashtags","Current_Ban_By_People","Current_Already_Send","Current_Total_Searched",
-"Daily_Api_Call","Daily_Update_Status","Daily_Ban_By_Score","Daily_Ban_By_User","Daily_Ban_By_Lang",
+"Current_Ban_By_Hashtags","Current_Ban_By_User","Current_Already_Send","Current_Total_Searched",
+"Daily_Api_Call","Daily_Update_Status","Daily_Ban_By_Score","Daily_Ban_By_Lang",
 "Daily_Ban_By_Date","Daily_Ban_By_NoResult","Daily_Ban_By_Keywords","Daily_Ban_By_FollowFriday",
-"Daily_Ban_By_Hashtags","Daily_Ban_By_People","Daily_Already_Send","Daily_Total_Searched"]
+"Daily_Ban_By_Hashtags","Daily_Ban_By_User","Daily_Already_Send","Daily_Total_Searched"]
 
                 try:
                    for var in Global_List:
@@ -2303,7 +2286,6 @@ def Save_Current_Session():
 
 Current_Api_Call=%s
 Current_Update_Status=%s
-Current_Ban_By_User=%s 
 Current_Ban_By_Score=%s
 Current_Ban_By_Lang=%s
 Current_Ban_By_Date=%s
@@ -2311,13 +2293,12 @@ Current_Ban_By_NoResult=%s
 Current_Ban_By_Keywords=%s
 Current_Ban_By_FollowFriday=%s
 Current_Ban_By_Hashtags=%s
-Current_Ban_By_People=%s
+Current_Ban_By_User=%s
 Current_Total_Searched=%s
 
 
 Daily_Api_Call=%s
 Daily_Update_Status=%s
-Daily_Ban_By_User=%s
 Daily_Ban_By_Score=%s
 Daily_Ban_By_Lang=%s
 Daily_Ban_By_Date=%s
@@ -2325,13 +2306,12 @@ Daily_Ban_By_NoResult=%s
 Daily_Ban_By_Keywords=%s
 Daily_Ban_By_FollowFriday=%s
 Daily_Ban_By_Hashtags=%s
-Daily_Ban_By_People=%s
+Daily_Ban_By_User=%s
 Daily_Total_Searched=%s
 
 
 Overall_Api_Call=%s
 Overall_Update_Status=%s
-Overall_Ban_By_User=%s
 Overall_Ban_By_Score=%s
 Overall_Ban_By_Lang=%s
 Overall_Ban_By_Date=%s
@@ -2339,12 +2319,11 @@ Overall_Ban_By_NoResult=%s
 Overall_Ban_By_Keywords=%s 
 Overall_Ban_By_FollowFriday=%s
 Overall_Ban_By_Hashtags=%s
-Overall_Ban_By_People=%s
+Overall_Ban_By_User=%s
 Overall_Total_Searched=%s"""%(
 Session_Started_At,
 Current_Api_Call,
 Current_Update_Status,
-Current_Ban_By_User, 
 Current_Ban_By_Score,
 Current_Ban_By_Lang,
 Current_Ban_By_Date,
@@ -2352,11 +2331,10 @@ Current_Ban_By_NoResult,
 Current_Ban_By_Keywords,
 Current_Ban_By_FollowFriday,
 Current_Ban_By_Hashtags,
-Current_Ban_By_People,
+Current_Ban_By_User,
 Current_Total_Searched,
 Daily_Api_Call,
 Daily_Update_Status,
-Daily_Ban_By_User,
 Daily_Ban_By_Score,
 Daily_Ban_By_Lang,
 Daily_Ban_By_Date,
@@ -2364,11 +2342,10 @@ Daily_Ban_By_NoResult,
 Daily_Ban_By_Keywords,
 Daily_Ban_By_FollowFriday,
 Daily_Ban_By_Hashtags,
-Daily_Ban_By_People,
+Daily_Ban_By_User,
 Daily_Total_Searched,
 Overall_Api_Call,
 Overall_Update_Status,
-Overall_Ban_By_User,
 Overall_Ban_By_Score,
 Overall_Ban_By_Lang,
 Overall_Ban_By_Date,
@@ -2376,7 +2353,7 @@ Overall_Ban_By_NoResult,
 Overall_Ban_By_Keywords,
 Overall_Ban_By_FollowFriday,
 Overall_Ban_By_Hashtags,
-Overall_Ban_By_People,
+Overall_Ban_By_User,
 Overall_Total_Searched
 ))
         Fig("digital", "Done")
@@ -2595,7 +2572,7 @@ def GetHomeTimeline():
 
                     Fig("digital", "This tweet is from a banned user :")
                     print("** %s **" % forbid)
-                    FingerCount("Current_Ban_By_People",1)
+                    FingerCount("Current_Ban_By_User",1)
                     time.sleep(Config.Time_Sleep)
                     print("Tweet: ", Tweext)
                     Fig("digital", "Going To Trash")
@@ -2608,7 +2585,7 @@ def GetHomeTimeline():
 
                         Fig("digital", "This tweet is from a banned user :")
                         print("** %s **" % forbid)
-                        FingerCount("Current_Ban_By_People",1)
+                        FingerCount("Current_Ban_By_User",1)
                         time.sleep(Config.Time_Sleep)
                         print("Tweet: ", Tweext)
                         Fig("digital", "Going To Trash")
@@ -2698,6 +2675,20 @@ def RssFeeds(ttl):
                             counter += 1
                             time.sleep(1)
                             continue
+                        if "title" in news:
+                            title = news.title
+                        else:
+                            title = "No Title"
+                        if "link" in news:
+                            link = news.link
+                        else:
+                            link = "No Link"
+                        if "description" in news:
+                            desc = news.description
+                        else:
+                            desc = "No Description"
+
+                        format = str(title) + " : " + str(desc)+ " : " +str(link)
 
                         try:
                            rssage = datetime.datetime.now().replace(tzinfo=None) - dateparser.parse(pubdate).replace(tzinfo=None)
@@ -2707,18 +2698,14 @@ def RssFeeds(ttl):
                               continue
                         except Exception as e:
                            Betterror(e, inspect.stack()[0][3])
-                           if "updated" in news:
-                               pubdate= str(news.updated)
-                           elif "published" in news:
-                               pubdate = str(news.published)
-                           else:
-                               counter += 1
-                               time.sleep(1)
-                               continue
+                           counter += 1
+                           time.sleep(1)
+                           continue
 
                         if format not in RssSent:
                             RssSent.append(format)
                             IrSend(format)
+                            format = str(title) + " : " + str(desc)
                             if Config.WEB_SERVER is True:
                                 Rss_tuple = (
                                     news.link,
@@ -2726,14 +2713,14 @@ def RssFeeds(ttl):
                                     pubdate,
                                     flux,
                                     "img/redqueen-profile.png",
-                                    news.link,
-                                    news.title,
+                                    link,
+                                    format,
                                     "",
                                     "",
                                     "9999",
                                     "9999",
                                     "",
-                                    news.link,
+                                    link,
                                 )
                                 Extracted_Datas.append(Rss_tuple)
                             with open(Pth_Data + "RssSave.Rq", "a") as f:
@@ -2812,15 +2799,15 @@ def Stat2Irc(Time_To_Wait):
     Fig("cybermedium", "Stat2Irc()")
     try:
         Global_List = ["Session_Started_At",
-"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_User","Current_Ban_By_Lang",
+"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_Lang",
 "Current_Ban_By_Date","Current_Ban_By_NoResult","Current_Ban_By_Keywords","Current_Ban_By_FollowFriday",
-"Current_Ban_By_Hashtags","Current_Ban_By_People","Current_Already_Send","Current_Total_Searched",
-"Daily_Api_Call","Daily_Update_Status","Daily_Ban_By_Score","Daily_Ban_By_User","Daily_Ban_By_Lang",
+"Current_Ban_By_Hashtags","Current_Ban_By_User","Current_Already_Send","Current_Total_Searched",
+"Daily_Api_Call","Daily_Update_Status","Daily_Ban_By_Score","Daily_Ban_By_Lang",
 "Daily_Ban_By_Date","Daily_Ban_By_NoResult","Daily_Ban_By_Keywords","Daily_Ban_By_FollowFriday",
-"Daily_Ban_By_Hashtags","Daily_Ban_By_People","Daily_Already_Send","Daily_Total_Searched",
-"Overall_Api_Call","Overall_Update_Status","Overall_Ban_By_Score","Overall_Ban_By_User","Overall_Ban_By_Lang",
+"Daily_Ban_By_Hashtags","Daily_Ban_By_User","Daily_Already_Send","Daily_Total_Searched",
+"Overall_Api_Call","Overall_Update_Status","Overall_Ban_By_Score","Overall_Ban_By_Lang",
 "Overall_Ban_By_Date","Overall_Ban_By_NoResult","Overall_Ban_By_Keywords","Overall_Ban_By_FollowFriday",
-"Overall_Ban_By_Hashtags","Overall_Ban_By_People","Overall_Already_Send","Overall_Total_Searched"]
+"Overall_Ban_By_Hashtags","Overall_Ban_By_User","Overall_Already_Send","Overall_Total_Searched"]
         for stat in Global_List:
            txt = str(stat)+": " + str(globals()[stat])
            IrSend(txt)
@@ -3229,7 +3216,7 @@ def Ban(twitem):
 
                 Fig("digital", "This tweet is from a banned user :")
                 print("** %s **" % forbid)
-                FingerCount("Current_Ban_By_People",1)
+                FingerCount("Current_Ban_By_User",1)
                 time.sleep(Config.Time_Sleep)
                 print("Tweet: ", Tweet_Txt)
                 Fig("digital", "Going To Trash")
@@ -3242,7 +3229,7 @@ def Ban(twitem):
 
                     Fig("digital", "This retweet is from a banned user :")
                     print("** %s **" % forbid)
-                    FingerCount("Current_Ban_By_People",1)
+                    FingerCount("Current_Ban_By_User",1)
                     time.sleep(Config.Time_Sleep)
                     print("Tweet: ", Tweet_Txt)
                     Fig("digital", "Going To Trash")
@@ -3270,7 +3257,7 @@ def Ban(twitem):
 
         if Tweets_By_Same_User.count(str(Tweet_Author)) >= Config.Maximum_Tweet_By_User:
             Fig("digital", "Too many Tweets From this user ")
-            FingerCount("Current_Ban_By_People",1)
+            FingerCount("Current_Ban_By_User",1)
             time.sleep(Config.Time_Sleep)
             print("Tweet: ", Tweet_Txt)
             Fig("digital", "Going To Trash")
@@ -3284,7 +3271,7 @@ def Ban(twitem):
         if len(Tweet_Rt_Author) > 0:
             if Tweets_By_Same_User.count(str(Tweet_Rt_Author)) >= Config.Maximum_Tweet_By_User:
                 Fig("digital", "Too many Tweets From this user ")
-                FingerCount("Current_Ban_By_People",1)
+                FingerCount("Current_Ban_By_User",1)
                 time.sleep(Config.Time_Sleep)
                 print("Tweet: ", Tweet_Txt)
                 Fig("digital", "Going To Trash")
@@ -3922,9 +3909,9 @@ def Scoring(tweet, search):
 def FingerCount(whichone,howmany):
 
     Global_List = [
-"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_User","Current_Ban_By_Lang",
+"Current_Api_Call","Current_Update_Status","Current_Ban_By_Score","Current_Ban_By_Lang",
 "Current_Ban_By_Date","Current_Ban_By_NoResult","Current_Ban_By_Keywords","Current_Ban_By_FollowFriday",
-"Current_Ban_By_Hashtags","Current_Ban_By_People","Current_Already_Send","Current_Total_Searched"]
+"Current_Ban_By_Hashtags","Current_Ban_By_User","Current_Already_Send","Current_Total_Searched"]
 
     try:
        if whichone in Global_List:
@@ -4007,9 +3994,10 @@ def Search_Keyword(word):
                     # time.sleep(10)
                     print("##########################################")
 
-                    FingerCount("Current_Api_Call",1)
 
-                    Search_Api_Call_Left = Search_Api_Call_Left - 1
+                    FingerCount("Current_Api_Call",1)
+                    Save_Current_Session()
+                    Search_Api_Call_Left -= 1
                     time.sleep(Config.Time_Sleep)
 
                 except Exception as e:
@@ -4031,7 +4019,7 @@ def Search_Keyword(word):
                             time.sleep(Config.Time_Sleep)
                             if MasterPause_Trigger is False:
                                 try:
-                                   FingerCount("Overall_Total_Searched",1)
+                                   FingerCount("Current_Total_Searched",1)
                                    txt = "Loading tweets for " + str(word)
                                    Fig("digital", txt)
                                 except Exception as e:
