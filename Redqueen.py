@@ -3944,6 +3944,12 @@ def Search_Keyword(word):
         Fig("cybermedium", "Searching()")
         time.sleep(Config.Time_Sleep)
         ratechk = 0
+        if len(word) < 3:
+           with open(Pth_NoResult_Rq, "a") as file:
+                file.write("\n"+str(word) + "\n")
+           Fig("digital", "This keyword is too short.")
+           Fig("digital", "Going To Trash")
+           return()
 
         if Search_Done_Trigger == False:
             try:
