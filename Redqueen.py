@@ -5,6 +5,7 @@ from random import randint, choice, shuffle
 from twython import Twython
 from pyfiglet import Figlet
 from threading import Thread
+from shutil import copy
 import re, socket, time, sys, os, inspect, cherrypy, string, datetime, emoji, feedparser, csv, dateparser,signal
 import Config, IrcKey, PastebinApiKey
 import TwitterApiKeys as TAK
@@ -98,30 +99,29 @@ Daily_Total_Searched=0
 
 Daily_Already_Send = 0
 
-Overall_Api_Call=0
+Overall_Api_Call=91104
 
-Overall_Update_Status=0
+Overall_Update_Status=1104
 
-Overall_Ban_By_Score=0
+Overall_Ban_By_Score=112291
 
-Overall_Ban_By_Lang=0
+Overall_Ban_By_Lang=224441
 
-Overall_Ban_By_Date=0
+Overall_Ban_By_Date=454113
 
-Overall_Ban_By_NoResult=0
+Overall_Ban_By_NoResult=41451
 
-Overall_Ban_By_Keywords=0
+Overall_Ban_By_Keywords=9412
 
-Overall_Ban_By_FollowFriday=0
+Overall_Ban_By_FollowFriday=5564
 
-Overall_Ban_By_Hashtags=0
+Overall_Ban_By_Hashtags=13328
 
-Overall_Ban_By_User=0
+Overall_Ban_By_User=954
 
-Overall_Already_Send=0
+Overall_Already_Send=172291
 
-Overall_Total_Searched=0
-
+Overall_Total_Searched=472291
 
 CurrentDate = datetime.datetime.now().replace(tzinfo=None)
 
@@ -131,7 +131,7 @@ Pth_Web = os.path.dirname(os.path.abspath(__file__)) + "/Data/www/"
 
 Pth_Img_Rq = Pth_Web + "img/redqueen-profile.png"
 
-Pth_Save = Pth_Data + "Save/"
+Pth_Save = Pth_Data + "Save_Old_Rq_Files/"
 
 Pth_Current_Session = str(Pth_Data) + "Current.Session.Rq"
 
@@ -139,7 +139,7 @@ Pth_Already_Searched_Rq = str(Pth_Data) + "Already.Searched.Rq"
 
 Pth_Keywords_Rq = str(Pth_Data) + "Keywords.Rq"
 
-Pth_Users_Timelines_Rq = str(Pth_Data) + "Users.Timelines.Rq"
+Pth_Users_Timelines_Rq = str(Pth_Data) + "Timelines.Rq"
 
 Pth_Following_Rq = str(Pth_Data) + "Following.Rq"
 
@@ -415,6 +415,23 @@ class Redqueen_Server:
             else:
                 print("Unknown value:", fid)
         return self.index()
+
+def SaveCopy():
+    Fig("cybermedium", "LoadVars()")
+    print("\n\n\n\n")
+    Rq_Files = [Rq for Rq in os.scandir(str(Pth_Data)) if Rq.name.endswith(".Rq") is True]
+    Timecode = str(datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S"))
+    for Rq in Rq_Files:
+       print("Saving copy of:",Rq.name)
+       try:
+          Save_name = str(Pth_Save)+str(Rq.name)+"-"+str(Timecode)
+          Saved_Rq = [saved.name for saved in sorted(os.scandir(str(Pth_Save)),key=lambda x: x.stat().st_mtime,reverse=True)]
+          copy(Rq.path,Save_name)
+          Group_them = [name for name in Saved_Rq if Rq.name in name]
+          Remove_them = [os.remove(Pth_Save+str(name)) for name in Group_them if name not in Group_them[:3]] 
+       except Exception as e:
+             Betterror(e, inspect.stack()[0][3])
+
 
 
 def Extract_Tweet_Data(tweet):
@@ -814,8 +831,8 @@ def Error_Log(Err_to_log):
     try:
 
         with open(Pth_Error_Log, "a") as fuck:
-            fuck.write("\n"+str(CurrentDate) + "\n")
-            fuck.write("\n"+Err_to_log + "\n")
+            fuck.write("\n"+str(CurrentDate))
+            fuck.write("\n"+Err_to_log)
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
@@ -845,22 +862,18 @@ def Cleanfile(filename):
             print("Creating file")
             print("==")
             open(filename, "w")
-            ret = []
         else:
 
             clean_lines = []
             with open(filename, "r") as f:
-                lines = f.readlines()
                 if filename in f_to_lower:
-                    clean_lines = [l.strip().lower() for l in lines if l.strip()]
+                    clean_lines = list(dict.fromkeys([l.strip("\n").lower() for l in list(f) if l.strip()]))
                 else:
-                    clean_lines = [l.strip() for l in lines if l.strip()]
-            clean_lines = list(dict.fromkeys(clean_lines))
+                    clean_lines = list(dict.fromkeys([l.strip() for l in list(f) if l.strip()]))
             with open(filename, "w") as f:
                 f.writelines("\n".join(clean_lines))
-            with open(filename, "r") as f:
-                ret = f.read().splitlines()
-        return ret
+
+        return clean_lines
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
@@ -876,7 +889,68 @@ def Fig(font, txt, toirc=None):
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
-def Reload_List(action,lst_to_reload,lst_of_values):
+def Save_Rq_List(action,lst_to_write,lst_of_values):
+
+    global Request_Debrief
+
+    Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
+    Rq_Files = [Pth_Keywords_Rq,Pth_Users_Timelines_Rq,Pth_Following_Rq,Pth_Friends_Rq,Pth_Banned_Word_Rq,Pth_Banned_People_Rq,Pth_Rss_Rq]
+    f_to_lower = [Pth_Banned_Word_Rq,Pth_Keywords_Rq]
+
+
+    file_to_write = Rq_Files[Global_List.index(lst_to_write)]
+    try:
+       if action == "del":
+            Skip = False
+            bingo_cnter = 0
+            with open(file_to_write, "w") as f:
+                for item in globals()[lst_to_write]:
+                    for value in lst_of_values:
+                          if item.lower() == value.lower():
+                             print("**Found %s in %s**"%(value,file_to_write))
+                             bingo_cnter += 1
+                             RequestDebrief.append("**Found %s in %s**"%(value,lst_to_write))
+                             Skip = True
+                    if Skip is False:
+                        if file_to_write in f_to_lower:
+                            f.write("\n"+item.lower())
+                        else:
+                            f.write("\n"+item)
+                    else:
+                            Skip = False
+            if bingo_cnter != len(lst_of_values):
+                RequestDebrief.append("**Not all values has been found**")
+            RequestDebrief.append("**Deleted %s Items**File %s is Saved**"%(bingo_cnter,lst_to_write))
+
+       if action == "add":
+
+            Skip = False
+            bingo_cnter = 0
+            with open(file_to_write, "a") as f:
+                for value in lst_of_values:
+                    if value.lower() in list(map(lambda x: x.lower(),globals()[lst_to_write])):
+                       print("**%s is Already in %s**"%(value,file_to_write))
+                       RequestDebrief.append("**%s is Already in %s**"%(value,lst_to_write))
+                       bingo_cnter += 1
+                       Skip = True
+                if Skip is False:
+                   if file_to_write in f_to_lower:
+                            f.write("\n"+value.lower())
+                   else:
+                            f.write("\n"+value)
+                else:
+                            Skip = False
+
+            if bingo_cnter != len(lst_of_values):
+                
+                RequestDebrief.append("**Not all values has been found**")
+
+            RequestDebrief.append("**%s Items Added**File %s is Saved**"%(len(lst_of_values)-bingo_cnter,lst_to_write))
+    except Exception as e:
+       RequestDebrief.append("**Error while saving %s:%s**"%(lst_to_write,str(e)))
+       Betterror(e, inspect.stack()[0][3])
+
+def Reload_Rq_List(action,lst_to_reload,lst_of_values):
     Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
     if lst_to_reload not in Global_List:
        return("**List %s not recognized**"%lst_to_reload)
@@ -892,6 +966,7 @@ def Reload_List(action,lst_to_reload,lst_of_values):
     except Exception as e:
        return("**Error while reloading %s:%s**"%(lst_to_reload,str(e)))
        Betterror(e, inspect.stack()[0][3])
+
 
 def Load_Variables():
 
@@ -975,7 +1050,7 @@ def Load_Variables():
             Error_Log(Err_to_log)
 
     try:
-        Fig("cybermedium", "LoadVars()", True)
+        Fig("cybermedium", "LoadVars()")
         print("\n\n\n\n")
 
 
@@ -1077,14 +1152,14 @@ def Load_Variables():
                 Overall_Total_Searched = Cut_Stat(line)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Twitter Api Calls Stats Loaded", True)
+        Fig("digital", "Twitter Api Calls Stats Loaded")
         print("*=*=*=*=*=*=*=*=*=*\n")
 
         for saved in Cleanfile(Pth_Data + "RssSave.Rq"):
             RssSent.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Rss Sent Loaded", True)
+        Fig("digital", "Rss Sent Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
@@ -1094,7 +1169,7 @@ def Load_Variables():
                Keywords_List.append(saved)
         Search_List = Keywords_List
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Keywords Loaded", True)
+        Fig("digital", "Keywords Loaded")
         print("*=*=*=*=*=*=*=*=*=*\n")
         print("\n\n")
 
@@ -1103,7 +1178,7 @@ def Load_Variables():
             Timelines_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Users Timelines Loaded", True)
+        Fig("digital", "Users Timelines Loaded")
         print("*=*=*=*=*=*=*=*=*=*\n")
         print("\n\n")
 
@@ -1112,7 +1187,7 @@ def Load_Variables():
             Following_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Following Loaded", True)
+        Fig("digital", "Following Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
@@ -1120,28 +1195,28 @@ def Load_Variables():
             Friends_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Friends Loaded", True)
+        Fig("digital", "Friends Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Banned_Word_Rq):
             Banned_Word_list.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Banned Words Loaded", True)
+        Fig("digital", "Banned Words Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Banned_People_Rq):
             Banned_User_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Banned users Loaded", True)
+        Fig("digital", "Banned users Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Rss_Rq):
             Rss_Url_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Rss Feeds Loaded", True)
+        Fig("digital", "Rss Feeds Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
@@ -1149,17 +1224,17 @@ def Load_Variables():
             Requested_Cmd_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Request Cmd Log Loaded", True)
+        Fig("digital", "Request Cmd Log Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Already_Searched_Rq):
             Already_Searched_List.append(saved)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Already Searched Loaded", True)
+        Fig("digital", "Already Searched Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
-        Fig("digital", "Loading Emoticon", True)
+        Fig("digital", "Loading Emoticon")
 
         for use_aliases, group in (
             (False, emoji.unicode_codes.EMOJI_UNICODE),
@@ -1172,7 +1247,7 @@ def Load_Variables():
         print(Emoji_List)
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Emoji Loaded", True)
+        Fig("digital", "Emoji Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
         with open(Pth_Rq_Server_Save, "r") as f:
@@ -1198,7 +1273,7 @@ def Load_Variables():
                 )
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Saved Server Tweets Loaded", True)
+        Fig("digital", "Saved Server Tweets Loaded")
         print("*=*=*=*=*=*=*=*=*=*")
 
         for saved in Cleanfile(Pth_Text_Sent_Rq):
@@ -1213,7 +1288,7 @@ def Load_Variables():
 
 
         print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "BanDouble Updated", True)
+        Fig("digital", "BanDouble Updated")
         print("*=*=*=*=*=*=*=*=*=*")
 
 
@@ -1316,7 +1391,7 @@ def timer(mode):
 
 
 def Request(cmd):
-
+    global RequestDebrief
     global Search_List
     global Timelines_List
     global Banned_Word_list
@@ -1362,7 +1437,7 @@ def Request(cmd):
             timestamp,
             cmd,
         )
-        output = []
+        RequestDebrief = []
 
         if cmd.count(",") > 0:
             print("You v send those commandes :")
@@ -1423,9 +1498,9 @@ def Request(cmd):
                             "addkeyword:Key word1,Key word2 [Add 'Key word1' and 'Key word2' to Keywords.Rq]",
                             "delkeyword:Key word1,Key word2 [Delete 'Key word1' and 'Key word2' in Keywords.Rq]",
                             "bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Bannedword.Rq and remove it from Keywords.Rq]",
-                            "addtimeline:@user1 @user2 [Add user1 and user2 timelines to Users.Timelines.Rq]",
-                            "deltimeline:@user1 @user2 [Delete user1 and user2 timelines in Users.Timelines.Rq]",
-                            "bantimeline:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Users.Timelines.Rq]",
+                            "addtimeline:@user1 @user2 [Add user1 and user2 timelines to Timelines.Rq]",
+                            "deltimeline:@user1 @user2 [Delete user1 and user2 timelines in Timelines.Rq]",
+                            "bantimeline:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Timelines.Rq]",
                             "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rss.Rq]",
                             "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rss.Rq]",
                             "Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
@@ -1797,295 +1872,104 @@ def Request(cmd):
                             print("**No rss found (flux must starts with http)**")
             if reconized == False:
                 with open(Pth_Data + "Request.log.Rq", "a") as file:
-                    file.write("\n"+log + "\n")
+                    file.write("\n"+log)
                 return "**Cmd not recognised**"
 
         with open(Pth_Data + "Request.log.Rq", "a") as f:
-            f.write("\n"+log + "\n")
+            f.write("\n"+log)
 
         if RmNores is True:
             ret = Flush_NoResult()
-            output.append(ret)
+            RequestDebrief.append(ret)
         if RmServ is True:
             try:
                open(Pth_Rq_Server_Save, "w")
-               output.append("**Server has been cleared**")
+               RequestDebrief.append("**Server has been cleared**")
             except Exception as e:
                Betterror(e, inspect.stack()[0][3])
         if RmReq is True:
             try:
                open(Pth_Request_Log, "w")
-               output.append("**Request_Log has been cleared**")
+               RequestDebrief.append("**Request_Log has been cleared**")
             except Exception as e:
                Betterror(e, inspect.stack()[0][3])
 #
         if len(adt) > 0:
-            print("Adding %s new users to Users.Timelines.Rq"%len(adt))
-            with open(Pth_Users_Timelines_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in adt:
-                    if entry not in Timelines_List:
-                        bingo_cnter += 1
-                        f.write("\n"+str(entry) + "\n")
-                    else:
-                        print("**%s is already in Timelines.Rq"%entry)
-                        output.append("**%s is already in Timelines.Rq**"%entry)
-            output.append(Reload_List("add","Timelines_List",adt))
-            output.append("**Adding %s users in Users.Timelines.Rq**" % bingo_cnter)
+            print("Adding %s new users to Timelines.Rq"%len(adt))
+            RequestDebrief.append(Save_Rq_List("add","Timelines_List",adt))
+            RequestDebrief.append(Reload_Rq_List("add","Timelines_List",adt))
 
         if len(bt) > 0:
             print("**Adding %s new users to Bannedpeople.Rq**"%len(bt))
-            with open(Pth_Banned_People_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in bt:
-                    if entry not in Banned_User_List:
-                        f.write("\n"+str(entry) + "\n")
-                        bingo_cnter += 1
-                    else:
-                        print("**%s is already in Banned.People.Rq**"%entry)
-                        output.append("**%s is already in Banned.People.Rq**"%entry)
-            output.append(Reload_List("add","Banned_User_List",bt))
-            output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Banned_User_List",bt))
+            RequestDebrief.append(Reload_Rq_List("add","Banned_User_List",bt))
 
         if len(delt) > 0:
-            print("**Deleting %s users from Users.Timelines.Rq**"%len(delt))
-            lines = Cleanfile(Pth_Users_Timelines_Rq)
-            ts = datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S")
-            save_copy = (
-                "cp "
-                + str(Pth_Users_Timelines_Rq)
-                + " "
-                + str(Pth_Save)
-                + "Users.Timelines.Rq"
-                + str(ts)
-                + ".save"
-            )
-            os.system(save_copy)
-            with open(Pth_Users_Timelines_Rq, "w") as f:
-                bingo_cnter = 0
-                for line in lines:
-                    for entry in delt:
-                        if line.strip("\n") != entry:
-                            f.write("\n"+line + "\n")
-                        else:
-                            bingo_cnter += 1
-                            print("**Found %s in Users.Timelines.Rq**"%entry)
-                            output.append("**Found %s in Users.Timelines.Rq**"%entry) 
-            output.append(Reload_List("del","Timelines_List",delt))
-            output.append("**Deleting %s entry in Users.Timelines.Rq**" % bingo_cnter)
-
-
-
+            print("**Deleting %s users from Timelines.Rq**"%len(delt))
+            RequestDebrief.append(Save_Rq_List("del","Timelines_List",delt))
+            RequestDebrief.append(Reload_Rq_List("del","Timelines_List",delt))
 #
         if len(adrss) > 0:
             print("Adding %s new urls to Rss.Rq"%len(adrss))
-            with open(Pth_Rss_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in adrss:
-                    if entry not in Rss_Url_List:
-                        f.write("\n"+str(entry) + "\n")
-                        bingo_cnter +=1
-                    else:
-                        print("**%s Already saved in Rss.Rq**"%entry)
-                        output.append("**%s Already saved in Rss.Rq**"%entry)
-            output.append(Reload_List("add","Rss_Url_List",adrss))
-            output.append("**Added %s new entry to Rss.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Rss_Url_List",adrss))
+            RequestDebrief.append(Reload_Rq_List("add","Rss_Url_List",adrss))
 
         if len(delrss) > 0:
             print("Deleting %s entry from Rss.Rq"%len(delrss))
-            lines = Cleanfile(Pth_Rss_Rq)
-            ts = datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S")
-            save_copy = (
-                "cp "
-                + str(Pth_Rss_Rq)
-                + " "
-                + str(Pth_Save)
-                + "Rss.Feeds.Rq"
-                + str(ts)
-                + ".save"
-            )
-            os.system(save_copy)
-            with open(Pth_Rss_Rq, "w") as f:
-                bingo_cnter = 0
-                for line in lines:
-                    for entry in delrss:
-                        if line.strip("\n") != entry:
-                            f.write("\n"+line + "\n")
-                        else:
-                            print("**Found %s in Rss.Rq**"%entry)
-                            bingo_cnter += 1
-                            output.append("**Found %s in Rss.Rq**"%entry)
-            output.append(Reload_List("del","Rss_Url_List",delrss))
-            output.append("**Deleting %s entry in Rss.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("del","Rss_Url_List",delrss))
+            RequestDebrief.append(Reload_Rq_List("del","Rss_Url_List",delrss))
 
         if len(delf) > 0:
             print("Deleting %s user from Friends.Rq"%len(delf))
-            lines = Cleanfile(Pth_Friends_Rq)
-            ts = datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S")
-            save_copy = (
-                "cp "
-                + str(Pth_Friends_Rq)
-                + " "
-                + str(Pth_Save)
-                + "Friends.Rq"
-                + str(ts)
-                + ".save"
-            )
-            os.system(save_copy)
-            with open(Pth_Friends_Rq, "w") as f:
-                bingo_cnter = 0
-                for line in lines:
-                    for entry in delf:
-                        if line.strip("\n") != entry:
-                            f.write("\n"+line + "\n")
-                        else:
-                            bingo_cnter += 1
-                            print("**Found %s in Friends.Rq**"%entry)
-                            output.append("**Found %s in Friends.Rq**"%entry)
-            output.append(Reload_List("del","Friends_List",delf))
-            output.append("**Deleting %s users in Friends.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("del","Friends_List",delf))
+            RequestDebrief.append(Reload_Rq_List("del","Friends_List",delf))
+
         if len(delu) > 0:
             print("Deleting %s users from Following.Rq"%len(delu))
-            lines = Cleanfile(Pth_Following_Rq)
-            ts = datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S")
-            save_copy = (
-                "cp "
-                + str(Pth_Following_Rq)
-                + " "
-                + str(Pth_Save)
-                + "Following.Rq"
-                + str(ts)
-                + ".save"
-            )
-            os.system(save_copy)
-            with open(Pth_Following_Rq, "w") as f:
-                bingo_cnter = 0
-                for line in lines:
-                    for entry in delu:
-                        if line.strip("\n") != entry:
-                            f.write("\n"+line + "\n")
-                        else:
-                             print("**Found %s in Following.Rq**"%entry)
-                             bingo_cnter +=1
-                             output.append("**Found %s in Following.Rq**"%entry)
-            output.append(Reload_List("del","Following_List",delu))
-            output.append("**Deleting %s users in Following.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("del","Following_List",delu))
+            RequestDebrief.append(Reload_Rq_List("del","Following_List",delu))
 
         if len(delk) > 0:
             print("Deleting %s keywords from Keywords.Rq"%len(delk))
-            lines = Cleanfile(Pth_Keywords_Rq)
-            ts = datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S")
-            save_copy = (
-                "cp "
-                + str(Pth_Keywords_Rq)
-                + " "
-                + str(Pth_Save)
-                + "Keywords.Rq"
-                + str(ts)
-                + ".save"
-            )
-            os.system(save_copy)
-            with open(Pth_Keywords_Rq, "w") as f:
-                bingo_cnter = 0
-                for line in lines:
-                    for entry in delk:
-                        if line.strip("\n") != entry.lower():
-                            f.write("\n"+line.lower() + "\n")
-                        else:
-                           print("**Found %s in Keywords.Rq**"%entry)
-                           output.append("**Found %s in Keywords.Rq**"%entry)
-                           bingo_cnter += 1
-            output.append(Reload_List("del","Keywords_List",delk))
-            output.append(Reload_List("del","Search_List",delk))
-            output.append("**Deleting %s entry in Keywords.Rq**" %bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("del","Keywords_List",delk))
+            RequestDebrief.append(Reload_Rq_List("del","Keywords_List",delk))
+            RequestDebrief.append(Reload_Rq_List("del","Search_List",delk))
 
         if len(adk) > 0:
             print("Adding %s new keywords to Keywords.Rq"%len(adk))
-            with open(Pth_Keywords_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in adk:
-                    if entry.lower() not in list(map(str.lower,Keywords_List)):
-                        f.write("\n"+str(entry.lower()) + "\n")
-                        bingo_cnter += 1
-                    else:
-                        print("**%s is already in Keywords.Rq**"%entry)
-                        output.append("**%s is already in Keywords.Rq**"%entry)
-            output.append(Reload_List("add","Keywords_List",adk))
-            output.append(Reload_List("add","Search_List",adk))
-            output.append("**Adding %s entry in Keywords.Rq**" %bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Keywords_List",adk))
+            RequestDebrief.append(Reload_Rq_List("add","Keywords_List",adk))
+            RequestDebrief.append(Reload_Rq_List("add","Search_List",adk))
 
         if len(adu) > 0:
             print("Adding %s new entry to Following.Rq"%len(adu))
-            with open(Pth_Following_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in adu:
-                    if entry not in Following_List:
-                        f.write("\n"+str(entry) + "\n")
-                        bingo_cnter += 1
-                    else:
-                        print("**%s is already in Following.Rq**"%entry)
-                        output.append("**%s is already in Following.Rq**"%entry)
-            output.append(Reload_List("add","Following_List",adu))
-            output.append("**Adding %s entry in Following.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Following_List",adu))
+            RequestDebrief.append(Reload_Rq_List("add","Following_List",adu))
 
         if len(adf) > 0:
             print("Adding %s new entry to Friends.Rq"%len(adf))
-            with open(Pth_Friends_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in adf:
-                    if entry not in Friends_List:
-                        f.write("\n"+str(entry) + "\n")
-                        bingo_cnter +=1
-                    else:
-                        print("**%s is already in Friends.Rq**"%entry)
-                        output.append("**%s is already in Friends.Rq**"%entry)
-            output.append(Reload_List("add","Friends_List",adf))
-            output.append("**Adding %s entry in Friends.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Friends_List",adf))
+            RequestDebrief.append(Reload_Rq_List("add","Friends_List",adf))
 
         if len(bu) > 0:
             print("Adding %s new entry to Banned.People.Rq"%len(bu))
-            with open(Pth_Banned_People_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in bu:
-                    if entry not in Banned_User_List:
-                        f.write("\n"+str(entry) + "\n")
-                        bingo_cnter += 1
-                    else:
-                        print("**%s is already in Banned.People.Rq**"%entry)
-                        output.append("**%s is already in Banned.People.Rq**"%entry)
-            output.append(Reload_List("add","Banned_User_List",bu))
-            output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Banned_User_List",bu))
+            RequestDebrief.append(Reload_Rq_List("add","Banned_User_List",bu))
 
         if len(bf) > 0:
             print("Adding %s new entry to Banned.Friends.Rq**"%len(bf))
-            with open(Pth_Banned_People_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in bf:
-                    if entry not in Banned_User_List:
-                        f.write("\n"+str(entry) + "\n")
-                        bingo_cnter += 1
-                    else:
-                        print("**%s already in Banned.People.Rq**"%entry)
-                        output.append("**%s already in Banned.People.Rq**"%entry)
-            output.append(Reload_List("add","Banned_User_List",bf))
-            output.append("**Adding %s users in Banned.People.Rq**" % bingo_cnter)
+            RequestDebrief.append(Save_Rq_List("add","Banned_User_List",bf))
+            RequestDebrief.append(Reload_Rq_List("add","Banned_User_List",bf))
 
         if len(bk) > 0:
             print("Adding new entry to Banned.Keyword.Rq")
-            with open(Pth_Banned_Word_Rq, "a") as f:
-                bingo_cnter = 0
-                for entry in bk:
-                    if entry.lower() not in list(map(str.lower,Banned_Word_list)):
-                        f.write("\n"+str(entry.lower()) + "\n")
-                        bingo_cnter += 1
-                    else:
-                        print("**%s is already in Banned.Keywords.Rq**"%entry)
-                        output.append("**%s is already in Banned.Keywords.Rq**"%entry)
-            output.append("**Adding %s entry in Banned.KeyWord.Rq**" % bingo_cnter)
-            output.append(Reload_List("add","Banned_Word_list",bk))
-            output.append(Reload_List("del","Search_List",bk))
-        output.append("**Done**")
-        return output
+            RequestDebrief.append(Save_Rq_List("add","Banned_Word_list",bk))
+            RequestDebrief.append(Save_Rq_List("del","Search_List",bk))
+            RequestDebrief.append(Reload_Rq_List("add","Banned_Word_list",bk))
+            RequestDebrief.append(Reload_Rq_List("del","Search_List",bk))
+
+        RequestDebrief.append("**Done**")
+        return(RequestDebrief)
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
 
@@ -2097,23 +1981,11 @@ def Flush_NoResult():
         Fig("cybermedium", "NoResult()")
         print("Deleting No.Results content from Keywords.Rq")
         cnt = 0
-        lines = Cleanfile(Pth_Keywords_Rq)
-        ts = datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S")
-        save_copy = (
-            "cp "
-            + str(Pth_Keywords_Rq)
-            + " "
-            + str(Pth_Save)
-            + "Keywords.Rq"
-            + str(ts)
-            + ".Before_Removing_Noresults.save"
-        )
-        os.system(save_copy)
         with open(Pth_Keywords_Rq, "w") as f:
             for line in lines:
                 for entry in NoResult_List:
                     if line.strip("\n") != entry:
-                        f.write("\n"+line + "\n")
+                        f.write("\n"+line)
                     else:
                         print("Removed:", entry)
                         cnt += 1
@@ -2145,7 +2017,7 @@ def SaveDouble(text,urls):
             UrlDouble = False
             for u in urls:
                 if u not in Ban_Double_Url_List:
-                    file.write("\n"+str(u)+"\n")
+                    file.write("\n"+str(u))
                     Ban_Double_Url_List.append(u)
                 else:
                     UrlDouble = True
@@ -2162,7 +2034,7 @@ def SaveDouble(text,urls):
         if text not in Ban_Double_List:
             TxtDouble = False
             with open(Pth_Text_Sent_Rq, "a") as file:
-                file.write("\n"+str(text) + "\n")
+                file.write("\n"+str(text))
 
             Ban_Double_List.append(str(text))
             print("*=*=*=*=*=*=*=*=*=*")
@@ -2191,7 +2063,7 @@ def Flush_Current_Session():
     global Session_Started_At
 
     try:
-        Fig("cybermedium", "Flush_Current_Session()", True)
+        Fig("cybermedium", "Flush_Current_Session()")
         try:
            date_object = datetime.datetime.strptime(str(Session_Started_At), "%Y-%m-%d %H:%M:%S.%f")
         except Exception as e:
@@ -2246,8 +2118,8 @@ def Flush_Current_Session():
                 lfts = 86400 - Laps.seconds
 
                 print("==")
-                Fig("digital", "No need to flush", True)
-                Fig("digital", "Starting from Last Pth_Current_Session", True)
+                Fig("digital", "No need to flush")
+                Fig("digital", "Starting from Last Pth_Current_Session")
 
                 print("Numbers of seconds since the first api call :", Laps.seconds)
                 print("%i Seconds left until Twitter flushs Current_Api_Calls :" % lfts)
@@ -2261,11 +2133,11 @@ def Last_Session(lastsearch):
     global Menu_Check_Trigger
     try:
         if Menu_Check_Trigger == False:
-            Fig("cybermedium", "Last_Session()", True)
+            Fig("cybermedium", "Last_Session()")
 
             with open(Pth_Already_Searched_Rq, "a") as file:
                 for words in lastsearch:
-                    file.write("\n"+words + "\n")
+                    file.write("\n"+words)
                     Fig("digital", "Marking " + words + " as old . ")
 
             Menu_Check_Trigger = True
@@ -2674,6 +2546,7 @@ def RssFeeds(ttl):
                         else:
                             counter += 1
                             time.sleep(1)
+                            print("CONTINUE NO DATE:",news)
                             continue
                         if "title" in news:
                             title = news.title
@@ -2695,11 +2568,13 @@ def RssFeeds(ttl):
                            if rssage.days >= Config.Maximum_Retweet_DayOld:
                               counter += 1
                               time.sleep(1)
+                              print("CONTINUE TOO OLD:",news)
                               continue
                         except Exception as e:
                            Betterror(e, inspect.stack()[0][3])
                            counter += 1
                            time.sleep(1)
+                           print("CONTINUE EXCEPT")
                            continue
 
                         if format not in RssSent:
@@ -2724,7 +2599,7 @@ def RssFeeds(ttl):
                                 )
                                 Extracted_Datas.append(Rss_tuple)
                             with open(Pth_Data + "RssSave.Rq", "a") as f:
-                                f.write("\n"+str(format) + "\n")
+                                f.write("\n"+str(format))
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
                     time.sleep(1)
@@ -2834,14 +2709,14 @@ def Limits_Rates_Check():
 
             print("****************************************")
             print("****************************************")
-            Fig("cybermedium", "CURRENT LIMITS ARE REACHED !!")
+            Fig("cybermedium", "Rate limits has been reached!", True)
             print("")
-            Fig("digital", "Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file",True)
             Save_Current_Session()
-            Fig("digital", "Resetting current Current_Api_Calls")
+            Fig("digital", "Resetting current Current_Api_Calls",True)
 
             Fig("digital", "Login Out")
-            Fig("digital", "Waiting 60 minutes")
+            Fig("digital", "Waiting 60 minutes",True)
             print("\n\n\n\n")
 
             Stat2Irc(3600)
@@ -2852,7 +2727,7 @@ def Limits_Rates_Check():
             RestABit_Trigger = False
             Wait_Hour_Trigger = False
 
-            Fig("digital", "Waking up ..")
+            Fig("digital", "Waking up ..",True)
             print("")
             GetHomeTimeline()
             print("\n\n")
@@ -2860,14 +2735,14 @@ def Limits_Rates_Check():
         if RestABit_Trigger == True:
             print("****************************************")
             print("****************************************")
-            Fig("cybermedium", "Mysterious Error !!!", True)
+            Fig("cybermedium", "Unknow error preventing locking the api!", True)
             print("")
-            Fig("digital", "Saving Total Calls to file")
+            Fig("digital", "Saving Total Calls to file",True)
             Save_Current_Session()
-            Fig("digital", "Resetting current Current_Api_Calls")
+            Fig("digital", "Resetting current Current_Api_Calls",True)
 
             Fig("digital", "Login Out")
-            Fig("digital", "Waiting 5 minutes")
+            Fig("digital", "Waiting 5 minutes",True)
             Stat2Irc(3600)
             FingerCount("Current_Update_Status",0)
             FingerCount("Current_Api_Call",0)
@@ -2875,7 +2750,7 @@ def Limits_Rates_Check():
             Search_Limit_Trigger = False
             RestABit_Trigger = False
 
-            Fig("digital", "Waking up ..")
+            Fig("digital", "Waking up ..",True)
             print("")
             GetHomeTimeline()
 
@@ -2885,14 +2760,14 @@ def Limits_Rates_Check():
             print("****************************************")
             print("****************************************")
 
-            Fig("cybermedium", "SEARCH LIMITS ALMOST REACHED")
-            Fig("digital", "Saving Total Calls to file")
+            Fig("cybermedium", "Rate limits have been reached!",True)
+            Fig("digital", "Saving Total Calls to file",True)
             Save_Current_Session()
-            Fig("digital", "Resetting current Current_Api_Calls")
+            Fig("digital", "Resetting current Current_Api_Calls",True)
 
             Fig("digital", "Login Out")
 
-            Fig("digital", "Waiting 15 minutes")
+            Fig("digital", "Waiting 15 minutes",True)
             Stat2Irc(900)
 
             FingerCount("Current_Update_Status",0)
@@ -2900,7 +2775,7 @@ def Limits_Rates_Check():
             Save_Current_Session()
             Search_Limit_Trigger = False
 
-            Fig("digital", "Waking up ..")
+            Fig("digital", "Waking up ..",True)
             print("")
             GetHomeTimeline()
             print("****************************************")
@@ -2912,25 +2787,25 @@ def Limits_Rates_Check():
             print("****************************************")
             print("****************************************")
 
-            Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED")
-            Fig("digital", "Saving Total Calls to file")
+            Fig("cybermedium", "Rate limits have been reached!",True)
+            Fig("digital", "Saving Total Calls to file",True)
             Save_Current_Session()
-            Fig("digital", "Resetting current Current_Api_Calls")
+            Fig("digital", "Resetting current Current_Api_Calls",True)
 
             Fig("digital", "Login Out")
 
             if Wait_Half_Hour_Trigger != 1:
-                Fig("digital", "Waiting 15 minutes")
+                Fig("digital", "Waiting 15 minutes",True)
 
                 Stat2Irc(900)
             else:
-                Fig("digital", "Waiting 30 minutes")
+                Fig("digital", "Waiting 30 minutes",True)
                 Stat2Irc(1800)
 
             FingerCount("Current_Update_Status",0)
             FingerCount("Current_Api_Call",0)
             Save_Current_Session()
-            Fig("digital", "Waking up ..")
+            Fig("digital", "Waking up ..",True)
             print("")
             GetHomeTimeline()
             print("****************************************")
@@ -2942,10 +2817,10 @@ def Limits_Rates_Check():
             print("****************************************")
             print("****************************************")
 
-            Fig("cybermedium", "CURRENT LIMITS ALMOST REACHED (total)")
-            Fig("digital", "Saving Total Calls to file")
+            Fig("cybermedium", "CURRENT API LIMITS ALMOST REACHED FOR TODAY!!",True)
+            Fig("digital", "Saving Total Calls to file",True)
             Save_Current_Session()
-            Fig("digital", "Resetting current Current_Api_Calls")
+            Fig("digital", "Resetting current Current_Api_Calls",True)
             All_Ok_Trigger = True
             Skip_Wait_Trigger = True
 
@@ -3297,7 +3172,7 @@ def Saveid(id):
         time.sleep(Config.Time_Sleep)
 
         with open(Pth_Tweets_Id_Rq, "a") as file:
-            file.write("\n"+ str(id) + "\n")
+            file.write("\n"+ str(id))
         print("*=*=*=*=*=*=*=*=*=*")
         print("Id :", id)
         Fig("digital", "Saved")
@@ -4003,10 +3878,10 @@ def Search_Keyword(word):
                 except Exception as e:
                     if "Twitter API returned a 404 (Not Found)" in str(e):
                         with open(Pth_NoResult_Rq, "a") as file:
-                            file.write("\n"+str(word) + "\n")
+                            file.write("\n"+str(word))
                     if "Twitter API returned a 401 (Unauthorized)" in str(e):
                         with open(Pth_NoResult_Rq, "a") as file:
-                            file.write("\n"+str(word) + "\n")
+                            file.write("\n"+str(word))
 
                     searchresults = []
                     Search_nbr = 0
@@ -4043,7 +3918,7 @@ def Search_Keyword(word):
                         Fig("digital", "Saving unwanted search to no.result")
                         time.sleep(Config.Time_Sleep)
                         with open(Pth_NoResult_Rq, "a") as file:
-                            file.write("\n"+str(word) + "\n")
+                            file.write("\n"+str(word))
 
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
@@ -4074,26 +3949,27 @@ def RedQueen():
                 time.sleep(1)
 
 
-        Fig("digital", "GOGOGO!", True)
+        Fig("digital", "GOGOGO!")
         time.sleep(Config.Time_Sleep)
-
+        SaveCopy()
+        time.sleep(Config.Time_Sleep)
         Load_Variables()
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Calling Flush function", True)
+        Fig("digital", "Calling Flush function")
 
         Flush_Current_Session()
 
-        Fig("digital", "Calling Search function", True)
+        Fig("digital", "Calling Search function")
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Removing Keywords and Users Timelines from No.Result.Rq", True)
+        Fig("digital", "Removing Keywords and Users Timelines from No.Result.Rq")
 
         Search_List = [k for k in Search_List if k not in NoResult_List]
         Timelines_List = [t for t in Timelines_List if t not in NoResult_List]
 
-        Fig("digital", "Removing Keywords and Users Timelines from Already_Searched_List", True)
+        Fig("digital", "Removing Keywords and Users Timelines from Already_Searched_List")
 
         Search_List = [k for k in Search_List if k not in Already_Searched_List]
         Timelines_List = [t for t in Timelines_List if t not in Already_Searched_List]
@@ -4136,7 +4012,7 @@ def RedQueen():
             Betterror(e, inspect.stack()[0][3])
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Check Last Menu started", True)
+        Fig("digital", "Check Last Menu started")
 
         tmpcnt = 0
         if Config.IRC_CONNECT is True:
@@ -4154,6 +4030,12 @@ def RedQueen():
                 figy = "Starting Redqueen"
                 Fig("digital", figy)
                 break
+
+
+
+
+#        RssFeeds(ttl)
+#        print(input="STOP RIGHT THERE")
         for key in TODAYS_MENU:
             time.sleep(Config.Time_Sleep)
             if MasterPause_Trigger is False and MasterStart_Trigger is True:
@@ -4181,15 +4063,15 @@ def RedQueen():
 
                 try:
                     with open(Pth_Already_Searched_Rq) as file:
-                            file.write("\n"+str(word) + "\n")
+                            file.write("\n"+str(word))
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
 
-        Fig("digital", "All Done !", True)
+        Fig("digital", "All Done !")
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Calling Save Search Terms Function", True)
+        Fig("digital", "Calling Save Search Terms Function")
 
         time.sleep(Config.Time_Sleep)
         Last_Session(TODAYS_MENU)
@@ -4222,7 +4104,7 @@ def RedQueen():
             Betterror(e, inspect.stack()[0][3])
             time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Calling Saving call function", True)
+        Fig("digital", "Calling Saving call function")
 
         Save_Current_Session()
 
