@@ -877,7 +877,7 @@ def Cleanfile(filename):
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
-        return []
+        return [""]
 
 
 def Fig(font, txt, toirc=None):
@@ -1974,7 +1974,7 @@ def Request(cmd):
         return(RequestDebrief)
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
-
+        return(RequestDebrief)
 
 def Flush_NoResult():
     global NoResult_List
