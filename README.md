@@ -118,8 +118,42 @@ Need: Twitter OA1/OA2 with read/write access
 
 Edit:TwitterApiKeys.py,PastebinApiKey.py,IrcKey.py and Config.py
 
-Fill:Data/Bannedpeople.Rq ,Bannedword.Rq ,Following.Rq ,Friends.Rq ,Users.Timelines.Rq,Keywords.Rq etc..
-
-
+Fill:Data/Bannedpeople.Rq ,Bannedword.Rq ,Following.Rq ,Friends.Rq ,To.Search.Rq,Keywords.Rq etc..
 
 Then Run the beast .
+
+
+##Cmd Irc:
+> ######*can be used without irc*
+`< Commands starting with '!' can't be chained or must be placed at the end.>
+< !help [Print this help] >
+< !start [Launch Crawling.] >
+< !stop [Stop Crawling.] >
+< !pause [Start and Stop Pause mode] >
+< !quit [Exit.] >
+< !users [Print Following.Rq content] >
+< !tosearch [print User.Timeline.Rq] >
+< !searchs [print Current Search List] >
+< !keywords [Print Keywords.Rq content] >
+< !rss [Print Rss.Rq content] >
+< !requests [Print Request.log content] >
+< !badresult [Print No.Result content] >
+< !flushrequest [Clear Request.log content] >
+< !flushserver [Clear Results from Cherrypy server] >
+< !flushbadresult [Remove No.Result content from Keywords.Rq] >
+< !badkeys [Print Bannedword.Rq content] >
+< !badppl [Print Bannedpeople.Rq content] >
+< adduser:@user1,@user2 [Add user1 and user2 to Following.Rq] >
+< deluser:@user1,@user2 [Delete user1 and user2 in Following.Rq] >
+< banuser:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Keywords.Rq] >
+< addfriend:@user1,@user2 [Add user1 and user2 to Friends.Rq] >
+< delfriend:@user1,@user2 [Delete user1 and user2 in Friends.Rq] >
+< banfriend:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Friend.Rq] >
+< addkeyword:Key,word1,Key word2 [Add 'Key word1' and 'Key word2' to Keywords.Rq] >
+< delkeyword:Key,word1,Key word2 [Delete 'Key word1' and 'Key word2' in Keywords.Rq] >
+< bankeyword:Key,word1,Key word2 [Add Key word1 and Key word2 to Bannedword.Rq and remove it from Keywords.Rq] >
+< addtosearch:@user1,@user2 [Add keyword and user2 (timelines/keywords) to To_Search.Rq] >
+< deltosearch:@user1,@user2 [Delete user1 and user (timelines/keywords) in To_Search.Rq] >
+< bantosearch:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from To_Search.Rq] >
+< addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rss.Rq] >
+< delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rss.Rq]>`

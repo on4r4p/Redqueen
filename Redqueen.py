@@ -139,7 +139,7 @@ Pth_Already_Searched_Rq = str(Pth_Data) + "Already.Searched.Rq"
 
 Pth_Keywords_Rq = str(Pth_Data) + "Keywords.Rq"
 
-Pth_Users_Timelines_Rq = str(Pth_Data) + "Timelines.Rq"
+Pth_Users_To_Search_Rq = str(Pth_Data) + "To.Search.Rq"
 
 Pth_Following_Rq = str(Pth_Data) + "Following.Rq"
 
@@ -171,9 +171,9 @@ Twitter_Api = ""
 
 Keywords_List = []
 
-Search_List = []
+Current_Search_List = []
 
-Timelines_List = []
+To_Search_List = []
 
 Following_List = []
 
@@ -296,11 +296,11 @@ class Redqueen_Server:
 
     @cherrypy.expose
     def index(self):
-        timeline = GenFeed()
+        To_Search = GenFeed()
 
         yield self.header()
 
-        for feed in timeline:
+        for feed in To_Search:
             yield feed
 
         yield self.footer()
@@ -417,7 +417,7 @@ class Redqueen_Server:
         return self.index()
 
 def SaveCopy():
-    Fig("cybermedium", "LoadVars()")
+    Fig("cybermedium", "SaveCopy()")
     print("\n\n\n\n")
     Rq_Files = [Rq for Rq in os.scandir(str(Pth_Data)) if Rq.name.endswith(".Rq") is True]
     Timecode = str(datetime.datetime.now().replace(tzinfo=None).strftime("%Y-%m-%d-%H:%M:%S"))
@@ -893,8 +893,8 @@ def Save_Rq_List(action,lst_to_write,lst_of_values):
 
     global Request_Debrief
 
-    Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
-    Rq_Files = [Pth_Keywords_Rq,Pth_Users_Timelines_Rq,Pth_Following_Rq,Pth_Friends_Rq,Pth_Banned_Word_Rq,Pth_Banned_People_Rq,Pth_Rss_Rq]
+    Global_List = ["Keywords_List","Current_Search_List","To_Search_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
+    Rq_Files = [Pth_Keywords_Rq,Pth_Users_To_Search_Rq,Pth_Following_Rq,Pth_Friends_Rq,Pth_Banned_Word_Rq,Pth_Banned_People_Rq,Pth_Rss_Rq]
     f_to_lower = [Pth_Banned_Word_Rq,Pth_Keywords_Rq]
 
 
@@ -951,7 +951,7 @@ def Save_Rq_List(action,lst_to_write,lst_of_values):
        Betterror(e, inspect.stack()[0][3])
 
 def Reload_Rq_List(action,lst_to_reload,lst_of_values):
-    Global_List = ["Keywords_List","Search_List","Timelines_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
+    Global_List = ["Keywords_List","Current_Search_List","To_Search_List","Following_List","Friends_List","Banned_Word_list","Banned_User_List","Rss_Url_List"]
     if lst_to_reload not in Global_List:
        return("**List %s not recognized**"%lst_to_reload)
     try:
@@ -969,10 +969,9 @@ def Reload_Rq_List(action,lst_to_reload,lst_of_values):
 
 
 def Load_Variables():
-
     global Keywords_List
-    global Search_List
-    global Timelines_List
+    global Current_Search_List
+    global To_Search_List
     global Following_List
     global Friends_List
     global Banned_Word_list
@@ -1029,7 +1028,7 @@ def Load_Variables():
         Pth_Tweets_Id_Rq,
         Pth_Banned_People_Rq,
         Pth_Keywords_Rq,
-        Pth_Users_Timelines_Rq,
+        Pth_Users_To_Search_Rq,
         Pth_Following_Rq,
         Pth_Friends_Rq,
         Pth_Already_Searched_Rq,
@@ -1057,8 +1056,14 @@ def Load_Variables():
         Current_Session = Cleanfile(Pth_Current_Session)
 
         for line in Current_Session:
-            if "Session_Started_At" in line:
-                Session_Started_At =  line.split("=")[1]
+            try:
+               if "Session_Started_At" in line:
+                   Session_Started_At =  line.split("=")[1]
+            except Exception as e:
+                   Session_Started_At = "2021-03-18 10:49:38.480677"
+                   print("**Error while reloading %s:%s**"%(lst_to_reload,str(e)))
+                   Betterror(e, inspect.stack()[0][3])
+
             if "Current_Api_Call" in line:
                 Current_Api_Call = Cut_Stat(line)
             if "Current_Update_Status" in line:
@@ -1163,25 +1168,22 @@ def Load_Variables():
         print("*=*=*=*=*=*=*=*=*=*")
         print("\n\n")
 
-        delk = []
+        for saved in Cleanfile(Pth_Users_To_Search_Rq):
+            To_Search_List.append(saved)
+        Current_Search_List = To_Search_List
+        print("*=*=*=*=*=*=*=*=*=*")
+        Fig("digital", "To_Search Loaded")
+        print("*=*=*=*=*=*=*=*=*=*\n")
+        print("\n\n")
+
+
         for saved in Cleanfile(Pth_Keywords_Rq):
             if len(saved) > 2:
                Keywords_List.append(saved)
-        Search_List = Keywords_List
         print("*=*=*=*=*=*=*=*=*=*")
         Fig("digital", "Keywords Loaded")
         print("*=*=*=*=*=*=*=*=*=*\n")
         print("\n\n")
-
-
-        for saved in Cleanfile(Pth_Users_Timelines_Rq):
-            Timelines_List.append(saved)
-
-        print("*=*=*=*=*=*=*=*=*=*")
-        Fig("digital", "Users Timelines Loaded")
-        print("*=*=*=*=*=*=*=*=*=*\n")
-        print("\n\n")
-
 
         for saved in Cleanfile(Pth_Following_Rq):
             Following_List.append(saved)
@@ -1392,8 +1394,8 @@ def timer(mode):
 
 def Request(cmd):
     global RequestDebrief
-    global Search_List
-    global Timelines_List
+    global Current_Search_List
+    global To_Search_List
     global Banned_Word_list
     global Banned_User_List
     global Banned
@@ -1451,9 +1453,9 @@ def Request(cmd):
             "adduser:",
             "deluser:",
             "banuser:",
-            "addtimeline:",
-            "deltimeline:",
-            "bantimeline:",
+            "addtosearch:",
+            "deltosearch:",
+            "bantosearch:",
             "addkeyword:",
             "delkeyword:",
             "bankeyword:",
@@ -1466,7 +1468,7 @@ def Request(cmd):
             "!users",
             "!keywords",
             "!searchs",
-            "!timeline",
+            "!tosearch",
             "!friends",
             "!rss",
             "!requests",
@@ -1489,18 +1491,18 @@ def Request(cmd):
                     reconized = True
                     if option == "!help":
                         help = [
-                            "adduser:@user1 @user2 [Add user1 and user2 to Following.Rq]",
-                            "deluser:@user1 @user2 [Delete user1 and user2 in Following.Rq]",
-                            "banuser:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Keywords.Rq]",
-                            "addfriend:@user1 @user2 [Add user1 and user2 to Friends.Rq]",
-                            "delfriend:@user1 @user2 [Delete user1 and user2 in Friends.Rq]",
-                            "banfriend:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Friend.Rq]",
-                            "addkeyword:Key word1,Key word2 [Add 'Key word1' and 'Key word2' to Keywords.Rq]",
-                            "delkeyword:Key word1,Key word2 [Delete 'Key word1' and 'Key word2' in Keywords.Rq]",
-                            "bankeyword:Key word1,Key word2 [Add Key word1 and Key word2 to Bannedword.Rq and remove it from Keywords.Rq]",
-                            "addtimeline:@user1 @user2 [Add user1 and user2 timelines to Timelines.Rq]",
-                            "deltimeline:@user1 @user2 [Delete user1 and user2 timelines in Timelines.Rq]",
-                            "bantimeline:@user1 @user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Timelines.Rq]",
+                            "adduser:@user1,@user2 [Add user1 and user2 to Following.Rq]",
+                            "deluser:@user1,@user2 [Delete user1 and user2 in Following.Rq]",
+                            "banuser:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Keywords.Rq]",
+                            "addfriend:@user1,@user2 [Add user1 and user2 to Friends.Rq]",
+                            "delfriend:@user1,@user2 [Delete user1 and user2 in Friends.Rq]",
+                            "banfriend:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from Friend.Rq]",
+                            "addkeyword:Key,word1,Key word2 [Add 'Key word1' and 'Key word2' to Keywords.Rq]",
+                            "delkeyword:Key,word1,Key word2 [Delete 'Key word1' and 'Key word2' in Keywords.Rq]",
+                            "bankeyword:Key,word1,Key word2 [Add Key word1 and Key word2 to Bannedword.Rq and remove it from Keywords.Rq]",
+                            "addtosearch:@user1,@user2 [Add keyword and user2 (timelines/keywords) to To_Search.Rq]",
+                            "deltosearch:@user1,@user2 [Delete user1 and user (timelines/keywords) in To_Search.Rq]",
+                            "bantosearch:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from To_Search.Rq]",
                             "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rss.Rq]",
                             "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rss.Rq]",
                             "Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
@@ -1510,7 +1512,7 @@ def Request(cmd):
                             "!pause [Start and Stop Pause mode]",
                             "!quit [Exit.]",
                             "!users [Print Following.Rq content]",
-                            "!timeline [print User.Timeline.Rq]",
+                            "!tosearch [print User.Timeline.Rq]",
                             "!searchs [print Current Search List]",
                             "!keywords [Print Keywords.Rq content]",
                             "!rss [Print Rss.Rq content]",
@@ -1521,7 +1523,7 @@ def Request(cmd):
                             "!flushbadresult [Remove No.Result content from Keywords.Rq]",
                             "!badkeys [Print Bannedword.Rq content]",
                             "!badppl [Print Bannedpeople.Rq content]",
-                            "Example : deluser:@user1 @user2 ;addkeyword:key1,key two,key3;bankeyword:badkey1,bad key two;!rss",
+                            "Example : deluser:@user1,@user2;addkeyword:key1,key two, k e y 3 ;bankeyword:badkey1,bad,key two;!rss",
                         ]
                         return help
                     if option == "!pause":
@@ -1562,9 +1564,9 @@ def Request(cmd):
                     if option == "!keywords":
                         return Pastbin(Keywords_List)
                     if option == "!searchs":
-                        return Pastbin(Search_List)
-                    if option == "!timeline":
-                        return Pastbin(Timelines_List)
+                        return Pastbin(Current_Search_List)
+                    if option == "!tosearch":
+                        return Pastbin(To_Search_List)
                     if option == "!friends":
                         return Pastbin(Friends_List)
                     if option == "!rss":
@@ -1585,16 +1587,16 @@ def Request(cmd):
                         RmReq = True
 ##
 
-                    if option == "bantimeline:":
+                    if option == "bantosearch:":
                         if sample.count("@") == 1:
-                            print("You asked to Ban this user timeline :", sample)
+                            print("You asked to Ban this user tosearch :", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 bt.append(single)
                                 bu.append(single)
                                 delt.append(single)
                             else:
-                                print("**User timeline var is empty.**")
+                                print("**User tosearch var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1605,20 +1607,20 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("**User timeline var is empty.**")
-                            print("You asked to Ban those users timelines: ", ",".join(bt))
+                                    print("**User tosearch var is empty.**")
+                            print("You asked to Ban those users tosearchs: ", ",".join(bt))
                         else:
-                            print("**No user timeline found '@' is missing**")
+                            print("**No user tosearch found '@' is missing**")
 
-                    if option == "addtimeline:":
+                    if option == "addtosearch:":
 
                         if sample.count("@") == 1:
-                            print("You asked to Add this user timeline:", sample)
+                            print("You asked to Add this user tosearch:", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 adt.append(single)
                             else:
-                                print("**User timeline var is empty.**")
+                                print("**User tosearch var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1626,19 +1628,19 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("**User timeline var is empty.**")
+                                    print("**User tosearch var is empty.**")
                             print("You asked to Add those users: ", ",".join(adt))
                         else:
-                            print("**No user timeline found '@' is missing**")
+                            print("**No user tosearch found '@' is missing**")
 
-                    if option == "deltimeline:":
+                    if option == "deltosearch:":
                         if sample.count("@") == 1:
-                            print("You asked to Delete this user timeline:", sample)
+                            print("You asked to Delete this user tosearch:", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
                                 delt.append(single)
                             else:
-                                print("**User timeline var is empty.**")
+                                print("**User tosearch var is empty.**")
                         elif sample.count("@") > 1:
                             for var in sample.split(","):
                                 if len(var) > 0:
@@ -1646,10 +1648,10 @@ def Request(cmd):
                                         var.replace(str(option), "").replace(" ", "")
                                     )
                                 else:
-                                    print("User timeline var is empty.")
-                            print("You asked to Delete those users timelines: ", ",".join(delt))
+                                    print("User tosearch var is empty.")
+                            print("You asked to Delete those users tosearchs: ", ",".join(delt))
                         else:
-                            print("**No user timeline found '@' is missing**")
+                            print("**No user tosearch found '@' is missing**")
 
 ##
                     if option == "banuser:":
@@ -1895,9 +1897,9 @@ def Request(cmd):
                Betterror(e, inspect.stack()[0][3])
 #
         if len(adt) > 0:
-            print("Adding %s new users to Timelines.Rq"%len(adt))
-            RequestDebrief.append(Save_Rq_List("add","Timelines_List",adt))
-            RequestDebrief.append(Reload_Rq_List("add","Timelines_List",adt))
+            print("Adding %s new users to To_Search.Rq"%len(adt))
+            RequestDebrief.append(Save_Rq_List("add","To_Search_List",adt))
+            RequestDebrief.append(Reload_Rq_List("add","To_Search_List",adt))
 
         if len(bt) > 0:
             print("**Adding %s new users to Bannedpeople.Rq**"%len(bt))
@@ -1905,9 +1907,9 @@ def Request(cmd):
             RequestDebrief.append(Reload_Rq_List("add","Banned_User_List",bt))
 
         if len(delt) > 0:
-            print("**Deleting %s users from Timelines.Rq**"%len(delt))
-            RequestDebrief.append(Save_Rq_List("del","Timelines_List",delt))
-            RequestDebrief.append(Reload_Rq_List("del","Timelines_List",delt))
+            print("**Deleting %s users from To_Search.Rq**"%len(delt))
+            RequestDebrief.append(Save_Rq_List("del","To_Search_List",delt))
+            RequestDebrief.append(Reload_Rq_List("del","To_Search_List",delt))
 #
         if len(adrss) > 0:
             print("Adding %s new urls to Rss.Rq"%len(adrss))
@@ -1933,13 +1935,13 @@ def Request(cmd):
             print("Deleting %s keywords from Keywords.Rq"%len(delk))
             RequestDebrief.append(Save_Rq_List("del","Keywords_List",delk))
             RequestDebrief.append(Reload_Rq_List("del","Keywords_List",delk))
-            RequestDebrief.append(Reload_Rq_List("del","Search_List",delk))
+            RequestDebrief.append(Reload_Rq_List("del","Current_Search_List",delk))
 
         if len(adk) > 0:
             print("Adding %s new keywords to Keywords.Rq"%len(adk))
             RequestDebrief.append(Save_Rq_List("add","Keywords_List",adk))
             RequestDebrief.append(Reload_Rq_List("add","Keywords_List",adk))
-            RequestDebrief.append(Reload_Rq_List("add","Search_List",adk))
+            RequestDebrief.append(Reload_Rq_List("add","Current_Search_List",adk))
 
         if len(adu) > 0:
             print("Adding %s new entry to Following.Rq"%len(adu))
@@ -1964,9 +1966,9 @@ def Request(cmd):
         if len(bk) > 0:
             print("Adding new entry to Banned.Keyword.Rq")
             RequestDebrief.append(Save_Rq_List("add","Banned_Word_list",bk))
-            RequestDebrief.append(Save_Rq_List("del","Search_List",bk))
+            RequestDebrief.append(Save_Rq_List("del","Current_Search_List",bk))
             RequestDebrief.append(Reload_Rq_List("add","Banned_Word_list",bk))
-            RequestDebrief.append(Reload_Rq_List("del","Search_List",bk))
+            RequestDebrief.append(Reload_Rq_List("del","Current_Search_List",bk))
 
         RequestDebrief.append("**Done**")
         return(RequestDebrief)
@@ -3936,8 +3938,8 @@ def Search_Keyword(word):
 # Some Code
 def RedQueen():
 
-    global Search_List
-    global Timelines_List
+    global Current_Search_List
+    global To_Search_List
     global MasterPause_Trigger
     global MasterStart_Trigger
     try:
@@ -3964,26 +3966,24 @@ def RedQueen():
 
         time.sleep(Config.Time_Sleep)
 
-        Fig("digital", "Removing Keywords and Users Timelines from No.Result.Rq")
+        Fig("digital", "Removing Keywords and Users To_Search from No.Result.Rq")
 
-        Search_List = [k for k in Search_List if k not in NoResult_List]
-        Timelines_List = [t for t in Timelines_List if t not in NoResult_List]
+        Current_Search_List = [k for k in Current_Search_List if k not in NoResult_List]
+        print(Current_Search_List)
+        Fig("digital", "Removing Keywords and Users To_Search from Already_Searched_List")
 
-        Fig("digital", "Removing Keywords and Users Timelines from Already_Searched_List")
+        Current_Search_List = [k for k in Current_Search_List if k not in Already_Searched_List]
 
-        Search_List = [k for k in Search_List if k not in Already_Searched_List]
-        Timelines_List = [t for t in Timelines_List if t not in Already_Searched_List]
+        shuffle(Current_Search_List)
 
-        shuffle(Search_List)
-        shuffle(Timelines_List)
-
-        Minwords = int( (len(Search_List) + len(Timelines_List)) / 20)
-        Maxwords = int( (len(Search_List) + len(Timelines_List)) / 10)
+        Minwords = int( len(Current_Search_List) / 20)
+        Maxwords = int( len(Current_Search_List) / 10)
         rndwords = randint(Minwords, Maxwords)
         if rndwords < 100:
-            rndwords = len(Search_List)
+            rndwords = len(Current_Search_List)
 
-        TODAYS_MENU = Search_List + Timelines_List
+
+        TODAYS_MENU = Current_Search_List
         shuffle(TODAYS_MENU)
         TODAYS_MENU = TODAYS_MENU[:rndwords]
 

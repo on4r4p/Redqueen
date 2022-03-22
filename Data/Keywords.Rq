@@ -1879,7 +1879,6 @@ active-directory
 ad-recycle
 adb
 adcs
-adm
 adminer
 ads
 advent-of-code
@@ -1912,7 +1911,6 @@ arp-spoof
 as-rep-roast
 asar
 aslr-brute-force
-asp
 aspx
 atbash
 audacity
@@ -1930,7 +1928,6 @@ automation
 autorunscript
 avr-simulator
 awesome-rss
-aws
 aws-kms
 aws-lambda
 aws-secretsmanager
@@ -2107,12 +2104,10 @@ delta-patch
 deobfuscation
 dep
 deparse
-des
 devzat
 diaghub
 dial-a-pirate
 diff
-dig
 directory-traversal
 dirty-sock
 dirtycow
@@ -2188,7 +2183,6 @@ erlang
 error-based-sqli
 es-file-explorer
 escape
-esf
 esi
 esxi
 event-log
@@ -2199,7 +2193,6 @@ evil-winrm
 evilwinrm
 evolution
 excel
-exe
 exe2aut
 execute-after-redirect
 exfil
@@ -2286,7 +2279,6 @@ fuzzdb
 game-of-life
 gdb
 gef
-gem
 gemfile
 genericall
 genericpotato
@@ -2299,7 +2291,6 @@ getuserspns
 ghidra
 ghidra-version-tracking
 gimp
-git
 git-bucket
 git-bundle
 git-hooks
@@ -2357,7 +2348,6 @@ hex-file
 hexchat
 hexedit
 hfs
-hid
 hidepid
 history
 hmac
@@ -2365,7 +2355,6 @@ hodor
 home-lab
 hook
 host-manager
-hta
 htaccess
 htb-academy
 htb-access
@@ -2651,7 +2640,6 @@ ipfs
 ippsec
 iptables
 irb
-irc
 itunes
 itunes-backup2hashcat
 iwconfig
@@ -2664,7 +2652,6 @@ jadx
 jail
 james
 jamovi
-jar
 jarm
 java
 javac
@@ -2818,7 +2805,6 @@ monstra
 moodle
 moodle-plugin
 motd
-mount
 mpz
 mqtt
 mremoteng
@@ -2893,7 +2879,6 @@ npm
 npm-audit
 nsclient++
 nslookup
-nss
 nsupdate
 ntds
 ntdsutil
@@ -2929,7 +2914,6 @@ orchard-cms
 oscp
 oscp-like
 oscp-plus
-ost
 osticket
 oswe-like
 oswe-plus
@@ -2996,7 +2980,6 @@ phpinfo
 phpliteadmin
 phpmyadmin
 pickle
-pie
 piet
 pihole
 pil
@@ -3101,7 +3084,6 @@ rbash
 rcpclient
 rdesktop
 rdp
-react
 react-marked-markdown
 readgmsapassword
 readpst
@@ -3111,7 +3093,6 @@ recursion
 redirection
 redis
 reference-counting
-reg
 reg-py
 regeorge
 regex
@@ -3132,7 +3113,6 @@ review
 rfc-2428
 rfc3514
 rfi
-rid
 riskiq
 rita
 rlwrap
@@ -3264,7 +3244,6 @@ sqlmap-eval
 sqlplus
 squid
 squidclient
-ssf
 ssh-agent-hijack
 ssh-config
 ssh-keygen
@@ -3311,7 +3290,6 @@ systeminfo
 systempropretiesadvanced
 tamper
 tampermonkey
-tar
 tcache
 tcp-wrapper
 teamviewer
@@ -3370,7 +3348,6 @@ usbcreator
 usosvc
 uwsgi
 vault-project
-vba
 vba-stomp
 vhd
 vhost
@@ -3392,7 +3369,6 @@ vss
 waf
 wail2ban
 wallstant
-war
 wasm
 wasm-fiddle
 watson
@@ -3485,17 +3461,12 @@ dirty-pipe
 atera installer
 promethium
 strongpity
-nist
 sectorc08
-rop
-api
 roguekiller
 devsecops
 sbom
 pangolin8rat
 .doc
-ike
-elf
 jit
 unicorn riot
 ddosecrets
@@ -3514,3 +3485,13 @@ genesis
 russianmarket
 2easyshop
 asc
+kaspersky
+software
+ api 
+ exe 
+ aws 
+ ssf 
+ asp 
+ hid 
+ elf 
+ reg 
