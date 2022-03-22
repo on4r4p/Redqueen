@@ -862,7 +862,7 @@ def Cleanfile(filename):
             print("Creating file")
             print("==")
             open(filename, "w")
-        else:
+        if os.path.isfile(filename) is True:
 
             clean_lines = []
             with open(filename, "r") as f:
