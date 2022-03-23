@@ -862,6 +862,7 @@ def Cleanfile(filename):
             print("Creating file")
             print("==")
             open(filename, "w")
+
         if os.path.isfile(filename) is True:
 
             clean_lines = []
@@ -940,10 +941,6 @@ def Save_Rq_List(action,lst_to_write,lst_of_values):
                             f.write("\n"+value)
                 else:
                             Skip = False
-
-            if bingo_cnter != len(lst_of_values):
-                
-                RequestDebrief.append("**Not all values has been found**")
 
             RequestDebrief.append("**%s Items Added**File %s is Saved**"%(len(lst_of_values)-bingo_cnter,lst_to_write))
     except Exception as e:
@@ -1413,9 +1410,9 @@ def Request(cmd):
         adk = []
         delk = []
         bk = []
-        adt = []
-        delt = []
-        bt = []
+        ads = []
+        dels = []
+        bs = []
         adu = []
         delu = []
         bu = []
@@ -1453,9 +1450,9 @@ def Request(cmd):
             "adduser:",
             "deluser:",
             "banuser:",
-            "addtosearch:",
-            "deltosearch:",
-            "bantosearch:",
+            "addsearch:",
+            "delsearch:",
+            "bansearch:",
             "addkeyword:",
             "delkeyword:",
             "bankeyword:",
@@ -1500,9 +1497,9 @@ def Request(cmd):
                             "addkeyword:Key,word1,Key word2 [Add 'Key word1' and 'Key word2' to Keywords.Rq]",
                             "delkeyword:Key,word1,Key word2 [Delete 'Key word1' and 'Key word2' in Keywords.Rq]",
                             "bankeyword:Key,word1,Key word2 [Add Key word1 and Key word2 to Bannedword.Rq and remove it from Keywords.Rq]",
-                            "addtosearch:@user1,@user2 [Add keyword and user2 (timelines/keywords) to To_Search.Rq]",
-                            "deltosearch:@user1,@user2 [Delete user1 and user (timelines/keywords) in To_Search.Rq]",
-                            "bantosearch:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from To_Search.Rq]",
+                            "addsearch:@user1,@user2 [Add keyword and user2 (timelines/keywords) to To_Search.Rq]",
+                            "delsearch:@user1,@user2 [Delete user1 and user (timelines/keywords) in To_Search.Rq]",
+                            "bansearch:@user1,@user2 [Add user1 and user2 to Bannedpeople.Rq and remove it from To_Search.Rq]",
                             "addrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Add rss feeds to Rss.Rq]",
                             "delrss:https://www.url1.com/fluxrss.xml,http://url2.com/rss [Delete rss feeds in Rss.Rq]",
                             "Commands starting with '!' can't be chained or have to be placed at the end of multiple cmd.",
@@ -1587,71 +1584,78 @@ def Request(cmd):
                         RmReq = True
 ##
 
-                    if option == "bantosearch:":
-                        if sample.count("@") == 1:
-                            print("You asked to Ban this user tosearch :", sample)
-                            single = sample.replace(str(option), "").replace(" ", "")
-                            if len(single) > 0:
-                                bt.append(single)
-                                bu.append(single)
-                                delt.append(single)
-                            else:
-                                print("**User tosearch var is empty.**")
-                        elif sample.count("@") > 1:
-                            for var in sample.split(","):
-                                if len(var) > 0:
-                                    bt.append(
-                                        var.replace(str(option), "").replace(" ", "")
-                                    )
-                                    delt.append(
-                                        var.replace(str(option), "").replace(" ", "")
-                                    )
-                                else:
-                                    print("**User tosearch var is empty.**")
-                            print("You asked to Ban those users tosearchs: ", ",".join(bt))
-                        else:
-                            print("**No user tosearch found '@' is missing**")
+                    if option == "bansearch:":
+                        sample = sample.replace(str(option), "")
 
-                    if option == "addtosearch:":
+                        if sample.startswith(" "):
+                              sample = sample[1:]
+                        if sample.count(",") > 0:
+                           for var in sample.split(","):
 
-                        if sample.count("@") == 1:
-                            print("You asked to Add this user tosearch:", sample)
-                            single = sample.replace(str(option), "").replace(" ", "")
-                            if len(single) > 0:
-                                adt.append(single)
-                            else:
-                                print("**User tosearch var is empty.**")
-                        elif sample.count("@") > 1:
-                            for var in sample.split(","):
-                                if len(var) > 0:
-                                    adt.append(
-                                        var.replace(str(option), "").replace(" ", "")
-                                    )
+                                if sample.count("@") == 1:
+                                    print("You asked to Ban this user tosearch :", var)
+                                    bs.append(var.replace(" ",""))
+                                    bu.append(var.replace(" ",""))
+                                    dels.append(var.replace(" ",""))
                                 else:
-                                    print("**User tosearch var is empty.**")
-                            print("You asked to Add those users: ", ",".join(adt))
-                        else:
-                            print("**No user tosearch found '@' is missing**")
+                                    print("You asked to Ban this keyword :",var)
+                                    bs.append(var)
+                                    dels.append(var)
 
-                    if option == "deltosearch:":
-                        if sample.count("@") == 1:
-                            print("You asked to Delete this user tosearch:", sample)
-                            single = sample.replace(str(option), "").replace(" ", "")
-                            if len(single) > 0:
-                                delt.append(single)
-                            else:
-                                print("**User tosearch var is empty.**")
-                        elif sample.count("@") > 1:
-                            for var in sample.split(","):
-                                if len(var) > 0:
-                                    delt.append(
-                                        var.replace(str(option), "").replace(" ", "")
-                                    )
-                                else:
-                                    print("User tosearch var is empty.")
-                            print("You asked to Delete those users tosearchs: ", ",".join(delt))
                         else:
-                            print("**No user tosearch found '@' is missing**")
+                           if sample.startswith("@"):
+                                    print("You asked to Ban this User :", sample)
+                                    ads.append(sample.replace(" ",""))
+                           else:
+                                    print("You asked to Ban this keyword :",sample)
+                                    ads.append(sample)
+
+
+
+                    if option == "addsearch:":
+                        sample = sample.replace(str(option), "")
+
+                        if sample.startswith(" "):
+                              sample = sample[1:]
+
+                        if sample.count(",") > 0:
+                           for var in sample.split(","):
+                               if var.startswith("@"):
+                                    print("You asked to Add this User :", var)
+                                    ads.append(var.replace(" ",""))
+                               else:
+                                    print("You asked to Add this keyword :",var)
+                                    ads.append(var)
+                        else:
+                           if sample.startswith("@"):
+                                    print("You asked to Add this User :", sample)
+                                    ads.append(sample.replace(" ",""))
+                           else:
+                                    print("You asked to Add this keyword :",sample)
+                                    ads.append(sample)
+
+                    if option == "delsearch:":
+                        sample = sample.replace(str(option), "")
+
+                        if sample.startswith(" "):
+                              sample = sample[1:]
+
+                        if sample.count(",") > 0:
+                           for var in sample.split(","):
+                               if var.startswith("@"):
+                                    print("You asked to Delete this User :", var)
+                                    ads.append(var.replace(" ",""))
+                               else:
+                                    print("You asked to Delete this keyword :",var)
+                                    ads.append(var)
+                        else:
+                           if sample.startswith("@"):
+                                    print("You asked to Delete this User :", sample)
+                                    ads.append(sample.replace(" ",""))
+                           else:
+                                    print("You asked to Delete this keyword :",sample)
+                                    ads.append(sample)
+
 
 ##
                     if option == "banuser:":
@@ -1659,7 +1663,7 @@ def Request(cmd):
                             print("You asked to Ban this user :", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
-                                bt.append(single)
+                                bs.append(single)
                                 bu.append(single)
                                 delk.append(single)
                             else:
@@ -1725,7 +1729,7 @@ def Request(cmd):
                             print("You asked to Ban this friend :", sample)
                             single = sample.replace(str(option), "").replace(" ", "")
                             if len(single) > 0:
-                                bt.append(single)
+                                bs.append(single)
                                 bu.append(single)
                                 bf.append(single)
                                 delk.append(single)
@@ -1896,20 +1900,20 @@ def Request(cmd):
             except Exception as e:
                Betterror(e, inspect.stack()[0][3])
 #
-        if len(adt) > 0:
-            print("Adding %s new users to To_Search.Rq"%len(adt))
-            RequestDebrief.append(Save_Rq_List("add","To_Search_List",adt))
-            RequestDebrief.append(Reload_Rq_List("add","To_Search_List",adt))
+        if len(ads) > 0:
+            print("Adding %s new users to To_Search.Rq"%len(ads))
+            RequestDebrief.append(Save_Rq_List("add","To_Search_List",ads))
+            RequestDebrief.append(Reload_Rq_List("add","To_Search_List",ads))
 
-        if len(bt) > 0:
-            print("**Adding %s new users to Bannedpeople.Rq**"%len(bt))
-            RequestDebrief.append(Save_Rq_List("add","Banned_User_List",bt))
-            RequestDebrief.append(Reload_Rq_List("add","Banned_User_List",bt))
+        if len(bs) > 0:
+            print("**Adding %s new users to Bannedpeople.Rq**"%len(bs))
+            RequestDebrief.append(Save_Rq_List("add","Banned_User_List",bs))
+            RequestDebrief.append(Reload_Rq_List("add","Banned_User_List",bs))
 
-        if len(delt) > 0:
-            print("**Deleting %s users from To_Search.Rq**"%len(delt))
-            RequestDebrief.append(Save_Rq_List("del","To_Search_List",delt))
-            RequestDebrief.append(Reload_Rq_List("del","To_Search_List",delt))
+        if len(dels) > 0:
+            print("**Deleting %s users from To_Search.Rq**"%len(dels))
+            RequestDebrief.append(Save_Rq_List("del","To_Search_List",dels))
+            RequestDebrief.append(Reload_Rq_List("del","To_Search_List",dels))
 #
         if len(adrss) > 0:
             print("Adding %s new urls to Rss.Rq"%len(adrss))
@@ -2293,22 +2297,24 @@ def IrSweet():
                 if len(Answer) > 0:
                     if type(Answer) == list:
                         for l in Answer:
-                            time.sleep(Config.Time_Sleep)
-                            print("\n--Sending :%s --\n" % l)
-                            Irc.send(
+                            if l != None:
+                                time.sleep(Config.Time_Sleep)
+                                print("\n--Sending :%s --\n" % l)
+                                Irc.send(
                                 bytes(
                                     "PRIVMSG %s : < %s > \r\n" % (IrcKey.IRMASTER, l),
                                     "UTF-8",
+                                     )
                                 )
-                            )
                     else:
-                        print("\n--Sending :%s --\n" % Answer)
-                        Irc.send(
-                            bytes(
+                        if Answer != None:
+                           print("\n--Sending :%s --\n" % Answer)
+                           Irc.send(
+                               bytes(
                                 "PRIVMSG %s : < %s > \r\n" % (IrcKey.IRMASTER, Answer),
                                 "UTF-8",
-                            )
-                        )
+                               )
+                           )
 
             if Buffer.find("PING") != -1:
                 Fig("digital", "\n--PINGED--\n")
