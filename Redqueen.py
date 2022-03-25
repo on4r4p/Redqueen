@@ -1939,13 +1939,11 @@ def Request(cmd):
             print("Deleting %s keywords from Keywords.Rq"%len(delk))
             RequestDebrief.append(Save_Rq_List("del","Keywords_List",delk))
             RequestDebrief.append(Reload_Rq_List("del","Keywords_List",delk))
-            RequestDebrief.append(Reload_Rq_List("del","Current_Search_List",delk))
 
         if len(adk) > 0:
             print("Adding %s new keywords to Keywords.Rq"%len(adk))
             RequestDebrief.append(Save_Rq_List("add","Keywords_List",adk))
             RequestDebrief.append(Reload_Rq_List("add","Keywords_List",adk))
-            RequestDebrief.append(Reload_Rq_List("add","Current_Search_List",adk))
 
         if len(adu) > 0:
             print("Adding %s new entry to Following.Rq"%len(adu))
@@ -1970,9 +1968,8 @@ def Request(cmd):
         if len(bk) > 0:
             print("Adding new entry to Banned.Keyword.Rq")
             RequestDebrief.append(Save_Rq_List("add","Banned_Word_list",bk))
-            RequestDebrief.append(Save_Rq_List("del","Current_Search_List",bk))
             RequestDebrief.append(Reload_Rq_List("add","Banned_Word_list",bk))
-            RequestDebrief.append(Reload_Rq_List("del","Current_Search_List",bk))
+
 
         RequestDebrief.append("**Done**")
         return(RequestDebrief)
