@@ -1669,9 +1669,9 @@ def Request(cmd):
 
                                 if sample.count("@") == 1:
                                     print("You asked to Ban this user tosearch :", var)
-                                    bs.append(var.replace(" ", ""))
-                                    bu.append(var.replace(" ", ""))
-                                    dels.append(var.replace(" ", ""))
+                                    bs.append(var)
+                                    bu.append(var)
+                                    dels.append(var)
                                 else:
                                     print("You asked to Ban this keyword :", var)
                                     bs.append(var)
@@ -1695,7 +1695,7 @@ def Request(cmd):
                             for var in sample.split(","):
                                 if var.startswith("@"):
                                     print("You asked to Add this User :", var)
-                                    ads.append(var.replace(" ", ""))
+                                    ads.append(var)
                                 else:
                                     print("You asked to Add this keyword :", var)
                                     ads.append(var)
@@ -1717,7 +1717,7 @@ def Request(cmd):
                             for var in sample.split(","):
                                 if var.startswith("@"):
                                     print("You asked to Delete this User :", var)
-                                    ads.append(var.replace(" ", ""))
+                                    ads.append(var)
                                 else:
                                     print("You asked to Delete this keyword :", var)
                                     ads.append(var)
@@ -1738,6 +1738,7 @@ def Request(cmd):
                                 bs.append(sample)
                                 bu.append(sample)
                                 delk.append(sample)
+                                dels.append(sample)
                             else:
                                 print("**User var is empty.**")
                         elif sample.count("@") > 1:
@@ -1745,6 +1746,7 @@ def Request(cmd):
                                 if len(var) > 0:
                                     bu.append(var)
                                     delk.append(var)
+                                    dels.append(var)
                                 else:
                                     print("**User var is empty.**")
                             print("You asked to Ban those users: ", ",".join(bu))
