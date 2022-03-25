@@ -2404,7 +2404,8 @@ def IrSweet():
                 try:
                     tmp = Buffer.split("PING :")[1]
                 except Exception as e:
-                    Betterror(e, inspect.stack()[0][3])
+                    if "list index out of range" not in str(e):
+                       Betterror(e, inspect.stack()[0][3])
                     tmp = "placeholder"
 
                 Irc.send(bytes("PONG :" + tmp + "\r\n", "UTF-8"))
