@@ -1717,21 +1717,24 @@ def Request(cmd):
                             for var in sample.split(","):
                                 if var.startswith("@"):
                                     print("You asked to Delete this User :", var)
-                                    ads.append(var)
+                                    dels.append(var)
                                 else:
                                     print("You asked to Delete this keyword :", var)
-                                    ads.append(var)
+                                    dels.append(var)
                         else:
                             if sample.startswith("@"):
                                 print("You asked to Delete this User :", sample)
-                                ads.append(sample.replace(" ", ""))
+                                dels.append(sample.replace(" ", ""))
                             else:
                                 print("You asked to Delete this keyword :", sample)
-                                ads.append(sample)
+                                dels.append(sample)
 
                     ##
                     if option == "banuser:":
                         sample = sample.replace(str(option), "").replace(" ", "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("@") == 1:
                             print("You asked to Ban this user :", sample)
                             if len(sample) > 0:
@@ -1755,6 +1758,9 @@ def Request(cmd):
 
                     if option == "adduser:":
                         sample = sample.replace(str(option), "").replace(" ", "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("@") == 1:
                             print("You asked to Add this user :", sample)
                             sample = sample.replace(str(option), "").replace(" ", "")
@@ -1774,6 +1780,10 @@ def Request(cmd):
 
                     if option == "deluser:":
                         sample = sample.replace(str(option), "").replace(" ", "")
+
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("@") == 1:
                             print("You asked to Delete this user :", sample)
                             if len(sample) > 0:
@@ -1792,6 +1802,9 @@ def Request(cmd):
 
                     if option == "banfriend:":
                         sample = sample.replace(str(option), "").replace(" ", "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("@") == 1:
                             print("You asked to Ban this friend :", sample)
                             if len(sample) > 0:
@@ -1814,6 +1827,9 @@ def Request(cmd):
 
                     if option == "delfriend:":
                         sample = sample.replace(str(option), "").replace(" ", "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("@") == 1:
                             print("You asked to Delete this friend :", sample)
                             if len(sample) > 0:
@@ -1831,6 +1847,7 @@ def Request(cmd):
                             print("**No user found '@' is missing**")
                     if option == "addfriend:":
                         sample = sample.replace(str(option), "").replace(" ", "")
+
                         if sample.count("@") == 1:
                             print("You asked to Add this friend :", sample)
                             if len(sample) > 0:
@@ -1848,6 +1865,9 @@ def Request(cmd):
                             print("**No user found '@' is missing**")
                     if option == "bankeyword:":
                         sample = sample.replace(str(option), "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count(",") == 0:
                             print("You asked to Ban this keyword :", sample)
                             if len(sample) > 0:
@@ -1865,6 +1885,9 @@ def Request(cmd):
                             print("You asked to Ban those Keywords: ", ",".join(bk))
                     if option == "addkeyword:":
                         sample = sample.replace(str(option), "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count(",") == 0:
                             print("You asked to Add this keyword :", sample)
                             if len(sample) > 0:
@@ -1880,6 +1903,9 @@ def Request(cmd):
                             print("You asked to Add those Keywords: ", ",".join(adk))
                     if option == "delkeyword:":
                         sample = sample.replace(str(option), "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count(",") == 0:
                             print("You asked to Delete this keyword :", sample)
                             if len(sample) > 0:
@@ -1895,6 +1921,9 @@ def Request(cmd):
                             print("You asked to Add those Keywords: ", ",".join(delk))
                     if option == "delrss:":
                         sample = sample.replace(str(option), "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("http") == 1:
                             print("You asked to Delete this rss feed :", sample)
                             if len(sample) > 0:
@@ -1914,8 +1943,12 @@ def Request(cmd):
 
                         else:
                             print("**No rss found (flux must starts with http)**")
+
                     if option == "addrss:":
                         sample = sample.replace(str(option), "")
+                        if sample.startswith(" "):
+                            sample = sample[1:]
+
                         if sample.count("http") == 1:
                             print("You asked to Add this rss feed :", sample)
                             if len(sample) > 0:
