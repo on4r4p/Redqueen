@@ -1609,6 +1609,14 @@ def Request(cmd):
                         MasterStart_Trigger = True
                         if MasterStop_Trigger is True:
                             MasterStop_Trigger = False
+                            Irc.send(
+                                   bytes(
+                                        "PRIVMSG %s :<Redqueen Is Running ...>\r\n" % IrcKey.IRCHANNEL,
+                                        "UTF-8",
+                                        )
+                                  )
+
+
                             return Redqueen()
                         return "Redqueen has started."
                     if option == "!stop":
@@ -2176,6 +2184,15 @@ def Flush_Current_Session():
         print(Laps)
 
         if Laps.total_seconds() > 86400:
+
+            print("==")
+            Fig("digital", "Flushing Already_Searched_Rq", True)
+            print("==")
+            try:
+               with open(Pth_Already_Searched_Rq,w) as file:
+                        file.write("")
+            except Exception as e:
+                       Betterror(e, inspect.stack()[0][3])
 
             print("==")
             Fig("digital", "Flushing Temps Files", True)
@@ -4150,17 +4167,14 @@ def RedQueen():
 
         Flush_Current_Session()
 
-        Fig("digital", "Calling Search function")
-
         time.sleep(Config.Time_Sleep)
 
         Fig("digital", "Removing Keywords and Users To_Search from No.Result.Rq")
 
         Current_Search_List = [k for k in Current_Search_List if k not in NoResult_List]
-        print(Current_Search_List)
         Fig(
             "digital",
-            "Removing Keywords and Users To_Search from Already_Searched_List",
+            "Removing item in To_Search found in Already_Searched_List",
         )
 
         Current_Search_List = [
@@ -4235,6 +4249,7 @@ def RedQueen():
                 figy = "Searching : %s %i/%i" % (key, tmpcnt, rndwords)
                 Fig("digital", figy)
                 time.sleep(Config.Time_Sleep)
+                Fig("digital", "Calling Search function")
                 Search_Keyword(key)
             else:
                 while True:
@@ -4248,6 +4263,7 @@ def RedQueen():
                 figy = "Searching : %s %i/%i" % (key, tmpcnt, rndwords)
                 Fig("digital", figy)
                 time.sleep(Config.Time_Sleep)
+                Fig("digital", "Calling Search function")
                 Search_Keyword(key)
 
                 try:
@@ -4255,8 +4271,10 @@ def RedQueen():
                         file.write("\n" + str(word))
                 except Exception as e:
                     Betterror(e, inspect.stack()[0][3])
+        print("today:",TODAYS_MENU)
 
         Fig("digital", "All Done !")
+        sys.exit()
 
         time.sleep(Config.Time_Sleep)
 
