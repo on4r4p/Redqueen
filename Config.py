@@ -1,35 +1,37 @@
 WEB_SERVER = True
 IRC_CONNECT = True
+IRC_AUTOSTART = True
 
-Luck_Factor = 10
-Time_Sleep = 1
+Luck_Factor = 42
+Time_Sleep = 0.2
 Special_Users = ["th3j35t3r","jonanthandata1"]
-Allowed_Tweet_Lang = ["en","fr"]
+Allowed_Tweet_Lang = ["en","fr","de","es","ru","uk","zh-cn","zh-tw","vi","ur","tr","sv","ro","pt","no","nl","msa","ko","ja","it","id","hu","hi","he","fil","fi","fa","el","da","cs","bn","ar"]
 
 Minimum_Search_Result = 1
 Minimum_Keywords_In_Tweet = 1
-Minimum_Tweet_Length = 70
-Minimum_Tweet_Retweet = 0
-Minimum_Tweet_Fav = 0
+Minimum_Tweet_Length = 50
+Minimum_Tweet_Retweet = 1
+Minimum_Tweet_Fav = 1
 Minimum_Link_In_Tweet = 0
 Minimum_Media_In_Tweet = 0
-Minimum_User_Following = 0
-Minimum_User_Friend = 232
+Minimum_User_Following = 101
+Minimum_User_Friend = 123
 Minimum_Tweet_Mention = 0
 Minimum_Tweet_Score = 32
 
-Maximum_Tweet_DayOld = 23
-Maximum_Retweet_DayOld = 32
-Maximum_Tweet_Fav = 64242
-Maximum_Tweet_Retweet = 3232
-Maximum_Tweet_Emoticon = 3
-Maximum_Tweet_By_User = 3
-Maximum_Hashtag_In_Tweet = 3
-Maximum_Mention_In_Tweet = 3
+Maximum_Tweet_DayOld = 5
+Maximum_Retweet_DayOld = 10
+Maximum_Tweet_Fav = 424242
+Maximum_Tweet_Retweet = 424242
+Maximum_Tweet_Emoticon = 4
+Maximum_Tweet_By_User = 4
+Maximum_Hashtag_In_Tweet = 5
+Maximum_Mention_In_Tweet = 5
 
-Maximum_Api_Search_Call_By_15_Minutes = 180
-Maximum_Api_Search_Call_By_Day = 8888
-Maximum_Api_Search_Update_Call_By_Day = 2223
+Maximum_Api_Call_Per_15_Minutes = 180
+Maximum_Api_Call_Per_Day = 5042
+Maximum_Api_Update_Call_Per_3_Hours = 223
+Maximum_Api_Update_Call_Per_Day = 2223
 
 Trinity = """\u001b[7m
   ______ _______ ______   _____  _     _ _______ _______ __   _

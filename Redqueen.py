@@ -2189,7 +2189,7 @@ def Flush_Current_Session():
             Fig("digital", "Flushing Already_Searched_Rq", True)
             print("==")
             try:
-               with open(Pth_Already_Searched_Rq,w) as file:
+               with open(Pth_Already_Searched_Rq,"w") as file:
                         file.write("")
             except Exception as e:
                        Betterror(e, inspect.stack()[0][3])
@@ -4222,6 +4222,10 @@ def RedQueen():
 
         tmpcnt = 0
         if Config.IRC_CONNECT is True:
+            if Config.IRC_AUTOSTART is True:
+                print("**Irc_AUTOSTART is True.**")
+                MasterStart_Trigger = True
+
             if MasterStart_Trigger is False:
                 print("**Waiting for !start command from Irc.**")
                 IrSend("Idle mode..")
