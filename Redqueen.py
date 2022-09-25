@@ -278,9 +278,13 @@ Cherryconf = {
 
 def handler(signum, frame):
     Save_Current_Session()
-    Irc.send(
-        bytes("PRIVMSG %s : Redqueen is exiting. \r\n" % (IrcKey.IRMASTER), "UTF-8")
-    )
+    if Config.IRC_CONNECT is True:
+        try:
+            Irc.send(
+                bytes("PRIVMSG %s : Redqueen is exiting. \r\n" % (IrcKey.IRMASTER), "UTF-8")
+            )
+        except Exception as e:
+            Betterror(e, inspect.stack()[0][3])
     print("Exiting...")
     os.system("pkill -9 Redqueen.py")
 
@@ -4148,6 +4152,7 @@ def RedQueen():
     global To_Search_List
     global MasterPause_Trigger
     global MasterStart_Trigger
+    print("hey")
     try:
 
         while 1:
@@ -4359,15 +4364,18 @@ if __name__ == "__main__":
                 print("ALL TAK.OAUT_2 must be filled and correct in TwitterApiKeys.py")
                 sys.exit()
 
-        Fig("digital", "Launching Blueking on IRC")
-        time.sleep(Config.Time_Sleep)
-
-        Fig("cybermedium", "IrSweet()")
-        Fig("digital", "Waiting for idle mode")
-        time.sleep(Config.Time_Sleep)
 
         if Config.IRC_CONNECT is True:
+            Fig("digital", "Launching Blueking on IRC")
+            time.sleep(Config.Time_Sleep)
+
+            Fig("cybermedium", "IrSweet()")
+            Fig("digital", "Waiting for idle mode")
+            time.sleep(Config.Time_Sleep)
+
             Thread(target=IrSweet).start()
+        else:
+            GOGOGO_Trigger = True
 
         Thread(target=RedQueen).start()
 
