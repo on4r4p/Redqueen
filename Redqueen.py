@@ -1430,7 +1430,6 @@ def Checkdouble(tweet, id, urls):
 def title():
     print(Config.Trinity)
 
-
 def timer(mode):
     global timeleft
     global timed
@@ -1557,6 +1556,7 @@ def Request(cmd):
             "!start",
             "!stop",
             "!pause",
+            "!restart",
             "!quit",
         ]
 
@@ -1586,6 +1586,7 @@ def Request(cmd):
                             "!start [Launch Crawling.]",
                             "!stop [Stop Crawling.]",
                             "!pause [Start and Stop Pause mode]",
+                            "!restart [Restart Crawling from the begining]"
                             "!quit [Exit.]",
                             "!users [Print Following.Rq content]",
                             "!tosearch [print User.Timeline.Rq]",
@@ -1627,6 +1628,17 @@ def Request(cmd):
                         MasterStart_Trigger = False
                         MasterStop_Trigger = True
                         return "Redqueen has stopped."
+                    if option == "!restart":
+                       GOGOGO_Trigger = False
+                       Irc.send(
+                            bytes(
+                                "PRIVMSG %s : Redqueen is restarting. \r\n"
+                                % (IrcKey.IRMASTER),
+                                "UTF-8",
+                            )
+                        )
+                       return(main())
+
                     if option == "!quit":
                         MasterStart_Trigger = False
                         Irc.send(
@@ -1692,10 +1704,10 @@ def Request(cmd):
                         else:
                             if sample.startswith("@"):
                                 print("You asked to Ban this User :", sample)
-                                ads.append(sample.replace(" ", ""))
+                                bu.append(sample.replace(" ", ""))
                             else:
                                 print("You asked to Ban this keyword :", sample)
-                                ads.append(sample)
+                                bs.append(sample)
 
                     if option == "addsearch:":
                         sample = sample.replace(str(option), "")
@@ -4342,8 +4354,9 @@ def RedQueen():
         Betterror(e, inspect.stack()[0][3])
 
 
-if __name__ == "__main__":
 
+def main():
+    global GOGOGO_Trigger
     try:
         title()
         if Config.WEB_SERVER is True:
@@ -4388,6 +4401,10 @@ if __name__ == "__main__":
 
     except Exception as e:
         Betterror(e, inspect.stack()[0][3])
+
+if __name__ == "__main__":
+
+     main()
 
 
 #################################################TheEnd#############################################################
